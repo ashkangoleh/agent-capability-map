@@ -26,4 +26,5 @@ children:
     description: "regulatory compliance"
     triggers:
       - "regulatory compliance"
+      - "legal compliance"
     status: mapped

@@ -161,7 +161,7 @@ class Router:
                 raise RouterError(f"Expected children list at {path}")
             node, failure = self._choose(request, children, route, include_mapped=True)
             if failure:
-                if not route:
+                if not route and failure.get("message") == "The request does not identify a specific validated child capability.":
                     failure["status"] = "unmatched"
                     failure["message"] = "No top-level domain matched. Do not invent a skill."
                 return failure
