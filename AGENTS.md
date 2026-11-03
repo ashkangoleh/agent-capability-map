@@ -9,7 +9,7 @@ Route each user request to the smallest useful set of domain capabilities and ex
 1. **Parse intent:** identify the requested action, subject, expected output, constraints, freshness needs, and risk level. Do not route from keywords alone.
 2. **Select domains:** read catalog/domains.json. Select one primary domain. Add a secondary domain only when the deliverable genuinely requires it.
 3. **Read local router:** open only the selected domain's ROUTER.md and, if present, its skills.json. Do not scan every domain or every skill directory.
-4. **Select skill:** compare the task against descriptions, positive triggers, exclusions, inputs, and outputs. Prefer one skill. Use at most two by default; use three only when separate work products require them.
+4. **Select skill:** compare the task against descriptions, positive triggers, exclusions, inputs, and outputs. Follow optional parent_skill links to the most specific matching leaf, without reading parent skill bodies. related_skills is a navigation hint, not automatic activation. Prefer one skill; use at most two by default, three only for separate work products.
 5. **Load on demand:** read only the selected SKILL.md. Read a referenced resource only at the step that needs it. Never recursively read all references.
 6. **Execute and verify:** follow the skill's procedure, validate important outputs, and report evidence, assumptions, limitations, and unresolved questions.
 7. **Close the loop:** if no skill matches, do not invent a capability. Use a suitable general research workflow or state that the map has no validated skill for the task.
@@ -20,6 +20,7 @@ Route each user request to the smallest useful set of domain capabilities and ex
 - Treat triggers as routing hints, not proof that a skill is correct.
 - Negative triggers and exclusions override weak keyword matches.
 - Do not load multiple skills merely because a request mentions multiple technologies.
+- Challenge every proposed architectural pattern with necessity, simpler alternative, correctness, failure modes, operability, measured costs, and available evidence (docs/ENGINEERING_GUARDRAILS.md only when needed).
 - For genuinely cross-functional work, route by deliverable and dependencies; avoid loading unrelated domain context.
 - Ask one focused clarification only when ambiguity changes the correct route or output.
 - Do not fabricate a confidence percentage. Use high / medium / low qualitative match unless calibrated evaluation data exists.
