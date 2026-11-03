@@ -166,6 +166,7 @@ The hierarchical maps form the primary discovery tree. Typed cross-domain depend
 ~~~sh
 .venv/bin/python -m unittest discover -s tests -v
 .venv/bin/python -m capability_map validate
+.venv/bin/python scripts/evaluate_graph.py
 ~~~
 
 CI checks syntax, references, linked SKILL.md metadata, path security and test fixtures. Passing these checks does **not** prove language-model routing accuracy, lower token usage or zero hallucinations. Evaluation must compare actual model runs, source evidence quality, false activations, task success, cost and abstention.

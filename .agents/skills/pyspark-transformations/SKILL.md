@@ -26,7 +26,7 @@ Collect only the unknowns that materially affect the output; do not invent infra
 Use inspected project artifacts first, then current release-specific official documentation. A latest documentation page is not evidence that the user's deployed version behaves the same.
 
 ## Official starting references
-- https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/dataframe.html
+- https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrame.html
 - https://spark.apache.org/docs/latest/api/python/getting_started/testing_pyspark.html
 
 ## Failure handling

@@ -24,5 +24,6 @@ jobs:
         run: |
           python scripts/validate_registry.py
           python -m capability_map validate
+          python scripts/evaluate_graph.py
       - name: Test CLI, security and overlays
         run: python -m unittest discover -s tests -v

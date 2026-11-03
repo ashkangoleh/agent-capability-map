@@ -49,6 +49,7 @@ children:
     description: "Backend, frontend, APIs, language ecosystems, design and testing."
     triggers:
       - "implement api"
+      - "api endpoint"
       - "fastapi"
       - "django"
       - "backend"

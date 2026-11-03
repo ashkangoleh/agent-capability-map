@@ -1,0 +1,73 @@
+schema_version: 1
+cases:
+  - id: pyspark-bootstrap
+    request: Create a new PySpark project
+    status: matched
+    skill: pyspark-project-bootstrap
+  - id: pyspark-code
+    request: Write PySpark DataFrame joins
+    status: matched
+    skill: pyspark-transformations
+  - id: pyspark-optimization
+    request: Diagnose PySpark shuffle and spill
+    status: matched
+    skill: spark-performance-diagnostics
+  - id: spark-api-ambiguous
+    request: Create a Spark project
+    status: needs_clarification
+  - id: airflow
+    request: Create an Airflow DAG with retries
+    status: matched
+    skill: airflow-dag-engineering
+  - id: kafka
+    request: Review Kafka consumer offsets and ordering
+    status: matched
+    skill: kafka-streaming-reliability
+  - id: data-warehouse
+    request: Design a Trino data pipeline
+    status: matched
+    skill: data-engineering-implementation
+  - id: product-prd
+    request: Write a product PRD
+    status: matched
+    skill: product-discovery-prd
+  - id: marketing-campaign
+    request: Create marketing campaign strategy
+    status: matched
+    skill: marketing-strategy-campaign
+  - id: seo-technical
+    request: Audit technical SEO canonical tags
+    status: matched
+    skill: seo-audit-strategy
+  - id: kubernetes
+    request: Review a Kubernetes Helm upgrade
+    status: matched
+    skill: platform-operations
+  - id: agent-authoring
+    request: Create an agent skill registry
+    status: matched
+    skill: skill-authoring-validation
+  - id: business
+    request: Compare a business case with unit economics
+    status: matched
+    skill: business-strategy-analysis
+  - id: research
+    request: Fact check this evidence claim
+    status: matched
+    skill: evidence-research
+  - id: legal-no-skill
+    request: Analyze legal compliance questions
+    status: unavailable
+  - id: science-no-skill
+    request: Analyze chemistry experiments
+    status: unavailable
+  - id: unmatched
+    request: Unmapped zqvjkbx domain intent
+    status: unmatched
+  - id: cross-domain
+    request: Create a PySpark project on Kubernetes
+    status: needs_clarification
+  - id: near-miss-api-seo
+    request: Implement an API endpoint that emits SEO metadata
+    status: matched
+    skill: software-engineering-implementation
