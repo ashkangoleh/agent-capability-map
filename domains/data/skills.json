@@ -1,6 +1,120 @@
 {
-  "domain":"data",
-  "skills":[
-    {"id":"data-engineering-implementation","path":".agents/skills/data-engineering-implementation/SKILL.md","description":"Use when designing, implementing, debugging, or reviewing data pipelines, batch or streaming jobs, SQL transformations, data models, warehouses, lakehouses, and data quality workflows.","triggers":["PySpark","Spark SQL","dbt model","Trino query","Kafka pipeline","StarRocks","Iceberg","data pipeline","incremental ingestion","backfill"],"avoid_triggers":["general application API implementation","marketing analytics strategy without data implementation","LLM retrieval as the main task"],"outputs":["pipeline design or code","data contracts","validation plan","replay and recovery strategy"],"risk_level":"high","status":"active"}
+  "domain": "data",
+  "skills": [
+    {
+      "id": "data-engineering-implementation",
+      "path": ".agents/skills/data-engineering-implementation/SKILL.md",
+      "description": "Use when designing, implementing, debugging, or reviewing data pipelines, batch or streaming jobs, SQL transformations, data models, warehouses, lakehouses, and data quality workflows.",
+      "triggers": [
+        "PySpark",
+        "Spark SQL",
+        "dbt model",
+        "Trino query",
+        "Kafka pipeline",
+        "StarRocks",
+        "Iceberg",
+        "data pipeline",
+        "incremental ingestion",
+        "backfill"
+      ],
+      "avoid_triggers": [
+        "general application API implementation",
+        "marketing analytics strategy without data implementation",
+        "LLM retrieval as the main task"
+      ],
+      "outputs": [
+        "pipeline design or code",
+        "data contracts",
+        "validation plan",
+        "replay and recovery strategy"
+      ],
+      "risk_level": "high",
+      "status": "active",
+      "related_skills": [
+        "platform-operations",
+        "ai-rag-engineering"
+      ]
+    },
+    {
+      "id": "pyspark-pipelines",
+      "path": ".agents/skills/pyspark-pipelines/SKILL.md",
+      "parent_skill": "data-engineering-implementation",
+      "description": "Implement an end-to-end PySpark DataFrame or Spark SQL batch pipeline with contracts, reliable writes, testing, and recovery; not an isolated join or skew problem.",
+      "triggers": [
+        "build a PySpark ETL job",
+        "Spark DataFrame pipeline",
+        "Spark read transform write",
+        "partitioned Parquet job"
+      ],
+      "avoid_triggers": [
+        "one slow Spark join",
+        "shuffle skew task diagnostics",
+        "Kubernetes Spark deployment only",
+        "SQL query without Spark"
+      ],
+      "outputs": [
+        "runnable Spark pipeline",
+        "data contract",
+        "tests",
+        "rerun and rollback plan"
+      ],
+      "risk_level": "high",
+      "status": "active"
+    },
+    {
+      "id": "pyspark-joins",
+      "path": ".agents/skills/pyspark-joins/SKILL.md",
+      "parent_skill": "pyspark-pipelines",
+      "description": "Diagnose join correctness and physical strategies in PySpark or Spark SQL using cardinality, join semantics, explain plans, and measured execution metrics.",
+      "triggers": [
+        "Spark join wrong row count",
+        "join physical plan",
+        "sort merge join vs broadcast",
+        "PySpark join hint",
+        "Spark join performance"
+      ],
+      "avoid_triggers": [
+        "complete ETL pipeline implementation",
+        "verified hot-key shuffle skew diagnosis",
+        "SQL engine unrelated to Spark"
+      ],
+      "outputs": [
+        "corrected join",
+        "explain plan interpretation",
+        "cardinality validation",
+        "measured improvement proposal"
+      ],
+      "risk_level": "high",
+      "status": "active"
+    },
+    {
+      "id": "pyspark-skew-diagnostics",
+      "path": ".agents/skills/pyspark-skew-diagnostics/SKILL.md",
+      "parent_skill": "pyspark-joins",
+      "related_skills": [
+        "platform-operations"
+      ],
+      "description": "Investigate and mitigate evidenced PySpark shuffle or join skew using task-duration imbalance, partition and key distributions, AQE, and measured validation.",
+      "triggers": [
+        "Spark hot key",
+        "uneven shuffle partitions",
+        "skewed join tasks",
+        "Spark stragglers",
+        "skewed aggregation"
+      ],
+      "avoid_triggers": [
+        "generic slow Spark job without skew evidence",
+        "entire PySpark ETL implementation",
+        "Kubernetes scheduling incident unrelated to data skew"
+      ],
+      "outputs": [
+        "measured skew diagnosis",
+        "minimal fix and verification",
+        "correctness regression tests",
+        "revert criteria"
+      ],
+      "risk_level": "high",
+      "status": "active"
+    }
   ]
 }
