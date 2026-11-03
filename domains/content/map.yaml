@@ -1,0 +1,34 @@
+schema_version: 1
+id: content
+kind: map
+children:
+  - id: copywriting
+    description: "copywriting"
+    triggers:
+      - "copywriting"
+    status: mapped
+  - id: editorial
+    description: "editorial"
+    triggers:
+      - "editorial"
+    status: mapped
+  - id: content-strategy
+    description: "content strategy"
+    triggers:
+      - "content strategy"
+    status: mapped
+  - id: social-content
+    description: "social content"
+    triggers:
+      - "social content"
+    status: mapped
+  - id: video-audio-content
+    description: "video audio content"
+    triggers:
+      - "video audio content"
+    status: mapped
+  - id: localization
+    description: "localization"
+    triggers:
+      - "localization"
+    status: mapped

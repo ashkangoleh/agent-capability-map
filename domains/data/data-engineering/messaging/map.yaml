@@ -1,0 +1,26 @@
+schema_version: 1
+id: messaging
+kind: map
+children:
+  - id: kafka
+    description: "kafka"
+    triggers:
+      - "kafka"
+      - "kafka streams"
+    status: active
+    skills: domains/data/data-engineering/messaging/kafka/skills.yaml
+  - id: kinesis
+    description: "kinesis"
+    triggers:
+      - "kinesis"
+    status: mapped
+  - id: rabbitmq
+    description: "rabbitmq"
+    triggers:
+      - "rabbitmq"
+    status: mapped
+  - id: pulsar
+    description: "pulsar"
+    triggers:
+      - "apache pulsar"
+    status: mapped

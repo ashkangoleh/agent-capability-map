@@ -1,0 +1,26 @@
+schema_version: 1
+id: orchestration
+kind: map
+children:
+  - id: airflow
+    description: "airflow"
+    triggers:
+      - "airflow"
+      - "airflow dag"
+    status: active
+    skills: domains/data/data-engineering/orchestration/airflow/skills.yaml
+  - id: prefect
+    description: "prefect"
+    triggers:
+      - "prefect"
+    status: mapped
+  - id: dagster
+    description: "dagster"
+    triggers:
+      - "dagster"
+    status: mapped
+  - id: argo-workflows
+    description: "argo workflows"
+    triggers:
+      - "argo workflows"
+    status: mapped

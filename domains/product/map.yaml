@@ -1,0 +1,45 @@
+schema_version: 1
+id: product
+kind: map
+children:
+  - id: discovery-requirements
+    description: "discovery requirements"
+    triggers:
+      - "prd"
+      - "product discovery"
+      - "requirements"
+      - "user stories"
+    status: active
+    skills: domains/product/graph-skills.yaml
+  - id: product-strategy
+    description: "product strategy"
+    triggers:
+      - "product strategy"
+      - "product vision"
+      - "roadmap"
+    status: active
+    skills: domains/product/graph-skills.yaml
+  - id: product-analytics
+    description: "product analytics"
+    triggers:
+      - "product analytics"
+      - "activation metric"
+    status: mapped
+  - id: experimentation
+    description: "experimentation"
+    triggers:
+      - "ab test"
+      - "product experiment"
+    status: mapped
+  - id: pricing-packaging
+    description: "pricing packaging"
+    triggers:
+      - "product pricing"
+      - "feature packaging"
+    status: mapped
+  - id: user-research
+    description: "user research"
+    triggers:
+      - "user interviews"
+      - "product research"
+    status: mapped

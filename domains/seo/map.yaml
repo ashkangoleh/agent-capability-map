@@ -1,0 +1,58 @@
+schema_version: 1
+id: seo
+kind: map
+children:
+  - id: technical-seo
+    description: "technical seo"
+    triggers:
+      - "technical seo"
+      - "canonical"
+      - "robots.txt"
+      - "indexing"
+      - "crawl budget"
+    status: active
+    skills: domains/seo/graph-skills.yaml
+  - id: content-seo
+    description: "content seo"
+    triggers:
+      - "seo content"
+      - "keyword research"
+      - "search intent"
+    status: active
+    skills: domains/seo/graph-skills.yaml
+  - id: structured-data
+    description: "structured data"
+    triggers:
+      - "schema.org"
+      - "structured data"
+      - "rich results"
+    status: active
+    skills: domains/seo/graph-skills.yaml
+  - id: international-seo
+    description: "international seo"
+    triggers:
+      - "hreflang"
+      - "international seo"
+    status: active
+    skills: domains/seo/graph-skills.yaml
+  - id: local-seo
+    description: "local seo"
+    triggers:
+      - "local seo"
+      - "business profile"
+    status: active
+    skills: domains/seo/graph-skills.yaml
+  - id: ecommerce-seo
+    description: "ecommerce seo"
+    triggers:
+      - "product seo"
+      - "ecommerce seo"
+    status: active
+    skills: domains/seo/graph-skills.yaml
+  - id: answer-engine-optimization
+    description: "answer engine optimization"
+    triggers:
+      - "answer engine optimization"
+      - "ai search visibility"
+    status: active
+    skills: domains/seo/graph-skills.yaml

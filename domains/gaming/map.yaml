@@ -1,0 +1,24 @@
+schema_version: 1
+id: gaming
+kind: map
+children:
+  - id: game-development
+    description: "game development"
+    triggers:
+      - "game development"
+    status: mapped
+  - id: game-design
+    description: "game design"
+    triggers:
+      - "game design"
+    status: mapped
+  - id: game-analytics
+    description: "game analytics"
+    triggers:
+      - "game analytics"
+    status: mapped
+  - id: live-operations
+    description: "live operations"
+    triggers:
+      - "live operations"
+    status: mapped

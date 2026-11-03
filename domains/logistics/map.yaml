@@ -1,0 +1,24 @@
+schema_version: 1
+id: logistics
+kind: map
+children:
+  - id: transport
+    description: "transport"
+    triggers:
+      - "transport"
+    status: mapped
+  - id: warehouse-operations
+    description: "warehouse operations"
+    triggers:
+      - "warehouse operations"
+    status: mapped
+  - id: supply-chain-planning
+    description: "supply chain planning"
+    triggers:
+      - "supply chain planning"
+    status: mapped
+  - id: last-mile
+    description: "last mile"
+    triggers:
+      - "last mile"
+    status: mapped

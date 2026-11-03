@@ -1,0 +1,70 @@
+schema_version: 1
+id: data-engineering
+kind: map
+children:
+  - id: distributed-processing
+    description: "distributed processing"
+    triggers:
+      - "pyspark"
+      - "spark"
+      - "flink"
+      - "ray dataset"
+      - "apache beam"
+      - "distributed processing"
+    status: active
+    map: domains/data/data-engineering/distributed-processing/map.yaml
+  - id: orchestration
+    description: "orchestration"
+    triggers:
+      - "airflow"
+      - "dagster"
+      - "prefect"
+      - "orchestration"
+      - "workflow scheduling"
+    status: active
+    map: domains/data/data-engineering/orchestration/map.yaml
+  - id: messaging
+    description: "messaging"
+    triggers:
+      - "kafka"
+      - "kinesis"
+      - "rabbitmq"
+      - "message broker"
+      - "event streaming"
+    status: active
+    map: domains/data/data-engineering/messaging/map.yaml
+  - id: batch-ingestion
+    description: "batch ingestion"
+    triggers:
+      - "data ingestion"
+      - "batch etl"
+      - "incremental ingestion"
+      - "backfill"
+    status: active
+    skills: domains/data/general-skills.yaml
+  - id: lakehouse
+    description: "lakehouse"
+    triggers:
+      - "iceberg"
+      - "delta lake"
+      - "hudi"
+      - "lakehouse"
+    status: active
+    skills: domains/data/general-skills.yaml
+  - id: warehouse
+    description: "warehouse"
+    triggers:
+      - "starrocks"
+      - "trino"
+      - "duckdb"
+      - "warehouse modeling"
+    status: active
+    skills: domains/data/general-skills.yaml
+  - id: data-observability
+    description: "data observability"
+    triggers:
+      - "data quality"
+      - "data monitoring"
+      - "data reconciliation"
+    status: active
+    skills: domains/data/general-skills.yaml

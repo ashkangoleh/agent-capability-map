@@ -1,0 +1,38 @@
+schema_version: 1
+id: business
+kind: map
+children:
+  - id: business-strategy
+    description: "business strategy"
+    triggers:
+      - "business strategy"
+      - "business case"
+      - "unit economics"
+    status: active
+    skills: domains/business/graph-skills.yaml
+  - id: operations
+    description: "operations"
+    triggers:
+      - "operating model"
+      - "process improvement"
+    status: active
+    skills: domains/business/graph-skills.yaml
+  - id: business-analysis
+    description: "business analysis"
+    triggers:
+      - "commercial analysis"
+      - "business analysis"
+    status: active
+    skills: domains/business/graph-skills.yaml
+  - id: partnerships
+    description: "partnerships"
+    triggers:
+      - "business partnership"
+      - "commercial negotiation"
+    status: mapped
+  - id: procurement
+    description: "procurement"
+    triggers:
+      - "procurement strategy"
+      - "supplier management"
+    status: mapped

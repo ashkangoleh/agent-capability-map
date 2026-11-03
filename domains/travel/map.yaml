@@ -1,0 +1,24 @@
+schema_version: 1
+id: travel
+kind: map
+children:
+  - id: travel-planning
+    description: "travel planning"
+    triggers:
+      - "travel planning"
+    status: mapped
+  - id: hospitality
+    description: "hospitality"
+    triggers:
+      - "hospitality"
+    status: mapped
+  - id: tourism
+    description: "tourism"
+    triggers:
+      - "tourism"
+    status: mapped
+  - id: events
+    description: "events"
+    triggers:
+      - "events"
+    status: mapped

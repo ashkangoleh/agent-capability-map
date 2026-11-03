@@ -1,0 +1,29 @@
+schema_version: 1
+id: education
+kind: map
+children:
+  - id: curriculum
+    description: "curriculum"
+    triggers:
+      - "curriculum"
+    status: mapped
+  - id: instructional-design
+    description: "instructional design"
+    triggers:
+      - "instructional design"
+    status: mapped
+  - id: assessment
+    description: "assessment"
+    triggers:
+      - "assessment"
+    status: mapped
+  - id: tutoring
+    description: "tutoring"
+    triggers:
+      - "tutoring"
+    status: mapped
+  - id: education-technology
+    description: "education technology"
+    triggers:
+      - "education technology"
+    status: mapped

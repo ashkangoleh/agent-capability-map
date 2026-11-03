@@ -1,0 +1,24 @@
+schema_version: 1
+id: sports
+kind: map
+children:
+  - id: coaching
+    description: "coaching"
+    triggers:
+      - "coaching"
+    status: mapped
+  - id: fitness
+    description: "fitness"
+    triggers:
+      - "fitness"
+    status: mapped
+  - id: sports-analytics
+    description: "sports analytics"
+    triggers:
+      - "sports analytics"
+    status: mapped
+  - id: sports-business
+    description: "sports business"
+    triggers:
+      - "sports business"
+    status: mapped

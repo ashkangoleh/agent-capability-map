@@ -1,0 +1,60 @@
+schema_version: 1
+id: infrastructure
+kind: map
+children:
+  - id: kubernetes
+    description: "kubernetes"
+    triggers:
+      - "kubernetes"
+      - "k8s"
+      - "helm"
+      - "pod"
+      - "cluster"
+    status: active
+    skills: domains/infrastructure/skills.yaml
+  - id: devops-sre
+    description: "devops sre"
+    triggers:
+      - "devops"
+      - "sre"
+      - "ci/cd"
+      - "incident"
+      - "observability"
+      - "deployment"
+    status: active
+    skills: domains/infrastructure/skills.yaml
+  - id: cloud-engineering
+    description: "cloud engineering"
+    triggers:
+      - "cloud architecture"
+      - "aws"
+      - "gcp"
+      - "azure"
+      - "cloud engineering"
+    status: active
+    skills: domains/infrastructure/skills.yaml
+  - id: network-engineering
+    description: "network engineering"
+    triggers:
+      - "networking"
+      - "dns"
+      - "tcp"
+      - "routing"
+      - "load balancer"
+    status: active
+    skills: domains/infrastructure/skills.yaml
+  - id: linux-systems
+    description: "linux systems"
+    triggers:
+      - "linux server"
+      - "shell administration"
+      - "systemd"
+    status: active
+    skills: domains/infrastructure/skills.yaml
+  - id: platform-engineering
+    description: "platform engineering"
+    triggers:
+      - "platform engineering"
+      - "internal developer platform"
+    status: active
+    skills: domains/infrastructure/skills.yaml

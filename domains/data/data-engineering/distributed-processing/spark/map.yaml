@@ -1,0 +1,34 @@
+schema_version: 1
+id: spark
+kind: map
+children:
+  - id: pyspark
+    description: "pyspark"
+    triggers:
+      - "pyspark"
+      - "python spark"
+      - "spark python"
+    status: active
+    skills: domains/data/data-engineering/distributed-processing/spark/pyspark/skills.yaml
+  - id: spark-sql
+    description: "spark sql"
+    triggers:
+      - "spark sql"
+      - "spark query"
+    status: active
+    skills: domains/data/data-engineering/distributed-processing/spark/sql/skills.yaml
+  - id: scala
+    description: "scala"
+    triggers:
+      - "scala spark"
+      - "spark scala"
+    status: mapped
+  - id: spark-runtime
+    description: "spark runtime"
+    triggers:
+      - "spark cluster"
+      - "spark submit"
+      - "spark executor"
+      - "spark performance"
+    status: active
+    skills: domains/data/data-engineering/distributed-processing/spark/runtime/skills.yaml

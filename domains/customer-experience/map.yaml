@@ -1,0 +1,24 @@
+schema_version: 1
+id: customer-experience
+kind: map
+children:
+  - id: customer-support
+    description: "customer support"
+    triggers:
+      - "customer support"
+    status: mapped
+  - id: customer-success
+    description: "customer success"
+    triggers:
+      - "customer success"
+    status: mapped
+  - id: voice-of-customer
+    description: "voice of customer"
+    triggers:
+      - "voice of customer"
+    status: mapped
+  - id: knowledge-base
+    description: "knowledge base"
+    triggers:
+      - "knowledge base"
+    status: mapped

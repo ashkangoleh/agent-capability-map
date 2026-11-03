@@ -1,0 +1,41 @@
+schema_version: 1
+id: research
+kind: map
+children:
+  - id: evidence-research
+    description: "evidence research"
+    triggers:
+      - "research this"
+      - "verify"
+      - "fact check"
+      - "evidence"
+    status: active
+    skills: domains/research/graph-skills.yaml
+  - id: technical-writing
+    description: "technical writing"
+    triggers:
+      - "technical writing"
+      - "write documentation"
+      - "adr"
+      - "rfc"
+      - "runbook"
+    status: active
+    skills: domains/research/graph-skills.yaml
+  - id: academic-research
+    description: "academic research"
+    triggers:
+      - "literature review"
+      - "research methodology"
+    status: mapped
+  - id: editing-translation
+    description: "editing translation"
+    triggers:
+      - "translate article"
+      - "copy editing"
+    status: mapped
+  - id: presentation-reports
+    description: "presentation reports"
+    triggers:
+      - "executive report"
+      - "presentation"
+    status: mapped

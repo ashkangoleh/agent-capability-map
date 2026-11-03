@@ -1,0 +1,24 @@
+schema_version: 1
+id: energy
+kind: map
+children:
+  - id: energy-engineering
+    description: "energy engineering"
+    triggers:
+      - "energy engineering"
+    status: mapped
+  - id: renewables
+    description: "renewables"
+    triggers:
+      - "renewables"
+    status: mapped
+  - id: climate-accounting
+    description: "climate accounting"
+    triggers:
+      - "climate accounting"
+    status: mapped
+  - id: sustainability-reporting
+    description: "sustainability reporting"
+    triggers:
+      - "sustainability reporting"
+    status: mapped

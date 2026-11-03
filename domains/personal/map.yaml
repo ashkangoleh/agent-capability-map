@@ -1,0 +1,24 @@
+schema_version: 1
+id: personal
+kind: map
+children:
+  - id: productivity
+    description: "productivity"
+    triggers:
+      - "productivity"
+    status: mapped
+  - id: life-planning
+    description: "life planning"
+    triggers:
+      - "life planning"
+    status: mapped
+  - id: home
+    description: "home"
+    triggers:
+      - "home"
+    status: mapped
+  - id: hobbies
+    description: "hobbies"
+    triggers:
+      - "hobbies"
+    status: mapped

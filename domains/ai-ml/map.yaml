@@ -1,0 +1,63 @@
+schema_version: 1
+id: ai-ml
+kind: map
+children:
+  - id: llm-engineering
+    description: "llm engineering"
+    triggers:
+      - "llm"
+      - "model serving"
+      - "prompt engineering"
+      - "litellm"
+    status: active
+    skills: domains/ai-ml/graph-skills.yaml
+  - id: rag-retrieval
+    description: "rag retrieval"
+    triggers:
+      - "rag"
+      - "embedding"
+      - "retrieval"
+      - "vector search"
+      - "reranking"
+    status: active
+    skills: domains/ai-ml/graph-skills.yaml
+  - id: machine-learning
+    description: "machine learning"
+    triggers:
+      - "machine learning"
+      - "ml model"
+      - "supervised learning"
+    status: mapped
+  - id: deep-learning
+    description: "deep learning"
+    triggers:
+      - "deep learning"
+      - "neural network"
+      - "transformer training"
+    status: mapped
+  - id: mlops
+    description: "mlops"
+    triggers:
+      - "mlops"
+      - "model deployment"
+      - "model monitoring"
+    status: mapped
+  - id: computer-vision
+    description: "computer vision"
+    triggers:
+      - "image classification"
+      - "object detection"
+    status: mapped
+  - id: speech-audio-ai
+    description: "speech audio ai"
+    triggers:
+      - "speech recognition"
+      - "text to speech"
+    status: mapped
+  - id: responsible-ai
+    description: "responsible ai"
+    triggers:
+      - "model bias"
+      - "ai risk"
+      - "ai safety"
+    status: mapped

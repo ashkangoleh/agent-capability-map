@@ -1,0 +1,67 @@
+schema_version: 1
+id: software-engineering
+kind: map
+children:
+  - id: backend
+    description: "backend"
+    triggers:
+      - "backend"
+      - "fastapi"
+      - "django"
+      - "golang api"
+      - "nodejs api"
+    status: active
+    skills: domains/software-engineering/skills.yaml
+  - id: frontend
+    description: "frontend"
+    triggers:
+      - "frontend"
+      - "react"
+      - "vue"
+      - "angular"
+      - "typescript ui"
+    status: active
+    skills: domains/software-engineering/skills.yaml
+  - id: mobile-development
+    description: "mobile development"
+    triggers:
+      - "android"
+      - "ios"
+      - "flutter"
+      - "react native"
+    status: mapped
+  - id: software-architecture
+    description: "software architecture"
+    triggers:
+      - "software architecture"
+      - "microservices"
+      - "ddd"
+      - "api design"
+    status: active
+    skills: domains/software-engineering/skills.yaml
+  - id: programming-languages
+    description: "programming languages"
+    triggers:
+      - "python code"
+      - "golang code"
+      - "rust code"
+      - "java code"
+    status: active
+    skills: domains/software-engineering/skills.yaml
+  - id: quality-testing
+    description: "quality testing"
+    triggers:
+      - "unit testing"
+      - "integration testing"
+      - "code review"
+      - "refactor"
+    status: active
+    skills: domains/software-engineering/skills.yaml
+  - id: developer-tools
+    description: "developer tools"
+    triggers:
+      - "ide integration"
+      - "developer tooling"
+      - "git automation"
+    status: active
+    skills: domains/software-engineering/skills.yaml

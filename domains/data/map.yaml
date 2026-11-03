@@ -1,0 +1,76 @@
+schema_version: 1
+id: data
+kind: map
+children:
+  - id: data-engineering
+    description: "data engineering"
+    triggers:
+      - "pyspark"
+      - "spark"
+      - "airflow"
+      - "kafka"
+      - "flink"
+      - "streaming"
+      - "etl"
+      - "data pipeline"
+      - "data engineering"
+      - "trino"
+      - "iceberg"
+    status: active
+    map: domains/data/data-engineering/map.yaml
+  - id: analytics-engineering
+    description: "analytics engineering"
+    triggers:
+      - "dbt"
+      - "semantic layer"
+      - "analytics engineering"
+      - "sql modeling"
+    status: active
+    skills: domains/data/general-skills.yaml
+  - id: database-engineering
+    description: "database engineering"
+    triggers:
+      - "database design"
+      - "postgresql"
+      - "mysql"
+      - "starrocks"
+      - "query optimization"
+    status: active
+    skills: domains/data/general-skills.yaml
+  - id: data-science
+    description: "data science"
+    triggers:
+      - "data science"
+      - "statistical analysis"
+      - "feature engineering"
+    status: mapped
+  - id: business-intelligence
+    description: "business intelligence"
+    triggers:
+      - "business intelligence"
+      - "dashboard"
+      - "power bi"
+      - "looker"
+    status: mapped
+  - id: data-governance
+    description: "data governance"
+    triggers:
+      - "data governance"
+      - "data catalog"
+      - "data lineage"
+      - "metadata"
+    status: mapped
+  - id: data-quality
+    description: "data quality"
+    triggers:
+      - "data quality"
+      - "data profiling"
+      - "reconciliation"
+    status: mapped
+  - id: data-architecture
+    description: "data architecture"
+    triggers:
+      - "lakehouse"
+      - "data mesh"
+      - "data warehouse architecture"
+    status: mapped

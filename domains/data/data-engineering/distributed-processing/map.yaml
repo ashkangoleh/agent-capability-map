@@ -1,0 +1,32 @@
+schema_version: 1
+id: distributed-processing
+kind: map
+children:
+  - id: spark
+    description: "spark"
+    triggers:
+      - "pyspark"
+      - "spark"
+      - "spark sql"
+      - "spark streaming"
+      - "spark tuning"
+    status: active
+    map: domains/data/data-engineering/distributed-processing/spark/map.yaml
+  - id: flink
+    description: "flink"
+    triggers:
+      - "flink"
+      - "flink sql"
+    status: mapped
+  - id: beam
+    description: "beam"
+    triggers:
+      - "apache beam"
+      - "beam pipeline"
+    status: mapped
+  - id: ray
+    description: "ray"
+    triggers:
+      - "ray dataset"
+      - "ray data"
+    status: mapped

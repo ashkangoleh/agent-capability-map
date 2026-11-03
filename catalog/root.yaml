@@ -1,0 +1,427 @@
+schema_version: 1
+id: root
+kind: root
+children:
+  - id: data
+    label: "Data Engineering & Analytics"
+    description: "Data engineering, storage, streaming, business intelligence and statistics."
+    triggers:
+      - "pyspark"
+      - "spark"
+      - "airflow"
+      - "kafka"
+      - "flink"
+      - "dbt"
+      - "trino"
+      - "duckdb"
+      - "iceberg"
+      - "etl"
+      - "data pipeline"
+      - "data warehouse"
+      - "data engineering"
+      - "data analytics"
+      - "data science"
+      - "starrocks"
+      - "sql transformation"
+    map: domains/data/map.yaml
+    status: active
+  - id: infrastructure
+    label: "Infrastructure & Platform"
+    description: "Cloud engineering, DevOps, Kubernetes, networking, systems and reliability."
+    triggers:
+      - "kubernetes"
+      - "k8s"
+      - "helm"
+      - "docker"
+      - "terraform"
+      - "devops"
+      - "sre"
+      - "infrastructure"
+      - "cloud engineering"
+      - "incident response"
+      - "observability"
+      - "networking"
+      - "deployment"
+    map: domains/infrastructure/map.yaml
+    status: active
+  - id: software-engineering
+    label: "Software Engineering"
+    description: "Backend, frontend, APIs, language ecosystems, design and testing."
+    triggers:
+      - "implement api"
+      - "fastapi"
+      - "django"
+      - "backend"
+      - "frontend"
+      - "react"
+      - "typescript"
+      - "python code"
+      - "code review"
+      - "debug code"
+      - "refactor"
+      - "software architecture"
+      - "write code"
+    map: domains/software-engineering/map.yaml
+    status: active
+  - id: ai-ml
+    label: "AI & Machine Learning"
+    description: "Machine learning, deep learning, generative AI, RAG and MLOps."
+    triggers:
+      - "rag"
+      - "retrieval augmented"
+      - "llm"
+      - "embedding"
+      - "vector search"
+      - "machine learning"
+      - "deep learning"
+      - "mlops"
+      - "neural network"
+      - "fine tuning"
+      - "reranking"
+    map: domains/ai-ml/map.yaml
+    status: active
+  - id: agent-systems
+    label: "Agent Systems & Tools"
+    description: "Agent architecture, skill routing, MCP, tools and evaluation."
+    triggers:
+      - "agent skill"
+      - "skill router"
+      - "master skill"
+      - "agents.md"
+      - "mcp server"
+      - "agent workflow"
+      - "skill registry"
+      - "capability map"
+      - "agent framework"
+      - "tool calling"
+    map: domains/agent-systems/map.yaml
+    status: active
+  - id: security
+    label: "Cybersecurity & Privacy"
+    description: "Security engineering, defense, identity, privacy and threat modeling."
+    triggers:
+      - "security audit"
+      - "threat modeling"
+      - "vulnerability"
+      - "penetration testing"
+      - "identity management"
+      - "oauth"
+      - "privacy engineering"
+    map: domains/security/map.yaml
+    status: mapped
+  - id: product
+    label: "Product Management"
+    description: "Discovery, product strategy, requirements, roadmap, metrics and experiments."
+    triggers:
+      - "product requirements"
+      - "prd"
+      - "product discovery"
+      - "roadmap"
+      - "product analytics"
+      - "feature prioritization"
+      - "user stories"
+      - "product strategy"
+    map: domains/product/map.yaml
+    status: active
+  - id: marketing
+    label: "Marketing & Growth"
+    description: "Go-to-market, brand, channel strategy, lifecycle and measurement."
+    triggers:
+      - "marketing"
+      - "growth campaign"
+      - "go-to-market"
+      - "gtm"
+      - "campaign plan"
+      - "brand strategy"
+      - "attribution"
+      - "paid media"
+      - "email campaign"
+    map: domains/marketing/map.yaml
+    status: active
+  - id: seo
+    label: "SEO & Organic Discovery"
+    description: "Technical SEO, structured data, content SEO, international search and organic analytics."
+    triggers:
+      - "seo"
+      - "search console"
+      - "organic traffic"
+      - "indexing"
+      - "canonical"
+      - "sitemap"
+      - "structured data"
+      - "keyword research"
+      - "search ranking"
+      - "technical seo"
+    map: domains/seo/map.yaml
+    status: active
+  - id: design
+    label: "Design & User Experience"
+    description: "Product design, UX/UI, accessibility and design systems."
+    triggers:
+      - "ux"
+      - "ui design"
+      - "accessibility"
+      - "design system"
+      - "usability"
+      - "wireframe"
+      - "prototype"
+    map: domains/design/map.yaml
+    status: active
+  - id: research
+    label: "Research & Communication"
+    description: "Evidence synthesis, fact checking, documentation and reporting."
+    triggers:
+      - "research this"
+      - "fact check"
+      - "official documentation"
+      - "evidence review"
+      - "write documentation"
+      - "architecture decision record"
+      - "adr"
+      - "rfc"
+      - "technical writing"
+    map: domains/research/map.yaml
+    status: active
+  - id: business
+    label: "Business & Operations"
+    description: "Business strategy, commercial analysis, operating models and process design."
+    triggers:
+      - "business strategy"
+      - "unit economics"
+      - "operating model"
+      - "business case"
+      - "business process"
+      - "commercial analysis"
+    map: domains/business/map.yaml
+    status: active
+  - id: content
+    label: "Content & Publishing"
+    description: "Mapped taxonomy of content & publishing; specialized validated skills are not yet available."
+    triggers:
+      - "copywriting"
+      - "editorial"
+      - "content writing"
+      - "blog post"
+      - "social post"
+      - "newsletter"
+      - "content calendar"
+    map: domains/content/map.yaml
+    status: mapped
+  - id: people
+    label: "People & HR"
+    description: "Mapped taxonomy of people & hr; specialized validated skills are not yet available."
+    triggers:
+      - "human resources"
+      - "hiring"
+      - "recruiting"
+      - "performance review"
+      - "employee onboarding"
+      - "talent management"
+    map: domains/people/map.yaml
+    status: mapped
+  - id: education
+    label: "Education & Learning"
+    description: "Mapped taxonomy of education & learning; specialized validated skills are not yet available."
+    triggers:
+      - "curriculum"
+      - "lesson plan"
+      - "tutoring"
+      - "teaching"
+      - "exam preparation"
+      - "learning design"
+    map: domains/education/map.yaml
+    status: mapped
+  - id: finance
+    label: "Finance & Accounting"
+    description: "Mapped taxonomy of finance & accounting; specialized validated skills are not yet available."
+    triggers:
+      - "accounting"
+      - "financial analysis"
+      - "budgeting"
+      - "cash flow"
+      - "investment analysis"
+      - "treasury"
+    map: domains/finance/map.yaml
+    status: mapped
+  - id: legal
+    label: "Legal & Compliance"
+    description: "Mapped taxonomy of legal & compliance; specialized validated skills are not yet available."
+    triggers:
+      - "contract law"
+      - "legal memorandum"
+      - "regulation"
+      - "legal compliance"
+      - "intellectual property"
+    map: domains/legal/map.yaml
+    status: mapped
+  - id: health
+    label: "Health & Medicine"
+    description: "Mapped taxonomy of health & medicine; specialized validated skills are not yet available."
+    triggers:
+      - "medical"
+      - "healthcare"
+      - "clinical"
+      - "public health"
+      - "patient care"
+      - "wellness"
+    map: domains/health/map.yaml
+    status: mapped
+  - id: science
+    label: "Science & Mathematics"
+    description: "Mapped taxonomy of science & mathematics; specialized validated skills are not yet available."
+    triggers:
+      - "mathematics"
+      - "physics"
+      - "chemistry"
+      - "biology"
+      - "scientific computing"
+      - "experimental science"
+    map: domains/science/map.yaml
+    status: mapped
+  - id: ecommerce
+    label: "E-commerce & Retail"
+    description: "Mapped taxonomy of e-commerce & retail; specialized validated skills are not yet available."
+    triggers:
+      - "ecommerce"
+      - "online store"
+      - "retail"
+      - "merchandising"
+      - "product listing"
+      - "shopify"
+    map: domains/ecommerce/map.yaml
+    status: mapped
+  - id: sales
+    label: "Sales & Revenue"
+    description: "Mapped taxonomy of sales & revenue; specialized validated skills are not yet available."
+    triggers:
+      - "sales pipeline"
+      - "sales operations"
+      - "b2b sales"
+      - "revenue operations"
+      - "sales outreach"
+    map: domains/sales/map.yaml
+    status: mapped
+  - id: customer-experience
+    label: "Customer Experience & Support"
+    description: "Mapped taxonomy of customer experience & support; specialized validated skills are not yet available."
+    triggers:
+      - "customer support"
+      - "customer service"
+      - "customer success"
+      - "support ticket"
+      - "customer experience"
+    map: domains/customer-experience/map.yaml
+    status: mapped
+  - id: media
+    label: "Media & Entertainment"
+    description: "Mapped taxonomy of media & entertainment; specialized validated skills are not yet available."
+    triggers:
+      - "film production"
+      - "music production"
+      - "media production"
+      - "podcast"
+      - "publishing"
+    map: domains/media/map.yaml
+    status: mapped
+  - id: gaming
+    label: "Games & Interactive"
+    description: "Mapped taxonomy of games & interactive; specialized validated skills are not yet available."
+    triggers:
+      - "game development"
+      - "game design"
+      - "unity"
+      - "unreal engine"
+      - "game economy"
+    map: domains/gaming/map.yaml
+    status: mapped
+  - id: manufacturing
+    label: "Manufacturing & Industry"
+    description: "Mapped taxonomy of manufacturing & industry; specialized validated skills are not yet available."
+    triggers:
+      - "manufacturing"
+      - "factory"
+      - "industrial automation"
+      - "production planning"
+    map: domains/manufacturing/map.yaml
+    status: mapped
+  - id: logistics
+    label: "Logistics & Supply Chain"
+    description: "Mapped taxonomy of logistics & supply chain; specialized validated skills are not yet available."
+    triggers:
+      - "logistics"
+      - "supply chain"
+      - "warehouse management"
+      - "shipping"
+      - "delivery routing"
+    map: domains/logistics/map.yaml
+    status: mapped
+  - id: construction
+    label: "Construction & Architecture"
+    description: "Mapped taxonomy of construction & architecture; specialized validated skills are not yet available."
+    triggers:
+      - "construction"
+      - "architectural design"
+      - "civil engineering"
+      - "bim"
+    map: domains/construction/map.yaml
+    status: mapped
+  - id: energy
+    label: "Energy & Sustainability"
+    description: "Mapped taxonomy of energy & sustainability; specialized validated skills are not yet available."
+    triggers:
+      - "renewable energy"
+      - "energy systems"
+      - "sustainability"
+      - "carbon accounting"
+    map: domains/energy/map.yaml
+    status: mapped
+  - id: agriculture
+    label: "Agriculture & Food Systems"
+    description: "Mapped taxonomy of agriculture & food systems; specialized validated skills are not yet available."
+    triggers:
+      - "agriculture"
+      - "farming"
+      - "agritech"
+      - "food systems"
+    map: domains/agriculture/map.yaml
+    status: mapped
+  - id: public-sector
+    label: "Government & Public Policy"
+    description: "Mapped taxonomy of government & public policy; specialized validated skills are not yet available."
+    triggers:
+      - "public policy"
+      - "government"
+      - "public administration"
+      - "public service"
+    map: domains/public-sector/map.yaml
+    status: mapped
+  - id: travel
+    label: "Travel & Hospitality"
+    description: "Mapped taxonomy of travel & hospitality; specialized validated skills are not yet available."
+    triggers:
+      - "travel planning"
+      - "tourism"
+      - "hotel management"
+      - "hospitality"
+    map: domains/travel/map.yaml
+    status: mapped
+  - id: sports
+    label: "Sports & Fitness"
+    description: "Mapped taxonomy of sports & fitness; specialized validated skills are not yet available."
+    triggers:
+      - "sports coaching"
+      - "fitness training"
+      - "athletic performance"
+      - "sports analysis"
+    map: domains/sports/map.yaml
+    status: mapped
+  - id: personal
+    label: "Personal Productivity & Life"
+    description: "Mapped taxonomy of personal productivity & life; specialized validated skills are not yet available."
+    triggers:
+      - "personal productivity"
+      - "time management"
+      - "home organization"
+      - "hobby"
+    map: domains/personal/map.yaml
+    status: mapped

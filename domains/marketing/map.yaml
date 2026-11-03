@@ -1,0 +1,49 @@
+schema_version: 1
+id: marketing
+kind: map
+children:
+  - id: campaign-strategy
+    description: "campaign strategy"
+    triggers:
+      - "campaign"
+      - "go-to-market"
+      - "gtm"
+      - "marketing strategy"
+    status: active
+    skills: domains/marketing/graph-skills.yaml
+  - id: performance-marketing
+    description: "performance marketing"
+    triggers:
+      - "paid ads"
+      - "performance marketing"
+      - "paid media"
+    status: active
+    skills: domains/marketing/graph-skills.yaml
+  - id: brand-positioning
+    description: "brand positioning"
+    triggers:
+      - "brand positioning"
+      - "brand messaging"
+    status: active
+    skills: domains/marketing/graph-skills.yaml
+  - id: lifecycle-crm
+    description: "lifecycle crm"
+    triggers:
+      - "crm"
+      - "lifecycle marketing"
+      - "retention campaign"
+    status: active
+    skills: domains/marketing/graph-skills.yaml
+  - id: marketing-analytics
+    description: "marketing analytics"
+    triggers:
+      - "marketing attribution"
+      - "channel analytics"
+    status: active
+    skills: domains/marketing/graph-skills.yaml
+  - id: influencer-partnerships
+    description: "influencer partnerships"
+    triggers:
+      - "influencer marketing"
+      - "affiliate marketing"
+    status: mapped
