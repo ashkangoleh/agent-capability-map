@@ -132,3 +132,111 @@ cases:
     request: Prepare a content strategy editorial brief for a product launch
     status: matched
     skill: content-editorial-brief
+  - id: security-threat-model
+    request: "Review application security threat modeling for an API"
+    status: matched
+    skill: security-threat-model-review
+  - id: recruiting-scorecard
+    request: "Create a recruiting interview scorecard"
+    status: matched
+    skill: recruiting-interview-scorecard
+  - id: curriculum-outcomes
+    request: "Design curriculum learning outcomes assessment"
+    status: matched
+    skill: curriculum-outcomes-assessment
+  - id: budget-scenarios
+    request: "Build budgeting cash flow scenarios"
+    status: matched
+    skill: financial-budget-scenarios
+  - id: legal-evidence
+    request: "Research a legal memorandum with official citations"
+    status: matched
+    skill: jurisdictional-legal-source-review
+  - id: public-health-evidence
+    request: "Review public health research evidence"
+    status: matched
+    skill: public-health-evidence-review
+  - id: science-experiment
+    request: "Review experimental science protocol"
+    status: matched
+    skill: scientific-experiment-review
+  - id: ecommerce-catalog
+    request: "Audit ecommerce product listing variants"
+    status: matched
+    skill: ecommerce-product-catalog-audit
+  - id: sales-forecast
+    request: "Audit sales pipeline forecast quality"
+    status: matched
+    skill: sales-pipeline-forecast-audit
+  - id: customer-support-kb
+    request: "Design customer support knowledge base workflow"
+    status: matched
+    skill: customer-support-knowledge-design
+  - id: podcast-brief
+    request: "Write a podcast production brief"
+    status: matched
+    skill: podcast-production-brief
+  - id: game-design
+    request: "Design a game design prototype"
+    status: matched
+    skill: game-design-prototype-plan
+  - id: manufacturing-quality
+    request: "Investigate manufacturing quality defect"
+    status: matched
+    skill: manufacturing-quality-investigation
+  - id: supply-demand
+    request: "Plan supply chain demand forecasting"
+    status: matched
+    skill: supply-chain-demand-planning
+  - id: bim-coordination
+    request: "Review BIM IFC schema coordination"
+    status: matched
+    skill: construction-bim-data-coordination
+  - id: carbon-inventory
+    request: "Prepare carbon accounting inventory boundaries"
+    status: matched
+    skill: carbon-inventory-boundary-review
+  - id: agri-data
+    request: "Audit agriculture field survey data"
+    status: matched
+    skill: agriculture-field-data-quality
+  - id: public-policy
+    request: "Evaluate public policy intervention"
+    status: matched
+    skill: public-policy-program-evaluation
+  - id: travel-planning
+    request: "Plan travel planning itinerary"
+    status: matched
+    skill: travel-itinerary-source-review
+  - id: fitness-training
+    request: "Create fitness training progression"
+    status: matched
+    skill: sports-training-evidence-plan
+  - id: personal-productivity
+    request: "Organize personal productivity workflow"
+    status: matched
+    skill: personal-workflow-planning
+  - id: robotics-mapped
+    request: "Analyze robotics robot control"
+    status: unavailable
+  - id: telecom-mapped
+    request: "Analyze telecommunications radio access"
+    status: unavailable
+  - id: aerospace-mapped
+    request: "Analyze aerospace avionics"
+    status: unavailable
+  - id: social-science-mapped
+    request: "Review sociology social sciences"
+    status: unavailable
+  - id: humanities-mapped
+    request: "Study humanities philosophy"
+    status: unavailable
+  - id: environment-mapped
+    request: "Evaluate environmental science biodiversity"
+    status: unavailable
+  - id: real-estate-mapped
+    request: "Analyze real estate property analytics"
+    status: unavailable
+  - id: nonprofit-mapped
+    request: "Design nonprofit fundraising plan"
+    status: unavailable

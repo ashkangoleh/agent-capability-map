@@ -38,6 +38,15 @@ The master graph contains 33 top-level discovery domains. Some nodes have valida
 | sports | Fitness, athletic coaching and sports science |
 | personal | Productivity, organization and personal planning |
 
+| robotics | Robotics, perception, controls and autonomous systems |
+| telecommunications | Telecom networks, radio access and connectivity |
+| aerospace | Avionics, aerospace engineering and space missions |
+| social-sciences | Sociology, economics, demography and research methods |
+| humanities | History, philosophy, languages and cultural heritage |
+| environment | Environmental science, ecology and biodiversity |
+| real-estate | Property management, analytics and valuation research |
+| nonprofit | Grant management, volunteering and social impact |
+
 ## Governance
 
 Add a new domain only when task boundaries and routing tests justify it. Every proposed active node needs a validated path to a maintained Skill. For regulated or high-impact work, mapped status is preferred to publishing a generic untested pseudo-expert.

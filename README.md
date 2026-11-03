@@ -2,7 +2,7 @@
 
 Global-first, YAML-driven, hierarchical discovery for reusable skills across coding agents. A single master map serves all projects. A user can **add personal skills** globally or per project without changing the master repository.
 
-The master map currently covers 33 broad domains and many mapped subdomains. The first specialist expansion adds 12 focused skills; see [Coverage](docs/SKILL_COVERAGE.md) for active versus mapped nodes and exact routing examples. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
+The master map currently covers 41 broad domains and many mapped subdomains. The cross-domain expansion introduces 21 specialist skills across previously mapped top-level domains, while 8 newly mapped areas are explicitly unimplemented. The first specialist expansion adds 12 focused skills; see [Coverage](docs/SKILL_COVERAGE.md) for active versus mapped nodes and exact routing examples. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
 
 ## Operating contract
 

@@ -66,6 +66,61 @@ class GraphRoutingTests(unittest.TestCase):
                 self.assertTrue(skill.is_file())
                 self.assertIn("## Authoritative references", skill.read_text(encoding="utf-8"))
 
+    def test_cross_domain_specialists_and_mapped_abstentions(self):
+        import yaml
+
+        cases = yaml.safe_load(
+            (ROOT / "tests" / "fixtures" / "yaml-routing-cases.yaml").read_text(encoding="utf-8")
+        )["cases"]
+        selected = [
+            case for case in cases
+            if case["id"] in {
+                "security-threat-model",
+                "recruiting-scorecard",
+                "curriculum-outcomes",
+                "budget-scenarios",
+                "legal-evidence",
+                "public-health-evidence",
+                "science-experiment",
+                "ecommerce-catalog",
+                "sales-forecast",
+                "customer-support-kb",
+                "podcast-brief",
+                "game-design",
+                "manufacturing-quality",
+                "supply-demand",
+                "bim-coordination",
+                "carbon-inventory",
+                "agri-data",
+                "public-policy",
+                "travel-planning",
+                "fitness-training",
+                "personal-productivity",
+                "robotics-mapped",
+                "telecom-mapped",
+                "aerospace-mapped",
+                "social-science-mapped",
+                "humanities-mapped",
+                "environment-mapped",
+                "real-estate-mapped",
+                "nonprofit-mapped",
+            }
+        ]
+        self.assertEqual(len(selected), 29)
+        for case in selected:
+            with self.subTest(case=case["id"]):
+                result = Router(ROOT).resolve(case["request"])
+                self.assertEqual(result["status"], case["status"], result)
+                if case["status"] == "matched":
+                    self.assertEqual(result["selected_skill"], case["skill"], result)
+                    self.assertLessEqual(len(result["inspected_files"]), 8)
+                    text = Path(result["skill_path"]).read_text(encoding="utf-8")
+                    self.assertIn("## Required context", text)
+                    self.assertIn("## Abstention and failure handling", text)
+                    self.assertIn("## Evidence requirements", text)
+                else:
+                    self.assertNotIn("skill_path", result)
+
     def test_pyspark_project_routing(self):
         result = Router(ROOT).resolve("Create a new PySpark project")
         self.assertEqual(result["status"], "matched", result)
