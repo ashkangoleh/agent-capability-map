@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate domain maps, local skill registries, and Agent Skills metadata."""
+"""Validate domain maps, local skill registries, skill metadata, and routing fixtures."""
 
 import json
 import re
@@ -118,6 +118,26 @@ def validate():
                 if not desc_match or len(desc_match.group(1).strip()) < 30:
                     errors.append(f"{skill_id}: missing or weak frontmatter description")
 
+    fixture_doc = load_json("tests/fixtures/routing-cases.json")
+    case_ids = set()
+    allowed_kinds = {"positive", "negative", "near_miss", "abstention"}
+    for case in fixture_doc.get("cases", []):
+        case_id = case.get("id", "")
+        if not case_id or case_id in case_ids:
+            errors.append(f"Missing or duplicate routing case ID: {case_id}")
+        case_ids.add(case_id)
+        if case.get("kind") not in allowed_kinds:
+            errors.append(f"{case_id}: invalid routing case kind")
+        if not case.get("prompt", "").strip():
+            errors.append(f"{case_id}: empty prompt")
+        if case.get("expected_domain") not in domain_ids:
+            errors.append(f"{case_id}: unknown expected domain")
+        expected_skill = case.get("expected_skill")
+        if expected_skill is not None and expected_skill not in all_skill_ids:
+            errors.append(f"{case_id}: unknown expected skill {expected_skill}")
+        if case.get("kind") == "abstention" and expected_skill is not None:
+            errors.append(f"{case_id}: abstention case must have expected_skill=null")
+
     if active_count == 0:
         errors.append("No active skills found")
 
@@ -126,7 +146,8 @@ def validate():
 
     print(
         f"Validation passed: {len(domains)} domains, "
-        f"{active_count} active skills, {len(all_skill_ids)} registered skills."
+        f"{active_count} active skills, {len(all_skill_ids)} registered skills, "
+        f"{len(case_ids)} routing fixtures."
     )
 
 

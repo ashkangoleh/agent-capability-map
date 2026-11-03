@@ -2,7 +2,7 @@
 
 A domain-agnostic, evidence-aware capability system for AI agents.
 
-The project maps user intent to a small set of verified capabilities, loads only the selected skill instructions, and retrieves supporting references only when needed. It covers technology, data, AI/ML, product, marketing, SEO, design, business operations, research, governance, and people/learning.
+The project maps user intent to a small set of verified capabilities, loads only the selected skill instructions, and retrieves supporting references only when needed. It covers technology, data, AI/ML, agent systems, product, marketing, SEO, design, business operations, research, governance, and people/learning.
 
 ## Core objectives
 
@@ -20,6 +20,7 @@ The project maps user intent to a small set of verified capabilities, loads only
 - domains/*/skills.json — metadata for skills in that domain only.
 - .agents/skills/*/SKILL.md — capability instructions.
 - docs/ — architecture, anti-hallucination, evaluation, and authoring.
+- tests/fixtures/routing-cases.json — labeled positive, negative, near-miss, and abstention cases.
 - scripts/validate_registry.py — dependency-free structural validator.
 - tests/ — validation tests.
 

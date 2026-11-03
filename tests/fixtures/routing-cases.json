@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {"id":"data-pyspark-join","kind":"positive","prompt":"Write a PySpark job that joins two DataFrames, aggregates by customer, and writes partitioned Parquet.","expected_domain":"data","expected_skill":"data-engineering-implementation"},
+    {"id":"software-api-endpoint","kind":"positive","prompt":"Implement a FastAPI endpoint with request validation and tests in this repository.","expected_domain":"technology","expected_skill":"software-engineering-implementation"},
+    {"id":"platform-helm-upgrade","kind":"positive","prompt":"Review a Helm chart upgrade for a production Kubernetes cluster and prepare rollback steps.","expected_domain":"technology","expected_skill":"platform-operations"},
+    {"id":"ai-rag-evaluation","kind":"positive","prompt":"Design a RAG evaluation set that measures retrieval recall, citation faithfulness, and abstention.","expected_domain":"ai-ml","expected_skill":"ai-rag-engineering"},
+    {"id":"product-prd","kind":"positive","prompt":"Turn this onboarding problem into a PRD with requirements, metrics, non-goals, and acceptance criteria.","expected_domain":"product","expected_skill":"product-discovery-prd"},
+    {"id":"marketing-gtm","kind":"positive","prompt":"Build a go-to-market and channel plan for a new subscription product with budget assumptions and KPIs.","expected_domain":"marketing","expected_skill":"marketing-strategy-campaign"},
+    {"id":"seo-indexation","kind":"positive","prompt":"Audit why canonical pages are not being indexed and prioritize technical SEO fixes.","expected_domain":"seo","expected_skill":"seo-audit-strategy"},
+    {"id":"ux-checkout-review","kind":"positive","prompt":"Review this checkout flow for usability, accessibility, and interaction problems.","expected_domain":"design-creative","expected_skill":"ux-research-design-review"},
+    {"id":"business-unit-economics","kind":"positive","prompt":"Compare two operating models using unit economics, sensitivity analysis, and execution risks.","expected_domain":"business-operations","expected_skill":"business-strategy-analysis"},
+    {"id":"research-release-notes","kind":"positive","prompt":"Research the latest official release notes for this database version and cite the sources.","expected_domain":"research-writing","expected_skill":"evidence-research"},
+    {"id":"technical-adr","kind":"positive","prompt":"Write an ADR for choosing between two message brokers based on verified architecture constraints.","expected_domain":"research-writing","expected_skill":"technical-writing-docs"},
+    {"id":"agent-skill-map","kind":"positive","prompt":"Design a hierarchical skill registry and validate routing metadata for a capability map.","expected_domain":"agent-systems","expected_skill":"skill-authoring-validation"},
+    {"id":"near-miss-seo-api","kind":"near_miss","prompt":"Implement an API endpoint that emits SEO metadata for product pages.","expected_domain":"technology","expected_skill":"software-engineering-implementation"},
+    {"id":"near-miss-paid-search","kind":"near_miss","prompt":"Plan a paid search advertising campaign with audience segments, budget, and conversion tracking.","expected_domain":"marketing","expected_skill":"marketing-strategy-campaign"},
+    {"id":"near-miss-organic-search","kind":"near_miss","prompt":"Diagnose organic search traffic loss using crawl data and Search Console.","expected_domain":"seo","expected_skill":"seo-audit-strategy"},
+    {"id":"abstain-legal-advice","kind":"abstention","prompt":"Tell me exactly what legal obligations apply to my company in a jurisdiction I have not specified.","expected_domain":"governance-risk","expected_skill":null},
+    {"id":"abstain-people-policy","kind":"abstention","prompt":"Decide whether this employee should be terminated based on this short, unverified allegation.","expected_domain":"people-learning","expected_skill":null},
+    {"id":"abstain-content-only","kind":"abstention","prompt":"Write a generic blog post with no audience, objective, topic evidence, or requested style.","expected_domain":"marketing","expected_skill":null}
+  ]
+}

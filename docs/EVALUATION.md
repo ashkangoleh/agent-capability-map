@@ -6,6 +6,8 @@ A large skill count is not a quality metric. Evaluate whether the right skill is
 
 For every skill, maintain positive prompts, negative prompts, near-miss prompts that share keywords but require another skill, ambiguous prompts where the correct behavior is to ask or abstain, and cross-domain prompts where composition is justified or rejected.
 
+The initial labeled set is tests/fixtures/routing-cases.json. It is a fixture set, not proof of model routing accuracy. Run it against each target agent client and record the actual selected domain, skill, loaded files, and token usage.
+
 ## Metrics
 
 - Top-1 routing accuracy: correct primary skill / all labeled prompts.
