@@ -6,6 +6,8 @@ children:
     description: "campaign strategy"
     triggers:
       - "campaign"
+      - "کمپین"
+      - "بازاریابی"
       - "go-to-market"
       - "gtm"
       - "marketing strategy"

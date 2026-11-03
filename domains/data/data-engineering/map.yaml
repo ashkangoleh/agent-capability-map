@@ -6,6 +6,8 @@ children:
     description: "distributed processing"
     triggers:
       - "pyspark"
+      - "اسپارک"
+      - "مهندسی داده"
       - "spark"
       - "flink"
       - "ray dataset"

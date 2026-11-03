@@ -6,6 +6,8 @@ children:
     description: "pyspark"
     triggers:
       - "pyspark"
+      - "اسپارک با پایتون"
+      - "پای اسپارک"
       - "python spark"
       - "spark python"
     status: active

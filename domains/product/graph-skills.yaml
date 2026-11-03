@@ -7,6 +7,7 @@ skills:
     description: "Use this task-specific validated procedure only when the request matches the described capability."
     triggers:
       - "prd"
+      - "سند نیازمندی محصول"
       - "product discovery"
       - "product requirements"
       - "roadmap"

@@ -1,6 +1,7 @@
 schema_version: 1
 cases:
   - id: pyspark-bootstrap
+    # Initial English routing fixture.
     request: Create a new PySpark project
     status: matched
     skill: pyspark-project-bootstrap
@@ -71,3 +72,15 @@ cases:
     request: Implement an API endpoint that emits SEO metadata
     status: matched
     skill: software-engineering-implementation
+
+  - id: persian-pyspark-project
+    request: میخوام یک پروژه PySpark بسازم
+    status: matched
+    skill: pyspark-project-bootstrap
+  - id: persian-pyspark-transforms
+    request: یک کد PySpark برای جوین بنویس
+    status: matched
+    skill: pyspark-transformations
+  - id: persian-spark-api-ambiguous
+    request: میخوام یک پروژه اسپارک بسازم
+    status: needs_clarification

@@ -6,6 +6,8 @@ children:
     description: "data engineering"
     triggers:
       - "pyspark"
+      - "اسپارک"
+      - "مهندسی داده"
       - "spark"
       - "airflow"
       - "kafka"

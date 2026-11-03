@@ -162,6 +162,10 @@ Global host instructions / optional Cursor router skill
 The hierarchical maps form the primary discovery tree. Typed cross-domain dependency edges may be added later when a measured need for multi-skill composition exists; a graph database is not needed for this version.
 
 ## Compatibility and validation
+## Language support
+
+The initial resolver uses bounded, deterministic phrase matching, including selected Persian and English aliases. It does not implement semantic understanding or infer arbitrary synonyms. In mixed-language tasks, the host can provide a concise, accurate canonical intent. Missing or ambiguous matches must lead to clarification, not invented skill selection.
+
 
 ~~~sh
 .venv/bin/python -m unittest discover -s tests -v

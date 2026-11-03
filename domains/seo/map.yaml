@@ -6,6 +6,7 @@ children:
     description: "technical seo"
     triggers:
       - "technical seo"
+      - "سئو تکنیکال"
       - "canonical"
       - "robots.txt"
       - "indexing"

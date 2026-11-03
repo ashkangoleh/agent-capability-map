@@ -7,6 +7,9 @@ children:
     description: "Data engineering, storage, streaming, business intelligence and statistics."
     triggers:
       - "pyspark"
+      - "اسپارک"
+      - "مهندسی داده"
+      - "پای اسپارک"
       - "spark"
       - "airflow"
       - "kafka"
@@ -116,6 +119,7 @@ children:
     triggers:
       - "product requirements"
       - "prd"
+      - "مدیریت محصول"
       - "product discovery"
       - "roadmap"
       - "product analytics"
@@ -129,6 +133,8 @@ children:
     description: "Go-to-market, brand, channel strategy, lifecycle and measurement."
     triggers:
       - "marketing"
+      - "بازاریابی"
+      - "مارکتینگ"
       - "growth campaign"
       - "go-to-market"
       - "gtm"
@@ -144,6 +150,7 @@ children:
     description: "Technical SEO, structured data, content SEO, international search and organic analytics."
     triggers:
       - "seo"
+      - "سئو"
       - "search console"
       - "organic traffic"
       - "indexing"

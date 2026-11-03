@@ -6,6 +6,7 @@ children:
     description: "discovery requirements"
     triggers:
       - "prd"
+      - "سند نیازمندی محصول"
       - "product discovery"
       - "requirements"
       - "user stories"
