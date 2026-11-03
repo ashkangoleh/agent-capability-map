@@ -1,0 +1,40 @@
+schema_version: 1
+id: rag-retrieval
+kind: map
+children:
+  - id: quality
+    description: "quality"
+    triggers:
+      - "rag evaluation"
+      - "rag evidence"
+      - "evidence sufficiency"
+      - "rag faithfulness"
+    status: active
+    skills: domains/ai-ml/rag/quality/skills.yaml
+  - id: hybrid
+    description: "hybrid"
+    triggers:
+      - "hybrid search"
+      - "hybrid retrieval"
+      - "bm25 rrf"
+      - "rrf retrieval"
+    status: active
+    skills: domains/ai-ml/rag/hybrid/skills.yaml
+  - id: vector-index
+    description: "vector index"
+    triggers:
+      - "milvus"
+      - "vector index"
+      - "hnsw index"
+    status: active
+    skills: domains/ai-ml/rag/index/skills.yaml
+  - id: general
+    description: "general"
+    triggers:
+      - "rag"
+      - "embedding"
+      - "retrieval"
+      - "vector search"
+      - "reranking"
+    status: active
+    skills: domains/ai-ml/rag/general/skills.yaml

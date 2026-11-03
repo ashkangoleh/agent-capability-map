@@ -1,0 +1,13 @@
+schema_version: 1
+id: validation
+kind: skill-registry
+skills:
+  - id: sklearn-leakage-free-validation
+    path: .agents/skills/sklearn-leakage-free-validation/SKILL.md
+    description: "Validate sklearn pipelines with training-only transforms, realistic train-test splits and holdout checks."
+    triggers:
+      - "sklearn"
+      - "scikit-learn"
+      - "machine learning validation"
+    excludes: []
+    status: active

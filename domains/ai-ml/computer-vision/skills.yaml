@@ -1,0 +1,13 @@
+schema_version: 1
+id: computer-vision
+kind: skill-registry
+skills:
+  - id: computer-vision-dataset-evaluation
+    path: .agents/skills/computer-vision-dataset-evaluation/SKILL.md
+    description: "Train and evaluate computer vision data with label, split and out-of-domain quality checks."
+    triggers:
+      - "vision model"
+      - "image classification"
+      - "object detection"
+    excludes: []
+    status: active

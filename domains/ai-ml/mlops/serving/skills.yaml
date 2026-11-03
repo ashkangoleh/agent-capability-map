@@ -1,0 +1,13 @@
+schema_version: 1
+id: serving
+kind: skill-registry
+skills:
+  - id: ml-model-serving-canary
+    path: .agents/skills/ml-model-serving-canary/SKILL.md
+    description: "Roll out ML serving safely with canary evaluation, model signatures and rollback gates."
+    triggers:
+      - "model canary"
+      - "model deployment"
+      - "model serving"
+    excludes: []
+    status: active

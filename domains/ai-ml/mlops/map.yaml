@@ -1,0 +1,35 @@
+schema_version: 1
+id: mlops
+kind: map
+children:
+  - id: tracking
+    description: "tracking"
+    triggers:
+      - "mlflow"
+      - "experiment tracking"
+      - "model registry"
+    status: active
+    skills: domains/ai-ml/mlops/tracking/skills.yaml
+  - id: feature-store
+    description: "feature store"
+    triggers:
+      - "feast"
+      - "feature store"
+    status: active
+    skills: domains/ai-ml/mlops/feature-store/skills.yaml
+  - id: serving
+    description: "serving"
+    triggers:
+      - "model canary"
+      - "model deployment"
+      - "model serving"
+    status: active
+    skills: domains/ai-ml/mlops/serving/skills.yaml
+  - id: monitoring
+    description: "monitoring"
+    triggers:
+      - "model drift"
+      - "model monitoring"
+      - "ml drift"
+    status: active
+    skills: domains/ai-ml/mlops/monitoring/skills.yaml

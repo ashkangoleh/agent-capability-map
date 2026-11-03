@@ -1,0 +1,12 @@
+schema_version: 1
+id: features
+kind: skill-registry
+skills:
+  - id: feast-online-offline-feature-store
+    path: .agents/skills/feast-online-offline-feature-store/SKILL.md
+    description: "Build Feast point-in-time offline features and online feature serving with freshness parity checks."
+    triggers:
+      - "feast"
+      - "feature store"
+    excludes: []
+    status: active

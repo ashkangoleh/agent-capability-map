@@ -1,0 +1,20 @@
+schema_version: 1
+id: deep-learning
+kind: map
+children:
+  - id: pytorch
+    description: "pytorch"
+    triggers:
+      - "pytorch"
+      - "distributed training"
+      - "torch distributed"
+    status: active
+    skills: domains/ai-ml/deep-learning/pytorch/skills.yaml
+  - id: transformers
+    description: "transformers"
+    triggers:
+      - "peft"
+      - "hugging face fine tuning"
+      - "transformer fine tuning"
+    status: active
+    skills: domains/ai-ml/deep-learning/transformers/skills.yaml

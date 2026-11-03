@@ -1,0 +1,13 @@
+schema_version: 1
+id: evaluation
+kind: skill-registry
+skills:
+  - id: llm-production-evaluation-suite
+    path: .agents/skills/llm-production-evaluation-suite/SKILL.md
+    description: "Evaluate production LLM tasks with calibrated human review, tool traces, model/version and token metrics."
+    triggers:
+      - "llm evaluation"
+      - "llm benchmark"
+      - "llm quality"
+    excludes: []
+    status: active

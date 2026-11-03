@@ -5,59 +5,99 @@ children:
   - id: llm-engineering
     description: "llm engineering"
     triggers:
+      - "llm serving"
+      - "hugging face fine tuning"
+      - "llm evaluation"
+      - "model quantization"
+      - "prompt injection"
+      - "peft"
+      - "vllm"
       - "llm"
       - "model serving"
       - "prompt engineering"
       - "litellm"
     status: active
-    skills: domains/ai-ml/graph-skills.yaml
+    map: domains/ai-ml/llm/map.yaml
   - id: rag-retrieval
     description: "rag retrieval"
     triggers:
+      - "hybrid retrieval"
+      - "retrieval evaluation"
+      - "milvus"
+      - "hybrid search"
+      - "rag evidence"
+      - "rag evaluation"
       - "rag"
       - "embedding"
       - "retrieval"
       - "vector search"
       - "reranking"
     status: active
-    skills: domains/ai-ml/graph-skills.yaml
+    map: domains/ai-ml/rag/map.yaml
   - id: machine-learning
     description: "machine learning"
     triggers:
+      - "ml model serving"
+      - "model canary"
+      - "dataset annotation"
+      - "sklearn"
+      - "model drift"
+      - "feast"
+      - "feature store"
       - "machine learning"
       - "ml model"
       - "supervised learning"
-    status: mapped
+    status: active
+    map: domains/ai-ml/machine-learning/map.yaml
   - id: deep-learning
     description: "deep learning"
     triggers:
+      - "transformer fine tuning"
+      - "distributed training"
+      - "hugging face fine tuning"
+      - "peft"
+      - "pytorch"
       - "deep learning"
       - "neural network"
       - "transformer training"
-    status: mapped
+    status: active
+    map: domains/ai-ml/deep-learning/map.yaml
   - id: mlops
     description: "mlops"
     triggers:
+      - "model serving"
+      - "model canary"
+      - "model drift"
+      - "feast"
+      - "mlflow"
       - "mlops"
       - "model deployment"
       - "model monitoring"
-    status: mapped
+    status: active
+    map: domains/ai-ml/mlops/map.yaml
   - id: computer-vision
     description: "computer vision"
     triggers:
+      - "vision model"
       - "image classification"
       - "object detection"
-    status: mapped
+    status: active
+    skills: domains/ai-ml/computer-vision/skills.yaml
   - id: speech-audio-ai
     description: "speech audio ai"
     triggers:
+      - "speech evaluation"
+      - "asr"
       - "speech recognition"
       - "text to speech"
-    status: mapped
+    status: active
+    skills: domains/ai-ml/speech-audio-ai/skills.yaml
   - id: responsible-ai
     description: "responsible ai"
     triggers:
+      - "responsible ai"
       - "model bias"
       - "ai risk"
       - "ai safety"
-    status: mapped
+    status: active
+    skills: domains/ai-ml/responsible-ai/skills.yaml

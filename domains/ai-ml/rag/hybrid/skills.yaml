@@ -1,0 +1,14 @@
+schema_version: 1
+id: hybrid
+kind: skill-registry
+skills:
+  - id: hybrid-search-ranking-design
+    path: .agents/skills/hybrid-search-ranking-design/SKILL.md
+    description: "Tune dense lexical BM25 and RRF retrieval against real relevance judgments and ACL constraints."
+    triggers:
+      - "hybrid search"
+      - "hybrid retrieval"
+      - "bm25 rrf"
+      - "rrf retrieval"
+    excludes: []
+    status: active

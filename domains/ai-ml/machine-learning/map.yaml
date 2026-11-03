@@ -1,0 +1,42 @@
+schema_version: 1
+id: machine-learning
+kind: map
+children:
+  - id: validation
+    description: "validation"
+    triggers:
+      - "sklearn"
+      - "scikit-learn"
+      - "machine learning validation"
+    status: active
+    skills: domains/ai-ml/machine-learning/validation/skills.yaml
+  - id: features
+    description: "features"
+    triggers:
+      - "feast"
+      - "feature store"
+    status: active
+    skills: domains/ai-ml/machine-learning/features/skills.yaml
+  - id: serving
+    description: "serving"
+    triggers:
+      - "ml model serving"
+      - "model canary"
+      - "ml deployment"
+    status: active
+    skills: domains/ai-ml/machine-learning/serving/skills.yaml
+  - id: monitoring
+    description: "monitoring"
+    triggers:
+      - "model drift"
+      - "model monitoring"
+    status: active
+    skills: domains/ai-ml/machine-learning/monitoring/skills.yaml
+  - id: annotations
+    description: "annotations"
+    triggers:
+      - "dataset annotation"
+      - "ml label governance"
+      - "training labels"
+    status: active
+    skills: domains/ai-ml/machine-learning/annotations/skills.yaml

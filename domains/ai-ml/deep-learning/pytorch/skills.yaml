@@ -1,0 +1,13 @@
+schema_version: 1
+id: pytorch
+kind: skill-registry
+skills:
+  - id: pytorch-distributed-training-recovery
+    path: .agents/skills/pytorch-distributed-training-recovery/SKILL.md
+    description: "Recover PyTorch distributed training and checkpoints with rank consistency and resharding validation."
+    triggers:
+      - "pytorch"
+      - "distributed training"
+      - "torch distributed"
+    excludes: []
+    status: active
