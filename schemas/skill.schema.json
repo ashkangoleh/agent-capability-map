@@ -1,28 +1,28 @@
 {
-  "$schema":"https://json-schema.org/draft/2020-12/schema",
-  "title":"Agent Capability Skill Registry",
-  "type":"object",
-  "required":["domain","skills"],
-  "properties":{
-    "domain":{"type":"string","pattern":"^[a-z0-9-]+$"},
-    "skills":{
-      "type":"array",
-      "items":{
-        "type":"object",
-        "required":["id","path","description","triggers","avoid_triggers","outputs","risk_level","status"],
-        "properties":{
-          "id":{"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},
-          "path":{"type":"string","pattern":"^\.agents/skills/.+/SKILL\.md$"},
-          "description":{"type":"string","minLength":30,"maxLength":500},
-          "triggers":{"type":"array","items":{"type":"string"},"minItems":1},
-          "avoid_triggers":{"type":"array","items":{"type":"string"}},
-          "outputs":{"type":"array","items":{"type":"string"},"minItems":1},
-          "risk_level":{"enum":["low","medium","high","critical"]},
-          "status":{"enum":["active","draft","deprecated"]}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Capability Skill Registry",
+  "type": "object",
+  "required": ["domain", "skills"],
+  "properties": {
+    "domain": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "path", "description", "triggers", "avoid_triggers", "outputs", "risk_level", "status"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+          "path": {"type": "string", "pattern": "agents/skills/.+/SKILL.md"},
+          "description": {"type": "string", "minLength": 30, "maxLength": 500},
+          "triggers": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "avoid_triggers": {"type": "array", "items": {"type": "string"}},
+          "outputs": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "risk_level": {"enum": ["low", "medium", "high", "critical"]},
+          "status": {"enum": ["active", "draft", "deprecated"]}
         },
-        "additionalProperties":false
+        "additionalProperties": false
       }
     }
   },
-  "additionalProperties":false
+  "additionalProperties": false
 }
