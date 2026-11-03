@@ -5,8 +5,10 @@ children:
   - id: productivity
     description: "productivity"
     triggers:
+      - "personal productivity"
       - "productivity"
-    status: mapped
+    status: active
+    skills: domains/personal/skills.yaml
   - id: life-planning
     description: "life planning"
     triggers:

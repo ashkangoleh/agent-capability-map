@@ -15,8 +15,10 @@ children:
   - id: climate-accounting
     description: "climate accounting"
     triggers:
+      - "carbon accounting"
       - "climate accounting"
-    status: mapped
+    status: active
+    skills: domains/energy/skills.yaml
   - id: sustainability-reporting
     description: "sustainability reporting"
     triggers:

@@ -1,0 +1,14 @@
+schema_version: 1
+id: personal
+kind: skill-registry
+skills:
+  - id: personal-workflow-planning
+    path: .agents/skills/personal-workflow-planning/SKILL.md
+    description: "Plan personal productivity routines using deadlines, capacity, privacy and simple priority and review rules."
+    triggers:
+      - "personal productivity"
+      - "personal productivity workflow"
+      - "personal task planning"
+      - "personal workflow"
+    excludes: []
+    status: active

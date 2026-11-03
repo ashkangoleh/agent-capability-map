@@ -5,8 +5,10 @@ children:
   - id: travel-planning
     description: "travel planning"
     triggers:
+      - "travel itinerary"
       - "travel planning"
-    status: mapped
+    status: active
+    skills: domains/travel/skills.yaml
   - id: hospitality
     description: "hospitality"
     triggers:

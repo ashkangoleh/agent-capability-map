@@ -5,8 +5,10 @@ children:
   - id: policy-analysis
     description: "policy analysis"
     triggers:
+      - "public policy"
       - "policy analysis"
-    status: mapped
+    status: active
+    skills: domains/public-sector/skills.yaml
   - id: public-programs
     description: "public programs"
     triggers:

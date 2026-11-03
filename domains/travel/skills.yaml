@@ -1,0 +1,14 @@
+schema_version: 1
+id: travel
+kind: skill-registry
+skills:
+  - id: travel-itinerary-source-review
+    path: .agents/skills/travel-itinerary-source-review/SKILL.md
+    description: "Research travel itineraries with current operator schedules, official advisories and verified booking assumptions."
+    triggers:
+      - "travel planning itinerary"
+      - "travel planning"
+      - "travel itinerary"
+      - "trip itinerary"
+    excludes: []
+    status: active

@@ -15,8 +15,10 @@ children:
   - id: bim
     description: "bim"
     triggers:
+      - "bim ifc schema"
       - "bim"
-    status: mapped
+    status: active
+    skills: domains/construction/skills.yaml
   - id: project-controls
     description: "project controls"
     triggers:

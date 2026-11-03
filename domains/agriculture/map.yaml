@@ -5,8 +5,10 @@ children:
   - id: precision-agriculture
     description: "precision agriculture"
     triggers:
+      - "agriculture field survey"
       - "precision agriculture"
-    status: mapped
+    status: active
+    skills: domains/agriculture/skills.yaml
   - id: food-production
     description: "food production"
     triggers:

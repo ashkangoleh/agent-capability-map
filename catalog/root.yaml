@@ -389,7 +389,7 @@ children:
       - "civil engineering"
       - "bim"
     map: domains/construction/map.yaml
-    status: mapped
+    status: active
   - id: energy
     label: "Energy & Sustainability"
     description: "Mapped taxonomy of energy & sustainability; specialized validated skills are not yet available."
@@ -399,7 +399,7 @@ children:
       - "sustainability"
       - "carbon accounting"
     map: domains/energy/map.yaml
-    status: mapped
+    status: active
   - id: agriculture
     label: "Agriculture & Food Systems"
     description: "Mapped taxonomy of agriculture & food systems; specialized validated skills are not yet available."
@@ -409,7 +409,7 @@ children:
       - "agritech"
       - "food systems"
     map: domains/agriculture/map.yaml
-    status: mapped
+    status: active
   - id: public-sector
     label: "Government & Public Policy"
     description: "Mapped taxonomy of government & public policy; specialized validated skills are not yet available."
@@ -419,7 +419,7 @@ children:
       - "public administration"
       - "public service"
     map: domains/public-sector/map.yaml
-    status: mapped
+    status: active
   - id: travel
     label: "Travel & Hospitality"
     description: "Mapped taxonomy of travel & hospitality; specialized validated skills are not yet available."
@@ -429,7 +429,7 @@ children:
       - "hotel management"
       - "hospitality"
     map: domains/travel/map.yaml
-    status: mapped
+    status: active
   - id: sports
     label: "Sports & Fitness"
     description: "Mapped taxonomy of sports & fitness; specialized validated skills are not yet available."
@@ -439,7 +439,7 @@ children:
       - "athletic performance"
       - "sports analysis"
     map: domains/sports/map.yaml
-    status: mapped
+    status: active
   - id: personal
     label: "Personal Productivity & Life"
     description: "Mapped taxonomy of personal productivity & life; specialized validated skills are not yet available."
@@ -449,4 +449,4 @@ children:
       - "home organization"
       - "hobby"
     map: domains/personal/map.yaml
-    status: mapped
+    status: active

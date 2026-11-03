@@ -10,8 +10,10 @@ children:
   - id: fitness
     description: "fitness"
     triggers:
+      - "fitness training"
       - "fitness"
-    status: mapped
+    status: active
+    skills: domains/sports/skills.yaml
   - id: sports-analytics
     description: "sports analytics"
     triggers:

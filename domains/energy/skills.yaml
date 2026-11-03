@@ -1,0 +1,14 @@
+schema_version: 1
+id: energy
+kind: skill-registry
+skills:
+  - id: carbon-inventory-boundary-review
+    path: .agents/skills/carbon-inventory-boundary-review/SKILL.md
+    description: "Audit corporate carbon accounting boundaries, activity factors, Scope classifications and provenance."
+    triggers:
+      - "carbon accounting"
+      - "carbon accounting inventory"
+      - "emissions inventory"
+      - "carbon inventory boundaries"
+    excludes: []
+    status: active

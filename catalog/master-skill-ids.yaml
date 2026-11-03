@@ -1,9 +1,12 @@
 schema_version: 1
 ids:
   - agent-evaluation-suite
+  - agriculture-field-data-quality
   - ai-rag-engineering
   - airflow-dag-engineering
   - business-strategy-analysis
+  - carbon-inventory-boundary-review
+  - construction-bim-data-coordination
   - content-editorial-brief
   - curriculum-outcomes-assessment
   - customer-support-knowledge-design
@@ -20,6 +23,7 @@ ids:
   - manufacturing-quality-investigation
   - marketing-measurement-attribution
   - marketing-strategy-campaign
+  - personal-workflow-planning
   - pipeline-backfill-recovery
   - platform-operations
   - podcast-production-brief
@@ -27,6 +31,7 @@ ids:
   - product-experiment-design
   - product-metrics-instrumentation
   - public-health-evidence-review
+  - public-policy-program-evaluation
   - pyspark-project-bootstrap
   - pyspark-transformations
   - recruiting-interview-scorecard
@@ -41,6 +46,8 @@ ids:
   - spark-performance-diagnostics
   - spark-sql-engineering
   - spark-structured-streaming
+  - sports-training-evidence-plan
   - supply-chain-demand-planning
   - technical-writing-docs
+  - travel-itinerary-source-review
   - ux-research-design-review
