@@ -1,7 +1,171 @@
 {
-  "domain":"technology",
-  "skills":[
-    {"id":"software-engineering-implementation","path":".agents/skills/software-engineering-implementation/SKILL.md","description":"Use when implementing, debugging, refactoring, or reviewing application code, APIs, libraries, or software architecture in an existing or new codebase.","triggers":["implement a feature","debug an error","refactor code","review a pull request","design an API","write production code"],"avoid_triggers":["data pipeline design as the primary task","SEO content writing","marketing campaign planning"],"outputs":["code changes","technical design","tests","risk and rollout notes"],"risk_level":"medium","status":"active"},
-    {"id":"platform-operations","path":".agents/skills/platform-operations/SKILL.md","description":"Use when operating or designing Kubernetes, Docker, Helm, cloud infrastructure, CI/CD, networking, observability, reliability, or production incident workflows.","triggers":["Kubernetes deployment","Helm chart","CI/CD pipeline","production incident","infrastructure configuration","SRE"],"avoid_triggers":["application feature implementation without infrastructure scope","business strategy"],"outputs":["operational plan","configuration","verification","rollback and recovery plan"],"risk_level":"high","status":"active"}
+  "domain": "technology",
+  "skills": [
+    {
+      "id": "software-engineering-implementation",
+      "path": ".agents/skills/software-engineering-implementation/SKILL.md",
+      "description": "Use when implementing, debugging, refactoring, or reviewing application code, APIs, libraries, or software architecture in an existing or new codebase.",
+      "triggers": [
+        "implement a feature",
+        "debug an error",
+        "refactor code",
+        "review a pull request",
+        "design an API",
+        "write production code"
+      ],
+      "avoid_triggers": [
+        "data pipeline design as the primary task",
+        "SEO content writing",
+        "marketing campaign planning"
+      ],
+      "outputs": [
+        "code changes",
+        "technical design",
+        "tests",
+        "risk and rollout notes"
+      ],
+      "risk_level": "medium",
+      "status": "active"
+    },
+    {
+      "id": "platform-operations",
+      "path": ".agents/skills/platform-operations/SKILL.md",
+      "description": "Use when operating or designing Kubernetes, Docker, Helm, cloud infrastructure, CI/CD, networking, observability, reliability, or production incident workflows.",
+      "triggers": [
+        "Kubernetes deployment",
+        "Helm chart",
+        "CI/CD pipeline",
+        "production incident",
+        "infrastructure configuration",
+        "SRE"
+      ],
+      "avoid_triggers": [
+        "application feature implementation without infrastructure scope",
+        "business strategy"
+      ],
+      "outputs": [
+        "operational plan",
+        "configuration",
+        "verification",
+        "rollback and recovery plan"
+      ],
+      "risk_level": "high",
+      "status": "active"
+    },
+    {
+      "id": "network-diagnostics",
+      "path": ".agents/skills/network-diagnostics/SKILL.md",
+      "description": "Diagnose network connectivity, DNS, routing, TCP, TLS, proxy, load-balancer and firewall problems using safe layer-specific evidence.",
+      "triggers": [
+        "DNS resolution failure",
+        "TCP timeout",
+        "proxy CONNECT failure",
+        "TLS handshake failure"
+      ],
+      "avoid_triggers": [
+        "data pipeline schema issue",
+        "marketing attribution error",
+        "application UI implementation"
+      ],
+      "outputs": [
+        "network diagnostic evidence",
+        "minimal verification probes",
+        "remediation and rollback"
+      ],
+      "risk_level": "high",
+      "status": "active"
+    },
+    {
+      "id": "devops-delivery",
+      "path": ".agents/skills/devops-delivery/SKILL.md",
+      "description": "Design reliable CI/CD and application release automation with controlled promotions, rollout checks, artifact integrity and rollback.",
+      "triggers": [
+        "CI/CD pipeline",
+        "deployment automation",
+        "release strategy",
+        "rollback deploy"
+      ],
+      "avoid_triggers": [
+        "security audit as primary task",
+        "incident SLO definition",
+        "self-service platform API"
+      ],
+      "outputs": [
+        "pipeline config",
+        "release verification",
+        "rollback plan"
+      ],
+      "risk_level": "high",
+      "status": "active"
+    },
+    {
+      "id": "devsecops-review",
+      "path": ".agents/skills/devsecops-review/SKILL.md",
+      "description": "Audit software delivery security including secrets, CI permissions, dependency provenance, build artifacts and least-privilege controls.",
+      "triggers": [
+        "secure CI/CD",
+        "secrets in pipeline",
+        "supply chain hardening",
+        "dependency provenance"
+      ],
+      "avoid_triggers": [
+        "functional delivery pipeline only",
+        "network latency troubleshooting",
+        "marketing workflow"
+      ],
+      "outputs": [
+        "security findings",
+        "minimal hardening controls",
+        "residual risk"
+      ],
+      "risk_level": "high",
+      "status": "active"
+    },
+    {
+      "id": "platform-engineering-workflows",
+      "path": ".agents/skills/platform-engineering-workflows/SKILL.md",
+      "description": "Build or review internal developer platforms, golden paths, reusable templates and self-service environment provisioning with operational ownership.",
+      "triggers": [
+        "developer self service",
+        "internal developer platform",
+        "platform golden path",
+        "environment provisioning API"
+      ],
+      "avoid_triggers": [
+        "single CI job",
+        "network-only incident",
+        "data modeling query"
+      ],
+      "outputs": [
+        "platform contract",
+        "golden path",
+        "adoption and failure validation"
+      ],
+      "risk_level": "high",
+      "status": "active"
+    },
+    {
+      "id": "sre-incident-response",
+      "path": ".agents/skills/sre-incident-response/SKILL.md",
+      "description": "Define and operate service reliability workflows, SLOs and incident triage with measurable impact, mitigations, postmortems and recovery.",
+      "triggers": [
+        "production incident",
+        "SLI and SLO",
+        "error budget",
+        "incident postmortem"
+      ],
+      "avoid_triggers": [
+        "general CI build",
+        "network-only isolated DNS analysis",
+        "marketing incident"
+      ],
+      "outputs": [
+        "incident runbook",
+        "SLO definition",
+        "recovery verification"
+      ],
+      "risk_level": "high",
+      "status": "active"
+    }
   ]
 }
