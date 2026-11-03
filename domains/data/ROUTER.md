@@ -8,3 +8,12 @@ Use for data platforms, pipelines, distributed processing, storage, modeling, an
 4. Distinguish query correctness, data correctness, and operational correctness.
 5. For production pipelines, inspect source and sink semantics, idempotency, replay, backfill, late data, schema evolution, data quality, observability, and recovery.
 6. Never claim exactly-once semantics without proving the end-to-end contract.
+
+## Progressive specialization (do not preload ancestors)
+
+- Entire PySpark read/transform/write job -> pyspark-pipelines.
+- Isolated Spark join correctness, join type, plan or hint -> pyspark-joins.
+- Evidence of hot keys, straggler tasks, uneven shuffle partitions -> pyspark-skew-diagnostics. If evidence is absent, call skew a hypothesis and ask for plan/metrics.
+- Generic non-Spark data pipeline -> data-engineering-implementation.
+- Spark cluster or Kubernetes deployment without a data pipeline deliverable -> technology/platform-operations, not a PySpark leaf skill.
+- Each leaf is self-contained; parent_skill is a navigation edge, not an instruction to load all ancestors. Related skills are pointers only, never implicit activations.
