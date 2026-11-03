@@ -156,7 +156,7 @@
       "expected_skill": "platform-operations"
     },
     {
-      "id": "abstain-unsubstantiated-skew",
+      "id": "abstain-impossible-performance-guarantee",
       "kind": "abstention",
       "prompt": "Guarantee a 10x Spark performance improvement without giving the data, execution plan, version, or any measurements.",
       "expected_domain": "data",
