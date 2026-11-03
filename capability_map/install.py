@@ -52,6 +52,7 @@ def cursor_text():
         "infrastructure, AI, product, marketing, SEO, research, or other mapped work.\n"
         "---\n\n"
         + instruction_text()
+        + "\n<!-- capability-map:generated -->\n"
     )
 
 
@@ -88,7 +89,17 @@ def install(hosts, home, apply=False):
             raise RouterError(f"Unsupported host: {host}")
         if host == "cursor":
             target = home / CURSOR_SKILL
-            results.append(_upsert(target, cursor_text(), apply))
+            if target.is_symlink() or (target.exists() and not target.is_file()):
+                raise RouterError(f"Unsafe Cursor destination: {target}")
+            content = cursor_text()
+            existing = target.read_text(encoding="utf-8") if target.exists() else ""
+            if existing and "<!-- capability-map:generated -->" not in existing:
+                raise RouterError(f"Refusing to overwrite unmanaged Cursor skill: {target}")
+            changed = existing != content
+            if apply and changed:
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_text(content, encoding="utf-8")
+            results.append({"path": str(target), "changed": changed, "applied": bool(apply and changed)})
         else:
             target = home / HOST_FILES[host]
             results.append(_upsert(target, instruction_text(), apply))

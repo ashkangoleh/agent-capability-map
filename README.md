@@ -1,49 +1,183 @@
-# Agent Capability Map
+# Agent Capability Map — Global Master Skill Router
 
-A domain-agnostic, evidence-aware capability system for AI agents.
+Global-first, YAML-driven, hierarchical discovery for reusable skills across coding agents. A single master map serves all projects. A user can **add personal skills** globally or per project without changing the master repository.
 
-The project maps user intent to a small set of verified capabilities, loads only the selected skill instructions, and retrieves supporting references only when needed. It covers technology, data, AI/ML, agent systems, product, marketing, SEO, design, business operations, research, governance, and people/learning.
+The master map currently covers 33 broad domains and many mapped subdomains. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
 
-## Core objectives
+## Operating contract
 
-1. Lower context cost through progressive disclosure.
-2. Reduce unsupported claims with evidence requirements, source hierarchy, explicit uncertainty, and abstention.
-3. Improve task execution with small, composable skills and clear activation boundaries.
-4. Stay portable through the open Agent Skills folder format.
-5. Make quality measurable through CI validation and routing/evidence evaluation.
+1. An agent receives an ordinary task, such as "Create a new PySpark project."
+2. Small global instructions ask it to call the read-only resolver with the task intent.
+3. Resolver checks the top-level YAML map, then only the selected child maps, then its local skill registry.
+4. It returns a verified path to the best matching SKILL.md, or an explicit needs_clarification/unavailable/unmatched status.
+5. The host agent reads only the selected SKILL.md and necessary references.
+6. Personal/project skills are considered **only when explicitly registered**. IDs cannot silently overwrite master IDs.
 
-## Repository map
+**No slash command is required** to express the task. However, a host must actually follow its global instructions and be able to invoke the CLI. Invocation reliability and token savings are not yet measured; this is not a universal native plugin.
 
-- AGENTS.md — root operating contract and master router.
-- catalog/ — compact domain map and routing/evidence policies.
-- domains/*/ROUTER.md — domain-specific routing instructions.
-- domains/*/skills.json — metadata for skills in that domain only.
-- .agents/skills/*/SKILL.md — capability instructions.
-- docs/ — architecture, anti-hallucination, evaluation, and authoring.
-- tests/fixtures/routing-cases.json — labeled positive, negative, near-miss, and abstention cases.
-- scripts/validate_registry.py — dependency-free structural validator.
-- tests/ — validation tests.
+## Install globally (per user, local machine)
 
-## Agent quick start
+Prerequisites: Python 3.10+, Git, and permission to create global instruction files.
 
-1. Read AGENTS.md.
-2. Read catalog/domains.json and select the smallest relevant domain set.
-3. Read only the selected domain router and its local skills.json.
-4. Load the best matching SKILL.md. Load a second skill only for a real cross-capability dependency.
-5. Read referenced resources only at the point of need.
-6. If no skill matches, do not invent one; use a suitable general research workflow or state the capability gap.
+~~~sh
+git clone -b feat/global-yaml-capability-graph https://github.com/ashkangoleh/agent-capability-map.git ~/agent-capability-map
+cd ~/agent-capability-map
+python3 -m venv .venv
+.venv/bin/python -m pip install -e .
+.venv/bin/python -m capability_map validate
+~~~
 
-## Validation
+Review what will change before touching existing instructions:
 
-    python scripts/validate_registry.py
-    python -m unittest discover -s tests -v
+~~~sh
+.venv/bin/python -m capability_map install --hosts codex claude opencode copilot cursor
+~~~
 
-The validator uses only the Python standard library.
+Apply only after reviewing the target paths:
 
-## Important limitation
+~~~sh
+.venv/bin/python -m capability_map install --hosts codex claude opencode copilot cursor --apply
+~~~
 
-This repository defines a portable map and operating contract; AGENTS.md and the registry do not magically implement a runtime loader. A host agent must support Agent Skills or provide file-read/tool access. Native semantic routing, runtime token telemetry, and automatic loading are integration concerns, not claimed as implemented here.
+This writes a managed, concise block into user-level instruction files while preserving all unrelated content. Cursor receives one global router SKILL.md. It does **not** copy every specialist skill into native host folders.
 
-## Design principle
+| Host | User-level bootstrap |
+|---|---|
+| Codex | ~/.codex/AGENTS.md |
+| Claude Code | ~/.claude/CLAUDE.md |
+| OpenCode | ~/.config/opencode/AGENTS.md |
+| GitHub Copilot CLI / supported VS Code sessions | ~/.copilot/copilot-instructions.md |
+| Cursor | ~/.cursor/skills/master-capability-router/SKILL.md |
 
-Discover narrowly. Load deliberately. Verify claims. Abstain when evidence is missing.
+These are host-specific entry points, **not guarantees** that all remote/cloud agent runs discover local user instructions. Native skill discovery, invocation and permissions vary. For VS Code/Cursor, verify the active harness, environment and applicable user rules. Global installation means the current user/machine; repeat in each remote worker/cloud container as appropriate.
+
+The installed Python interpreter must remain available and the cloned repository path must remain stable. The installer intentionally supports dry-run by default and refuses unsafe symlink targets or unmanaged Cursor skill collisions.
+
+## Use and inspect the YAML graph
+
+~~~sh
+.venv/bin/python -m capability_map resolve --request "Create a new PySpark project" --project .
+.venv/bin/python -m capability_map resolve --request "Write PySpark DataFrame joins" --project .
+.venv/bin/python -m capability_map resolve --request "Create an Airflow DAG with retries" --project .
+.venv/bin/python -m capability_map validate
+~~~
+
+Inspect the JSON field skill_path only when status is matched. The lexical match_strength is a routing heuristic, **not a calibrated probability of correctness**. Ambiguous tasks return clarification options; unsupported mapped domains do not activate fictional skills. Multiple equally relevant domains may require explicit composition.
+
+## Register your personal skills — this step is mandatory
+
+**Unregistered personal files are NOT discovered by the master router.** You must register them in a YAML manifest and, for project-specific skills, explicitly point to the manifest in the project's AGENTS.md.
+
+### Option A: global personal skills
+
+Create the file below (in your own home directory):
+
+~~~text
+~/.config/agent-capability-map/personal.yaml
+~~~
+
+Example:
+
+~~~yaml
+schema_version: 1
+skills:
+  - id: my-company-pyspark
+    path: skills/my-company-pyspark/SKILL.md
+    route: [data, data-engineering, distributed-processing, spark, pyspark]
+    triggers:
+      - enterprise pyspark project
+      - company spark templates
+    excludes:
+      - regular open-source pyspark
+    status: active
+~~~
+
+Create the referenced skill under:
+
+~~~text
+~/.config/agent-capability-map/skills/my-company-pyspark/SKILL.md
+~~~
+
+The SKILL.md must follow the open Agent Skills standard: valid YAML frontmatter, name matching the directory, and a discriminative description. The personal ID must not collide with a master skill ID.
+
+### Option B: per-project skills (registered in AGENTS.md)
+
+In the PROJECT ROOT AGENTS.md, add exactly:
+
+~~~text
+<!-- capability-map: overlay=.capability-map.yaml -->
+~~~
+
+Create .capability-map.yaml in the same project root:
+
+~~~yaml
+schema_version: 1
+skills:
+  - id: team-pyspark-quality
+    path: .agents/skills/team-pyspark-quality/SKILL.md
+    route: [data, data-engineering, distributed-processing, spark, pyspark]
+    triggers:
+      - enterprise pyspark quality checks
+      - team data quality conventions
+    excludes: []
+    status: active
+~~~
+
+Then create and test:
+
+~~~text
+my-project/.agents/skills/team-pyspark-quality/SKILL.md
+~~~
+
+This skill exists alongside master skills. Both sources may match; the more specific lexical trigger wins. On equal matches the router asks for clarification rather than silently overwriting one source. Skills cannot escape their registered project/user root through path traversal or symlinks. **Do not place secrets or blindly trusted instructions into skill files.**
+
+You can register more than one project YAML manifest by adding another explicit marker. The master router never scans arbitrary project folders looking for instructions.
+
+### What to put in the project AGENTS.md
+
+Put repository-specific constraints, conventions and the overlay registration marker in AGENTS.md. Do not copy the entire master router into every repository. Repo instructions are additive to global host instructions and do not grant privileged access to arbitrary skills.
+
+## Architecture
+
+~~~text
+Global host instructions / optional Cursor router skill
+           |
+   capability-map resolve
+           |
+   catalog/root.yaml
+           |
+   domains/<domain>/map.yaml
+           |
+   <subdomain>/map.yaml ...
+           |
+   <technology>/<api>/skills.yaml
+           |
+   selected .agents/skills/<name>/SKILL.md
+           |
+   selective references and tests
+           +
+   registered personal.yaml or project AGENTS.md overlay
+~~~
+
+The hierarchical maps form the primary discovery tree. Typed cross-domain dependency edges may be added later when a measured need for multi-skill composition exists; a graph database is not needed for this version.
+
+## Compatibility and validation
+
+~~~sh
+.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python -m capability_map validate
+~~~
+
+CI checks syntax, references, linked SKILL.md metadata, path security and test fixtures. Passing these checks does **not** prove language-model routing accuracy, lower token usage or zero hallucinations. Evaluation must compare actual model runs, source evidence quality, false activations, task success, cost and abstention.
+
+## References and design sources
+
+- https://agentskills.io/specification
+- https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra
+- https://docs.opencode.ai/docs/rules/
+- https://cursor.com/help/customization/skills
+- https://code.visualstudio.com/docs/agent-customization/custom-instructions
+- https://github.com/DietrichGebert/ponytail/blob/main/docs/agent-portability.md
+- https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html
+
+Original JSON registries under catalog/ and domains/*/skills.json remain for historical comparison only. **The executable router now reads only catalog/root.yaml and its linked YAML files.**

@@ -82,10 +82,10 @@ def match_score(request, phrases, negative=()):
     return score, matched
 
 
-def ranked(request, entries, *, negative_field="excludes"):
+def ranked(request, entries, *, negative_field="excludes", include_mapped=False):
     matches = []
     for entry in entries:
-        if entry.get("status") != "active":
+        if entry.get("status") != "active" and not (include_mapped and entry.get("status") == "mapped"):
             continue
         score, terms = match_score(request, entry.get("triggers", []), entry.get(negative_field, []))
         if score:
@@ -121,14 +121,20 @@ class Router:
             result["match_strength"] = score
         return result
 
-    def _choose(self, request, entries, route):
-        candidates = ranked(request, entries)
+    def _choose(self, request, entries, route, *, include_mapped=False):
+        candidates = ranked(request, entries, include_mapped=include_mapped)
         if not candidates:
             return None, self._result(
                 "needs_clarification",
                 route=route,
                 message="The request does not identify a specific validated child capability.",
                 candidates=[n["id"] for n in entries][:12],
+            )
+        if not route and len(candidates) > 1 and candidates[0][0] - candidates[1][0] <= 25:
+            return None, self._result(
+                "needs_clarification", route=route,
+                message="Multiple top-level domains match; choose primary scope before composing.",
+                candidates=[n[1]["id"] for n in candidates if candidates[0][0] - n[0] <= 25],
             )
         best_score = candidates[0][0]
         ties = [n[1]["id"] for n in candidates if n[0] == best_score]
@@ -153,7 +159,7 @@ class Router:
             children = data.get("children", [])
             if not isinstance(children, list):
                 raise RouterError(f"Expected children list at {path}")
-            node, failure = self._choose(request, children, route)
+            node, failure = self._choose(request, children, route, include_mapped=True)
             if failure:
                 if not route:
                     failure["status"] = "unmatched"
@@ -162,11 +168,11 @@ class Router:
             _, child, _ = node
             require_id(child.get("id"))
             route.append(child["id"])
-            if child.get("status") != "active":
-                return self._result("unavailable", route=route, message="Domain is mapped; no validated skill is published.")
             if child.get("map"):
                 path = child["map"]
                 continue
+            if child.get("status") != "active":
+                return self._result("unavailable", route=route, message="Domain is mapped; no validated skill is published.")
             if child.get("skills"):
                 registry = self._yaml(self.root, child["skills"])
                 if not isinstance(registry.get("skills"), list):
