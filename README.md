@@ -37,6 +37,7 @@ The project maps user intent to a small set of verified capabilities, loads only
 
     python scripts/validate_registry.py
     python -m unittest discover -s tests -v
+    python scripts/inspect_skill_graph.py pyspark-skew-diagnostics
 
 The validator uses only the Python standard library and checks skill-graph references and parent cycles.
 
