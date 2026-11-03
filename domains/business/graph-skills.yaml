@@ -1,0 +1,17 @@
+schema_version: 1
+id: business
+kind: skill-registry
+skills:
+  - id: business-strategy-analysis
+    path: .agents/skills/business-strategy-analysis/SKILL.md
+    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    triggers:
+      - "business case"
+      - "business strategy"
+      - "unit economics"
+      - "operating model"
+      - "commercial analysis"
+      - "business analysis"
+    excludes:
+      - "personal legal advice"
+    status: active

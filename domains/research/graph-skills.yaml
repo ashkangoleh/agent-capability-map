@@ -1,0 +1,28 @@
+schema_version: 1
+id: research
+kind: skill-registry
+skills:
+  - id: evidence-research
+    path: .agents/skills/evidence-research/SKILL.md
+    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    triggers:
+      - "research this"
+      - "verify"
+      - "fact check"
+      - "evidence"
+      - "official documentation"
+    excludes:
+      - "write technical documentation"
+    status: active
+  - id: technical-writing-docs
+    path: .agents/skills/technical-writing-docs/SKILL.md
+    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    triggers:
+      - "write documentation"
+      - "technical writing"
+      - "adr"
+      - "rfc"
+      - "runbook"
+    excludes:
+      - "pure marketing copy"
+    status: active

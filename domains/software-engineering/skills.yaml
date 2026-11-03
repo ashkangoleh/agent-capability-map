@@ -1,0 +1,23 @@
+schema_version: 1
+id: software-engineering
+kind: skill-registry
+skills:
+  - id: software-engineering-implementation
+    path: .agents/skills/software-engineering-implementation/SKILL.md
+    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    triggers:
+      - "fastapi"
+      - "django"
+      - "backend"
+      - "frontend"
+      - "react"
+      - "api design"
+      - "code review"
+      - "python code"
+      - "software architecture"
+      - "unit testing"
+      - "refactor"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

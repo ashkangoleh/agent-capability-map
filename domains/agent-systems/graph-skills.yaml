@@ -1,0 +1,18 @@
+schema_version: 1
+id: agent-systems
+kind: skill-registry
+skills:
+  - id: skill-authoring-validation
+    path: .agents/skills/skill-authoring-validation/SKILL.md
+    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    triggers:
+      - "skill router"
+      - "master skill"
+      - "capability map"
+      - "skill registry"
+      - "agents.md"
+      - "create skill"
+      - "mcp server"
+    excludes:
+      - "ordinary application code"
+    status: active

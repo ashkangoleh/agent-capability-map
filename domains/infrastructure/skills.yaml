@@ -1,0 +1,22 @@
+schema_version: 1
+id: infrastructure
+kind: skill-registry
+skills:
+  - id: platform-operations
+    path: .agents/skills/platform-operations/SKILL.md
+    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    triggers:
+      - "kubernetes"
+      - "helm"
+      - "docker"
+      - "devops"
+      - "sre"
+      - "deployment"
+      - "observability"
+      - "cloud architecture"
+      - "aws"
+      - "linux server"
+      - "networking"
+    excludes:
+      - "marketing"
+    status: active

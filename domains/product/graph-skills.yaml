@@ -1,0 +1,17 @@
+schema_version: 1
+id: product
+kind: skill-registry
+skills:
+  - id: product-discovery-prd
+    path: .agents/skills/product-discovery-prd/SKILL.md
+    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    triggers:
+      - "prd"
+      - "product discovery"
+      - "product requirements"
+      - "roadmap"
+      - "user stories"
+      - "product strategy"
+    excludes:
+      - "marketing campaign"
+    status: active

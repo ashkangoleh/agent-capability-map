@@ -1,0 +1,20 @@
+schema_version: 1
+id: seo
+kind: skill-registry
+skills:
+  - id: seo-audit-strategy
+    path: .agents/skills/seo-audit-strategy/SKILL.md
+    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    triggers:
+      - "seo"
+      - "technical seo"
+      - "canonical"
+      - "indexing"
+      - "organic search"
+      - "schema.org"
+      - "search console"
+      - "keyword research"
+      - "hreflang"
+    excludes:
+      - "paid search ad"
+    status: active

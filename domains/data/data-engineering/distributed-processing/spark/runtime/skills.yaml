@@ -1,0 +1,17 @@
+schema_version: 1
+id: spark-runtime
+kind: skill-registry
+skills:
+  - id: spark-performance-diagnostics
+    path: .agents/skills/spark-performance-diagnostics/SKILL.md
+    description: "Diagnose Spark SQL and PySpark performance with execution plans, skew, shuffle, spill and measurable before/after evidence."
+    triggers:
+      - "spark performance"
+      - "spark executor"
+      - "spark tuning"
+      - "spark skew"
+      - "spark slow"
+      - "spark shuffle"
+    excludes:
+      - "create new spark project"
+    status: active

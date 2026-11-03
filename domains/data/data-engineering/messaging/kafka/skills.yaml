@@ -1,0 +1,17 @@
+schema_version: 1
+id: kafka
+kind: skill-registry
+skills:
+  - id: kafka-streaming-reliability
+    path: .agents/skills/kafka-streaming-reliability/SKILL.md
+    description: "Design and review Kafka streaming workflows, offsets, delivery semantics, ordering, replay and consumer recovery."
+    triggers:
+      - "kafka"
+      - "kafka streams"
+      - "kafka consumer"
+      - "kafka producer"
+      - "kafka topics"
+    excludes:
+      - "rabbitmq"
+      - "kinesis"
+    status: active

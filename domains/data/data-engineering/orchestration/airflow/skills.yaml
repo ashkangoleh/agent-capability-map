@@ -1,0 +1,16 @@
+schema_version: 1
+id: airflow
+kind: skill-registry
+skills:
+  - id: airflow-dag-engineering
+    path: .agents/skills/airflow-dag-engineering/SKILL.md
+    description: "Design and validate production Airflow DAG workflows with retry, scheduling, idempotency and backfill semantics."
+    triggers:
+      - "airflow"
+      - "airflow dag"
+      - "airflow scheduling"
+      - "create dag"
+    excludes:
+      - "dagster"
+      - "prefect"
+    status: active

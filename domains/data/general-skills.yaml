@@ -1,0 +1,22 @@
+schema_version: 1
+id: data-general
+kind: skill-registry
+skills:
+  - id: data-engineering-implementation
+    path: .agents/skills/data-engineering-implementation/SKILL.md
+    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    triggers:
+      - "dbt"
+      - "trino"
+      - "starrocks"
+      - "duckdb"
+      - "iceberg"
+      - "etl"
+      - "data pipeline"
+      - "backfill"
+      - "data ingestion"
+      - "sql modeling"
+      - "data quality"
+    excludes:
+      - "pyspark project"
+    status: active
