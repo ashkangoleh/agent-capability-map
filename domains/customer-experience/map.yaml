@@ -20,5 +20,7 @@ children:
   - id: knowledge-base
     description: "knowledge base"
     triggers:
+      - "customer support knowledge base"
       - "knowledge base"
-    status: mapped
+    status: active
+    skills: domains/customer-experience/skills.yaml

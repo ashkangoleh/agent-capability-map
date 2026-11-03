@@ -15,8 +15,10 @@ children:
   - id: supply-chain-planning
     description: "supply chain planning"
     triggers:
+      - "supply chain demand"
       - "supply chain planning"
-    status: mapped
+    status: active
+    skills: domains/logistics/skills.yaml
   - id: last-mile
     description: "last mile"
     triggers:

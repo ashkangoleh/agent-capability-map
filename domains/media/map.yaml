@@ -15,8 +15,10 @@ children:
   - id: podcasting
     description: "podcasting"
     triggers:
+      - "podcast production"
       - "podcasting"
-    status: mapped
+    status: active
+    skills: domains/media/skills.yaml
   - id: publishing
     description: "publishing"
     triggers:

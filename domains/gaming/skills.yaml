@@ -1,0 +1,13 @@
+schema_version: 1
+id: gaming
+kind: skill-registry
+skills:
+  - id: game-design-prototype-plan
+    path: .agents/skills/game-design-prototype-plan/SKILL.md
+    description: "Plan scoped game design prototypes with core loops, mechanics, player tests and measurable acceptance criteria."
+    triggers:
+      - "game design prototype"
+      - "game design"
+      - "game prototype"
+    excludes: []
+    status: active

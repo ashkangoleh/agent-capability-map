@@ -25,5 +25,7 @@ children:
   - id: sales-analytics
     description: "sales analytics"
     triggers:
+      - "sales pipeline"
       - "sales analytics"
-    status: mapped
+    status: active
+    skills: domains/sales/skills.yaml

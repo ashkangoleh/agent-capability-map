@@ -1,0 +1,14 @@
+schema_version: 1
+id: logistics
+kind: skill-registry
+skills:
+  - id: supply-chain-demand-planning
+    path: .agents/skills/supply-chain-demand-planning/SKILL.md
+    description: "Plan supply chain demand forecasts and replenishment with lead-time uncertainty, costs and inventory constraints."
+    triggers:
+      - "supply chain demand"
+      - "supply chain"
+      - "demand forecasting"
+      - "inventory planning"
+    excludes: []
+    status: active

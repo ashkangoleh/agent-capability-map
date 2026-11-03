@@ -15,8 +15,10 @@ children:
   - id: quality-management
     description: "quality management"
     triggers:
+      - "manufacturing quality defect"
       - "quality management"
-    status: mapped
+    status: active
+    skills: domains/manufacturing/skills.yaml
   - id: maintenance
     description: "maintenance"
     triggers:

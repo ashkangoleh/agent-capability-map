@@ -6,18 +6,23 @@ ids:
   - business-strategy-analysis
   - content-editorial-brief
   - curriculum-outcomes-assessment
+  - customer-support-knowledge-design
   - data-engineering-implementation
   - data-quality-contracts
   - dbt-incremental-modeling
+  - ecommerce-product-catalog-audit
   - evidence-research
   - financial-budget-scenarios
+  - game-design-prototype-plan
   - jurisdictional-legal-source-review
   - kafka-streaming-reliability
   - kubernetes-rollout-safety
+  - manufacturing-quality-investigation
   - marketing-measurement-attribution
   - marketing-strategy-campaign
   - pipeline-backfill-recovery
   - platform-operations
+  - podcast-production-brief
   - product-discovery-prd
   - product-experiment-design
   - product-metrics-instrumentation
@@ -25,6 +30,7 @@ ids:
   - pyspark-project-bootstrap
   - pyspark-transformations
   - recruiting-interview-scorecard
+  - sales-pipeline-forecast-audit
   - scientific-experiment-review
   - security-threat-model-review
   - seo-audit-strategy
@@ -35,5 +41,6 @@ ids:
   - spark-performance-diagnostics
   - spark-sql-engineering
   - spark-structured-streaming
+  - supply-chain-demand-planning
   - technical-writing-docs
   - ux-research-design-review

@@ -314,7 +314,7 @@ children:
       - "product listing"
       - "shopify"
     map: domains/ecommerce/map.yaml
-    status: mapped
+    status: active
   - id: sales
     label: "Sales & Revenue"
     description: "Mapped taxonomy of sales & revenue; specialized validated skills are not yet available."
@@ -325,7 +325,7 @@ children:
       - "revenue operations"
       - "sales outreach"
     map: domains/sales/map.yaml
-    status: mapped
+    status: active
   - id: customer-experience
     label: "Customer Experience & Support"
     description: "Mapped taxonomy of customer experience & support; specialized validated skills are not yet available."
@@ -336,7 +336,7 @@ children:
       - "support ticket"
       - "customer experience"
     map: domains/customer-experience/map.yaml
-    status: mapped
+    status: active
   - id: media
     label: "Media & Entertainment"
     description: "Mapped taxonomy of media & entertainment; specialized validated skills are not yet available."
@@ -347,7 +347,7 @@ children:
       - "podcast"
       - "publishing"
     map: domains/media/map.yaml
-    status: mapped
+    status: active
   - id: gaming
     label: "Games & Interactive"
     description: "Mapped taxonomy of games & interactive; specialized validated skills are not yet available."
@@ -358,7 +358,7 @@ children:
       - "unreal engine"
       - "game economy"
     map: domains/gaming/map.yaml
-    status: mapped
+    status: active
   - id: manufacturing
     label: "Manufacturing & Industry"
     description: "Mapped taxonomy of manufacturing & industry; specialized validated skills are not yet available."
@@ -368,7 +368,7 @@ children:
       - "industrial automation"
       - "production planning"
     map: domains/manufacturing/map.yaml
-    status: mapped
+    status: active
   - id: logistics
     label: "Logistics & Supply Chain"
     description: "Mapped taxonomy of logistics & supply chain; specialized validated skills are not yet available."
@@ -379,7 +379,7 @@ children:
       - "shipping"
       - "delivery routing"
     map: domains/logistics/map.yaml
-    status: mapped
+    status: active
   - id: construction
     label: "Construction & Architecture"
     description: "Mapped taxonomy of construction & architecture; specialized validated skills are not yet available."

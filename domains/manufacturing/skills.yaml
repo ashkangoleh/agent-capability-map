@@ -1,0 +1,13 @@
+schema_version: 1
+id: manufacturing
+kind: skill-registry
+skills:
+  - id: manufacturing-quality-investigation
+    path: .agents/skills/manufacturing-quality-investigation/SKILL.md
+    description: "Investigate manufacturing quality defects with lot traceability, containment, verified causes and corrective actions."
+    triggers:
+      - "manufacturing quality defect"
+      - "manufacturing quality"
+      - "manufacturing defect investigation"
+    excludes: []
+    status: active

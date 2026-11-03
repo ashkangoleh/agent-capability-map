@@ -1,0 +1,14 @@
+schema_version: 1
+id: customer-experience
+kind: skill-registry
+skills:
+  - id: customer-support-knowledge-design
+    path: .agents/skills/customer-support-knowledge-design/SKILL.md
+    description: "Design customer support knowledge bases with verified policy answers, escalation and privacy controls."
+    triggers:
+      - "customer support knowledge base"
+      - "support knowledge base"
+      - "customer support knowledge"
+      - "support resolution workflow"
+    excludes: []
+    status: active

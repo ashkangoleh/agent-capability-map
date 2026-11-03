@@ -10,8 +10,11 @@ children:
   - id: merchandising
     description: "merchandising"
     triggers:
+      - "product catalog"
+      - "product listing"
       - "merchandising"
-    status: mapped
+    status: active
+    skills: domains/ecommerce/skills.yaml
   - id: retail-analytics
     description: "retail analytics"
     triggers:

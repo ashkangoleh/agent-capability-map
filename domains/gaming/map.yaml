@@ -10,8 +10,10 @@ children:
   - id: game-design
     description: "game design"
     triggers:
+      - "game prototype"
       - "game design"
-    status: mapped
+    status: active
+    skills: domains/gaming/skills.yaml
   - id: game-analytics
     description: "game analytics"
     triggers:
