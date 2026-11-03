@@ -450,3 +450,75 @@ children:
       - "hobby"
     map: domains/personal/map.yaml
     status: active
+  - id: robotics
+    label: "Robotics & Autonomous Systems"
+    description: "Robot design, perception, control, safety and autonomous systems."
+    triggers:
+      - "robotics"
+      - "robot control"
+      - "autonomous robot"
+    map: domains/robotics/map.yaml
+    status: mapped
+  - id: telecommunications
+    label: "Telecommunications & Connectivity"
+    description: "Wireless and wired telecom networks, signaling, radio engineering and network operations."
+    triggers:
+      - "telecommunications"
+      - "5g networking"
+      - "mobile radio network"
+    map: domains/telecommunications/map.yaml
+    status: mapped
+  - id: aerospace
+    label: "Aerospace & Space Systems"
+    description: "Space missions, avionics, propulsion research and aerospace systems engineering."
+    triggers:
+      - "aerospace"
+      - "space mission"
+      - "avionics"
+    map: domains/aerospace/map.yaml
+    status: mapped
+  - id: social-sciences
+    label: "Social Sciences"
+    description: "Sociology, economics, political analysis, behavioral research and demographic methods."
+    triggers:
+      - "social sciences"
+      - "sociology"
+      - "behavioral research"
+    map: domains/social-sciences/map.yaml
+    status: mapped
+  - id: humanities
+    label: "Humanities & Languages"
+    description: "History, philosophy, literature, linguistics, translation and cultural heritage."
+    triggers:
+      - "humanities"
+      - "historical research"
+      - "linguistics"
+    map: domains/humanities/map.yaml
+    status: mapped
+  - id: environment
+    label: "Environmental Science & Ecology"
+    description: "Ecology, conservation, environmental monitoring, climate science and sustainability evidence."
+    triggers:
+      - "environmental science"
+      - "ecology"
+      - "biodiversity"
+    map: domains/environment/map.yaml
+    status: mapped
+  - id: real-estate
+    label: "Real Estate & Property"
+    description: "Property operations, real-estate analytics, valuation research and facilities management."
+    triggers:
+      - "real estate"
+      - "property valuation"
+      - "facility management"
+    map: domains/real-estate/map.yaml
+    status: mapped
+  - id: nonprofit
+    label: "Nonprofit & Social Impact"
+    description: "Nonprofit operations, fundraising strategy, grant management, impact and volunteer programs."
+    triggers:
+      - "nonprofit"
+      - "grant proposal"
+      - "volunteer programs"
+    map: domains/nonprofit/map.yaml
+    status: mapped

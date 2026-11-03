@@ -5,6 +5,7 @@ children:
   - id: travel-planning
     description: "travel planning"
     triggers:
+      - "travel planning"
       - "travel itinerary"
       - "travel planning"
     status: active
