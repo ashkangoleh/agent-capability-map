@@ -8,3 +8,9 @@ Use for positioning, go-to-market, brand, campaign planning, paid media, lifecyc
 4. Content production uses this skill only when the task includes a marketing objective, audience, channel, and measurement plan.
 5. Never invent audience research, campaign results, conversion rates, budgets, or competitor data.
 6. Treat platform policies, ad formats, and prices as time-sensitive and verify current official sources.
+
+## Phase-one marketing scope
+
+Campaign strategy, audience targeting, positioning and channel design -> marketing-strategy-campaign.
+Conversion instrumentation, attribution bias, campaign data QA and source-to-report reconciliation -> marketing-attribution-audit.
+Technical crawlability, canonicalization and organic indexation -> seo/seo-audit-strategy rather than the marketing campaign skill.
