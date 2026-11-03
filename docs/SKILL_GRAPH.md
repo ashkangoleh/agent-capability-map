@@ -11,6 +11,24 @@ This repository models skills as a **typed graph with a hierarchical routing spi
 - Missing nodes, self-links, duplicate relations, and parent cycles fail registry validation. Unrecognized relation types are not supported.
 - Subdomain labels in catalog/domains.json are taxonomy metadata, not independently loadable skills.
 
+## Example graph
+
+```mermaid
+flowchart TD
+  de[data-engineering-implementation] --> spark[pyspark-pipelines]
+  spark --> joins[pyspark-joins]
+  joins --> skew[pyspark-skew-diagnostics]
+  skew -. related only .-> platform[platform-operations]
+```
+
+Inspect canonical metadata locally:
+
+```bash
+python scripts/inspect_skill_graph.py pyspark-skew-diagnostics
+```
+
+The inspector reads the whole registry for *offline maintenance* only; it is not a runtime router, skill executor, or prompt loader.
+
 ## Concrete route
 
 A user asks: "My PySpark join has a few shuffle tasks 20 times slower than the others."
