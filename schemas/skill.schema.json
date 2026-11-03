@@ -32,7 +32,7 @@
           },
           "path": {
             "type": "string",
-            "pattern": "^\\\\.agents/skills/[a-z0-9]+(?:-[a-z0-9]+)*/SKILL\\\\.md$"
+            "pattern": "^\\.agents/skills/[a-z0-9]+(?:-[a-z0-9]+)*/SKILL\\.md$"
           },
           "description": {
             "type": "string",
