@@ -1,20 +1,32 @@
 schema_version: 1
 ids:
+  - agent-evaluation-suite
   - ai-rag-engineering
   - airflow-dag-engineering
   - business-strategy-analysis
+  - content-editorial-brief
   - data-engineering-implementation
+  - data-quality-contracts
+  - dbt-incremental-modeling
   - evidence-research
   - kafka-streaming-reliability
+  - kubernetes-rollout-safety
+  - marketing-measurement-attribution
   - marketing-strategy-campaign
+  - pipeline-backfill-recovery
   - platform-operations
   - product-discovery-prd
+  - product-experiment-design
+  - product-metrics-instrumentation
   - pyspark-project-bootstrap
   - pyspark-transformations
   - seo-audit-strategy
+  - seo-indexability-diagnostics
+  - seo-structured-data-validation
   - skill-authoring-validation
   - software-engineering-implementation
   - spark-performance-diagnostics
   - spark-sql-engineering
+  - spark-structured-streaming
   - technical-writing-docs
   - ux-research-design-review

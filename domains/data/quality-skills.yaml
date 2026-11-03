@@ -1,0 +1,16 @@
+schema_version: 1
+id: data-quality
+kind: skill-registry
+skills:
+  - id: data-quality-contracts
+    path: .agents/skills/data-quality-contracts/SKILL.md
+    description: "Create dataset data-quality contracts and reconciliation gates with explicit grain, thresholds, freshness and safe remediation."
+    triggers:
+      - "data quality"
+      - "data quality contract"
+      - "data profiling"
+      - "data reconciliation"
+      - "data quality checks"
+    excludes:
+      - "pyspark project"
+    status: active

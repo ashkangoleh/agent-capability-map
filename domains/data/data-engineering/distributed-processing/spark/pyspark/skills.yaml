@@ -55,3 +55,15 @@ skills:
     excludes:
       - "create new project"
     status: active
+  - id: spark-structured-streaming
+    path: .agents/skills/spark-structured-streaming/SKILL.md
+    description: "Design PySpark Structured Streaming with event-time watermarks, state, checkpoints, trigger semantics and replay tests."
+    triggers:
+      - "pyspark structured streaming"
+      - "pyspark watermark"
+      - "pyspark streaming checkpoint"
+      - "pyspark streaming job"
+      - "pyspark event time"
+    excludes:
+      - "batch pyspark project"
+    status: active

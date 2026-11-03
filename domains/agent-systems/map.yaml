@@ -41,4 +41,5 @@ children:
       - "agent evaluation"
       - "agent benchmark"
       - "trajectory evaluation"
-    status: mapped
+    status: active
+    skills: domains/agent-systems/graph-skills.yaml

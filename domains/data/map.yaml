@@ -5,6 +5,9 @@ children:
   - id: data-engineering
     description: "data engineering"
     triggers:
+      - "structured streaming"
+      - "pipeline replay"
+      - "backfill"
       - "pyspark"
       - "اسپارک"
       - "مهندسی داده"
@@ -68,7 +71,8 @@ children:
       - "data quality"
       - "data profiling"
       - "reconciliation"
-    status: mapped
+    status: active
+    skills: domains/data/quality-skills.yaml
   - id: data-architecture
     description: "data architecture"
     triggers:

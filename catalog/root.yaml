@@ -6,6 +6,11 @@ children:
     label: "Data Engineering & Analytics"
     description: "Data engineering, storage, streaming, business intelligence and statistics."
     triggers:
+      - "structured streaming"
+      - "pipeline replay"
+      - "data backfill"
+      - "backfill"
+      - "data quality"
       - "pyspark"
       - "اسپارک"
       - "مهندسی داده"
@@ -88,6 +93,8 @@ children:
     label: "Agent Systems & Tools"
     description: "Agent architecture, skill routing, MCP, tools and evaluation."
     triggers:
+      - "agent benchmark"
+      - "agent evaluation"
       - "agent skill"
       - "skill router"
       - "master skill"
@@ -117,6 +124,9 @@ children:
     label: "Product Management"
     description: "Discovery, product strategy, requirements, roadmap, metrics and experiments."
     triggers:
+      - "experiment design"
+      - "product experiment"
+      - "a/b test"
       - "product requirements"
       - "prd"
       - "مدیریت محصول"
@@ -132,6 +142,9 @@ children:
     label: "Marketing & Growth"
     description: "Go-to-market, brand, channel strategy, lifecycle and measurement."
     triggers:
+      - "marketing measurement"
+      - "conversion tracking"
+      - "ga4"
       - "marketing"
       - "بازاریابی"
       - "مارکتینگ"
@@ -149,6 +162,8 @@ children:
     label: "SEO & Organic Discovery"
     description: "Technical SEO, structured data, content SEO, international search and organic analytics."
     triggers:
+      - "indexability"
+      - "json-ld"
       - "seo"
       - "سئو"
       - "search console"
@@ -206,6 +221,8 @@ children:
     label: "Content & Publishing"
     description: "Mapped taxonomy of content & publishing; specialized validated skills are not yet available."
     triggers:
+      - "editorial brief"
+      - "content strategy"
       - "copywriting"
       - "editorial"
       - "content writing"
@@ -214,7 +231,7 @@ children:
       - "newsletter"
       - "content calendar"
     map: domains/content/map.yaml
-    status: mapped
+    status: active
   - id: people
     label: "People & HR"
     description: "Mapped taxonomy of people & hr; specialized validated skills are not yet available."

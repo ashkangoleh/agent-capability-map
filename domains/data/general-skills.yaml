@@ -20,3 +20,30 @@ skills:
     excludes:
       - "pyspark project"
     status: active
+  - id: dbt-incremental-modeling
+    path: .agents/skills/dbt-incremental-modeling/SKILL.md
+    description: "Design and test dbt incremental models with adapter-specific MERGE/overwrite behavior, source uniqueness and late corrections."
+    triggers:
+      - "dbt incremental"
+      - "incremental dbt model"
+      - "dbt incremental model"
+      - "dbt merge"
+      - "dbt unique_key"
+      - "dbt full-refresh"
+    excludes:
+      - "pyspark"
+    status: active
+  - id: pipeline-backfill-recovery
+    path: .agents/skills/pipeline-backfill-recovery/SKILL.md
+    description: "Plan deterministic pipeline backfills, replay windows, target idempotency and safe recovery with reconciliation gates."
+    triggers:
+      - "backfill recovery"
+      - "pipeline backfill"
+      - "data backfill"
+      - "replay failed pipeline"
+      - "pipeline replay"
+      - "incremental backfill"
+      - "historical backfill"
+    excludes:
+      - "pyspark structured streaming"
+    status: active

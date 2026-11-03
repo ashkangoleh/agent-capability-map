@@ -20,3 +20,28 @@ skills:
     excludes:
       - "paid search ad"
     status: active
+  - id: seo-indexability-diagnostics
+    path: .agents/skills/seo-indexability-diagnostics/SKILL.md
+    description: "Diagnose real crawl and indexation defects with URL inspection, canonical signals, robots and sitemap evidence."
+    triggers:
+      - "canonical mismatch"
+      - "pages not indexed"
+      - "indexability"
+      - "index coverage"
+      - "google selected canonical"
+      - "seo indexability"
+    excludes:
+      - "paid search ads"
+    status: active
+  - id: seo-structured-data-validation
+    path: .agents/skills/seo-structured-data-validation/SKILL.md
+    description: "Validate Google rich-result feature eligibility and truthful rendered JSON-LD/structured markup against current official policies."
+    triggers:
+      - "structured data validation"
+      - "json-ld"
+      - "json-ld structured data"
+      - "rich result markup"
+      - "schema markup validation"
+    excludes:
+      - "paid ads"
+    status: active

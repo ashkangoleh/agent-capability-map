@@ -15,8 +15,10 @@ children:
   - id: content-strategy
     description: "content strategy"
     triggers:
+      - "editorial brief"
       - "content strategy"
-    status: mapped
+    status: active
+    skills: domains/content/skills.yaml
   - id: social-content
     description: "social content"
     triggers:

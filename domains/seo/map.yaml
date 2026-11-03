@@ -5,6 +5,9 @@ children:
   - id: technical-seo
     description: "technical seo"
     triggers:
+      - "pages not indexed"
+      - "canonical mismatch"
+      - "indexability"
       - "technical seo"
       - "سئو تکنیکال"
       - "canonical"
@@ -24,6 +27,8 @@ children:
   - id: structured-data
     description: "structured data"
     triggers:
+      - "structured data validation"
+      - "json-ld"
       - "schema.org"
       - "structured data"
       - "rich results"

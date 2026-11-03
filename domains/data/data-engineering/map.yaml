@@ -5,6 +5,7 @@ children:
   - id: distributed-processing
     description: "distributed processing"
     triggers:
+      - "structured streaming"
       - "pyspark"
       - "اسپارک"
       - "مهندسی داده"
@@ -38,6 +39,8 @@ children:
   - id: batch-ingestion
     description: "batch ingestion"
     triggers:
+      - "data backfill"
+      - "pipeline replay"
       - "data ingestion"
       - "batch etl"
       - "incremental ingestion"

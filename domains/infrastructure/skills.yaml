@@ -20,3 +20,16 @@ skills:
     excludes:
       - "marketing"
     status: active
+  - id: kubernetes-rollout-safety
+    path: .agents/skills/kubernetes-rollout-safety/SKILL.md
+    description: "Assess and implement safe Kubernetes rolling upgrades and canary rollouts with capacity, health gates and rollback conditions."
+    triggers:
+      - "kubernetes rollout"
+      - "kubernetes canary"
+      - "kubernetes rolling update"
+      - "deployment rollout safety"
+      - "k8s rollout"
+      - "helm rollback plan"
+    excludes:
+      - "helm chart design"
+    status: active

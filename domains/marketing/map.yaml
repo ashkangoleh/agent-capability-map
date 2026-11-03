@@ -39,6 +39,9 @@ children:
   - id: marketing-analytics
     description: "marketing analytics"
     triggers:
+      - "marketing measurement"
+      - "conversion tracking"
+      - "ga4"
       - "marketing attribution"
       - "channel analytics"
     status: active

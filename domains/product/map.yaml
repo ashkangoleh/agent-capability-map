@@ -25,13 +25,17 @@ children:
     triggers:
       - "product analytics"
       - "activation metric"
-    status: mapped
+    status: active
+    skills: domains/product/graph-skills.yaml
   - id: experimentation
     description: "experimentation"
     triggers:
+      - "experiment design"
+      - "a/b test"
       - "ab test"
       - "product experiment"
-    status: mapped
+    status: active
+    skills: domains/product/graph-skills.yaml
   - id: pricing-packaging
     description: "pricing packaging"
     triggers:

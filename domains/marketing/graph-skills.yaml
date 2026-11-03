@@ -19,3 +19,16 @@ skills:
     excludes:
       - "organic seo audit"
     status: active
+  - id: marketing-measurement-attribution
+    path: .agents/skills/marketing-measurement-attribution/SKILL.md
+    description: "Define campaign tracking and GA4 event quality, conversion reconciliation and limitations of attribution versus incrementality."
+    triggers:
+      - "ga4 event tracking"
+      - "ga4"
+      - "marketing measurement"
+      - "conversion tracking"
+      - "marketing incrementality"
+      - "attribution analysis"
+    excludes:
+      - "product experiment"
+    status: active
