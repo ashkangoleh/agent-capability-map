@@ -1,0 +1,128 @@
+# Authoring inventory, NOT a registry of executable or verified skills.
+# Only catalog/domains.json and each active domain's skills.json define runnable coverage.
+# Extend these branches as capabilities are developed. Labels here do not mean readiness.
+version: "1.0.0"
+readiness: mapped
+domains:
+  technology:
+    backend:
+      python: [fastapi, django, flask, asyncio, packaging, testing]
+      golang: [stdlib-http, gin, echo, fiber, concurrency, profiling]
+      java-kotlin: [spring-boot, quarkus, micronaut]
+      nodejs-typescript: [express, nestjs, fastify, runtime]
+      dotnet: [aspnet-core, entity-framework]
+      php: [laravel, symfony, plain-php]
+      rust: [axum, actix-web]
+      cross-cutting: [api-design, authentication, authorization, microservices, monoliths, caching, testing, performance]
+    frontend:
+      languages: [javascript, typescript, html, css]
+      frameworks: [react, nextjs, vue, nuxt, angular, svelte]
+      topics: [accessibility, performance, design-systems, state-management, testing, security]
+    mobile:
+      native: [android-kotlin, ios-swift]
+      cross-platform: [flutter, react-native]
+      topics: [mobile-performance, app-security, release-engineering]
+    platform-infrastructure:
+      cloud:
+        aws: [iam, vpc, ec2, eks, ecs, lambda, s3, rds, cloudwatch, cloudformation]
+        google-cloud: [iam, vpc, gce, gke, cloud-run, cloud-storage, cloud-sql, cloud-monitoring]
+        azure: [entra-id, virtual-network, virtual-machines, aks, functions, blob-storage, azure-monitor]
+        cross-cloud: [networking, identity, architecture, cost-management, disaster-recovery]
+      containers-orchestration: [docker, kubernetes, helm, operators, gitops, argocd, flux]
+      infrastructure-as-code: [terraform, opentofu, pulumi, ansible, packer]
+      devops-cicd: [github-actions, gitlab-ci, jenkins, deployment-strategies, artifact-management]
+      sre: [slis-slos, oncall, incident-response, capacity, reliability, chaos-testing, observability]
+      devsecops: [secret-management, vulnerability-management, iam, supply-chain-security, policy-as-code]
+      monitoring: [opentelemetry, prometheus, grafana, loki, elastic-stack, tracing]
+    networking:
+      fundamentals: [tcp-ip, dns, http, tls, routing, switching, subnetting, ipv6]
+      protocols: [bgp, ospf, vlan, nat, dhcp]
+      operations: [firewalls, proxies, load-balancers, cdn, vpn, sdwan, network-security, troubleshooting]
+    datacenter-onprem:
+      compute: [bare-metal, server-hardware, firmware, linux, windows-server, virtualization]
+      storage: [san, nas, object-storage, ceph, distributed-storage]
+      operations: [backups, capacity, physical-networking, power-cooling, disaster-recovery]
+    engineering-quality:
+      architecture: [distributed-systems, design-patterns, adrs, rfc, technical-debt]
+      testing: [unit, integration, contract, end-to-end, load, security]
+      developer-experience: [git, build-systems, release-management, package-management]
+  data:
+    data-engineering:
+      ingestion:
+        batch: [file-ingestion, api-ingestion, connectors]
+        streaming: [kafka, pulsar, kinesis, pubsub, eventhubs]
+        cdc: [debezium, kafka-connect, aws-dms, change-tracking, snapshot-reconciliation]
+      processing:
+        spark: [pyspark, scala, java, dataframe, rdd, spark-sql, structured-streaming, joins, skew]
+        flink: [datastream, table-api, state, checkpoints]
+        beam: [batch, streaming, runners]
+        sql: [sql-transformations, incremental, window-functions]
+      workflow-orchestration: [apache-airflow, dagster, prefect, kestra, argo-workflows, scheduling, backfills]
+      transformation: [dbt, sqlmesh, incremental-models, testing]
+      storage-lakehouse:
+        formats: [parquet, avro, orc, arrow]
+        table-formats: [apache-iceberg, delta-lake, apache-hudi]
+        catalogs: [hive-metastore, glue-catalog, nessie]
+      databases:
+        oltp: [postgresql, mysql, mariadb, sql-server, sqlite]
+        olap: [starrocks, clickhouse, duckdb, apache-druid, trino, snowflake, bigquery, redshift]
+        nosql: [mongodb, cassandra, dynamodb, redis, elasticsearch, opensearch]
+        operations: [schema-design, query-plans, indexing, replication, backups, migrations, security]
+      cloud-data-platforms:
+        aws: [s3, glue, emr, athena, redshift, kinesis, lake-formation]
+        google-cloud: [gcs, bigquery, dataflow, dataproc, pubsub, composer]
+        azure: [adls, data-factory, synapse, fabric, databricks, event-hubs]
+      reliability-governance:
+        quality: [great-expectations, soda, assertions, reconciliation, schema-evolution]
+        governance: [metadata, lineage, pii, access-control, retention, catalogs]
+        operations: [idempotency, retries, late-data, backfill, replay, monitoring, cost]
+    data-analytics:
+      analytics-engineering: [dimensional-modeling, semantic-layer, metrics, dbt]
+      business-intelligence: [power-bi, tableau, looker, metabase, superset]
+      analysis: [exploratory-analysis, cohort-analysis, funnel-analysis, experimentation]
+    data-science:
+      statistics: [distributions, inference, hypothesis-testing, experimental-design]
+      modeling: [feature-engineering, scikit-learn, xgboost, lightgbm, forecasting]
+      operations: [notebooks, reproducibility, data-leakage, validation]
+  ai-ml:
+    machine-learning: [supervised-learning, unsupervised-learning, model-selection, evaluation]
+    deep-learning: [pytorch, tensorflow, keras, training, distributed-training]
+    ml-engineering: [feature-stores, serving, inference, mlops, monitoring, drift]
+    ml-platforms: [mlflow, kubeflow, feast, model-registries, pipelines]
+    llm-engineering: [prompt-design, structured-output, tool-use, embeddings, evaluation]
+    retrieval: [rag, hybrid-search, reranking, vector-databases, grounded-generation]
+    safety: [prompt-injection, security-testing, privacy, governance]
+  agent-systems:
+    capabilities: [skills, mcp, tools, routing, agent-evaluation, permissions]
+    design: [agent-architecture, orchestration, context-management, testing]
+  product:
+    management: [discovery, user-research, product-strategy, prd, roadmap, prioritization]
+    analytics: [product-metrics, event-tracking, experimentation, retention]
+    commercial: [pricing, packaging, growth, go-to-market]
+  business-operations:
+    strategy: [business-models, market-research, competitive-analysis, unit-economics]
+    analytics: [business-intelligence, forecasting, kpi-design, financial-modeling]
+    operations: [process-optimization, procurement, sales-operations, customer-success, partnerships]
+  marketing:
+    strategy: [branding, positioning, messaging, segmentation, go-to-market]
+    campaigns: [performance-marketing, paid-search, paid-social, email, lifecycle, crm, attribution]
+    content: [copywriting, content-strategy, social-media, influencer, video, localization]
+    search-marketing: [seo, search-analytics, conversion-rate-optimization]
+  seo:
+    technical: [crawlability, indexing, canonicals, robots, sitemap, structured-data, performance]
+    organic: [keyword-research, on-page, content-strategy, internal-linking, authority]
+    specialized: [local, international, ecommerce, programmatic-seo, answer-engine-optimization]
+    measurement: [search-console, analytics, experimentation, reporting]
+  design-creative:
+    experience: [ux-research, service-design, interaction-design, accessibility]
+    interface: [ui-design, prototyping, design-systems, usability-testing]
+    production: [graphic-design, brand-identity, motion, visual-assets]
+  research-writing:
+    research: [source-verification, literature-review, benchmarking, synthesis]
+    communication: [technical-writing, documentation, api-docs, reports, presentations]
+  governance-risk:
+    governance: [privacy, compliance, risk-assessment, security-governance, audit]
+    regulated: [legal-information, finance, employment-policy]
+  people-learning:
+    people: [recruiting, onboarding, leadership, org-design]
+    learning: [curriculum, education, training, evaluation, coaching]
