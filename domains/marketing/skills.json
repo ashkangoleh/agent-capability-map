@@ -1,6 +1,56 @@
 {
-  "domain":"marketing",
-  "skills":[
-    {"id":"marketing-strategy-campaign","path":".agents/skills/marketing-strategy-campaign/SKILL.md","description":"Use when developing marketing strategy, positioning, go-to-market plans, campaign briefs, channel mixes, lifecycle programs, or measurement plans.","triggers":["marketing strategy","campaign plan","go-to-market","positioning","brand messaging","growth campaign","paid media plan"],"avoid_triggers":["technical SEO audit","product PRD","copyediting without a marketing objective"],"outputs":["strategy brief","audience and positioning hypotheses","channel plan","budget assumptions","measurement framework"],"risk_level":"medium","status":"active"}
+  "domain": "marketing",
+  "skills": [
+    {
+      "id": "marketing-strategy-campaign",
+      "path": ".agents/skills/marketing-strategy-campaign/SKILL.md",
+      "description": "Use when developing marketing strategy, positioning, go-to-market plans, campaign briefs, channel mixes, lifecycle programs, or measurement plans.",
+      "triggers": [
+        "marketing strategy",
+        "campaign plan",
+        "go-to-market",
+        "positioning",
+        "brand messaging",
+        "growth campaign",
+        "paid media plan"
+      ],
+      "avoid_triggers": [
+        "technical SEO audit",
+        "product PRD",
+        "copyediting without a marketing objective"
+      ],
+      "outputs": [
+        "strategy brief",
+        "audience and positioning hypotheses",
+        "channel plan",
+        "budget assumptions",
+        "measurement framework"
+      ],
+      "risk_level": "medium",
+      "status": "active"
+    },
+    {
+      "id": "marketing-attribution-audit",
+      "path": ".agents/skills/marketing-attribution-audit/SKILL.md",
+      "description": "Audit marketing tracking and channel attribution correctness, conversion measurement, consent-related gaps and campaign data reconciliation.",
+      "triggers": [
+        "campaign attribution",
+        "UTM tracking",
+        "ROAS discrepancies",
+        "conversion tracking audit"
+      ],
+      "avoid_triggers": [
+        "campaign messaging strategy",
+        "organic crawl issue",
+        "financial statement audit"
+      ],
+      "outputs": [
+        "attribution assumptions",
+        "tracking QA",
+        "measurement recommendations"
+      ],
+      "risk_level": "medium",
+      "status": "active"
+    }
   ]
 }
