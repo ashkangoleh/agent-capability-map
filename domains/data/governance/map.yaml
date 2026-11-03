@@ -13,6 +13,9 @@ children:
   - id: data-catalog
     description: "Data catalog metadata"
     triggers:
+      - "datahub metadata catalog"
+      - "datahub"
       - "data catalog"
       - "metadata"
-    status: mapped
+    status: active
+    skills: domains/data/governance/catalog/skills.yaml

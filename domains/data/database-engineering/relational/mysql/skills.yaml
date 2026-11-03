@@ -1,0 +1,13 @@
+schema_version: 1
+id: mysql
+kind: skill-registry
+skills:
+  - id: mysql-binlog-cdc-integrity
+    path: .agents/skills/mysql-binlog-cdc-integrity/SKILL.md
+    description: "Manage MySQL binlog and GTID CDC positions and snapshot continuity under retention limits."
+    triggers:
+      - "mysql binlog"
+      - "mysql cdc"
+      - "mysql replication"
+    excludes: []
+    status: active

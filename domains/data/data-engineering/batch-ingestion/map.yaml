@@ -30,3 +30,19 @@ children:
       - "incremental ingestion"
     status: active
     skills: domains/data/general-skills.yaml
+  - id: nifi
+    description: "nifi"
+    triggers:
+      - "nifi"
+      - "apache nifi"
+      - "nifi backpressure"
+    status: active
+    skills: domains/data/data-engineering/batch-ingestion/nifi/skills.yaml
+  - id: elasticsearch
+    description: "elasticsearch"
+    triggers:
+      - "elasticsearch pit"
+      - "elasticsearch extraction"
+      - "es search_after"
+    status: active
+    skills: domains/data/data-engineering/batch-ingestion/elasticsearch/skills.yaml

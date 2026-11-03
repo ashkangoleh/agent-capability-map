@@ -27,3 +27,19 @@ children:
       - "hudi mor"
     status: active
     skills: domains/data/data-engineering/lakehouse/hudi/skills.yaml
+  - id: catalogs
+    description: "catalogs"
+    triggers:
+      - "polaris"
+      - "lakekeeper"
+      - "iceberg rest catalog"
+    status: active
+    map: domains/data/data-engineering/lakehouse/catalogs/map.yaml
+  - id: object-storage
+    description: "object storage"
+    triggers:
+      - "minio"
+      - "minio object storage"
+      - "s3 compatible storage"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/object-storage/skills.yaml

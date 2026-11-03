@@ -47,6 +47,10 @@ children:
   - id: batch-ingestion
     description: "batch ingestion"
     triggers:
+      - "elasticsearch extraction"
+      - "elasticsearch pit"
+      - "apache nifi"
+      - "nifi"
       - "parquet small files"
       - "cdc snapshot"
       - "change data capture"
@@ -62,6 +66,10 @@ children:
   - id: lakehouse
     description: "lakehouse"
     triggers:
+      - "iceberg catalog"
+      - "lakekeeper"
+      - "polaris"
+      - "minio"
       - "iceberg schema evolution"
       - "iceberg compaction"
       - "iceberg"
@@ -73,6 +81,8 @@ children:
   - id: warehouse
     description: "warehouse"
     triggers:
+      - "clickhouse mergetree"
+      - "clickhouse"
       - "trino federation"
       - "duckdb parquet"
       - "starrocks"

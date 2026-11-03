@@ -1,0 +1,12 @@
+schema_version: 1
+id: polaris
+kind: skill-registry
+skills:
+  - id: polaris-iceberg-catalog-operations
+    path: .agents/skills/polaris-iceberg-catalog-operations/SKILL.md
+    description: "Operate Apache Polaris Iceberg REST catalogs with explicit auth and cross-engine compatibility checks."
+    triggers:
+      - "polaris"
+      - "polaris iceberg catalog"
+    excludes: []
+    status: active

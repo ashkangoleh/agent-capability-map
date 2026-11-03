@@ -1,0 +1,13 @@
+schema_version: 1
+id: object-storage
+kind: skill-registry
+skills:
+  - id: minio-s3-object-storage-reliability
+    path: .agents/skills/minio-s3-object-storage-reliability/SKILL.md
+    description: "Design MinIO/S3 compatible object-storage data pipelines with multipart, lifecycle and commit safety."
+    triggers:
+      - "minio"
+      - "minio object storage"
+      - "s3 compatible storage"
+    excludes: []
+    status: active

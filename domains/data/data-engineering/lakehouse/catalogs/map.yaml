@@ -1,0 +1,18 @@
+schema_version: 1
+id: catalogs
+kind: map
+children:
+  - id: polaris
+    description: "polaris"
+    triggers:
+      - "polaris"
+      - "polaris iceberg catalog"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/catalogs/polaris/skills.yaml
+  - id: lakekeeper
+    description: "lakekeeper"
+    triggers:
+      - "lakekeeper"
+      - "lakekeeper iceberg catalog"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/catalogs/lakekeeper/skills.yaml

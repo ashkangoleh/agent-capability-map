@@ -13,9 +13,12 @@ children:
   - id: relational-database
     description: "Relational SQL databases"
     triggers:
+      - "sql explain plan"
+      - "mysql binlog"
+      - "postgresql logical replication"
       - "postgresql"
       - "mysql"
       - "query optimization"
       - "database design"
     status: active
-    skills: domains/data/general-skills.yaml
+    map: domains/data/database-engineering/relational/map.yaml

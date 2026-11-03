@@ -14,3 +14,12 @@ skills:
     excludes:
       - "pyspark project"
     status: active
+  - id: great-expectations-validation-gates
+    path: .agents/skills/great-expectations-validation-gates/SKILL.md
+    description: "Implement Great Expectations validation suites and checkpoints with explicit version and failure gates."
+    triggers:
+      - "great expectations"
+      - "gx core"
+      - "expectation suite"
+    excludes: []
+    status: active

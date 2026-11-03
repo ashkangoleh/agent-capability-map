@@ -5,6 +5,12 @@ children:
   - id: data-engineering
     description: "data engineering"
     triggers:
+      - "clickhouse"
+      - "elasticsearch pit"
+      - "nifi"
+      - "lakekeeper"
+      - "polaris"
+      - "minio"
       - "kinesis"
       - "rabbitmq"
       - "apache pulsar"
@@ -57,6 +63,9 @@ children:
   - id: database-engineering
     description: "database engineering"
     triggers:
+      - "sql explain plan"
+      - "mysql binlog"
+      - "postgresql logical replication"
       - "starrocks primary key"
       - "starrocks stream load"
       - "database design"
@@ -111,6 +120,8 @@ children:
   - id: data-governance
     description: "data governance"
     triggers:
+      - "datahub metadata catalog"
+      - "datahub"
       - "openlineage"
       - "data governance"
       - "data catalog"
@@ -121,6 +132,8 @@ children:
   - id: data-quality
     description: "data quality"
     triggers:
+      - "gx core"
+      - "great expectations"
       - "data quality"
       - "data profiling"
       - "reconciliation"

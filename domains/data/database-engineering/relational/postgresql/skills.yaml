@@ -1,0 +1,13 @@
+schema_version: 1
+id: postgresql
+kind: skill-registry
+skills:
+  - id: postgresql-logical-cdc-integrity
+    path: .agents/skills/postgresql-logical-cdc-integrity/SKILL.md
+    description: "Manage PostgreSQL logical replication CDC slots, WAL retention and consistent snapshot offsets."
+    triggers:
+      - "postgresql logical replication"
+      - "postgresql cdc"
+      - "postgresql replication"
+    excludes: []
+    status: active

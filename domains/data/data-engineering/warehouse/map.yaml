@@ -25,3 +25,10 @@ children:
       - "dimensional warehouse"
     status: active
     skills: domains/data/analytics-engineering/dimensional/skills.yaml
+  - id: clickhouse
+    description: "clickhouse"
+    triggers:
+      - "clickhouse"
+      - "clickhouse mergetree"
+    status: active
+    skills: domains/data/data-engineering/warehouse/clickhouse/skills.yaml

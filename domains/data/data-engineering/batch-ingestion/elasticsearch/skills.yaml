@@ -1,0 +1,13 @@
+schema_version: 1
+id: elasticsearch
+kind: skill-registry
+skills:
+  - id: elasticsearch-pit-bulk-extraction
+    path: .agents/skills/elasticsearch-pit-bulk-extraction/SKILL.md
+    description: "Extract Elasticsearch PIT pages with search_after, retry checkpoints and idempotent target reconciliation."
+    triggers:
+      - "elasticsearch pit"
+      - "elasticsearch extraction"
+      - "es search_after"
+    excludes: []
+    status: active

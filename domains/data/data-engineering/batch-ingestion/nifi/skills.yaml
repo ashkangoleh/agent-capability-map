@@ -1,0 +1,13 @@
+schema_version: 1
+id: nifi
+kind: skill-registry
+skills:
+  - id: nifi-flowfile-backpressure-operations
+    path: .agents/skills/nifi-flowfile-backpressure-operations/SKILL.md
+    description: "Operate Apache NiFi FlowFile dataflows with provenance, queue backpressure and recovery tests."
+    triggers:
+      - "nifi"
+      - "apache nifi"
+      - "nifi backpressure"
+    excludes: []
+    status: active
