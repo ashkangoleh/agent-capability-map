@@ -5,8 +5,10 @@ children:
   - id: grant-development
     description: "grant development"
     triggers:
+      - "grant proposal"
       - "grant development"
-    status: mapped
+    status: active
+    skills: domains/nonprofit/skills.yaml
   - id: fundraising
     description: "fundraising"
     triggers:

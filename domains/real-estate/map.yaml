@@ -10,8 +10,10 @@ children:
   - id: valuation-research
     description: "valuation research"
     triggers:
+      - "property due diligence"
       - "valuation research"
-    status: mapped
+    status: active
+    skills: domains/real-estate/skills.yaml
   - id: property-operations
     description: "property operations"
     triggers:

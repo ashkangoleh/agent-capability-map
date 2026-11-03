@@ -5,8 +5,10 @@ children:
   - id: robot-control
     description: "robot control"
     triggers:
+      - "ros2 robot control"
       - "robot control"
-    status: mapped
+    status: active
+    skills: domains/robotics/skills.yaml
   - id: robot-perception
     description: "robot perception"
     triggers:

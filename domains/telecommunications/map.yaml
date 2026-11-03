@@ -20,8 +20,10 @@ children:
   - id: network-operations
     description: "network operations"
     triggers:
+      - "telecommunications network operations"
       - "network operations"
-    status: mapped
+    status: active
+    skills: domains/telecommunications/skills.yaml
   - id: telecom-policy
     description: "telecom policy"
     triggers:

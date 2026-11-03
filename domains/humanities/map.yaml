@@ -5,8 +5,10 @@ children:
   - id: history
     description: "history"
     triggers:
+      - "historical research"
       - "history"
-    status: mapped
+    status: active
+    skills: domains/humanities/skills.yaml
   - id: philosophy
     description: "philosophy"
     triggers:

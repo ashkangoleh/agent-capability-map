@@ -5,8 +5,10 @@ children:
   - id: systems-engineering
     description: "systems engineering"
     triggers:
+      - "aerospace requirements"
       - "systems engineering"
-    status: mapped
+    status: active
+    skills: domains/aerospace/skills.yaml
   - id: flight-software
     description: "flight software"
     triggers:

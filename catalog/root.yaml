@@ -454,71 +454,79 @@ children:
     label: "Robotics & Autonomous Systems"
     description: "Robot design, perception, control, safety and autonomous systems."
     triggers:
+      - "ros2"
       - "robotics"
       - "robot control"
       - "autonomous robot"
     map: domains/robotics/map.yaml
-    status: mapped
+    status: active
   - id: telecommunications
     label: "Telecommunications & Connectivity"
     description: "Wireless and wired telecom networks, signaling, radio engineering and network operations."
     triggers:
+      - "telecom network change"
       - "telecommunications"
       - "5g networking"
       - "mobile radio network"
     map: domains/telecommunications/map.yaml
-    status: mapped
+    status: active
   - id: aerospace
     label: "Aerospace & Space Systems"
     description: "Space missions, avionics, propulsion research and aerospace systems engineering."
     triggers:
+      - "aerospace requirements"
       - "aerospace"
       - "space mission"
       - "avionics"
     map: domains/aerospace/map.yaml
-    status: mapped
+    status: active
   - id: social-sciences
     label: "Social Sciences"
     description: "Sociology, economics, political analysis, behavioral research and demographic methods."
     triggers:
+      - "survey research design"
       - "social sciences"
       - "sociology"
       - "behavioral research"
     map: domains/social-sciences/map.yaml
-    status: mapped
+    status: active
   - id: humanities
     label: "Humanities & Languages"
     description: "History, philosophy, literature, linguistics, translation and cultural heritage."
     triggers:
+      - "primary source history"
       - "humanities"
       - "historical research"
       - "linguistics"
     map: domains/humanities/map.yaml
-    status: mapped
+    status: active
   - id: environment
     label: "Environmental Science & Ecology"
     description: "Ecology, conservation, environmental monitoring, climate science and sustainability evidence."
     triggers:
+      - "biodiversity occurrence data"
       - "environmental science"
       - "ecology"
       - "biodiversity"
     map: domains/environment/map.yaml
-    status: mapped
+    status: active
   - id: real-estate
     label: "Real Estate & Property"
     description: "Property operations, real-estate analytics, valuation research and facilities management."
     triggers:
+      - "property due diligence"
       - "real estate"
       - "property valuation"
       - "facility management"
     map: domains/real-estate/map.yaml
-    status: mapped
+    status: active
   - id: nonprofit
     label: "Nonprofit & Social Impact"
     description: "Nonprofit operations, fundraising strategy, grant management, impact and volunteer programs."
     triggers:
+      - "nonprofit grant proposal"
       - "nonprofit"
       - "grant proposal"
       - "volunteer programs"
     map: domains/nonprofit/map.yaml
-    status: mapped
+    status: active

@@ -30,5 +30,7 @@ children:
   - id: survey-methods
     description: "survey methods"
     triggers:
+      - "survey research"
       - "survey methods"
-    status: mapped
+    status: active
+    skills: domains/social-sciences/skills.yaml

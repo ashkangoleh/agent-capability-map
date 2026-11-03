@@ -1,0 +1,13 @@
+schema_version: 1
+id: robotics
+kind: skill-registry
+skills:
+  - id: robotics-ros2-interface-review
+    path: .agents/skills/robotics-ros2-interface-review/SKILL.md
+    description: "Use for ROS 2 robotics interfaces, communication QoS choices and simulation-to-hardware safe verification."
+    triggers:
+      - "robot control"
+      - "ros2 robot control"
+      - "ros 2 robotics"
+    excludes: []
+    status: active

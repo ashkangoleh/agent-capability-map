@@ -10,8 +10,10 @@ children:
   - id: biodiversity
     description: "biodiversity"
     triggers:
+      - "biodiversity occurrence data"
       - "biodiversity"
-    status: mapped
+    status: active
+    skills: domains/environment/skills.yaml
   - id: environmental-monitoring
     description: "environmental monitoring"
     triggers:

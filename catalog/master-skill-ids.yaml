@@ -1,9 +1,11 @@
 schema_version: 1
 ids:
+  - aerospace-requirements-traceability
   - agent-evaluation-suite
   - agriculture-field-data-quality
   - ai-rag-engineering
   - airflow-dag-engineering
+  - biodiversity-observation-quality
   - business-strategy-analysis
   - carbon-inventory-boundary-review
   - construction-bim-data-coordination
@@ -17,12 +19,14 @@ ids:
   - evidence-research
   - financial-budget-scenarios
   - game-design-prototype-plan
+  - humanities-primary-source-critique
   - jurisdictional-legal-source-review
   - kafka-streaming-reliability
   - kubernetes-rollout-safety
   - manufacturing-quality-investigation
   - marketing-measurement-attribution
   - marketing-strategy-campaign
+  - nonprofit-grant-evidence-plan
   - personal-workflow-planning
   - pipeline-backfill-recovery
   - platform-operations
@@ -34,7 +38,9 @@ ids:
   - public-policy-program-evaluation
   - pyspark-project-bootstrap
   - pyspark-transformations
+  - real-estate-due-diligence
   - recruiting-interview-scorecard
+  - robotics-ros2-interface-review
   - sales-pipeline-forecast-audit
   - scientific-experiment-review
   - security-threat-model-review
@@ -42,6 +48,7 @@ ids:
   - seo-indexability-diagnostics
   - seo-structured-data-validation
   - skill-authoring-validation
+  - social-science-survey-quality
   - software-engineering-implementation
   - spark-performance-diagnostics
   - spark-sql-engineering
@@ -49,5 +56,6 @@ ids:
   - sports-training-evidence-plan
   - supply-chain-demand-planning
   - technical-writing-docs
+  - telecom-network-change-review
   - travel-itinerary-source-review
   - ux-research-design-review
