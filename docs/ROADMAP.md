@@ -50,3 +50,7 @@ Prioritize skills by actual recurring tasks and evaluation gaps:
 ## Phase 2 — Initial specialist expansion (2026-11-03)
 
 12 targeted SKILL.md packages added for dbt incremental models, data quality, data backfill, Structured Streaming, Kubernetes rollout, product experiments, product metrics, marketing measurement, SEO indexability, structured data, agent evaluation and editorial briefing. CI structural validation and deterministic routing fixtures do not replace host-level evaluation or human review.
+
+## Cross-domain specialist expansion (2026-11-03)
+
+A separate branch `feat/cross-domain-skill-expansion` adds 29 specialist skills across 29 previously unsupported or new top-level domains, plus 8 taxonomy extensions. All top-level domains now have at least one active skill but complete subdomain coverage, semantic/multilingual routing, and independent host-level quality assessment remain planned work.

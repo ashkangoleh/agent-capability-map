@@ -218,7 +218,8 @@ cases:
     skill: personal-workflow-planning
   - id: robotics-mapped
     request: "Analyze robotics robot control"
-    status: unavailable
+    status: matched
+    skill: robotics-ros2-interface-review
   - id: telecom-mapped
     request: "Analyze telecommunications radio access"
     status: unavailable
@@ -232,7 +233,7 @@ cases:
     request: "Study humanities philosophy"
     status: unavailable
   - id: environment-mapped
-    request: "Evaluate environmental science biodiversity"
+    request: "Evaluate environmental science ecology"
     status: unavailable
   - id: real-estate-mapped
     request: "Analyze real estate property analytics"
@@ -240,3 +241,35 @@ cases:
   - id: nonprofit-mapped
     request: "Design nonprofit fundraising plan"
     status: unavailable
+  - id: robotics-ros2
+    request: "Review ROS2 robot control QoS"
+    status: matched
+    skill: robotics-ros2-interface-review
+  - id: telecom-network-change
+    request: "Plan a telecom network change review"
+    status: matched
+    skill: telecom-network-change-review
+  - id: aerospace-requirements
+    request: "Create aerospace requirements traceability"
+    status: matched
+    skill: aerospace-requirements-traceability
+  - id: social-survey
+    request: "Create survey research design in social sciences"
+    status: matched
+    skill: social-science-survey-quality
+  - id: humanities-history
+    request: "Review humanities historical research"
+    status: matched
+    skill: humanities-primary-source-critique
+  - id: environment-biodiversity
+    request: "Audit biodiversity occurrence data for environmental science"
+    status: matched
+    skill: biodiversity-observation-quality
+  - id: real-estate-due-diligence
+    request: "Perform real estate property due diligence"
+    status: matched
+    skill: real-estate-due-diligence
+  - id: nonprofit-grant
+    request: "Prepare nonprofit grant proposal"
+    status: matched
+    skill: nonprofit-grant-evidence-plan

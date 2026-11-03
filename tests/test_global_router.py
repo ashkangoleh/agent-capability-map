@@ -104,9 +104,17 @@ class GraphRoutingTests(unittest.TestCase):
                 "environment-mapped",
                 "real-estate-mapped",
                 "nonprofit-mapped",
+                "robotics-ros2",
+                "telecom-network-change",
+                "aerospace-requirements",
+                "social-survey",
+                "humanities-history",
+                "environment-biodiversity",
+                "real-estate-due-diligence",
+                "nonprofit-grant",
             }
         ]
-        self.assertEqual(len(selected), 29)
+        self.assertEqual(len(selected), 37)
         for case in selected:
             with self.subTest(case=case["id"]):
                 result = Router(ROOT).resolve(case["request"])

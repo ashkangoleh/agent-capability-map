@@ -2,11 +2,11 @@
 
 ## Verified structural state
 
-The initial expansion introduces 21 specialist SKILL.md files across 21 previously mapped top-level domains, and eight new mapped-only top-level domains. The legacy 30 existing active skills remain unchanged.
+The expansion introduces 29 specialist SKILL.md files: 21 for previously mapped top-level domains and 8 for newly introduced domains. All 41 top-level domains now have at least one active specialist, while many of their individual subdomains are still mapped-only. The legacy 30 active skills remain unchanged.
 
 New specialist domains: security, people, education, finance, legal, health, science, ecommerce, sales, customer-experience, media, gaming, manufacturing, logistics, construction, energy, agriculture, public-sector, travel, sports and personal.
 
-New mapped-only domains: robotics, telecommunications, aerospace, social-sciences, humanities, environment, real-estate and nonprofit.
+Newly introduced domains with one active skill each: robotics, telecommunications, aerospace, social-sciences, humanities, environment, real-estate and nonprofit.
 
 ## Design constraints
 
@@ -28,3 +28,18 @@ New mapped-only domains: robotics, telecommunications, aerospace, social-science
 ### Audit issue
 
 The existing router uses deterministic trigger-string matching and cannot infer all user intents across languages. Adding thousands of domain aliases without contextual semantics will increase false activations and ambiguity. The right long-term solution is a calibrated candidate selector with deterministic path validation and clear abstention, not loading all skills or making ungrounded 'complete coverage' claims.
+
+## Newly activated domain packages
+
+| Domain | Active specialist | Standards / primary evidence |
+|---|---|---|
+| robotics | `robotics-ros2-interface-review` | ROS 2 QoS documentation |
+| telecommunications | `telecom-network-change-review` | 3GPP, ITU-T |
+| aerospace | `aerospace-requirements-traceability` | NASA Systems Engineering Handbook |
+| social-sciences | `social-science-survey-quality` | AAPOR survey standards |
+| humanities | `humanities-primary-source-critique` | Library of Congress source interpretation |
+| environment | `biodiversity-observation-quality` | GBIF data quality |
+| real-estate | `real-estate-due-diligence` | RICS valuation standards |
+| nonprofit | `nonprofit-grant-evidence-plan` | Grants.gov eligibility and documentation |
+
+These are narrow specialist procedures, not a claim to full-domain expertise or legal, clinical, flight, financial, or engineering certification.
