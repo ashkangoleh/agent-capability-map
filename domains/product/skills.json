@@ -1,0 +1,6 @@
+{
+  "domain":"product",
+  "skills":[
+    {"id":"product-discovery-prd","path":".agents/skills/product-discovery-prd/SKILL.md","description":"Use when framing a product problem, planning discovery, synthesizing user needs, defining requirements, writing a PRD, prioritizing scope, or defining acceptance criteria.","triggers":["write a PRD","product requirements","product discovery","user stories","feature prioritization","roadmap proposal"],"avoid_triggers":["technical implementation as the primary deliverable","campaign media planning","SEO audit"],"outputs":["problem statement","assumptions","requirements","success metrics","acceptance criteria"],"risk_level":"medium","status":"active"}
+  ]
+}

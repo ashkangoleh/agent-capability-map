@@ -1,0 +1,7 @@
+{
+  "domain":"research-writing",
+  "skills":[
+    {"id":"evidence-research","path":".agents/skills/evidence-research/SKILL.md","description":"Use when a task requires current external research, factual verification, evidence synthesis, source comparison, or a defensible answer with citations.","triggers":["research this","verify this claim","latest documentation","compare sources","fact check","evidence review"],"avoid_triggers":["pure creative writing with no factual claims","code implementation without a research requirement"],"outputs":["claim-evidence matrix","source-backed synthesis","uncertainties","citations"],"risk_level":"medium","status":"active"},
+    {"id":"technical-writing-docs","path":".agents/skills/technical-writing-docs/SKILL.md","description":"Use when creating or improving technical documentation, architecture records, runbooks, API documentation, tutorials, or engineering reports.","triggers":["write technical documentation","ADR","RFC","runbook","API docs","architecture report"],"avoid_triggers":["marketing campaign strategy","unverified academic literature review"],"outputs":["structured technical document","assumptions","examples","maintenance notes"],"risk_level":"low","status":"active"}
+  ]
+}

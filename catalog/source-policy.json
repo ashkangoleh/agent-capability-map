@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "source_precedence": [
+    {"rank":1,"type":"user_task_context","use":"User-provided requirements, constraints, files, and explicit project decisions. Authoritative for task context, not automatically proof of public facts."},
+    {"rank":2,"type":"primary_artifact","use":"Actual repository code, tests, schemas, logs, production configuration, datasets, and system outputs relevant to the claim."},
+    {"rank":3,"type":"official_primary_source","use":"Official vendor documentation, standards, specifications, release notes, API references, regulators, and primary research."},
+    {"rank":4,"type":"peer_reviewed_or_reputable_secondary","use":"Peer-reviewed research and reputable technical or industry publications when primary sources are unavailable or insufficient."},
+    {"rank":5,"type":"community_evidence","use":"Forums, issue discussions, practitioner reports, and social content. Use as anecdotal evidence, not definitive authority."}
+  ],
+  "freshness": {"check_current_sources_for":["versions","pricing","availability","policies","security_advisories","rankings","search_engine_guidance","product_features","market_data","laws_and_regulations"],"record_publication_or_update_date_when_material":true,"prefer_version_specific_documentation":true,"do_not_assume_latest_means_stable_or_production_ready":true},
+  "claim_rules": {"every_external_factual_claim_must_have_support":true,"citations_must_support_the_exact_claim":true,"distinguish_fact_assumption_inference_and_recommendation":true,"conflicting_sources_must_be_reported":true,"unsupported_claim_response":"unknown — no reliable source","never_fabricate_urls_citations_benchmarks_or_quotes":true}
+}

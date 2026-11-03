@@ -1,0 +1,6 @@
+{
+  "domain":"ai-ml",
+  "skills":[
+    {"id":"ai-rag-engineering","path":".agents/skills/ai-rag-engineering/SKILL.md","description":"Use when designing, implementing, debugging, or evaluating LLM applications, AI agents, RAG, embeddings, chunking, reranking, retrieval fusion, or grounded generation.","triggers":["RAG","LLM application","agent workflow","embedding model","vector search","reranker","retrieval evaluation","hallucination reduction"],"avoid_triggers":["ordinary SQL ETL","generic marketing copy","model training research without an implementation task"],"outputs":["architecture or code","retrieval and generation evaluation","security boundaries","failure analysis"],"risk_level":"high","status":"active"}
+  ]
+}

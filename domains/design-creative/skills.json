@@ -1,0 +1,6 @@
+{
+  "domain":"design-creative",
+  "skills":[
+    {"id":"ux-research-design-review","path":".agents/skills/ux-research-design-review/SKILL.md","description":"Use when planning UX research, evaluating a user journey or interface, reviewing interaction patterns, design systems, or accessibility.","triggers":["UX review","usability test","user journey","interaction design","accessibility review","design system"],"avoid_triggers":["SEO content audit","marketing channel plan","backend implementation as the main deliverable"],"outputs":["research plan or heuristic findings","severity-ranked issues","design recommendations","validation plan"],"risk_level":"medium","status":"active"}
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "domain":"seo",
+  "skills":[
+    {"id":"seo-audit-strategy","path":".agents/skills/seo-audit-strategy/SKILL.md","description":"Use when auditing or planning technical SEO, on-page SEO, content SEO, internal linking, structured data, local SEO, international SEO, or organic search performance.","triggers":["SEO audit","technical SEO","indexing issue","Search Console","structured data","organic traffic","keyword mapping","crawl budget"],"avoid_triggers":["paid search campaign","general brand strategy","website UI review without search intent"],"outputs":["evidence-backed findings","prioritized issues","implementation recommendations","measurement plan"],"risk_level":"medium","status":"active"}
+  ]
+}

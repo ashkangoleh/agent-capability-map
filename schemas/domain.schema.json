@@ -1,0 +1,27 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Agent Capability Domain Catalog",
+  "type":"object",
+  "required":["version","domains"],
+  "properties":{
+    "version":{"type":"string"},
+    "domains":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["id","label","description","router","subdomains","status"],
+        "properties":{
+          "id":{"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+          "label":{"type":"string","minLength":2},
+          "description":{"type":"string","minLength":20},
+          "router":{"type":"string"},
+          "skills_registry":{"type":["string","null"]},
+          "subdomains":{"type":"array","items":{"type":"string"},"minItems":1},
+          "status":{"enum":["active","mapped","deprecated"]}
+        },
+        "additionalProperties":false
+      }
+    }
+  },
+  "additionalProperties":false
+}

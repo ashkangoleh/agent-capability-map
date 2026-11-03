@@ -1,0 +1,6 @@
+{
+  "domain":"business-operations",
+  "skills":[
+    {"id":"business-strategy-analysis","path":".agents/skills/business-strategy-analysis/SKILL.md","description":"Use when analyzing business models, strategic options, operating models, process performance, business cases, or commercial trade-offs.","triggers":["business case","business strategy","operating model","process improvement","unit economics","commercial analysis"],"avoid_triggers":["personal investment advice","legal opinion","technical implementation as the main deliverable"],"outputs":["decision framing","assumptions","option comparison","sensitivity analysis","recommendation"],"risk_level":"medium","status":"active"}
+  ]
+}

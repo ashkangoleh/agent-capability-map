@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "policy": {
+    "default_primary_domains": 1,
+    "default_max_domains": 2,
+    "default_max_skills": 2,
+    "absolute_max_skills_without_explicit_reason": 3,
+    "selection_order": ["intent","deliverable","domain","specific capability","evidence requirements","risk"],
+    "matching": {"positive_triggers_are_hints_not_proof":true,"negative_triggers_override_weak_keyword_matches":true,"prefer_specific_skill_over_broad_skill":true,"do_not_route_on_keyword_only":true,"do_not_invent_confidence_percentages":true,"ambiguous_material_routes_require_clarification_or_abstention":true},
+    "abstention": {"when_no_active_skill_matches":"Do not load an unrelated skill. Use evidence-research only if the task is primarily factual research; otherwise state that no validated skill currently covers the task.","when_match_is_ambiguous":"Ask one focused question if ambiguity changes execution; otherwise state the assumption and proceed conservatively.","when_evidence_is_insufficient":"Return the verified portion and explicitly mark unknowns. Never fill gaps with plausible-sounding claims."},
+    "loading": {"load_domain_router_before_local_registry":true,"load_only_selected_domain_registries":true,"load_skill_body_only_after_selection":true,"load_references_only_at_point_of_need":true,"recursive_reference_loading":false,"preload_all_skills":false,"preload_all_domains":false},
+    "cross_domain": {"require_explicit_dependency_reason":true,"load_secondary_domain_only_for_a_distinct_deliverable_or_required_dependency":true,"do_not_duplicate_shared_references":true}
+  }
+}
