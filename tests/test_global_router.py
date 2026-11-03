@@ -175,7 +175,8 @@ class GraphRoutingTests(unittest.TestCase):
 
             repeated = install(["claude"], home, root=root, apply=True)[0]
             self.assertFalse(repeated["permissions"]["changed"])
-            self.assertEqual(settings_path.read_text(encoding="utf-8").count(str(skills.resolve())), 1)
+            self.assertEqual(settings["permissions"]["additionalDirectories"].count(str(skills.resolve())), 1)
+            self.assertEqual(settings["permissions"]["deny"].count(rule), 1)
 
     def test_claude_dry_run_does_not_create_files(self):
         with tempfile.TemporaryDirectory() as workspace:
