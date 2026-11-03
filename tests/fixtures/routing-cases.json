@@ -161,6 +161,97 @@
       "prompt": "Guarantee a 10x Spark performance improvement without giving the data, execution plan, version, or any measurements.",
       "expected_domain": "data",
       "expected_skill": null
+    },
+    {
+      "id": "data-cdc-snapshot",
+      "kind": "positive",
+      "prompt": "Design a PostgreSQL CDC ingestion with snapshot consistency, Debezium offsets, deletes and idempotent upserts.",
+      "expected_domain": "data",
+      "expected_skill": "data-cdc-pipelines"
+    },
+    {
+      "id": "data-science-leakage",
+      "kind": "positive",
+      "prompt": "Design a time-based train/test split for a churn prediction baseline and detect target leakage.",
+      "expected_domain": "data",
+      "expected_skill": "data-science-experiment-design"
+    },
+    {
+      "id": "data-analytics-cohorts",
+      "kind": "positive",
+      "prompt": "Calculate weekly signup cohort retention with proper distinct user denominators and late events.",
+      "expected_domain": "data",
+      "expected_skill": "data-analytics-metrics"
+    },
+    {
+      "id": "business-analytics-scorecard",
+      "kind": "positive",
+      "prompt": "Create an executive KPI scorecard with metric owners, causal driver hypotheses, source definitions and operating cadence.",
+      "expected_domain": "business-operations",
+      "expected_skill": "business-analytics-kpi"
+    },
+    {
+      "id": "marketing-attribution-qa",
+      "kind": "positive",
+      "prompt": "Audit conflicting paid campaign conversions caused by UTM loss and different attribution windows.",
+      "expected_domain": "marketing",
+      "expected_skill": "marketing-attribution-audit"
+    },
+    {
+      "id": "network-proxy-diagnosis",
+      "kind": "positive",
+      "prompt": "Diagnose curl HTTPS CONNECT proxy failure while direct HTTP returns a gateway 503.",
+      "expected_domain": "technology",
+      "expected_skill": "network-diagnostics"
+    },
+    {
+      "id": "devops-release-pipeline",
+      "kind": "positive",
+      "prompt": "Design a CI/CD deployment with immutable build artifacts, staging promotion and rollback.",
+      "expected_domain": "technology",
+      "expected_skill": "devops-delivery"
+    },
+    {
+      "id": "devsecops-secret-exposure",
+      "kind": "positive",
+      "prompt": "Audit GitHub Actions tokens and secrets exposure in CI for supply chain risks.",
+      "expected_domain": "technology",
+      "expected_skill": "devsecops-review"
+    },
+    {
+      "id": "platform-golden-path",
+      "kind": "positive",
+      "prompt": "Design a self-service golden path for developers to provision a standard service environment.",
+      "expected_domain": "technology",
+      "expected_skill": "platform-engineering-workflows"
+    },
+    {
+      "id": "sre-slo-incident",
+      "kind": "positive",
+      "prompt": "Build an SLI/SLO error budget policy and incident runbook for a customer-facing API outage.",
+      "expected_domain": "technology",
+      "expected_skill": "sre-incident-response"
+    },
+    {
+      "id": "near-miss-analytics-vs-business",
+      "kind": "near_miss",
+      "prompt": "The funnel SQL has duplicated sessions and wrong unique-user denominators; fix query correctness.",
+      "expected_domain": "data",
+      "expected_skill": "data-analytics-metrics"
+    },
+    {
+      "id": "near-miss-cicd-security",
+      "kind": "near_miss",
+      "prompt": "CI pipeline works, but review third-party Actions pinning, token permissions and secret leak risks.",
+      "expected_domain": "technology",
+      "expected_skill": "devsecops-review"
+    },
+    {
+      "id": "near-miss-sre-network",
+      "kind": "near_miss",
+      "prompt": "A DNS resolver returns NXDOMAIN for one internal hostname; isolate resolver configuration and routing, not service error budgets.",
+      "expected_domain": "technology",
+      "expected_skill": "network-diagnostics"
     }
   ]
 }
