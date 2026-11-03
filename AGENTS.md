@@ -7,7 +7,7 @@ This repository is the canonical source of the global YAML capability graph. Do 
 1. For a substantive task, determine a concise intent that does not disclose secrets.
 2. Use the installed capability_map resolver CLI with a safely quoted --request and the current project root. It is the deterministic path/schema validator; language-model routing is not a security boundary.
 3. The resolver traverses catalog/root.yaml, then only relevant map.yaml and skills.yaml files; do not scan unrelated siblings.
-4. Read the returned skill_path only when status is matched. Load only the needed references for that skill. Existing project instructions and authorization requirements still apply.
+4. Read the returned skill_path only when status is matched. Load only the needed references for that skill. When a request explicitly spans domains, inspect typed relations with the related subcommand; never load all linked skills automatically. Existing project instructions and authorization requirements still apply.
 5. For needs_clarification, resolve the material ambiguity. For unavailable/unmatched, do not fabricate a skill or source.
 6. Separate verified facts, assumptions, inferences and recommendations; check current official documentation for changing APIs and versions. Never claim a benchmark or test was run without evidence.
 

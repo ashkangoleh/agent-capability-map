@@ -30,6 +30,9 @@ def main(argv=None):
     validating.add_argument("--project", type=Path, default=None)
     validating.add_argument("--home", type=Path, default=None)
 
+    related = subs.add_parser("related", help="Inspect typed cross-domain relationships on demand")
+    related.add_argument("--route", required=True, help="Slash-separated capability path")
+
     installing = subs.add_parser("install", help="Preview or install global agent instructions")
     installing.add_argument("--hosts", nargs="+", choices=sorted([*HOST_FILES, "cursor"]), required=True)
     installing.add_argument("--home", type=Path, default=Path.home())
@@ -43,6 +46,8 @@ def main(argv=None):
                 "hosts": install(args.hosts, args.home, apply=args.apply),
                 "message": "Existing file text outside managed blocks remains unchanged.",
             }
+        elif args.command == "related":
+            result = Router(args.root).related(args.route)
         else:
             router = Router(args.root, project=args.project, home=args.home)
             result = router.resolve(args.request) if args.command == "resolve" else router.validate()

@@ -319,6 +319,20 @@ class Router:
         if not isinstance(description, str) or not 1 <= len(description) <= 1024:
             raise RouterError(f"Missing or invalid skill description: {path}")
 
+    def related(self, route):
+        """Return explicit typed cross-domain edges without loading skill instructions."""
+        names = tuple(route.split("/")) if isinstance(route, str) else tuple(route)
+        if not names or any(not ID.fullmatch(name) for name in names):
+            raise RouterError("Related route must be slash-separated capability IDs")
+        self.inspected = []
+        catalog = self._yaml(self.root, "catalog/relations.yaml")
+        edges = [
+            edge for edge in catalog.get("edges", [])
+            if tuple(edge.get("from", [])) == names or tuple(edge.get("to", [])) == names
+        ]
+        return {"status": "ok", "route": list(names), "relations": edges,
+                "inspected_files": list(self.inspected)}
+
     def validate(self):
         """Thorough structural validation; not a measured LLM routing benchmark."""
         map_count = 0
@@ -327,8 +341,9 @@ class Router:
         node_count = 0
         visited = set()
         active_stack = set()
+        routes = set()
 
-        def walk(path, expected_id=None, depth=0):
+        def walk(path, expected_id=None, depth=0, chain=()):
             nonlocal map_count, registry_count, node_count
             if depth > MAX_DEPTH:
                 raise RouterError("Graph exceeds maximum depth")
@@ -354,6 +369,8 @@ class Router:
                 name = node.get("id")
                 require_id(name)
                 node_count += 1
+                current_route = chain + (name,)
+                routes.add(current_route)
                 if name in names:
                     raise RouterError(f"Duplicate sibling ID {name}: {path}")
                 names.add(name)
@@ -362,7 +379,7 @@ class Router:
                 if node.get("map") and node.get("skills"):
                     raise RouterError(f"Node cannot contain both map and skills: {name}")
                 if node.get("map"):
-                    walk(node["map"], name, depth + 1)
+                    walk(node["map"], name, depth + 1, current_route)
                 elif node.get("skills"):
                     registry = self._yaml(self.root, node["skills"])
                     registry_count += 1
@@ -389,10 +406,25 @@ class Router:
             raise RouterError("Invalid master skill ID index")
         if len(indexed) != len(set(indexed)) or set(indexed) != skill_ids:
             raise RouterError("Stale or duplicate master skill ID index")
+        relations = self._yaml(self.root, "catalog/relations.yaml")
+        edges = relations.get("edges", [])
+        allowed = {"uses", "runs_on", "orchestrated_by", "supports", "depends_on", "related_to"}
+        if relations.get("schema_version") != 1 or not isinstance(edges, list):
+            raise RouterError("Invalid typed relationship catalog")
+        for edge in edges:
+            if not isinstance(edge, dict):
+                raise RouterError("Relationship must be an object")
+            origin = tuple(edge.get("from", []))
+            target = tuple(edge.get("to", []))
+            if origin not in routes or target not in routes or origin == target:
+                raise RouterError(f"Invalid relationship endpoints: {edge}")
+            if edge.get("relation") not in allowed:
+                raise RouterError(f"Unsupported relationship type: {edge}")
         return {
             "maps": map_count,
             "nodes": node_count,
             "registries_checked": registry_count,
+            "cross_domain_relations": len(edges),
             "unique_active_skills": len(skill_ids),
             "status": "valid",
             "scope": "structural_only",

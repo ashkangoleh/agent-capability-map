@@ -60,6 +60,7 @@ The installed Python interpreter must remain available and the cloned repository
 .venv/bin/python -m capability_map resolve --request "Write PySpark DataFrame joins" --project .
 .venv/bin/python -m capability_map resolve --request "Create an Airflow DAG with retries" --project .
 .venv/bin/python -m capability_map validate
+.venv/bin/python -m capability_map related --route data/data-engineering/distributed-processing/spark/pyspark
 ~~~
 
 Inspect the JSON field skill_path only when status is matched. The lexical match_strength is a routing heuristic, **not a calibrated probability of correctness**. Ambiguous tasks return clarification options; unsupported mapped domains do not activate fictional skills. Multiple equally relevant domains may require explicit composition.

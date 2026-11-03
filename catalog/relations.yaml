@@ -1,0 +1,34 @@
+schema_version: 1
+edges:
+  - from: [data, data-engineering, distributed-processing, spark, pyspark]
+    to: [infrastructure, kubernetes]
+    relation: runs_on
+    rationale: PySpark applications may run on a Kubernetes Spark cluster.
+  - from: [data, data-engineering, distributed-processing, spark]
+    to: [data, data-engineering, orchestration, airflow]
+    relation: orchestrated_by
+    rationale: An Airflow DAG may schedule a Spark workload.
+  - from: [data, data-engineering, distributed-processing, spark, pyspark]
+    to: [data, data-engineering, messaging, kafka]
+    relation: uses
+    rationale: Spark Structured Streaming can consume Kafka sources with explicit delivery semantics.
+  - from: [data, data-engineering, distributed-processing, spark, pyspark]
+    to: [data, data-engineering, distributed-processing, spark, spark-sql]
+    relation: related_to
+    rationale: PySpark DataFrames and Spark SQL share the structured processing engine.
+  - from: [product, discovery-requirements]
+    to: [marketing, campaign-strategy]
+    relation: supports
+    rationale: Product positioning and launch requirements inform go-to-market planning.
+  - from: [seo, technical-seo]
+    to: [software-engineering, frontend]
+    relation: depends_on
+    rationale: Some crawl and rendering fixes require frontend implementation.
+  - from: [ai-ml, rag-retrieval]
+    to: [data, data-engineering, data-observability]
+    relation: uses
+    rationale: Retrieval evaluation and source quality depend on reliable data contracts.
+  - from: [security, application-security]
+    to: [software-engineering, backend]
+    relation: supports
+    rationale: Secure API implementations require application security controls.

@@ -31,6 +31,12 @@ class GraphRoutingTests(unittest.TestCase):
         result = Router(ROOT).resolve("Diagnose PySpark shuffle and spill")
         self.assertEqual(result.get("selected_skill"), "spark-performance-diagnostics", result)
 
+    def test_related_capabilities(self):
+        graph = Router(ROOT)
+        result = graph.related("data/data-engineering/distributed-processing/spark/pyspark")
+        self.assertEqual(result["status"], "ok")
+        self.assertTrue(any(e["relation"] == "runs_on" for e in result["relations"]))
+
     def test_airflow(self):
         result = Router(ROOT).resolve("Create an Airflow DAG with retries")
         self.assertEqual(result.get("selected_skill"), "airflow-dag-engineering", result)
