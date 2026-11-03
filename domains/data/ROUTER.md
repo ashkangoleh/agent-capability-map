@@ -17,3 +17,13 @@ Use for data platforms, pipelines, distributed processing, storage, modeling, an
 - Generic non-Spark data pipeline -> data-engineering-implementation.
 - Spark cluster or Kubernetes deployment without a data pipeline deliverable -> technology/platform-operations, not a PySpark leaf skill.
 - Each leaf is self-contained; parent_skill is a navigation edge, not an instruction to load all ancestors. Related skills are pointers only, never implicit activations.
+
+## Phase-one data capability boundaries
+
+- Full data platform or generic batch ETL -> data-engineering-implementation.
+- CDC snapshots, log change events, replay, upsert/delete, retention, and recovery -> data-cdc-pipelines.
+- Descriptive metrics, funnel/cohort and SQL grain validation -> data-analytics-metrics.
+- Statistical experimental design, data leakage, train/test splits and baseline predictive evaluation -> data-science-experiment-design.
+- Deploying and serving ML models -> ai-ml if an actual capability exists; do not mistake data science analysis for model operations.
+- Operational business KPI scorecards -> business-operations/business-analytics-kpi, not data-analytics-metrics unless SQL computation is the deliverable.
+- A request combining PySpark and CDC can select two independently useful skills only when both work products are required; the host agent executes them.
