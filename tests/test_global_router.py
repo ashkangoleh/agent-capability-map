@@ -18,6 +18,19 @@ class GraphRoutingTests(unittest.TestCase):
         self.assertGreaterEqual(report["maps"], 35)
         self.assertGreaterEqual(report["unique_active_skills"], 18)
 
+    def test_pyspark_bootstrap_evidence_guardrails_exist(self):
+        text = (ROOT / ".agents" / "skills" / "pyspark-project-bootstrap" / "SKILL.md").read_text(encoding="utf-8")
+        for required in (
+            "latest stable",
+            "cluster release",
+            "S3A rename",
+            "idempotency",
+            "atomic",
+            "structure-only",
+        ):
+            with self.subTest(required=required):
+                self.assertIn(required, text)
+
     def test_pyspark_project_routing(self):
         result = Router(ROOT).resolve("Create a new PySpark project")
         self.assertEqual(result["status"], "matched", result)
