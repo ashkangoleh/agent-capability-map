@@ -31,6 +31,64 @@ def require_file(relative_path):
         raise ValidationError(f"Missing referenced file: {relative_path}")
 
 
+
+def validate_skill_relations(records):
+    """Check typed graph links; records maps ID to (domain_id, registry entry)."""
+    errors = []
+    for skill_id, (domain_id, skill) in records.items():
+        parent = skill.get("parent_skill")
+        if parent is not None:
+            if not isinstance(parent, str) or not parent:
+                errors.append(f"{skill_id}: invalid parent_skill")
+            elif parent == skill_id:
+                errors.append(f"{skill_id}: cannot be its own parent")
+            elif parent not in records:
+                errors.append(f"{skill_id}: unknown parent_skill {parent}")
+            elif records[parent][0] != domain_id:
+                errors.append(f"{skill_id}: parent_skill must be in the same domain")
+            elif records[parent][1].get("status") != "active":
+                errors.append(f"{skill_id}: parent_skill is not active")
+
+        related = skill.get("related_skills", [])
+        if not isinstance(related, list):
+            errors.append(f"{skill_id}: related_skills must be a list")
+            continue
+        seen = set()
+        for target in related:
+            if not isinstance(target, str) or not target:
+                errors.append(f"{skill_id}: invalid related skill ID")
+                continue
+            if target == skill_id:
+                errors.append(f"{skill_id}: cannot relate to itself")
+            if target in seen:
+                errors.append(f"{skill_id}: duplicate related skill {target}")
+            seen.add(target)
+            if target not in records:
+                errors.append(f"{skill_id}: unknown related skill {target}")
+            elif records[target][1].get("status") != "active":
+                errors.append(f"{skill_id}: related skill is not active: {target}")
+
+    states = {}
+    reported = set()
+
+    def visit(skill_id):
+        if states.get(skill_id) == 2:
+            return
+        if states.get(skill_id) == 1:
+            if skill_id not in reported:
+                errors.append(f"{skill_id}: parent_skill cycle detected")
+                reported.add(skill_id)
+            return
+        states[skill_id] = 1
+        parent = records[skill_id][1].get("parent_skill")
+        if isinstance(parent, str) and parent in records:
+            visit(parent)
+        states[skill_id] = 2
+
+    for skill_id in records:
+        visit(skill_id)
+    return errors
+
 def validate():
     errors = []
     domains_doc = load_json("catalog/domains.json")
@@ -43,6 +101,7 @@ def validate():
         errors.append("Duplicate domain IDs")
 
     all_skill_ids = set()
+    skill_records = {}
     active_count = 0
 
     for domain in domains:
@@ -75,6 +134,7 @@ def validate():
             if skill_id in all_skill_ids:
                 errors.append(f"Duplicate skill ID: {skill_id}")
             all_skill_ids.add(skill_id)
+            skill_records.setdefault(skill_id, (domain_id, skill))
 
             if not NAME_RE.fullmatch(skill_id):
                 errors.append(f"{registry_path}: invalid skill ID {skill_id}")
@@ -94,8 +154,9 @@ def validate():
                     errors.append(str(exc))
                     continue
 
-                if not skill_path.startswith(".agents/skills/") or not skill_path.endswith("/SKILL.md"):
-                    errors.append(f"{skill_id}: skill path must use .agents/skills/<name>/SKILL.md")
+                if skill_path != f".agents/skills/{skill_id}/SKILL.md":
+                    errors.append(f"{skill_id}: skill path must be exactly .agents/skills/{skill_id}/SKILL.md")
+                    continue
 
                 if Path(skill_path).parent.name != skill_id:
                     errors.append(f"{skill_id}: directory name does not match skill ID")
@@ -117,6 +178,8 @@ def validate():
                     errors.append(f"{skill_id}: frontmatter name does not match registry ID")
                 if not desc_match or len(desc_match.group(1).strip()) < 30:
                     errors.append(f"{skill_id}: missing or weak frontmatter description")
+
+    errors.extend(validate_skill_relations(skill_records))
 
     fixture_doc = load_json("tests/fixtures/routing-cases.json")
     case_ids = set()
