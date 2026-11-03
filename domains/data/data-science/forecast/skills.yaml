@@ -1,0 +1,13 @@
+schema_version: 1
+id: forecast
+kind: skill-registry
+skills:
+  - id: time-series-forecast-backtesting
+    path: .agents/skills/time-series-forecast-backtesting/SKILL.md
+    description: "Model time-series forecast horizons with realistic rolling-origin validation and uncertainty."
+    triggers:
+      - "time series forecast"
+      - "forecast backtesting"
+      - "demand forecasting"
+    excludes: []
+    status: active

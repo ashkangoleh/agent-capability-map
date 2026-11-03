@@ -1,0 +1,70 @@
+schema_version: 1
+id: data-science
+kind: map
+children:
+  - id: model-validation
+    description: "model validation"
+    triggers:
+      - "scikit-learn"
+      - "sklearn"
+      - "imbalance"
+      - "imbalanced classification"
+    status: active
+    skills: domains/data/data-science/model-validation/skills.yaml
+  - id: statistics
+    description: "statistics"
+    triggers:
+      - "statistical inference"
+      - "hypothesis testing"
+      - "statistical analysis"
+      - "confidence interval"
+    status: active
+    skills: domains/data/data-science/statistics/skills.yaml
+  - id: causal-inference
+    description: "causal inference"
+    triggers:
+      - "causal inference"
+      - "observational causal"
+      - "causal impact"
+    status: active
+    skills: domains/data/data-science/causal/skills.yaml
+  - id: forecasting
+    description: "forecasting"
+    triggers:
+      - "time series forecast"
+      - "forecast backtesting"
+      - "demand forecasting"
+    status: active
+    skills: domains/data/data-science/forecast/skills.yaml
+  - id: feature-engineering
+    description: "feature engineering"
+    triggers:
+      - "point in time features"
+      - "feature engineering"
+      - "feature leakage"
+    status: active
+    skills: domains/data/data-science/feature/skills.yaml
+  - id: exploration
+    description: "exploration"
+    triggers:
+      - "pandas eda"
+      - "pandas"
+      - "exploratory data"
+      - "data profiling"
+    status: active
+    skills: domains/data/data-science/exploration/skills.yaml
+  - id: geospatial
+    description: "geospatial"
+    triggers:
+      - "geospatial analysis"
+      - "geopandas"
+      - "coordinate reference system"
+    status: active
+    skills: domains/data/data-science/geospatial/skills.yaml
+  - id: anomaly-detection
+    description: "anomaly detection"
+    triggers:
+      - "anomaly detection"
+      - "anomaly detection baseline"
+    status: active
+    skills: domains/data/data-science/anomaly/skills.yaml

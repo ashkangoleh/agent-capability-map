@@ -1,0 +1,53 @@
+schema_version: 1
+id: data-analysis
+kind: map
+children:
+  - id: sql-analysis
+    description: "sql analysis"
+    triggers:
+      - "sql metric"
+      - "analytical sql"
+      - "sql reconciliation"
+    status: active
+    skills: domains/data/data-analysis/sql/skills.yaml
+  - id: retention-funnel
+    description: "retention funnel"
+    triggers:
+      - "cohort retention"
+      - "funnel conversion"
+      - "retention analysis"
+      - "funnel analysis"
+    status: active
+    skills: domains/data/data-analysis/retention/skills.yaml
+  - id: experiments
+    description: "experiments"
+    triggers:
+      - "experiment result analysis"
+      - "ab experiment analysis"
+      - "randomized experiment results"
+    status: active
+    skills: domains/data/data-analysis/experiments/skills.yaml
+  - id: polars
+    description: "polars"
+    triggers:
+      - "polars"
+      - "polars lazy"
+      - "polars parquet"
+    status: active
+    skills: domains/data/data-analysis/polars/skills.yaml
+  - id: visualization
+    description: "visualization"
+    triggers:
+      - "data visualization"
+      - "analytical visualization"
+      - "chart evidence"
+    status: active
+    skills: domains/data/data-analysis/visualization/skills.yaml
+  - id: reconciliation
+    description: "reconciliation"
+    triggers:
+      - "analytics reconciliation"
+      - "dashboard discrepancy"
+      - "analytics metric mismatch"
+    status: active
+    skills: domains/data/data-analysis/reconciliation/skills.yaml

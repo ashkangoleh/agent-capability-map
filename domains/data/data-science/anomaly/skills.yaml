@@ -1,0 +1,12 @@
+schema_version: 1
+id: anomaly
+kind: skill-registry
+skills:
+  - id: anomaly-detection-baselines
+    path: .agents/skills/anomaly-detection-baselines/SKILL.md
+    description: "Detect anomalies using baseline seasonality, labeled incident tests and operational alert feedback."
+    triggers:
+      - "anomaly detection"
+      - "anomaly detection baseline"
+    excludes: []
+    status: active

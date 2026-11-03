@@ -23,4 +23,5 @@ children:
     triggers:
       - "semantic layer"
       - "semantic metrics"
-    status: mapped
+    status: active
+    skills: domains/data/analytics-engineering/semantic/skills.yaml

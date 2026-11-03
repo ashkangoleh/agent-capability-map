@@ -69,18 +69,45 @@ children:
   - id: data-science
     description: "data science"
     triggers:
+      - "anomaly detection"
+      - "geospatial analysis"
+      - "pandas eda"
+      - "imbalanced classification"
+      - "point in time features"
+      - "time series forecast"
+      - "causal inference"
+      - "statistical inference"
+      - "sklearn"
+      - "scikit-learn"
       - "data science"
       - "statistical analysis"
       - "feature engineering"
-    status: mapped
+    status: active
+    map: domains/data/data-science/map.yaml
+  - id: data-analysis
+    description: "Data analysis, statistical reporting and analytical metric diagnosis"
+    triggers:
+      - "data analysis"
+      - "sql metric"
+      - "cohort retention"
+      - "funnel conversion"
+      - "experiment result analysis"
+      - "polars lazy"
+      - "analytics reconciliation"
+      - "data visualization"
+    status: active
+    map: domains/data/data-analysis/map.yaml
   - id: business-intelligence
     description: "business intelligence"
     triggers:
+      - "apache superset"
+      - "superset dashboard"
       - "business intelligence"
       - "dashboard"
       - "power bi"
       - "looker"
-    status: mapped
+    status: active
+    map: domains/data/business-intelligence/map.yaml
   - id: data-governance
     description: "data governance"
     triggers:

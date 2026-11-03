@@ -1,0 +1,13 @@
+schema_version: 1
+id: causal
+kind: skill-registry
+skills:
+  - id: causal-inference-observational
+    path: .agents/skills/causal-inference-observational/SKILL.md
+    description: "Review causal inference estimands, observational assumptions, confounders and sensitivity analysis."
+    triggers:
+      - "causal inference"
+      - "observational causal"
+      - "causal impact"
+    excludes: []
+    status: active
