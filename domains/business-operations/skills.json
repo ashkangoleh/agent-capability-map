@@ -1,6 +1,55 @@
 {
-  "domain":"business-operations",
-  "skills":[
-    {"id":"business-strategy-analysis","path":".agents/skills/business-strategy-analysis/SKILL.md","description":"Use when analyzing business models, strategic options, operating models, process performance, business cases, or commercial trade-offs.","triggers":["business case","business strategy","operating model","process improvement","unit economics","commercial analysis"],"avoid_triggers":["personal investment advice","legal opinion","technical implementation as the main deliverable"],"outputs":["decision framing","assumptions","option comparison","sensitivity analysis","recommendation"],"risk_level":"medium","status":"active"}
+  "domain": "business-operations",
+  "skills": [
+    {
+      "id": "business-strategy-analysis",
+      "path": ".agents/skills/business-strategy-analysis/SKILL.md",
+      "description": "Use when analyzing business models, strategic options, operating models, process performance, business cases, or commercial trade-offs.",
+      "triggers": [
+        "business case",
+        "business strategy",
+        "operating model",
+        "process improvement",
+        "unit economics",
+        "commercial analysis"
+      ],
+      "avoid_triggers": [
+        "personal investment advice",
+        "legal opinion",
+        "technical implementation as the main deliverable"
+      ],
+      "outputs": [
+        "decision framing",
+        "assumptions",
+        "option comparison",
+        "sensitivity analysis",
+        "recommendation"
+      ],
+      "risk_level": "medium",
+      "status": "active"
+    },
+    {
+      "id": "business-analytics-kpi",
+      "path": ".agents/skills/business-analytics-kpi/SKILL.md",
+      "description": "Define actionable business KPIs, management scorecards, metric driver trees and decision-support reporting with owner and source accountability.",
+      "triggers": [
+        "business analytics KPI",
+        "management scorecard",
+        "unit economics driver tree",
+        "business metric dashboard"
+      ],
+      "avoid_triggers": [
+        "SQL funnel debugging",
+        "scientific model experiment",
+        "pricing strategy only"
+      ],
+      "outputs": [
+        "KPI dictionary",
+        "driver tree",
+        "scorecard specification"
+      ],
+      "risk_level": "medium",
+      "status": "active"
+    }
   ]
 }
