@@ -6,6 +6,11 @@ children:
     label: "Data Engineering & Analytics"
     description: "Data engineering, storage, streaming, business intelligence and statistics."
     triggers:
+      - "kinesis"
+      - "rabbitmq"
+      - "apache pulsar"
+      - "argo workflows"
+      - "ray data"
       - "data catalog"
       - "starrocks stream load"
       - "duckdb parquet"

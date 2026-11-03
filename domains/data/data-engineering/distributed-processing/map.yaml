@@ -35,4 +35,5 @@ children:
     triggers:
       - "ray dataset"
       - "ray data"
-    status: mapped
+    status: active
+    skills: domains/data/data-engineering/distributed-processing/ray/skills.yaml

@@ -15,14 +15,17 @@ children:
     description: "kinesis"
     triggers:
       - "kinesis"
-    status: mapped
+    status: active
+    skills: domains/data/data-engineering/messaging/kinesis/skills.yaml
   - id: rabbitmq
     description: "rabbitmq"
     triggers:
       - "rabbitmq"
-    status: mapped
+    status: active
+    skills: domains/data/data-engineering/messaging/rabbitmq/skills.yaml
   - id: pulsar
     description: "pulsar"
     triggers:
       - "apache pulsar"
-    status: mapped
+    status: active
+    skills: domains/data/data-engineering/messaging/pulsar/skills.yaml

@@ -5,6 +5,7 @@ children:
   - id: distributed-processing
     description: "distributed processing"
     triggers:
+      - "ray data"
       - "flink checkpoint"
       - "spark scala"
       - "structured streaming"
@@ -21,6 +22,7 @@ children:
   - id: orchestration
     description: "orchestration"
     triggers:
+      - "argo workflows"
       - "airflow backfill"
       - "airflow"
       - "dagster"
@@ -32,6 +34,7 @@ children:
   - id: messaging
     description: "messaging"
     triggers:
+      - "apache pulsar"
       - "kafka consumer rebalance"
       - "kafka connect"
       - "kafka"

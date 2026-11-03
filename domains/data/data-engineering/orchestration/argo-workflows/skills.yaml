@@ -1,0 +1,14 @@
+schema_version: 1
+id: argo-workflows-data-orchestration
+kind: skill-registry
+skills:
+  - id: argo-workflows-data-orchestration
+    path: .agents/skills/argo-workflows-data-orchestration/SKILL.md
+    description: "Design Argo Workflows DAGs, CronWorkflows, artifact handling, retries and data backfills safely on Kubernetes."
+    triggers:
+      - "argo workflows"
+      - "argo workflow dag"
+      - "argo cronworkflow"
+      - "argo workflow retries"
+    excludes: []
+    status: active

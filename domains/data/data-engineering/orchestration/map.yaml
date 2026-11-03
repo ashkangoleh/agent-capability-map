@@ -27,4 +27,5 @@ children:
     description: "argo workflows"
     triggers:
       - "argo workflows"
-    status: mapped
+    status: active
+    skills: domains/data/data-engineering/orchestration/argo-workflows/skills.yaml

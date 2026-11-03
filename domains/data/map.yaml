@@ -5,6 +5,11 @@ children:
   - id: data-engineering
     description: "data engineering"
     triggers:
+      - "kinesis"
+      - "rabbitmq"
+      - "apache pulsar"
+      - "argo workflows"
+      - "ray data"
       - "spark scala"
       - "duckdb parquet"
       - "trino federation"

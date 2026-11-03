@@ -6,6 +6,7 @@ ids:
   - ai-rag-engineering
   - airflow-backfill-scheduling
   - airflow-dag-engineering
+  - argo-workflows-data-orchestration
   - beam-runner-portability
   - biodiversity-observation-quality
   - business-strategy-analysis
@@ -39,6 +40,7 @@ ids:
   - kafka-connect-cdc-design
   - kafka-consumer-rebalance-replay
   - kafka-streaming-reliability
+  - kinesis-stream-consumer-recovery
   - kubernetes-rollout-safety
   - manufacturing-quality-investigation
   - marketing-measurement-attribution
@@ -56,8 +58,11 @@ ids:
   - product-metrics-instrumentation
   - public-health-evidence-review
   - public-policy-program-evaluation
+  - pulsar-subscription-replay
   - pyspark-project-bootstrap
   - pyspark-transformations
+  - rabbitmq-consumer-delivery-safety
+  - ray-data-pipeline-engineering
   - real-estate-due-diligence
   - recruiting-interview-scorecard
   - robotics-ros2-interface-review
