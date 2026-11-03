@@ -390,7 +390,7 @@ cases:
     status: needs_clarification
   - id: de-nearmiss-metadata-mapped
     request: "Research data catalog metadata taxonomy"
-    status: unavailable
+    status: needs_clarification
   - id: de-engine-ray-data
     request: "Build a Ray Data Parquet processing pipeline"
     status: matched

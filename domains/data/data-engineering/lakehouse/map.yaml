@@ -30,6 +30,8 @@ children:
   - id: catalogs
     description: "catalogs"
     triggers:
+      - "polaris iceberg catalog"
+      - "lakekeeper iceberg catalog"
       - "polaris"
       - "lakekeeper"
       - "iceberg rest catalog"

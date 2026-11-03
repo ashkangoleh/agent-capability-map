@@ -78,6 +78,7 @@ children:
   - id: data-science
     description: "data science"
     triggers:
+      - "pandas eda data profiling"
       - "anomaly detection"
       - "geospatial analysis"
       - "pandas eda"

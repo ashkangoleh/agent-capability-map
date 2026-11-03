@@ -41,7 +41,6 @@ children:
       - "model canary"
       - "dataset annotation"
       - "sklearn"
-      - "model drift"
       - "feast"
       - "feature store"
       - "machine learning"
@@ -54,8 +53,6 @@ children:
     triggers:
       - "transformer fine tuning"
       - "distributed training"
-      - "hugging face fine tuning"
-      - "peft"
       - "pytorch"
       - "deep learning"
       - "neural network"
