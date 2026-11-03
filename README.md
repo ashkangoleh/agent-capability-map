@@ -124,7 +124,12 @@ skills:
     status: active
 ~~~
 
-Then create and test:
+Then create and test (the project argument is required for project overlay validation):
+
+~~~sh
+capability-map validate --project /path/to/my-project
+~~~
+
 
 ~~~text
 my-project/.agents/skills/team-pyspark-quality/SKILL.md

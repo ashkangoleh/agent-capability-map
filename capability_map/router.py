@@ -422,9 +422,33 @@ class Router:
                 raise RouterError(f"Invalid relationship endpoints: {edge}")
             if edge.get("relation") not in allowed:
                 raise RouterError(f"Unsupported relationship type: {edge}")
+        user_count = 0
+        user_ids = set()
+        for source, source_root, relative in self._overlay_paths():
+            overlay = self._yaml(source_root, relative)
+            if overlay.get("schema_version") != 1 or not isinstance(overlay.get("skills"), list):
+                raise RouterError(f"Invalid registered overlay schema: {relative}")
+            for entry in overlay["skills"]:
+                if not isinstance(entry, dict):
+                    raise RouterError(f"Invalid registered skill entry: {relative}")
+                uid = entry.get("id")
+                require_id(uid)
+                if uid in user_ids or uid in skill_ids:
+                    raise RouterError(f"Duplicate or shadowed registered skill ID: {uid}")
+                user_ids.add(uid)
+                if not isinstance(entry.get("triggers"), list) or not entry["triggers"]:
+                    raise RouterError(f"Missing registered skill triggers: {uid}")
+                if not isinstance(entry.get("route"), list) or not entry["route"] or any(
+                    not isinstance(n, str) or not ID.fullmatch(n) for n in entry["route"]
+                ):
+                    raise RouterError(f"Invalid registered route for: {uid}")
+                if entry.get("status", "active") == "active":
+                    self._check_skill(secure_path(source_root, entry.get("path")), uid)
+                    user_count += 1
         return {
             "maps": map_count,
             "nodes": node_count,
+            "registered_user_skills": user_count,
             "registries_checked": registry_count,
             "cross_domain_relations": len(edges),
             "unique_active_skills": len(skill_ids),

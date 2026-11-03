@@ -93,9 +93,29 @@ class GraphRoutingTests(unittest.TestCase):
                 "---\n\nInspect company constraints before code generation.\n",
                 encoding="utf-8",
             )
+            report = Router(ROOT, project=p, home=p).validate()
+            self.assertEqual(report["registered_user_skills"], 1)
             result = Router(ROOT, project=p, home=p).resolve("Create an enterprise PySpark project")
             self.assertEqual(result.get("selected_skill"), "enterprise-spark", result)
             self.assertEqual(result.get("source"), "project")
+
+    def test_registered_overlay_rejects_path_escape_even_when_not_selected(self):
+        with tempfile.TemporaryDirectory() as workspace:
+            p = Path(workspace)
+            (p / "AGENTS.md").write_text(
+                "<!-- capability-map: overlay=.capability-map.yaml -->", encoding="utf-8"
+            )
+            (p / ".capability-map.yaml").write_text(
+                "schema_version: 1\nskills:\n"
+                "  - id: unsafe-skill\n"
+                "    path: ../outside/SKILL.md\n"
+                "    route: [data]\n"
+                "    triggers: [unsafe task]\n"
+                "    status: active\n",
+                encoding="utf-8",
+            )
+            with self.assertRaises(RouterError):
+                Router(ROOT, project=p, home=p).validate()
 
     def test_unregistered_project_skill_is_ignored(self):
         with tempfile.TemporaryDirectory() as workspace:
