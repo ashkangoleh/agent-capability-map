@@ -1,5 +1,5 @@
 schema_version: 1
-id: platform
+id: platform-engineering
 kind: map
 children:
   - id: golden-path
