@@ -1,0 +1,29 @@
+schema_version: 1
+id: platform
+kind: map
+children:
+  - id: golden-path
+    description: "golden path"
+    triggers:
+      - "golden path"
+      - "internal developer platform"
+      - "platform engineering"
+    status: active
+    skills: domains/infrastructure/platform/golden-path/skills.yaml
+  - id: secrets
+    description: "secrets"
+    triggers:
+      - "vault"
+      - "vault secrets"
+      - "vault rotation"
+    status: active
+    skills: domains/infrastructure/platform/secrets/skills.yaml
+  - id: container
+    description: "container"
+    triggers:
+      - "container build"
+      - "docker image"
+      - "dockerfile security"
+      - "docker"
+    status: active
+    skills: domains/infrastructure/platform/container/skills.yaml

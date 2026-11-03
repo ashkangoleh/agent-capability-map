@@ -1,0 +1,59 @@
+schema_version: 1
+id: devops-sre
+kind: map
+children:
+  - id: terraform
+    description: "terraform"
+    triggers:
+      - "terraform"
+      - "terraform state"
+      - "terraform module"
+    status: active
+    skills: domains/infrastructure/devops-sre/terraform/skills.yaml
+  - id: ansible
+    description: "ansible"
+    triggers:
+      - "ansible"
+      - "ansible playbook"
+    status: active
+    skills: domains/infrastructure/devops-sre/ansible/skills.yaml
+  - id: gitops
+    description: "gitops"
+    triggers:
+      - "argo cd"
+      - "argocd"
+      - "gitops"
+    status: active
+    skills: domains/infrastructure/devops-sre/gitops/skills.yaml
+  - id: delivery
+    description: "delivery"
+    triggers:
+      - "ci/cd"
+      - "github actions"
+      - "ci cd supply chain"
+    status: active
+    skills: domains/infrastructure/devops-sre/delivery/skills.yaml
+  - id: metrics
+    description: "metrics"
+    triggers:
+      - "prometheus"
+      - "slo burn rate"
+    status: active
+    skills: domains/infrastructure/devops-sre/metrics/skills.yaml
+  - id: telemetry
+    description: "telemetry"
+    triggers:
+      - "opentelemetry"
+      - "otel collector"
+    status: active
+    skills: domains/infrastructure/devops-sre/telemetry/skills.yaml
+  - id: incident
+    description: "incident"
+    triggers:
+      - "sre incident"
+      - "incident postmortem"
+      - "incident rca"
+      - "incident"
+      - "sre"
+    status: active
+    skills: domains/infrastructure/devops-sre/incident/skills.yaml

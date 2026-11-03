@@ -1,0 +1,14 @@
+schema_version: 1
+id: iam
+kind: skill-registry
+skills:
+  - id: cloud-iam-least-privilege
+    path: .agents/skills/cloud-iam-least-privilege/SKILL.md
+    description: "Review cloud identity effective policies, federation and least privilege with controlled access tests."
+    triggers:
+      - "cloud iam"
+      - "iam least privilege"
+      - "aws iam role"
+      - "workload identity"
+    excludes: []
+    status: active

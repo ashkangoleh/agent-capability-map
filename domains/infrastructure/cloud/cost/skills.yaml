@@ -1,0 +1,14 @@
+schema_version: 1
+id: cost
+kind: skill-registry
+skills:
+  - id: cloud-cost-capacity-review
+    path: .agents/skills/cloud-cost-capacity-review/SKILL.md
+    description: "Measure cloud cost and capacity with usage-linked unit economics and current provider pricing checks."
+    triggers:
+      - "cloud cost"
+      - "finops"
+      - "cloud capacity"
+      - "cloud billing optimization"
+    excludes: []
+    status: active

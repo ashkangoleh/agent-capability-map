@@ -1,0 +1,32 @@
+schema_version: 1
+id: cloud
+kind: map
+children:
+  - id: iam
+    description: "iam"
+    triggers:
+      - "cloud iam"
+      - "aws iam"
+      - "iam least privilege"
+      - "workload identity"
+    status: active
+    skills: domains/infrastructure/cloud/iam/skills.yaml
+  - id: cost
+    description: "cost"
+    triggers:
+      - "cloud cost"
+      - "finops"
+      - "cloud capacity"
+      - "cloud billing"
+    status: active
+    skills: domains/infrastructure/cloud/cost/skills.yaml
+  - id: architecture
+    description: "architecture"
+    triggers:
+      - "cloud architecture"
+      - "aws"
+      - "gcp"
+      - "azure"
+      - "cloud engineering"
+    status: active
+    skills: domains/infrastructure/cloud/architecture/skills.yaml

@@ -1,0 +1,29 @@
+schema_version: 1
+id: network-engineering
+kind: skill-registry
+skills:
+  - id: network-dns-tls-diagnostics
+    path: .agents/skills/network-dns-tls-diagnostics/SKILL.md
+    description: "Troubleshoot DNS resolution, TCP reachability, proxies and TLS trust chains with reproducible network probes."
+    triggers:
+      - "dns troubleshooting"
+      - "tls handshake"
+      - "network diagnostics"
+      - "networking"
+      - "dns"
+    excludes: []
+    status: active
+  - id: platform-operations
+    path: .agents/skills/platform-operations/SKILL.md
+    description: "Review deployment, Kubernetes, cloud and platform operation safeguards, environment evidence and rollback before production change."
+    triggers:
+      - "kubernetes"
+      - "helm"
+      - "devops"
+      - "sre"
+      - "cloud architecture"
+      - "networking"
+      - "linux server"
+      - "platform engineering"
+    excludes: []
+    status: active

@@ -1,0 +1,14 @@
+schema_version: 1
+id: security
+kind: skill-registry
+skills:
+  - id: kubernetes-workload-security
+    path: .agents/skills/kubernetes-workload-security/SKILL.md
+    description: "Review Kubernetes workload identity, Pod Security, RBAC and volume privilege with least-privilege checks."
+    triggers:
+      - "kubernetes workload security"
+      - "pod security"
+      - "k8s rbac"
+      - "kubernetes security context"
+    excludes: []
+    status: active

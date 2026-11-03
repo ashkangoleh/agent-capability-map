@@ -1,0 +1,14 @@
+schema_version: 1
+id: rollout
+kind: skill-registry
+skills:
+  - id: kubernetes-rollout-safety
+    path: .agents/skills/kubernetes-rollout-safety/SKILL.md
+    description: "Review Kubernetes rollout and canary changes with readiness, availability and recovery gates."
+    triggers:
+      - "kubernetes rollout"
+      - "kubernetes canary"
+      - "k8s rollout"
+      - "helm rollback plan"
+    excludes: []
+    status: active

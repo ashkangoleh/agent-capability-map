@@ -1,0 +1,14 @@
+schema_version: 1
+id: terraform
+kind: skill-registry
+skills:
+  - id: terraform-state-module-safety
+    path: .agents/skills/terraform-state-module-safety/SKILL.md
+    description: "Review Terraform state, locking, module composition and drift and require safe approval for infrastructure changes."
+    triggers:
+      - "terraform state"
+      - "terraform module"
+      - "terraform plan"
+      - "terraform state migration"
+    excludes: []
+    status: active

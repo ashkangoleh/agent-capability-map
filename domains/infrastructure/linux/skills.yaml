@@ -1,0 +1,28 @@
+schema_version: 1
+id: linux-systems
+kind: skill-registry
+skills:
+  - id: linux-systemd-service-debug
+    path: .agents/skills/linux-systemd-service-debug/SKILL.md
+    description: "Diagnose Linux systemd services, journal errors, restart loops and resource-limit failures safely."
+    triggers:
+      - "systemd service"
+      - "systemd restart loop"
+      - "systemd"
+      - "linux service failure"
+    excludes: []
+    status: active
+  - id: platform-operations
+    path: .agents/skills/platform-operations/SKILL.md
+    description: "Review deployment, Kubernetes, cloud and platform operation safeguards, environment evidence and rollback before production change."
+    triggers:
+      - "kubernetes"
+      - "helm"
+      - "devops"
+      - "sre"
+      - "cloud architecture"
+      - "networking"
+      - "linux server"
+      - "platform engineering"
+    excludes: []
+    status: active

@@ -5,16 +5,32 @@ children:
   - id: kubernetes
     description: "kubernetes"
     triggers:
+      - "pod security"
+      - "kubernetes storage"
+      - "helm chart"
+      - "k8s networkpolicy"
+      - "csi driver"
+      - "pvc"
       - "kubernetes"
       - "k8s"
       - "helm"
       - "pod"
       - "cluster"
     status: active
-    skills: domains/infrastructure/skills.yaml
+    map: domains/infrastructure/kubernetes/map.yaml
   - id: devops-sre
     description: "devops sre"
     triggers:
+      - "sre incident"
+      - "incident postmortem"
+      - "opentelemetry"
+      - "prometheus"
+      - "ci cd supply chain"
+      - "github actions"
+      - "gitops"
+      - "argo cd"
+      - "ansible"
+      - "terraform"
       - "devops"
       - "sre"
       - "ci/cd"
@@ -22,39 +38,52 @@ children:
       - "observability"
       - "deployment"
     status: active
-    skills: domains/infrastructure/skills.yaml
+    map: domains/infrastructure/devops-sre/map.yaml
   - id: cloud-engineering
     description: "cloud engineering"
     triggers:
+      - "cloud capacity"
+      - "finops"
+      - "cloud cost"
+      - "iam least privilege"
+      - "cloud iam"
       - "cloud architecture"
       - "aws"
       - "gcp"
       - "azure"
       - "cloud engineering"
     status: active
-    skills: domains/infrastructure/skills.yaml
+    map: domains/infrastructure/cloud/map.yaml
   - id: network-engineering
     description: "network engineering"
     triggers:
+      - "network diagnostics"
+      - "tls handshake"
+      - "dns troubleshooting"
       - "networking"
       - "dns"
       - "tcp"
       - "routing"
       - "load balancer"
     status: active
-    skills: domains/infrastructure/skills.yaml
+    skills: domains/infrastructure/network/skills.yaml
   - id: linux-systems
     description: "linux systems"
     triggers:
+      - "systemd restart loop"
+      - "systemd service"
       - "linux server"
       - "shell administration"
       - "systemd"
     status: active
-    skills: domains/infrastructure/skills.yaml
+    skills: domains/infrastructure/linux/skills.yaml
   - id: platform-engineering
     description: "platform engineering"
     triggers:
+      - "golden path"
+      - "container build"
+      - "vault secrets"
       - "platform engineering"
       - "internal developer platform"
     status: active
-    skills: domains/infrastructure/skills.yaml
+    map: domains/infrastructure/platform/map.yaml

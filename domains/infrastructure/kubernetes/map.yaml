@@ -1,0 +1,49 @@
+schema_version: 1
+id: kubernetes
+kind: map
+children:
+  - id: networking
+    description: "networking"
+    triggers:
+      - "kubernetes networkpolicy"
+      - "k8s networkpolicy"
+      - "kubernetes dns failure"
+      - "kubernetes service routing"
+    status: active
+    skills: domains/infrastructure/kubernetes/networking/skills.yaml
+  - id: storage
+    description: "storage"
+    triggers:
+      - "kubernetes storage"
+      - "pvc pending"
+      - "csi driver"
+      - "kubernetes pvc recovery"
+    status: active
+    skills: domains/infrastructure/kubernetes/storage/skills.yaml
+  - id: security
+    description: "security"
+    triggers:
+      - "kubernetes workload security"
+      - "pod security"
+      - "k8s rbac"
+      - "kubernetes security context"
+    status: active
+    skills: domains/infrastructure/kubernetes/security/skills.yaml
+  - id: helm
+    description: "helm"
+    triggers:
+      - "helm chart"
+      - "helm chart validation"
+      - "helm template"
+      - "helm upgrade"
+      - "helm"
+    status: active
+    skills: domains/infrastructure/kubernetes/helm/skills.yaml
+  - id: rollout
+    description: "rollout"
+    triggers:
+      - "kubernetes rollout"
+      - "kubernetes canary"
+      - "k8s rollout"
+    status: active
+    skills: domains/infrastructure/kubernetes/rollout/skills.yaml

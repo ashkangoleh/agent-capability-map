@@ -1,0 +1,14 @@
+schema_version: 1
+id: container
+kind: skill-registry
+skills:
+  - id: container-build-hardening
+    path: .agents/skills/container-build-hardening/SKILL.md
+    description: "Harden container builds and release images with immutable provenance, least privilege and startup tests."
+    triggers:
+      - "container build security"
+      - "container build"
+      - "docker image hardening"
+      - "dockerfile security"
+    excludes: []
+    status: active
