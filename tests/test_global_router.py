@@ -178,6 +178,23 @@ class GraphRoutingTests(unittest.TestCase):
         self.assertEqual(result["status"], "ok")
         self.assertTrue(any(e["relation"] == "runs_on" for e in result["relations"]))
 
+    def test_deep_data_engineering_graph_edges(self):
+        graph = Router(ROOT)
+        cases = [
+            ("data/data-engineering/warehouse/trino", "iceberg", "uses"),
+            ("data/data-engineering/distributed-processing/flink", "kafka", "uses"),
+            ("data/analytics-engineering/dbt", "airflow", "orchestrated_by"),
+            ("data/data-governance/lineage", "airflow", "related_to"),
+        ]
+        for route, target, relation in cases:
+            with self.subTest(route=route):
+                result = graph.related(route)
+                self.assertEqual(result["status"], "ok")
+                self.assertTrue(any(
+                    e["relation"] == relation and target in e["to"]
+                    for e in result["relations"]
+                ), result)
+
     def test_airflow(self):
         result = Router(ROOT).resolve("Create an Airflow DAG with retries")
         self.assertEqual(result.get("selected_skill"), "airflow-dag-engineering", result)

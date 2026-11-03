@@ -66,3 +66,7 @@ Structural validation checks SKILL.md frontmatter, path safety and YAML referenc
 ## Out of scope / next additions
 
 Remaining mapped-only nodes include Ray Data, Argo Workflows, other messaging systems and BI/Data Science. A mapped-only status must produce an explicit unavailable/clarification response instead of fabricating a Skill. Add dedicated skills only after reviewing current official interfaces and designing negative, near-miss, multilingual and workload validation cases.
+
+## Typed graph links
+
+Eight additional typed links connect Flink–Kafka, Trino–Iceberg, DuckDB–Parquet, dbt–Airflow, StarRocks–CDC, lineage–Airflow, Iceberg–Spark and data-quality–observability. These edges are read on demand using `capability-map related --route ...`; they do not automatically activate multiple skills or claim cross-engine transactions.

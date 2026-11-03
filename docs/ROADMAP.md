@@ -54,3 +54,7 @@ Prioritize skills by actual recurring tasks and evaluation gaps:
 ## Cross-domain specialist expansion (2026-11-03)
 
 A separate branch `feat/cross-domain-skill-expansion` adds 29 specialist skills across 29 previously unsupported or new top-level domains, plus 8 taxonomy extensions. All top-level domains now have at least one active skill but complete subdomain coverage, semantic/multilingual routing, and independent host-level quality assessment remain planned work.
+
+## Deep Data Engineering expansion — 2026-11-03
+
+The branch `feat/data-engineering-deep-skills` adds 24 specialized skills and seven nested YAML maps across CDC, distributed processing, orchestration, lakehouse maintenance, warehouse engines, model governance and data observability. Technology-specific routes preserve generic fallbacks where the request lacks enough detail. Structural and lexical tests do not validate model correctness, cost or runtime semantics.
