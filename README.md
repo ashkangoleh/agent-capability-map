@@ -18,8 +18,8 @@ The project maps user intent to a small set of verified capabilities, loads only
 - catalog/ — compact domain map and routing/evidence policies.
 - domains/*/ROUTER.md — domain-specific routing instructions.
 - domains/*/skills.json — metadata for skills in that domain only.
-- .agents/skills/*/SKILL.md — capability instructions.
-- docs/ — architecture, anti-hallucination, evaluation, and authoring.
+- .agents/skills/*/SKILL.md — independent, discoverable capability instructions; optional parent_skill/related_skills edges are domain-local registry metadata.
+- docs/ — architecture, skill graph, engineering guardrails, client compatibility, evaluation, and authoring.
 - tests/fixtures/routing-cases.json — labeled positive, negative, near-miss, and abstention cases.
 - scripts/validate_registry.py — dependency-free structural validator.
 - tests/ — validation tests.
@@ -29,7 +29,7 @@ The project maps user intent to a small set of verified capabilities, loads only
 1. Read AGENTS.md.
 2. Read catalog/domains.json and select the smallest relevant domain set.
 3. Read only the selected domain router and its local skills.json.
-4. Load the best matching SKILL.md. Load a second skill only for a real cross-capability dependency.
+4. Follow specialization edges to the most specific matching leaf; load only that SKILL.md. Load a second skill only for a real cross-capability dependency.
 5. Read referenced resources only at the point of need.
 6. If no skill matches, do not invent one; use a suitable general research workflow or state the capability gap.
 
@@ -38,7 +38,11 @@ The project maps user intent to a small set of verified capabilities, loads only
     python scripts/validate_registry.py
     python -m unittest discover -s tests -v
 
-The validator uses only the Python standard library.
+The validator uses only the Python standard library and checks skill-graph references and parent cycles.
+
+## Example: PySpark specialization
+
+In the data registry, data-engineering-implementation -> pyspark-pipelines -> pyspark-joins -> pyspark-skew-diagnostics is a **selection path**, not a recursive load path. An end-to-end PySpark job selects pyspark-pipelines; a join cardinality bug selects pyspark-joins; measured skew selects pyspark-skew-diagnostics. Only the chosen leaf is loaded. See docs/SKILL_GRAPH.md and docs/CLIENT_COMPATIBILITY.md.
 
 ## Important limitation
 
