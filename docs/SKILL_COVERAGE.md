@@ -3,7 +3,7 @@
 ## Scope
 
 - Top-level domains: 41, all with at least one linked active skill.
-- Active skill packages: 59 (30 existing plus 29 added in the cross-domain expansion).
+- Active skill packages: 83 (59 previous plus 24 newly linked Data Engineering specialist skills).
 - Most fine-grained subdomains remain mapped-only and require focused skill development.
 - For exact current counts run `python scripts/report_coverage.py --summary`.
 - Distinction: a mapped node is discoverable taxonomy but may not provide an executable skill.
@@ -58,3 +58,7 @@ No measured hallucination reduction, token savings or all-host compatibility is 
 ## Cross-domain expansion
 
 See [CROSS_DOMAIN_EXPANSION.md](CROSS_DOMAIN_EXPANSION.md) for the additional 29 skills and 41-domain taxonomy. See [RESEARCH_SOURCES.md](RESEARCH_SOURCES.md) for the verified primary-source starting points. These are structurally active skills, not a claim of comprehensive expert evaluation.
+
+## Deep Data Engineering
+
+See [DATA_ENGINEERING_SKILLS.md](DATA_ENGINEERING_SKILLS.md) for the 24 specialized packages, narrow activation boundaries, source verification requirements and regression test coverage. Use `scripts/report_coverage.py` for authoritative live counts; the figures above are a branch snapshot.

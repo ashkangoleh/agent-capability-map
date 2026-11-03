@@ -273,3 +273,121 @@ cases:
     request: "Prepare nonprofit grant proposal"
     status: matched
     skill: nonprofit-grant-evidence-plan
+  - id: de-deep-flink-checkpoint
+    request: "Recover Flink checkpoint state from savepoint"
+    status: matched
+    skill: flink-checkpoint-savepoint-recovery
+  - id: de-deep-flink-sql-eventtime
+    request: "Write Flink SQL event time watermark window query"
+    status: matched
+    skill: flink-sql-event-time-modeling
+  - id: de-deep-beam-portability
+    request: "Design Apache Beam runner portable pipeline"
+    status: matched
+    skill: beam-runner-portability
+  - id: de-deep-spark-scala
+    request: "Create a Spark Scala DataFrame job"
+    status: matched
+    skill: spark-scala-job-engineering
+  - id: de-deep-kafka-rebalance
+    request: "Fix Kafka consumer rebalance and offset reset"
+    status: matched
+    skill: kafka-consumer-rebalance-replay
+  - id: de-deep-kafka-connect
+    request: "Deploy a Kafka Connect CDC connector"
+    status: matched
+    skill: kafka-connect-cdc-design
+  - id: de-deep-debezium-bootstrap
+    request: "Plan a Debezium CDC snapshot with log offsets"
+    status: matched
+    skill: debezium-cdc-bootstrap
+  - id: de-deep-airflow-backfill
+    request: "Schedule Airflow backfill for data intervals"
+    status: matched
+    skill: airflow-backfill-scheduling
+  - id: de-deep-dagster-assets
+    request: "Design Dagster assets with partitions"
+    status: matched
+    skill: dagster-asset-partition-orchestration
+  - id: de-deep-prefect-flow
+    request: "Create a Prefect flow with task retries"
+    status: matched
+    skill: prefect-flow-reliability
+  - id: de-deep-openlineage
+    request: "Instrument OpenLineage data lineage events"
+    status: matched
+    skill: openlineage-metadata-instrumentation
+  - id: de-deep-iceberg-schema
+    request: "Design Iceberg schema evolution and partition transforms"
+    status: matched
+    skill: iceberg-table-schema-partition-evolution
+  - id: de-deep-iceberg-maintenance
+    request: "Plan Iceberg compaction and snapshot expiration"
+    status: matched
+    skill: iceberg-compaction-retention
+  - id: de-deep-delta-cdf
+    request: "Implement Delta Lake merge and change data feed"
+    status: matched
+    skill: delta-lake-merge-change-feed
+  - id: de-deep-hudi-mor
+    request: "Compare Apache Hudi MOR and COW table design"
+    status: matched
+    skill: hudi-cow-mor-table-design
+  - id: de-deep-trino-federation
+    request: "Optimize Trino federation pushdown and EXPLAIN"
+    status: matched
+    skill: trino-federated-query-optimization
+  - id: de-deep-duckdb-parquet
+    request: "Use DuckDB Parquet transformations and joins"
+    status: matched
+    skill: duckdb-parquet-transformation
+  - id: de-deep-starrocks-streamload
+    request: "Fix StarRocks Stream Load publish timeout"
+    status: matched
+    skill: starrocks-stream-load-transaction
+  - id: de-deep-starrocks-pk
+    request: "Design StarRocks Primary Key CDC upsert behavior"
+    status: matched
+    skill: starrocks-primary-key-cdc
+  - id: de-deep-dbt-snapshot
+    request: "Build a dbt snapshot for SCD2 history"
+    status: matched
+    skill: dbt-snapshot-scd2
+  - id: de-deep-dimensional-model
+    request: "Design dimensional modeling with fact table grain"
+    status: matched
+    skill: dimensional-modeling-grain
+  - id: de-deep-data-observability
+    request: "Define data observability freshness SLO"
+    status: matched
+    skill: data-observability-freshness-slo
+  - id: de-deep-parquet-layout
+    request: "Fix Parquet small files and row groups"
+    status: matched
+    skill: parquet-file-layout-tuning
+  - id: de-deep-data-platform-arch
+    request: "Review multi engine data platform architecture"
+    status: matched
+    skill: data-platform-architecture-review
+  - id: de-nearmiss-dbt-generic
+    request: "Design a dbt model with SQL transformations"
+    status: matched
+    skill: data-engineering-implementation
+  - id: de-nearmiss-trino-generic
+    request: "Design a Trino data pipeline"
+    status: matched
+    skill: data-engineering-implementation
+  - id: de-nearmiss-kafka-base
+    request: "Review Kafka consumer offsets and ordering"
+    status: matched
+    skill: kafka-streaming-reliability
+  - id: de-nearmiss-airflow-basic
+    request: "Create an Airflow DAG with retries"
+    status: matched
+    skill: airflow-dag-engineering
+  - id: de-nearmiss-spark-unspecified
+    request: "Create a Spark project"
+    status: needs_clarification
+  - id: de-nearmiss-metadata-mapped
+    request: "Research data catalog metadata taxonomy"
+    status: unavailable

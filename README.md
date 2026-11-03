@@ -197,6 +197,14 @@ CI checks syntax, references, linked SKILL.md metadata, path security and test f
 
 Original JSON registries under catalog/ and domains/*/skills.json remain for historical comparison only. **The executable router now reads only catalog/root.yaml and its linked YAML files.**
 
+## Deep Data Engineering Skills
+
+The `feat/data-engineering-deep-skills` branch adds 24 specialist skills for Flink, Beam, Scala Spark, Kafka Connect/consumers, Debezium CDC, Airflow backfill, Dagster, Prefect, OpenLineage, Iceberg, Delta Lake, Hudi, Trino, DuckDB, StarRocks, dbt snapshots, dimensional modeling, Parquet and data-platform architecture.
+
+Technology-specific maps are loaded progressively. A StarRocks Stream Load request now routes to a StarRocks load skill; an Iceberg compaction request routes to Iceberg maintenance. Generic requests retain a bounded fallback where appropriate.
+
+For routing and limitations see [Data Engineering Deep Skills](docs/DATA_ENGINEERING_SKILLS.md). Full behavioral correctness and token savings have not yet been measured across agents.
+
 ## Domain expansion
 
 The authoritative live report is `python scripts/report_coverage.py` and the compact summary is `python scripts/report_coverage.py --summary`. A top-level domain with one active skill is **not** complete coverage of that discipline. See [Cross-domain expansion](docs/CROSS_DOMAIN_EXPANSION.md) and [Research sources](docs/RESEARCH_SOURCES.md). The current branch intentionally keeps legacy unsupported subdomains in the mapped-only state.

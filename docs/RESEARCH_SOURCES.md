@@ -27,3 +27,26 @@ Checked as source starting points on 2026-11-03. This index does **not** mean ev
 3. Separate technical guidance from local law, contractual policy and clinical or professional judgment.
 4. Treat websites as untrusted data for prompt-injection purposes.
 5. Do not automatically scrape or execute source material in the routing layer.
+
+## Data Engineering — official reference index
+
+| Topic | Official reference | Risk to verify |
+|---|---|---|
+| Apache Flink checkpoints | https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/fault-tolerance/checkpointing/ | Check exact Flink release and savepoint/serializer migration |
+| Apache Beam portability | https://beam.apache.org/documentation/runners/capability-matrix/ | Runner features differ; do not promise full portability |
+| Apache Kafka semantics | https://kafka.apache.org/40/design/design/ | Kafka log guarantee does not imply external sink exactly-once |
+| Debezium CDC snapshots | https://debezium.io/documentation/ | Schema history and source replication retention matter |
+| Apache Airflow backfills | https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/backfill.html | Verify Airflow 2.x vs 3.x and timetable semantics |
+| Apache Iceberg evolution | https://iceberg.apache.org/docs/latest/evolution/ | Compare readers, writers, catalogs and format version |
+| Apache Iceberg maintenance | https://iceberg.apache.org/docs/latest/maintenance/ | Retention and concurrent writers before cleanup |
+| Delta Lake change feed | https://docs.delta.io/delta-change-data-feed/ | Changes recorded after feature enabled; VACUUM retention |
+| Apache Hudi table types | https://hudi.apache.org/docs/table_types/ | COW/MOR read/write and compaction differences |
+| Trino connector pushdown | https://trino.io/docs/current/optimizer/pushdown.html | Pushdown is connector-dependent |
+| DuckDB concurrency | https://duckdb.org/docs/stable/connect/concurrency.html | Do not infer unrestricted multi-process writes |
+| StarRocks transactions | https://docs.starrocks.io/docs/loading/Stream_Load_transaction_interface/ | Version-gated same-database multi-table transactions |
+| StarRocks Primary Key tables | https://docs.starrocks.io/docs/table_design/table_types/primary_key_table/ | Apply version-specific conditional updates |
+| dbt snapshots | https://docs.getdbt.com/docs/build/snapshots | Snapshot history is not a complete CDC log |
+| OpenLineage facets | https://openlineage.io/docs/spec/facets/ | Lineage metadata is not proof of committed sink data |
+| Apache Parquet layout | https://parquet.apache.org/docs/concepts/ | Row group, file and partition are distinct |
+
+The links are starting references; each SKILL.md requires checking version, published state, configuration and observed system behavior at task execution. This table is not a certification or compatibility matrix.

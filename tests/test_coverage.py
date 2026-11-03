@@ -2,6 +2,7 @@ import unittest
 from pathlib import Path
 
 from scripts.report_coverage import compute_coverage
+from capability_map.router import load_yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -12,7 +13,8 @@ class CoverageReportTests(unittest.TestCase):
         self.assertEqual(report["domain_count"], 41)
         self.assertEqual(report["domains_with_active_skills"], 41)
         self.assertEqual(report["domains_without_active_skills"], [])
-        self.assertEqual(report["unique_active_skills"], 59)
+        self.assertGreaterEqual(report["unique_active_skills"], 59)
+        self.assertEqual(report["unique_active_skills"], len(load_yaml(ROOT, "catalog/master-skill-ids.yaml")["ids"]))
         self.assertGreater(report["mapped_only_subdomain_nodes"], 0)
         self.assertEqual(len({item["id"] for item in report["domains"]}), 41)
 
