@@ -1,34 +1,44 @@
-# Architecture
+# Global Master Capability Router — Architecture
 
-## Objective
+## Decision
 
-Provide a portable capability map that routes a task through progressively narrower metadata and loads only the instructions and resources needed for that task.
+The authoritative source is a **hierarchical YAML capability graph**, not the earlier flat JSON registries. The historical `catalog/domains.json` and `domains/*/skills.json` are retained only for comparison and are **not** loaded by the runtime. The legacy `scripts/validate_registry.py` entry point now delegates to the same YAML graph validator.
 
-## Layers
+## Levels
 
-1. Root contract — AGENTS.md: stable global rules, routing sequence, safety, evidence, and context discipline.
-2. Domain catalog — catalog/domains.json: compact map of domain IDs, descriptions, routers, and subdomains.
-3. Domain router — domains/<domain>/ROUTER.md: domain-specific disambiguation and routing constraints.
-4. Local registry — domains/<domain>/skills.json: concise metadata for skills in the selected domain only.
-5. Skill — .agents/skills/<id>/SKILL.md: actionable procedure for one coherent capability.
-6. Resources — references/, scripts/, assets/: loaded or executed only when the active skill needs them.
+1. Global host instructions (`~/.claude/CLAUDE.md`, `~/.codex/AGENTS.md`, or relevant adapter) contain only small routing guidance and shell-safety rules.
+2. `catalog/root.yaml` maps user intent to one top-level domain.
+3. `domains/<domain>/map.yaml` routes into successive subdomains/technology families.
+4. A leaf `skills.yaml` advertises narrow skill IDs, descriptions, positive triggers and negative exclusions.
+5. The resolver returns only the selected `SKILL.md` path, or an explicit unmatched/unavailable/clarification status.
+6. Host agents load one selected skill and requested supporting references only when needed.
 
-## Why hierarchical routing
+The Graph is intentionally **not** a graph database. `catalog/relations.yaml` supplies typed cross-domain edges for explicit `related` lookup, separate from default hierarchical traversal.
 
-A flat registry makes every request compete against every skill and encourages broad context loading. Hierarchical routing narrows the search space before detailed instructions are read. Local registries keep future growth from forcing every domain's metadata into every request.
+## Global and Personal Skills
 
-## Runtime contract
+- Install global instructions at user level once per machine.
+- User-wide personal registrations: `~/.config/agent-capability-map/personal.yaml`.
+- Project-local registrations: an explicit overlay marker in the project's `AGENTS.md` pointing to a validated YAML skill manifest.
+- Unknown directories are not searched. Path traversal and accidental shadowing of Master Skill IDs are rejected.
+- Equal lexical candidates produce clarification rather than silent overwrite.
 
-This repository does not implement a universal loader. A compatible host must read AGENTS.md as repository guidance, access the catalog and selected domain files, discover skills under .agents/skills or load them by explicit path, and provide file/resource access. Native Agent Skills clients can use SKILL.md packages, but discovery and routing behavior varies by host. Verify actual client behavior rather than assuming every client interprets the custom domain registry.
+## Control Plane vs Data Plane
 
-## Routing lifecycle
+The resolver is a **deterministic lexical router** with path validation. It is not a learned intent classifier and has no access to the host's hidden reasoning. The host chooses when to invoke it, reads selected text, and remains responsible for permitted tool execution and factual verification.
 
-Parse intent → select domain → read domain router → inspect local registry → select skill → load SKILL.md → fetch exact resources → execute → verify → report.
+The `match_strength` field is a ranking heuristic, **not confidence**. A small number of files inspected does not prove lower LLM token usage.
 
-## Composition
+## Security Model
 
-Use one skill for one coherent unit of work. Compose skills only where a real dependency exists. A product launch may require product discovery, marketing strategy, and SEO; a request to write a PRD should not load all three.
+- Use restricted YAML parsing (no aliases), bounded file sizes, path containment and existing user/host permissions.
+- Treat web pages, issue descriptions, files and retrieved content as potentially untrusted instructions.
+- Do not execute scripts solely because a Skill requests it.
+- The Claude adapter adds a read directory and a built-in tool edit deny for the Master Skill root; this is not OS-level immutability.
 
-## Why no graph database yet
+## Quality Control
 
-The domain hierarchy is shallow and the registry is small. JSON files, paths, and deterministic validation are simpler to review, version, diff, and cache. Add semantic retrieval or a graph only after measured misses, ambiguous routing, or dependency complexity justify the added complexity.
+- `python -m capability_map validate`: complete YAML graph and skill frontmatter linkage.
+- `python scripts/evaluate_graph.py`: labeled deterministic-routing regression prompts.
+- `python -m unittest discover -s tests -v`: validation and security behavior.
+- Host-specific tests and human-reviewed task correctness remain required before claiming agent interoperability, hallucination reduction or token improvement.

@@ -20,9 +20,8 @@ jobs:
           python-version: "3.12"
       - name: Install minimal runtime
         run: python -m pip install -e .
-      - name: Validate legacy registry and new YAML graph
+      - name: Validate authoritative YAML graph and routing fixtures
         run: |
-          python scripts/validate_registry.py
           python -m capability_map validate
           python scripts/evaluate_graph.py
       - name: Test CLI, security and overlays

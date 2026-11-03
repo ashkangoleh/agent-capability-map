@@ -1,25 +1,45 @@
-# Domain Taxonomy
+# Domain Taxonomy — Authoritative YAML Graph
 
-This taxonomy is intentionally broad. A mapped domain is not the same as a domain with a validated skill.
+The master graph contains 33 top-level discovery domains. Some nodes have validated Skill packages; others remain **mapped** placeholders. The taxonomy is intentionally extensible, not a claim to cover every discipline in the world.
 
-| Domain | Coverage |
+| Domain ID | Purpose |
 |---|---|
-| Technology | Software engineering, architecture, platform, DevOps/SRE, cloud, APIs, QA, application security, networking, developer experience |
-| Data | Data engineering, analytics engineering, modeling, warehouses, lakehouse, streaming, databases, BI, data science, quality, governance |
-| AI/ML | Machine learning, deep learning, LLM applications, agents, RAG, embeddings, evaluation, MLOps, AI safety |
-| Product | Strategy, discovery, user research, requirements, PRDs, roadmaps, prioritization, analytics, experimentation, pricing, growth |
-| Marketing | GTM, positioning, brand, campaigns, performance, lifecycle, CRM, content, social, email, influencer, attribution, operations |
-| SEO | Technical, on-page, off-page, content, local, international, ecommerce, analytics, structured data, AEO |
-| Design & Creative | UX research, UX/UI, interaction, design systems, accessibility, visual identity, graphic, motion, content design |
-| Business & Operations | Strategy, business analysis, operations, process improvement, sales, customer success, partnerships, procurement, business modeling |
-| Research & Communication | Web research, fact checking, technical writing, documentation, reports, presentations, academic writing, editing, localization |
-| Governance & Risk | Privacy, compliance, legal information, financial analysis, risk, audit, security governance |
-| People & Learning | Recruiting, people operations, leadership, organizational development, learning design, education, coaching |
+| data | Data engineering, analytics, distributed processing, warehousing, governance |
+| infrastructure | Kubernetes, DevOps, cloud, networking, Linux and platform engineering |
+| software-engineering | Backend, frontend, software architecture, programming and testing |
+| ai-ml | LLM engineering, RAG, model evaluation, ML and MLOps |
+| agent-systems | Capability routing, agent skill authoring, tools and evaluations |
+| security | Application, cloud, identity, privacy and incident security |
+| product | Discovery, PRDs, metrics, experiments and roadmaps |
+| marketing | GTM, channels, brand, lifecycle, marketing analytics |
+| seo | Technical SEO, structured data, indexability and organic performance |
+| design | UX, UI, accessibility, interaction and design systems |
+| research | Evidence synthesis, fact checking and technical writing |
+| business | Strategy, operating models and business analysis |
+| content | Editorial planning, copywriting and publishing |
+| people | Recruiting, people operations and organizational development |
+| education | Curriculum, instructional design, tutoring and assessment |
+| finance | Accounting, corporate finance, treasury and investing research |
+| legal | Legal information, contract review and regulatory research |
+| health | Healthcare information, public health and biomedical research |
+| science | Mathematics, physics, chemistry, biology and scientific computing |
+| ecommerce | Commerce platforms, merchandising and inventory |
+| sales | Sales strategy, operations, analytics and enablement |
+| customer-experience | Customer support, success, knowledge bases and feedback |
+| media | Media, publishing, film, music and podcast production |
+| gaming | Game development, game design and analytics |
+| manufacturing | Industry, manufacturing automation, quality and maintenance |
+| logistics | Transport, warehousing, last-mile and supply chain planning |
+| construction | Architecture, BIM, civil engineering and construction planning |
+| energy | Energy systems, renewables and sustainability |
+| agriculture | Agriculture, food production and agribusiness |
+| public-sector | Public policy, public services and civic technology |
+| travel | Travel, tourism, hospitality and events |
+| sports | Fitness, athletic coaching and sports science |
+| personal | Productivity, organization and personal planning |
 
-## Taxonomy rules
+## Governance
 
-- Keep top-level domains mutually understandable, not artificially exclusive.
-- Put a capability where its primary deliverable belongs; use explicit cross-domain dependencies when needed.
-- Keep synonyms and trigger phrases in local skill metadata, not in the root contract.
-- Add a new top-level domain only when existing domains create repeated routing ambiguity.
-- Mark a domain mapped until it has at least one tested, maintained skill.
+Add a new domain only when task boundaries and routing tests justify it. Every proposed active node needs a validated path to a maintained Skill. For regulated or high-impact work, mapped status is preferred to publishing a generic untested pseudo-expert.
+
+See `catalog/root.yaml`, `docs/SKILL_COVERAGE.md` and `tests/fixtures/yaml-routing-cases.yaml` for executable coverage and regression evidence.
