@@ -5,8 +5,10 @@ children:
   - id: recruiting
     description: "recruiting"
     triggers:
+      - "structured interview"
       - "recruiting"
-    status: mapped
+    status: active
+    skills: domains/people/skills.yaml
   - id: people-operations
     description: "people operations"
     triggers:

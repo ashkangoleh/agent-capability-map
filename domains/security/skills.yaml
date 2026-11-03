@@ -1,0 +1,13 @@
+schema_version: 1
+id: security
+kind: skill-registry
+skills:
+  - id: security-threat-model-review
+    path: .agents/skills/security-threat-model-review/SKILL.md
+    description: "Review application security threat models, trust boundaries and controls using OWASP and verified risk evidence."
+    triggers:
+      - "threat modeling"
+      - "application security threat modeling"
+      - "security threat model"
+    excludes: []
+    status: active

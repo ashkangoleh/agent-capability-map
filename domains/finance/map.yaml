@@ -10,8 +10,10 @@ children:
   - id: financial-planning
     description: "financial planning"
     triggers:
+      - "cash flow scenarios"
       - "financial planning"
-    status: mapped
+    status: active
+    skills: domains/finance/skills.yaml
   - id: corporate-finance
     description: "corporate finance"
     triggers:

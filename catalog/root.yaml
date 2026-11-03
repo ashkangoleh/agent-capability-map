@@ -119,7 +119,7 @@ children:
       - "oauth"
       - "privacy engineering"
     map: domains/security/map.yaml
-    status: mapped
+    status: active
   - id: product
     label: "Product Management"
     description: "Discovery, product strategy, requirements, roadmap, metrics and experiments."
@@ -243,7 +243,7 @@ children:
       - "employee onboarding"
       - "talent management"
     map: domains/people/map.yaml
-    status: mapped
+    status: active
   - id: education
     label: "Education & Learning"
     description: "Mapped taxonomy of education & learning; specialized validated skills are not yet available."
@@ -255,7 +255,7 @@ children:
       - "exam preparation"
       - "learning design"
     map: domains/education/map.yaml
-    status: mapped
+    status: active
   - id: finance
     label: "Finance & Accounting"
     description: "Mapped taxonomy of finance & accounting; specialized validated skills are not yet available."
@@ -267,7 +267,7 @@ children:
       - "investment analysis"
       - "treasury"
     map: domains/finance/map.yaml
-    status: mapped
+    status: active
   - id: legal
     label: "Legal & Compliance"
     description: "Mapped taxonomy of legal & compliance; specialized validated skills are not yet available."
@@ -278,7 +278,7 @@ children:
       - "legal compliance"
       - "intellectual property"
     map: domains/legal/map.yaml
-    status: mapped
+    status: active
   - id: health
     label: "Health & Medicine"
     description: "Mapped taxonomy of health & medicine; specialized validated skills are not yet available."
@@ -290,7 +290,7 @@ children:
       - "patient care"
       - "wellness"
     map: domains/health/map.yaml
-    status: mapped
+    status: active
   - id: science
     label: "Science & Mathematics"
     description: "Mapped taxonomy of science & mathematics; specialized validated skills are not yet available."
@@ -302,7 +302,7 @@ children:
       - "scientific computing"
       - "experimental science"
     map: domains/science/map.yaml
-    status: mapped
+    status: active
   - id: ecommerce
     label: "E-commerce & Retail"
     description: "Mapped taxonomy of e-commerce & retail; specialized validated skills are not yet available."

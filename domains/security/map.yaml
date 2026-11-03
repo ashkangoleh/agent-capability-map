@@ -5,10 +5,12 @@ children:
   - id: application-security
     description: "application security"
     triggers:
+      - "threat modeling"
       - "application security"
       - "owasp"
       - "code security"
-    status: mapped
+    status: active
+    skills: domains/security/skills.yaml
   - id: infrastructure-security
     description: "infrastructure security"
     triggers:

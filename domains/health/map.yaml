@@ -10,8 +10,10 @@ children:
   - id: public-health
     description: "public health"
     triggers:
+      - "public health research"
       - "public health"
-    status: mapped
+    status: active
+    skills: domains/health/skills.yaml
   - id: healthcare-operations
     description: "healthcare operations"
     triggers:

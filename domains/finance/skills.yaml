@@ -1,0 +1,14 @@
+schema_version: 1
+id: finance
+kind: skill-registry
+skills:
+  - id: financial-budget-scenarios
+    path: .agents/skills/financial-budget-scenarios/SKILL.md
+    description: "Create finance budget and cash-flow scenarios with reconciled inputs, assumptions and explicit sensitivity."
+    triggers:
+      - "budgeting"
+      - "budgeting cash flow"
+      - "cash flow scenarios"
+      - "financial budget"
+    excludes: []
+    status: active

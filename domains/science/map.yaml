@@ -30,5 +30,7 @@ children:
   - id: experimental-design
     description: "experimental design"
     triggers:
+      - "experimental science"
       - "experimental design"
-    status: mapped
+    status: active
+    skills: domains/science/skills.yaml

@@ -10,8 +10,10 @@ children:
   - id: legal-research
     description: "legal research"
     triggers:
+      - "legal memorandum"
       - "legal research"
-    status: mapped
+    status: active
+    skills: domains/legal/skills.yaml
   - id: privacy-law
     description: "privacy law"
     triggers:

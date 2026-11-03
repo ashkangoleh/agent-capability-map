@@ -1,0 +1,13 @@
+schema_version: 1
+id: science
+kind: skill-registry
+skills:
+  - id: scientific-experiment-review
+    path: .agents/skills/scientific-experiment-review/SKILL.md
+    description: "Review scientific experiment design, measurement uncertainty, confounding and reproducibility safeguards."
+    triggers:
+      - "experimental science"
+      - "scientific experiment"
+      - "experiment protocol review"
+    excludes: []
+    status: active
