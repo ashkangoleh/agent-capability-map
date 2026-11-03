@@ -70,8 +70,12 @@ Structural validation checks SKILL.md frontmatter, path safety and YAML referenc
 
 ## Out of scope / next additions
 
-Remaining mapped-only nodes include BI, Data Science, semantic layers and certain relational database specialties. A mapped-only status must produce an explicit unavailable/clarification response instead of fabricating a Skill. Add dedicated skills only after reviewing current official interfaces and designing negative, near-miss, multilingual and workload validation cases.
+Business Intelligence, Data Science, the Semantic Layer and selected relational database tools are now mapped to active skills. Other subdomains remain unmapped or mapped-only; consult the live coverage report. A mapped-only status must produce an explicit unavailable/clarification response instead of fabricating a Skill. Add dedicated skills only after reviewing current official interfaces and designing negative, near-miss, multilingual and workload validation cases.
 
 ## Typed graph links
 
 Eight additional typed links connect Flink–Kafka, Trino–Iceberg, DuckDB–Parquet, dbt–Airflow, StarRocks–CDC, lineage–Airflow, Iceberg–Spark and data-quality–observability. These edges are read on demand using `capability-map related --route ...`; they do not automatically activate multiple skills or claim cross-engine transactions.
+
+## Additional tooling in unified reference branch
+
+Eleven further Data Engineering skills cover PostgreSQL logical CDC, MySQL binlog CDC, MinIO object storage, Polaris and Lakekeeper Iceberg REST catalogs, DataHub metadata governance, Great Expectations validation, NiFi backpressure, Elasticsearch PIT extraction, ClickHouse MergeTree and SQL physical-plan optimization. These routes are part of `feat/master-reference-platform-data-ai`; see [MASTER_REFERENCE_EXPANSION.md](MASTER_REFERENCE_EXPANSION.md).

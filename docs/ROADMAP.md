@@ -58,3 +58,9 @@ A separate branch `feat/cross-domain-skill-expansion` adds 29 specialist skills 
 ## Deep Data Engineering expansion — 2026-11-03
 
 The branch `feat/data-engineering-deep-skills` adds 29 specialized skills and seven nested YAML maps plus activated Ray, Argo, Pulsar, RabbitMQ and Kinesis nodes across CDC, distributed processing, orchestration, lakehouse maintenance, warehouse engines, model governance and data observability. Technology-specific routes preserve generic fallbacks where the request lacks enough detail. Structural and lexical tests do not validate model correctness, cost or runtime semantics.
+
+## Unified platform, analytics and ML reference branch — 2026-11-03
+
+`feat/master-reference-platform-data-ai` consolidates all previously completed changes and adds **63** specialized SKILL.md files: Infrastructure 18, Data Science + Data Analysis/BI 17, AI/ML 17 and additional Data Engineering 11. The YAML graph now covers 41 top-level domains and 151 active skills. Future expansion should be prioritized by measured user tasks, routing false positives, quality regressions and maintenance ownership—not exhaustive buzzword enumeration.
+
+Pending maturity gates: real agent-host integration tests beyond Claude Code, test-set generalization, human-reviewed skill output, vulnerability/permission testing, actual token budgets, reference freshness automation, and observable acceptance of production SLO/replay semantics.

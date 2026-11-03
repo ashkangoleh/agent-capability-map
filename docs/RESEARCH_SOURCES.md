@@ -60,3 +60,29 @@ The links are starting references; each SKILL.md requires checking version, publ
 | Apache Pulsar | https://pulsar.apache.org/docs/4.0.x/concepts-messaging/ | Validate subscription mode, redelivery and version |
 | RabbitMQ | https://www.rabbitmq.com/docs/confirms | Publisher confirms and consumer acknowledgments solve different delivery boundaries |
 | Amazon Kinesis | https://docs.aws.amazon.com/streams/latest/dev/enhanced-consumers.html | Check regional limits and enhanced fan-out usage cost |
+
+## Reference expansion sources (2026-11-03)
+
+These authoritative URLs are **starting references**, not a claim of exhaustive source auditing. Every specialist skill includes its own version-appropriate sources and evidence/recovery requirements.
+
+| Area | Official source | Critical verification |
+|---|---|---|
+| Kubernetes | https://kubernetes.io/docs/concepts/ | Target version, deployed controllers and RBAC |
+| Terraform | https://developer.hashicorp.com/terraform/docs | Provider/state version and plan-diff confirmation |
+| Prometheus | https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/ | Correct metric cardinality and calculated SLIs |
+| OpenTelemetry | https://opentelemetry.io/docs/ | Collector/SDK semantic convention versions and PII |
+| Linux systemd | https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html | Distribution/package behavior and actual unit |
+| scikit-learn | https://scikit-learn.org/stable/common_pitfalls.html | Split before fit; avoid target/data leakage |
+| pandas | https://pandas.pydata.org/docs/user_guide/ | Version-specific dtypes, timestamps and join grain |
+| Polars | https://docs.pola.rs/user-guide/lazy/using/ | Lazy plans and streaming support by operator |
+| Superset | https://superset.apache.org/docs/ | Release-specific dataset/RLS and access contracts |
+| Feast | https://docs.feast.dev/master/reference/offline-stores/overview | Point-in-time joins and online/offline parity |
+| MLflow | https://mlflow.org/docs/latest/ml/model-registry/ | Registry alias, artifact and serving independence |
+| PyTorch | https://docs.pytorch.org/docs/stable/distributed.checkpoint.html | DCP formats, rank/world size and restore |
+| Hugging Face PEFT | https://huggingface.co/docs/trl/peft_integration | Trainer/library compatibility and licenses |
+| vLLM | https://docs.vllm.ai/en/stable/serving/openai_compatible_server/ | Actual endpoints, model chat template and throughput |
+| GX | https://docs.greatexpectations.io/docs/core/define_expectations/organize_expectation_suites/ | GX Core version and checkpoint API |
+| Apache NiFi | https://nifi.apache.org/nifi-docs/user-guide.html | FlowFile queues, backpressure and repository durability |
+| AWS Kinesis | https://docs.aws.amazon.com/streams/latest/dev/building-consumers.html | Shards, reshard and checkpoint persistence |
+
+Do not label `latest` reference content as compatible with a historical runtime; pin documentation versions when implementing concrete code.

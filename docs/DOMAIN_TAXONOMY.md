@@ -4,7 +4,7 @@ The master graph contains 41 top-level discovery domains, each with at least one
 
 | Domain ID | Purpose |
 |---|---|
-| data | Data engineering, analytics, distributed processing, warehousing, governance |
+| data | Data Engineering, Data Science, Data Analysis, BI, distributed processing, warehouses and governance |
 | infrastructure | Kubernetes, DevOps, cloud, networking, Linux and platform engineering |
 | software-engineering | Backend, frontend, software architecture, programming and testing |
 | ai-ml | LLM engineering, RAG, model evaluation, ML and MLOps |
@@ -52,3 +52,14 @@ The master graph contains 41 top-level discovery domains, each with at least one
 Add a new domain only when task boundaries and routing tests justify it. Every proposed active node needs a validated path to a maintained Skill. For regulated or high-impact work, mapped status is preferred to publishing a generic untested pseudo-expert.
 
 See `catalog/root.yaml`, `docs/SKILL_COVERAGE.md` and `tests/fixtures/yaml-routing-cases.yaml` for executable coverage and regression evidence.
+
+## Expanded first-class subdomains
+
+- `data/data-science`: statistical inference, causal analysis, sklearn validation, feature engineering, forecasting, EDA, geospatial and anomaly detection.
+- `data/data-analysis`: SQL metrics, cohorts, funnels, experiment result analysis, Polars, visualizations and reconciliation.
+- `data/business-intelligence`: Apache Superset and dashboard evidence.
+- `ai-ml/{llm-engineering,rag-retrieval,machine-learning,deep-learning,mlops}`: fine-grained specialist selection.
+- `infrastructure/{kubernetes,devops-sre,cloud-engineering,network-engineering,linux-systems,platform-engineering}`: dedicated skill registries and nested maps.
+- `data/data-engineering`: additional CDC, object storage, metadata catalogs and analytical databases.
+
+All new paths preserve the root `AGENTS.md` instruction bootstrap, YAML progressive disclosure and explicit personal skill overlay registration.

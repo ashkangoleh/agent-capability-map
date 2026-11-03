@@ -64,3 +64,39 @@ edges:
     to: [data, data-engineering, data-observability, freshness-slo]
     relation: supports
     rationale: Data quality checks complement operational freshness and delivery SLOs.
+  - from: [data, data-science, feature-engineering]
+    to: [ai-ml, mlops, feature-store]
+    relation: related_to
+    rationale: ML offline and online features must preserve point-in-time definitions and availability contracts.
+  - from: [ai-ml, mlops, serving]
+    to: [infrastructure, kubernetes]
+    relation: runs_on
+    rationale: ML serving may deploy on Kubernetes with separately verified identity and resource limits.
+  - from: [ai-ml, llm-engineering, serving]
+    to: [infrastructure, kubernetes]
+    relation: runs_on
+    rationale: LLM inference may use Kubernetes but requires versioned GPU scheduling and serving tests.
+  - from: [data, business-intelligence, superset]
+    to: [data, data-engineering, warehouse, trino]
+    relation: uses
+    rationale: Superset can query Trino through a supported SQLAlchemy dialect and controlled access.
+  - from: [data, data-analysis, sql-analysis]
+    to: [data, analytics-engineering, semantic-layer]
+    relation: related_to
+    rationale: Metric definitions should be reconciled between analysis SQL and governed semantic metrics.
+  - from: [data, data-engineering, lakehouse, catalogs, polaris]
+    to: [data, data-engineering, lakehouse, iceberg]
+    relation: supports
+    rationale: Polaris provides Iceberg REST metadata services with compatible engine and credential settings.
+  - from: [infrastructure, devops-sre, metrics]
+    to: [data, data-engineering, data-observability, freshness-slo]
+    relation: related_to
+    rationale: Prometheus SLO alerts can monitor pipeline freshness and incident signals if instrumented.
+  - from: [data, data-governance, data-catalog]
+    to: [data, data-engineering, lakehouse, catalogs]
+    relation: related_to
+    rationale: Catalog discovery and Iceberg REST metadata lifecycle serve different responsibilities.
+  - from: [ai-ml, mlops, tracking]
+    to: [data, data-science, model-validation]
+    relation: supports
+    rationale: MLflow run lineage can capture leakage-safe validation artifacts and model comparisons.
