@@ -115,6 +115,75 @@
       ],
       "risk_level": "high",
       "status": "active"
+    },
+    {
+      "id": "data-science-experiment-design",
+      "path": ".agents/skills/data-science-experiment-design/SKILL.md",
+      "description": "Design and evaluate data science experiments or predictive modeling baselines with leakage-safe splits, uncertainty, and reproducible evaluation.",
+      "triggers": [
+        "data science experiment",
+        "train test leakage",
+        "predictive modeling baseline",
+        "experiment design"
+      ],
+      "avoid_triggers": [
+        "business KPI scorecard",
+        "LLM retrieval pipeline",
+        "real-time model serving"
+      ],
+      "outputs": [
+        "experiment plan",
+        "leakage-safe data split",
+        "evaluation and reproducibility"
+      ],
+      "risk_level": "high",
+      "status": "active"
+    },
+    {
+      "id": "data-analytics-metrics",
+      "path": ".agents/skills/data-analytics-metrics/SKILL.md",
+      "description": "Build and validate descriptive analytics metrics, funnels, cohorts, retention and segmentation with explicit grain and denominator definitions.",
+      "triggers": [
+        "cohort analysis",
+        "funnel analysis",
+        "retention SQL",
+        "analytics metric definition"
+      ],
+      "avoid_triggers": [
+        "model training experiment",
+        "business strategy business case",
+        "pipeline orchestration"
+      ],
+      "outputs": [
+        "metric contract",
+        "validated SQL",
+        "analysis and data caveats"
+      ],
+      "risk_level": "medium",
+      "status": "active"
+    },
+    {
+      "id": "data-cdc-pipelines",
+      "path": ".agents/skills/data-cdc-pipelines/SKILL.md",
+      "description": "Implement or review database CDC and snapshot-to-stream ingestion with ordered changes, idempotent sink writes, replay and recovery.",
+      "triggers": [
+        "CDC pipeline",
+        "Debezium ingestion",
+        "snapshot and change stream",
+        "incremental change capture"
+      ],
+      "avoid_triggers": [
+        "historical batch-only extract",
+        "model evaluation",
+        "API endpoint without data replication"
+      ],
+      "outputs": [
+        "CDC design",
+        "event consistency contract",
+        "replay tests and recovery"
+      ],
+      "risk_level": "high",
+      "status": "active"
     }
   ]
 }
