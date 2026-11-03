@@ -1,0 +1,20 @@
+schema_version: 1
+ids:
+  - ai-rag-engineering
+  - airflow-dag-engineering
+  - business-strategy-analysis
+  - data-engineering-implementation
+  - evidence-research
+  - kafka-streaming-reliability
+  - marketing-strategy-campaign
+  - platform-operations
+  - product-discovery-prd
+  - pyspark-project-bootstrap
+  - pyspark-transformations
+  - seo-audit-strategy
+  - skill-authoring-validation
+  - software-engineering-implementation
+  - spark-performance-diagnostics
+  - spark-sql-engineering
+  - technical-writing-docs
+  - ux-research-design-review

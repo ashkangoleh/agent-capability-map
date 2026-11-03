@@ -278,12 +278,11 @@ class Router:
         )
 
     def _all_registered_skill_ids(self):
-        # Only used when a matching overlay exists; master catalog traversal stays lazy otherwise.
-        ids = set()
-        for registry in self._registries():
-            for entry in registry.get("skills", []):
-                ids.add(entry["id"])
-        return ids
+        # A small validated index avoids walking the entire global graph for every personal match.
+        index = self._yaml(self.root, "catalog/master-skill-ids.yaml")
+        if index.get("schema_version") != 1 or not isinstance(index.get("ids"), list):
+            raise RouterError("Invalid master skill ID index")
+        return set(index["ids"])
 
     def _registries(self):
         for path in self._walk_maps():
@@ -384,6 +383,12 @@ class Router:
 
         self.inspected = []
         walk("catalog/root.yaml")
+        index = self._yaml(self.root, "catalog/master-skill-ids.yaml")
+        indexed = index.get("ids", [])
+        if index.get("schema_version") != 1 or not isinstance(indexed, list):
+            raise RouterError("Invalid master skill ID index")
+        if len(indexed) != len(set(indexed)) or set(indexed) != skill_ids:
+            raise RouterError("Stale or duplicate master skill ID index")
         return {
             "maps": map_count,
             "nodes": node_count,
