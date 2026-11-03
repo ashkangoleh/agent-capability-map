@@ -84,3 +84,51 @@ cases:
   - id: persian-spark-api-ambiguous
     request: میخوام یک پروژه اسپارک بسازم
     status: needs_clarification
+  - id: dbt-incremental
+    request: Design a dbt incremental model with merge and unique_key
+    status: matched
+    skill: dbt-incremental-modeling
+  - id: data-quality
+    request: Create a data quality contract for daily orders
+    status: matched
+    skill: data-quality-contracts
+  - id: pipeline-backfill
+    request: Plan a pipeline backfill recovery for missing dates
+    status: matched
+    skill: pipeline-backfill-recovery
+  - id: spark-structured-streaming
+    request: Implement a PySpark structured streaming job with watermarks
+    status: matched
+    skill: spark-structured-streaming
+  - id: kubernetes-rollout
+    request: Plan a Kubernetes rollout with canary health checks
+    status: matched
+    skill: kubernetes-rollout-safety
+  - id: product-experiment
+    request: Design a product A/B test with guardrail metrics
+    status: matched
+    skill: product-experiment-design
+  - id: product-metrics
+    request: Define product analytics activation metric and retention
+    status: matched
+    skill: product-metrics-instrumentation
+  - id: marketing-measurement
+    request: Implement GA4 event tracking for marketing conversions
+    status: matched
+    skill: marketing-measurement-attribution
+  - id: seo-indexability
+    request: Diagnose canonical mismatch on indexed pages
+    status: matched
+    skill: seo-indexability-diagnostics
+  - id: seo-structured-data
+    request: Validate structured data validation for product pages
+    status: matched
+    skill: seo-structured-data-validation
+  - id: agent-evaluation
+    request: Design an agent evaluation benchmark for tool routing
+    status: matched
+    skill: agent-evaluation-suite
+  - id: content-editorial
+    request: Prepare a content strategy editorial brief for a product launch
+    status: matched
+    skill: content-editorial-brief

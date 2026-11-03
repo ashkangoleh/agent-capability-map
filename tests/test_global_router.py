@@ -31,6 +31,41 @@ class GraphRoutingTests(unittest.TestCase):
             with self.subTest(required=required):
                 self.assertIn(required, text)
 
+    def test_specialized_skills_have_routing_fixtures(self):
+        import yaml
+
+        fixtures = yaml.safe_load(
+            (ROOT / "tests" / "fixtures" / "yaml-routing-cases.yaml").read_text(encoding="utf-8")
+        )["cases"]
+        specialized_ids = {
+            "dbt-incremental-modeling",
+            "data-quality-contracts",
+            "pipeline-backfill-recovery",
+            "spark-structured-streaming",
+            "kubernetes-rollout-safety",
+            "product-experiment-design",
+            "product-metrics-instrumentation",
+            "marketing-measurement-attribution",
+            "seo-indexability-diagnostics",
+            "seo-structured-data-validation",
+            "agent-evaluation-suite",
+            "content-editorial-brief",
+        }
+        covered = {case.get("skill") for case in fixtures}
+        self.assertTrue(specialized_ids.issubset(covered), specialized_ids - covered)
+        for case in fixtures:
+            if case.get("skill") not in specialized_ids:
+                continue
+            with self.subTest(case=case["id"]):
+                result = Router(ROOT).resolve(case["request"])
+                self.assertEqual(result["status"], "matched", result)
+                self.assertEqual(result["selected_skill"], case["skill"], result)
+                self.assertEqual(result["source"], "master")
+                self.assertLessEqual(len(result["inspected_files"]), 7)
+                skill = Path(result["skill_path"])
+                self.assertTrue(skill.is_file())
+                self.assertIn("## Authoritative references", skill.read_text(encoding="utf-8"))
+
     def test_pyspark_project_routing(self):
         result = Router(ROOT).resolve("Create a new PySpark project")
         self.assertEqual(result["status"], "matched", result)

@@ -46,3 +46,7 @@ Prioritize skills by actual recurring tasks and evaluation gaps:
 - No multi-agent orchestration by default.
 - No claim of zero hallucination.
 - No automatic execution of arbitrary skill scripts.
+
+## Phase 2 — Initial specialist expansion (2026-11-03)
+
+12 targeted SKILL.md packages added for dbt incremental models, data quality, data backfill, Structured Streaming, Kubernetes rollout, product experiments, product metrics, marketing measurement, SEO indexability, structured data, agent evaluation and editorial briefing. CI structural validation and deterministic routing fixtures do not replace host-level evaluation or human review.
