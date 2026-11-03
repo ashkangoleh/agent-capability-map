@@ -7,7 +7,7 @@ Route each user request to the smallest useful set of domain capabilities and ex
 ## Mandatory routing sequence
 
 1. **Parse intent:** identify the requested action, subject, expected output, constraints, freshness needs, and risk level. Do not route from keywords alone.
-2. **Select domains:** read catalog/domains.json. Select one primary domain. Add a secondary domain only when the deliverable genuinely requires it.
+2. **Select domains:** read catalog/domains.json. Select one primary domain. catalog/coverage-taxonomy.yaml is an authoring roadmap, not a registry of available skills; do not preload it or treat its entries as implemented. Add a secondary domain only when the deliverable genuinely requires it.
 3. **Read local router:** open only the selected domain's ROUTER.md and, if present, its skills.json. Do not scan every domain or every skill directory.
 4. **Select skill:** compare the task against descriptions, positive triggers, exclusions, inputs, and outputs. Follow optional parent_skill links to the most specific matching leaf, without reading parent skill bodies. related_skills is a navigation hint, not automatic activation. Prefer one skill; use at most two by default, three only for separate work products.
 5. **Load on demand:** read only the selected SKILL.md. Read a referenced resource only at the step that needs it. Never recursively read all references.
@@ -51,6 +51,7 @@ Route each user request to the smallest useful set of domain capabilities and ex
 ## Token and context discipline
 
 - Do not preload all domain routers, skill bodies, references, examples, or source documents.
+- Do not claim a listed technology is supported until a relevant validated SKILL.md exists; state coverage gaps explicitly.
 - Keep domain routers concise and skill descriptions discriminative.
 - Prefer a small number of high-signal references over large copied documentation.
 - Reuse canonical references by path; do not duplicate the same reference across skills.
