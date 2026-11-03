@@ -31,7 +31,6 @@ def require_file(relative_path):
         raise ValidationError(f"Missing referenced file: {relative_path}")
 
 
-
 def validate_skill_relations(records):
     """Check typed graph links; records maps ID to (domain_id, registry entry)."""
     errors = []
@@ -88,6 +87,7 @@ def validate_skill_relations(records):
     for skill_id in records:
         visit(skill_id)
     return errors
+
 
 def validate():
     errors = []
@@ -148,14 +148,14 @@ def validate():
             skill_path = skill.get("path", "")
             if skill.get("status") == "active":
                 active_count += 1
+                if skill_path != f".agents/skills/{skill_id}/SKILL.md":
+                    errors.append(f"{skill_id}: skill path must be exactly .agents/skills/{skill_id}/SKILL.md")
+                    continue
+
                 try:
                     require_file(skill_path)
                 except ValidationError as exc:
                     errors.append(str(exc))
-                    continue
-
-                if skill_path != f".agents/skills/{skill_id}/SKILL.md":
-                    errors.append(f"{skill_id}: skill path must be exactly .agents/skills/{skill_id}/SKILL.md")
                     continue
 
                 if Path(skill_path).parent.name != skill_id:
