@@ -6,6 +6,7 @@ children:
     label: "Data Engineering & Analytics"
     description: "Data engineering, storage, streaming, business intelligence and statistics."
     triggers:
+      - "data catalog"
       - "starrocks stream load"
       - "duckdb parquet"
       - "trino federation"
