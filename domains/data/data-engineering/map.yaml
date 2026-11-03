@@ -5,6 +5,8 @@ children:
   - id: distributed-processing
     description: "distributed processing"
     triggers:
+      - "flink checkpoint"
+      - "spark scala"
       - "structured streaming"
       - "pyspark"
       - "اسپارک"
@@ -19,6 +21,7 @@ children:
   - id: orchestration
     description: "orchestration"
     triggers:
+      - "airflow backfill"
       - "airflow"
       - "dagster"
       - "prefect"
@@ -29,6 +32,8 @@ children:
   - id: messaging
     description: "messaging"
     triggers:
+      - "kafka consumer rebalance"
+      - "kafka connect"
       - "kafka"
       - "kinesis"
       - "rabbitmq"
@@ -39,6 +44,10 @@ children:
   - id: batch-ingestion
     description: "batch ingestion"
     triggers:
+      - "parquet small files"
+      - "cdc snapshot"
+      - "change data capture"
+      - "debezium"
       - "data backfill"
       - "pipeline replay"
       - "data ingestion"
@@ -46,30 +55,37 @@ children:
       - "incremental ingestion"
       - "backfill"
     status: active
-    skills: domains/data/general-skills.yaml
+    map: domains/data/data-engineering/batch-ingestion/map.yaml
   - id: lakehouse
     description: "lakehouse"
     triggers:
+      - "iceberg schema evolution"
+      - "iceberg compaction"
       - "iceberg"
       - "delta lake"
       - "hudi"
       - "lakehouse"
     status: active
-    skills: domains/data/general-skills.yaml
+    map: domains/data/data-engineering/lakehouse/map.yaml
   - id: warehouse
     description: "warehouse"
     triggers:
+      - "trino federation"
+      - "duckdb parquet"
       - "starrocks"
       - "trino"
       - "duckdb"
       - "warehouse modeling"
     status: active
-    skills: domains/data/general-skills.yaml
+    map: domains/data/data-engineering/warehouse/map.yaml
   - id: data-observability
     description: "data observability"
     triggers:
+      - "pipeline freshness"
+      - "data freshness slo"
+      - "data observability"
       - "data quality"
       - "data monitoring"
       - "data reconciliation"
     status: active
-    skills: domains/data/general-skills.yaml
+    map: domains/data/data-engineering/observability/map.yaml

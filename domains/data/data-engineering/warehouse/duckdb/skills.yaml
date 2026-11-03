@@ -1,0 +1,29 @@
+schema_version: 1
+id: duckdb
+kind: skill-registry
+skills:
+  - id: data-engineering-implementation
+    path: .agents/skills/data-engineering-implementation/SKILL.md
+    description: "General data pipeline and analytical transformation design when no narrower specialist is identified."
+    triggers:
+      - "data pipeline"
+      - "etl"
+      - "data ingestion"
+      - "trino"
+      - "duckdb"
+      - "dbt"
+      - "starrocks"
+      - "warehouse modeling"
+      - "sql modeling"
+    excludes: []
+    status: active
+  - id: duckdb-parquet-transformation
+    path: .agents/skills/duckdb-parquet-transformation/SKILL.md
+    description: "Build bounded-memory DuckDB Parquet transformations with explicit process concurrency and safe publication."
+    triggers:
+      - "duckdb parquet"
+      - "duckdb etl"
+      - "duckdb sql joins"
+      - "duckdb transformation"
+    excludes: []
+    status: active

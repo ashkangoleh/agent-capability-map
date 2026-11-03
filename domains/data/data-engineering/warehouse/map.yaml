@@ -1,0 +1,27 @@
+schema_version: 1
+id: warehouse
+kind: map
+children:
+  - id: trino
+    description: "Trino federation and connector execution"
+    triggers:
+      - "trino"
+      - "trino federation"
+      - "trino explain"
+    status: active
+    skills: domains/data/data-engineering/warehouse/trino/skills.yaml
+  - id: duckdb
+    description: "DuckDB local and Parquet analytics"
+    triggers:
+      - "duckdb"
+      - "duckdb parquet"
+      - "duckdb etl"
+    status: active
+    skills: domains/data/data-engineering/warehouse/duckdb/skills.yaml
+  - id: warehouse-modeling
+    description: "Warehouse fact and dimension design"
+    triggers:
+      - "warehouse modeling"
+      - "dimensional warehouse"
+    status: active
+    skills: domains/data/analytics-engineering/dimensional/skills.yaml

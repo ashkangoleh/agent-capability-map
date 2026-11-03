@@ -1,0 +1,29 @@
+schema_version: 1
+id: lakehouse
+kind: map
+children:
+  - id: iceberg
+    description: "Apache Iceberg format and maintenance"
+    triggers:
+      - "iceberg"
+      - "iceberg compaction"
+      - "iceberg schema evolution"
+      - "iceberg snapshot"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/iceberg/skills.yaml
+  - id: delta-lake
+    description: "Delta Lake change data and merges"
+    triggers:
+      - "delta lake"
+      - "delta cdf"
+      - "delta change data feed"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/delta/skills.yaml
+  - id: hudi
+    description: "Apache Hudi upserts and table layout"
+    triggers:
+      - "hudi"
+      - "apache hudi"
+      - "hudi mor"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/hudi/skills.yaml

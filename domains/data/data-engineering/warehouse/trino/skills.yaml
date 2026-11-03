@@ -1,0 +1,30 @@
+schema_version: 1
+id: trino
+kind: skill-registry
+skills:
+  - id: data-engineering-implementation
+    path: .agents/skills/data-engineering-implementation/SKILL.md
+    description: "General data pipeline and analytical transformation design when no narrower specialist is identified."
+    triggers:
+      - "data pipeline"
+      - "etl"
+      - "data ingestion"
+      - "trino"
+      - "duckdb"
+      - "dbt"
+      - "starrocks"
+      - "warehouse modeling"
+      - "sql modeling"
+    excludes: []
+    status: active
+  - id: trino-federated-query-optimization
+    path: .agents/skills/trino-federated-query-optimization/SKILL.md
+    description: "Optimize Trino federated queries using connector-specific pushdown, physical plans and measured cross-source data movement."
+    triggers:
+      - "trino federation"
+      - "trino federated query"
+      - "trino explain"
+      - "trino pushdown"
+      - "trino query optimization"
+    excludes: []
+    status: active

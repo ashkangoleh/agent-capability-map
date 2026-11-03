@@ -1,0 +1,32 @@
+schema_version: 1
+id: batch-ingestion
+kind: map
+children:
+  - id: cdc
+    description: "Change data capture bootstrapping"
+    triggers:
+      - "debezium"
+      - "cdc snapshot"
+      - "change data capture"
+      - "kafka connect cdc"
+    status: active
+    skills: domains/data/data-engineering/batch-ingestion/cdc/skills.yaml
+  - id: parquet-layout
+    description: "Parquet ingestion and physical layout"
+    triggers:
+      - "parquet small files"
+      - "parquet file layout"
+      - "parquet row groups"
+      - "data ingestion"
+      - "batch etl"
+    status: active
+    skills: domains/data/data-engineering/batch-ingestion/parquet/skills.yaml
+  - id: recovery
+    description: "Batch backfill and replay"
+    triggers:
+      - "backfill"
+      - "data backfill"
+      - "pipeline replay"
+      - "incremental ingestion"
+    status: active
+    skills: domains/data/general-skills.yaml

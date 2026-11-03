@@ -5,6 +5,8 @@ children:
   - id: kafka
     description: "kafka"
     triggers:
+      - "kafka consumer rebalance"
+      - "kafka connect"
       - "kafka"
       - "kafka streams"
     status: active

@@ -1,0 +1,26 @@
+schema_version: 1
+id: analytics-engineering
+kind: map
+children:
+  - id: dbt
+    description: "dbt materializations and snapshots"
+    triggers:
+      - "dbt"
+      - "dbt snapshot"
+      - "dbt incremental"
+    status: active
+    skills: domains/data/analytics-engineering/dbt/skills.yaml
+  - id: dimensional-modeling
+    description: "Facts dimensions and metric grain"
+    triggers:
+      - "dimensional modeling"
+      - "star schema modeling"
+      - "fact table grain"
+    status: active
+    skills: domains/data/analytics-engineering/dimensional/skills.yaml
+  - id: semantic-layer
+    description: "Semantic metrics and BI definitions"
+    triggers:
+      - "semantic layer"
+      - "semantic metrics"
+    status: mapped

@@ -16,15 +16,20 @@ children:
   - id: flink
     description: "flink"
     triggers:
+      - "flink checkpoint"
       - "flink"
       - "flink sql"
-    status: mapped
+    status: active
+    skills: domains/data/data-engineering/distributed-processing/flink/skills.yaml
   - id: beam
     description: "beam"
     triggers:
+      - "beam portability"
+      - "beam runner"
       - "apache beam"
       - "beam pipeline"
-    status: mapped
+    status: active
+    skills: domains/data/data-engineering/distributed-processing/beam/skills.yaml
   - id: ray
     description: "ray"
     triggers:

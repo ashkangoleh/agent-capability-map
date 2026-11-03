@@ -22,9 +22,11 @@ children:
   - id: scala
     description: "scala"
     triggers:
+      - "spark scala job"
       - "scala spark"
       - "spark scala"
-    status: mapped
+    status: active
+    skills: domains/data/data-engineering/distributed-processing/spark/scala/skills.yaml
   - id: spark-runtime
     description: "spark runtime"
     triggers:

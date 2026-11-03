@@ -1,0 +1,14 @@
+schema_version: 1
+id: scala
+kind: skill-registry
+skills:
+  - id: spark-scala-job-engineering
+    path: .agents/skills/spark-scala-job-engineering/SKILL.md
+    description: "Build version-compatible Scala Spark data pipelines with Dataset schemas, dependency packaging and executable tests."
+    triggers:
+      - "spark scala"
+      - "scala spark"
+      - "scala spark job"
+      - "spark scala dataframe"
+    excludes: []
+    status: active

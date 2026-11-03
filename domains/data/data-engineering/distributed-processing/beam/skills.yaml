@@ -1,0 +1,14 @@
+schema_version: 1
+id: beam
+kind: skill-registry
+skills:
+  - id: beam-runner-portability
+    path: .agents/skills/beam-runner-portability/SKILL.md
+    description: "Implement and validate Apache Beam runner-portable pipelines, coders, windowing and cross-runner tests."
+    triggers:
+      - "apache beam"
+      - "beam pipeline"
+      - "beam runner"
+      - "beam portability"
+    excludes: []
+    status: active

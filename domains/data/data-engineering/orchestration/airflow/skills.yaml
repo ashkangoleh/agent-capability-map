@@ -14,3 +14,14 @@ skills:
       - "dagster"
       - "prefect"
     status: active
+  - id: airflow-backfill-scheduling
+    path: .agents/skills/airflow-backfill-scheduling/SKILL.md
+    description: "Reprocess Airflow historical intervals with version-correct timetables, bounded concurrency and replay-safe writes."
+    triggers:
+      - "airflow backfill"
+      - "airflow catchup"
+      - "airflow logical date"
+      - "airflow data interval"
+      - "airflow historical rerun"
+    excludes: []
+    status: active

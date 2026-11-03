@@ -1,0 +1,26 @@
+schema_version: 1
+id: flink
+kind: skill-registry
+skills:
+  - id: flink-checkpoint-savepoint-recovery
+    path: .agents/skills/flink-checkpoint-savepoint-recovery/SKILL.md
+    description: "Recover Flink stateful jobs using checkpoints, compatible savepoints, stable operator IDs and bounded failure tests."
+    triggers:
+      - "flink checkpoint"
+      - "flink savepoint"
+      - "flink state restore"
+      - "flink state backend"
+      - "flink upgrade"
+    excludes: []
+    status: active
+  - id: flink-sql-event-time-modeling
+    path: .agents/skills/flink-sql-event-time-modeling/SKILL.md
+    description: "Model Flink SQL event time, watermarks, state retention, temporal joins and late-arriving events."
+    triggers:
+      - "flink sql"
+      - "flink watermark"
+      - "flink event time"
+      - "flink temporal join"
+      - "flink sql window"
+    excludes: []
+    status: active

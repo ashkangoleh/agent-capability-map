@@ -15,3 +15,24 @@ skills:
       - "rabbitmq"
       - "kinesis"
     status: active
+  - id: kafka-consumer-rebalance-replay
+    path: .agents/skills/kafka-consumer-rebalance-replay/SKILL.md
+    description: "Diagnose Kafka consumer rebalance, offset commits, replay, duplicate processing and poison-message recovery."
+    triggers:
+      - "kafka consumer rebalance"
+      - "kafka offset reset"
+      - "kafka replay"
+      - "consumer group rebalance"
+      - "kafka lag recovery"
+    excludes: []
+    status: active
+  - id: kafka-connect-cdc-design
+    path: .agents/skills/kafka-connect-cdc-design/SKILL.md
+    description: "Engineer Kafka Connect workers, source and sink connectors with CDC snapshots, offsets and reliable task recovery."
+    triggers:
+      - "kafka connect"
+      - "kafka connector"
+      - "kafka connect cdc"
+      - "kafka connect tasks"
+    excludes: []
+    status: active

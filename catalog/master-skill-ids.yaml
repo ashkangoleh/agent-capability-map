@@ -4,7 +4,9 @@ ids:
   - agent-evaluation-suite
   - agriculture-field-data-quality
   - ai-rag-engineering
+  - airflow-backfill-scheduling
   - airflow-dag-engineering
+  - beam-runner-portability
   - biodiversity-observation-quality
   - business-strategy-analysis
   - carbon-inventory-boundary-review
@@ -12,25 +14,43 @@ ids:
   - content-editorial-brief
   - curriculum-outcomes-assessment
   - customer-support-knowledge-design
+  - dagster-asset-partition-orchestration
   - data-engineering-implementation
+  - data-observability-freshness-slo
+  - data-platform-architecture-review
   - data-quality-contracts
   - dbt-incremental-modeling
+  - dbt-snapshot-scd2
+  - debezium-cdc-bootstrap
+  - delta-lake-merge-change-feed
+  - dimensional-modeling-grain
+  - duckdb-parquet-transformation
   - ecommerce-product-catalog-audit
   - evidence-research
   - financial-budget-scenarios
+  - flink-checkpoint-savepoint-recovery
+  - flink-sql-event-time-modeling
   - game-design-prototype-plan
+  - hudi-cow-mor-table-design
   - humanities-primary-source-critique
+  - iceberg-compaction-retention
+  - iceberg-table-schema-partition-evolution
   - jurisdictional-legal-source-review
+  - kafka-connect-cdc-design
+  - kafka-consumer-rebalance-replay
   - kafka-streaming-reliability
   - kubernetes-rollout-safety
   - manufacturing-quality-investigation
   - marketing-measurement-attribution
   - marketing-strategy-campaign
   - nonprofit-grant-evidence-plan
+  - openlineage-metadata-instrumentation
+  - parquet-file-layout-tuning
   - personal-workflow-planning
   - pipeline-backfill-recovery
   - platform-operations
   - podcast-production-brief
+  - prefect-flow-reliability
   - product-discovery-prd
   - product-experiment-design
   - product-metrics-instrumentation
@@ -51,11 +71,15 @@ ids:
   - social-science-survey-quality
   - software-engineering-implementation
   - spark-performance-diagnostics
+  - spark-scala-job-engineering
   - spark-sql-engineering
   - spark-structured-streaming
   - sports-training-evidence-plan
+  - starrocks-primary-key-cdc
+  - starrocks-stream-load-transaction
   - supply-chain-demand-planning
   - technical-writing-docs
   - telecom-network-change-review
   - travel-itinerary-source-review
+  - trino-federated-query-optimization
   - ux-research-design-review

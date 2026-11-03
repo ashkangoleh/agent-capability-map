@@ -5,6 +5,20 @@ children:
   - id: data-engineering
     description: "data engineering"
     triggers:
+      - "spark scala"
+      - "duckdb parquet"
+      - "trino federation"
+      - "data freshness slo"
+      - "data observability"
+      - "parquet small files"
+      - "hudi"
+      - "delta lake"
+      - "kafka connect"
+      - "debezium"
+      - "prefect"
+      - "dagster"
+      - "apache beam"
+      - "flink checkpoint"
       - "structured streaming"
       - "pipeline replay"
       - "backfill"
@@ -26,22 +40,27 @@ children:
   - id: analytics-engineering
     description: "analytics engineering"
     triggers:
+      - "star schema modeling"
+      - "dimensional modeling"
+      - "dbt snapshot"
       - "dbt"
       - "semantic layer"
       - "analytics engineering"
       - "sql modeling"
     status: active
-    skills: domains/data/general-skills.yaml
+    map: domains/data/analytics-engineering/map.yaml
   - id: database-engineering
     description: "database engineering"
     triggers:
+      - "starrocks primary key"
+      - "starrocks stream load"
       - "database design"
       - "postgresql"
       - "mysql"
       - "starrocks"
       - "query optimization"
     status: active
-    skills: domains/data/general-skills.yaml
+    map: domains/data/database-engineering/map.yaml
   - id: data-science
     description: "data science"
     triggers:
@@ -60,11 +79,13 @@ children:
   - id: data-governance
     description: "data governance"
     triggers:
+      - "openlineage"
       - "data governance"
       - "data catalog"
       - "data lineage"
       - "metadata"
-    status: mapped
+    status: active
+    map: domains/data/governance/map.yaml
   - id: data-quality
     description: "data quality"
     triggers:
@@ -76,7 +97,10 @@ children:
   - id: data-architecture
     description: "data architecture"
     triggers:
+      - "multi engine data platform"
+      - "data platform architecture"
       - "lakehouse"
       - "data mesh"
       - "data warehouse architecture"
-    status: mapped
+    status: active
+    skills: domains/data/architecture/skills.yaml

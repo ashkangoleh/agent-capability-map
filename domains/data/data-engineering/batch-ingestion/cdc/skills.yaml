@@ -1,0 +1,25 @@
+schema_version: 1
+id: cdc
+kind: skill-registry
+skills:
+  - id: debezium-cdc-bootstrap
+    path: .agents/skills/debezium-cdc-bootstrap/SKILL.md
+    description: "Bootstrap Debezium change data capture with log offsets, initial snapshots, schema history and restart-safe sinks."
+    triggers:
+      - "debezium"
+      - "debezium cdc"
+      - "debezium snapshot"
+      - "cdc snapshot"
+      - "change data capture"
+    excludes: []
+    status: active
+  - id: kafka-connect-cdc-design
+    path: .agents/skills/kafka-connect-cdc-design/SKILL.md
+    description: "Engineer Kafka Connect workers, source and sink connectors with CDC snapshots, offsets and reliable task recovery."
+    triggers:
+      - "kafka connect"
+      - "kafka connector"
+      - "kafka connect cdc"
+      - "kafka connect tasks"
+    excludes: []
+    status: active

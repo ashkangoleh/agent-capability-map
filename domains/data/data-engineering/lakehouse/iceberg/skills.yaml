@@ -1,0 +1,40 @@
+schema_version: 1
+id: iceberg
+kind: skill-registry
+skills:
+  - id: iceberg-table-schema-partition-evolution
+    path: .agents/skills/iceberg-table-schema-partition-evolution/SKILL.md
+    description: "Plan Iceberg schema evolution, hidden partition transforms and catalog-safe snapshot version compatibility."
+    triggers:
+      - "iceberg schema evolution"
+      - "iceberg partition evolution"
+      - "iceberg table design"
+      - "iceberg schema change"
+    excludes: []
+    status: active
+  - id: iceberg-compaction-retention
+    path: .agents/skills/iceberg-compaction-retention/SKILL.md
+    description: "Operate Iceberg data-file compaction, manifest maintenance, snapshot expiration and safe orphan cleanup."
+    triggers:
+      - "iceberg compaction"
+      - "iceberg snapshot expiration"
+      - "iceberg snapshot maintenance"
+      - "iceberg small files"
+      - "iceberg maintenance"
+    excludes: []
+    status: active
+  - id: data-engineering-implementation
+    path: .agents/skills/data-engineering-implementation/SKILL.md
+    description: "General data pipeline and analytical transformation design when no narrower specialist is identified."
+    triggers:
+      - "data pipeline"
+      - "etl"
+      - "data ingestion"
+      - "trino"
+      - "duckdb"
+      - "dbt"
+      - "starrocks"
+      - "warehouse modeling"
+      - "sql modeling"
+    excludes: []
+    status: active

@@ -5,6 +5,8 @@ children:
   - id: airflow
     description: "airflow"
     triggers:
+      - "airflow data interval"
+      - "airflow backfill"
       - "airflow"
       - "airflow dag"
     status: active
@@ -13,12 +15,14 @@ children:
     description: "prefect"
     triggers:
       - "prefect"
-    status: mapped
+    status: active
+    skills: domains/data/data-engineering/orchestration/prefect/skills.yaml
   - id: dagster
     description: "dagster"
     triggers:
       - "dagster"
-    status: mapped
+    status: active
+    skills: domains/data/data-engineering/orchestration/dagster/skills.yaml
   - id: argo-workflows
     description: "argo workflows"
     triggers:
