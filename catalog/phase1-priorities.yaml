@@ -1,0 +1,47 @@
+version: "1.0.0"
+phase: 1
+description: "Prioritized capability packs; this file is not loaded at runtime."
+priority_groups:
+  - id: data-engineering
+    canonical_path: [data, data-engineering]
+    registry_domain: data
+    coverage: partial
+    active_skills: [data-engineering-implementation, data-cdc-pipelines, pyspark-pipelines, pyspark-joins, pyspark-skew-diagnostics]
+    next_capabilities: [apache-iceberg, starrocks, clickhouse, kafka, apache-airflow, dagster, prefect, batch, streaming, data-quality]
+  - id: marketing
+    canonical_path: [marketing]
+    registry_domain: marketing
+    coverage: partial
+    active_skills: [marketing-strategy-campaign, marketing-attribution-audit]
+    next_capabilities: [campaigns, content, lifecycle, positioning, marketing-analytics]
+  - id: data-science
+    canonical_path: [data, data-science]
+    registry_domain: data
+    coverage: partial
+    active_skills: [data-science-experiment-design]
+    next_capabilities: [statistics, feature-engineering, scikit-learn, forecasting, model-evaluation]
+  - id: data-analytics
+    canonical_path: [data, data-analytics]
+    registry_domain: data
+    coverage: partial
+    active_skills: [data-analytics-metrics]
+    next_capabilities: [business-intelligence, analytics-engineering, cohort-analysis, semantic-layer]
+  - id: business-analytics
+    canonical_path: [business-operations, analytics]
+    registry_domain: business-operations
+    coverage: partial
+    active_skills: [business-analytics-kpi]
+    next_capabilities: [financial-modeling, forecasting, unit-economics, business-intelligence]
+  - id: networking
+    canonical_path: [technology, networking]
+    registry_domain: technology
+    coverage: partial
+    active_skills: [network-diagnostics]
+    next_capabilities: [tcp-ip, dns, tls, bgp, routing, switching, firewalls, network-security]
+  - id: infrastructure
+    canonical_path: [technology, platform-infrastructure]
+    registry_domain: technology
+    coverage: partial
+    subdomain_branches: [devops-cicd, devsecops, platform-engineering, sre]
+    active_skills: [platform-operations, devops-delivery, devsecops-review, platform-engineering-workflows, sre-incident-response]
+    next_capabilities: [kubernetes, terraform, opentofu, aws, google-cloud, azure, observability, incident-management]
