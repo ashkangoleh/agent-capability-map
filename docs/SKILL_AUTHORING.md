@@ -33,6 +33,8 @@ Every skill must use the Agent Skills folder format:
 - Keep references one level deep where practical.
 - Do not duplicate canonical documentation between skills.
 - Include positive triggers, negative triggers, and near-miss tests in the domain registry or evaluation fixtures.
+- Optional parent_skill must refer to an active skill in the same domain, and parent links must be acyclic. related_skills may cross domains but never trigger automatic loading. Every child SKILL.md must be independently useful without reading ancestor bodies.
+- Before adding a child, demonstrate a different workflow and discriminating triggers from its parent. If the difference is merely deeper documentation, create a focused reference instead.
 - Scripts must be deterministic where possible, documented, tested, and least-privilege.
 - Never embed secrets, personal data, or unlicensed third-party material.
 - Do not state that the skill prevents hallucination; state what evidence and validation controls it applies.
