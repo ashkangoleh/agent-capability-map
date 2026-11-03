@@ -4,7 +4,7 @@ kind: skill-registry
 skills:
   - id: marketing-strategy-campaign
     path: .agents/skills/marketing-strategy-campaign/SKILL.md
-    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    description: "Use to design go-to-market, campaign, lifecycle and channel strategy with grounded audience and measurement assumptions."
     triggers:
       - "campaign"
       - "کمپین"

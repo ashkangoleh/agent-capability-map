@@ -4,7 +4,7 @@ kind: skill-registry
 skills:
   - id: evidence-research
     path: .agents/skills/evidence-research/SKILL.md
-    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    description: "Use to research or fact-check a question by comparing current primary sources, supporting claims and labeling uncertainty."
     triggers:
       - "research this"
       - "verify"
@@ -16,7 +16,7 @@ skills:
     status: active
   - id: technical-writing-docs
     path: .agents/skills/technical-writing-docs/SKILL.md
-    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    description: "Use to author accurate RFC, ADR, runbook and technical documentation grounded in verified code and version-specific sources."
     triggers:
       - "write documentation"
       - "technical writing"

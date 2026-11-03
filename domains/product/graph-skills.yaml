@@ -4,7 +4,7 @@ kind: skill-registry
 skills:
   - id: product-discovery-prd
     path: .agents/skills/product-discovery-prd/SKILL.md
-    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    description: "Use for product discovery and PRDs; define the user problem, research evidence, metrics, requirements and acceptance criteria."
     triggers:
       - "prd"
       - "سند نیازمندی محصول"

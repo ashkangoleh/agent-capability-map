@@ -4,7 +4,7 @@ kind: skill-registry
 skills:
   - id: seo-audit-strategy
     path: .agents/skills/seo-audit-strategy/SKILL.md
-    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    description: "Use to audit organic search, indexing, structured data and technical SEO with observed crawl evidence and official guidance."
     triggers:
       - "seo"
       - "سئو"

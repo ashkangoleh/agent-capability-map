@@ -391,6 +391,8 @@ class Router:
                         if not isinstance(item.get("triggers"), list) or not item["triggers"]:
                             raise RouterError(f"Missing skill triggers: {skill_id}")
                         if item.get("status") == "active":
+                            if not isinstance(item.get("description"), str) or len(item["description"]) < 40:
+                                raise RouterError(f"Weak skill description: {skill_id}")
                             p = secure_path(self.root, item.get("path"))
                             self._check_skill(p, skill_id)
                             skill_ids.add(skill_id)

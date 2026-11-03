@@ -4,7 +4,7 @@ kind: skill-registry
 skills:
   - id: ux-research-design-review
     path: .agents/skills/ux-research-design-review/SKILL.md
-    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    description: "Use for UX, usability, interaction design, design systems and accessibility review with evidence-ranked findings."
     triggers:
       - "ux research"
       - "usability"

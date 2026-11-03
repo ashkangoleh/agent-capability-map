@@ -4,7 +4,7 @@ kind: skill-registry
 skills:
   - id: business-strategy-analysis
     path: .agents/skills/business-strategy-analysis/SKILL.md
-    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    description: "Use for business strategy, unit economics, operating-model and commercial analysis with explicit formulas and sensitivities."
     triggers:
       - "business case"
       - "business strategy"

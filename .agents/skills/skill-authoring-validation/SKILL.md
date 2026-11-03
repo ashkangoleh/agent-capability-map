@@ -47,3 +47,8 @@ Do not create a skill merely to increase count. Do not claim zero hallucinations
 - [ ] Evidence and abstention rules.
 - [ ] Progressive disclosure and small references.
 - [ ] Validation passes and client behavior is verified.
+
+## Official starting references
+
+Verify the applicable version and publication date before using these sources:
+- https://agentskills.io/specification

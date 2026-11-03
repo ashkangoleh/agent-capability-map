@@ -46,3 +46,8 @@ Do not claim hallucinations are eliminated. Do not claim exactly-once ingestion,
 - [ ] Evidence sufficiency and abstention are tested.
 - [ ] Retrieval and answer quality are measured separately.
 - [ ] Model, index, and corpus versions are traceable.
+
+## Official starting references
+
+Verify the applicable version and publication date before using these sources:
+- https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html

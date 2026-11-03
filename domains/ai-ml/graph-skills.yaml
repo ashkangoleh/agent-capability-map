@@ -4,7 +4,7 @@ kind: skill-registry
 skills:
   - id: ai-rag-engineering
     path: .agents/skills/ai-rag-engineering/SKILL.md
-    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    description: "Use to design or evaluate LLM/RAG applications, embeddings, retrieval and evidence sufficiency with measured quality and ACLs."
     triggers:
       - "rag"
       - "llm"

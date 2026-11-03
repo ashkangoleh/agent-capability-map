@@ -46,3 +46,10 @@ Never guarantee rankings, traffic growth, indexing, rich results, or inclusion i
 - [ ] Recommendations have observable validation steps.
 - [ ] Current policies are verified where relevant.
 - [ ] No ranking or traffic guarantee is made.
+
+## Official starting references
+
+Verify the applicable version and publication date before using these sources:
+- https://developers.google.com/search/docs/essentials
+- https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+- https://developers.google.com/search/docs/fundamentals/creating-helpful-content

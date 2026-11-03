@@ -4,7 +4,7 @@ kind: skill-registry
 skills:
   - id: skill-authoring-validation
     path: .agents/skills/skill-authoring-validation/SKILL.md
-    description: "Use this task-specific validated procedure only when the request matches the described capability."
+    description: "Use when creating, evaluating or improving portable Agent Skills and routing registries with positive and negative tests."
     triggers:
       - "skill router"
       - "master skill"

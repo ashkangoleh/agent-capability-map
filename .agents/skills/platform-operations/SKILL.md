@@ -45,3 +45,9 @@ Stop if target identity is ambiguous, access is insufficient, the change is irre
 - [ ] Blast radius and dependencies are known.
 - [ ] Authorization and rollback are explicit.
 - [ ] Post-change health is verified.
+
+## Official starting references
+
+Verify the applicable version and publication date before using these sources:
+- https://kubernetes.io/docs/home/
+- https://helm.sh/docs/
