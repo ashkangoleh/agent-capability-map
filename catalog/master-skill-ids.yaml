@@ -6,12 +6,24 @@ ids:
   - ai-rag-engineering
   - airflow-backfill-scheduling
   - airflow-dag-engineering
+  - analytics-reconciliation-root-cause
+  - anomaly-detection-baselines
+  - ansible-safe-automation
   - argo-workflows-data-orchestration
+  - argocd-gitops-drift-recovery
   - beam-runner-portability
   - biodiversity-observation-quality
   - business-strategy-analysis
   - carbon-inventory-boundary-review
+  - causal-inference-observational
+  - ci-cd-artifact-provenance
+  - clickhouse-mergetree-operability
+  - cloud-cost-capacity-review
+  - cloud-iam-least-privilege
+  - cohort-retention-analysis
+  - computer-vision-dataset-evaluation
   - construction-bim-data-coordination
+  - container-build-hardening
   - content-editorial-brief
   - curriculum-outcomes-assessment
   - customer-support-knowledge-design
@@ -20,6 +32,8 @@ ids:
   - data-observability-freshness-slo
   - data-platform-architecture-review
   - data-quality-contracts
+  - data-visualization-evidence
+  - datahub-metadata-catalog-governance
   - dbt-incremental-modeling
   - dbt-snapshot-scd2
   - debezium-cdc-bootstrap
@@ -27,44 +41,82 @@ ids:
   - dimensional-modeling-grain
   - duckdb-parquet-transformation
   - ecommerce-product-catalog-audit
+  - elasticsearch-pit-bulk-extraction
   - evidence-research
+  - experiment-analysis-results
+  - feast-online-offline-feature-store
+  - feature-engineering-point-in-time
   - financial-budget-scenarios
   - flink-checkpoint-savepoint-recovery
   - flink-sql-event-time-modeling
+  - funnel-conversion-analysis
   - game-design-prototype-plan
+  - geospatial-analysis-crs-quality
+  - great-expectations-validation-gates
+  - helm-chart-contract-testing
   - hudi-cow-mor-table-design
+  - huggingface-peft-finetuning
   - humanities-primary-source-critique
+  - hybrid-search-ranking-design
   - iceberg-compaction-retention
   - iceberg-table-schema-partition-evolution
+  - imbalanced-classification-evaluation
   - jurisdictional-legal-source-review
   - kafka-connect-cdc-design
   - kafka-consumer-rebalance-replay
   - kafka-streaming-reliability
   - kinesis-stream-consumer-recovery
+  - kubernetes-networking-triage
   - kubernetes-rollout-safety
+  - kubernetes-storage-pvc-recovery
+  - kubernetes-workload-security
+  - lakekeeper-iceberg-catalog-operations
+  - linux-systemd-service-debug
+  - llm-production-evaluation-suite
+  - llm-prompt-injection-boundaries
   - manufacturing-quality-investigation
   - marketing-measurement-attribution
   - marketing-strategy-campaign
+  - milvus-vector-index-lifecycle
+  - minio-s3-object-storage-reliability
+  - ml-drift-performance-monitoring
+  - ml-model-serving-canary
+  - mlflow-experiment-registry-lifecycle
+  - model-data-label-governance
+  - model-quantization-benchmark
+  - mysql-binlog-cdc-integrity
+  - network-dns-tls-diagnostics
+  - nifi-flowfile-backpressure-operations
   - nonprofit-grant-evidence-plan
   - openlineage-metadata-instrumentation
+  - opentelemetry-collector-pipeline
+  - pandas-eda-data-profiling
   - parquet-file-layout-tuning
   - personal-workflow-planning
   - pipeline-backfill-recovery
   - platform-operations
+  - platform-self-service-golden-path
   - podcast-production-brief
+  - polaris-iceberg-catalog-operations
+  - polars-lazy-query-analytics
+  - postgresql-logical-cdc-integrity
   - prefect-flow-reliability
   - product-discovery-prd
   - product-experiment-design
   - product-metrics-instrumentation
+  - prometheus-slo-alert-engineering
   - public-health-evidence-review
   - public-policy-program-evaluation
   - pulsar-subscription-replay
   - pyspark-project-bootstrap
   - pyspark-transformations
+  - pytorch-distributed-training-recovery
   - rabbitmq-consumer-delivery-safety
+  - rag-evidence-sufficiency-evaluation
   - ray-data-pipeline-engineering
   - real-estate-due-diligence
   - recruiting-interview-scorecard
+  - responsible-ai-risk-assessment
   - robotics-ros2-interface-review
   - sales-pipeline-forecast-audit
   - scientific-experiment-review
@@ -73,18 +125,29 @@ ids:
   - seo-indexability-diagnostics
   - seo-structured-data-validation
   - skill-authoring-validation
+  - sklearn-leakage-free-validation
   - social-science-survey-quality
   - software-engineering-implementation
   - spark-performance-diagnostics
   - spark-scala-job-engineering
   - spark-sql-engineering
   - spark-structured-streaming
+  - speech-asr-evaluation
   - sports-training-evidence-plan
+  - sql-explain-plan-optimization
+  - sql-metric-definition-analysis
+  - sre-incident-rca-runbook
   - starrocks-primary-key-cdc
   - starrocks-stream-load-transaction
+  - statistical-inference-design
+  - superset-dashboard-metric-governance
   - supply-chain-demand-planning
   - technical-writing-docs
   - telecom-network-change-review
+  - terraform-state-module-safety
+  - time-series-forecast-backtesting
   - travel-itinerary-source-review
   - trino-federated-query-optimization
   - ux-research-design-review
+  - vault-secrets-rotation-operations
+  - vllm-inference-serving-operations

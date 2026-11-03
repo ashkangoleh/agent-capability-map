@@ -208,3 +208,7 @@ For routing and limitations see [Data Engineering Deep Skills](docs/DATA_ENGINEE
 ## Domain expansion
 
 The authoritative live report is `python scripts/report_coverage.py` and the compact summary is `python scripts/report_coverage.py --summary`. A top-level domain with one active skill is **not** complete coverage of that discipline. See [Cross-domain expansion](docs/CROSS_DOMAIN_EXPANSION.md) and [Research sources](docs/RESEARCH_SOURCES.md). The current branch intentionally keeps legacy unsupported subdomains in the mapped-only state.
+
+## Unified reference expansion
+
+The canonical work branch `feat/master-reference-platform-data-ai` extends the same YAML master graph with 63 specialists across Infrastructure, Data Science, Data Analysis/BI, MLOps/LLM AI, and additional Data Engineering tooling. Its `tests/fixtures/yaml-routing-cases.yaml` contains per-skill deterministic routing probes, while `scripts/report_coverage.py` computes live counts. Passing lexical routing tests does not prove semantic/human-reviewed quality across every host.

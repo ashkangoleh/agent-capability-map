@@ -177,6 +177,31 @@ class GraphRoutingTests(unittest.TestCase):
                 self.assertIn("## Production procedure", content)
                 self.assertIn("## Official or primary references", content)
 
+    def test_reference_expansion_routing_coverage(self):
+        import yaml
+
+        fixtures = yaml.safe_load(
+            (ROOT / "tests" / "fixtures" / "yaml-routing-cases.yaml").read_text(encoding="utf-8")
+        )["cases"]
+        selected = [case for case in fixtures if case["id"].startswith("ref-")]
+        self.assertEqual(len(selected), 63)
+        self.assertEqual(len({case["skill"] for case in selected}), 63)
+        for case in selected:
+            with self.subTest(case=case["id"]):
+                actual = Router(ROOT).resolve(case["request"])
+                self.assertEqual(actual["status"], "matched", actual)
+                self.assertEqual(actual.get("selected_skill"), case["skill"], actual)
+                self.assertLessEqual(len(actual["inspected_files"]), 10, actual)
+                target = Path(actual["skill_path"])
+                self.assertTrue(target.is_file())
+                contents = target.read_text(encoding="utf-8")
+                self.assertIn("## ", contents)
+                self.assertTrue(
+                    any(v in contents for v in ["## Procedure", "## Production workflow", "## Specialist procedure",
+                                               "## Analysis and engineering workflow"]),
+                    target,
+                )
+
     def test_pyspark_project_routing(self):
         result = Router(ROOT).resolve("Create a new PySpark project")
         self.assertEqual(result["status"], "matched", result)

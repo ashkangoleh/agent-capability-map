@@ -411,3 +411,255 @@ cases:
     request: "Configure Kinesis enhanced fan-out consumer"
     status: matched
     skill: kinesis-stream-consumer-recovery
+  - id: ref-analytics-reconciliation-root-cause
+    request: "Investigate analytics reconciliation dashboard discrepancy"
+    status: matched
+    skill: analytics-reconciliation-root-cause
+  - id: ref-anomaly-detection-baselines
+    request: "Design an anomaly detection baseline for historical signals"
+    status: matched
+    skill: anomaly-detection-baselines
+  - id: ref-ansible-safe-automation
+    request: "Review ansible playbook idempotency"
+    status: matched
+    skill: ansible-safe-automation
+  - id: ref-argocd-gitops-drift-recovery
+    request: "Diagnose argo cd gitops sync drift"
+    status: matched
+    skill: argocd-gitops-drift-recovery
+  - id: ref-causal-inference-observational
+    request: "Evaluate causal inference in observational data"
+    status: matched
+    skill: causal-inference-observational
+  - id: ref-ci-cd-artifact-provenance
+    request: "Review ci cd supply chain artifact signing"
+    status: matched
+    skill: ci-cd-artifact-provenance
+  - id: ref-clickhouse-mergetree-operability
+    request: "Design clickhouse mergetree ingestion and compaction"
+    status: matched
+    skill: clickhouse-mergetree-operability
+  - id: ref-cloud-cost-capacity-review
+    request: "Analyze cloud cost finops capacity"
+    status: matched
+    skill: cloud-cost-capacity-review
+  - id: ref-cloud-iam-least-privilege
+    request: "Review cloud iam least privilege"
+    status: matched
+    skill: cloud-iam-least-privilege
+  - id: ref-cohort-retention-analysis
+    request: "Analyze cohort retention over calendar weeks"
+    status: matched
+    skill: cohort-retention-analysis
+  - id: ref-computer-vision-dataset-evaluation
+    request: "Validate a vision model image classification dataset"
+    status: matched
+    skill: computer-vision-dataset-evaluation
+  - id: ref-container-build-hardening
+    request: "Review container security and container build with Dockerfile security"
+    status: matched
+    skill: container-build-hardening
+  - id: ref-data-visualization-evidence
+    request: "Design data visualization with appropriate uncertainty labels"
+    status: matched
+    skill: data-visualization-evidence
+  - id: ref-datahub-metadata-catalog-governance
+    request: "Build datahub metadata catalog governance"
+    status: matched
+    skill: datahub-metadata-catalog-governance
+  - id: ref-elasticsearch-pit-bulk-extraction
+    request: "Plan Elasticsearch PIT extraction with search_after"
+    status: matched
+    skill: elasticsearch-pit-bulk-extraction
+  - id: ref-experiment-analysis-results
+    request: "Analyze experiment result analysis and guardrails"
+    status: matched
+    skill: experiment-analysis-results
+  - id: ref-feast-online-offline-feature-store
+    request: "Design feast feature store point in time retrieval"
+    status: matched
+    skill: feast-online-offline-feature-store
+  - id: ref-feature-engineering-point-in-time
+    request: "Build point in time features without leakage"
+    status: matched
+    skill: feature-engineering-point-in-time
+  - id: ref-funnel-conversion-analysis
+    request: "Review funnel conversion for user journeys"
+    status: matched
+    skill: funnel-conversion-analysis
+  - id: ref-geospatial-analysis-crs-quality
+    request: "Review geospatial analysis CRS accuracy"
+    status: matched
+    skill: geospatial-analysis-crs-quality
+  - id: ref-great-expectations-validation-gates
+    request: "Create great expectations validation suite"
+    status: matched
+    skill: great-expectations-validation-gates
+  - id: ref-helm-chart-contract-testing
+    request: "Validate a Helm chart validation schema"
+    status: matched
+    skill: helm-chart-contract-testing
+  - id: ref-huggingface-peft-finetuning
+    request: "Plan a PEFT LoRA Hugging Face fine tuning project"
+    status: matched
+    skill: huggingface-peft-finetuning
+  - id: ref-hybrid-search-ranking-design
+    request: "Tune hybrid search BM25 RRF retrieval"
+    status: matched
+    skill: hybrid-search-ranking-design
+  - id: ref-imbalanced-classification-evaluation
+    request: "Evaluate imbalanced classification precision recall"
+    status: matched
+    skill: imbalanced-classification-evaluation
+  - id: ref-kubernetes-networking-triage
+    request: "Diagnose kubernetes networkpolicy blocked traffic"
+    status: matched
+    skill: kubernetes-networking-triage
+  - id: ref-kubernetes-storage-pvc-recovery
+    request: "Recover kubernetes storage PVC pending"
+    status: matched
+    skill: kubernetes-storage-pvc-recovery
+  - id: ref-kubernetes-workload-security
+    request: "Review kubernetes workload security policy"
+    status: matched
+    skill: kubernetes-workload-security
+  - id: ref-lakekeeper-iceberg-catalog-operations
+    request: "Review lakekeeper iceberg catalog operations"
+    status: matched
+    skill: lakekeeper-iceberg-catalog-operations
+  - id: ref-linux-systemd-service-debug
+    request: "Diagnose linux systemd service restart loop"
+    status: matched
+    skill: linux-systemd-service-debug
+  - id: ref-llm-production-evaluation-suite
+    request: "Build a LLM evaluation benchmark with tool traces"
+    status: matched
+    skill: llm-production-evaluation-suite
+  - id: ref-llm-prompt-injection-boundaries
+    request: "Evaluate LLM prompt injection tool boundaries"
+    status: matched
+    skill: llm-prompt-injection-boundaries
+  - id: ref-milvus-vector-index-lifecycle
+    request: "Review Milvus vector index schema and HNSW configuration"
+    status: matched
+    skill: milvus-vector-index-lifecycle
+  - id: ref-minio-s3-object-storage-reliability
+    request: "Configure MinIO object storage multipart reliability"
+    status: matched
+    skill: minio-s3-object-storage-reliability
+  - id: ref-ml-drift-performance-monitoring
+    request: "Design mlops model drift monitoring"
+    status: matched
+    skill: ml-drift-performance-monitoring
+  - id: ref-ml-model-serving-canary
+    request: "Plan ml model serving canary with rollback"
+    status: matched
+    skill: ml-model-serving-canary
+  - id: ref-mlflow-experiment-registry-lifecycle
+    request: "Use MLflow model registry aliases"
+    status: matched
+    skill: mlflow-experiment-registry-lifecycle
+  - id: ref-model-data-label-governance
+    request: "Design dataset annotation label governance"
+    status: matched
+    skill: model-data-label-governance
+  - id: ref-model-quantization-benchmark
+    request: "Benchmark LLM model quantization accuracy"
+    status: matched
+    skill: model-quantization-benchmark
+  - id: ref-mysql-binlog-cdc-integrity
+    request: "Plan MySQL binlog CDC integrity and GTID"
+    status: matched
+    skill: mysql-binlog-cdc-integrity
+  - id: ref-network-dns-tls-diagnostics
+    request: "Troubleshoot network diagnostics DNS TLS handshake"
+    status: matched
+    skill: network-dns-tls-diagnostics
+  - id: ref-nifi-flowfile-backpressure-operations
+    request: "Tune Apache NiFi backpressure queues"
+    status: matched
+    skill: nifi-flowfile-backpressure-operations
+  - id: ref-opentelemetry-collector-pipeline
+    request: "Configure OpenTelemetry collector pipeline tracing"
+    status: matched
+    skill: opentelemetry-collector-pipeline
+  - id: ref-pandas-eda-data-profiling
+    request: "Run pandas EDA data profiling"
+    status: matched
+    skill: pandas-eda-data-profiling
+  - id: ref-platform-self-service-golden-path
+    request: "Design an internal developer platform golden path"
+    status: matched
+    skill: platform-self-service-golden-path
+  - id: ref-polaris-iceberg-catalog-operations
+    request: "Deploy Polaris Iceberg catalog operations"
+    status: matched
+    skill: polaris-iceberg-catalog-operations
+  - id: ref-polars-lazy-query-analytics
+    request: "Use Polars lazy scan with optimization"
+    status: matched
+    skill: polars-lazy-query-analytics
+  - id: ref-postgresql-logical-cdc-integrity
+    request: "Review PostgreSQL logical replication CDC"
+    status: matched
+    skill: postgresql-logical-cdc-integrity
+  - id: ref-prometheus-slo-alert-engineering
+    request: "Configure Prometheus alert rules for SLO"
+    status: matched
+    skill: prometheus-slo-alert-engineering
+  - id: ref-pytorch-distributed-training-recovery
+    request: "Recover PyTorch distributed training checkpoint"
+    status: matched
+    skill: pytorch-distributed-training-recovery
+  - id: ref-rag-evidence-sufficiency-evaluation
+    request: "Evaluate RAG evidence sufficiency and citations"
+    status: matched
+    skill: rag-evidence-sufficiency-evaluation
+  - id: ref-responsible-ai-risk-assessment
+    request: "Perform responsible AI risk assessment"
+    status: matched
+    skill: responsible-ai-risk-assessment
+  - id: ref-sklearn-leakage-free-validation
+    request: "Create scikit-learn leakage safe validation pipeline"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ref-speech-asr-evaluation
+    request: "Evaluate speech recognition ASR quality"
+    status: matched
+    skill: speech-asr-evaluation
+  - id: ref-sql-explain-plan-optimization
+    request: "Optimize SQL EXPLAIN plan join performance"
+    status: matched
+    skill: sql-explain-plan-optimization
+  - id: ref-sql-metric-definition-analysis
+    request: "Write SQL metric definitions for analytical dashboards"
+    status: matched
+    skill: sql-metric-definition-analysis
+  - id: ref-sre-incident-rca-runbook
+    request: "Prepare SRE incident postmortem after outage"
+    status: matched
+    skill: sre-incident-rca-runbook
+  - id: ref-statistical-inference-design
+    request: "Plan statistical inference confidence interval study"
+    status: matched
+    skill: statistical-inference-design
+  - id: ref-superset-dashboard-metric-governance
+    request: "Build Apache Superset dashboard with metrics"
+    status: matched
+    skill: superset-dashboard-metric-governance
+  - id: ref-terraform-state-module-safety
+    request: "Review Terraform state module drift migration"
+    status: matched
+    skill: terraform-state-module-safety
+  - id: ref-time-series-forecast-backtesting
+    request: "Design time series forecast backtesting"
+    status: matched
+    skill: time-series-forecast-backtesting
+  - id: ref-vault-secrets-rotation-operations
+    request: "Rotate Vault secrets with lease renewal"
+    status: matched
+    skill: vault-secrets-rotation-operations
+  - id: ref-vllm-inference-serving-operations
+    request: "Deploy vLLM inference serving with GPU budget"
+    status: matched
+    skill: vllm-inference-serving-operations

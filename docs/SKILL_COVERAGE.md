@@ -62,3 +62,7 @@ See [CROSS_DOMAIN_EXPANSION.md](CROSS_DOMAIN_EXPANSION.md) for the additional 29
 ## Deep Data Engineering
 
 See [DATA_ENGINEERING_SKILLS.md](DATA_ENGINEERING_SKILLS.md) for the 24 specialized packages, narrow activation boundaries, source verification requirements and regression test coverage. Use `scripts/report_coverage.py` for authoritative live counts; the figures above are a branch snapshot.
+
+## Unified reference branch
+
+See `docs/MASTER_REFERENCE_EXPANSION.md` for scope, intended technology boundaries and evaluation gaps. The live registry contains 151 SKILL.md packages (88 prior + 63 new), subject to successful YAML registry validation and CI. Do not treat all `mapped` subdomains as active.
