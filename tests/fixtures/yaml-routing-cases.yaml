@@ -391,3 +391,23 @@ cases:
   - id: de-nearmiss-metadata-mapped
     request: "Research data catalog metadata taxonomy"
     status: unavailable
+  - id: de-engine-ray-data
+    request: "Build a Ray Data Parquet processing pipeline"
+    status: matched
+    skill: ray-data-pipeline-engineering
+  - id: de-engine-argo-workflows
+    request: "Plan an Argo Workflows CronWorkflow with retries"
+    status: matched
+    skill: argo-workflows-data-orchestration
+  - id: de-engine-pulsar-subscription
+    request: "Review Apache Pulsar subscription redelivery"
+    status: matched
+    skill: pulsar-subscription-replay
+  - id: de-engine-rabbitmq-consumer
+    request: "Design RabbitMQ quorum queue consumer acknowledgements"
+    status: matched
+    skill: rabbitmq-consumer-delivery-safety
+  - id: de-engine-kinesis-consumer
+    request: "Configure Kinesis enhanced fan-out consumer"
+    status: matched
+    skill: kinesis-stream-consumer-recovery

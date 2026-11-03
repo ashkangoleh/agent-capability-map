@@ -50,3 +50,13 @@ Checked as source starting points on 2026-11-03. This index does **not** mean ev
 | Apache Parquet layout | https://parquet.apache.org/docs/concepts/ | Row group, file and partition are distinct |
 
 The links are starting references; each SKILL.md requires checking version, published state, configuration and observed system behavior at task execution. This table is not a certification or compatibility matrix.
+
+## Additional Streaming / Distributed Data Engines
+
+| Engine | Official source | Validation constraint |
+|---|---|---|
+| Ray Data | https://docs.ray.io/en/latest/data/key-concepts.html | Verify release and memory/streaming execution behavior |
+| Argo Workflows | https://argo-workflows.readthedocs.io/en/latest/cron-workflows/ | Validate controller CRD version, scheduling and RBAC |
+| Apache Pulsar | https://pulsar.apache.org/docs/4.0.x/concepts-messaging/ | Validate subscription mode, redelivery and version |
+| RabbitMQ | https://www.rabbitmq.com/docs/confirms | Publisher confirms and consumer acknowledgments solve different delivery boundaries |
+| Amazon Kinesis | https://docs.aws.amazon.com/streams/latest/dev/enhanced-consumers.html | Check regional limits and enhanced fan-out usage cost |

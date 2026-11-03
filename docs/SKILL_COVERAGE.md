@@ -3,7 +3,7 @@
 ## Scope
 
 - Top-level domains: 41, all with at least one linked active skill.
-- Active skill packages: 83 (59 previous plus 24 newly linked Data Engineering specialist skills).
+- Active skill packages: 88 (59 previous plus 29 newly linked Data Engineering specialist skills).
 - Most fine-grained subdomains remain mapped-only and require focused skill development.
 - For exact current counts run `python scripts/report_coverage.py --summary`.
 - Distinction: a mapped node is discoverable taxonomy but may not provide an executable skill.

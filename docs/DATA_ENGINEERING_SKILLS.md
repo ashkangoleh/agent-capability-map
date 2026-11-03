@@ -2,7 +2,7 @@
 
 ## Scope
 
-24 new narrowly scoped Agent Skills have been added on top of the previous 59 active skills. All are linked through the authoritative YAML graph. For maintained counts run:
+29 new narrowly scoped Agent Skills have been added on top of the previous 59 active skills. All are linked through the authoritative YAML graph. For maintained counts run:
 
     python scripts/report_coverage.py --summary
     python -m capability_map validate
@@ -14,10 +14,15 @@
 |---|---|
 | Flink | `flink-checkpoint-savepoint-recovery`, `flink-sql-event-time-modeling` |
 | Beam | `beam-runner-portability` |
+| Ray Data | `ray-data-pipeline-engineering` |
 | Scala Spark | `spark-scala-job-engineering` |
 | Kafka | `kafka-consumer-rebalance-replay`, `kafka-connect-cdc-design` |
+| Pulsar | `pulsar-subscription-replay` |
+| RabbitMQ | `rabbitmq-consumer-delivery-safety` |
+| Kinesis | `kinesis-stream-consumer-recovery` |
 | Debezium | `debezium-cdc-bootstrap` |
 | Airflow | `airflow-backfill-scheduling` |
+| Argo Workflows | `argo-workflows-data-orchestration` |
 | Dagster | `dagster-asset-partition-orchestration` |
 | Prefect | `prefect-flow-reliability` |
 | OpenLineage | `openlineage-metadata-instrumentation` |
@@ -61,11 +66,11 @@ StarRocks is additionally available through the database-engineering technology 
 
 ## Evaluation limitations
 
-Structural validation checks SKILL.md frontmatter, path safety and YAML references. New regression fixtures check 24 specialized matches and near-miss cases, in addition to prior fixtures. They do **not** measure LLM semantic correctness, hallucination rate or token usage across hosts.
+Structural validation checks SKILL.md frontmatter, path safety and YAML references. New regression fixtures check 29 specialized matches and near-miss cases, in addition to prior fixtures. They do **not** measure LLM semantic correctness, hallucination rate or token usage across hosts.
 
 ## Out of scope / next additions
 
-Remaining mapped-only nodes include Ray Data, Argo Workflows, other messaging systems and BI/Data Science. A mapped-only status must produce an explicit unavailable/clarification response instead of fabricating a Skill. Add dedicated skills only after reviewing current official interfaces and designing negative, near-miss, multilingual and workload validation cases.
+Remaining mapped-only nodes include BI, Data Science, semantic layers and certain relational database specialties. A mapped-only status must produce an explicit unavailable/clarification response instead of fabricating a Skill. Add dedicated skills only after reviewing current official interfaces and designing negative, near-miss, multilingual and workload validation cases.
 
 ## Typed graph links
 

@@ -57,4 +57,4 @@ A separate branch `feat/cross-domain-skill-expansion` adds 29 specialist skills 
 
 ## Deep Data Engineering expansion — 2026-11-03
 
-The branch `feat/data-engineering-deep-skills` adds 24 specialized skills and seven nested YAML maps across CDC, distributed processing, orchestration, lakehouse maintenance, warehouse engines, model governance and data observability. Technology-specific routes preserve generic fallbacks where the request lacks enough detail. Structural and lexical tests do not validate model correctness, cost or runtime semantics.
+The branch `feat/data-engineering-deep-skills` adds 29 specialized skills and seven nested YAML maps plus activated Ray, Argo, Pulsar, RabbitMQ and Kinesis nodes across CDC, distributed processing, orchestration, lakehouse maintenance, warehouse engines, model governance and data observability. Technology-specific routes preserve generic fallbacks where the request lacks enough detail. Structural and lexical tests do not validate model correctness, cost or runtime semantics.

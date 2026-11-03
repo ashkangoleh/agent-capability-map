@@ -2,7 +2,7 @@
 
 Global-first, YAML-driven, hierarchical discovery for reusable skills across coding agents. A single master map serves all projects. A user can **add personal skills** globally or per project without changing the master repository.
 
-The master map currently covers 41 broad domains, 83 active skills, and many mapped subdomains on this branch. Get current values with `python scripts/report_coverage.py --summary`. The cross-domain expansion introduces 29 specialist skills (21 in previously mapped domains and 8 in newly introduced domains). Every top-level domain has at least one active specialist, but most subdomains remain mapped-only and require further implementation and evaluation. The first specialist expansion adds 12 focused skills; see [Coverage](docs/SKILL_COVERAGE.md) for active versus mapped nodes and exact routing examples. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
+The master map currently covers 41 broad domains, 88 active skills, and many mapped subdomains on this branch. Get current values with `python scripts/report_coverage.py --summary`. The cross-domain expansion introduces 29 specialist skills (21 in previously mapped domains and 8 in newly introduced domains). Every top-level domain has at least one active specialist, but most subdomains remain mapped-only and require further implementation and evaluation. The first specialist expansion adds 12 focused skills; see [Coverage](docs/SKILL_COVERAGE.md) for active versus mapped nodes and exact routing examples. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
 
 ## Operating contract
 
@@ -199,7 +199,7 @@ Original JSON registries under catalog/ and domains/*/skills.json remain for his
 
 ## Deep Data Engineering Skills
 
-The `feat/data-engineering-deep-skills` branch adds 24 specialist skills for Flink, Beam, Scala Spark, Kafka Connect/consumers, Debezium CDC, Airflow backfill, Dagster, Prefect, OpenLineage, Iceberg, Delta Lake, Hudi, Trino, DuckDB, StarRocks, dbt snapshots, dimensional modeling, Parquet and data-platform architecture.
+The `feat/data-engineering-deep-skills` branch adds 29 specialist skills for Flink, Beam, Scala Spark, Kafka Connect/consumers, Debezium CDC, Airflow backfill, Dagster, Prefect, OpenLineage, Iceberg, Delta Lake, Hudi, Trino, DuckDB, StarRocks, dbt snapshots, dimensional modeling, Parquet, Ray Data, Argo Workflows, Pulsar, RabbitMQ, Kinesis and data-platform architecture.
 
 Technology-specific maps are loaded progressively. A StarRocks Stream Load request now routes to a StarRocks load skill; an Iceberg compaction request routes to Iceberg maintenance. Generic requests retain a bounded fallback where appropriate.
 

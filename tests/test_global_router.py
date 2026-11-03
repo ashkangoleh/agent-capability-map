@@ -157,6 +157,26 @@ class GraphRoutingTests(unittest.TestCase):
                 else:
                     self.assertNotIn("skill_path", result)
 
+    def test_data_engineering_remaining_engines(self):
+        import yaml
+
+        fixtures = yaml.safe_load(
+            (ROOT / "tests" / "fixtures" / "yaml-routing-cases.yaml").read_text(encoding="utf-8")
+        )["cases"]
+        selected = [case for case in fixtures if case["id"].startswith("de-engine-")]
+        self.assertEqual(len(selected), 5)
+        for case in selected:
+            with self.subTest(case=case["id"]):
+                result = Router(ROOT).resolve(case["request"])
+                self.assertEqual(result["status"], case["status"], result)
+                self.assertEqual(result.get("selected_skill"), case["skill"], result)
+                self.assertLessEqual(len(result["inspected_files"]), 9)
+                path = Path(result["skill_path"])
+                self.assertTrue(path.is_file())
+                content = path.read_text(encoding="utf-8")
+                self.assertIn("## Production procedure", content)
+                self.assertIn("## Official or primary references", content)
+
     def test_pyspark_project_routing(self):
         result = Router(ROOT).resolve("Create a new PySpark project")
         self.assertEqual(result["status"], "matched", result)
