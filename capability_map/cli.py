@@ -33,7 +33,7 @@ def main(argv=None):
     related = subs.add_parser("related", help="Inspect typed cross-domain relationships on demand")
     related.add_argument("--route", required=True, help="Slash-separated capability path")
 
-    installing = subs.add_parser("install", help="Preview or install global agent instructions")
+    installing = subs.add_parser("install", help="Preview or install global instructions and host access settings")
     installing.add_argument("--hosts", nargs="+", choices=sorted([*HOST_FILES, "cursor"]), required=True)
     installing.add_argument("--home", type=Path, default=Path.home())
     installing.add_argument("--apply", action="store_true", help="Write instructions; preview by default")
@@ -43,7 +43,7 @@ def main(argv=None):
         if args.command == "install":
             result = {
                 "status": "applied" if args.apply else "dry_run",
-                "hosts": install(args.hosts, args.home, apply=args.apply),
+                "hosts": install(args.hosts, args.home, apply=args.apply, root=args.root),
                 "message": "Existing file text outside managed blocks remains unchanged.",
             }
         elif args.command == "related":

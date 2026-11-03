@@ -33,3 +33,20 @@ Installation is dry-run by default. Managed blocks preserve unrelated content. A
 ## Version and support boundaries
 
 Host discovery behavior changes. Keep a per-host compatibility matrix, record tested host version and date, and repeat smoke tests after each host upgrade. The current repository has implementation and CI tests; it does not assert that every host has completed end-to-end runtime validation.
+
+
+## Claude Code: managed skill-root access
+
+When `capability-map install --hosts claude --apply` runs, it also configures the user-level Claude Code settings file. If `CLAUDE_CONFIG_DIR` is set, that directory is used; otherwise the path is `~/.claude`.
+
+- Add the canonical master `.agents/skills` directory to `permissions.additionalDirectories`. Claude Code treats it as an additional working directory, so file reads are available without the outside-working-directory approval prompt.
+- Add `Edit(//absolute/path/.agents/skills/**)` to `permissions.deny`. Claude Code documents that `Edit(path)` covers built-in file-edit tools, including Write; the deny rule is intentionally scoped to the master skill root.
+- Preserve unrelated settings and permission entries. The installer previews both the instruction file and settings mutation during dry-run, and writes only with `--apply`.
+- Invalid JSON, invalid permission value types, symlinked settings files, and symlinked master skill roots are rejected before either destination is changed.
+
+This is not OS-level read-only enforcement. Claude Code's path rules do not constrain arbitrary subprocesses that open files indirectly; use OS permissions or Claude Code sandboxing when that stronger boundary is required. Managed settings may also impose higher-priority restrictions.
+
+Official references:
+- https://code.claude.com/docs/en/permissions#working-directories
+- https://code.claude.com/docs/en/permissions#read-and-edit
+- https://code.claude.com/docs/en/settings

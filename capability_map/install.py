@@ -4,6 +4,7 @@ import shlex
 import sys
 from pathlib import Path
 
+from .claude_settings import configure_claude_skill_access, resolve_claude_config_dir
 from .router import RouterError
 
 BEGIN = "<!-- capability-map:managed:start -->"
@@ -84,8 +85,9 @@ def _upsert(path, body, apply):
     return {"path": str(path), "changed": changed, "applied": bool(apply and changed)}
 
 
-def install(hosts, home, apply=False):
+def install(hosts, home, apply=False, root=None, claude_config_dir=None):
     home = Path(home).expanduser().resolve()
+    master_root = Path(root or Path(__file__).resolve().parents[1]).expanduser().resolve()
     results = []
     for host in hosts:
         if host not in HOST_FILES and host != "cursor":
@@ -103,6 +105,20 @@ def install(hosts, home, apply=False):
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_text(content, encoding="utf-8")
             results.append({"path": str(target), "changed": changed, "applied": bool(apply and changed)})
+        elif host == "claude":
+            config_dir = resolve_claude_config_dir(home, claude_config_dir)
+            target = config_dir / "CLAUDE.md"
+            # Preflight both destinations before changing either one.
+            instruction_preview = _upsert(target, instruction_text(), apply=False)
+            permission_preview = configure_claude_skill_access(config_dir, master_root, apply=False)
+            if apply:
+                permission_result = configure_claude_skill_access(config_dir, master_root, apply=True)
+                instruction_result = _upsert(target, instruction_text(), apply=True)
+            else:
+                permission_result = permission_preview
+                instruction_result = instruction_preview
+            instruction_result["permissions"] = permission_result
+            results.append(instruction_result)
         else:
             target = home / HOST_FILES[host]
             results.append(_upsert(target, instruction_text(), apply))

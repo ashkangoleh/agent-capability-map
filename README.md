@@ -41,6 +41,8 @@ Apply only after reviewing the target paths:
 
 This writes a managed, concise block into user-level instruction files while preserving all unrelated content. Cursor receives one global router SKILL.md. It does **not** copy every specialist skill into native host folders.
 
+For Claude Code, the installer also updates the user-level `settings.json` (or `$CLAUDE_CONFIG_DIR/settings.json` when configured): it adds only the repository's `.agents/skills` directory to `permissions.additionalDirectories` so reads are available without the outside-workspace prompt, and adds a path-scoped `Edit(//.../.agents/skills/**)` deny rule for Claude's built-in file-edit tools. This is included in the dry-run preview and is applied only with `--apply`. Existing JSON settings are preserved; malformed JSON and symlink destinations fail closed. The edit deny is a host-tool guard, not OS-level immutability: arbitrary shell subprocesses are outside that rule's enforcement boundary.
+
 | Host | User-level bootstrap |
 |---|---|
 | Codex | ~/.codex/AGENTS.md |

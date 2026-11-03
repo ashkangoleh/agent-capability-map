@@ -1,6 +1,8 @@
 import json
+import os
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 from capability_map import Router, RouterError
@@ -135,6 +137,93 @@ class GraphRoutingTests(unittest.TestCase):
             )
             with self.assertRaises(RouterError):
                 Router(ROOT, project=p, home=p).resolve("Create a new PySpark project")
+
+    def test_claude_install_configures_readonly_skill_access_and_preserves_settings(self):
+        with tempfile.TemporaryDirectory() as workspace:
+            base = Path(workspace)
+            home = base / "home"
+            root = base / "master"
+            config = home / ".claude"
+            skills = root / ".agents" / "skills"
+            skills.mkdir(parents=True)
+            config.mkdir(parents=True)
+            settings_path = config / "settings.json"
+            settings_path.write_text(
+                json.dumps({
+                    "model": "existing-model",
+                    "permissions": {
+                        "allow": ["Bash(git status)"],
+                        "deny": ["Bash(rm *)"],
+                        "additionalDirectories": ["/existing/docs"],
+                    },
+                    "otherSetting": {"keep": True},
+                }),
+                encoding="utf-8",
+            )
+
+            result = install(["claude"], home, root=root, apply=True)[0]
+            settings = json.loads(settings_path.read_text(encoding="utf-8"))
+            rule = f"Edit(//{skills.resolve().as_posix().lstrip('/')}/**)"
+            self.assertIn(str(skills.resolve()), settings["permissions"]["additionalDirectories"])
+            self.assertIn(rule, settings["permissions"]["deny"])
+            self.assertEqual(settings["permissions"]["allow"], ["Bash(git status)"])
+            self.assertIn("Bash(rm *)", settings["permissions"]["deny"])
+            self.assertEqual(settings["model"], "existing-model")
+            self.assertEqual(settings["otherSetting"], {"keep": True})
+            self.assertTrue(result["permissions"]["applied"])
+            self.assertTrue((config / "CLAUDE.md").is_file())
+
+            repeated = install(["claude"], home, root=root, apply=True)[0]
+            self.assertFalse(repeated["permissions"]["changed"])
+            self.assertEqual(settings_path.read_text(encoding="utf-8").count(str(skills.resolve())), 1)
+
+    def test_claude_dry_run_does_not_create_files(self):
+        with tempfile.TemporaryDirectory() as workspace:
+            base = Path(workspace)
+            home = base / "home"
+            root = base / "master"
+            (root / ".agents" / "skills").mkdir(parents=True)
+            result = install(["claude"], home, root=root, apply=False)[0]
+            self.assertTrue(result["changed"])
+            self.assertTrue(result["permissions"]["changed"])
+            self.assertFalse((home / ".claude").exists())
+
+    def test_claude_invalid_settings_fail_before_any_write(self):
+        with tempfile.TemporaryDirectory() as workspace:
+            base = Path(workspace)
+            home = base / "home"
+            root = base / "master"
+            config = home / ".claude"
+            (root / ".agents" / "skills").mkdir(parents=True)
+            config.mkdir(parents=True)
+            (config / "settings.json").write_text("{ invalid", encoding="utf-8")
+            with self.assertRaises(RouterError):
+                install(["claude"], home, root=root, apply=True)
+            self.assertFalse((config / "CLAUDE.md").exists())
+
+    def test_claude_config_dir_environment_override(self):
+        with tempfile.TemporaryDirectory() as workspace:
+            base = Path(workspace)
+            home = base / "home"
+            config = base / "custom-claude-config"
+            root = base / "master"
+            (root / ".agents" / "skills").mkdir(parents=True)
+            with mock.patch.dict(os.environ, {"CLAUDE_CONFIG_DIR": str(config)}):
+                result = install(["claude"], home, root=root, apply=True)[0]
+            self.assertEqual(result["path"], str(config.resolve() / "CLAUDE.md"))
+            self.assertTrue((config / "settings.json").is_file())
+
+    def test_claude_rejects_symlinked_skill_root(self):
+        with tempfile.TemporaryDirectory() as workspace:
+            base = Path(workspace)
+            home = base / "home"
+            root = base / "master"
+            outside = base / "outside"
+            outside.mkdir()
+            (root / ".agents").mkdir(parents=True)
+            (root / ".agents" / "skills").symlink_to(outside, target_is_directory=True)
+            with self.assertRaises(RouterError):
+                install(["claude"], home, root=root, apply=False)
 
     def test_global_install_preview_preserves_files(self):
         with tempfile.TemporaryDirectory() as workspace:
