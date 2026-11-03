@@ -2,8 +2,10 @@
 
 ## Scope
 
-- Top-level domains: 33, mapped for discovery and future expansion.
-- Active skill packages: 30 (12 newly added in this expansion).
+- Top-level domains: 41, all with at least one linked active skill.
+- Active skill packages: 59 (30 existing plus 29 added in the cross-domain expansion).
+- Most fine-grained subdomains remain mapped-only and require focused skill development.
+- For exact current counts run `python scripts/report_coverage.py --summary`.
 - Distinction: a mapped node is discoverable taxonomy but may not provide an executable skill.
 - The router remains deterministic lexical routing, not semantic retrieval. Auto-activation in other hosts is not certified by a passing registry test.
 
@@ -52,3 +54,7 @@ No measured hallucination reduction, token savings or all-host compatibility is 
 - Review sampled outputs for correctness, safety, evidence support and task completion.
 - Benchmark actual agent token usage; the number of YAML files read is not a token-cost benchmark.
 - Record which host and model versions were tested and remaining failures.
+
+## Cross-domain expansion
+
+See [CROSS_DOMAIN_EXPANSION.md](CROSS_DOMAIN_EXPANSION.md) for the additional 29 skills and 41-domain taxonomy. See [RESEARCH_SOURCES.md](RESEARCH_SOURCES.md) for the verified primary-source starting points. These are structurally active skills, not a claim of comprehensive expert evaluation.

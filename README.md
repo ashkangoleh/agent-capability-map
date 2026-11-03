@@ -20,7 +20,7 @@ The master map currently covers 41 broad domains and many mapped subdomains. The
 Prerequisites: Python 3.10+, Git, and permission to create global instruction files.
 
 ~~~sh
-git clone -b feat/global-yaml-capability-graph https://github.com/ashkangoleh/agent-capability-map.git ~/agent-capability-map
+git clone -b feat/cross-domain-skill-expansion https://github.com/ashkangoleh/agent-capability-map.git ~/agent-capability-map
 cd ~/agent-capability-map
 python3 -m venv .venv
 .venv/bin/python -m pip install -e .
@@ -167,15 +167,17 @@ Global host instructions / optional Cursor router skill
    registered personal.yaml or project AGENTS.md overlay
 ~~~
 
-The hierarchical maps form the primary discovery tree. Typed cross-domain dependency edges may be added later when a measured need for multi-skill composition exists; a graph database is not needed for this version.
+The hierarchical maps form the primary discovery tree. Typed cross-domain dependency edges are available on demand for explicitly related capabilities; a graph database is not needed for this version.
 
-## Compatibility and validation
 ## Language support
 
 The initial resolver uses bounded, deterministic phrase matching, including selected Persian and English aliases. It does not implement semantic understanding or infer arbitrary synonyms. In mixed-language tasks, the host can provide a concise, accurate canonical intent. Missing or ambiguous matches must lead to clarification, not invented skill selection.
 
 
+## Compatibility and validation
+
 ~~~sh
+.venv/bin/python scripts/report_coverage.py --summary
 .venv/bin/python -m unittest discover -s tests -v
 .venv/bin/python -m capability_map validate
 .venv/bin/python scripts/evaluate_graph.py
@@ -194,3 +196,7 @@ CI checks syntax, references, linked SKILL.md metadata, path security and test f
 - https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html
 
 Original JSON registries under catalog/ and domains/*/skills.json remain for historical comparison only. **The executable router now reads only catalog/root.yaml and its linked YAML files.**
+
+## Domain expansion
+
+The authoritative live report is `python scripts/report_coverage.py` and the compact summary is `python scripts/report_coverage.py --summary`. A top-level domain with one active skill is **not** complete coverage of that discipline. See [Cross-domain expansion](docs/CROSS_DOMAIN_EXPANSION.md) and [Research sources](docs/RESEARCH_SOURCES.md). The current branch intentionally keeps legacy unsupported subdomains in the mapped-only state.
