@@ -55,7 +55,7 @@ class DomainSkillLayoutTests(unittest.TestCase):
                 result = router.resolve(request)
                 self.assertEqual(result["status"], "matched", result)
                 self.assertEqual(result["selected_skill"], skill, result)
-                self.assertEqual(result["skill_path"], f"{PREFIX}{skill}/SKILL.md")
+                self.assertEqual(Path(result["skill_path"]), ROOT / f"{PREFIX}{skill}/SKILL.md")
 
     def test_master_ids_remain_unique_and_unchanged(self):
         index = load_yaml(ROOT, "catalog/master-skill-ids.yaml")["ids"]
