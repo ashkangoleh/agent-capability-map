@@ -3,7 +3,7 @@ id: container
 kind: skill-registry
 skills:
   - id: container-build-hardening
-    path: .agents/skills/container-build-hardening/SKILL.md
+    path: .agents/skills/infrastructure/platform/container/container-build-hardening/SKILL.md
     description: "Harden container builds and release images with immutable provenance, least privilege and startup tests."
     triggers:
       - "container build security"
