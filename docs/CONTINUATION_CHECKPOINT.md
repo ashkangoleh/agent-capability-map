@@ -6,7 +6,30 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## Current authoritative continuation — Data Science (2026-11-04)
+## Current authoritative continuation — Data Science (2026-11-05)
+
+**Repository:** `ashkangoleh/agent-capability-map` (private); **working branch:** `pre_release`; `main` must remain unchanged without explicit approval.  
+**Verified HEAD before checkpoint update:** `c9bc535441075852b6d58e2d61ee18182f3dfc58`. In a future chat, always fetch live HEAD; this SHA becomes historical as soon as this checkpoint is committed.  
+**Current user-approved workstream:** Entire top-level `data` (nine subdomains) in sequence; **active subdomain `data/data-science`** (42 existing specialists), **NEXT family: forecasting**. Neither Data Science nor all Data is complete. Do not automatically switch to Infrastructure or any other top-level domain.
+
+### Just completed: Conformal Prediction + Probability Calibration
+
+- Rewrote existing `.agents/skills/ds-conformal-prediction-uncertainty/SKILL.md` (v1.1.0) and `.agents/skills/ds-model-calibration/SKILL.md` (v1.2.0), preserving original IDs and routes.
+- Explicit boundary: **split conformal** gives nominal *marginal* predictive coverage under exchangeability, using exact finite-sample `k=ceil((n+1)*(1-alpha))` order-statistic; it does not prove time/subgroup/individual conditional coverage.
+- Explicit boundary: probability calibration needs independent base training/calibration/final evaluation; Brier alone is not a pure calibration metric; sklearn `FrozenEstimator` exists from 1.6, `temperature` scaling from 1.8 (verify deployed version). MAPIE v1 API must be pinned.
+- Added reproducible dependency-free arithmetic `examples/data_science/uncertainty_integrity.py`: non-overlapping observation IDs, finite-sample residual quantile with insufficient-`n` fail-close, descriptive regression coverage and bin-level binary probability reliability with sparse bins suppressed. **It does not train a model or prove exchangeability.**
+- Added `tests/test_data_science_uncertainty_integrity.py`: **23/23 local unit tests executed successfully** against locally source-equivalent exact code. Added `tests/test_data_science_uncertainty_routing.py`, **15** `ds-uncertainty-*` fixtures covering English, Persian and hard-negative method boundaries; a separate JS lexical-router reconstruction matched 15/15 new requests (**not** actual Python router or CI).
+- Current committed file inventory: **423** deterministic routing fixtures; **344** unique master skill IDs. No new skill ID in this increment.
+- Official references, evidence and remaining acceptance gates documented in `docs/DATA_SCIENCE_UNCERTAINTY_CALIBRATION_PROTOCOL.md`. Updated README and domain audit/status documents.
+
+### Critical verification constraints
+
+1. **NOT VERIFIED:** full `python -m capability_map validate`, `scripts/evaluate_graph.py`, `scripts/report_coverage.py --summary`, all `unittest` cases on current GitHub checkout, GitHub Actions push CI outcome, runtime-pinned sklearn/MAPIE integration, real agent host invocation and independent stats review. The connector returns no conventional commit status checks, and its workflow-runs action is PR-limited. Never claim green CI based on these incomplete signals.
+2. **NEXT within Data Science:** inspect forecasting skills/maps and test real rolling-origin/time/horizon split contracts, probabilistic forecasts (quantile monotonicity/calibration), hierarchical reconciliation, intermittent demand, drift and late labels. Reuse existing skills before creating new ones; add precise positive, negative and Persian/English routing coverage. Require versioned official references and documented failure/recovery.
+3. After forecasting, continue statistical inference/surveys, Bayesian/causal/multilingual evaluation and remaining Data Science inventory. Respect user preference to progress one Data subdomain at a time; defer other top-level domains.
+4. Data Engineering still has outstanding broker/streaming, catalog and production proof gaps; maintain backlog, **do not label it complete**. All nine Data subdomains need independent depth and host evaluation before Data root completion.
+
+## Previous continuation — Data Science causal/experimentation (2026-11-04)
 
 **Canonical branch:** `pre_release` (never merge `main` without explicit approval).  
 **Verified HEAD immediately before this checkpoint update:** `9d56442425bed146ad26ea05c15492b19492d0d0`; fetch live HEAD again in every new conversation.  
