@@ -3,14 +3,14 @@ id: statistics-advanced
 kind: skill-registry
 skills:
   - id: ds-power-sample-size
-    path: .agents/skills/ds-power-sample-size/SKILL.md
+    path: .agents/skills/data/data-science/statistics-advanced/ds-power-sample-size/SKILL.md
     description: "Plan sample size and power using effect size, variance, alpha, power and multiplicity assumptions."
     triggers:
       - "statistical power sample size"
     excludes: []
     status: active
   - id: ds-bayesian-pymc-stan
-    path: .agents/skills/ds-bayesian-pymc-stan/SKILL.md
+    path: .agents/skills/data/data-science/statistics-advanced/ds-bayesian-pymc-stan/SKILL.md
     description: "Build Bayesian models with explicit priors, likelihoods, posterior diagnostics and sensitivity analysis."
     triggers:
       - "bayesian modeling pymc stan"
@@ -20,7 +20,7 @@ skills:
     excludes: []
     status: active
   - id: ds-missing-data
-    path: .agents/skills/ds-missing-data/SKILL.md
+    path: .agents/skills/data/data-science/statistics-advanced/ds-missing-data/SKILL.md
     description: "Diagnose MCAR/MAR/MNAR assumptions and choose defensible imputation or sensitivity methods."
     triggers:
       - "missing data mechanism imputation"
@@ -31,7 +31,7 @@ skills:
     excludes: []
     status: active
   - id: ds-robust-nonparametric-inference
-    path: .agents/skills/ds-robust-nonparametric-inference/SKILL.md
+    path: .agents/skills/data/data-science/statistics-advanced/ds-robust-nonparametric-inference/SKILL.md
     description: "Select robust, rank-based, permutation and bootstrap inference with explicit design assumptions."
     triggers:
       - "robust nonparametric inference"
@@ -44,7 +44,7 @@ skills:
       - "bayesian posterior inference"
     status: active
   - id: ds-multiple-testing-control
-    path: .agents/skills/ds-multiple-testing-control/SKILL.md
+    path: .agents/skills/data/data-science/statistics-advanced/ds-multiple-testing-control/SKILL.md
     description: "Control family-wise error and false discovery across multiple hypotheses and repeated analyses."
     triggers:
       - "multiple hypothesis testing fdr"
@@ -58,7 +58,7 @@ skills:
       - "single pre-registered primary hypothesis"
     status: active
   - id: ds-survey-sampling-design
-    path: .agents/skills/ds-survey-sampling-design/SKILL.md
+    path: .agents/skills/data/data-science/statistics-advanced/ds-survey-sampling-design/SKILL.md
     description: "Analyze complex survey samples with strata, clusters, unequal weights and design-based variance."
     triggers:
       - "complex survey sampling weights"
