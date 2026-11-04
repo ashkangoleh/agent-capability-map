@@ -6,6 +6,35 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
+## LATEST ACTIVE CHECKPOINT — Domain-organized source skills (2026-11-05)
+
+**User instruction:** Stop adding unnecessary example files. Clean up `.agents/skills` by organizing skills inside meaningful domain/subdomain/category folders, **without breaking the master router**. Continue only with the active `data/data-science` subdomain, not Infrastructure or other top-level domains.
+
+**Branch:** `pre_release` only; do not touch `main`. **Latest observed HEAD before this checkpoint update:** `4283a5ee0dea741e96ff170c3655ab64b4cfd1e2`; always fetch current HEAD from GitHub on a new chat.
+
+### Changes actually made
+
+- Migrated **six** current `statistics-advanced` skills into canonical domain-scoped source directories: `.agents/skills/data/data-science/statistics-advanced/<skill-id>/SKILL.md`.
+- Kept all six skill IDs, contents, YAML triggers and descriptions unchanged. All six destination Git blobs were verified **identical to old source blob SHAs**. Original flat files removed to avoid duplicate manifest activation.
+- Updated `domains/data/data-science/statistics-advanced/skills.yaml` to new registered paths. Updated `tests/test_data_science_inference_routing.py` to resolve actual registry paths rather than hardcode flat folders.
+- Added `tests/test_data_science_skill_layout.py`: verifies canonical six paths, no flat duplicates, representative route selection, and structural inventory/unique ownership of all **42 Data Science skills** (source only; not yet executed on full repo).
+- Documented the phased layout, native host risks and scope in `docs/SKILL_LIBRARY_LAYOUT.md`, `.agents/skills/README.md`, and `README.md`; created `docs/DATA_SCIENCE_REMAINING_SKILLS_AUDIT.md` with a 20-category inventory and acceptance plan.
+- **No example files, new skills, ID changes or routing fixtures** were added in this increment. Master skill IDs should remain **344** and deterministic fixture cases **467** until independently recounted.
+
+### Critical compatibility note
+
+- Some clients/plugins discover only immediate-child native skill directories; nested source layout is **not inherently portable for native auto-discovery**. This repository's explicit **YAML Registry + Router** path selection is the intended source mechanism. **Do not claim all clients natively discover nested source skills.** If a host needs flat installed skills, assess an independent, explicitly selected host-specific export rather than retaining permanent duplicate SKILL manifests.
+- Only 6/42 Data Science skills have been migrated so far. **36 still have original flat paths** and are intentionally untouched until testing validates migration safety; the rest of the 344-ID library is unchanged. This is an incremental canary, not full structural completion.
+
+### Next steps, in priority order
+
+1. Verify actual GitHub Actions **push** run and execute live `pre_release` full `python -m capability_map validate`, `python scripts/evaluate_graph.py`, `python scripts/report_coverage.py --summary`, and `python -m unittest discover -s tests -v`; investigate any path/host regressions. Do not infer PASS from static source checks.
+2. Run actual host tests (Codex, Claude Code, OpenCode, Cursor, Copilot) to determine whether an explicit router-selected nested path loads correctly and to evaluate native discovery limitations.
+3. Only after these gates, reorganize the **remaining 36 Data Science skill packages** by their 19 categories, one category at a time, including any bundled assets. Do not bulk-migrate all 344 without compatibility evidence. Continue reviewing statistical correctness for the still unaudited families.
+4. Keep Data Science and all nine Data subdomains **INCOMPLETE** until tests, method validation and real agent behavior are verified. Get user approval before moving to the next Data subdomain.
+5. Update this checkpoint with actual test evidence, new HEAD, paths moved and risks after the next substantive milestone.
+
+
 ## Earlier continuation — Data Science uncertainty/calibration (2026-11-05)
 
 **Repository:** `ashkangoleh/agent-capability-map` (private); **working branch:** `pre_release`; `main` must remain unchanged without explicit approval.  
@@ -51,7 +80,7 @@
 3. Add targeted executable, negative and bilingual fixtures; separately evaluate real model task selection across hosts. Then proceed within Data Science to forecasting, statistical/survey methods and the rest of its 42-skill inventory.
 4. Data Engineering still has catalog, broker/streaming and versioned production-recovery gaps; return to it only by an explicit progression decision. Work through the nine Data subdomains and seek approval before another **top-level** domain.
 
-## LATEST ACTIVE CHECKPOINT — Data Science inference/surveys increment (2026-11-05)
+## HISTORICAL CHECKPOINT — Data Science inference/surveys increment (2026-11-05)
 
 **Repo:** `ashkangoleh/agent-capability-map` (private)  
 **Branch:** `pre_release`, never merge into `main` or create feature/fix branches unless the user explicitly changes scope.  
