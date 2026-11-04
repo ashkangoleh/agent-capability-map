@@ -46,6 +46,16 @@ Domain selection: users choose **up to five non-overlapping selectable domain sc
 - GitHub connector returned no associated PR workflow runs or combined status checks for the last observed commit. **Do not say the latest CI is green** on that evidence alone.
 - Real semantic routing accuracy, false activation rates, actual token usage improvements and end-to-end multi-host compatibility remain unmeasured/unverified.
 
+## Data top-level scope decision — 2026-11-04
+
+The user explicitly clarified that the completion target is **all of `data`**, not only `data/data-engineering`, and authorized the next subdomain. The top-level Data domain is **NOT COMPLETE**. It has **nine first-class subdomains**. Do **not** switch to Infrastructure or any unrelated top-level domain now.
+
+**Next active subdomain:** `data/data-science` — review its 42 registered skills and 26 declared areas with independent, reproducible statistical method evaluation, leakage / temporal validation checks and negative / ambiguous / multilingual routing tests. This is a scope transition, **not** a declaration that Data Engineering is done. Its outstanding work remains queued.
+
+The next sequence after Data Science is Analytics Engineering, Database Engineering, Data Analysis, Business Intelligence, Data Governance, Data Quality and Data Architecture, each subject to audit, operational validation and user-approved progression. The live subdomain inventory and exact acceptance gates are in `docs/DATA_DOMAIN_COMPLETENESS_STATUS.md`.
+
+This turn also removed one duplicated `false discovery rate correction` trigger in `domains/data/map.yaml` and added a structural uniqueness regression test in `tests/test_data_science_coverage.py`. **The Python test suite/CI have not been verified against the resulting HEAD.** Run validations before claiming pass.
+
 ## Current active domain and unresolved work
 
 **Current working domain: `data/data-engineering`. It is not finished.**
