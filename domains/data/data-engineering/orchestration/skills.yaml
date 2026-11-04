@@ -3,28 +3,28 @@ id: orchestration
 kind: skill-registry
 skills:
   - id: kestra-data-orchestration
-    path: .agents/skills/kestra-data-orchestration/SKILL.md
+    path: .agents/skills/data/data-engineering/orchestration/kestra-data-orchestration/SKILL.md
     description: "Operate Kestra declarative workflows with event triggers, plugins, retries, secrets and execution state."
     triggers:
       - "kestra flow orchestration"
     excludes: []
     status: active
   - id: temporal-durable-workflows
-    path: .agents/skills/temporal-durable-workflows/SKILL.md
+    path: .agents/skills/data/data-engineering/orchestration/temporal-durable-workflows/SKILL.md
     description: "Use Temporal durable workflows for resumable long-running data operations, signals, timers and human intervention."
     triggers:
       - "temporal durable workflow"
     excludes: []
     status: active
   - id: flyte-kubeflow-pipeline-orchestration
-    path: .agents/skills/flyte-kubeflow-pipeline-orchestration/SKILL.md
+    path: .agents/skills/data/data-engineering/orchestration/flyte-kubeflow-pipeline-orchestration/SKILL.md
     description: "Design Flyte and Kubeflow Pipelines for reproducible containerized workflows, artifacts and Kubernetes isolation."
     triggers:
       - "flyte kubeflow pipeline"
     excludes: []
     status: active
   - id: data-orchestration-platform-selection
-    path: .agents/skills/data-orchestration-platform-selection/SKILL.md
+    path: .agents/skills/data/data-engineering/orchestration/data-orchestration-platform-selection/SKILL.md
     description: "Select or migrate data workflow orchestrators using execution semantics, scheduling, durability, deployment and operational fit."
     triggers:
       - "mage"

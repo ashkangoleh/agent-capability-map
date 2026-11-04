@@ -3,7 +3,7 @@ id: dagster
 kind: skill-registry
 skills:
   - id: dagster-asset-partition-orchestration
-    path: .agents/skills/dagster-asset-partition-orchestration/SKILL.md
+    path: .agents/skills/data/data-engineering/orchestration/dagster/dagster-asset-partition-orchestration/SKILL.md
     description: "Design Dagster software-defined assets, partitions, backfills and reliable asset checks for datasets."
     triggers:
       - "dagster"

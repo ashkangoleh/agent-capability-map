@@ -3,21 +3,21 @@ id: quality
 kind: skill-registry
 skills:
   - id: soda-data-quality-engineering
-    path: .agents/skills/soda-data-quality-engineering/SKILL.md
+    path: .agents/skills/data/data-engineering/quality/soda-data-quality-engineering/SKILL.md
     description: "Implement SodaCL scans with metrics, thresholds, CI integration and accountable data-quality ownership."
     triggers:
       - "soda data quality scans"
     excludes: []
     status: active
   - id: deequ-data-quality-at-scale
-    path: .agents/skills/deequ-data-quality-at-scale/SKILL.md
+    path: .agents/skills/data/data-engineering/quality/deequ-data-quality-at-scale/SKILL.md
     description: "Use Deequ and Spark for large-scale profiling and constraint verification with persisted metrics."
     triggers:
       - "deequ spark data quality"
     excludes: []
     status: active
   - id: pandera-dataframe-validation
-    path: .agents/skills/pandera-dataframe-validation/SKILL.md
+    path: .agents/skills/data/data-engineering/quality/pandera-dataframe-validation/SKILL.md
     description: "Validate pandas, Polars and PySpark DataFrames with schemas, coercion rules and failure reporting."
     triggers:
       - "pandera dataframe schema validation"
