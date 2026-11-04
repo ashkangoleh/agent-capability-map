@@ -19,13 +19,13 @@ Collect source and target database products and versions, GoldenGate release and
 
 1. Verify the exact GoldenGate release, supported source/target combination, deployment architecture and feature compatibility from the current Oracle documentation. Do not transfer Classic Architecture commands to Microservices Architecture without validation.
 2. Separate initial load from continuous synchronization. Define a consistent source snapshot boundary and the corresponding CDC start position; prove that the handoff has neither a gap nor an overlap that creates unhandled duplicates.
-3. Prepare the source database for log-based capture. Verify required supplemental logging, table-level logging such as TRANDATA, privileges, logging mode and supported data types for the selected database.
+3. Prepare the source database for log-based capture. Verify required supplemental logging, table-level logging such as TRANDATA, privileges, logging mode and supported data types for the selected database. For an online instantiation that combines initial load and CDC, add the required TRANDATA before starting the initial-load Extract where the source platform requires it.
 4. Select the supported Extract capture method for the source. Record the source checkpoint, transaction boundary and expected log-retention window before starting capture.
 5. Design the topology explicitly: Extract, local trail, Distribution/Receiver path where applicable, remote trail and Replicat. Keep capture and apply independently recoverable; size trail storage for target outages and planned maintenance.
 6. Configure schema/table mapping, key selection, column conversion, DDL handling and conflict behavior. Treat keyless updates, key changes, LOBs, character-set conversion and unsupported DDL as explicit design decisions.
 7. Select Replicat mode and parallelism only after defining transaction ordering and target-side dependencies. Parallel apply can change concurrency behavior; do not trade away required ordering for throughput.
-8. Verify checkpoint requirements for the selected Replicat mode. Use supported AdminClient or REST operations; never edit trail files, checkpoint files, checkpoint tables or parameter files directly outside documented procedures.
-9. Monitor Extract lag, trail growth, distribution-path lag, Replicat lag, abends, discarded records, heartbeat latency, target apply errors and disk headroom as separate signals.
+8. A checkpoint table is required for non-parallel Replicats; verify the checkpoint mechanism for the exact Replicat mode. The checkpoint transaction must remain aligned with the apply transaction. Use supported AdminClient, REST or web operations; never edit trail files, checkpoint files, checkpoint tables or parameter files directly.
+9. Create the recommended GoldenGate heartbeat configuration where supported. Monitor Extract lag, trail growth, distribution-path lag, Replicat lag, abends, discarded records, heartbeat latency, target apply errors and disk headroom as separate signals.
 10. Define recovery from the last valid checkpoint and retained trail. Reposition only with a documented source/target reconciliation plan; validate transaction boundaries before restarting production traffic.
 11. Reconcile source and target using stable keys, source commit watermarks, row counts and sampled value checks. Test schema evolution and restart behavior before rollout.
 
@@ -35,6 +35,7 @@ Collect source and target database products and versions, GoldenGate release and
 - Trail storage fills or distribution paths stall: preserve trail files, restore capacity and verify checkpoints before purging.
 - Replicat repeatedly abends on a row or DDL operation: isolate the failing transaction and determine whether the issue is mapping, unsupported data, target constraint or ordering.
 - Missing supplemental logging or stable keys can make updates/deletes incomplete or ambiguous.
+- For GoldenGate for SQL Server CDC capture, the SQL Server CDC cleanup job can purge staging rows before Extract consumes them. Validate the capture/log-reader job and use the GoldenGate Purge Change Data task rather than allowing an independent cleanup job to delete unconsumed staging data.
 - Checkpoint-table, trail or process state must not be manually edited as a shortcut.
 - A healthy Extract does not prove a healthy end-to-end pipeline; monitor capture, transport and apply independently.
 
@@ -50,7 +51,8 @@ Collect source and target database products and versions, GoldenGate release and
 
 - Oracle GoldenGate 26ai Microservices Architecture: https://docs.oracle.com/en/database/goldengate/core/26/coredoc/index.html
 - Replication components, trails and checkpoints: https://docs.oracle.com/en/database/goldengate/core/26/coredoc/overview-components-data-replication-oracle-goldengate.html
-- Preparing databases for CDC capture: https://docs.oracle.com/en/database/goldengate/core/26/coredoc/prepare-preparing-database-oracle-goldengate-cdc-capture.html
+- Preparing GoldenGate for SQL Server CDC capture and staging-data purge: https://docs.oracle.com/en/database/goldengate/core/26/coredoc/prepare-preparing-database-oracle-goldengate-cdc-capture.html
+- Extract/Replicat prerequisites, TRANDATA and checkpoint tables: https://docs.oracle.com/en/database/goldengate/core/26/coredoc/configure-ogg-adding-extract-and-replicat.html
 - Adding Extract and Replicat processes: https://docs.oracle.com/en/database/goldengate/core/26/coredoc/configure-ogg-adding-extract-and-replicat.html
 
 ## Output contract
