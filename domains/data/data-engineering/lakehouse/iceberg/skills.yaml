@@ -23,17 +23,3 @@ skills:
       - "iceberg maintenance"
     excludes: []
     status: active
-
-    description: "General data pipeline and analytical transformation design when no narrower specialist is identified."
-    triggers:
-      - "data pipeline"
-      - "etl"
-      - "data ingestion"
-      - "trino"
-      - "duckdb"
-      - "dbt"
-      - "starrocks"
-      - "warehouse modeling"
-      - "sql modeling"
-    excludes: []
-    status: active

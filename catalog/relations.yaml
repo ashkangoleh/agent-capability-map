@@ -134,11 +134,11 @@ edges:
     to: [data, data-engineering, messaging, kafka]
     relation: uses
     rationale: RisingWave can consume Kafka sources when connector and delivery semantics are verified.
-  - from: [data, data-engineering, cloud, databricks]
+  - from: [data, data-engineering, cloud]
     to: [data, data-engineering, distributed-processing, spark]
     relation: related_to
     rationale: Databricks Lakeflow extends Spark Declarative Pipelines and must be distinguished from upstream runtime capabilities.
-  - from: [data, data-engineering, governance, openmetadata]
+  - from: [data, data-engineering, governance]
     to: [data, data-governance, data-catalog]
     relation: related_to
     rationale: OpenMetadata operational ingestion complements enterprise catalog ownership, glossary and lineage governance.

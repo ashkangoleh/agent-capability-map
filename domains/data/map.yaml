@@ -49,7 +49,6 @@ children:
       - "data engineering"
       - "trino"
       - "iceberg"
-    status: active
       - "apache seatunnel"
       - "dask dataframe"
       - "datafusion"
@@ -69,6 +68,7 @@ children:
       - "oci data platform"
       - "dolphinscheduler"
       - "openmetadata"
+    status: active
     map: domains/data/data-engineering/map.yaml
   - id: data-science
     label: "Data Science & Applied Statistics"
