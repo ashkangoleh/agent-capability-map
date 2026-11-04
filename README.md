@@ -206,9 +206,9 @@ The initial resolver uses bounded, deterministic phrase matching, including sele
 
 ## Skill source directory organization
 
-The source skill library is being organized **incrementally** by domain and category. The first verified content-preserving move relocates all six `data/data-science/statistics-advanced` skill packages into `.agents/skills/data/data-science/statistics-advanced/<skill-id>/SKILL.md`. Their stable IDs and YAML routing remain unchanged; the original flat SKILL.md duplicates were retired.
+The source skill library is being organized **incrementally** by domain and category. Two verified content-preserving moves relocated six `data/data-science/statistics-advanced` and four `data/data-science/foundations` skill packages into `.agents/skills/data/data-science/<category>/<skill-id>/SKILL.md`. Their stable IDs and YAML routing remain unchanged; the original flat SKILL.md duplicates were retired.
 
-**Registry paths are authoritative.** The remaining 36 Data Science skills and the rest of the master library currently retain their registered flat paths. Direct native auto-discovery of deeply nested source skills is **not universally guaranteed** across Codex, Claude Code, Cursor, Copilot or OpenCode; the project's explicit router remains the supported source selector. Native-host discovery/export must be verified separately before claiming compatibility.
+**Registry paths are authoritative.** The remaining 32 Data Science skills and the rest of the master library currently retain their registered flat paths. Direct native auto-discovery of deeply nested source skills is **not universally guaranteed** across Codex, Claude Code, Cursor, Copilot or OpenCode; the project's explicit router remains the supported source selector. Native-host discovery/export must be verified separately before claiming compatibility.
 
 Read `docs/SKILL_LIBRARY_LAYOUT.md` for layout rules, proof limitations, and the staged migration plan. Do not auto-load all skills or create permanent flat duplicates to make a folder appear organized.
 
