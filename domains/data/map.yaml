@@ -145,6 +145,20 @@ children:
       - "calibrated classifier cv"
       - "classifier calibration brier score"
       - "کالیبراسیون احتمال طبقه بندی"
+      - "rolling origin forecast backtesting"
+      - "forecast origin data availability"
+      - "rolling forecasting origin"
+      - "rolling origin forecast"
+      - "probabilistic forecasting quantile crossing"
+      - "forecast pinball loss by horizon"
+      - "forecast quantile coverage by horizon"
+      - "hierarchical forecasting reconciliation"
+      - "hierarchical forecast coherence"
+      - "hierarchical summing matrix"
+      - "hierarchical forecasting"
+      - "intermittent demand croston tsb"
+      - "sparse demand forecast stockout"
+      - "intermittent demand obsolescence"
     map: domains/data/data-science/map.yaml
     status: active
   - id: analytics-engineering
