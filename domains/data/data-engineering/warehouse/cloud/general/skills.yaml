@@ -1,0 +1,11 @@
+schema_version: 1
+id: general
+kind: skill-registry
+skills:
+  - id: cloud-warehouse-engineering
+    path: .agents/skills/cloud-warehouse-engineering/SKILL.md
+    description: "Design Snowflake, BigQuery, Redshift, Databricks SQL and Synapse workloads with engine-specific semantics and cost controls."
+    triggers:
+      - "cloud data warehouse engineering"
+    excludes: []
+    status: active

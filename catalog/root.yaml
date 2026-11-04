@@ -137,6 +137,9 @@ children:
       - "oci data platform"
       - "dolphinscheduler"
       - "openmetadata"
+      - "data engineering overview"
+      - "streaming data"
+      - "unstructured"
     map: domains/data/map.yaml
     status: active
   - id: infrastructure

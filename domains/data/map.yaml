@@ -68,6 +68,9 @@ children:
       - "oci data platform"
       - "dolphinscheduler"
       - "openmetadata"
+      - "data engineering overview"
+      - "streaming data"
+      - "unstructured"
     status: active
     map: domains/data/data-engineering/map.yaml
   - id: data-science

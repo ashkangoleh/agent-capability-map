@@ -43,6 +43,7 @@ children:
   - id: cloud-warehouses
     description: "Snowflake, BigQuery and Redshift warehouse-specific engineering"
     triggers:
+      - "cloud data warehouse engineering"
       - "snowflake"
       - "bigquery"
       - "redshift"

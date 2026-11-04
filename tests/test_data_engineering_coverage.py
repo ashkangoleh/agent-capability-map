@@ -48,15 +48,19 @@ class DataEngineeringCoverageTests(unittest.TestCase):
             self.assertEqual(item["status"], "active")
             self.assertTrue(item.get("map") or item.get("skills"))
 
-    def test_generic_data_engineering_routes_to_foundations_fallback(self):
+    def test_bare_data_engineering_domain_requests_clarification(self):
         result = self.router.resolve("Data Engineering")
+        self.assertEqual(result["status"], "needs_clarification", result)
+
+    def test_explicit_data_engineering_overview_uses_foundations(self):
+        result = self.router.resolve("Data Engineering overview")
         self.assertEqual(result["status"], "matched", result)
         self.assertEqual(result["selected_skill"], "data-engineering-implementation", result)
 
     def test_generic_trigger_is_not_owned_by_distributed_processing(self):
         graph = load_yaml(ROOT, "domains/data/data-engineering/map.yaml")
         by_id = {item["id"]: item for item in graph["children"]}
-        self.assertIn("data engineering", by_id["foundations"]["triggers"])
+        self.assertIn("data engineering overview", by_id["foundations"]["triggers"])
         self.assertNotIn("data engineering", by_id["distributed-processing"]["triggers"])
         self.assertNotIn("مهندسی داده", by_id["distributed-processing"]["triggers"])
 

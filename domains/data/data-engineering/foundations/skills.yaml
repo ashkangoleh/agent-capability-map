@@ -41,8 +41,8 @@ skills:
     path: .agents/skills/data-engineering-implementation/SKILL.md
     description: "General data pipeline design fallback when the request does not identify a specific engine, connector or operational task."
     triggers:
-      - "data engineering"
-      - "مهندسی داده"
+      - "data engineering overview"
+      - "مرور کلی مهندسی داده"
       - "data pipeline architecture"
       - "generic etl pipeline"
     excludes: []

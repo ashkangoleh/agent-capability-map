@@ -5,6 +5,7 @@ children:
   - id: semantics
     description: "Event-time, watermarks, delivery semantics and schema compatibility"
     triggers:
+      - "streaming data"
       - "stream event time watermark window"
       - "end to end exactly once semantics"
       - "schema registry compatibility policy"

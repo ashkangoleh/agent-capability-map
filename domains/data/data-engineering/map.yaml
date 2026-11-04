@@ -5,8 +5,8 @@ children:
   - id: foundations
     description: "Lifecycle, generic pipeline design, engineering principles and runtime foundations"
     triggers:
-      - "data engineering"
-      - "مهندسی داده"
+      - "data engineering overview"
+      - "مرور کلی مهندسی داده"
       - "data pipeline architecture"
       - "generic etl pipeline"
       - "data engineering lifecycle"
@@ -44,6 +44,7 @@ children:
       - "oracle goldengate"
       - "sql server cdc"
       - "mongodb change streams"
+      - "backfill"
       - "data backfill"
       - "pipeline replay"
       - "batch etl"
@@ -74,6 +75,7 @@ children:
       - "schema registry compatibility policy"
       - "kafka streams stateful join"
       - "redpanda kafka api compatibility"
+      - "streaming data"
       - "risingwave"
       - "risingwave streaming sql"
       - "materialize streaming sql"
@@ -261,6 +263,7 @@ children:
   - id: unstructured-data
     description: "Document, binary, semi-structured and multimodal raw-data ingestion"
     triggers:
+      - "unstructured"
       - "unstructured data ingestion"
       - "document ingestion pipeline"
       - "binary file ingestion"

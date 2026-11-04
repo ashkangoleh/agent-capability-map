@@ -17,6 +17,13 @@ children:
       - "bigquery storage write api"
     status: active
     skills: domains/data/data-engineering/warehouse/cloud/bigquery/skills.yaml
+  - id: general
+    description: "Cross-vendor cloud warehouse architecture and selection"
+    triggers:
+      - "cloud data warehouse engineering"
+      - "managed cloud warehouse architecture"
+    status: active
+    skills: domains/data/data-engineering/warehouse/cloud/general/skills.yaml
   - id: redshift
     description: "Amazon Redshift loading, streaming ingestion and MPP design"
     triggers:
