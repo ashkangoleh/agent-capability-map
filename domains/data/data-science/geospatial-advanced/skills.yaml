@@ -3,7 +3,7 @@ id: geospatial-advanced
 kind: skill-registry
 skills:
   - id: ds-geospatial-statistics
-    path: .agents/skills/ds-geospatial-statistics/SKILL.md
+    path: .agents/skills/data/data-science/geospatial-advanced/ds-geospatial-statistics/SKILL.md
     description: "Perform spatial statistics with CRS-aware geometry, spatial autocorrelation and valid model evaluation."
     triggers:
       - "geospatial statistical modeling"

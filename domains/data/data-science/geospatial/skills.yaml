@@ -3,7 +3,7 @@ id: geospatial
 kind: skill-registry
 skills:
   - id: geospatial-analysis-crs-quality
-    path: .agents/skills/geospatial-analysis-crs-quality/SKILL.md
+    path: .agents/skills/data/data-science/geospatial/geospatial-analysis-crs-quality/SKILL.md
     description: "Validate geospatial CRS, geometry, area, distance and privacy-aware spatial joins."
     triggers:
       - "geospatial analysis"

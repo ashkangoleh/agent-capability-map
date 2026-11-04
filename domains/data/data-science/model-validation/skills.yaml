@@ -3,7 +3,7 @@ id: model-validation
 kind: skill-registry
 skills:
   - id: sklearn-leakage-free-validation
-    path: .agents/skills/sklearn-leakage-free-validation/SKILL.md
+    path: .agents/skills/data/data-science/model-validation/sklearn-leakage-free-validation/SKILL.md
     description: "Train and validate sklearn models with split-first, leakage-safe preprocessing and reproducible holdouts."
     triggers:
       - "sklearn pipeline"
@@ -18,7 +18,7 @@ skills:
     excludes: []
     status: active
   - id: imbalanced-classification-evaluation
-    path: .agents/skills/imbalanced-classification-evaluation/SKILL.md
+    path: .agents/skills/data/data-science/model-validation/imbalanced-classification-evaluation/SKILL.md
     description: "Evaluate imbalanced classifier precision recall calibration and prevalence-sensitive thresholds."
     triggers:
       - "imbalanced classification"
@@ -26,7 +26,7 @@ skills:
     excludes: []
     status: active
   - id: ds-conformal-prediction-uncertainty
-    path: .agents/skills/ds-conformal-prediction-uncertainty/SKILL.md
+    path: .agents/skills/data/data-science/model-validation/ds-conformal-prediction-uncertainty/SKILL.md
     description: "Construct and validate conformal prediction intervals, prediction sets and risk-controlled decisions."
     triggers:
       - "conformal prediction intervals"
@@ -41,7 +41,7 @@ skills:
       - "bayesian credible interval"
     status: active
   - id: ds-fairness-subgroup-evaluation
-    path: .agents/skills/ds-fairness-subgroup-evaluation/SKILL.md
+    path: .agents/skills/data/data-science/model-validation/ds-fairness-subgroup-evaluation/SKILL.md
     description: "Measure predictive performance disparities, calibration and decision trade-offs across subgroups."
     triggers:
       - "fairness subgroup evaluation"
