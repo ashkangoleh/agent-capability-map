@@ -6,9 +6,15 @@ skills:
     path: .agents/skills/sklearn-leakage-free-validation/SKILL.md
     description: "Train and validate sklearn models with split-first, leakage-safe preprocessing and reproducible holdouts."
     triggers:
-      - "scikit-learn"
       - "sklearn pipeline"
       - "sklearn cross validation"
+      - "scikit-learn leakage safe validation"
+      - "scikit-learn cross validation"
+      - "sklearn grouped cross validation"
+      - "sklearn time series split"
+      - "group cross validation leakage"
+      - "time series cross validation leakage"
+      - "نشت داده در اعتبارسنجی مدل"
     excludes: []
     status: active
   - id: imbalanced-classification-evaluation
