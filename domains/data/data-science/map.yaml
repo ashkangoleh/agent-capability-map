@@ -114,6 +114,15 @@ children:
       - "sequential experimentation"
       - "always valid inference"
       - "group sequential ab testing"
+      - "ab test assignment integrity"
+      - "sample ratio mismatch ab experiment"
+      - "cluster randomized experiment guardrail"
+      - "fixed horizon ab test analysis"
+      - "group sequential alpha spending"
+      - "continuous monitoring sequential experiment"
+      - "sequential experiment early stopping"
+      - "causal identification assumptions"
+      - "causal experiment design interference"
     status: active
     skills: domains/data/data-science/experimentation/skills.yaml
   - id: modeling
