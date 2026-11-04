@@ -190,7 +190,7 @@ Global host instructions / optional Cursor router skill
            |
    <technology>/<api>/skills.yaml
            |
-   selected .agents/skills/<name>/SKILL.md
+   selected registry.path -> SKILL.md (flat or domain-nested source)
            |
    selective references and tests
            +
@@ -203,6 +203,14 @@ The hierarchical maps form the primary discovery tree. Typed cross-domain depend
 
 The initial resolver uses bounded, deterministic phrase matching, including selected Persian and English aliases. It does not implement semantic understanding or infer arbitrary synonyms. In mixed-language tasks, the host can provide a concise, accurate canonical intent. Missing or ambiguous matches must lead to clarification, not invented skill selection.
 
+
+## Skill source directory organization
+
+The source skill library is being organized **incrementally** by domain and category. The first verified content-preserving move relocates all six `data/data-science/statistics-advanced` skill packages into `.agents/skills/data/data-science/statistics-advanced/<skill-id>/SKILL.md`. Their stable IDs and YAML routing remain unchanged; the original flat SKILL.md duplicates were retired.
+
+**Registry paths are authoritative.** The remaining 36 Data Science skills and the rest of the master library currently retain their registered flat paths. Direct native auto-discovery of deeply nested source skills is **not universally guaranteed** across Codex, Claude Code, Cursor, Copilot or OpenCode; the project's explicit router remains the supported source selector. Native-host discovery/export must be verified separately before claiming compatibility.
+
+Read `docs/SKILL_LIBRARY_LAYOUT.md` for layout rules, proof limitations, and the staged migration plan. Do not auto-load all skills or create permanent flat duplicates to make a folder appear organized.
 
 ## Compatibility and validation
 
