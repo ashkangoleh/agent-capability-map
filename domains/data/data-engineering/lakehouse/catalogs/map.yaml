@@ -2,6 +2,24 @@ schema_version: 1
 id: catalogs
 kind: map
 children:
+  - id: nessie
+    description: "Project Nessie branches, tags, merges and Iceberg REST migration"
+    triggers:
+      - "nessie versioned catalog"
+      - "project nessie"
+      - "nessie branch merge"
+      - "nessie iceberg rest"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/catalogs/nessie/skills.yaml
+  - id: gravitino
+    description: "Apache Gravitino metalakes and federated Iceberg REST catalog operations"
+    triggers:
+      - "apache gravitino"
+      - "gravitino metalake"
+      - "gravitino federated catalog"
+      - "gravitino iceberg rest"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/catalogs/gravitino/skills.yaml
   - id: iceberg-rest
     description: "Vendor-neutral Apache Iceberg REST protocol, credentials, concurrency and cross-engine interoperability"
     triggers:
@@ -12,6 +30,8 @@ children:
     excludes:
       - "polaris"
       - "lakekeeper"
+      - "nessie"
+      - "gravitino"
     status: active
     skills: domains/data/data-engineering/lakehouse/catalogs/iceberg-rest/skills.yaml
   - id: polaris
