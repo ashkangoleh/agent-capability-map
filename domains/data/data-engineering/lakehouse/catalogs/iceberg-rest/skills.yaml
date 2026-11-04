@@ -3,7 +3,7 @@ id: iceberg-rest
 kind: skill-registry
 skills:
   - id: iceberg-rest-catalog-operations
-    path: .agents/skills/iceberg-rest-catalog-operations/SKILL.md
+    path: .agents/skills/data/data-engineering/lakehouse/catalogs/iceberg-rest/iceberg-rest-catalog-operations/SKILL.md
     description: "Verify Apache Iceberg REST catalog protocol operations, credential vending, endpoint discovery, authorization, concurrent commits and multi-engine recovery."
     triggers:
       - "iceberg rest catalog"

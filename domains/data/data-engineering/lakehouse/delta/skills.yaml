@@ -3,7 +3,7 @@ id: delta-lake
 kind: skill-registry
 skills:
   - id: delta-lake-merge-change-feed
-    path: .agents/skills/delta-lake-merge-change-feed/SKILL.md
+    path: .agents/skills/data/data-engineering/lakehouse/delta/delta-lake-merge-change-feed/SKILL.md
     description: "Implement Delta Lake merges and change data feed pipelines with keys, protocol compatibility and retention."
     triggers:
       - "delta lake merge"

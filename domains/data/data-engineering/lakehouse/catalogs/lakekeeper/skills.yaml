@@ -3,7 +3,7 @@ id: lakekeeper
 kind: skill-registry
 skills:
   - id: lakekeeper-iceberg-catalog-operations
-    path: .agents/skills/lakekeeper-iceberg-catalog-operations/SKILL.md
+    path: .agents/skills/data/data-engineering/lakehouse/catalogs/lakekeeper/lakekeeper-iceberg-catalog-operations/SKILL.md
     description: "Operate Lakekeeper Iceberg REST catalogs with warehouse auth, storage creds and commit recovery."
     triggers:
       - "lakekeeper"
