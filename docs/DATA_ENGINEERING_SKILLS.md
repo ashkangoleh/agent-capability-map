@@ -28,6 +28,7 @@ The Data Engineering subtree is maintained through nested YAML maps and local sk
 | Prefect | `prefect-flow-reliability` |
 | OpenLineage | `openlineage-metadata-instrumentation` |
 | Iceberg | `iceberg-table-schema-partition-evolution`, `iceberg-compaction-retention` |
+| Iceberg REST catalog protocol | `iceberg-rest-catalog-operations` (vendor-neutral endpoint discovery, delegated credentials, commit conflict recovery; Polaris/Lakekeeper remain separate) |
 | Delta Lake | `delta-lake-merge-change-feed` |
 | Hudi | `hudi-cow-mor-table-design` |
 | Trino | `trino-federated-query-optimization` |
@@ -79,4 +80,4 @@ Eight additional typed links connect Flink–Kafka, Trino–Iceberg, DuckDB–Pa
 
 ## Additional tooling in unified reference branch
 
-The reference branch also covers PostgreSQL logical CDC, MySQL binlog CDC, Oracle GoldenGate, SQL Server CDC/Change Tracking, MongoDB Change Streams, MinIO object storage, Polaris and Lakekeeper Iceberg REST catalogs, DataHub metadata governance, Great Expectations validation, NiFi backpressure, Elasticsearch PIT extraction, ClickHouse MergeTree and SQL physical-plan optimization. The canonical integration branch is `pre_release`.
+The reference branch also covers PostgreSQL logical CDC, MySQL binlog CDC, Oracle GoldenGate, SQL Server CDC/Change Tracking, MongoDB Change Streams, MinIO object storage, vendor-neutral Iceberg REST catalogs, Polaris and Lakekeeper catalog implementations, DataHub metadata governance, Great Expectations validation, NiFi backpressure, Elasticsearch PIT extraction, ClickHouse MergeTree and SQL physical-plan optimization. The canonical integration branch is `pre_release`.
