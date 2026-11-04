@@ -6,6 +6,28 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
+## Current authoritative continuation — Data Science (2026-11-04)
+
+**Canonical branch:** `pre_release` (never merge `main` without explicit approval).  
+**Verified HEAD immediately before this checkpoint update:** `9d56442425bed146ad26ea05c15492b19492d0d0`; fetch live HEAD again in every new conversation.  
+**Active domain and next subfamily:** `data/data-science`; **conformal prediction + probability calibration**. **Do not switch back to Data Engineering automatically**: it has unresolved work, but current user-approved progression is across all nine Data subdomains one at a time. Never claim Data Science or Data top-level complete prematurely.
+
+### Just completed in causal inference + experimentation
+
+- Hardened three existing skills: `ds-causal-inference`, `ds-ab-experimentation`, `ds-sequential-experimentation`, including identification assumptions/refutation, assignment-level SRM diagnostics, sequential alpha spending and stopping validity; no new skill IDs.
+- Added executable `examples/data_science/assignment_integrity.py` and `tests/test_data_science_assignment_integrity.py`. **18 unit tests were actually run locally** against source-equivalent code; this is not the entire repo test suite.
+- Registered **12 `ds-causal-exp-*` routing cases**, including bilingual and near-miss cases, plus `tests/test_data_science_causal_experimentation.py`. File inventory: **408 total fixtures**, **344 unique master skill IDs**.
+- A separate JS reconstruction of lexical routing against the current GitHub YAML matched all 12 new cases. **This is not actual Python Router/CI execution**. No full push CI status or end-to-end host validation verified.
+- Source-referenced detailed review: `docs/DATA_SCIENCE_CAUSAL_EXPERIMENTATION_PROTOCOL.md`. Related previous slice: `docs/DATA_SCIENCE_VALIDATION_PROTOCOL.md`.
+- Severe limits: chi-square SRM helper is for independent *two-arm* assignment-unit events, not observed exposure or post-treatment outcomes; it is not a causal estimator and does not prove randomization correctness. Multi-arm/blocked/adaptive designs need a distinct test.
+
+### Immediate next actions
+
+1. At **current live HEAD**, execute and record `python -m capability_map validate`, `python scripts/evaluate_graph.py`, `python scripts/report_coverage.py --summary`, `python -m unittest discover -s tests -v`; inspect actual GitHub Actions push workflow. Do not report PASS on static fixture source alone.
+2. In Data Science only, audit and strengthen `ds-conformal-prediction-uncertainty` and `ds-model-calibration` with clear exchangeability/calibration/test isolation, risk/coverage guarantees, subgroup uncertainty, temporal drift and credible version-specific references.
+3. Add targeted executable, negative and bilingual fixtures; separately evaluate real model task selection across hosts. Then proceed within Data Science to forecasting, statistical/survey methods and the rest of its 42-skill inventory.
+4. Data Engineering still has catalog, broker/streaming and versioned production-recovery gaps; return to it only by an explicit progression decision. Work through the nine Data subdomains and seek approval before another **top-level** domain.
+
 ## Product intent — non-negotiable
 
 Create a broad, role-agnostic **Global Master Skill / Capability Router**, not a single-domain project and not a prompt that loads every skill. It should work for software engineers, data engineers, infrastructure/platform/SRE, data science, analytics, marketing/SEO, business and other roles.
@@ -46,7 +68,7 @@ Domain selection: users choose **up to five non-overlapping selectable domain sc
 - GitHub connector returned no associated PR workflow runs or combined status checks for the last observed commit. **Do not say the latest CI is green** on that evidence alone.
 - Real semantic routing accuracy, false activation rates, actual token usage improvements and end-to-end multi-host compatibility remain unmeasured/unverified.
 
-## Data Science working slice — 2026-11-04 (active)
+## Earlier Data Science model-validation slice — 2026-11-04
 
 **Current active subdomain is still `data/data-science`**; only the model-validation family was improved in this increment. Neither Data Science nor the whole Data domain is complete. Data Engineering remains broad but unverified and separately backlogged.
 
@@ -77,9 +99,9 @@ The next sequence after Data Science is Analytics Engineering, Database Engineer
 
 This turn also removed one duplicated `false discovery rate correction` trigger in `domains/data/map.yaml` and added a structural uniqueness regression test in `tests/test_data_science_coverage.py`. **The Python test suite/CI have not been verified against the resulting HEAD.** Run validations before claiming pass.
 
-## Current active domain and unresolved work
+## Historical Data Engineering backlog (not current active domain)
 
-**Current working domain: `data/data-engineering`. It is not finished.**
+**Historical working domain: `data/data-engineering`. It remains incomplete and is not the currently active subdomain.**
 Cross-check `docs/DATA_ENGINEERING_TOOL_MATRIX.md`, `docs/DATA_ENGINEERING_SKILLS.md`, and `docs/DATA_DOMAIN_COMPLETENESS_STATUS.md`.
 
 Documented gaps include managed warehouses (Snowflake/BigQuery/Redshift/Databricks SQL) and their operating procedures; broker and streaming-SQL breadth; catalog operations; version-specific compatibility; reproducible implementations; recovery, idempotency and replay; and comprehensive negative/ambiguous/mixed Persian-English routing evaluations. Some individual skills may already exist: audit before creating duplicates.
@@ -108,13 +130,9 @@ Completed on `pre_release` without creating or merging branches:
 3. Next capability family *within Data Engineering*: broker and streaming SQL operations, negative/ambiguous routing and production failure/replay examples. Then warehouse execution and managed-service compatibility. Only proceed to other top-level domains with explicit user approval.
 4. Continue a broader semantic/host-routing benchmark; don't convert deterministic lexical fixture passes into ungrounded accuracy estimates.
 
-## Immediate next action for a follow-up conversation
+## Current next-action pointer
 
-1. Fetch `pre_release` HEAD and read this checkpoint and `docs/UNIFIED_COMPLETENESS_AUDIT.md`; the branch may advance beyond any SHA in this file.
-2. Run `python -m capability_map validate`, `python scripts/evaluate_graph.py`, `python scripts/report_coverage.py --summary` and `python -m unittest discover -s tests -v` against current HEAD. Investigate any failures and inspect the push CI run. Never report PASS based on static fixtures alone.
-3. Stay in **Data Engineering**. Finish catalog integration/compatibility evidence or advance to the next gap family (brokers and streaming SQL), with focused skills, negative/ambiguous fixtures and production recovery details. No unrelated domain work.
-4. After a domain reaches verifiable acceptance gates, explain remaining limits and **ask which domain to work on next**. Do not choose the next domain unilaterally.
-5. Update this file with new HEAD, active domain, progress, gaps, test evidence and next agreed task.
+The **first section of this file** (`Current authoritative continuation — Data Science`) supersedes earlier next-action lists. Always read live HEAD and the latest domain audit before making changes. Current approved workstream: Data Science conformal/calibration, not a switch to another top-level domain.
 
 ## Quality gates before calling a domain complete
 
