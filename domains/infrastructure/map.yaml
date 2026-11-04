@@ -165,7 +165,7 @@ children:
       - "mysql infrastructure operations"
     status: active
     skills: domains/infrastructure/database/skills.yaml
-  - id: kubernetes
+  - id: kubernetes-platform
     description: "Kubernetes cluster, operator and CNI lifecycle"
     triggers:
       - "kubernetes cluster upgrade capacity"
