@@ -1,5 +1,5 @@
 schema_version: 1
-id: geospatial
+id: geospatial-advanced
 kind: skill-registry
 skills:
   - id: ds-geospatial-statistics

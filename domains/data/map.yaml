@@ -5,7 +5,6 @@ children:
   - id: data-engineering
     description: "data engineering"
     triggers:
-      - "multi engine data platform interoperability"
       - "clickhouse"
       - "elasticsearch pit"
       - "nifi"

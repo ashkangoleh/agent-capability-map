@@ -1,5 +1,5 @@
 schema_version: 1
-id: statistics
+id: statistics-advanced
 kind: skill-registry
 skills:
   - id: ds-power-sample-size
