@@ -19,6 +19,8 @@ skills:
     triggers:
       - "causal experiment design"
       - "causal inference sensitivity analysis"
+      - "causal identification assumptions"
+      - "causal experiment design interference"
     excludes: []
     status: active
   - id: ds-sequential-experimentation
