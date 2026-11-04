@@ -62,7 +62,7 @@ New `ds-validation-*` fixtures cover generic-tool abstention; positive group/tem
 
 ## Subsequent Data Science slices (not yet completed)
 
-- **Causal inference and experimentation:** DAG validity, positivity, interference, clustered uncertainty, sequential error control and assumption-based rejection.
+- **Causal inference and experimentation:** its existing skill trio now has identification, assignment-ratio and sequential-monitoring validity gates plus an executable two-arm assignment diagnostic; see `docs/DATA_SCIENCE_CAUSAL_EXPERIMENTATION_PROTOCOL.md`. Live causal-estimator benchmarks, stratified/clustered SRM and sequential error simulations remain unverified.
 - **Conformal and calibration:** exchangeability, finite-sample quantiles, subgroup coverage, calibration/test partition separation and distribution shift.
 - **Forecasting:** rolling-origin backtests, horizon/label availability, intermittent demand, hierarchical reconciliation, quantile calibration and uncertainty.
 - **Statistical inference and surveys:** multiplicity, survey design effects, non-response, cluster/stratification design, power and sensitivity.
@@ -76,4 +76,4 @@ New `ds-validation-*` fixtures cover generic-tool abstention; positive group/tem
 - [TimeSeriesSplit gap and spacing assumptions](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html)
 - [StratifiedGroupKFold](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedGroupKFold.html)
 
-**Next:** independently validate the new fixtures in the real Python router and proceed to causal inference and experimentation **within Data Science**. Do not mark Data Science or all of Data complete.
+**Next:** independently execute full Python router/CI validation; continue with conformal prediction/calibration and forecasting **within Data Science**. Do not mark Data Science or all of Data complete.
