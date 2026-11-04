@@ -147,6 +147,14 @@ children:
   - id: lakehouse
     description: "Open table formats, table maintenance, streaming lakehouse and table catalogs"
     triggers:
+      - "gravitino iceberg rest"
+      - "gravitino federated catalog"
+      - "gravitino metalake"
+      - "apache gravitino"
+      - "nessie iceberg rest"
+      - "nessie branch merge"
+      - "project nessie"
+      - "nessie versioned catalog"
       - "iceberg catalog"
       - "lakekeeper"
       - "polaris"
