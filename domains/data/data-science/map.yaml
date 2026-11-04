@@ -138,6 +138,10 @@ children:
       - "model explainability shap"
       - "clustering segmentation evaluation"
       - "optuna hyperparameter optimization"
+      - "probability calibration reliability diagram"
+      - "calibrated classifier cv"
+      - "classifier calibration brier score"
+      - "کالیبراسیون احتمال طبقه بندی"
     status: active
     skills: domains/data/data-science/modeling/skills.yaml
   - id: survival
