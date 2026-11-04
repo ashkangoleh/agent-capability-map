@@ -6,9 +6,9 @@ children:
     description: "Linux kernel, Windows Server and Unix/BSD systems"
     triggers:
       - "linux kernel performance diagnostics"
-      - "linux storage filesystem operations"
       - "windows server operations"
       - "unix bsd systems operations"
+      - "freebsd openbsd unix"
     status: active
     skills: domains/infrastructure/systems/skills.yaml
   - id: linux-service-management
@@ -27,5 +27,6 @@ children:
     description: "HPC, GPU, accelerator and batch scheduling"
     triggers:
       - "hpc gpu compute scheduling"
+      - "gpu compute scheduling"
     status: active
     skills: domains/infrastructure/compute/hpc/skills.yaml

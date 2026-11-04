@@ -7,5 +7,6 @@ skills:
     description: "Plan data-center physical infrastructure including racks, A/B power, UPS/PDU, cooling, airflow and DCIM."
     triggers:
       - "data center rack power cooling ups pdu dcim"
+      - "data center rack power cooling"
     excludes: []
     status: active

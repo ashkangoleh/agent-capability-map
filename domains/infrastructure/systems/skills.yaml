@@ -9,13 +9,6 @@ skills:
       - "linux kernel performance diagnostics"
     excludes: []
     status: active
-  - id: linux-storage-filesystems
-    path: .agents/skills/linux-storage-filesystems/SKILL.md
-    description: "Operate Linux block devices, filesystems, LVM, mounts and capacity with safe recovery planning."
-    triggers:
-      - "linux storage filesystem operations"
-    excludes: []
-    status: active
   - id: windows-server-operations
     path: .agents/skills/windows-server-operations/SKILL.md
     description: "Operate Windows Server services, storage, identity, patching and event diagnostics."
@@ -28,5 +21,6 @@ skills:
     description: "Administer FreeBSD, OpenBSD, NetBSD and Unix-like systems with platform-specific boot, service, network, storage and security controls."
     triggers:
       - "unix bsd systems operations"
+      - "freebsd openbsd unix"
     excludes: []
     status: active

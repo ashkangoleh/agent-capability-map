@@ -7,5 +7,6 @@ skills:
     description: "Provision and retire bare-metal servers using PXE/iPXE, MAAS, Metal3 and trusted image pipelines."
     triggers:
       - "bare metal server provisioning pxe ipxe maas metal3"
+      - "bare metal servers"
     excludes: []
     status: active

@@ -7,5 +7,6 @@ skills:
     description: "Operate Consul, etcd and CoreDNS service discovery with quorum, health, identity and DNS caching controls."
     triggers:
       - "consul etcd service discovery quorum health checks"
+      - "consul etcd service discovery"
     excludes: []
     status: active

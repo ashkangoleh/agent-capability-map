@@ -7,5 +7,6 @@ skills:
     description: "Assess cloud security posture and CNAPP controls across misconfiguration, exposure, identity, workload risk and remediation."
     triggers:
       - "cloud security posture management cnapp"
+      - "cloud security posture"
     excludes: []
     status: active

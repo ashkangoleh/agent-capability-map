@@ -14,5 +14,6 @@ children:
     triggers:
       - "san nas fibre channel iscsi nvmeof storage"
       - "s3 compatible object storage lifecycle replication object lock"
+      - "s3 compatible object storage"
     status: active
     skills: domains/infrastructure/storage/new-specialists.yaml

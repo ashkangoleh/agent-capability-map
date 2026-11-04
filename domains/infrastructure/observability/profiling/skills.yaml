@@ -14,5 +14,6 @@ skills:
     description: "Model infrastructure capacity, saturation and rightsizing across compute, network, storage and cloud quotas."
     triggers:
       - "infrastructure capacity headroom saturation rightsizing"
+      - "infrastructure capacity"
     excludes: []
     status: active

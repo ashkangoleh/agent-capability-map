@@ -7,5 +7,6 @@ skills:
     description: "Design Kubernetes north-south traffic with Gateway API, Ingress, TLS, DNS and staged traffic migration."
     triggers:
       - "kubernetes ingress gateway api"
+      - "kubernetes ingress controllers"
     excludes: []
     status: active

@@ -6,12 +6,13 @@ children:
     description: "Compute, operating systems, host lifecycle and HPC"
     triggers:
       - "linux kernel performance diagnostics"
-      - "linux storage filesystem operations"
       - "windows server operations"
       - "unix bsd systems operations"
+      - "freebsd openbsd unix"
       - "linux systemd service restart loop"
       - "linux windows server patching fleet compliance"
       - "hpc gpu compute scheduling"
+      - "gpu compute scheduling"
     status: active
     map: domains/infrastructure/compute-os/map.yaml
   - id: networking
@@ -28,9 +29,13 @@ children:
       - "authoritative dns infrastructure"
       - "tls pki certificate lifecycle"
       - "dhcp ipam network services"
+      - "dhcp ipam ntp"
       - "network automation sdn"
+      - "netbox nornir gnmi openconfig"
       - "network switching enterprise routing"
+      - "vlan stp lacp ospf evpn vxlan"
       - "wireless lan network engineering"
+      - "enterprise wifi wlan"
     status: active
     map: domains/infrastructure/networking/map.yaml
   - id: cloud-engineering
@@ -45,10 +50,13 @@ children:
       - "hybrid cloud reference architecture"
       - "aws infrastructure account guardrails"
       - "azure subscription management landing zone policy"
+      - "azure subscription management"
       - "gcp organization folders shared vpc infrastructure"
+      - "gcp organization folders"
       - "oci tenancy compartments vcn guardrails"
+      - "oci tenancy compartments"
       - "serverless managed runtime lambda cloud run functions"
-      - "cloud security posture management cnapp"
+      - "aws lambda cloud run runtime"
     status: active
     map: domains/infrastructure/cloud/map.yaml
   - id: iac-configuration
@@ -75,6 +83,7 @@ children:
     description: "Container runtimes, Kubernetes, service mesh and service discovery"
     triggers:
       - "containerd cri o podman runtime isolation"
+      - "containerd cri-o podman"
       - "container security"
       - "container build security"
       - "dockerfile security"
@@ -88,8 +97,11 @@ children:
       - "kubernetes cluster upgrade capacity"
       - "kubernetes operator crd lifecycle"
       - "kubernetes cni ebpf operations"
+      - "kubernetes multi cluster"
+      - "kubernetes ingress controllers"
       - "istio service mesh operations"
       - "consul etcd service discovery quorum health checks"
+      - "consul etcd service discovery"
     status: active
     map: domains/infrastructure/containers-orchestration/map.yaml
   - id: devops-delivery
@@ -134,6 +146,7 @@ children:
       - "infrastructure observability stack"
       - "infrastructure continuous profiling ebpf telemetry cost"
       - "infrastructure capacity headroom saturation rightsizing"
+      - "infrastructure capacity"
     status: active
     map: domains/infrastructure/observability-engineering/map.yaml
   - id: infrastructure-security
@@ -148,6 +161,7 @@ children:
       - "infrastructure iam pam jit access federation"
       - "zero trust network access microsegmentation"
       - "cloud security posture management cnapp"
+      - "cloud security posture"
     status: active
     map: domains/infrastructure/infrastructure-security/map.yaml
   - id: storage-engineering
@@ -157,6 +171,7 @@ children:
       - "linux storage filesystem operations"
       - "san nas fibre channel iscsi nvmeof storage"
       - "s3 compatible object storage lifecycle replication object lock"
+      - "s3 compatible object storage"
     status: active
     map: domains/infrastructure/storage-engineering/map.yaml
   - id: database-infrastructure
@@ -165,13 +180,16 @@ children:
       - "postgresql infrastructure operations"
       - "mysql infrastructure operations"
       - "database ha replication failover pitr"
+      - "database ha replication"
       - "mongodb redis cassandra replication persistence failover"
+      - "mongodb redis cassandra"
     status: active
     map: domains/infrastructure/database-infrastructure/map.yaml
   - id: edge-infrastructure
     description: "Edge compute fleets, remote sites and CDN delivery"
     triggers:
       - "k3s edge fleet management intermittent connectivity ota"
+      - "k3s edge fleet"
       - "cdn edge cache origin shield purge"
     status: active
     map: domains/infrastructure/edge-infrastructure/map.yaml
@@ -179,14 +197,18 @@ children:
     description: "Bare metal, server hardware, firmware, BMC and data-center facilities"
     triggers:
       - "bare metal server provisioning pxe ipxe maas metal3"
+      - "bare metal servers"
       - "server firmware bmc redfish ipmi uefi secure boot"
       - "data center rack power cooling ups pdu dcim"
+      - "data center rack power cooling"
     status: active
     map: domains/infrastructure/hardware-datacenter/map.yaml
   - id: architecture-governance
     description: "Infrastructure architecture, technical decisions, asset inventory and configuration governance"
     triggers:
       - "infrastructure architecture nfr failure domains adr"
+      - "infrastructure architecture"
       - "infrastructure asset inventory cmdb discovery configuration drift"
+      - "infrastructure asset inventory"
     status: active
     map: domains/infrastructure/architecture-governance/map.yaml

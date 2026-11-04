@@ -6,6 +6,7 @@ children:
     description: "Edge Kubernetes and remote compute fleet"
     triggers:
       - "k3s edge fleet management intermittent connectivity ota"
+      - "k3s edge fleet"
     status: active
     skills: domains/infrastructure/edge/compute/skills.yaml
   - id: cdn-delivery

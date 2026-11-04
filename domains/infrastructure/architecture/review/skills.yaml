@@ -7,5 +7,6 @@ skills:
     description: "Review infrastructure architecture against NFRs, failure domains, lifecycle, cost, security and operability."
     triggers:
       - "infrastructure architecture nfr failure domains adr"
+      - "infrastructure architecture"
     excludes: []
     status: active

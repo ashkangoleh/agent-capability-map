@@ -7,5 +7,6 @@ skills:
     description: "Engineer switching and routed fabrics across VLAN, STP, LACP, OSPF, IS-IS, VRF and EVPN/VXLAN."
     triggers:
       - "network switching enterprise routing"
+      - "vlan stp lacp ospf evpn vxlan"
     excludes: []
     status: active

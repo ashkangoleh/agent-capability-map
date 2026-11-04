@@ -6,6 +6,7 @@ children:
     description: "Bare-metal provisioning and server lifecycle"
     triggers:
       - "bare metal server provisioning pxe ipxe maas metal3"
+      - "bare metal servers"
     status: active
     skills: domains/infrastructure/hardware/bare-metal/skills.yaml
   - id: server-firmware
@@ -18,5 +19,6 @@ children:
     description: "Rack, power, cooling, UPS/PDU and DCIM"
     triggers:
       - "data center rack power cooling ups pdu dcim"
+      - "data center rack power cooling"
     status: active
     skills: domains/infrastructure/hardware/facilities/skills.yaml

@@ -7,5 +7,6 @@ skills:
     description: "Operate OCI images and runtimes including containerd, CRI-O, Podman and Docker with cgroups and isolation."
     triggers:
       - "containerd cri o podman runtime isolation"
+      - "containerd cri-o podman"
     excludes: []
     status: active

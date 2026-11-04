@@ -26,23 +26,27 @@ children:
     description: "DHCP, IPAM, NTP and address lifecycle"
     triggers:
       - "dhcp ipam network services"
+      - "dhcp ipam ntp"
     status: active
     skills: domains/infrastructure/network-services/skills.yaml
   - id: network-automation
     description: "Network automation and SDN"
     triggers:
       - "network automation sdn"
+      - "netbox nornir gnmi openconfig"
     status: active
     skills: domains/infrastructure/network-automation/skills.yaml
   - id: switching
     description: "Enterprise switching and L2/L3 fabric"
     triggers:
       - "network switching enterprise routing"
+      - "vlan stp lacp ospf evpn vxlan"
     status: active
     skills: domains/infrastructure/network-switching/skills.yaml
   - id: wireless
     description: "Enterprise WLAN, RF, 802.1X and NAC"
     triggers:
       - "wireless lan network engineering"
+      - "enterprise wifi wlan"
     status: active
     skills: domains/infrastructure/network-wireless/skills.yaml

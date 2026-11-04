@@ -7,5 +7,6 @@ skills:
     description: "Automate network infrastructure using source-of-truth inventory, declarative intent and model-driven APIs."
     triggers:
       - "network automation sdn"
+      - "netbox nornir gnmi openconfig"
     excludes: []
     status: active

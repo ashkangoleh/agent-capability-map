@@ -60,11 +60,13 @@ children:
     description: "Multi-cluster fleet and tenant isolation"
     triggers:
       - "kubernetes multi cluster fleet management tenant isolation"
+      - "kubernetes multi cluster"
     status: active
     skills: domains/infrastructure/kubernetes/multicluster/skills.yaml
   - id: gateway-api
     description: "Gateway API, Ingress and north-south traffic"
     triggers:
       - "kubernetes ingress gateway api"
+      - "kubernetes ingress controllers"
     status: active
     skills: domains/infrastructure/kubernetes/gateway-api/skills.yaml

@@ -6,11 +6,13 @@ children:
     description: "Infrastructure architecture and technical decision review"
     triggers:
       - "infrastructure architecture nfr failure domains adr"
+      - "infrastructure architecture"
     status: active
     skills: domains/infrastructure/architecture/review/skills.yaml
   - id: asset-inventory
     description: "Infrastructure asset inventory, CMDB and configuration drift"
     triggers:
       - "infrastructure asset inventory cmdb discovery configuration drift"
+      - "infrastructure asset inventory"
     status: active
     skills: domains/infrastructure/architecture/asset-inventory/skills.yaml

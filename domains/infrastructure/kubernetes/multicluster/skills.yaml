@@ -7,5 +7,6 @@ skills:
     description: "Design Kubernetes fleet management, tenancy, workload placement and lifecycle with explicit isolation boundaries."
     triggers:
       - "kubernetes multi cluster fleet management tenant isolation"
+      - "kubernetes multi cluster"
     excludes: []
     status: active

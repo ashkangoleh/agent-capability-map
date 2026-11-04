@@ -14,6 +14,7 @@ skills:
     description: "Operate Azure foundations across management groups, subscriptions, Entra identity, hub-spoke, Policy and governance."
     triggers:
       - "azure subscription management landing zone policy"
+      - "azure subscription management"
     excludes: []
     status: active
   - id: gcp-infrastructure-operations
@@ -21,6 +22,7 @@ skills:
     description: "Operate Google Cloud foundations across organization/folders/projects, Shared VPC, IAM and centralized audit."
     triggers:
       - "gcp organization folders shared vpc infrastructure"
+      - "gcp organization folders"
     excludes: []
     status: active
   - id: oci-infrastructure-operations
@@ -28,5 +30,6 @@ skills:
     description: "Operate OCI foundations across tenancies, compartments, VCNs, DRGs, IAM, Cloud Guard and fault domains."
     triggers:
       - "oci tenancy compartments vcn guardrails"
+      - "oci tenancy compartments"
     excludes: []
     status: active

@@ -7,5 +7,6 @@ skills:
     description: "Plan HPC and GPU clusters with scheduler, accelerator, NUMA and high-speed fabric constraints."
     triggers:
       - "hpc gpu compute scheduling"
+      - "gpu compute scheduling"
     excludes: []
     status: active

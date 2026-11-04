@@ -7,5 +7,6 @@ skills:
     description: "Engineer serverless and managed runtimes with event delivery, concurrency, identity, networking and retry controls."
     triggers:
       - "serverless managed runtime lambda cloud run functions"
+      - "aws lambda cloud run runtime"
     excludes: []
     status: active

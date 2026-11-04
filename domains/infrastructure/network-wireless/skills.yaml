@@ -7,5 +7,6 @@ skills:
     description: "Engineer enterprise WLAN with RF planning, 802.1X, RADIUS/NAC, roaming and client experience controls."
     triggers:
       - "wireless lan network engineering"
+      - "enterprise wifi wlan"
     excludes: []
     status: active

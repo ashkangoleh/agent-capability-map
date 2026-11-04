@@ -34,13 +34,17 @@ children:
     triggers:
       - "aws infrastructure account guardrails"
       - "azure subscription management landing zone policy"
+      - "azure subscription management"
       - "gcp organization folders shared vpc infrastructure"
+      - "gcp organization folders"
       - "oci tenancy compartments vcn guardrails"
+      - "oci tenancy compartments"
     status: active
     skills: domains/infrastructure/cloud/providers/skills.yaml
   - id: serverless
     description: "Serverless and managed runtime infrastructure"
     triggers:
       - "serverless managed runtime lambda cloud run functions"
+      - "aws lambda cloud run runtime"
     status: active
     skills: domains/infrastructure/cloud/serverless/skills.yaml

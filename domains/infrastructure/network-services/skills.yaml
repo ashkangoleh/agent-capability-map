@@ -7,5 +7,6 @@ skills:
     description: "Design DHCP, IPAM, NTP and address services with authoritative allocation, failover and DNS integration."
     triggers:
       - "dhcp ipam network services"
+      - "dhcp ipam ntp"
     excludes: []
     status: active

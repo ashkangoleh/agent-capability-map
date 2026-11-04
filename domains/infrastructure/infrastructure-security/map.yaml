@@ -29,5 +29,6 @@ children:
     description: "Cloud security posture and CNAPP governance"
     triggers:
       - "cloud security posture management cnapp"
+      - "cloud security posture"
     status: active
     skills: domains/infrastructure/security/cloud-posture/skills.yaml

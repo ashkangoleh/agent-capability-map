@@ -1,5 +1,5 @@
 schema_version: 1
-id: storage
+id: new-specialists
 kind: skill-registry
 skills:
   - id: storage-san-nas-nvmeof
@@ -14,5 +14,6 @@ skills:
     description: "Operate S3-compatible and distributed object storage with lifecycle, versioning, replication and object-lock controls."
     triggers:
       - "s3 compatible object storage lifecycle replication object lock"
+      - "s3 compatible object storage"
     excludes: []
     status: active

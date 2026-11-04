@@ -30,5 +30,6 @@ children:
     triggers:
       - "infrastructure continuous profiling ebpf telemetry cost"
       - "infrastructure capacity headroom saturation rightsizing"
+      - "infrastructure capacity"
     status: active
     skills: domains/infrastructure/observability/profiling/skills.yaml

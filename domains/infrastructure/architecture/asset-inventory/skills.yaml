@@ -7,5 +7,6 @@ skills:
     description: "Govern infrastructure asset inventory and CMDB with discovery, source of truth, ownership and drift controls."
     triggers:
       - "infrastructure asset inventory cmdb discovery configuration drift"
+      - "infrastructure asset inventory"
     excludes: []
     status: active
