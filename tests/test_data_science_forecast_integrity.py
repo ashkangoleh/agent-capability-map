@@ -5,7 +5,6 @@ from examples.data_science.forecast_integrity import (
     hierarchy_coherence_report, intermittent_demand_profile,
 )
 
-
 class ForecastIntegrityTests(unittest.TestCase):
     def setUp(self):
         self.t = [datetime(2026, 1, 1, tzinfo=timezone.utc) + timedelta(days=i) for i in range(12)]
@@ -144,7 +143,6 @@ class ForecastIntegrityTests(unittest.TestCase):
     def test_intermittent_bad_status(self):
         with self.assertRaisesRegex(ValueError, 'Unexpected'):
             intermittent_demand_profile([0], statuses=['unexpected'])
-
 
 if __name__ == '__main__':
     unittest.main()
