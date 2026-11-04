@@ -3,7 +3,7 @@
 **Updated:** 2026-11-04
 **Canonical repository:** `ashkangoleh/agent-capability-map` (private)
 **Canonical working branch:** `pre_release`
-**Verified branch HEAD before this checkpoint:** `18ae642a95d4d9dc4f58d726f61d557de5b20e75`
+**Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
 ## Product intent — non-negotiable
@@ -38,11 +38,11 @@ Domain selection: users choose **up to five non-overlapping selectable domain sc
 
 - Repository is private; branch `pre_release` exists and is **104 commits ahead of `main`, 0 behind** at the pre-checkpoint reference. `main` is not merged.
 - The latest branch HEAD immediately before this checkpoint is `18ae642a95d4d9dc4f58d726f61d557de5b20e75`, a test fix replacing brittle exact global skill-count assertions with lower bounds.
-- `catalog/master-skill-ids.yaml` currently contains **341 listed skill IDs** (counted directly).
-- `README.md` and `docs/UNIFIED_COMPLETENESS_AUDIT.md` still state **322 active skills**; these inventory claims are **stale relative to the ID index and require a fresh report and registry validation**. Do not equate 341 indexed IDs with 341 independently validated, execution-proven skills.
-- README reports **41 top-level domains**, **16 Infrastructure selectable scopes**, **95 unique Infrastructure specialists**, **348 deterministic routing fixtures**, **54 unit tests**, and **83 nested maps** at its prior audit. Treat these figures as historical until rerun on current HEAD.
+- `catalog/master-skill-ids.yaml` now contains **344 unique listed skill IDs** (counted directly after three new catalog specialists).
+- `README.md` now distinguishes **344 current registered IDs** from the historical verified **322**; `docs/UNIFIED_COMPLETENESS_AUDIT.md` retains its old audit section and adds a dated post-audit delta. The 344 indexed IDs require a fresh full graph validation before being called 344 active/proven specialist skills.
+- At the earlier audit, the repository had **41 top-level domains**, **16 Infrastructure selectable scopes**, **95 unique Infrastructure specialists**, **348 routing fixtures**, **54 unit tests**, and **83 nested maps**. The current fixtures YAML has **385 cases**; no full-suite passing result has been established against the newest branch.
 - The prior audit explicitly shows Infrastructure and Data Science have strong structural coverage but lack independent production/host evaluation. The nine Data subdomains are not all audited.
-- The most recent user discussion reported **19 additional Data Engineering specialist skills**; verify the exact skills via the branch diff and latest registry before describing them as finished.
+- The newer Data Engineering coverage test explicitly enumerates **19 additional Data Engineering specialist skill IDs**, and the current registry/index shows them. Their source and positive tests exist; execution of the whole Python suite still needs confirmation.
 - GitHub connector returned no associated PR workflow runs or combined status checks for the last observed commit. **Do not say the latest CI is green** on that evidence alone.
 - Real semantic routing accuracy, false activation rates, actual token usage improvements and end-to-end multi-host compatibility remain unmeasured/unverified.
 
@@ -57,12 +57,32 @@ Data Science: 26 defined areas have structural routes and 42 specialist skills, 
 Infrastructure: 16 first-class scopes and 95 specialist skills (historical report), but independent operational/compatibility validation remains.
 Other domains should only be taken up after user approval.
 
+## Work completed in the 2026-11-04 continuation
+
+Completed on `pre_release` without creating or merging branches:
+
+- Added three domain-specific `SKILL.md` packages:
+  - `iceberg-rest-catalog-operations`: Iceberg REST discovery, short-lived storage credentials, concurrent/indeterminate commits and cross-engine interoperability.
+  - `nessie-versioned-catalog-operations`: Project Nessie branches/tags, conflict-aware merges and native API vs Iceberg REST migration. Vendor docs currently flag its Iceberg REST integration as experimental; verify target release.
+  - `gravitino-federated-catalog-operations`: Gravitino metalakes, federated metadata, Iceberg REST service separation, version-gated features and upgrade recovery.
+- Added separate registries and first-class catalog children; updated all required ancestor YAML triggers while preserving `Polaris` and `Lakekeeper`. The generic Iceberg REST route excludes the four implementation names.
+- Added `tests/test_iceberg_rest_catalog_coverage.py` and `tests/test_catalog_vendor_coverage.py`. Added **15** deterministic positive/near-miss/mixed-language fixture cases; total fixture count **385**. Updated `README.md`, `docs/DATA_ENGINEERING_SKILLS.md`, `docs/DATA_ENGINEERING_TOOL_MATRIX.md`, `docs/DATA_ENGINEERING_CATALOG_OPERATIONS.md`, and `docs/UNIFIED_COMPLETENESS_AUDIT.md`.
+- A **separate JavaScript reconstruction** of Python lexical matching against the actual GitHub YAML produced the expected routes on **15/15 new cases**; simple source/index checks found 344 unique IDs and all expected skill headings. This is **not** an actual Python unittest, `Router.validate()` execution or GitHub Actions result.
+- The GitHub connector did not return traditional commit status checks and only exposes PR-triggered workflow runs. The push-workflow status remains **UNKNOWN / NOT VERIFIED**. Do not assert green CI or production readiness.
+
+### Scope remaining inside Data Engineering
+
+1. Run the actual Python validator, deterministic fixture runner, unit suite, and coverage script on `pre_release` HEAD; inspect the `validate.yml` push workflow. Fix any failures before adding further skills.
+2. Version-test Polaris, Lakekeeper, Nessie and Gravitino using official **release-pinned** docs and at least one integration fixture per provider; especially branch merges, delegated credentials and catalog metadata recovery.
+3. Next capability family *within Data Engineering*: broker and streaming SQL operations, negative/ambiguous routing and production failure/replay examples. Then warehouse execution and managed-service compatibility. Only proceed to other top-level domains with explicit user approval.
+4. Continue a broader semantic/host-routing benchmark; don't convert deterministic lexical fixture passes into ungrounded accuracy estimates.
+
 ## Immediate next action for a follow-up conversation
 
-1. Fetch `pre_release` HEAD and read this checkpoint and `docs/UNIFIED_COMPLETENESS_AUDIT.md`; do not trust this file's SHA as permanent.
-2. Run or independently validate live inventory, YAML graph, routing fixtures and Python tests. Reconcile 341 ID-index count against 322 stale report. Check latest GitHub Actions checks before declaring a pass.
-3. In **Data Engineering only**, compare the actual newly added 19 skills, routes, official sources and negative tests against the gap matrix. Close missing operational coverage in small focused commits, one capability family at a time.
-4. After demonstrable completion, report what is and is not verified, then **ask which domain to take next**. Do not choose the next domain unilaterally.
+1. Fetch `pre_release` HEAD and read this checkpoint and `docs/UNIFIED_COMPLETENESS_AUDIT.md`; the branch may advance beyond any SHA in this file.
+2. Run `python -m capability_map validate`, `python scripts/evaluate_graph.py`, `python scripts/report_coverage.py --summary` and `python -m unittest discover -s tests -v` against current HEAD. Investigate any failures and inspect the push CI run. Never report PASS based on static fixtures alone.
+3. Stay in **Data Engineering**. Finish catalog integration/compatibility evidence or advance to the next gap family (brokers and streaming SQL), with focused skills, negative/ambiguous fixtures and production recovery details. No unrelated domain work.
+4. After a domain reaches verifiable acceptance gates, explain remaining limits and **ask which domain to work on next**. Do not choose the next domain unilaterally.
 5. Update this file with new HEAD, active domain, progress, gaps, test evidence and next agreed task.
 
 ## Quality gates before calling a domain complete
