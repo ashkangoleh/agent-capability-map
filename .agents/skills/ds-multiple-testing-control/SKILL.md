@@ -29,6 +29,25 @@ Hypothesis family, primary/secondary outcomes, number of tests, dependence struc
 7. Report effect sizes and uncertainty intervals alongside adjusted significance. A small adjusted p-value does not imply practical importance.
 8. For large-scale discovery, validate selected findings on independent data or a predeclared replication stage.
 
+## Error-control and family integrity gate
+
+1. Freeze **all tested hypotheses in one decision family**, including unreported negative comparisons and exploratory segments. Record the family key, the complete ordered p-value list, test validity assumptions and confirmatory/exploratory status. If family selection followed results, adjusted p-values do not recover pre-registered confirmatory error control.
+2. Select the target error metric **before seeing p-values**: `FWER` (e.g. Bonferroni/Holm) bounds the probability of at least one false rejection; `FDR` (BH/BY) bounds the *expected false discovery proportion* for the specified dependence conditions. Neither adjusted p-values nor FDR represent posterior probabilities that each hypothesis is true.
+3. Match the procedure to dependence and stopping: Holm controls FWER without independence; BH controls FDR for independent or suitably positively dependent tests; BY is more conservative and supports broader dependence. Repeated peeking, adaptive test creation and multi-stage selection need procedures justified for those settings, not only an end-of-run BH adjustment.
+4. Use `examples/data_science/inference_integrity.py::adjust_pvalues` for a bounded, standard-library **arithmetic audit** of Bonferroni, Holm, BH and BY. Original hypothesis order is preserved, ties are stable, invalid/nonfinite p-values fail closed. Do not claim that this helper verifies that individual p-values are statistically valid.
+5. Compare `adjusted_pvalues` and reject flags to release-pinned `statsmodels.stats.multitest.multipletests`. For reproducibility report sorted and original hypothesis IDs, family size, chosen alpha, dependence assumptions, method, adjusted decisions, confidence intervals and practical effect sizes.
+
+### Executable arithmetic audit
+
+```python
+from examples.data_science.inference_integrity import adjust_pvalues
+
+result = adjust_pvalues([0.04, 0.001, 0.03, 0.20], method="fdr_bh")
+assert result["reject"] == [False, True, False, False]
+```
+
+This is not proof of control under optional stopping or invalid p-values. Never derive a test family from observed significance.
+
 ## Failure modes and abstention
 
 - Do not choose the correction after seeing which one makes results significant.
