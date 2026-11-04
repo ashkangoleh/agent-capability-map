@@ -44,6 +44,7 @@ skills:
       - "data engineering overview"
       - "مرور کلی مهندسی داده"
       - "data pipeline architecture"
+      - "data engineering pipeline architecture"
       - "generic etl pipeline"
     excludes: []
     status: active
