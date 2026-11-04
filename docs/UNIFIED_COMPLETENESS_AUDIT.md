@@ -2,7 +2,7 @@
 
 **Audit snapshot:** 2026-11-04  
 **Canonical branch:** `pre_release`  
-**Current HEAD:** `f2d021e34ad5538ba9f0b552511d69ee4eeaf714`  
+**Audit baseline HEAD:** `751cf133d39075fa516425a5e31dc647eae068f6`  
 **Baseline:** `main` plus the unified YAML capability map and the latest comprehensive Data Engineering, Data Science and Infrastructure changes.
 
 ## Consolidation result
@@ -11,7 +11,7 @@ The `pre_release` branch was created from the latest unified branch, then integr
 
 - Integrated source branch: `feat/comprehensive-data-science-infrastructure`
 - Integrated source head: `a34921adc0026c6e7091d0523d5996a1c3152644`
-- `pre_release` is 81 commits ahead of `main`, 0 behind; 300 changed paths.
+- At this audit snapshot, `pre_release` is 84 commits ahead of `main`, 0 behind; 300 changed paths.
 - `main` remains unchanged.
 - PR #3 was integrated into `pre_release`; PR #2 still points to the older unified branch and must not be treated as the release candidate.
 
