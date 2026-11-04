@@ -3,7 +3,7 @@ id: real-estate
 kind: skill-registry
 skills:
   - id: real-estate-due-diligence
-    path: .agents/skills/real-estate-due-diligence/SKILL.md
+    path: .agents/skills/real-estate/core/real-estate-due-diligence/SKILL.md
     description: "Use for research-only real-estate property comparables, due-diligence gaps and financial assumptions."
     triggers:
       - "property valuation"

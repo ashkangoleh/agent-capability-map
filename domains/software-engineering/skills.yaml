@@ -3,7 +3,7 @@ id: software-engineering
 kind: skill-registry
 skills:
   - id: software-engineering-implementation
-    path: .agents/skills/software-engineering-implementation/SKILL.md
+    path: .agents/skills/software-engineering/core/software-engineering-implementation/SKILL.md
     description: "Use when implementing, debugging, refactoring or reviewing application code and APIs; validate repository constraints, edge cases and tests."
     triggers:
       - "fastapi"

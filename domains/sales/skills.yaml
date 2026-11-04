@@ -3,7 +3,7 @@ id: sales
 kind: skill-registry
 skills:
   - id: sales-pipeline-forecast-audit
-    path: .agents/skills/sales-pipeline-forecast-audit/SKILL.md
+    path: .agents/skills/sales/core/sales-pipeline-forecast-audit/SKILL.md
     description: "Audit sales opportunity pipeline forecast quality using stage history, conversion evidence and revenue reconciliation."
     triggers:
       - "sales pipeline forecast"

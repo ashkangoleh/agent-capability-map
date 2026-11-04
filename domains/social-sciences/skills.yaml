@@ -3,7 +3,7 @@ id: social-sciences
 kind: skill-registry
 skills:
   - id: social-science-survey-quality
-    path: .agents/skills/social-science-survey-quality/SKILL.md
+    path: .agents/skills/social-sciences/core/social-science-survey-quality/SKILL.md
     description: "Use for social-science survey sampling, questionnaire quality, respondent privacy and inference limits."
     triggers:
       - "survey research design"
