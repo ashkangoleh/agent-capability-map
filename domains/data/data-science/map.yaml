@@ -20,6 +20,11 @@ children:
       - "نشت داده در اعتبارسنجی مدل"
       - "sklearn pipeline"
       - "sklearn cross validation"
+      - "split conformal regression"
+      - "conformal marginal coverage"
+      - "conformal subgroup coverage"
+      - "conformal residual quantile"
+      - "بازه پیش‌بینی کانفورمال"
     status: active
     skills: domains/data/data-science/model-validation/skills.yaml
   - id: statistics
