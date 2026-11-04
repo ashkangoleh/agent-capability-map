@@ -32,6 +32,11 @@ skills:
       - "conformal prediction intervals"
       - "distribution free prediction sets"
       - "conformal risk control"
+      - "split conformal regression"
+      - "conformal marginal coverage"
+      - "conformal subgroup coverage"
+      - "conformal residual quantile"
+      - "بازه پیش‌بینی کانفورمال"
     excludes:
       - "bayesian credible interval"
     status: active
