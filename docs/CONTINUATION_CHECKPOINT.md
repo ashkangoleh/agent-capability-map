@@ -51,7 +51,33 @@
 3. Add targeted executable, negative and bilingual fixtures; separately evaluate real model task selection across hosts. Then proceed within Data Science to forecasting, statistical/survey methods and the rest of its 42-skill inventory.
 4. Data Engineering still has catalog, broker/streaming and versioned production-recovery gaps; return to it only by an explicit progression decision. Work through the nine Data subdomains and seek approval before another **top-level** domain.
 
-## LATEST ACTIVE CHECKPOINT — Data Science Forecasting completed increment (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Data Science inference/surveys increment (2026-11-05)
+
+**Repo:** `ashkangoleh/agent-capability-map` (private)  
+**Branch:** `pre_release`, never merge into `main` or create feature/fix branches unless the user explicitly changes scope.  
+**HEAD before this checkpoint commit:** `cc6f1067620fbdfbe3074001e241cf96cda6ffb2` (historical immediately upon commit; always fetch live head again).  
+**Approved top-level domain:** all nine subdomains of `data`; still **NOT COMPLETE**.  
+**Current active subdomain:** `data/data-science` (42 specialist skill IDs declared); still **NOT COMPLETE / not production-certified**.  
+**NEXT:** review remaining Data Science specialist boundaries, run full Python graph/routing/unit suite and GitHub Actions, then conduct version-pinned model/survey integration and actual host/agent semantic benchmarks. Do not automatically progress into Analytics Engineering, Infrastructure or other top-level domains.
+
+### Completed in the latest increment
+
+1. Hardened **five existing** SKILL packages, no new IDs: `ds-multiple-testing-control`, `ds-survey-sampling-design`, `ds-missing-data`, `ds-robust-nonparametric-inference`, `ds-bayesian-pymc-stan`. Improved precise FWER/FDR method boundaries, strata/PSU and inclusion/response weights, Rubin pooling, cluster/paired resampling, MCMC sampler diagnostics and abstention.
+2. Created `examples/data_science/inference_integrity.py` and `tests/test_data_science_inference_integrity.py`. **23/23 Python tests actually ran locally and passed**; exact Git blob SHAs independently matched: source `b37958b1fd30c6b9898719ef8dfb2633ed492c0d`, tests `ffe9b08d94ffb0dd19c5e14112641c081453ac93`.
+3. Seeded cross-library arithmetic check with installed **statsmodels 0.14.6**, NumPy 2.3.5, SciPy 1.17.0: Bonferroni, Holm, BH and BY adjusted p-values and rejection flags matched **600/600** comparisons, across p-value vector sizes 1, 2, 3, 5, 20 and 100. These validate math only, **not original p-value validity or dependence/stopping assumptions**.
+4. Added `tests/test_data_science_inference_routing.py` and **22** `ds-inference-*` positive, bilingual, hard-negative/cross-domain routing fixtures. The *separate JavaScript lexical-router reconstruction* matched 22/22 new requests. **This does NOT establish the actual Python Router test suite PASS**.
+5. Inventory now contains **467 declared deterministic fixtures**, **344 unique master skill IDs**. Detailed technical document: `docs/DATA_SCIENCE_INFERENCE_SURVEY_VALIDATION_PROTOCOL.md`. Updated `README.md`, Data Science audit and Data root status.
+6. **Failure/claim boundaries:** Survey helper returns descriptive weighted mean/Kish weight-only effective N and explicitly **no** design-based standard error; lonely PSU fails closed. Rubin scalar pooling reports estimate/total variance but no degrees-of-freedom CI; it does not impute data. BH/BY arithmetic does not guarantee FDR without study-design assumptions. Bayesian references are reviewed but **no MCMC sampler run** was performed.
+
+### Immediate actions next time
+
+1. Fetch `pre_release` live HEAD and this **LATEST ACTIVE CHECKPOINT** first.
+2. Execute and retain logs/exit statuses: `python -m capability_map validate`, `python scripts/evaluate_graph.py`, `python scripts/report_coverage.py --summary`, `python -m unittest discover -s tests -v`. Inspect actual GitHub Actions push workflow jobs, not only PR-bound workflow-run query. If unable to run, state **NOT VERIFIED**.
+3. Complete outstanding Data Science specialist audit across statistical power, simulation, survival, geospatial, recommendation, robust/Bayesian, fairness and multilingual scientific NLP. Evaluate intent boundaries using positive/negative/Persian-English cases and controlled host agent runs. Avoid adding skill wrappers just to increase counts.
+4. Run reproducible release-pinned integration samples: survey variance with R `survey`, MI pooling with `mice`/statsmodels, actual Bayesian posterior diagnostics, and previous Data Science family integration tests. Confirm assumptions and failures, not only static routing.
+5. Keep Data Science and all of Data **incomplete** until verified acceptance criteria, and get user approval before beginning another Data subdomain. Update this checkpoint with the latest commit and verified evidence.
+
+## HISTORICAL CHECKPOINT — Previous Data Science Forecasting increment (2026-11-05)
 
 **Canonical repo:** `ashkangoleh/agent-capability-map` (private)  
 **Working branch:** `pre_release` (no `main` merge, no new feature/fix branch without explicit approval)  
