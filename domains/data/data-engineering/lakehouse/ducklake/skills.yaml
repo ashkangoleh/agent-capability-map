@@ -3,7 +3,7 @@ id: ducklake
 kind: skill-registry
 skills:
   - id: ducklake-lakehouse-format-engineering
-    path: .agents/skills/ducklake-lakehouse-format-engineering/SKILL.md
+    path: .agents/skills/data/data-engineering/lakehouse/ducklake/ducklake-lakehouse-format-engineering/SKILL.md
     description: "Design DuckLake catalogs, snapshots, schema evolution, file lifecycle and multi-client compatibility with explicit DuckDB version gates."
     triggers:
       - "ducklake"

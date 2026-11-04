@@ -3,7 +3,7 @@ id: streaming-storage
 kind: skill-registry
 skills:
   - id: apache-fluss-streaming-storage
-    path: .agents/skills/apache-fluss-streaming-storage/SKILL.md
+    path: .agents/skills/data/data-engineering/lakehouse/streaming-storage/apache-fluss-streaming-storage/SKILL.md
     description: "Operate Apache Fluss as streaming storage with log and primary-key tables, buckets, replication, remote storage and Flink tiering."
     triggers:
       - "apache fluss"

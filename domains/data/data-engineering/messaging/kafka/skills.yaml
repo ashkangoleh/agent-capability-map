@@ -3,7 +3,7 @@ id: kafka
 kind: skill-registry
 skills:
   - id: kafka-streaming-reliability
-    path: .agents/skills/kafka-streaming-reliability/SKILL.md
+    path: .agents/skills/data/data-engineering/messaging/kafka/kafka-streaming-reliability/SKILL.md
     description: "Design and review Kafka streaming workflows, offsets, delivery semantics, ordering, replay and consumer recovery."
     triggers:
       - "kafka"
@@ -16,7 +16,7 @@ skills:
       - "kinesis"
     status: active
   - id: kafka-consumer-rebalance-replay
-    path: .agents/skills/kafka-consumer-rebalance-replay/SKILL.md
+    path: .agents/skills/data/data-engineering/messaging/kafka/kafka-consumer-rebalance-replay/SKILL.md
     description: "Diagnose Kafka consumer rebalance, offset commits, replay, duplicate processing and poison-message recovery."
     triggers:
       - "kafka consumer rebalance"
@@ -27,7 +27,7 @@ skills:
     excludes: []
     status: active
   - id: kafka-connect-cdc-design
-    path: .agents/skills/kafka-connect-cdc-design/SKILL.md
+    path: .agents/skills/data/data-engineering/batch-ingestion/cdc/kafka-connect-cdc-design/SKILL.md
     description: "Engineer Kafka Connect workers, source and sink connectors with CDC snapshots, offsets and reliable task recovery."
     triggers:
       - "kafka connect"
