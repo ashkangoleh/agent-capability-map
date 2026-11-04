@@ -117,6 +117,18 @@ Four existing Data Science forecasting skills were deepened in place: `time-seri
 
 **Next Data Science family:** statistical inference and surveys, with proper multiplicity, sampling weights, missingness, robust/Bayesian uncertainty and validity boundaries. Do not mark Data Science or the top-level Data domain complete.
 
+## Statistical inference, complex surveys and missingness — 2026-11-05
+
+Five existing specialist skills were deepened **without adding IDs**: `ds-multiple-testing-control`, `ds-survey-sampling-design`, `ds-missing-data`, `ds-robust-nonparametric-inference` and `ds-bayesian-pymc-stan`.
+
+- New dependency-free `examples/data_science/inference_integrity.py` implements checked arithmetic for Bonferroni/Holm/BH/BY corrected p-values, a deliberately **descriptive-only** one-stage survey-structure guard, and scalar Rubin pooling with no unsupported degrees-of-freedom confidence interval.
+- `tests/test_data_science_inference_integrity.py`: **23/23 actually executed locally and passed**. The committed source/test Git blob SHAs match the locally executed files. Multiple-testing arithmetic also matched **600** release-pinned `statsmodels 0.14.6` seeded comparisons (with NumPy 2.3.5 / SciPy 1.17.0).
+- Added `tests/test_data_science_inference_routing.py` and **22** positive/bilingual/hard-near-miss `ds-inference-*` fixtures. Current YAML contains **467** routing cases; master skill ID inventory remains **344 unique IDs**. **22/22** new candidate routes matched a separate JS reconstruction of the lexical resolver; actual Python Router/full-suite CI was **NOT VERIFIED**.
+- Survey standard error, full multiple-imputation interval, bootstrap inference under clustering, model sampling and Bayesian posterior validity deliberately remain outside the tiny numerical helper. Their release-pinned integration and expert review are still open.
+- Reproducible scope, verified sources, limitations and commands: `docs/DATA_SCIENCE_INFERENCE_SURVEY_VALIDATION_PROTOCOL.md`.
+
+No new evidence justifies marking Data Science production-certified or the broader Data domain complete.
+
 ## Remaining limitations
 
 1. Routing fixtures measure deterministic lexical matching, not semantic accuracy of an LLM choosing when to call the resolver.
