@@ -54,6 +54,10 @@ skills:
       - "complex survey sampling weights"
       - "stratified cluster survey variance"
       - "survey design taylor linearization"
+      - "survey lonely psu variance"
+      - "survey complex sampling variance"
+      - "survey strata cluster design"
+      - "طرح نمونه گیری خوشه ای survey"
     excludes:
       - "simple random sample without weights"
     status: active
