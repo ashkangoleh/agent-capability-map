@@ -111,7 +111,6 @@ children:
       - "permutation test bootstrap confidence interval"
       - "multiple hypothesis testing fdr"
       - "false discovery rate correction"
-      - "false discovery rate correction"
       - "complex survey sampling weights"
       - "conformal prediction intervals"
       - "fairness subgroup evaluation"
