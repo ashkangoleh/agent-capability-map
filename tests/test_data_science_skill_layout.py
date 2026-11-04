@@ -57,6 +57,31 @@ class DomainSkillLayoutTests(unittest.TestCase):
                 self.assertEqual(result["selected_skill"], skill, result)
                 self.assertEqual(Path(result["skill_path"]), ROOT / f"{PREFIX}{skill}/SKILL.md")
 
+    def test_every_data_science_registry_path_is_unique_and_owned(self):
+        graph = load_yaml(ROOT, "domains/data/data-science/map.yaml")
+        ids = set()
+        paths = set()
+        for node in graph["children"]:
+            registry_path = node.get("skills")
+            if not registry_path:
+                continue
+            registry = load_yaml(ROOT, registry_path)
+            for entry in registry["skills"]:
+                with self.subTest(skill=entry["id"]):
+                    identity = entry["id"]
+                    relative = entry["path"]
+                    self.assertNotIn(identity, ids)
+                    self.assertNotIn(relative, paths)
+                    ids.add(identity)
+                    paths.add(relative)
+                    self.assertTrue(relative.startswith(".agents/skills/"))
+                    self.assertEqual(Path(relative).name, "SKILL.md")
+                    self.assertEqual(Path(relative).parent.name, identity)
+                    target = ROOT / relative
+                    self.assertTrue(target.is_file())
+                    self.assertFalse(target.is_symlink())
+        self.assertEqual(len(ids), 42)
+
     def test_master_ids_remain_unique_and_unchanged(self):
         index = load_yaml(ROOT, "catalog/master-skill-ids.yaml")["ids"]
         self.assertEqual(len(index), len(set(index)))
