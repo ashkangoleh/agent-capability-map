@@ -1,0 +1,11 @@
+schema_version: 1
+id: network-services
+kind: skill-registry
+skills:
+  - id: dhcp-ipam-network-services
+    path: .agents/skills/dhcp-ipam-network-services/SKILL.md
+    description: "Design DHCP, IPAM, NTP and address services with authoritative allocation, failover and DNS integration."
+    triggers:
+      - "dhcp ipam network services"
+    excludes: []
+    status: active

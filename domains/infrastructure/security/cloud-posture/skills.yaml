@@ -1,0 +1,11 @@
+schema_version: 1
+id: cloud-posture
+kind: skill-registry
+skills:
+  - id: cloud-security-posture-governance
+    path: .agents/skills/cloud-security-posture-governance/SKILL.md
+    description: "Assess cloud security posture and CNAPP controls across misconfiguration, exposure, identity, workload risk and remediation."
+    triggers:
+      - "cloud security posture management cnapp"
+    excludes: []
+    status: active

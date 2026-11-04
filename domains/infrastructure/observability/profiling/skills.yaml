@@ -1,0 +1,18 @@
+schema_version: 1
+id: profiling
+kind: skill-registry
+skills:
+  - id: infrastructure-observability-profiling
+    path: .agents/skills/infrastructure-observability-profiling/SKILL.md
+    description: "Design infrastructure telemetry and continuous profiling with cardinality, sampling, privacy and cost controls."
+    triggers:
+      - "infrastructure continuous profiling ebpf telemetry cost"
+    excludes: []
+    status: active
+  - id: infrastructure-capacity-performance
+    path: .agents/skills/infrastructure-capacity-performance/SKILL.md
+    description: "Model infrastructure capacity, saturation and rightsizing across compute, network, storage and cloud quotas."
+    triggers:
+      - "infrastructure capacity headroom saturation rightsizing"
+    excludes: []
+    status: active

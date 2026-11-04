@@ -1,0 +1,18 @@
+schema_version: 1
+id: storage
+kind: skill-registry
+skills:
+  - id: storage-san-nas-nvmeof
+    path: .agents/skills/storage-san-nas-nvmeof/SKILL.md
+    description: "Operate enterprise block/file storage fabrics including Fibre Channel, iSCSI, NAS, multipathing and NVMe-oF."
+    triggers:
+      - "san nas fibre channel iscsi nvmeof storage"
+    excludes: []
+    status: active
+  - id: object-storage-infrastructure-operations
+    path: .agents/skills/object-storage-infrastructure-operations/SKILL.md
+    description: "Operate S3-compatible and distributed object storage with lifecycle, versioning, replication and object-lock controls."
+    triggers:
+      - "s3 compatible object storage lifecycle replication object lock"
+    excludes: []
+    status: active

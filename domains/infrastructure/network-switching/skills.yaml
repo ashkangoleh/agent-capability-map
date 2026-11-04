@@ -1,0 +1,11 @@
+schema_version: 1
+id: network-switching
+kind: skill-registry
+skills:
+  - id: network-switching-enterprise-routing
+    path: .agents/skills/network-switching-enterprise-routing/SKILL.md
+    description: "Engineer switching and routed fabrics across VLAN, STP, LACP, OSPF, IS-IS, VRF and EVPN/VXLAN."
+    triggers:
+      - "network switching enterprise routing"
+    excludes: []
+    status: active

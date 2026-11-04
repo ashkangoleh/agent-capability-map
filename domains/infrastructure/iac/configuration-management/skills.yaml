@@ -1,0 +1,11 @@
+schema_version: 1
+id: configuration-management
+kind: skill-registry
+skills:
+  - id: configuration-management-puppet-chef-salt
+    path: .agents/skills/configuration-management-puppet-chef-salt/SKILL.md
+    description: "Engineer desired-state host configuration with Puppet, Chef, Salt and Nix-style reproducible configuration."
+    triggers:
+      - "puppet chef salt configuration management"
+    excludes: []
+    status: active

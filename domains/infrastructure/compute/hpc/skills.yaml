@@ -1,0 +1,11 @@
+schema_version: 1
+id: hpc
+kind: skill-registry
+skills:
+  - id: hpc-gpu-compute-scheduling
+    path: .agents/skills/hpc-gpu-compute-scheduling/SKILL.md
+    description: "Plan HPC and GPU clusters with scheduler, accelerator, NUMA and high-speed fabric constraints."
+    triggers:
+      - "hpc gpu compute scheduling"
+    excludes: []
+    status: active

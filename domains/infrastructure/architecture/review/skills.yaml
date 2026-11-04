@@ -1,0 +1,11 @@
+schema_version: 1
+id: review
+kind: skill-registry
+skills:
+  - id: infrastructure-architecture-decision-review
+    path: .agents/skills/infrastructure-architecture-decision-review/SKILL.md
+    description: "Review infrastructure architecture against NFRs, failure domains, lifecycle, cost, security and operability."
+    triggers:
+      - "infrastructure architecture nfr failure domains adr"
+    excludes: []
+    status: active

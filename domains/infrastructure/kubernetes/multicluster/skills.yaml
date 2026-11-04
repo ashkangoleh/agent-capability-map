@@ -1,0 +1,11 @@
+schema_version: 1
+id: multicluster
+kind: skill-registry
+skills:
+  - id: kubernetes-multicluster-tenancy
+    path: .agents/skills/kubernetes-multicluster-tenancy/SKILL.md
+    description: "Design Kubernetes fleet management, tenancy, workload placement and lifecycle with explicit isolation boundaries."
+    triggers:
+      - "kubernetes multi cluster fleet management tenant isolation"
+    excludes: []
+    status: active

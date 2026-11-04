@@ -1,0 +1,11 @@
+schema_version: 1
+id: os-fleet
+kind: skill-registry
+skills:
+  - id: os-fleet-patching-compliance
+    path: .agents/skills/os-fleet-patching-compliance/SKILL.md
+    description: "Operate Linux and Windows fleets through staged patching, kernel lifecycle and configuration compliance."
+    triggers:
+      - "linux windows server patching fleet compliance"
+    excludes: []
+    status: active

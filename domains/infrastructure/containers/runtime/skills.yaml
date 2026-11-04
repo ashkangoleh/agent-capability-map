@@ -1,0 +1,11 @@
+schema_version: 1
+id: runtime
+kind: skill-registry
+skills:
+  - id: container-runtime-operations
+    path: .agents/skills/container-runtime-operations/SKILL.md
+    description: "Operate OCI images and runtimes including containerd, CRI-O, Podman and Docker with cgroups and isolation."
+    triggers:
+      - "containerd cri o podman runtime isolation"
+    excludes: []
+    status: active

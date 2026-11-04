@@ -1,0 +1,11 @@
+schema_version: 1
+id: cdn
+kind: skill-registry
+skills:
+  - id: cdn-edge-delivery-operations
+    path: .agents/skills/cdn-edge-delivery-operations/SKILL.md
+    description: "Engineer CDN delivery with cache keys, TTL, origin shielding, purge, TLS, WAF and traffic steering."
+    triggers:
+      - "cdn edge cache origin shield purge"
+    excludes: []
+    status: active
