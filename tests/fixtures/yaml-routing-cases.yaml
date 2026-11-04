@@ -1505,3 +1505,32 @@ cases:
     request: "Review Iceberg schema evolution and partition changes"
     status: matched
     skill: iceberg-table-schema-partition-evolution
+
+  - id: de-catalog-vendor-nessie-branches
+    request: "Plan Project Nessie versioned catalog branches and protected tags"
+    status: matched
+    skill: nessie-versioned-catalog-operations
+  - id: de-catalog-vendor-nessie-conflict
+    request: "Recover Nessie branch merge conflict after a timeout"
+    status: matched
+    skill: nessie-versioned-catalog-operations
+  - id: de-catalog-vendor-nessie-rest
+    request: "Migrate a Nessie Iceberg REST client to versioned references"
+    status: matched
+    skill: nessie-versioned-catalog-operations
+  - id: de-catalog-vendor-gravitino-metalake
+    request: "Operate Apache Gravitino metalake catalogs and source permissions"
+    status: matched
+    skill: gravitino-federated-catalog-operations
+  - id: de-catalog-vendor-gravitino-federation
+    request: "Audit Gravitino federated catalog metadata and source drift"
+    status: matched
+    skill: gravitino-federated-catalog-operations
+  - id: de-catalog-vendor-gravitino-rest
+    request: "Review Gravitino Iceberg REST catalog endpoint compatibility"
+    status: matched
+    skill: gravitino-federated-catalog-operations
+  - id: de-catalog-vendor-gravitino-persian
+    request: "بررسی Apache Gravitino metalake و امنیت کاتالوگ"
+    status: matched
+    skill: gravitino-federated-catalog-operations
