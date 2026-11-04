@@ -83,22 +83,33 @@ ids:
   - ds-causal-inference
   - ds-classical-nlp
   - ds-clustering-evaluation
+  - ds-conformal-prediction-uncertainty
+  - ds-doubleml-causal-estimation
+  - ds-fairness-subgroup-evaluation
   - ds-geospatial-statistics
   - ds-gradient-boosting
   - ds-graph-science
   - ds-hierarchical-forecasting
+  - ds-intermittent-demand-forecasting
   - ds-jupyter-reproducibility
   - ds-missing-data
   - ds-model-calibration
   - ds-monte-carlo
+  - ds-multilingual-nlp-evaluation
+  - ds-multiple-testing-control
   - ds-operations-research
   - ds-optuna-search
+  - ds-panel-econometrics
   - ds-power-sample-size
+  - ds-probabilistic-forecasting
   - ds-problem-framing
   - ds-r-statistics
   - ds-recommender-evaluation
+  - ds-robust-nonparametric-inference
   - ds-scientific-python
+  - ds-sequential-experimentation
   - ds-shap-explainability
+  - ds-survey-sampling-design
   - ds-survival-analysis
   - duckdb-parquet-transformation
   - ecommerce-product-catalog-audit
@@ -166,8 +177,8 @@ ids:
   - ml-model-serving-canary
   - mlflow-experiment-registry-lifecycle
   - model-data-label-governance
-  - mongodb-change-streams-cdc
   - model-quantization-benchmark
+  - mongodb-change-streams-cdc
   - multi-engine-data-platform-interoperability
   - mysql-binlog-cdc-integrity
   - network-dns-tls-diagnostics

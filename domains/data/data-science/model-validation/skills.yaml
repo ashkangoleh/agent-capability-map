@@ -19,3 +19,23 @@ skills:
       - "imbalanced classifier"
     excludes: []
     status: active
+- id: ds-conformal-prediction-uncertainty
+    path: .agents/skills/ds-conformal-prediction-uncertainty/SKILL.md
+    description: "Construct and validate conformal prediction intervals, prediction sets and risk-controlled decisions."
+    triggers:
+      - "conformal prediction intervals"
+      - "distribution free prediction sets"
+      - "conformal risk control"
+    excludes:
+      - "bayesian credible interval"
+    status: active
+  - id: ds-fairness-subgroup-evaluation
+    path: .agents/skills/ds-fairness-subgroup-evaluation/SKILL.md
+    description: "Measure predictive performance disparities, calibration and decision trade-offs across subgroups."
+    triggers:
+      - "fairness subgroup evaluation"
+      - "equalized odds demographic parity"
+      - "model performance disparities groups"
+    excludes:
+      - "responsible ai governance risk assessment"
+    status: active

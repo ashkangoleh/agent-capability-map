@@ -9,3 +9,13 @@ skills:
       - "classical text mining nlp"
     excludes: []
     status: active
+- id: ds-multilingual-nlp-evaluation
+    path: .agents/skills/ds-multilingual-nlp-evaluation/SKILL.md
+    description: "Evaluate classical NLP across languages, scripts, dialects and code-switched text."
+    triggers:
+      - "multilingual nlp evaluation"
+      - "language stratified text classification"
+      - "code switched text analytics"
+    excludes:
+      - "multilingual llm evaluation"
+    status: active

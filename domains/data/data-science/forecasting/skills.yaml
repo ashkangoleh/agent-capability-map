@@ -9,3 +9,23 @@ skills:
       - "hierarchical time series reconciliation"
     excludes: []
     status: active
+- id: ds-probabilistic-forecasting
+    path: .agents/skills/ds-probabilistic-forecasting/SKILL.md
+    description: "Build and evaluate predictive distributions, quantiles, intervals and calibrated forecast uncertainty."
+    triggers:
+      - "probabilistic forecasting quantile"
+      - "forecast prediction intervals calibration"
+      - "crps pinball loss"
+    excludes:
+      - "intermittent demand croston"
+    status: active
+  - id: ds-intermittent-demand-forecasting
+    path: .agents/skills/ds-intermittent-demand-forecasting/SKILL.md
+    description: "Forecast sparse and intermittent demand with Croston-family methods and inventory-aligned evaluation."
+    triggers:
+      - "intermittent demand forecasting"
+      - "croston sba tsb"
+      - "sparse demand forecast inventory"
+    excludes:
+      - "dense seasonal demand series"
+    status: active

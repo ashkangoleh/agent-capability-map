@@ -1,37 +1,53 @@
 ---
 name: ds-model-calibration
-description: "Evaluate probability calibration and decision thresholds against prevalence, asymmetric costs and constraints."
+description: Use when evaluating or correcting probability calibration, prediction thresholds, and decision costs for classification models.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # ds-model-calibration
 
 ## Activation boundary
-Evaluate probability calibration and decision thresholds against prevalence, asymmetric costs and constraints.
+
+Use when model scores are interpreted as probabilities or converted into operational decisions. Calibration is distinct from ranking/discrimination and from causal treatment-effect estimation.
 
 ## Required context
-Prediction horizon, prevalence, cost matrix, calibration split and threshold stability.
 
-## Analysis procedure
-1. Define target, prediction time, entity grain and feature availability before splitting.
-2. Use temporal/group splits and fit preprocessing only inside training folds.
-3. Compare baselines with tuned models using task-aligned metrics and calibration.
-4. Use nested validation or a held-out set; control compute and seeds.
-5. Inspect subgroup errors, drift, stability and explainability.
+Prediction horizon, target definition, prevalence, score distribution, calibration data, class costs, capacity constraints and subgroup definitions.
 
-## Failure modes and safeguards
-- Do not infer causality from predictive association or treat a p-value as effect size.
-- Protect temporal/group boundaries, label availability, sampling design and multiplicity assumptions.
-- Report uncertainty, sensitivity, calibration and population limitations; do not fabricate performance.
+## Workflow
 
-## Validation
-- Reproduce from a clean environment and immutable data/split definitions.
-- Test leakage, missingness, subgroup stability, sensitivity and generalization.
-- Record library versions, seeds, assumptions, metrics and limitations.
+1. Check whether the model output is a probability, margin, ranking score or transformed score. Do not apply probability calibration to an arbitrary score without defining the mapping.
+2. Evaluate discrimination and calibration separately. Use log loss/Brier score, reliability diagrams, calibration intercept/slope and subgroup calibration; include confidence intervals where feasible.
+3. Reserve an independent calibration set or use cross-fitting. Never fit a calibrator on the final test labels.
+4. Compare sigmoid/Platt, isotonic or other justified calibration methods against the uncalibrated baseline. Isotonic can overfit with limited calibration data.
+5. Select thresholds from an explicit cost matrix, capacity limit, utility function or policy constraint. Report precision, recall, false-positive/negative counts and expected cost across thresholds.
+6. Evaluate threshold and calibration stability across time, prevalence shifts, key subgroups and data-quality changes.
+7. If prevalence or covariate distributions shift, reassess calibration. Prior-probability adjustment requires assumptions and should not be applied automatically.
+8. Record the calibrator, split, threshold, objective, subgroup metrics and retraining trigger separately from the base model.
 
-## Official reference
+## Decision rules
+
+- Good ROC-AUC does not imply calibrated probabilities.
+- A 0.5 threshold is not generally optimal.
+- Calibration can change ranking for some methods; re-evaluate discrimination after calibration.
+- Global calibration does not guarantee subgroup calibration.
+
+## Failure modes and abstention
+
+- Do not optimize thresholds on the final test set.
+- Do not report calibration from the training set.
+- Do not treat threshold tuning as a substitute for fairness or policy review.
+- If calibration data are too small or not representative, report uncertainty and avoid false precision.
+
+## Validation checklist
+
+- [ ] Probability semantics and prediction horizon are explicit.
+- [ ] Calibration is measured on independent data.
+- [ ] Discrimination and calibration are reported separately.
+- [ ] Threshold is tied to costs/capacity, not convention.
+- [ ] Stability and subgroup calibration are checked.
+
+## Authoritative reference
+
 - https://scikit-learn.org/stable/modules/calibration.html
-
-## Output contract
-Return the analysis/modeling result with estimand, assumptions, validation design, uncertainty, reproducibility and decision implications. Separate observed evidence from inference.

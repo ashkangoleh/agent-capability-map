@@ -2,7 +2,7 @@
 
 Global-first, YAML-driven, hierarchical discovery for reusable skills across coding agents. A single master map serves all projects. A user can **add personal skills** globally or per project without changing the master repository.
 
-The current `pre_release` baseline contains 41 top-level domains and 276 active SKILL.md packages. The deterministic routing suite contains 297 fixtures; passing it validates the YAML graph and lexical resolver, not semantic LLM accuracy or production execution. Many fine-grained subdomains remain mapped-only and require focused implementation and evaluation. Get live counts with `python scripts/report_coverage.py --summary`. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
+The current `pre_release` baseline contains 41 top-level domains and 287 active SKILL.md packages. The deterministic routing suite contains 313 fixtures; passing it validates the YAML graph and lexical resolver, not semantic LLM accuracy or production execution. Many fine-grained subdomains remain mapped-only and require focused implementation and evaluation. Get live counts with `python scripts/report_coverage.py --summary`. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
 
 ## Operating contract
 
@@ -255,7 +255,7 @@ This branch adds 49 specialist packages for lifecycle/modeling, ingestion/CDC, s
 
 ## First-class Data Science domain
 
-Data Science is a first-class subdomain under Data & Analytics, alongside Data Engineering, Analytics Engineering, Data Analysis, Database Engineering, BI and Governance. It covers statistical inference, experiments, causal inference, classical ML, forecasting, survival, recommendation, geospatial science, optimization and scientific computing. See docs/DATA_SCIENCE_TOOL_MATRIX.md. AI/ML remains a separate top-level domain for deep learning, LLM engineering, MLOps and model serving.
+Data Science is a first-class subdomain under Data & Analytics, alongside Data Engineering, Analytics Engineering, Data Analysis, Database Engineering, BI and Governance. It now contains 44 active specialist skills across statistical inference, robust/nonparametric methods, Bayesian modeling, experiments, causal ML, panel econometrics, classical ML, calibration, fairness assessment, conformal uncertainty, forecasting, survival, recommendation, geospatial science, optimization, multilingual NLP and scientific computing. See docs/DATA_SCIENCE_TOOL_MATRIX.md. AI/ML remains a separate top-level domain for deep learning, LLM engineering, MLOps and model serving.
 
 ## Expanded Infrastructure Engineering
 

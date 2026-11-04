@@ -77,6 +77,20 @@ children:
       - "model explainability"
       - "geospatial statistics"
       - "operations research"
+      - "robust nonparametric inference"
+      - "permutation test bootstrap confidence interval"
+      - "multiple hypothesis testing fdr"
+      - "false discovery rate correction"
+      - "false discovery rate correction"
+      - "complex survey sampling weights"
+      - "conformal prediction intervals"
+      - "fairness subgroup evaluation"
+      - "double machine learning causal estimation"
+      - "panel econometrics fixed effects"
+      - "sequential experimentation"
+      - "probabilistic forecasting quantile"
+      - "intermittent demand forecasting"
+      - "multilingual nlp evaluation"
     map: domains/data/data-science/map.yaml
     status: active
   - id: analytics-engineering

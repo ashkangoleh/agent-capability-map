@@ -994,6 +994,72 @@ cases:
     status: matched
     skill: ds-classical-nlp
 
+  - id: ds-specialist-robust-nonparametric-inference
+    request: "Data scientist: robust nonparametric inference permutation test bootstrap confidence interval"
+    status: matched
+    skill: ds-robust-nonparametric-inference
+  - id: ds-specialist-multiple-testing-control
+    request: "Data scientist: multiple hypothesis testing FDR false discovery rate correction"
+    status: matched
+    skill: ds-multiple-testing-control
+  - id: ds-specialist-survey-sampling-design
+    request: "Data scientist: complex survey sampling weights stratified cluster survey variance"
+    status: matched
+    skill: ds-survey-sampling-design
+  - id: ds-specialist-conformal-prediction
+    request: "Data scientist: conformal prediction intervals and distribution free prediction sets"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-specialist-fairness-subgroup-evaluation
+    request: "Data scientist: fairness subgroup evaluation equalized odds demographic parity"
+    status: matched
+    skill: ds-fairness-subgroup-evaluation
+  - id: ds-specialist-doubleml-causal-estimation
+    request: "Data scientist: double machine learning causal estimation with orthogonal scores"
+    status: matched
+    skill: ds-doubleml-causal-estimation
+  - id: ds-specialist-panel-econometrics
+    request: "Data scientist: panel econometrics fixed effects staggered difference in differences"
+    status: matched
+    skill: ds-panel-econometrics
+  - id: ds-specialist-sequential-experimentation
+    request: "Data scientist: sequential experimentation always valid inference"
+    status: matched
+    skill: ds-sequential-experimentation
+  - id: ds-specialist-probabilistic-forecasting
+    request: "Data scientist: probabilistic forecasting quantile prediction intervals calibration"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-specialist-intermittent-demand
+    request: "Data scientist: intermittent demand forecasting Croston SBA TSB"
+    status: matched
+    skill: ds-intermittent-demand-forecasting
+  - id: ds-specialist-multilingual-nlp
+    request: "Data scientist: multilingual NLP evaluation language stratified code switched text classification"
+    status: matched
+    skill: ds-multilingual-nlp-evaluation
+
+  - id: ds-near-miss-llm-rag-evaluation
+    request: "Evaluate RAG evidence sufficiency and hallucination risk for an LLM"
+    status: matched
+    skill: rag-evidence-sufficiency-evaluation
+  - id: ds-near-miss-feature-store
+    request: "Design an online offline feature store with point in time consistency"
+    status: matched
+    skill: feast-online-offline-feature-store
+  - id: ds-near-miss-responsible-ai
+    request: "Perform responsible AI risk assessment for a model release"
+    status: matched
+    skill: responsible-ai-risk-assessment
+  - id: ds-near-miss-fixed-horizon-ab
+    request: "Data scientist: ab test guardrail analysis fixed horizon primary metric"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-near-miss-dense-time-series
+    request: "Data scientist: time series forecast dense seasonal electricity load"
+    status: matched
+    skill: time-series-forecast-backtesting
+
   - id: infra-expanded-opentofu-iac-state-migration
     request: "Infrastructure: opentofu state migration"
     status: matched

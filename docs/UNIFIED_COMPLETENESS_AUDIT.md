@@ -20,11 +20,11 @@ The `pre_release` branch was created from the latest unified branch, then integr
 | Measure | Current value |
 |---|---:|
 | Top-level domains | 41 |
-| Active SKILL.md packages | 276 |
+| Active SKILL.md packages | 287 |
 | Nested map files | 68 |
 | Skill registries | 186 |
-| Deterministic routing fixtures | 297 |
-| Unit tests | 31 |
+| Deterministic routing fixtures | 313 |
+| Unit tests | 48 |
 
 These are structural inventory values, not a completeness or production-readiness score. Use `python scripts/report_coverage.py --summary` for live counts.
 
@@ -33,7 +33,7 @@ These are structural inventory values, not a completeness or production-readines
 | Domain | Assessment | What exists | What remains incomplete |
 |---|---|---|---|
 | Data Engineering | Broad structural coverage; operational depth uneven | Ingestion, CDC, batch/streaming, orchestration, transformation, formats, lakehouse/catalogs, warehouse/federation, quality, governance, DataOps, reliability, cloud, serving and architecture. The CDC route now includes Oracle GoldenGate, SQL Server CDC/Change Tracking and MongoDB Change Streams. | Engine-specific managed warehouse procedures, broader broker and streaming-SQL coverage, catalog operations, versioned compatibility matrices, runnable reference implementations, production failure/recovery evidence and deeper routing evaluation. |
-| Data Science | Medium; broad taxonomy and specialist routes | Scientific computing, statistics, Bayesian methods, experimentation, causal design, classical ML, calibration, explainability, forecasting, survival, recommendation, graph, geospatial, simulation, optimization and text analytics. | Sparse specialist coverage for robust/nonparametric inference, econometrics, MNAR sensitivity, multilingual NLP evaluation, advanced causal estimators, fairness, uncertainty and reproducible notebooks/datasets. |
+| Data Science | Broad specialist coverage; operational depth still under evaluation | 44 active specialist skills across 20 subdomain maps: scientific computing, EDA, frequentist and Bayesian inference, robust/nonparametric methods, multiple testing, complex surveys, experimentation, causal ML, panel econometrics, missing data, classical ML, calibration, fairness assessment, conformal uncertainty, forecasting, survival, recommendation, graph, geospatial, simulation, optimization, reproducible notebooks and multilingual NLP. | Remaining work: independent task evaluation, deeper causal-design evidence, domain-specific reference datasets, subgroup uncertainty for low-resource populations, forecasting under distribution shift, version-tested examples and periodic source maintenance. Legal fairness conclusions and deployment/MLOps remain outside this domain's scope. |
 | Infrastructure Engineering | Broad taxonomy; operational implementation incomplete | IaC, GitOps, CI/CD, DevSecOps, SRE, networking, cloud, Linux/Windows, virtualization, storage, database operations, Kubernetes, service mesh and platform engineering. | Version-tested procedures, identity lifecycle, PKI/CA operations, production DR drills, hardware/firmware, observability cardinality/cost, capacity models and multi-cloud failure testing. |
 | AI & ML Engineering | Existing domain; separate audit required | LLM/RAG, deep learning, ML, MLOps, vision, speech and responsible AI routes. | Distributed training, evaluation methodology, inference optimization, model governance, safety, feature lifecycle and production observability. |
 | Software Engineering | Partial specialist coverage | Backend, frontend, architecture, languages, testing and developer tools. | Mobile framework coverage, secure SDLC depth, API compatibility and production testing. |
@@ -41,10 +41,10 @@ These are structural inventory values, not a completeness or production-readines
 
 ## Validation status
 
-- YAML graph validation: **PASS** (276 indexed active skills; 186 registries; typed relations validated).
-- Deterministic routing evaluation: **PASS** (297 fixtures; no failed cases).
-- Coverage report: **PASS** (41 top-level domains; 276 indexed active skills; 68 maps).
-- CLI, security and overlay unit tests: **PASS** (31/31).
+- YAML graph validation: **PASS** (287 indexed active skills; 186 registries; typed relations validated).
+- Deterministic routing evaluation: **PASS** (313 fixtures; no failed cases).
+- Coverage report: **PASS** (41 top-level domains; 287 indexed active skills; 68 maps).
+- CLI, security and overlay unit tests: **PASS** (48/48).
 - Host compatibility (Codex, OpenCode, Copilot, Claude Code, Cursor): **NOT VERIFIED**.
 - Semantic routing quality and false-positive/false-negative rates: **NOT MEASURED**.
 - Production readiness: **NOT ESTABLISHED**.

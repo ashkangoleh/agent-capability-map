@@ -9,6 +9,10 @@ children:
       - "sklearn"
       - "imbalance"
       - "imbalanced classification"
+      - "conformal prediction intervals"
+      - "distribution free prediction sets"
+      - "fairness subgroup evaluation"
+      - "equalized odds demographic parity"
     status: active
     skills: domains/data/data-science/model-validation/skills.yaml
   - id: statistics
@@ -26,6 +30,10 @@ children:
       - "causal inference"
       - "observational causal"
       - "causal impact"
+      - "double machine learning causal estimation"
+      - "doubleml orthogonal scores"
+      - "panel econometrics fixed effects"
+      - "staggered difference in differences"
     status: active
     skills: domains/data/data-science/causal/skills.yaml
   - id: forecasting
@@ -83,6 +91,11 @@ children:
       - "statistical power sample size"
       - "bayesian modeling pymc stan"
       - "missing data mechanism imputation"
+      - "robust nonparametric inference"
+      - "permutation test bootstrap confidence interval"
+      - "multiple hypothesis testing fdr"
+      - "false discovery rate correction"
+      - "complex survey sampling weights"
     status: active
     skills: domains/data/data-science/statistics-advanced/skills.yaml
   - id: experimentation
@@ -91,6 +104,9 @@ children:
       - "ab test guardrail analysis"
       - "causal experiment design"
       - "causal inference sensitivity analysis"
+      - "sequential experimentation"
+      - "always valid inference"
+      - "group sequential ab testing"
     status: active
     skills: domains/data/data-science/experimentation/skills.yaml
   - id: modeling
@@ -113,6 +129,10 @@ children:
     description: "Hierarchical forecasting"
     triggers:
       - "hierarchical time series reconciliation"
+      - "probabilistic forecasting quantile"
+      - "forecast prediction intervals calibration"
+      - "intermittent demand forecasting"
+      - "croston sba tsb"
     status: active
     skills: domains/data/data-science/forecasting/skills.yaml
   - id: recommendation
@@ -149,5 +169,8 @@ children:
     description: "Text mining and classical NLP"
     triggers:
       - "classical text mining nlp"
+      - "multilingual nlp evaluation"
+      - "language stratified text classification"
+      - "code switched text analytics"
     status: active
     skills: domains/data/data-science/text-analytics/skills.yaml
