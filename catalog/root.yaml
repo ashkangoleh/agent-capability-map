@@ -6,6 +6,8 @@ children:
     label: "Data Engineering & Analytics"
     description: "Data engineering, analytics, warehousing, governance, quality and business intelligence."
     triggers:
+      - "multi engine data platform interoperability"
+      - "experiment result analysis"
       - "sql explain plan"
       - "clickhouse mergetree"
       - "elasticsearch pit"
@@ -87,6 +89,11 @@ children:
     label: "Data Science & Applied Statistics"
     description: "Statistical reasoning, experimentation, scientific computing, classical machine learning and quantitative decision science."
     triggers:
+      - "point in time features"
+      - "imbalanced classification"
+      - "geospatial analysis"
+      - "pandas eda"
+      - "anomaly detection"
       - "data scientist"
       - "data science"
       - "statistical inference"

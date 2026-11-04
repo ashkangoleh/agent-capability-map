@@ -84,7 +84,7 @@ children:
       - "bayesian modeling pymc stan"
       - "missing data mechanism imputation"
     status: active
-    skills: domains/data/data-science/statistics/skills.yaml
+    skills: domains/data/data-science/statistics-advanced/skills.yaml
   - id: experimentation
     description: "Experiments and causal design"
     triggers:
@@ -131,7 +131,7 @@ children:
     triggers:
       - "geospatial statistical modeling"
     status: active
-    skills: domains/data/data-science/geospatial/skills.yaml
+    skills: domains/data/data-science/geospatial-advanced/skills.yaml
   - id: simulation
     description: "Monte Carlo and uncertainty"
     triggers:
