@@ -11,7 +11,7 @@ The repository exposed one comprehensive feature branch containing the Data Engi
 - Consolidated source branch: `feat/comprehensive-data-science-infrastructure`
 - Source head: `29505024130134fc4587990a7dba84e362a278b7`
 - Delta against `main` at audit time: 69 commits ahead, 0 behind; 300 changed paths against `main`.
-- Inventory at source head: 273 `SKILL.md` files and 42 top-level domain maps.
+- Inventory at source head: 273 `SKILL.md` files, 42 top-level domain routes and 41 direct top-level map files.
 - `main` remains unchanged. This branch is not yet merged into `main`.
 
 ## Domain maturity assessment
