@@ -3,7 +3,7 @@ id: experimentation
 kind: skill-registry
 skills:
   - id: ds-ab-experimentation
-    path: .agents/skills/ds-ab-experimentation/SKILL.md
+    path: .agents/skills/data/data-science/experimentation/ds-ab-experimentation/SKILL.md
     description: "Analyze randomized experiments with predeclared primary metrics, guardrails and sequential validity."
     triggers:
       - "ab test guardrail analysis"
@@ -14,7 +14,7 @@ skills:
     excludes: []
     status: active
   - id: ds-causal-inference
-    path: .agents/skills/ds-causal-inference/SKILL.md
+    path: .agents/skills/data/data-science/experimentation/ds-causal-inference/SKILL.md
     description: "Choose randomized, quasi-experimental or observational causal designs from estimand and identification assumptions."
     triggers:
       - "causal experiment design"
@@ -24,7 +24,7 @@ skills:
     excludes: []
     status: active
   - id: ds-sequential-experimentation
-    path: .agents/skills/ds-sequential-experimentation/SKILL.md
+    path: .agents/skills/data/data-science/experimentation/ds-sequential-experimentation/SKILL.md
     description: "Design sequentially valid experiments with interim monitoring, early stopping and adaptive procedures."
     triggers:
       - "sequential experimentation"

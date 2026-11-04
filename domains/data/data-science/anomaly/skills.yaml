@@ -3,7 +3,7 @@ id: anomaly
 kind: skill-registry
 skills:
   - id: anomaly-detection-baselines
-    path: .agents/skills/anomaly-detection-baselines/SKILL.md
+    path: .agents/skills/data/data-science/anomaly/anomaly-detection-baselines/SKILL.md
     description: "Detect anomalies using baseline seasonality, labeled incident tests and operational alert feedback."
     triggers:
       - "anomaly detection"

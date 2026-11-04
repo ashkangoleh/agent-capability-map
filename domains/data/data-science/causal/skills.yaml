@@ -3,7 +3,7 @@ id: causal
 kind: skill-registry
 skills:
   - id: causal-inference-observational
-    path: .agents/skills/causal-inference-observational/SKILL.md
+    path: .agents/skills/data/data-science/causal/causal-inference-observational/SKILL.md
     description: "Review causal inference estimands, observational assumptions, confounders and sensitivity analysis."
     triggers:
       - "causal inference"
@@ -12,7 +12,7 @@ skills:
     excludes: []
     status: active
   - id: ds-doubleml-causal-estimation
-    path: .agents/skills/ds-doubleml-causal-estimation/SKILL.md
+    path: .agents/skills/data/data-science/causal/ds-doubleml-causal-estimation/SKILL.md
     description: "Estimate causal parameters with orthogonal scores, cross-fitting and double machine learning."
     triggers:
       - "double machine learning causal estimation"
@@ -22,7 +22,7 @@ skills:
       - "predictive machine learning only"
     status: active
   - id: ds-panel-econometrics
-    path: .agents/skills/ds-panel-econometrics/SKILL.md
+    path: .agents/skills/data/data-science/causal/ds-panel-econometrics/SKILL.md
     description: "Analyze panel data with fixed effects, clustered inference and staggered treatment designs."
     triggers:
       - "panel econometrics fixed effects"
