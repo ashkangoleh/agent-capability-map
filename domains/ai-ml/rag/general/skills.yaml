@@ -3,7 +3,7 @@ id: general
 kind: skill-registry
 skills:
   - id: ai-rag-engineering
-    path: .agents/skills/ai-rag-engineering/SKILL.md
+    path: .agents/skills/ai-ml/llm/general/ai-rag-engineering/SKILL.md
     description: "Design ACL-aware RAG pipelines with embeddings, retrieval evaluation and observed evidence sufficiency."
     triggers:
       - "rag"

@@ -3,7 +3,7 @@ id: monitoring
 kind: skill-registry
 skills:
   - id: ml-drift-performance-monitoring
-    path: .agents/skills/ml-drift-performance-monitoring/SKILL.md
+    path: .agents/skills/ai-ml/machine-learning/monitoring/ml-drift-performance-monitoring/SKILL.md
     description: "Monitor ML model drift and delayed-label performance with alerting and retraining reviews."
     triggers:
       - "model drift"

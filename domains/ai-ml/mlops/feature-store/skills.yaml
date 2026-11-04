@@ -3,7 +3,7 @@ id: feature-store
 kind: skill-registry
 skills:
   - id: feast-online-offline-feature-store
-    path: .agents/skills/feast-online-offline-feature-store/SKILL.md
+    path: .agents/skills/ai-ml/machine-learning/features/feast-online-offline-feature-store/SKILL.md
     description: "Operate Feast feature store historical retrieval and online materialization with parity checks."
     triggers:
       - "feast"
