@@ -29,6 +29,8 @@ The Data Engineering subtree is maintained through nested YAML maps and local sk
 | OpenLineage | `openlineage-metadata-instrumentation` |
 | Iceberg | `iceberg-table-schema-partition-evolution`, `iceberg-compaction-retention` |
 | Iceberg REST catalog protocol | `iceberg-rest-catalog-operations` (vendor-neutral endpoint discovery, delegated credentials, commit conflict recovery; Polaris/Lakekeeper remain separate) |
+| Nessie versioned catalog | `nessie-versioned-catalog-operations` (branches/tags, merge recovery, Iceberg REST migration) |
+| Gravitino federated catalog | `gravitino-federated-catalog-operations` (metalakes, catalog provider IAM, distinct REST interfaces and upgrades) |
 | Delta Lake | `delta-lake-merge-change-feed` |
 | Hudi | `hudi-cow-mor-table-design` |
 | Trino | `trino-federated-query-optimization` |
