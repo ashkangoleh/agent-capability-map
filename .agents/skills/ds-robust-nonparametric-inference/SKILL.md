@@ -32,6 +32,14 @@ Estimand, outcome scale, independent/paired/clustered unit, sampling design, sam
 7. Report effect size and interval, not only a p-value. Apply the relevant multiplicity policy when many outcomes or subgroups are tested.
 8. Run sensitivity checks to influential observations, alternative statistics and plausible dependence structures.
 
+## Resampling validity and stopping gate
+
+1. Define the estimand and **resampling unit** before selecting a method. IID row bootstrap fails for correlated panels, randomization by clusters and matched pairs. Paired data require resampling the same observation indices across input arrays; clustered designs require cluster-preserving resampling.
+2. A permutation p-value is valid only with an exchangeable null distribution and a permutation scheme consistent with treatment assignment/sampling. Shuffling individual outcomes between randomized clusters destroys the actual randomization mechanism.
+3. In release-pinned SciPy, `scipy.stats.bootstrap` supports `paired=True`, `method="BCa"` and an explicit random generator. BCa may be degenerate for constant statistics, tiny samples or influence outliers: detect warnings/NaN endpoints and report the interval as unsupported rather than silently substituting a narrow interval.
+4. For Monte Carlo methods, record generator state, exact resamples, randomized test-unit count, null statistic and uncertainty from finite resamples; do not conflate a Monte Carlo approximation with the exact randomization distribution. Use a preregistered adaptive stop criterion only if its inference remains valid.
+5. Compare robust location/scale estimates with the original estimand, include subgroup/outlier sensitivity and correct multiplicity across reported comparisons.
+
 ## Failure modes and abstention
 
 - Do not interpret Mann-Whitney as a test of medians unless additional distribution-shape assumptions hold.
@@ -52,3 +60,4 @@ Estimand, outcome scale, independent/paired/clustered unit, sampling design, sam
 
 - https://docs.scipy.org/doc/scipy/reference/stats.html
 - https://www.statsmodels.org/stable/stats.html
+- https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html
