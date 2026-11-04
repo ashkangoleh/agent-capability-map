@@ -60,7 +60,7 @@ class CausalExperimentationRoutingTests(unittest.TestCase):
             "ds-causal-inference": ("## Identification gate and adversarial review",
                                     "unmeasured confounding", "identification table"),
             "ds-sequential-experimentation": ("## Interim-monitoring validity gate",
-                                               "alpha-spending", "Type I"),
+                                               "alpha-spending", "type-I"),
         }
         for skill_id, must_have in expectations.items():
             with self.subTest(skill=skill_id):
