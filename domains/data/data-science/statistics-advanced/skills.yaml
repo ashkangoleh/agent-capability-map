@@ -21,6 +21,10 @@ skills:
     description: "Diagnose MCAR/MAR/MNAR assumptions and choose defensible imputation or sensitivity methods."
     triggers:
       - "missing data mechanism imputation"
+      - "rubin multiple imputation pooling"
+      - "mnar missingness sensitivity"
+      - "missing data mcar mar mnar"
+      - "تجمیع multiple imputation برآوردها"
     excludes: []
     status: active
   - id: ds-robust-nonparametric-inference
