@@ -166,6 +166,7 @@ ids:
   - ml-model-serving-canary
   - mlflow-experiment-registry-lifecycle
   - model-data-label-governance
+  - mongodb-change-streams-cdc
   - model-quantization-benchmark
   - multi-engine-data-platform-interoperability
   - mysql-binlog-cdc-integrity
@@ -184,6 +185,7 @@ ids:
   - opensearch-analytics-index-engineering
   - opentelemetry-collector-pipeline
   - opentofu-iac-state-migration
+  - oracle-goldengate-cdc-operations
   - packer-image-lifecycle
   - pandas-eda-data-profiling
   - pandera-dataframe-validation
@@ -249,6 +251,7 @@ ids:
   - sql-explain-plan-optimization
   - sql-metric-definition-analysis
   - sqlmesh-stateful-transformations
+  - sqlserver-cdc-change-tracking
   - sre-capacity-load-testing
   - sre-incident-rca-runbook
   - sre-slo-error-budget

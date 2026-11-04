@@ -4,7 +4,7 @@
 |---|---|---|---|
 | Languages and data frames | Python, SQL, Scala, Java, R, pandas, Polars, PyArrow, DuckDB, Dask, Ray | Managed notebooks and serverless runtimes | typing, memory bounds, vectorization, serialization, native dependencies |
 | Ingestion / ELT | Airbyte, dlt, Meltano/Singer, NiFi, Apache Hop | Fivetran, Estuary, cloud-native ingestion | full refresh, cursor incrementals, state, pagination, retries, schema drift |
-| CDC | Debezium, Kafka Connect, Flink CDC, WAL/binlog readers | Managed database migration/CDC | snapshot/log handoff, WAL/binlog, GTID/LSN, deletes, ordering, sink semantics |
+| CDC | Debezium, Kafka Connect, Flink CDC, Oracle GoldenGate, SQL Server CDC/Change Tracking, MongoDB Change Streams, WAL/binlog readers | Managed database migration/CDC | snapshot/log handoff, WAL/binlog, GTID/LSN, capture-instance validity, resume tokens, oplog window, deletes, ordering, sink semantics |
 | Event streaming | Kafka, Pulsar, Redpanda, RabbitMQ | MSK, Confluent Cloud, Kinesis, Pub/Sub, Event Hubs | partitions, ordering, retention, consumer groups, offsets, DLQ, replay |
 | Stream processing | Flink, Spark Structured Streaming, Beam, Kafka Streams | Dataflow and managed runtimes | event time, watermarks, windows, late events, state, checkpoints, backpressure |
 | Distributed compute | Spark, Flink, Beam, Hadoop, Ray | EMR, Dataproc, managed Spark | shuffle, skew, spill, adaptive execution, broadcast joins, isolation |
@@ -13,7 +13,7 @@
 | File / interchange | Parquet, ORC, Avro, Protobuf, JSON Schema, Arrow IPC/Flight, Substrait | Vendor-optimized formats | row groups, codecs, logical types, compatibility, query-plan exchange |
 | Lakehouse | Iceberg, Delta Lake, Hudi, Paimon, DuckLake | Managed lakehouse implementations | snapshots, manifests, commits, deletes, schema evolution, compaction |
 | Catalogs | Hive Metastore, Polaris, Nessie, Lakekeeper, Gravitino, DataHub, OpenMetadata | Glue Catalog, Unity Catalog | REST catalog, namespaces, credential vending, lineage, ownership |
-| Storage / NoSQL | MinIO, HDFS, HBase, Ceph, Cassandra, MongoDB, Redis | S3, GCS, ADLS and managed NoSQL | durability, replication, TTL, tombstones, lifecycle, recovery |
+| Storage / NoSQL | MinIO, HDFS, HBase, Ceph, Cassandra, MongoDB Change Streams, Redis | S3, GCS, ADLS and managed NoSQL | durability, replication, TTL, tombstones, lifecycle, recovery |
 | Warehouses / federation | Trino, Presto, Dremio, StarRocks, Doris, ClickHouse | Snowflake, BigQuery, Redshift, Databricks SQL, Synapse/Fabric | MPP, pushdown, plans, sort/distribution keys, concurrency, cost |
 | Real-time OLAP / search | Pinot, Druid, Elasticsearch, OpenSearch | Managed search/OLAP | segments, shards, indexes, refresh, upsert, retention |
 | Quality / observability | GX, Soda, Deequ, Pandera, dbt tests, Elementary, OpenLineage | Commercial data observability | contracts, profiling, reconciliation, freshness, volume, schema, lineage |

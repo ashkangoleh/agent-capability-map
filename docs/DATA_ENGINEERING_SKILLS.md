@@ -2,7 +2,7 @@
 
 ## Scope
 
-29 new narrowly scoped Agent Skills have been added on top of the previous 59 active skills. All are linked through the authoritative YAML graph. For maintained counts run:
+The Data Engineering subtree is maintained through nested YAML maps and local skill registries. The current inventory includes engine-specific procedures and cross-cutting reliability, governance, quality and architecture skills. Treat this document as a capability guide, not a claim that every vendor product is production-certified. For live counts and structural validation run:
 
     python scripts/report_coverage.py --summary
     python -m capability_map validate
@@ -20,6 +20,7 @@
 | Pulsar | `pulsar-subscription-replay` |
 | RabbitMQ | `rabbitmq-consumer-delivery-safety` |
 | Kinesis | `kinesis-stream-consumer-recovery` |
+| CDC sources | `debezium-cdc-bootstrap`, `oracle-goldengate-cdc-operations`, `sqlserver-cdc-change-tracking`, `mongodb-change-streams-cdc` |
 | Debezium | `debezium-cdc-bootstrap` |
 | Airflow | `airflow-backfill-scheduling` |
 | Argo Workflows | `argo-workflows-data-orchestration` |
@@ -70,7 +71,7 @@ Structural validation checks SKILL.md frontmatter, path safety and YAML referenc
 
 ## Out of scope / next additions
 
-Business Intelligence, Data Science, the Semantic Layer and selected relational database tools are now mapped to active skills. Other subdomains remain unmapped or mapped-only; consult the live coverage report. A mapped-only status must produce an explicit unavailable/clarification response instead of fabricating a Skill. Add dedicated skills only after reviewing current official interfaces and designing negative, near-miss, multilingual and workload validation cases.
+Business Intelligence, Data Science, the Semantic Layer and selected relational database tools are now mapped to active skills. Some vendor-specific engines and connector families remain mapped-only or are represented by broader interoperability skills. The current high-priority CDC source expansion adds Oracle GoldenGate, SQL Server CDC/Change Tracking and MongoDB Change Streams. Remaining gaps are tracked as separate work items; mapped-only nodes must return explicit unavailable/clarification rather than fabricated expertise.
 
 ## Typed graph links
 
@@ -78,4 +79,4 @@ Eight additional typed links connect Flink–Kafka, Trino–Iceberg, DuckDB–Pa
 
 ## Additional tooling in unified reference branch
 
-Eleven further Data Engineering skills cover PostgreSQL logical CDC, MySQL binlog CDC, MinIO object storage, Polaris and Lakekeeper Iceberg REST catalogs, DataHub metadata governance, Great Expectations validation, NiFi backpressure, Elasticsearch PIT extraction, ClickHouse MergeTree and SQL physical-plan optimization. These routes are part of `feat/master-reference-platform-data-ai`; see [MASTER_REFERENCE_EXPANSION.md](MASTER_REFERENCE_EXPANSION.md).
+The reference branch also covers PostgreSQL logical CDC, MySQL binlog CDC, Oracle GoldenGate, SQL Server CDC/Change Tracking, MongoDB Change Streams, MinIO object storage, Polaris and Lakekeeper Iceberg REST catalogs, DataHub metadata governance, Great Expectations validation, NiFi backpressure, Elasticsearch PIT extraction, ClickHouse MergeTree and SQL physical-plan optimization. The canonical integration branch is `pre_release`.

@@ -1154,3 +1154,28 @@ cases:
     request: "Infrastructure: karpenter keda autoscaling"
     status: matched
     skill: platform-engineering-karpenter-keda
+
+  - id: de-cdc-oracle-goldengate
+    request: "Configure Oracle GoldenGate Extract and Replicat with trail checkpoint recovery"
+    status: matched
+    skill: oracle-goldengate-cdc-operations
+  - id: de-cdc-sqlserver-lsn
+    request: "Design SQL Server CDC incremental extraction with LSN validity and retention cleanup"
+    status: matched
+    skill: sqlserver-cdc-change-tracking
+  - id: de-cdc-mongodb-resume
+    request: "Recover MongoDB Change Streams from a resume token after collection invalidate"
+    status: matched
+    skill: mongodb-change-streams-cdc
+  - id: de-cdc-oracle-goldengate-fa
+    request: "برای Oracle GoldenGate تنظیم Extract و Replicat و بازیابی trail را طراحی کن"
+    status: matched
+    skill: oracle-goldengate-cdc-operations
+  - id: de-cdc-sqlserver-lsn-fa
+    request: "برای SQL Server CDC استخراج افزایشی بر اساس LSN و retention را طراحی کن"
+    status: matched
+    skill: sqlserver-cdc-change-tracking
+  - id: de-cdc-mongodb-resume-fa
+    request: "بازیابی MongoDB Change Streams با resume token بعد از invalidate را طراحی کن"
+    status: matched
+    skill: mongodb-change-streams-cdc

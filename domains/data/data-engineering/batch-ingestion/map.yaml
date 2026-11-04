@@ -9,6 +9,9 @@ children:
       - "cdc snapshot"
       - "change data capture"
       - "kafka connect cdc"
+      - "oracle goldengate"
+      - "sql server cdc"
+      - "mongodb change streams"
     status: active
     skills: domains/data/data-engineering/batch-ingestion/cdc/skills.yaml
   - id: parquet-layout
