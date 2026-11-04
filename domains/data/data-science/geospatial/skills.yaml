@@ -2,12 +2,10 @@ schema_version: 1
 id: geospatial
 kind: skill-registry
 skills:
-  - id: geospatial-analysis-crs-quality
-    path: .agents/skills/geospatial-analysis-crs-quality/SKILL.md
-    description: "Validate geospatial CRS, geometry, area, distance and privacy-aware spatial joins."
+  - id: ds-geospatial-statistics
+    path: .agents/skills/ds-geospatial-statistics/SKILL.md
+    description: "Perform spatial statistics with CRS-aware geometry, spatial autocorrelation and valid model evaluation."
     triggers:
-      - "geospatial analysis"
-      - "geopandas"
-      - "coordinate reference system"
+      - "geospatial statistical modeling"
     excludes: []
     status: active

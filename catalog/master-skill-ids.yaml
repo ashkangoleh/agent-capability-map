@@ -68,6 +68,28 @@ ids:
   - distributed-query-engine-performance
   - dlt-pipeline-engineering
   - dremio-presto-query-federation
+  - ds-ab-experimentation
+  - ds-bayesian-pymc-stan
+  - ds-causal-inference
+  - ds-classical-nlp
+  - ds-clustering-evaluation
+  - ds-geospatial-statistics
+  - ds-gradient-boosting
+  - ds-graph-science
+  - ds-hierarchical-forecasting
+  - ds-jupyter-reproducibility
+  - ds-missing-data
+  - ds-model-calibration
+  - ds-monte-carlo
+  - ds-operations-research
+  - ds-optuna-search
+  - ds-power-sample-size
+  - ds-problem-framing
+  - ds-r-statistics
+  - ds-recommender-evaluation
+  - ds-scientific-python
+  - ds-shap-explainability
+  - ds-survival-analysis
   - duckdb-parquet-transformation
   - ecommerce-product-catalog-audit
   - elasticsearch-pit-bulk-extraction

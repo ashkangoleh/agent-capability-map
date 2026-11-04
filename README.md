@@ -222,3 +222,7 @@ The canonical work branch `feat/master-reference-platform-data-ai` extends the s
 ## Comprehensive Data Engineering expansion
 
 This branch adds 49 specialist packages for lifecycle/modeling, ingestion/CDC, streaming, orchestration, SQL transformation, formats, storage, warehouses/OLAP, quality, governance, DataOps, reliability, performance, cloud data platforms, serving, lakehouse and multi-engine architecture. See `docs/DATA_ENGINEERING_TOOL_MATRIX.md`. Tool inclusion is not proof of installation or availability.
+
+## First-class Data Science domain
+
+Data Science is a peer domain of Data Engineering, Infrastructure and AI/ML. It covers statistical inference, experiments, causal inference, classical ML, forecasting, survival, recommendation, geospatial science, optimization and scientific computing. See docs/DATA_SCIENCE_TOOL_MATRIX.md. AI/ML remains separate for deep learning, LLM engineering, MLOps and model serving.

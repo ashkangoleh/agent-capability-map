@@ -904,3 +904,92 @@ cases:
     request: "Data engineering: medallion lambda kappa architecture"
     status: matched
     skill: medallion-lambda-kappa-architecture
+
+  - id: ds-expanded-ds-problem-framing
+    request: "Data scientist: data science problem framing"
+    status: matched
+    skill: ds-problem-framing
+  - id: ds-expanded-ds-scientific-python
+    request: "Data scientist: scientific python numerical computing"
+    status: matched
+    skill: ds-scientific-python
+  - id: ds-expanded-ds-r-statistics
+    request: "Data scientist: r statistical computing workflow"
+    status: matched
+    skill: ds-r-statistics
+  - id: ds-expanded-ds-jupyter-reproducibility
+    request: "Data scientist: jupyter notebook reproducibility"
+    status: matched
+    skill: ds-jupyter-reproducibility
+  - id: ds-expanded-ds-power-sample-size
+    request: "Data scientist: statistical power sample size"
+    status: matched
+    skill: ds-power-sample-size
+  - id: ds-expanded-ds-bayesian-pymc-stan
+    request: "Data scientist: bayesian modeling pymc stan"
+    status: matched
+    skill: ds-bayesian-pymc-stan
+  - id: ds-expanded-ds-missing-data
+    request: "Data scientist: missing data mechanism imputation"
+    status: matched
+    skill: ds-missing-data
+  - id: ds-expanded-ds-ab-experimentation
+    request: "Data scientist: ab test guardrail analysis"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-expanded-ds-causal-inference
+    request: "Data scientist: causal experiment design"
+    status: matched
+    skill: ds-causal-inference
+  - id: ds-expanded-ds-gradient-boosting
+    request: "Data scientist: xgboost lightgbm catboost modeling"
+    status: matched
+    skill: ds-gradient-boosting
+  - id: ds-expanded-ds-model-calibration
+    request: "Data scientist: model calibration threshold analysis"
+    status: matched
+    skill: ds-model-calibration
+  - id: ds-expanded-ds-shap-explainability
+    request: "Data scientist: model explainability shap"
+    status: matched
+    skill: ds-shap-explainability
+  - id: ds-expanded-ds-clustering-evaluation
+    request: "Data scientist: clustering segmentation evaluation"
+    status: matched
+    skill: ds-clustering-evaluation
+  - id: ds-expanded-ds-optuna-search
+    request: "Data scientist: optuna hyperparameter optimization"
+    status: matched
+    skill: ds-optuna-search
+  - id: ds-expanded-ds-survival-analysis
+    request: "Data scientist: survival analysis censoring"
+    status: matched
+    skill: ds-survival-analysis
+  - id: ds-expanded-ds-hierarchical-forecasting
+    request: "Data scientist: hierarchical time series reconciliation"
+    status: matched
+    skill: ds-hierarchical-forecasting
+  - id: ds-expanded-ds-recommender-evaluation
+    request: "Data scientist: recommender offline ranking evaluation"
+    status: matched
+    skill: ds-recommender-evaluation
+  - id: ds-expanded-ds-graph-science
+    request: "Data scientist: graph network science analysis"
+    status: matched
+    skill: ds-graph-science
+  - id: ds-expanded-ds-geospatial-statistics
+    request: "Data scientist: geospatial statistical modeling"
+    status: matched
+    skill: ds-geospatial-statistics
+  - id: ds-expanded-ds-monte-carlo
+    request: "Data scientist: monte carlo simulation uncertainty"
+    status: matched
+    skill: ds-monte-carlo
+  - id: ds-expanded-ds-operations-research
+    request: "Data scientist: operations research optimization"
+    status: matched
+    skill: ds-operations-research
+  - id: ds-expanded-ds-classical-nlp
+    request: "Data scientist: classical text mining nlp"
+    status: matched
+    skill: ds-classical-nlp
