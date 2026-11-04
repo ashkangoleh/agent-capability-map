@@ -17,7 +17,7 @@ skills:
       - "causal inference sensitivity analysis"
     excludes: []
     status: active
-- id: ds-sequential-experimentation
+  - id: ds-sequential-experimentation
     path: .agents/skills/ds-sequential-experimentation/SKILL.md
     description: "Design sequentially valid experiments with interim monitoring, early stopping and adaptive procedures."
     triggers:

@@ -23,7 +23,7 @@ skills:
       - "missing data mechanism imputation"
     excludes: []
     status: active
-- id: ds-robust-nonparametric-inference
+  - id: ds-robust-nonparametric-inference
     path: .agents/skills/ds-robust-nonparametric-inference/SKILL.md
     description: "Select robust, rank-based, permutation and bootstrap inference with explicit design assumptions."
     triggers:

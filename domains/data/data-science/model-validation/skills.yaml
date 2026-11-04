@@ -19,7 +19,7 @@ skills:
       - "imbalanced classifier"
     excludes: []
     status: active
-- id: ds-conformal-prediction-uncertainty
+  - id: ds-conformal-prediction-uncertainty
     path: .agents/skills/ds-conformal-prediction-uncertainty/SKILL.md
     description: "Construct and validate conformal prediction intervals, prediction sets and risk-controlled decisions."
     triggers:

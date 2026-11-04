@@ -9,7 +9,7 @@ skills:
       - "hierarchical time series reconciliation"
     excludes: []
     status: active
-- id: ds-probabilistic-forecasting
+  - id: ds-probabilistic-forecasting
     path: .agents/skills/ds-probabilistic-forecasting/SKILL.md
     description: "Build and evaluate predictive distributions, quantiles, intervals and calibrated forecast uncertainty."
     triggers:
