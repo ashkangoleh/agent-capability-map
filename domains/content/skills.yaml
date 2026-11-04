@@ -3,7 +3,7 @@ id: content
 kind: skill-registry
 skills:
   - id: content-editorial-brief
-    path: .agents/skills/content-editorial-brief/SKILL.md
+    path: .agents/skills/content/core/content-editorial-brief/SKILL.md
     description: "Plan original, audience-first editorial briefs with grounded claims, expert review, content quality and publication measurement."
     triggers:
       - "content strategy"

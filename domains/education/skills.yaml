@@ -3,7 +3,7 @@ id: education
 kind: skill-registry
 skills:
   - id: curriculum-outcomes-assessment
-    path: .agents/skills/curriculum-outcomes-assessment/SKILL.md
+    path: .agents/skills/education/core/curriculum-outcomes-assessment/SKILL.md
     description: "Design curriculum learning outcomes, formative assessments, feedback loops and accessible teaching activities."
     triggers:
       - "curriculum"

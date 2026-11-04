@@ -3,7 +3,7 @@ id: construction
 kind: skill-registry
 skills:
   - id: construction-bim-data-coordination
-    path: .agents/skills/construction-bim-data-coordination/SKILL.md
+    path: .agents/skills/construction/core/construction-bim-data-coordination/SKILL.md
     description: "Review BIM and IFC data coordination with versioned schema, element identities, properties, units and engineer review."
     triggers:
       - "bim"

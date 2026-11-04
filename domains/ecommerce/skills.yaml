@@ -3,7 +3,7 @@ id: ecommerce
 kind: skill-registry
 skills:
   - id: ecommerce-product-catalog-audit
-    path: .agents/skills/ecommerce-product-catalog-audit/SKILL.md
+    path: .agents/skills/ecommerce/core/ecommerce-product-catalog-audit/SKILL.md
     description: "Audit ecommerce catalog variant identity, feed completeness, price consistency and listing remediation."
     triggers:
       - "ecommerce product listing"

@@ -3,7 +3,7 @@ id: agriculture
 kind: skill-registry
 skills:
   - id: agriculture-field-data-quality
-    path: .agents/skills/agriculture-field-data-quality/SKILL.md
+    path: .agents/skills/agriculture/core/agriculture-field-data-quality/SKILL.md
     description: "Validate agricultural field data with plot, spatial, season, sampling and measurement quality contracts."
     triggers:
       - "agriculture field survey"
