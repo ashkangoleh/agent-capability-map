@@ -36,6 +36,14 @@ Use for Bayesian generative modeling, hierarchical partial pooling, posterior in
 - Posterior predictive fit does not prove causal identification or validate the sampling process.
 - A converged sampler does not rescue a misspecified likelihood or an unidentified estimand.
 
+## MCMC diagnostic and predictive-validity gate
+
+1. Pin PyMC/Stan and the appropriate ArviZ release: published functions, return types and diagnostics can move between `arviz`, `arviz_stats` and `arviz_plots`. Record versions before generating any executable example.
+2. Calculate rank-normalized split `R-hat`, bulk/tail ESS and MCSE for all decision-critical parameters; review **divergences, maximum tree depth and BFMI** in addition to trace/rank plots. A generic threshold (often `R-hat <= 1.01`) is a screen, not proof of correct mixing or likelihood specification.
+3. Prior predictive checks must inspect plausible outcome scale, tails and impossible observations **before** fitting data. Posterior predictive checks must target zero counts, groups, extreme events and temporal dependence in the **actual decision population**.
+4. If Pareto-k flags influence/poor PSIS-LOO approximation, use a more appropriate refit or validation design rather than citing the unreliable criterion. Small ESS, divergences and misspecified observation mechanisms require model redesign, not merely larger numbers of draws.
+5. Model-comparison results are conditioned on priors, likelihood, data selection and outcome horizon; they do not establish causal identification or fairness. Report sensitivity and abstention when required diagnostics remain unresolved.
+
 ## Failure modes and abstention
 
 - Do not report estimates from chains with unresolved convergence or material divergences.
@@ -56,3 +64,5 @@ Use for Bayesian generative modeling, hierarchical partial pooling, posterior in
 - https://www.pymc.io/projects/docs/en/stable/
 - https://mc-stan.org/docs/stan-users-guide/
 - https://python.arviz.org/en/stable/
+- https://python.arviz.org/projects/stats/en/latest/api/generated/arviz_stats.diagnose.html
+- https://www.pymc.io/projects/docs/en/stable/learn/usage_overview.html
