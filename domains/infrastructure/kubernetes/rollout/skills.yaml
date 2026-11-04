@@ -3,7 +3,7 @@ id: rollout
 kind: skill-registry
 skills:
   - id: kubernetes-rollout-safety
-    path: .agents/skills/kubernetes-rollout-safety/SKILL.md
+    path: .agents/skills/infrastructure/kubernetes/rollout/kubernetes-rollout-safety/SKILL.md
     description: "Review Kubernetes rollout and canary changes with readiness, availability and recovery gates."
     triggers:
       - "kubernetes rollout"

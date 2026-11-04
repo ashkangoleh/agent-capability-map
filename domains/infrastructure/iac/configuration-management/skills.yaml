@@ -3,7 +3,7 @@ id: configuration-management
 kind: skill-registry
 skills:
   - id: configuration-management-puppet-chef-salt
-    path: .agents/skills/configuration-management-puppet-chef-salt/SKILL.md
+    path: .agents/skills/infrastructure/iac/configuration-management/configuration-management-puppet-chef-salt/SKILL.md
     description: "Engineer desired-state host configuration with Puppet, Chef, Salt and Nix-style reproducible configuration."
     triggers:
       - "puppet chef salt configuration management"

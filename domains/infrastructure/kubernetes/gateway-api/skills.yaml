@@ -3,7 +3,7 @@ id: gateway-api
 kind: skill-registry
 skills:
   - id: kubernetes-gateway-api-ingress
-    path: .agents/skills/kubernetes-gateway-api-ingress/SKILL.md
+    path: .agents/skills/infrastructure/kubernetes/gateway-api/kubernetes-gateway-api-ingress/SKILL.md
     description: "Design Kubernetes north-south traffic with Gateway API, Ingress, TLS, DNS and staged traffic migration."
     triggers:
       - "kubernetes ingress gateway api"

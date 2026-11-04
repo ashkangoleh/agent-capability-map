@@ -3,7 +3,7 @@ id: networking
 kind: skill-registry
 skills:
   - id: kubernetes-networking-triage
-    path: .agents/skills/kubernetes-networking-triage/SKILL.md
+    path: .agents/skills/infrastructure/kubernetes/networking/kubernetes-networking-triage/SKILL.md
     description: "Troubleshoot Kubernetes cluster Service, EndpointSlice, NetworkPolicy and DNS failures with observed packet evidence."
     triggers:
       - "kubernetes networkpolicy"
