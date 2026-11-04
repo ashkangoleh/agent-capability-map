@@ -1,0 +1,11 @@
+schema_version: 1
+id: storage
+kind: skill-registry
+skills:
+  - id: storage-ceph-zfs-lvm
+    path: .agents/skills/storage-ceph-zfs-lvm/SKILL.md
+    description: "Design and troubleshoot Ceph, ZFS and LVM storage with durability, replication and recovery constraints."
+    triggers:
+      - "ceph zfs lvm storage operations"
+    excludes: []
+    status: active

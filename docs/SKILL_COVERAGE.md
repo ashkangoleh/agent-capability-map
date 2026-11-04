@@ -70,3 +70,7 @@ See `docs/MASTER_REFERENCE_EXPANSION.md` for scope, intended technology boundari
 ## Comprehensive Data Engineering expansion
 
 The current feature branch adds specialist packages beyond the 29 historical deep-engineering skills. Run `python scripts/report_coverage.py --summary` for live counts; the skill registry and fixture set are the executable source of truth. Structural routing tests do not certify production behavior or semantic accuracy.
+
+## Infrastructure Engineering expansion
+
+The new specialist packages add explicit DevSecOps, SRE, networking, cloud foundations, systems, storage, virtualization, database operations, Kubernetes lifecycle, service mesh and platform-engineering routes. This is structural coverage; validate runtime compatibility and operational behavior against deployed versions.

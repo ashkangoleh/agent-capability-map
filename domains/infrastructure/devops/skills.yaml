@@ -1,0 +1,39 @@
+schema_version: 1
+id: devops
+kind: skill-registry
+skills:
+  - id: opentofu-iac-state-migration
+    path: .agents/skills/opentofu-iac-state-migration/SKILL.md
+    description: "Design OpenTofu infrastructure-as-code workflows with state locking, provider pinning, imports and safe migration."
+    triggers:
+      - "opentofu state migration"
+    excludes: []
+    status: active
+  - id: pulumi-iac-engineering
+    path: .agents/skills/pulumi-iac-engineering/SKILL.md
+    description: "Engineer Pulumi infrastructure programs with typed components, stack configuration, secrets and preview-driven deployment."
+    triggers:
+      - "pulumi infrastructure as code"
+    excludes: []
+    status: active
+  - id: packer-image-lifecycle
+    path: .agents/skills/packer-image-lifecycle/SKILL.md
+    description: "Build immutable VM and container base images with Packer, reproducible provisioning and promotion gates."
+    triggers:
+      - "packer machine image lifecycle"
+    excludes: []
+    status: active
+  - id: flux-gitops-reconciliation
+    path: .agents/skills/flux-gitops-reconciliation/SKILL.md
+    description: "Operate Flux GitOps reconciliation with source artifacts, Kustomize/Helm controllers and drift recovery."
+    triggers:
+      - "flux gitops reconciliation"
+    excludes: []
+    status: active
+  - id: ci-cd-release-engineering
+    path: .agents/skills/ci-cd-release-engineering/SKILL.md
+    description: "Design CI/CD release pipelines with immutable artifacts, promotion gates, rollback and environment isolation."
+    triggers:
+      - "ci cd release engineering"
+    excludes: []
+    status: active

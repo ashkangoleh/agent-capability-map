@@ -1,0 +1,25 @@
+schema_version: 1
+id: cloud
+kind: skill-registry
+skills:
+  - id: cloud-network-vpc-routing
+    path: .agents/skills/cloud-network-vpc-routing/SKILL.md
+    description: "Design cloud VPC/VNet networking with subnets, route tables, peering, transit, private endpoints and egress."
+    triggers:
+      - "cloud network vpc routing"
+    excludes: []
+    status: active
+  - id: cloud-landing-zone-multicloud
+    path: .agents/skills/cloud-landing-zone-multicloud/SKILL.md
+    description: "Build cloud landing zones with account/project/subscription boundaries, identity, network, logging and guardrails."
+    triggers:
+      - "cloud landing zone architecture"
+    excludes: []
+    status: active
+  - id: finops-cost-allocation
+    path: .agents/skills/finops-cost-allocation/SKILL.md
+    description: "Implement cloud cost allocation, tagging, showback/chargeback, budgets and unit-cost optimization."
+    triggers:
+      - "finops cost allocation"
+    excludes: []
+    status: active

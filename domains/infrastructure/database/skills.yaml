@@ -1,0 +1,18 @@
+schema_version: 1
+id: database
+kind: skill-registry
+skills:
+  - id: database-platform-postgres-operations
+    path: .agents/skills/database-platform-postgres-operations/SKILL.md
+    description: "Operate PostgreSQL infrastructure including HA, WAL archiving, replication, backups, connection pooling and upgrades."
+    triggers:
+      - "postgresql infrastructure operations"
+    excludes: []
+    status: active
+  - id: database-platform-mysql-operations
+    path: .agents/skills/database-platform-mysql-operations/SKILL.md
+    description: "Operate MySQL infrastructure including replication, backups, failover, binlog retention and connection capacity."
+    triggers:
+      - "mysql infrastructure operations"
+    excludes: []
+    status: active

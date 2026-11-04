@@ -1,0 +1,25 @@
+schema_version: 1
+id: kubernetes
+kind: skill-registry
+skills:
+  - id: kubernetes-cluster-upgrade-capacity
+    path: .agents/skills/kubernetes-cluster-upgrade-capacity/SKILL.md
+    description: "Plan Kubernetes control-plane/node upgrades with version skew, capacity, API deprecations and rollback boundaries."
+    triggers:
+      - "kubernetes cluster upgrade capacity"
+    excludes: []
+    status: active
+  - id: kubernetes-operator-crd-lifecycle
+    path: .agents/skills/kubernetes-operator-crd-lifecycle/SKILL.md
+    description: "Design Kubernetes CRDs and operators with reconciliation, finalizers, status conditions and upgrade safety."
+    triggers:
+      - "kubernetes operator crd lifecycle"
+    excludes: []
+    status: active
+  - id: kubernetes-cni-ebpf-operations
+    path: .agents/skills/kubernetes-cni-ebpf-operations/SKILL.md
+    description: "Operate Kubernetes CNI and eBPF networking with IPAM, routing, policy, MTU and datapath diagnostics."
+    triggers:
+      - "kubernetes cni ebpf operations"
+    excludes: []
+    status: active

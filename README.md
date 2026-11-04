@@ -226,3 +226,7 @@ This branch adds 49 specialist packages for lifecycle/modeling, ingestion/CDC, s
 ## First-class Data Science domain
 
 Data Science is a peer domain of Data Engineering, Infrastructure and AI/ML. It covers statistical inference, experiments, causal inference, classical ML, forecasting, survival, recommendation, geospatial science, optimization and scientific computing. See docs/DATA_SCIENCE_TOOL_MATRIX.md. AI/ML remains separate for deep learning, LLM engineering, MLOps and model serving.
+
+## Expanded Infrastructure Engineering
+
+Infrastructure now has dedicated specialist routes for DevOps/IaC, DevSecOps, SRE, networking, cloud, Linux/Windows systems, virtualization, storage, databases, Kubernetes, service mesh and platform engineering. See docs/INFRASTRUCTURE_TOOL_MATRIX.md. Existing Kubernetes, Terraform, Ansible, GitOps, Prometheus, OpenTelemetry, Vault and network diagnostics skills remain intact.

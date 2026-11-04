@@ -87,3 +87,103 @@ children:
       - "internal developer platform"
     status: active
     map: domains/infrastructure/platform/map.yaml
+  - id: devops
+    description: "Infrastructure as code, image builds, GitOps and release engineering"
+    triggers:
+      - "opentofu state migration"
+      - "pulumi infrastructure as code"
+      - "packer machine image lifecycle"
+      - "flux gitops reconciliation"
+      - "ci cd release engineering"
+    status: active
+    skills: domains/infrastructure/devops/skills.yaml
+  - id: devsecops
+    description: "Security automation, policy-as-code and software supply-chain controls"
+    triggers:
+      - "devsecops security gates"
+      - "policy as code opa kyverno"
+      - "falco runtime security detection"
+      - "sigstore cosign image signing"
+      - "slsa sbom software supply chain"
+      - "spiffe workload identity"
+    status: active
+    skills: domains/infrastructure/devsecops/skills.yaml
+  - id: sre
+    description: "SLOs, capacity, chaos, observability and disaster recovery"
+    triggers:
+      - "sre slo error budget"
+      - "sre capacity load testing"
+      - "chaos engineering failure injection"
+      - "infrastructure observability stack"
+      - "infrastructure backup disaster recovery"
+    status: active
+    skills: domains/infrastructure/sre/skills.yaml
+  - id: network
+    description: "Routing, firewall, proxies, VPN, eBPF, DNS and PKI"
+    triggers:
+      - "network routing bgp"
+      - "network firewall segmentation"
+      - "network load balancing proxy"
+      - "wireguard vpn routing"
+      - "ebpf network observability"
+      - "authoritative dns infrastructure"
+      - "tls pki certificate lifecycle"
+    status: active
+    skills: domains/infrastructure/network/skills.yaml
+  - id: cloud
+    description: "Cloud networking, landing zones and FinOps"
+    triggers:
+      - "cloud network vpc routing"
+      - "cloud landing zone architecture"
+      - "finops cost allocation"
+    status: active
+    skills: domains/infrastructure/cloud/skills.yaml
+  - id: systems
+    description: "Linux and Windows operating systems"
+    triggers:
+      - "linux kernel performance diagnostics"
+      - "linux storage filesystem operations"
+      - "windows server operations"
+    status: active
+    skills: domains/infrastructure/systems/skills.yaml
+  - id: virtualization
+    description: "Hypervisors and virtual machine platforms"
+    triggers:
+      - "kvm proxmox vmware virtualization"
+    status: active
+    skills: domains/infrastructure/virtualization/skills.yaml
+  - id: storage
+    description: "Block, filesystem and distributed storage"
+    triggers:
+      - "ceph zfs lvm storage operations"
+    status: active
+    skills: domains/infrastructure/storage/skills.yaml
+  - id: database
+    description: "Database platform operations"
+    triggers:
+      - "postgresql infrastructure operations"
+      - "mysql infrastructure operations"
+    status: active
+    skills: domains/infrastructure/database/skills.yaml
+  - id: kubernetes
+    description: "Kubernetes cluster, operator and CNI lifecycle"
+    triggers:
+      - "kubernetes cluster upgrade capacity"
+      - "kubernetes operator crd lifecycle"
+      - "kubernetes cni ebpf operations"
+    status: active
+    skills: domains/infrastructure/kubernetes/skills.yaml
+  - id: service-mesh
+    description: "Service mesh traffic, identity and telemetry"
+    triggers:
+      - "istio service mesh operations"
+    status: active
+    skills: domains/infrastructure/service-mesh/skills.yaml
+  - id: platform
+    description: "Internal developer platforms and control planes"
+    triggers:
+      - "backstage internal developer platform"
+      - "crossplane infrastructure control plane"
+      - "karpenter keda autoscaling"
+    status: active
+    skills: domains/infrastructure/platform/skills.yaml
