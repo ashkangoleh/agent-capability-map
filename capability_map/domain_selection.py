@@ -6,6 +6,7 @@ skills into host directories or change the master repository.
 
 import os
 import tempfile
+from functools import lru_cache
 from pathlib import Path
 
 import yaml
@@ -49,25 +50,62 @@ def _profile_paths(home):
     return home, app_dir, profile
 
 
-def _subtree_metrics(root, map_path):
-    _, load_yaml, _ = _router_api()
-    visited = set()
-    skill_ids = set()
-    active_nodes = 0
-    mapped_nodes = 0
+def _graph_signature(root):
+    """Cheap invalidation key so an in-process catalog cache follows graph edits."""
+    signature = []
+    for base_name in ("catalog", "domains"):
+        base = root / base_name
+        if not base.exists():
+            continue
+        for path in sorted(base.rglob("*.yaml")):
+            try:
+                stat = path.lstat()
+            except FileNotFoundError:
+                continue
+            signature.append((
+                str(path.relative_to(root)),
+                stat.st_mtime_ns,
+                stat.st_size,
+                path.is_symlink(),
+            ))
+    return tuple(signature)
 
-    def walk(path):
-        nonlocal active_nodes, mapped_nodes
-        if path in visited:
-            return
-        visited.add(path)
-        document = load_yaml(root, path)
+
+def _build_domain_catalog(root_text):
+    RouterError, load_yaml, require_id = _router_api()
+    root = Path(root_text).resolve()
+    map_documents = {}
+    registry_documents = {}
+    metrics_cache = {}
+    visiting = set()
+
+    def map_document(path):
+        if path not in map_documents:
+            map_documents[path] = load_yaml(root, path)
+        return map_documents[path]
+
+    def registry_document(path):
+        if path not in registry_documents:
+            registry_documents[path] = load_yaml(root, path)
+        return registry_documents[path]
+
+    def summarize_map(path):
+        if path in metrics_cache:
+            return metrics_cache[path]
+        if path in visiting:
+            raise RouterError(f"Cycle detected in domain maps at {path}")
+        visiting.add(path)
+        document = map_document(path)
         children = document.get("children")
         if not isinstance(children, list):
-            raise _router_api()[0](f"Expected children list at {path}")
+            raise RouterError(f"Expected children list at {path}")
+
+        active_nodes = 0
+        mapped_nodes = 0
+        skill_ids = set()
         for child in children:
             if not isinstance(child, dict):
-                raise _router_api()[0](f"Invalid child node at {path}")
+                raise RouterError(f"Invalid child node at {path}")
             status = child.get("status")
             if status == "active":
                 active_nodes += 1
@@ -75,42 +113,48 @@ def _subtree_metrics(root, map_path):
                 mapped_nodes += 1
 
             if child.get("map"):
-                walk(child["map"])
+                nested = summarize_map(child["map"])
+                active_nodes += nested["active_nodes"]
+                mapped_nodes += nested["mapped_nodes"]
+                skill_ids.update(nested["skill_ids"])
             elif child.get("skills"):
-                registry = load_yaml(root, child["skills"])
-                for item in registry.get("skills", []):
-                    if item.get("status") == "active":
-                        skill_ids.add(item["id"])
+                registry = registry_document(child["skills"])
+                skills = registry.get("skills", [])
+                if not isinstance(skills, list):
+                    raise RouterError(f"Expected skills list at {child['skills']}")
+                for item in skills:
+                    if not isinstance(item, dict) or item.get("status") != "active":
+                        continue
+                    skill_id = item.get("id")
+                    require_id(skill_id)
+                    skill_ids.add(skill_id)
 
-    walk(map_path)
-    return {
-        "active_nodes": active_nodes,
-        "mapped_nodes": mapped_nodes,
-        "active_skill_count": len(skill_ids),
-    }
+        visiting.remove(path)
+        metrics = {
+            "active_nodes": active_nodes,
+            "mapped_nodes": mapped_nodes,
+            "active_skill_count": len(skill_ids),
+            "skill_ids": frozenset(skill_ids),
+        }
+        metrics_cache[path] = metrics
+        return metrics
 
-
-def discover_domains(root, prefix=None):
-    """Return selectable active map nodes, including nested domain scopes."""
-    RouterError, load_yaml, require_id = _router_api()
-    root = Path(root).expanduser().resolve()
-    catalog = load_yaml(root, "catalog/root.yaml")
     results = []
 
     def walk(map_path, parent_route=()):
-        document = load_yaml(root, map_path)
+        document = map_document(map_path)
         children = document.get("children")
         if not isinstance(children, list):
             raise RouterError(f"Expected children list at {map_path}")
         for node in children:
             if not isinstance(node, dict):
-                raise RouterError(f"Invalid domain node at {map_path}")
+                raise RouterError(f"Invalid child node at {map_path}")
             domain_id = node.get("id")
             require_id(domain_id)
             route = parent_route + (domain_id,)
             child_map = node.get("map")
             if node.get("status") == "active" and child_map:
-                metrics = _subtree_metrics(root, child_map)
+                metrics = summarize_map(child_map)
                 results.append({
                     "route": "/".join(route),
                     "id": domain_id,
@@ -124,6 +168,22 @@ def discover_domains(root, prefix=None):
                 walk(child_map, route)
 
     walk("catalog/root.yaml")
+    return tuple(tuple(sorted(item.items())) for item in results)
+
+
+@lru_cache(maxsize=8)
+def _cached_domain_catalog(root_text, signature):
+    # The signature changes when any catalog/domain YAML is edited.
+    return _build_domain_catalog(root_text)
+
+
+def discover_domains(root, prefix=None):
+    """Return selectable active map nodes, including nested domain scopes."""
+    RouterError, _, require_id = _router_api()
+    root = Path(root).expanduser().resolve()
+    signature = _graph_signature(root)
+    results = [dict(item) for item in _cached_domain_catalog(str(root), signature)]
+
     if prefix is not None:
         parts = tuple(prefix.split("/")) if isinstance(prefix, str) else tuple(prefix)
         if not parts or any(not isinstance(part, str) for part in parts):
