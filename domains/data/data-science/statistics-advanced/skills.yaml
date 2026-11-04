@@ -40,6 +40,10 @@ skills:
       - "multiple hypothesis testing fdr"
       - "false discovery rate correction"
       - "holm bonferroni adjustment"
+      - "fdr benjamini hochberg multiple testing"
+      - "holm familywise error correction"
+      - "benjamini yekutieli dependency"
+      - "اصلاح چند آزمونی fdr"
     excludes:
       - "single pre-registered primary hypothesis"
     status: active
