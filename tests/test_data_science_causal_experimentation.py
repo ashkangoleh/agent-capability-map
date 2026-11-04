@@ -64,7 +64,8 @@ class CausalExperimentationRoutingTests(unittest.TestCase):
         }
         for skill_id, must_have in expectations.items():
             with self.subTest(skill=skill_id):
-                path = ROOT / ".agents" / "skills" / skill_id / "SKILL.md"
+                registry = load_yaml(ROOT, "domains/data/data-science/experimentation/skills.yaml")
+                path = ROOT / next(item["path"] for item in registry["skills"] if item["id"] == skill_id)
                 text = path.read_text(encoding="utf-8")
                 for required in must_have:
                     self.assertIn(required.casefold(), text.casefold())
