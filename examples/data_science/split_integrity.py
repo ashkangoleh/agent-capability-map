@@ -1,6 +1,7 @@
 """Check declared fold boundaries; this does not prove a model is leakage-free."""
 
 from datetime import datetime
+from numbers import Integral
 from typing import Sequence
 
 
@@ -20,13 +21,13 @@ def validate_split_contract(
     is conservative: grouped/time-aware tasks need a design-specific splitter.
     A gap in row counts is not equivalent to a wall-clock embargo.
     """
-    if isinstance(n_samples, bool) or not isinstance(n_samples, int) or n_samples < 2:
+    if isinstance(n_samples, bool) or not isinstance(n_samples, Integral) or n_samples < 2:
         raise ValueError("n_samples must be an integer >= 2")
 
     def indices(values: Sequence[int], label: str) -> set[int]:
-        if not values:
+        if len(values) == 0:
             raise ValueError(f"{label} must be non-empty")
-        if any(isinstance(i, bool) or not isinstance(i, int) or i < 0 or i >= n_samples for i in values):
+        if any(isinstance(i, bool) or not isinstance(i, Integral) or i < 0 or i >= n_samples for i in values):
             raise ValueError(f"{label} contains invalid indices")
         if len(set(values)) != len(values):
             raise ValueError(f"{label} contains repeated indices")
