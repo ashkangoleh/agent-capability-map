@@ -2,7 +2,7 @@
 
 Global-first, YAML-driven, hierarchical discovery for reusable skills across coding agents. A single master map serves all projects. A user can **add personal skills** globally or per project without changing the master repository.
 
-The master map currently covers 41 broad domains, 151 active skills, and many mapped subdomains on this branch. Get current values with `python scripts/report_coverage.py --summary`. The cross-domain expansion introduces 29 specialist skills (21 in previously mapped domains and 8 in newly introduced domains). Every top-level domain has at least one active specialist, but most subdomains remain mapped-only and require further implementation and evaluation. The first specialist expansion adds 12 focused skills; see [Coverage](docs/SKILL_COVERAGE.md) for active versus mapped nodes and exact routing examples. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
+The current `pre_release` baseline contains 42 top-level domains and 276 active SKILL.md packages. The deterministic routing suite contains 297 fixtures; passing it validates the YAML graph and lexical resolver, not semantic LLM accuracy or production execution. Many fine-grained subdomains remain mapped-only and require focused implementation and evaluation. Get live counts with `python scripts/report_coverage.py --summary`. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
 
 ## Operating contract
 
@@ -20,7 +20,7 @@ The master map currently covers 41 broad domains, 151 active skills, and many ma
 Prerequisites: Python 3.10+, Git, and permission to create global instruction files.
 
 ~~~sh
-git clone -b feat/master-reference-platform-data-ai https://github.com/ashkangoleh/agent-capability-map.git ~/agent-capability-map
+git clone -b pre_release https://github.com/ashkangoleh/agent-capability-map.git ~/agent-capability-map
 cd ~/agent-capability-map
 python3 -m venv .venv
 .venv/bin/python -m pip install -e .
@@ -211,11 +211,11 @@ The authoritative live report is `python scripts/report_coverage.py` and the com
 
 ## Unified reference expansion
 
-The canonical work branch `feat/master-reference-platform-data-ai` extends the same YAML master graph with 63 specialists across Infrastructure, Data Science, Data Analysis/BI, MLOps/LLM AI, and additional Data Engineering tooling. Its `tests/fixtures/yaml-routing-cases.yaml` contains per-skill deterministic routing probes, while `scripts/report_coverage.py` computes live counts. Passing lexical routing tests does not prove semantic/human-reviewed quality across every host.
+The historical `feat/master-reference-platform-data-ai` snapshot introduced 63 specialists across Infrastructure, Data Science, Data Analysis/BI, MLOps/LLM AI and Data Engineering. Its work is now consolidated into `pre_release`; the current fixture suite and coverage report are the authoritative validation sources.
 
 ### Canonical reference branch
 
-**`feat/master-reference-platform-data-ai` is the single combined reference branch** for the current domain expansion. Do not combine separate feature branches manually. It adds 63 specialized skills on top of 88 existing ones, keeping all 41 top-level domains. Read [MASTER_REFERENCE_EXPANSION.md](docs/MASTER_REFERENCE_EXPANSION.md) for technology coverage and known limits. Run the live coverage report instead of trusting hard-coded counts.
+**`pre_release` is the canonical integration branch.** It combines the unified YAML capability map with the latest comprehensive Data Engineering, Data Science and Infrastructure updates. It is intentionally not merged into `main` while the Data Engineering completion and host-compatibility work continue. Read [UNIFIED_COMPLETENESS_AUDIT.md](docs/UNIFIED_COMPLETENESS_AUDIT.md) for current maturity and known limits.
 
 > The CLI validates and selects skill paths. The referenced software tools (e.g. Spark, Airflow, PyTorch, Kubernetes, MLflow) are **not installed by this repository**. Skill text describes procedures, not executable infrastructure or verified cloud access. Host-specific global instruction installation remains an independent, permission-scoped step.
 
@@ -233,4 +233,4 @@ Infrastructure now has dedicated specialist routes for DevOps/IaC, DevSecOps, SR
 
 ## Unified master branch
 
-The consolidated development branch is `feat/unified-master-capability-map`. See `docs/UNIFIED_COMPLETENESS_AUDIT.md` for domain maturity, known gaps, validation status and merge gates. This branch is not production-certified and has not been merged to `main`.
+The current consolidated development branch is `pre_release`. See `docs/UNIFIED_COMPLETENESS_AUDIT.md` for domain maturity, known gaps, validation status and merge gates. This branch is not production-certified and has not been merged to `main`.

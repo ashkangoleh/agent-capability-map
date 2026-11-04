@@ -1,9 +1,9 @@
-# Master Skill Coverage — 2026-11-03
+# Master Skill Coverage — 2026-11-04
 
 ## Scope
 
 - Top-level domains: 42, all with at least one linked active skill.
-- Active skill packages: 273 (verified against the master index on the unified branch).
+- Active skill packages: 276 (verified against the master index on `pre_release`).
 - Most fine-grained subdomains remain mapped-only and require focused skill development.
 - For exact current counts run `python scripts/report_coverage.py --summary`.
 - Distinction: a mapped node is discoverable taxonomy but may not provide an executable skill.
@@ -16,6 +16,9 @@
 | dbt incremental correctness | `dbt-incremental-modeling` | dbt incremental models / strategy docs |
 | Data contracts / quality | `data-quality-contracts` | dbt data tests, source assertions |
 | Backfill / replay | `pipeline-backfill-recovery` | source/sink recovery contracts, Airflow/dbt docs |
+| Oracle GoldenGate CDC | `oracle-goldengate-cdc-operations` | Oracle GoldenGate 26ai documentation |
+| SQL Server CDC / Change Tracking | `sqlserver-cdc-change-tracking` | Microsoft Learn CDC and Change Tracking docs |
+| MongoDB Change Streams | `mongodb-change-streams-cdc` | MongoDB Change Streams and resume-token docs |
 | Spark Structured Streaming | `spark-structured-streaming` | version-specific Spark structured-streaming guide |
 | Kubernetes rollout | `kubernetes-rollout-safety` | Kubernetes deployment and Helm official docs |
 | Product A/B experiments | `product-experiment-design` | experimentation methodology and instrumentation |
@@ -65,7 +68,7 @@ See [DATA_ENGINEERING_SKILLS.md](DATA_ENGINEERING_SKILLS.md) for the deep specia
 
 ## Unified reference branch
 
-See `docs/MASTER_REFERENCE_EXPANSION.md` for scope, intended technology boundaries and evaluation gaps. The live registry contains 273 indexed SKILL.md packages, subject to successful YAML registry validation and CI. Do not treat all `mapped` subdomains as active.
+See `docs/MASTER_REFERENCE_EXPANSION.md` for scope, intended technology boundaries and evaluation gaps. The live registry contains 276 indexed SKILL.md packages, subject to successful YAML registry validation and CI. Do not treat all `mapped` subdomains as active.
 
 ## Comprehensive Data Engineering expansion
 

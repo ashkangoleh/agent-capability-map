@@ -1,6 +1,6 @@
 # Domain Taxonomy — Authoritative YAML Graph
 
-The master graph contains 41 top-level discovery domains, each with at least one active skill. Many subdomain nodes remain **mapped** placeholders. The taxonomy is intentionally extensible, not a claim to cover every discipline in the world.
+The master graph contains 42 top-level discovery domains, each with at least one active skill. Many subdomain nodes remain **mapped** placeholders. The taxonomy is intentionally extensible, not a claim to cover every discipline in the world.
 
 | Domain ID | Purpose |
 |---|---|

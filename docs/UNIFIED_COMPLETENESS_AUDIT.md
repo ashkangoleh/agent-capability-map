@@ -1,89 +1,65 @@
-# Unified Capability Map — Consolidation and Completeness Audit
+# Pre-release Capability Map — Consolidation and Completeness Audit
 
 **Audit snapshot:** 2026-11-04  
-**Consolidated branch:** `feat/unified-master-capability-map`  
-**Baseline:** `main` plus the comprehensive Data Engineering, Data Science and Infrastructure work already present on `feat/comprehensive-data-science-infrastructure`.
+**Canonical branch:** `pre_release`  
+**Current HEAD:** `f2d021e34ad5538ba9f0b552511d69ee4eeaf714`  
+**Baseline:** `main` plus the unified YAML capability map and the latest comprehensive Data Engineering, Data Science and Infrastructure changes.
 
 ## Consolidation result
 
-The repository exposed one comprehensive feature branch containing the Data Engineering, Data Science and Infrastructure expansions. No separate live feature branches named for Data Science or Infrastructure were found in the repository branch search. This unified branch is therefore based on the complete comprehensive branch rather than attempting an unsafe unrelated-history merge.
+The `pre_release` branch was created from the latest unified branch, then integrated with the five newer commits from `feat/comprehensive-data-science-infrastructure` that were not present in the unified snapshot. The integration is a two-parent merge, preserving both histories. The old JSON/ROUTER-oriented `feat/hierarchical-skill-graph-v2` branch was not merged wholesale because its layout is superseded by the current YAML graph; useful specialist content can be ported selectively.
 
-- Consolidated source branch: `feat/comprehensive-data-science-infrastructure`
-- Source head: `29505024130134fc4587990a7dba84e362a278b7`
-- Delta against `main` at audit time: 69 commits ahead, 0 behind; 300 changed paths against `main`.
-- Inventory at source head: 273 `SKILL.md` files, 42 top-level domain routes and 41 direct top-level map files.
-- `main` remains unchanged. This branch is not yet merged into `main`.
+- Integrated source branch: `feat/comprehensive-data-science-infrastructure`
+- Integrated source head: `a34921adc0026c6e7091d0523d5996a1c3152644`
+- `pre_release` is 81 commits ahead of `main`, 0 behind; 300 changed paths.
+- `main` remains unchanged.
+- PR #3 was integrated into `pre_release`; PR #2 still points to the older unified branch and must not be treated as the release candidate.
+
+## Current inventory
+
+| Measure | Current value |
+|---|---:|
+| Top-level domains | 42 |
+| Active SKILL.md packages | 276 |
+| Nested map files | 68 |
+| Skill registries | 186 |
+| Deterministic routing fixtures | 297 |
+| Unit tests | 31 |
+
+These are structural inventory values, not a completeness or production-readiness score. Use `python scripts/report_coverage.py --summary` for live counts.
 
 ## Domain maturity assessment
 
 | Domain | Assessment | What exists | What remains incomplete |
 |---|---|---|---|
-| Data Engineering | Broad structural coverage; operational depth uneven | Ingestion, CDC, batch/streaming, orchestration, transformation, formats, lakehouse/catalogs, warehouse/federation, quality, governance, DataOps, reliability, cloud, serving and architecture | Several packages are only starter guidance; missing versioned compatibility matrices, executable reference implementations, engine-specific failure/recovery playbooks, load/performance evidence, and broad positive/negative routing fixtures |
-| Data Science | Medium; new taxonomy and skills added, not yet validated | Scientific computing, statistics, Bayesian methods, experimentation, causal design, classical ML, calibration, explainability, forecasting, survival, recommendation, graph, geospatial, simulation, optimization and text analytics | Sparse specialist coverage for survey design, missing-data MNAR sensitivity, robust/nonparametric inference, econometrics, NLP multilingual evaluation, advanced causal estimators, model fairness, uncertainty/calibration and real reproducible notebooks/datasets |
-| Infrastructure Engineering | Broad taxonomy; operational implementation incomplete | IaC, GitOps, CI/CD, DevSecOps, SRE, networking, cloud, Linux/Windows, virtualization, storage, database operations, Kubernetes, service mesh and platform engineering | New packages need tested procedures and version matrices; gaps include IAM/identity lifecycle, PKI/CA operations, incident response runbooks, production DR drills, hardware/firmware, observability cost/cardinality, capacity models and multi-cloud failure testing |
-| AI & ML Engineering | Existing domain; not audited as a full expansion in this change | LLM/RAG, deep learning, ML, MLOps, vision, speech and responsible AI routes | Needs separate coverage audit for distributed training, evaluation methodology, serving, inference optimization, model governance, safety, feature lifecycle and production observability |
-| Software Engineering | Existing domain; partial specialist coverage | Backend, frontend, architecture, languages, testing and developer tools | Mobile development is mapped-only; needs framework-specific skills, secure SDLC depth, API compatibility and production testing |
-| Other business/science domains | Mostly taxonomy-level | Broad top-level discovery maps | Many domains are map-only or have only a small number of generic skills; they are not complete professional capability packs |
+| Data Engineering | Broad structural coverage; operational depth uneven | Ingestion, CDC, batch/streaming, orchestration, transformation, formats, lakehouse/catalogs, warehouse/federation, quality, governance, DataOps, reliability, cloud, serving and architecture. The CDC route now includes Oracle GoldenGate, SQL Server CDC/Change Tracking and MongoDB Change Streams. | Engine-specific managed warehouse procedures, broader broker and streaming-SQL coverage, catalog operations, versioned compatibility matrices, runnable reference implementations, production failure/recovery evidence and deeper routing evaluation. |
+| Data Science | Medium; broad taxonomy and specialist routes | Scientific computing, statistics, Bayesian methods, experimentation, causal design, classical ML, calibration, explainability, forecasting, survival, recommendation, graph, geospatial, simulation, optimization and text analytics. | Sparse specialist coverage for robust/nonparametric inference, econometrics, MNAR sensitivity, multilingual NLP evaluation, advanced causal estimators, fairness, uncertainty and reproducible notebooks/datasets. |
+| Infrastructure Engineering | Broad taxonomy; operational implementation incomplete | IaC, GitOps, CI/CD, DevSecOps, SRE, networking, cloud, Linux/Windows, virtualization, storage, database operations, Kubernetes, service mesh and platform engineering. | Version-tested procedures, identity lifecycle, PKI/CA operations, production DR drills, hardware/firmware, observability cardinality/cost, capacity models and multi-cloud failure testing. |
+| AI & ML Engineering | Existing domain; separate audit required | LLM/RAG, deep learning, ML, MLOps, vision, speech and responsible AI routes. | Distributed training, evaluation methodology, inference optimization, model governance, safety, feature lifecycle and production observability. |
+| Software Engineering | Partial specialist coverage | Backend, frontend, architecture, languages, testing and developer tools. | Mobile framework coverage, secure SDLC depth, API compatibility and production testing. |
+| Other domains | Mixed maturity | Broad discovery taxonomy with selected specialist packages. | Many subdomains remain mapped-only or have narrow starter skills; they are not complete professional capability packs. |
 
-## Explicitly mapped-only top-level domains
+## Validation status
 
-The root catalog explicitly marks these domains as having no specialized validated skills yet:
-
-- content & publishing
-- people & hr
-- education & learning
-- finance & accounting
-- legal & compliance
-- health & medicine
-- science & mathematics
-- e-commerce & retail
-- sales & revenue
-- customer experience & support
-- media & entertainment
-- games & interactive
-- manufacturing & industry
-- logistics & supply chain
-- construction & architecture
-- energy & sustainability
-- agriculture & food systems
-- government & public policy
-- travel & hospitality
-- sports & fitness
-- personal productivity & life
-
-This is not a defect if the intended state is discoverable taxonomy. It is incomplete if the requirement is production-grade coverage for every listed domain.
-
-## Validation status and blockers
-
-The initial GitHub Actions runs exposed duplicate sibling route IDs, overwritten legacy registries, stale cross-domain relation endpoints and ambiguous routing fixtures. These were corrected: legacy statistics/geospatial/network registries were restored, new specialist registries were separated, route IDs were made unique and relation endpoints updated.
-
-```
-Duplicate sibling ID orchestration: domains/data/data-engineering/map.yaml
-```
-
-The final GitHub Actions run passes all workflow steps. The coverage assertions were updated from 41 to 42 domains after promoting Data Science to a first-class root domain.
-
-The failed graph-validation step prevented the CLI/security/overlay test step from running. Therefore:
-- YAML graph validation: **PASS** (273 unique active skills; 186 registries; 25 typed relations)
-- Graph evaluation: **PASS** (291/291 deterministic routing fixtures)
-- Coverage report: **PASS** (42 top-level domains; 273 indexed active skills)
-- CLI, security and overlay unit tests: **PASS** (31/31 tests)
-- Host compatibility (Codex, OpenCode, Copilot, Claude Code, etc.): **NOT VERIFIED**
-- Semantic routing quality: **NOT MEASURED**
-- Production readiness: **NOT ESTABLISHED**
+- YAML graph validation: **PASS** (276 indexed active skills; 186 registries; typed relations validated).
+- Deterministic routing evaluation: **PASS** (297 fixtures; no failed cases).
+- Coverage report: **PASS** (42 top-level domains; 276 indexed active skills; 68 maps).
+- CLI, security and overlay unit tests: **PASS** (31/31).
+- Host compatibility (Codex, OpenCode, Copilot, Claude Code, Cursor): **NOT VERIFIED**.
+- Semantic routing quality and false-positive/false-negative rates: **NOT MEASURED**.
+- Production readiness: **NOT ESTABLISHED**.
 
 ## Required completion gates
 
-1. Reproduce and fix the duplicate sibling ID; run the full workflow on this unified branch.
-2. Verify every active registry path exists and every active skill ID is unique and present exactly once in the master index.
-3. Validate all YAML references, typed cross-domain edges, cycles, route depth and unresolved paths.
-4. Expand routing fixtures to include positive, negative, ambiguous, near-miss, multilingual and adversarial prompts across all three technical domains.
-5. Test resolver behavior, not only registry parsing; record false-positive and false-negative rates.
-6. Add per-skill version/context prerequisites, evidence requirements, safe execution boundaries and recovery/rollback behavior where relevant.
-7. Add reproducible examples and versioned compatibility notes for major tools; distinguish conceptual skills from runnable integrations.
-8. Run host-specific compatibility tests and record exact host/model/version combinations.
-9. Required automated checks now pass. Human review is still required before merging the pull request to `main`.
+1. Complete the Data Engineering inventory against current production tool ecosystems; distinguish active specialists from mapped-only technologies.
+2. Add missing tool families only when each has a clear task boundary, maintained official references and failure/recovery procedure.
+3. Expand positive, negative, near-miss, ambiguous and Persian/English routing fixtures for every new specialist.
+4. Add versioned compatibility notes and reproducible examples for major engines and connectors.
+5. Verify idempotency, duplicate delivery, ordering, replay, backfill, late data, schema evolution, partial publication and rollback for relevant pipelines.
+6. Measure resolver false positives/false negatives using a labeled benchmark; deterministic fixture success is not semantic model accuracy.
+7. Test real host invocation, skill discovery, file access and context loading on each supported Agent Host.
+8. Human review remains required before opening or merging a release PR to `main`.
 
 ## Interpretation
 
-A skill file or active YAML node is not proof of a complete capability. This audit separates taxonomy coverage, structural registration, validated routing, executable procedure and production evidence. Only the first two are substantially represented today; the latter stages remain incomplete.
+A Skill file or active YAML node is not proof of a complete capability. This audit separates taxonomy coverage, structural registration, deterministic routing, executable procedure, host compatibility and production evidence. Only the first three have meaningful automated evidence today; the latter stages remain incomplete.
