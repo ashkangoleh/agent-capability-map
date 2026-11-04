@@ -3,7 +3,7 @@ id: hybrid
 kind: skill-registry
 skills:
   - id: hybrid-search-ranking-design
-    path: .agents/skills/hybrid-search-ranking-design/SKILL.md
+    path: .agents/skills/ai-ml/rag/hybrid/hybrid-search-ranking-design/SKILL.md
     description: "Tune dense lexical BM25 and RRF retrieval against real relevance judgments and ACL constraints."
     triggers:
       - "hybrid search"

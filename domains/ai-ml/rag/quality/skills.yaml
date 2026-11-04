@@ -3,7 +3,7 @@ id: quality
 kind: skill-registry
 skills:
   - id: rag-evidence-sufficiency-evaluation
-    path: .agents/skills/rag-evidence-sufficiency-evaluation/SKILL.md
+    path: .agents/skills/ai-ml/rag/quality/rag-evidence-sufficiency-evaluation/SKILL.md
     description: "Evaluate RAG grounded citations, evidence sufficiency, retrieval coverage and calibrated abstention."
     triggers:
       - "rag evaluation"
