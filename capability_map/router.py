@@ -67,6 +67,54 @@ def require_id(value):
         raise RouterError(f"Invalid capability or skill id: {value!r}")
 
 
+def validate_skill_relations(records):
+    """Validate parent/related links between active skill records.
+
+    records maps skill_id to (top_level_domain_id, registry_entry).
+    Parent links must remain within a top-level domain; related links may cross domains.
+    """
+    parents = {}
+    for skill_id, (domain_id, entry) in records.items():
+        parent = entry.get("parent_skill")
+        if parent is not None:
+            require_id(parent)
+            if parent == skill_id:
+                raise RouterError(f"Skill cannot be its own parent: {skill_id}")
+            if parent not in records:
+                raise RouterError(f"Unknown parent skill {parent!r} referenced by {skill_id}")
+            if records[parent][0] != domain_id:
+                raise RouterError(f"Parent skill must be in the same top-level domain: {skill_id} -> {parent}")
+            parents[skill_id] = parent
+
+        related = entry.get("related_skills", [])
+        if not isinstance(related, list):
+            raise RouterError(f"related_skills must be a list: {skill_id}")
+        seen = set()
+        for target in related:
+            require_id(target)
+            if target == skill_id or target in seen:
+                raise RouterError(f"Self or duplicate related skill on {skill_id}: {target}")
+            if target not in records:
+                raise RouterError(f"Unknown related skill {target!r} referenced by {skill_id}")
+            seen.add(target)
+
+    state = {}
+
+    def visit(skill_id):
+        if state.get(skill_id) == 1:
+            raise RouterError(f"Skill parent cycle detected at: {skill_id}")
+        if state.get(skill_id) == 2:
+            return
+        state[skill_id] = 1
+        parent = parents.get(skill_id)
+        if parent:
+            visit(parent)
+        state[skill_id] = 2
+
+    for skill_id in records:
+        visit(skill_id)
+
+
 def match_score(request, phrases, negative=()):
     if not isinstance(phrases, list) or not all(isinstance(p, str) for p in phrases):
         raise RouterError("Triggers must be a YAML list of strings")
@@ -319,6 +367,49 @@ class Router:
         if not isinstance(description, str) or not 1 <= len(description) <= 1024:
             raise RouterError(f"Missing or invalid skill description: {path}")
 
+    def skill_graph(self, skill_id):
+        """Inspect a skill's parent chain, direct children and explicit related skills."""
+        require_id(skill_id)
+        self.validate()
+        records = {}
+        self.inspected = []
+        for map_path in self._walk_maps():
+            document = self._yaml(self.root, map_path)
+            for child in document.get("children", []):
+                if not child.get("skills"):
+                    continue
+                registry = self._yaml(self.root, child["skills"])
+                for entry in registry.get("skills", []):
+                    if entry.get("status") == "active":
+                        records.setdefault(entry["id"], entry)
+        if skill_id not in records:
+            raise RouterError(f"Unknown active skill: {skill_id}")
+
+        ancestry = []
+        seen = {skill_id}
+        parent = records[skill_id].get("parent_skill")
+        while parent:
+            if parent in seen:
+                raise RouterError(f"Skill parent cycle detected at: {parent}")
+            if parent not in records:
+                raise RouterError(f"Unknown parent skill {parent!r} referenced by {skill_id}")
+            seen.add(parent)
+            ancestry.append(parent)
+            parent = records[parent].get("parent_skill")
+        ancestry.reverse()
+        children = sorted(
+            candidate_id for candidate_id, entry in records.items()
+            if entry.get("parent_skill") == skill_id
+        )
+        return {
+            "status": "ok",
+            "skill": skill_id,
+            "ancestry": ancestry,
+            "children": children,
+            "related_skills": records[skill_id].get("related_skills", []),
+            "inspected_files": list(dict.fromkeys(self.inspected)),
+        }
+
     def related(self, route):
         """Return explicit typed cross-domain edges without loading skill instructions."""
         names = tuple(route.split("/")) if isinstance(route, str) else tuple(route)
@@ -338,6 +429,7 @@ class Router:
         map_count = 0
         registry_count = 0
         skill_ids = set()
+        skill_records = {}
         node_count = 0
         visited = set()
         active_stack = set()
@@ -396,6 +488,20 @@ class Router:
                             p = secure_path(self.root, item.get("path"))
                             self._check_skill(p, skill_id)
                             skill_ids.add(skill_id)
+                            domain_id = chain[0] if chain else None
+                            if skill_id in skill_records:
+                                previous_domain, previous_item = skill_records[skill_id]
+                                if previous_domain != domain_id:
+                                    raise RouterError(f"Skill ID is registered in multiple top-level domains: {skill_id}")
+                                merged_item = dict(previous_item)
+                                for relation_key in ("parent_skill", "related_skills"):
+                                    if relation_key in item:
+                                        if relation_key in merged_item and merged_item[relation_key] != item[relation_key]:
+                                            raise RouterError(f"Conflicting {relation_key} metadata for skill: {skill_id}")
+                                        merged_item[relation_key] = item[relation_key]
+                                skill_records[skill_id] = (domain_id, merged_item)
+                            else:
+                                skill_records[skill_id] = (domain_id, item)
                 elif node.get("status") == "active":
                     raise RouterError(f"Active node has neither map nor skill: {name}")
             active_stack.remove(path)
@@ -408,6 +514,7 @@ class Router:
             raise RouterError("Invalid master skill ID index")
         if len(indexed) != len(set(indexed)) or set(indexed) != skill_ids:
             raise RouterError("Stale or duplicate master skill ID index")
+        validate_skill_relations(skill_records)
         relations = self._yaml(self.root, "catalog/relations.yaml")
         edges = relations.get("edges", [])
         allowed = {"uses", "runs_on", "orchestrated_by", "supports", "depends_on", "related_to"}
