@@ -30,10 +30,10 @@ class IcebergRestCatalogCoverageTests(unittest.TestCase):
         catalog = load_yaml(ROOT, "domains/data/data-engineering/lakehouse/catalogs/map.yaml")
         generic = next(item for item in catalog["children"] if item["id"] == "iceberg-rest")
         self.assertEqual(generic["status"], "active")
-        self.assertEqual(generic["excludes"], ["polaris", "lakekeeper"])
+        self.assertEqual(generic["excludes"], ["polaris", "lakekeeper", "nessie", "gravitino"])
         registry = load_yaml(ROOT, generic["skills"])
         self.assertEqual([item["id"] for item in registry["skills"]], [SKILL])
-        self.assertEqual(registry["skills"][0]["excludes"], ["polaris", "lakekeeper"])
+        self.assertEqual(registry["skills"][0]["excludes"], ["polaris", "lakekeeper", "nessie", "gravitino"])
 
     def test_positive_and_boundary_cases(self):
         selected = [case for case in self.cases if case["id"].startswith("de-iceberg-rest-")]
