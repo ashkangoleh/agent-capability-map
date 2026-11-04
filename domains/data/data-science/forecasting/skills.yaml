@@ -33,6 +33,9 @@ skills:
       - "intermittent demand forecasting"
       - "croston sba tsb"
       - "sparse demand forecast inventory"
+      - "intermittent demand croston tsb"
+      - "sparse demand forecast stockout"
+      - "intermittent demand obsolescence"
     excludes:
       - "dense seasonal demand series"
     status: active
