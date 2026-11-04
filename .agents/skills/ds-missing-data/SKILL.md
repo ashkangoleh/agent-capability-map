@@ -36,6 +36,24 @@ Use when missing observations can change an estimand, model, sample composition 
 - Multiple imputation does not automatically solve MNAR or model misspecification.
 - Weighting requires positivity and a defensible response/observation model.
 
+## Imputation pooling integrity gate
+
+1. Keep MCAR/MAR/MNAR assumptions, selection mechanism and reasons for missingness separate from numerical imputation. MAR is an assumption conditional on observed information; observed-data diagnostics cannot prove MNAR absence.
+2. For `m >= 2` completed datasets, fit the **same estimand/model separately** on every dataset and retain each estimate `Q_i` and its within-imputation variance `U_i`. Pool estimates, **not imputed rows**. Rubin's scalar rule is `Qbar=mean(Q_i)`, `Ubar=mean(U_i)`, `B=sample_variance(Q_i)`, `T=Ubar+(1+1/m)*B`.
+3. Validate the arithmetic with `examples/data_science/inference_integrity.py::pool_scalar_imputations`, which fails closed on mismatched lengths, negative/nonfinite variances and numerical overflow. Its standard error is `sqrt(T)`; its confidence interval remains explicitly `None` because degrees of freedom, finite sample correction and design-specific reference distribution require additional justified inputs.
+4. For actual inference use `mice::pool` or a documented `statsmodels`/other released multiple-imputation procedure, and verify sampling clusters, subgroup estimation and complete-data degrees of freedom. Report model compatibility, imputation model diagnostics and convergence alongside between-imputation variability.
+5. Re-run complete-case and plausible MNAR delta/pattern-mixture sensitivity checks. If conclusions change, report them as assumption-sensitive rather than averaging away uncertainty.
+
+### Executable pooling check
+
+```python
+from examples.data_science.inference_integrity import pool_scalar_imputations
+
+result = pool_scalar_imputations([4, 6, 5], [1, 1, 1])
+assert result["pooled_estimate"] == 5.0
+assert result["confidence_interval"] is None
+```
+
 ## Failure modes and abstention
 
 - Do not replace missing values with zero unless zero is the actual observed meaning.
@@ -55,3 +73,5 @@ Use when missing observations can change an estimand, model, sample composition 
 
 - https://scikit-learn.org/stable/modules/impute.html
 - https://stefvanbuuren.name/fimd/
+- https://search.r-project.org/CRAN/refmans/mice/html/pool.html
+- https://www.statsmodels.org/stable/imputation.html
