@@ -372,7 +372,7 @@ class Router:
                 current_route = chain + (name,)
                 routes.add(current_route)
                 if name in names:
-                    raise RouterError(f"Duplicate sibling ID {name}: {path}")
+                    raise RouterError(f"Duplicate sibling ID {name}: {path}; sibling_ids={[child.get('id') for child in children]}")
                 names.add(name)
                 if not isinstance(node.get("triggers"), list) or not node["triggers"]:
                     raise RouterError(f"Missing node triggers: {name}")
