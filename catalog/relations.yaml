@@ -97,6 +97,6 @@ edges:
     relation: related_to
     rationale: Catalog discovery and Iceberg REST metadata lifecycle serve different responsibilities.
   - from: [ai-ml, mlops, tracking]
-    to: [data, data-science, model-validation]
+    to: [data-science, model-validation]
     relation: supports
     rationale: MLflow run lineage can capture leakage-safe validation artifacts and model comparisons.
