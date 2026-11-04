@@ -74,9 +74,11 @@ class InferenceSurveyRoutingTests(unittest.TestCase):
             "ds-robust-nonparametric-inference": ("## Resampling validity and stopping gate", "paired"),
             "ds-bayesian-pymc-stan": ("## MCMC diagnostic and predictive-validity gate", "BFMI"),
         }
+        registry = load_yaml(ROOT, "domains/data/data-science/statistics-advanced/skills.yaml")
+        registered_paths = {item["id"]: item["path"] for item in registry["skills"]}
         for name, (heading, marker) in words.items():
             with self.subTest(skill=name):
-                text = (ROOT / ".agents" / "skills" / name / "SKILL.md").read_text(encoding="utf-8")
+                text = (ROOT / registered_paths[name]).read_text(encoding="utf-8")
                 self.assertIn(heading, text)
                 self.assertIn(marker, text)
                 self.assertIn("https://", text)
