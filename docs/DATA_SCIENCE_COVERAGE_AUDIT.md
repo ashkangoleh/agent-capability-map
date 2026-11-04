@@ -81,6 +81,18 @@ This increment improves the **existing** `sklearn-leakage-free-validation` packa
 
 **Unverified:** The new commits have not been accompanied by independently retrieved full GitHub Actions push-job results; the complete repo `Router.validate()`, routing evaluation and unit suite must still run against the current HEAD. No sklearn-dependent model benchmarking or human statistics review was performed in this increment. Do not claim production certification or Data Science completion.
 
+## Causal identification and experimentation hardening — 2026-11-04 (post-audit)
+
+The three existing skills `ds-causal-inference`, `ds-ab-experimentation` and `ds-sequential-experimentation` received stricter validity boundaries. No specialist IDs were added or renamed.
+
+- **Causal:** separate identification from estimation, record unverifiable assumptions, audit selection/interference and pre-trends, reject causal claims without design-specific identification.
+- **A/B:** use pre-outcome, unique assignment-unit logs; distinguish SRM from exposure/metric selection, handle conflicts and duplicates, respect randomization design. The two-arm `examples/data_science/assignment_integrity.py` provides a bounded approximate Pearson chi-square diagnostic.
+- **Sequential:** predeclare looks, information fractions, boundaries, alpha spending and delayed-outcome rules; prohibit retroactive ordinary fixed-horizon peeking claims.
+- New tests: `tests/test_data_science_assignment_integrity.py` (**18/18 locally run against source-equivalent helper**), `tests/test_data_science_causal_experimentation.py` and **12** `ds-causal-exp-*` fixtures. Current fixture file has **408 cases** and the master index still has **344 unique IDs** (file inventory counts, not validated full-suite totals).
+- Static JavaScript reconstruction matched 12 candidate routes but did not run the Python router. Actual push CI, full Python suite and production/host behavior are **not yet verified**.
+
+See `docs/DATA_SCIENCE_CAUSAL_EXPERIMENTATION_PROTOCOL.md` for error assumptions and the required execution/reproduction gates.
+
 ## Remaining limitations
 
 1. Routing fixtures measure deterministic lexical matching, not semantic accuracy of an LLM choosing when to call the resolver.
