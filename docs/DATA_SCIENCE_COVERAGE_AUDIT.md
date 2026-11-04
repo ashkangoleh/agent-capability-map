@@ -67,6 +67,20 @@ All 26 areas below have at least one active specialist route and registry. This 
 - Probabilistic forecasting evaluates distributions and calibration; intermittent-demand forecasting handles sparse occurrence/size processes separately.
 - Multilingual NLP evaluation reports per-language and script-level performance; translation is not a substitute for native-language evaluation.
 
+## Model-validation hardening — 2026-11-04 (post-audit increment)
+
+This increment improves the **existing** `sklearn-leakage-free-validation` package rather than inflating the skill inventory. The previously reported 42 active Data Science skills and 26 declared capability areas are unchanged; the latest authoritative master index remains 344 total skill IDs across domains.
+
+- Removed the overly broad, one-word `sklearn` and `scikit-learn` triggers at the specialist/model-validation routing layer while preserving top-level domain discovery. Bare tool names now ask for clarification instead of silently selecting model validation.
+- Added explicit sklearn validation, grouped and temporal split, label-leakage and Persian task triggers. Group/temporal requirements distinguish future predictions for **seen entities** from generalization to **unseen entities**.
+- Expanded the existing skill to address fit-before-split, target encoding, fold-local resampling, independent hyperparameter selection, group leakage, prediction-time feature and outcome availability, irregular timestamps and post-hoc holdout reuse.
+- Added `examples/data_science/split_integrity.py` (a standard-library split-boundary guard), and `tests/test_data_science_split_integrity.py` with **17** unit tests. The source-equivalent helper was executed locally with **17/17 passed**, including NumPy integer arrays when NumPy is installed.
+- Added `tests/test_data_science_validation_routing.py` with structural and ambiguity regression tests; appended **11** `ds-validation-*` fixtures, bringing the full routing fixture file to **396 cases**.
+- A separate JavaScript reconstruction of the current lexical resolver matched **11/11** new cases against the authoritative GitHub YAML. This is **not** a Python `Router.resolve` run and does not certify the full routing suite or model accuracy.
+- Comprehensive evidence matrix and acceptance/next steps: `docs/DATA_SCIENCE_VALIDATION_PROTOCOL.md`.
+
+**Unverified:** The new commits have not been accompanied by independently retrieved full GitHub Actions push-job results; the complete repo `Router.validate()`, routing evaluation and unit suite must still run against the current HEAD. No sklearn-dependent model benchmarking or human statistics review was performed in this increment. Do not claim production certification or Data Science completion.
+
 ## Remaining limitations
 
 1. Routing fixtures measure deterministic lexical matching, not semantic accuracy of an LLM choosing when to call the resolver.
