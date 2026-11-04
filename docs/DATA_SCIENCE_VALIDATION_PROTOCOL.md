@@ -24,7 +24,7 @@ This increment changes the routing contract:
 | Multiple observations per independent entity | `GroupKFold` or group holdout; `StratifiedGroupKFold` where justified | Entity/group disjointness; enough independent groups; group-level uncertainty |
 | Ordered samples and future evaluation | Forward holdout / `TimeSeriesSplit` where sampling assumptions hold | Event order, label availability, lookback, horizon, delayed outcomes, window purge |
 | Irregular timestamps or overlapping label windows | Custom chronological/purged splitter | Calendar-aware embargo in time units, non-overlapping outcome information, as-of feature availability |
-| Both groups and time constraints | Domain-specific group-and-time splitter | Enforce both group isolation and chronology; neither `GroupKFold` nor `TimeSeriesSplit` alone proves both |
+| Both unseen-entity generalization and future-period prediction | Domain-specific group-and-time splitter | Enforce group disjointness and chronology; for forecasts of *seen* entities, reusing historical entities is allowed and should not be confused with entity leakage |
 | Repeated model/hyperparameter choices | Nested cross-validation or properly isolated tuning + final holdout | Outer/inner separation, common outer splits, no final-test reuse |
 
 **Version caveat:** `GroupKFold` accepts `shuffle` and `random_state` only in sklearn 1.6 or later. `TimeSeriesSplit(gap)` excludes a number of samples, not a fixed wall-clock interval; equally spaced observations are needed to compare equal-duration folds.
