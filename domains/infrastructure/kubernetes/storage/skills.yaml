@@ -3,7 +3,7 @@ id: storage
 kind: skill-registry
 skills:
   - id: kubernetes-storage-pvc-recovery
-    path: .agents/skills/kubernetes-storage-pvc-recovery/SKILL.md
+    path: .agents/skills/infrastructure/kubernetes/storage/kubernetes-storage-pvc-recovery/SKILL.md
     description: "Recover Kubernetes PVC, PV and CSI mount problems with topology, data retention and backup safeguards."
     triggers:
       - "kubernetes storage"

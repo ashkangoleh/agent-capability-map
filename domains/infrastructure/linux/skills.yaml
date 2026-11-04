@@ -3,7 +3,7 @@ id: linux-systems
 kind: skill-registry
 skills:
   - id: linux-systemd-service-debug
-    path: .agents/skills/linux-systemd-service-debug/SKILL.md
+    path: .agents/skills/infrastructure/linux/linux-systemd-service-debug/SKILL.md
     description: "Diagnose Linux systemd services, journal errors, restart loops and resource-limit failures safely."
     triggers:
       - "systemd service"
