@@ -3,7 +3,7 @@ id: clickhouse
 kind: skill-registry
 skills:
   - id: clickhouse-mergetree-operability
-    path: .agents/skills/clickhouse-mergetree-operability/SKILL.md
+    path: .agents/skills/data/data-engineering/warehouse/clickhouse/clickhouse-mergetree-operability/SKILL.md
     description: "Design ClickHouse MergeTree tables with correct sort/partition keys and dedup/merge expectations."
     triggers:
       - "clickhouse"

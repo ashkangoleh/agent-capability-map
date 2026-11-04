@@ -3,28 +3,28 @@ id: storage
 kind: skill-registry
 skills:
   - id: hadoop-hdfs-hive-yarn-operations
-    path: .agents/skills/hadoop-hdfs-hive-yarn-operations/SKILL.md
+    path: .agents/skills/data/data-engineering/storage/hadoop-hdfs-hive-yarn-operations/SKILL.md
     description: "Operate HDFS, YARN and Hive with capacity, replication, metastore, security and migration controls."
     triggers:
       - "hadoop hdfs hive yarn operations"
     excludes: []
     status: active
   - id: hbase-distributed-storage
-    path: .agents/skills/hbase-distributed-storage/SKILL.md
+    path: .agents/skills/data/data-engineering/storage/hbase-distributed-storage/SKILL.md
     description: "Design HBase row keys, regions, compactions, replication and consistency for wide-column workloads."
     triggers:
       - "hbase region design compaction"
     excludes: []
     status: active
   - id: nosql-data-platform-integration
-    path: .agents/skills/nosql-data-platform-integration/SKILL.md
+    path: .agents/skills/data/data-engineering/storage/nosql-data-platform-integration/SKILL.md
     description: "Integrate MongoDB, Cassandra and Redis into analytical pipelines while preserving source semantics."
     triggers:
       - "nosql cdc tombstone ttl integration"
     excludes: []
     status: active
   - id: cloud-object-storage-data-lake-operations
-    path: .agents/skills/cloud-object-storage-data-lake-operations/SKILL.md
+    path: .agents/skills/data/data-engineering/storage/cloud-object-storage-data-lake-operations/SKILL.md
     description: "Engineer S3, GCS and ADLS data lakes with lifecycle, consistency, security and safe publication protocols."
     triggers:
       - "cloud object storage data lake lifecycle"
