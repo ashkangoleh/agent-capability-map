@@ -68,6 +68,10 @@ New `ds-validation-*` fixtures cover generic-tool abstention; positive group/tem
 - **Statistical inference and surveys:** multiplicity, survey design effects, non-response, cluster/stratification design, power and sensitivity.
 - **Evaluation benchmark:** label hard negative and bilingual prompts and measure real model behavior; do not use deterministic fixture accuracy as a model score.
 
+## Subsequent focused workstreams
+
+The `data/data-science` workstream subsequently hardened causal inference and sequential experimentation, then conformal coverage and probability calibration. Consult `docs/DATA_SCIENCE_CAUSAL_EXPERIMENTATION_PROTOCOL.md` and `docs/DATA_SCIENCE_UNCERTAINTY_CALIBRATION_PROTOCOL.md` for more recent evidence and limitations. **The next active family is forecasting**. This model-validation note is not the authoritative project continuation pointer; use `docs/CONTINUATION_CHECKPOINT.md`.
+
 ## Primary references
 
 - [scikit-learn common pitfalls and data leakage](https://scikit-learn.org/stable/common_pitfalls.html)
