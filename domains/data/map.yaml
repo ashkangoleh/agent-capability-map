@@ -57,6 +57,7 @@ children:
     triggers:
       - "causal experiment design"
       - "pandas eda"
+      - "pandas eda data profiling"
       - "imbalanced classification"
       - "geospatial analysis"
       - "point in time features"

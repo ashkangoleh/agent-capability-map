@@ -99,6 +99,7 @@ children:
       - "scientific computing"
       - "model explainability"
       - "geospatial statistics"
+      - "geospatial analysis"
       - "operations research"
       - "pandas eda"
       - "imbalanced classification"
