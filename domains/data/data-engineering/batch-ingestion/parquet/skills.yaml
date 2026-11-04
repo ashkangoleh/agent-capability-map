@@ -3,7 +3,7 @@ id: parquet-layout
 kind: skill-registry
 skills:
   - id: parquet-file-layout-tuning
-    path: .agents/skills/parquet-file-layout-tuning/SKILL.md
+    path: .agents/skills/data/data-engineering/batch-ingestion/parquet/parquet-file-layout-tuning/SKILL.md
     description: "Tune Parquet file sizes, partition layout, row groups and scan behavior with measured workload constraints."
     triggers:
       - "parquet small files"
