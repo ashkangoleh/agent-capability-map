@@ -93,7 +93,7 @@ class InfrastructureCoverageTests(unittest.TestCase):
                                          if item.get("status") == "active")
         walk("domains/infrastructure/map.yaml")
         self.assertEqual(len(registrations), len(set(registrations)))
-        self.assertGreaterEqual(len(registrations), 90)
+        self.assertEqual(len(registrations), 95)
 
     def test_infrastructure_scopes_are_selectable(self):
         scopes = {item["route"] for item in discover_domains(ROOT, prefix="infrastructure")}

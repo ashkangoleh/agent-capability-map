@@ -3,9 +3,10 @@
 ## Current integration baseline — 2026-11-04
 
 - Canonical branch: `pre_release`.
-- Inventory: 41 top-level domains and 287 active SKILL.md packages.
-- Validation: 313 deterministic routing fixtures and 49 unit tests pass on the current baseline.
-- Data Engineering expansion is in progress; the first source-specific CDC tranche covers Oracle GoldenGate, SQL Server CDC/Change Tracking and MongoDB Change Streams.
+- Inventory: 41 top-level domains, 322 active SKILL.md packages and 83 nested map files.
+- Validation: 348 deterministic routing fixtures and 54 unit tests pass on the current baseline.
+- Infrastructure has 16 first-class selectable scopes and 95 unique active specialist skills, including 35 newly added packages.
+- Data Engineering remains incomplete; the first source-specific CDC tranche covers Oracle GoldenGate, SQL Server CDC/Change Tracking and MongoDB Change Streams.
 - Next priorities: engine-specific warehouse skills, managed/event-streaming platforms, catalog and metadata operations, then deeper per-skill version and recovery evidence.
 
 ## Phase 1 — Foundation (current branch)

@@ -2,7 +2,7 @@
 
 Global-first, YAML-driven, hierarchical discovery for reusable skills across coding agents. A single master map serves all projects. A user can **add personal skills** globally or per project without changing the master repository.
 
-The current `pre_release` baseline contains 41 top-level domains and 287 active SKILL.md packages. The deterministic routing suite contains 313 fixtures; passing it validates the YAML graph and lexical resolver, not semantic LLM accuracy or production execution. Many fine-grained subdomains remain mapped-only and require focused implementation and evaluation. Get live counts with `python scripts/report_coverage.py --summary`. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
+The current `pre_release` baseline contains 41 top-level domains and 322 active SKILL.md packages. The deterministic routing suite contains 348 fixtures and 54 unit tests; passing them validates the YAML graph and lexical resolver, not semantic LLM accuracy or production execution. Infrastructure now has 16 first-class selectable scopes and 95 unique active specialist skills. The Data domain is still incomplete: Data Engineering needs further operational depth, Data Science has structural coverage but incomplete independent validation, and seven other Data subdomains need focused audits. Get live counts with `python scripts/report_coverage.py --summary`. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
 
 ## Operating contract
 
@@ -259,7 +259,7 @@ Data Science is a first-class subdomain under Data & Analytics, alongside Data E
 
 ## Expanded Infrastructure Engineering
 
-Infrastructure now has dedicated specialist routes for DevOps/IaC, DevSecOps, SRE, networking, cloud, Linux/Windows systems, virtualization, storage, databases, Kubernetes, service mesh and platform engineering. See docs/INFRASTRUCTURE_TOOL_MATRIX.md. Existing Kubernetes, Terraform, Ansible, GitOps, Prometheus, OpenTelemetry, Vault and network diagnostics skills remain intact.
+Infrastructure now has 16 first-class selectable scopes and 95 unique active specialist skills across Compute & OS, Networking, Cloud, IaC, Virtualization, Containers/Kubernetes, DevOps Delivery, Platform Engineering, SRE, Observability, Infrastructure Security, Storage, Database Infrastructure, Edge, Hardware/Data Center and Architecture/Governance. This expansion adds 35 specialist packages and consolidates duplicate registrations without deleting existing specialist IDs. All 35 new specialists have positive routing fixtures; the full CI suite passes 348 deterministic routing fixtures and 54 unit tests. This is structural and lexical validation, not production certification. See [Infrastructure Coverage Audit](docs/INFRASTRUCTURE_COVERAGE_AUDIT.md) and [Infrastructure Tool Matrix](docs/INFRASTRUCTURE_TOOL_MATRIX.md).
 
 ## Unified master branch
 
