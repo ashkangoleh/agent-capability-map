@@ -9,9 +9,15 @@ from numbers import Integral, Real
 
 
 def _finite_number(value, label):
-    if isinstance(value, bool) or not isinstance(value, Real) or not isfinite(float(value)):
+    if isinstance(value, bool) or not isinstance(value, Real):
         raise ValueError(f"{label} must be a finite real number")
-    return float(value)
+    try:
+        number = float(value)
+    except (OverflowError, TypeError, ValueError) as exc:
+        raise ValueError(f"{label} must be a finite real number") from exc
+    if not isfinite(number):
+        raise ValueError(f"{label} must be a finite real number")
+    return number
 
 
 def audit_partitions(train_ids, calibration_ids, evaluation_ids):
@@ -71,7 +77,10 @@ def regression_interval_report(y_true, y_pred, *, radius):
     pred = [_finite_number(x, "prediction") for x in y_pred]
     if not truth or len(truth) != len(pred):
         raise ValueError("Target and prediction arrays must have equal nonzero length")
-    covered = sum(abs(actual - forecast) <= radius for actual, forecast in zip(truth, pred))
+    differences = [abs(actual - forecast) for actual, forecast in zip(truth, pred)]
+    if any(not isfinite(delta) for delta in differences):
+        raise ValueError("Absolute prediction errors must be finite")
+    covered = sum(delta <= radius for delta in differences)
     return {"evaluation_count": len(truth), "covered": covered,
             "empirical_coverage": covered / len(truth), "interval_width": 2 * radius}
 
