@@ -54,7 +54,7 @@ class DataScienceCoverageTests(unittest.TestCase):
         scopes = discover_domains(ROOT, prefix="data")
         science = next(item for item in scopes if item["route"] == "data/data-science")
         self.assertEqual(science["kind"], "subdomain")
-        self.assertEqual(science["active_skill_count"], 44)
+        self.assertEqual(science["active_skill_count"], 42)
         self.assertEqual(science["mapped_nodes"], 0)
 
     def test_master_index_includes_all_new_specialists(self):

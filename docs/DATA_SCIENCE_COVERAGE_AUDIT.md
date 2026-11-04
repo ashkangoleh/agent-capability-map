@@ -12,12 +12,12 @@ Data Science is a first-class subdomain under `data`, with canonical route `data
 |---|---:|
 | Canonical domain route | `data/data-science` |
 | Active subdomain maps | 20 |
-| Active specialist skills | 44 |
+| Active specialist skills | 42 |
 | New specialist skills in this expansion | 11 |
 | Positive fixtures for new specialists | 11 |
 | Near-miss fixtures for cross-domain boundaries | 5 |
 
-The 44 count is the active registry inventory, not a benchmark score.
+The 42 count is the active registry inventory, not a benchmark score.
 
 ## Capability coverage matrix
 
@@ -67,7 +67,7 @@ The 44 count is the active registry inventory, not a benchmark score.
 
 1. Routing fixtures measure deterministic lexical matching, not semantic accuracy of an LLM choosing when to call the resolver.
 2. Skill text has not been independently reviewed by a statistician/econometrician for every specialized estimator.
-3. No executable benchmark suite currently validates all 44 skills on real datasets.
+3. No executable benchmark suite currently validates all 42 skills on real datasets.
 4. Current references are entry points, not a complete version compatibility matrix for every library.
 5. Legal fairness determinations, clinical/regulated statistical validation and production model deployment require separate domain-specific governance and human review.
 6. Coverage is not exhaustive for every specialist area: spatial causal inference, advanced survey small-area estimation, functional data analysis, psychometrics, survival causal inference, online learning and advanced econometric identification remain candidate future expansions.

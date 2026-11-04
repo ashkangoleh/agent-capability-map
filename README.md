@@ -255,7 +255,7 @@ This branch adds 49 specialist packages for lifecycle/modeling, ingestion/CDC, s
 
 ## First-class Data Science domain
 
-Data Science is a first-class subdomain under Data & Analytics, alongside Data Engineering, Analytics Engineering, Data Analysis, Database Engineering, BI and Governance. It now contains 44 active specialist skills across statistical inference, robust/nonparametric methods, Bayesian modeling, experiments, causal ML, panel econometrics, classical ML, calibration, fairness assessment, conformal uncertainty, forecasting, survival, recommendation, geospatial science, optimization, multilingual NLP and scientific computing. See docs/DATA_SCIENCE_TOOL_MATRIX.md. AI/ML remains a separate top-level domain for deep learning, LLM engineering, MLOps and model serving.
+Data Science is a first-class subdomain under Data & Analytics, alongside Data Engineering, Analytics Engineering, Data Analysis, Database Engineering, BI and Governance. It now contains 42 active specialist skills across statistical inference, robust/nonparametric methods, Bayesian modeling, experiments, causal ML, panel econometrics, classical ML, calibration, fairness assessment, conformal uncertainty, forecasting, survival, recommendation, geospatial science, optimization, multilingual NLP and scientific computing. See docs/DATA_SCIENCE_TOOL_MATRIX.md. AI/ML remains a separate top-level domain for deep learning, LLM engineering, MLOps and model serving.
 
 ## Expanded Infrastructure Engineering
 

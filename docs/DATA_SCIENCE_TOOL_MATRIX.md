@@ -30,6 +30,6 @@
 
 Data Science owns problem framing, statistical validity, experimentation, quantitative analysis and classical predictive modeling. AI/ML owns deep learning, foundation models, LLM/RAG systems, distributed training, model serving and MLOps. Feature stores and deployment may require explicit cross-domain composition.
 
-Production safeguards: define unit/estimand; prevent target and temporal leakage; split by entity/time; account for missing-not-at-random data; control multiplicity; assess power and effect size; evaluate calibration and decision costs; quantify uncertainty; test subgroup stability; preserve reproducibility and privacy. The Data Science subtree currently contains 44 active specialist skills across 20 active subdomain maps. This is structural coverage; the audit in DATA_SCIENCE_COVERAGE_AUDIT.md distinguishes skill presence from validated task depth.
+Production safeguards: define unit/estimand; prevent target and temporal leakage; split by entity/time; account for missing-not-at-random data; control multiplicity; assess power and effect size; evaluate calibration and decision costs; quantify uncertainty; test subgroup stability; preserve reproducibility and privacy. The Data Science subtree currently contains 42 active specialist skills across 20 active subdomain maps. This is structural coverage; the audit in DATA_SCIENCE_COVERAGE_AUDIT.md distinguishes skill presence from validated task depth.
 
 This matrix covers major ecosystems, not every package or commercial product. Verify APIs, licenses and compatibility before implementation.
