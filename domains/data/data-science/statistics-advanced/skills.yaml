@@ -34,6 +34,9 @@ skills:
       - "robust nonparametric inference"
       - "permutation test bootstrap confidence interval"
       - "mann whitney wilcoxon kruskal wallis"
+      - "cluster bootstrap resampling"
+      - "paired permutation test exchangeability"
+      - "robust bootstrap bca interval"
     excludes:
       - "bayesian posterior inference"
     status: active
