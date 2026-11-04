@@ -124,7 +124,6 @@ children:
   - id: data-architecture
     description: "data architecture"
     triggers:
-      - "multi engine data platform"
       - "data platform architecture"
       - "lakehouse"
       - "data mesh"
