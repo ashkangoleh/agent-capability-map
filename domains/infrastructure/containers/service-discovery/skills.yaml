@@ -3,7 +3,7 @@ id: service-discovery
 kind: skill-registry
 skills:
   - id: service-discovery-control-plane-operations
-    path: .agents/skills/service-discovery-control-plane-operations/SKILL.md
+    path: .agents/skills/infrastructure/containers/service-discovery/service-discovery-control-plane-operations/SKILL.md
     description: "Operate Consul, etcd and CoreDNS service discovery with quorum, health, identity and DNS caching controls."
     triggers:
       - "consul etcd service discovery quorum health checks"
