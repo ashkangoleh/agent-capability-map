@@ -148,6 +148,9 @@ children:
       - "data engineering overview"
       - "streaming data"
       - "unstructured"
+      - "group cross validation leakage"
+      - "time series cross validation leakage"
+      - "نشت داده در اعتبارسنجی مدل"
     map: domains/data/map.yaml
     status: active
   - id: infrastructure
