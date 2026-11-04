@@ -3,7 +3,7 @@ id: identity-access
 kind: skill-registry
 skills:
   - id: identity-access-privileged-infrastructure
-    path: .agents/skills/identity-access-privileged-infrastructure/SKILL.md
+    path: .agents/skills/infrastructure/security/identity-access/identity-access-privileged-infrastructure/SKILL.md
     description: "Engineer infrastructure IAM/PAM with federation, RBAC/ABAC, JIT elevation, service identities and access reviews."
     triggers:
       - "infrastructure iam pam jit access federation"

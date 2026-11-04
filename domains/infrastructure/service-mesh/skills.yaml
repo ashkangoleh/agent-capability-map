@@ -3,7 +3,7 @@ id: service-mesh
 kind: skill-registry
 skills:
   - id: service-mesh-istio-operations
-    path: .agents/skills/service-mesh-istio-operations/SKILL.md
+    path: .agents/skills/infrastructure/service-mesh/service-mesh-istio-operations/SKILL.md
     description: "Operate Istio service mesh traffic, mTLS, authorization, telemetry and sidecar/ambient lifecycle."
     triggers:
       - "istio service mesh operations"

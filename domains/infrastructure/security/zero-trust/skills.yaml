@@ -3,7 +3,7 @@ id: zero-trust
 kind: skill-registry
 skills:
   - id: zero-trust-network-access-engineering
-    path: .agents/skills/zero-trust-network-access-engineering/SKILL.md
+    path: .agents/skills/infrastructure/security/zero-trust/zero-trust-network-access-engineering/SKILL.md
     description: "Design zero-trust access and microsegmentation using identity, device/workload posture and continuous verification."
     triggers:
       - "zero trust network access microsegmentation"

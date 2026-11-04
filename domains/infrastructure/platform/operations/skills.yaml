@@ -3,7 +3,7 @@ id: operations
 kind: skill-registry
 skills:
   - id: platform-operations
-    path: .agents/skills/platform-operations/SKILL.md
+    path: .agents/skills/infrastructure/platform/operations/platform-operations/SKILL.md
     description: "Review platform operational readiness, ownership, service boundaries, maintenance and recovery controls."
     triggers:
       - "platform operations readiness review"
