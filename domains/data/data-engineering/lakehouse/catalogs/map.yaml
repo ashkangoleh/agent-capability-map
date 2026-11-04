@@ -2,6 +2,18 @@ schema_version: 1
 id: catalogs
 kind: map
 children:
+  - id: iceberg-rest
+    description: "Vendor-neutral Apache Iceberg REST protocol, credentials, concurrency and cross-engine interoperability"
+    triggers:
+      - "iceberg rest catalog"
+      - "iceberg rest catalog credential vending"
+      - "iceberg catalog commit retry"
+      - "iceberg rest endpoint discovery"
+    excludes:
+      - "polaris"
+      - "lakekeeper"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/catalogs/iceberg-rest/skills.yaml
   - id: polaris
     description: "polaris"
     triggers:
