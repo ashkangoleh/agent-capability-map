@@ -105,6 +105,7 @@ children:
       - "falco runtime security detection"
       - "sigstore cosign image signing"
       - "slsa sbom software supply chain"
+      - "slsa provenance attestation"
       - "spiffe workload identity"
     status: active
     skills: domains/infrastructure/devsecops/skills.yaml

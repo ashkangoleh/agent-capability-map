@@ -119,6 +119,7 @@ children:
       - "sigstore cosign image signing"
       - "devsecops"
       - "slsa sbom"
+      - "slsa provenance attestation"
       - "software supply chain"
       - "linux systemd"
       - "container security"

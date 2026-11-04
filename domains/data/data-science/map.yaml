@@ -90,6 +90,7 @@ children:
     triggers:
       - "ab test guardrail analysis"
       - "causal experiment design"
+      - "causal inference sensitivity analysis"
     status: active
     skills: domains/data/data-science/experimentation/skills.yaml
   - id: modeling
