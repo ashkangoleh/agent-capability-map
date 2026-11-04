@@ -1576,3 +1576,51 @@ cases:
     request: "Design group cross validation leakage checks"
     status: matched
     skill: sklearn-leakage-free-validation
+  - id: ds-causal-exp-srm-assignment
+    request: "Audit sample ratio mismatch ab experiment using assignment logs"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-causal-exp-ab-integrity
+    request: "Check ab test assignment integrity before causal effect estimation"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-causal-exp-fixed-horizon
+    request: "Plan fixed horizon ab test analysis with guardrails"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-causal-exp-cluster
+    request: "Review cluster randomized experiment guardrail monitoring"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-causal-exp-persian-srm
+    request: "بررسی sample ratio mismatch ab experiment برای تخصیص کاربران"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-causal-exp-alpha-spending
+    request: "Plan group sequential alpha spending for interim looks"
+    status: matched
+    skill: ds-sequential-experimentation
+  - id: ds-causal-exp-continuous
+    request: "Audit continuous monitoring sequential experiment with early stopping"
+    status: matched
+    skill: ds-sequential-experimentation
+  - id: ds-causal-exp-early-stopping
+    request: "Review sequential experiment early stopping and delayed outcomes"
+    status: matched
+    skill: ds-sequential-experimentation
+  - id: ds-causal-exp-identification
+    request: "Specify causal identification assumptions before choosing DoubleML estimator"
+    status: matched
+    skill: ds-causal-inference
+  - id: ds-causal-exp-interference
+    request: "Review causal experiment design interference in marketplace A/B testing"
+    status: matched
+    skill: ds-causal-inference
+  - id: ds-causal-exp-observational-near-miss
+    request: "Evaluate causal inference in observational data"
+    status: matched
+    skill: causal-inference-observational
+  - id: ds-causal-exp-data-analysis-near-miss
+    request: "Analyze experiment result analysis and guardrails"
+    status: matched
+    skill: experiment-analysis-results
