@@ -34,6 +34,7 @@ children:
     triggers:
       - "network automation sdn"
       - "netbox nornir gnmi openconfig"
+      - "netbox nornir gnmi"
     status: active
     skills: domains/infrastructure/network-automation/skills.yaml
   - id: switching

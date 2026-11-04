@@ -8,5 +8,6 @@ skills:
     triggers:
       - "serverless managed runtime lambda cloud run functions"
       - "aws lambda cloud run runtime"
+      - "aws lambda"
     excludes: []
     status: active

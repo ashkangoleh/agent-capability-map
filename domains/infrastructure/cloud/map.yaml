@@ -46,5 +46,6 @@ children:
     triggers:
       - "serverless managed runtime lambda cloud run functions"
       - "aws lambda cloud run runtime"
+      - "aws lambda"
     status: active
     skills: domains/infrastructure/cloud/serverless/skills.yaml
