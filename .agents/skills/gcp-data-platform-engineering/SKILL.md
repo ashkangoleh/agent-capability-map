@@ -1,38 +1,43 @@
 ---
 name: gcp-data-platform-engineering
 description: "Design GCP data platforms across BigQuery, Dataflow, Dataproc, Pub/Sub and Cloud Storage."
+license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # gcp-data-platform-engineering
 
 ## Activation boundary
-Design GCP data platforms across BigQuery, Dataflow, Dataproc, Pub/Sub and Cloud Storage.
+Use for GCP-native data platform architecture and service operations.
 
 ## Required context
-Project/region, service accounts, BigQuery, GCS, Pub/Sub, Dataflow/Dataproc and billing.
+Organization/project/region; Pub/Sub event rate; BigQuery workload; Dataflow/Dataproc runtime; GCS; IAM; quotas and cost.
 
 ## Production procedure
-1. Map storage, catalog, ingestion, compute, warehouse, streaming and governance boundaries.
-2. Design workload identity, network isolation, KMS, region/residency and private connectivity together.
-3. Choose managed versus self-managed components from runtime control and operating burden.
-4. Model quotas, concurrency, egress, pricing and DR.
-5. Test identity propagation, cross-account access, quota exhaustion and restore.
+1. Define project and service-account boundaries, VPC-SC/data perimeter needs and regional residency.
+2. Choose Cloud Storage landing zones and lifecycle; define object identity and retention.
+3. Use Pub/Sub for event transport and Dataflow/Beam for streaming/batch processing when semantics fit.
+4. Use Dataproc/Spark for workloads requiring Spark ecosystem or custom libraries.
+5. Design BigQuery partitioning/clustering, Storage Write API mode and slot/reservation model.
+6. Govern datasets with IAM, authorized views, row/column policies and audit.
+7. Monitor quotas, streaming buffer, Dataflow watermark/backlog, BigQuery slots and cost.
 
 ## Failure modes and recovery
-- Validate the complete source-to-sink or control-plane boundary; component-level success is not an end-to-end guarantee.
-- Verify partial commits, duplicate/replay behavior, schema drift, concurrency and rollback limits.
-- Do not disable security controls or claim unverified exactly-once, atomicity or performance.
+- Pub/Sub redelivery: use idempotent consumers and ack after durable sink commit.
+- Dataflow watermark stalls: inspect source partitions and slow transforms.
+- BigQuery append timeout: determine Storage Write API commit/offset state before retry.
+- GCS IAM bypass: restrict direct bucket access.
+- Regional mismatch: align source, processing and warehouse locations.
 
 ## Validation and acceptance
-- Verify deployed versions and exact connector/engine compatibility against primary documentation.
-- Test representative success, duplicate/replay, schema evolution and partial-failure recovery.
-- Record ownership, monitoring, rollback and unresolved assumptions.
-
-## Official or primary references
-- https://docs.cloud.google.com/bigquery/docs
-- https://cloud.google.com/dataflow/docs
+- Test Pub/Sub replay, Dataflow worker loss, BigQuery write offsets, schema change and GCS restore.
+- Measure watermark, write latency, slot utilization, bytes scanned and cost.
 
 ## Output contract
-Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+Return GCP service topology, identity/perimeter model, ingestion/compute choice and SLO/cost gates.
+
+## Official or primary references
+- https://cloud.google.com/architecture/data-lakes
+- https://cloud.google.com/dataflow/docs
+- https://cloud.google.com/bigquery/docs

@@ -1,38 +1,45 @@
 ---
 name: data-access-control-masking
-description: "Enforce data classification and least-privilege access at query, catalog and object-storage layers."
+description: "Enforce data classification and least-privilege access across catalog, warehouse, query, pipeline and object-storage layers."
+license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # data-access-control-masking
 
 ## Activation boundary
-Enforce data classification and least-privilege access at query, catalog and object-storage layers.
+Use for data platform authorization and masking. Catalog permissions do not automatically protect direct object-store access or copied extracts.
 
 ## Required context
-Classification, identities, policy engine, query engines, object storage, service accounts and audit.
+Classification; identities/workload principals; systems; groups; row/column policy; encryption/KMS; object storage; audit and emergency access.
 
 ## Production procedure
-1. Identify producer/consumer owners, data purpose, classification and metadata source of truth.
-2. Define versioned contracts for schema, semantics, quality, freshness, access and lifecycle.
-3. Enforce identity and row/column controls at query and storage boundaries.
-4. Capture lineage and mark inferred/incomplete metadata honestly.
-5. Test policy bypass, revoked access, retention expiry and deletion propagation.
+1. Inventory every access path: SQL, direct storage, APIs, exports, notebooks, service accounts and catalog APIs.
+2. Classify sensitive fields/datasets and assign owners and approved purposes.
+3. Define federation and workload identities; avoid shared long-lived credentials.
+4. Apply least-privilege RBAC/ABAC at each enforcement layer, including row filters, masking, tokenization and object policy.
+5. Separate pipeline write privileges from analyst read and admin privileges.
+6. Protect secrets/keys; define rotation, revocation, break-glass and audit retention.
+7. Propagate classification to derived datasets and extracts.
+8. Test access using real non-admin identities and verify denied paths.
 
 ## Failure modes and recovery
-- Validate the complete source-to-sink or control-plane boundary; component-level success is not an end-to-end guarantee.
-- Verify partial commits, duplicate/replay behavior, schema drift, concurrency and rollback limits.
-- Do not disable security controls or claim unverified exactly-once, atomicity or performance.
+- Direct object-store bypass: restrict bucket/prefix access or use credential vending.
+- Overbroad service account: scope roles and rotate credentials.
+- Masking inconsistency: test every query engine/export path.
+- Revocation lag: measure token/session lifetime and terminate sessions where required.
+- Sensitive values in logs: redact payloads.
 
 ## Validation and acceptance
-- Verify deployed versions and exact connector/engine compatibility against primary documentation.
-- Test representative success, duplicate/replay, schema evolution and partial-failure recovery.
-- Record ownership, monitoring, rollback and unresolved assumptions.
+- Run positive/negative access tests for user, analyst, engineer and pipeline identities.
+- Test row/column policy, export, API, object store, expiry and revocation.
+- Verify audit events contain principal, asset, action and timestamp.
+- Confirm derived outputs preserve classification and retention.
+
+## Output contract
+Return access matrix, enforcement map, masking policy, key/secret lifecycle, audit evidence and bypass risks.
 
 ## Official or primary references
 - https://ranger.apache.org/
 - https://trino.io/docs/current/security/file-system-access-control.html
-
-## Output contract
-Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.

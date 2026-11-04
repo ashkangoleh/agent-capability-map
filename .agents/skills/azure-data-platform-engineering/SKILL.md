@@ -1,38 +1,43 @@
 ---
 name: azure-data-platform-engineering
 description: "Design Azure data platforms across ADLS Gen2, Data Factory, Fabric, Synapse and Event Hubs."
+license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # azure-data-platform-engineering
 
 ## Activation boundary
-Design Azure data platforms across ADLS Gen2, Data Factory, Fabric, Synapse and Event Hubs.
+Use for Azure-native data platform architecture and service operations.
 
 ## Required context
-Tenant/subscription, region, identities, ADLS, ADF/Fabric/Synapse, Event Hubs and pricing.
+Subscription/tenant; ADLS account; identity; Data Factory/Fabric/Synapse; Event Hubs; region; network and governance.
 
 ## Production procedure
-1. Map storage, catalog, ingestion, compute, warehouse, streaming and governance boundaries.
-2. Design workload identity, network isolation, KMS, region/residency and private connectivity together.
-3. Choose managed versus self-managed components from runtime control and operating burden.
-4. Model quotas, concurrency, egress, pricing and DR.
-5. Test identity propagation, cross-account access, quota exhaustion and restore.
+1. Define tenant/subscription and managed identity boundaries; prefer workload identity over stored secrets.
+2. Design ADLS Gen2 hierarchical namespace, ACLs, lifecycle, private endpoints and zone layout.
+3. Choose Data Factory for connector/orchestration, Fabric or Synapse for managed analytics, and Event Hubs for event transport.
+4. Validate Event Hubs partitioning, consumer groups, retention and checkpoint ownership.
+5. Define catalog/governance with Purview/Fabric capabilities; distinguish catalog metadata from storage ACLs.
+6. Set network isolation, private endpoints, Key Vault, diagnostic settings and policy.
+7. Model capacity, CU/warehouse sizing, data movement, egress and idle cost.
 
 ## Failure modes and recovery
-- Validate the complete source-to-sink or control-plane boundary; component-level success is not an end-to-end guarantee.
-- Verify partial commits, duplicate/replay behavior, schema drift, concurrency and rollback limits.
-- Do not disable security controls or claim unverified exactly-once, atomicity or performance.
+- ADLS ACL mismatch: test both RBAC and POSIX ACL evaluation.
+- Managed identity failure: verify role assignment scope and token audience.
+- Event Hubs checkpoint loss: preserve checkpoint store and define replay.
+- Data Factory retry duplicates: make sink idempotent.
+- Fabric capacity throttling: monitor CU saturation and workload isolation.
 
 ## Validation and acceptance
-- Verify deployed versions and exact connector/engine compatibility against primary documentation.
-- Test representative success, duplicate/replay, schema evolution and partial-failure recovery.
-- Record ownership, monitoring, rollback and unresolved assumptions.
-
-## Official or primary references
-- https://learn.microsoft.com/en-us/azure/data-factory/introduction
-- https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview
+- Test identity and ACLs, private endpoint access, Event Hubs replay, pipeline restart and restore.
+- Measure pipeline latency, capacity throttling, data movement and cost.
 
 ## Output contract
-Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+Return Azure service topology, identity/network/governance model, workload placement and recovery plan.
+
+## Official or primary references
+- https://learn.microsoft.com/azure/architecture/data-guide/
+- https://learn.microsoft.com/azure/storage/blobs/data-lake-storage-introduction
+- https://learn.microsoft.com/azure/event-hubs/event-hubs-about

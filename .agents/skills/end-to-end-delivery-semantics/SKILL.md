@@ -1,38 +1,43 @@
 ---
 name: end-to-end-delivery-semantics
-description: "Reason about at-most-once, at-least-once and exactly-once across source offsets, processor state and external sinks."
+description: "Reason about at-most-once, at-least-once and exactly-once across source offsets, processor state, transactions and external sinks."
+license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # end-to-end-delivery-semantics
 
 ## Activation boundary
-Reason about at-most-once, at-least-once and exactly-once across source offsets, processor state and external sinks.
+Use when a pipeline claims delivery guarantees or must recover without loss/duplication. Never label a pipeline exactly-once based only on a broker, checkpoint or connector setting.
 
 ## Required context
-Source ack/offset, checkpoint, transaction coordinator, sink commit protocol and idempotency key.
+Source offset/ack model; processor checkpoint/state; sink transaction; idempotency key; retry; ordering scope; replay horizon; external side effects.
 
 ## Production procedure
-1. Define event identity, key/partition strategy, ordering and source retention.
-2. Separate event time, processing time, watermarks, windows, lateness and corrections.
-3. Align offsets, checkpoints, state stores and sink commits; document the actual exactly-once boundary.
-4. Bound state, retries, backpressure and DLQ growth; monitor lag and recovery.
-5. Test late events, rebalance, worker loss, sink timeout and replay.
+1. Draw the commit chain: source read/ack, processor state, output write, sink commit and source offset advancement.
+2. Identify the atomic boundary. If source offset and sink commit cannot be coordinated, require idempotent writes or deduplication.
+3. Define stable event identity and version, including source partition/offset or business key plus sequence where valid.
+4. For Kafka distinguish producer idempotence, transactions and consumer offset commits; for Flink inspect checkpoint mode and sink two-phase commit support.
+5. For warehouses/object stores validate transaction or manifest commit semantics; processor checkpoints do not make every sink atomic.
+6. Define DLQ/replay behavior and ordering guarantees by partition/key; document cross-partition operations.
 
 ## Failure modes and recovery
-- Validate the complete source-to-sink or control-plane boundary; component-level success is not an end-to-end guarantee.
-- Verify partial commits, duplicate/replay behavior, schema drift, concurrency and rollback limits.
-- Do not disable security controls or claim unverified exactly-once, atomicity or performance.
+- Crash after sink write before source ack causes duplicates unless sink is idempotent or transactionally coupled.
+- Ack before durable sink commit can lose data; move ack after commit or use a supported transaction.
+- Checkpoint restore after source retention expires may be impossible; retain external snapshots.
+- External HTTP side effects need outbox/idempotency; processor exactly-once does not cover arbitrary APIs.
+- DLQ replay can reorder data; preserve source identity/version and correction semantics.
 
 ## Validation and acceptance
-- Verify deployed versions and exact connector/engine compatibility against primary documentation.
-- Test representative success, duplicate/replay, schema evolution and partial-failure recovery.
-- Record ownership, monitoring, rollback and unresolved assumptions.
+- Inject crashes at each commit boundary.
+- Test duplicates, timeout retries, sink partial failure, checkpoint restore and replay.
+- Verify ordering scope and deduplication horizon.
+- Produce a guarantee matrix for source, processor, sink and external side effects.
+
+## Output contract
+Return commit-boundary diagram, guarantee matrix, idempotency design, fault-injection results and qualified delivery claim.
 
 ## Official or primary references
 - https://kafka.apache.org/documentation/#semantics
-- https://nightlies.apache.org/flink/flink-docs-stable/docs/learn-flink/fault_tolerance/
-
-## Output contract
-Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+- https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/checkpoints/

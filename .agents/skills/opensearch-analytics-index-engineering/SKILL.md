@@ -1,37 +1,42 @@
 ---
 name: opensearch-analytics-index-engineering
 description: "Use OpenSearch for search-oriented ingestion and analytics with mappings, shards, refresh, ISM and bulk APIs."
+license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # opensearch-analytics-index-engineering
 
 ## Activation boundary
-Use OpenSearch for search-oriented ingestion and analytics with mappings, shards, refresh, ISM and bulk APIs.
+Use for search/index-oriented analytics and log/event retrieval. Do not use OpenSearch as a substitute for a relational warehouse without query-fit evidence.
 
 ## Required context
-OpenSearch release, mappings, shard topology, ingest rate, refresh SLA, retention and query patterns.
+OpenSearch version; document shape; mappings; ingest rate; query patterns; shard count; retention; replicas; security and ISM.
 
 ## Production procedure
-1. Inspect EXPLAIN/runtime profiles for scan, exchange, join, aggregation, skew and pushdown.
-2. Choose partitioning, clustering, sort/distribution and indexes using real predicates.
-3. Set workload isolation, concurrency, memory/spill, quotas and cost attribution.
-4. Verify type, timezone, transaction, MERGE and delete semantics by release.
-5. Test source outage, queue saturation, large joins, partial loads and recovery.
+1. Define document identity, routing key, mapping and dynamic-field policy before indexing.
+2. Choose shard/replica count and rollover strategy from index size, query concurrency and recovery.
+3. Use bulk ingestion with bounded batch size, retry classification and per-item error inspection.
+4. Set refresh interval from search freshness needs; avoid forced refresh per document.
+5. Configure ISM rollover, retention, snapshots and restore validation.
+6. Use ingest pipelines only for deterministic transformations; keep complex business transformations upstream.
+7. Monitor shard allocation, segment merges, heap, indexing pressure, query latency and rejected writes.
 
 ## Failure modes and recovery
-- Validate the complete source-to-sink or control-plane boundary; component-level success is not an end-to-end guarantee.
-- Verify partial commits, duplicate/replay behavior, schema drift, concurrency and rollback limits.
-- Do not disable security controls or claim unverified exactly-once, atomicity or performance.
+- Mapping explosion: disable uncontrolled dynamic fields and reindex with explicit mapping.
+- Hot shards: revisit routing and shard sizing.
+- Bulk partial errors: inspect per-item status before retry.
+- Merge/refresh pressure: tune ingest batch and refresh interval.
+- Snapshot restore gap: test repository permissions and index metadata recovery.
 
 ## Validation and acceptance
-- Verify deployed versions and exact connector/engine compatibility against primary documentation.
-- Test representative success, duplicate/replay, schema evolution and partial-failure recovery.
-- Record ownership, monitoring, rollback and unresolved assumptions.
-
-## Official or primary references
-- https://docs.opensearch.org/latest/
+- Test mapping evolution, bulk retry, rollover, retention deletion, snapshot restore and shard loss.
+- Measure indexing throughput, search p95/p99, heap, merge time and storage amplification.
 
 ## Output contract
-Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+Return mapping, shard/rollover design, bulk policy, ISM/snapshot plan and operational thresholds.
+
+## Official or primary references
+- https://opensearch.org/docs/latest/
+- https://opensearch.org/docs/latest/im-plugin/ism/index/

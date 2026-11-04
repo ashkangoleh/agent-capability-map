@@ -1,37 +1,43 @@
 ---
 name: apache-paimon-streaming-lakehouse
-description: "Design Apache Paimon tables with LSM storage, changelog production, Flink/Spark integration and compaction."
+description: "Design Apache Paimon tables with LSM storage, changelog production, Flink/Spark integration, compaction and snapshot lifecycle."
+license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # apache-paimon-streaming-lakehouse
 
 ## Activation boundary
-Design Apache Paimon tables with LSM storage, changelog production, Flink/Spark integration and compaction.
+Use for Apache Paimon table design and streaming lakehouse operations. Paimon semantics are not identical to Iceberg, Hudi or Delta.
 
 ## Required context
-Paimon release, Flink/Spark versions, table mode, keys, buckets, compaction and catalog.
+Paimon version; Flink/Spark versions; append-only or primary-key table; bucket/partition keys; merge engine; changelog; snapshots; catalog/storage.
 
 ## Production procedure
-1. Verify format/catalog/engine compatibility for deployed versions and required features.
-2. Define authoritative writer, commit protocol, schema/partition evolution and conflict handling.
-3. Plan snapshots, manifests, compaction, vacuum and orphan cleanup with retention.
-4. Validate identity, credential vending and direct object access separately from catalog policy.
-5. Test concurrent commits, metadata outage, maintenance interruption and restore.
+1. Select append-only versus primary-key table from update/delete semantics and required changelog output.
+2. Define partition/bucket strategy; model skew and hot keys before fixing bucket count.
+3. Select merge engine and sequence field where source ordering matters; document late/out-of-order resolution.
+4. Choose changelog producer mode from downstream consumer requirements.
+5. Configure write buffer, compaction, snapshot expiration and file sizing from measured workload.
+6. Validate Flink/Spark connector and catalog compatibility for exact releases.
+7. Secure object-store/catalog credentials separately and assign retention/cleanup ownership.
 
 ## Failure modes and recovery
-- Validate the complete source-to-sink or control-plane boundary; component-level success is not an end-to-end guarantee.
-- Verify partial commits, duplicate/replay behavior, schema drift, concurrency and rollback limits.
-- Do not disable security controls or claim unverified exactly-once, atomicity or performance.
+- Compaction backlog: inspect write rate, bucket skew and compaction resources.
+- Changelog gaps: verify producer mode and sequence semantics before replay.
+- Primary-key conflicts: define deterministic ordering and merge behavior.
+- Snapshot growth: expire only after recovery windows are considered.
+- Connector mismatch: pin compatible engine and Paimon versions.
 
 ## Validation and acceptance
-- Verify deployed versions and exact connector/engine compatibility against primary documentation.
-- Test representative success, duplicate/replay, schema evolution and partial-failure recovery.
-- Record ownership, monitoring, rollback and unresolved assumptions.
-
-## Official or primary references
-- https://paimon.apache.org/docs/1.4/
+- Test inserts, updates, deletes, out-of-order events, changelog, checkpoint recovery and compaction.
+- Compare streaming output with deterministic batch reference.
+- Measure write amplification, file count, compaction lag and read latency.
 
 ## Output contract
-Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+Return table model, merge/changelog semantics, bucket design, engine compatibility and maintenance plan.
+
+## Official or primary references
+- https://paimon.apache.org/docs/
+- https://github.com/apache/paimon

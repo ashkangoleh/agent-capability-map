@@ -1,39 +1,42 @@
 ---
 name: dremio-presto-query-federation
 description: "Design Dremio and Presto/Trino federation with pushdown, source limits, identity and consistency boundaries."
+license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # dremio-presto-query-federation
 
 ## Activation boundary
-Design Dremio and Presto/Trino federation with pushdown, source limits, identity and consistency boundaries.
+Use for query federation across heterogeneous systems. Federation does not guarantee source transaction consistency or eliminate data movement.
 
 ## Required context
-Engine release, connector catalog, sources, pushdown, join sizes, network and credentials.
+Engine/version; connector versions; source query limits; identity propagation; schemas; network; workload and latency SLO.
 
 ## Production procedure
-1. Inspect EXPLAIN/runtime profiles for scan, exchange, join, aggregation, skew and pushdown.
-2. Choose partitioning, clustering, sort/distribution and indexes using real predicates.
-3. Set workload isolation, concurrency, memory/spill, quotas and cost attribution.
-4. Verify type, timezone, transaction, MERGE and delete semantics by release.
-5. Test source outage, queue saturation, large joins, partial loads and recovery.
+1. Classify sources by pushdown capability, transaction isolation, statistics, data types and concurrency limits.
+2. Inspect physical plans to verify predicate/projection pushdown and identify exchanges/materialization.
+3. Define source-specific credentials and identity propagation; test row-level access at source.
+4. Use reflections/materializations/caching only when freshness and invalidation are explicit.
+5. Control concurrency and query admission to protect operational source databases.
+6. Validate timestamp, decimal, nested type, collation and null semantics across engines.
+7. Set query timeouts, retries and cancellation behavior; avoid retry storms against sources.
 
 ## Failure modes and recovery
-- Validate the complete source-to-sink or control-plane boundary; component-level success is not an end-to-end guarantee.
-- Verify partial commits, duplicate/replay behavior, schema drift, concurrency and rollback limits.
-- Do not disable security controls or claim unverified exactly-once, atomicity or performance.
+- No pushdown: reduce remote scans or materialize a governed intermediate.
+- Source overload: isolate workloads and cap concurrency.
+- Inconsistent results: define snapshot/isolation limitations across sources.
+- Credential leakage: use scoped source credentials and audit identity mapping.
+- Schema drift: refresh metadata and contract-test dependent queries.
 
 ## Validation and acceptance
-- Verify deployed versions and exact connector/engine compatibility against primary documentation.
-- Test representative success, duplicate/replay, schema evolution and partial-failure recovery.
-- Record ownership, monitoring, rollback and unresolved assumptions.
-
-## Official or primary references
-- https://docs.dremio.com/
-- https://prestodb.io/docs/current/
-- https://trino.io/docs/current/
+- Test plan pushdown, source outage, auth denial, schema drift and high concurrency.
+- Measure bytes moved, source CPU, query latency, queue time and cache freshness.
 
 ## Output contract
-Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+Return federation topology, pushdown evidence, identity model, source-protection limits and recovery plan.
+
+## Official or primary references
+- https://trino.io/docs/current/
+- https://docs.dremio.com/current/

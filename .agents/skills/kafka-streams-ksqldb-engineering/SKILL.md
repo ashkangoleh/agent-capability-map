@@ -1,38 +1,43 @@
 ---
 name: kafka-streams-ksqldb-engineering
-description: "Build Kafka Streams and ksqlDB applications with partition-aware joins, state stores and changelog topics."
+description: "Build Kafka Streams and ksqlDB applications with partition-aware joins, state stores, changelog topics and operational recovery."
+license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # kafka-streams-ksqldb-engineering
 
 ## Activation boundary
-Build Kafka Streams and ksqlDB applications with partition-aware joins, state stores and changelog topics.
+Use for Kafka Streams and ksqlDB topology design and operations. Do not treat stateful joins or persistent queries as stateless SQL.
 
 ## Required context
-Kafka/client versions, keys, partitions, join windows, state-store backend and latency.
+Kafka/client versions; topic keys/partitions; topology; state-store size; processing guarantee; changelog retention; standby replicas; deployment model.
 
 ## Production procedure
-1. Define event identity, key/partition strategy, ordering and source retention.
-2. Separate event time, processing time, watermarks, windows, lateness and corrections.
-3. Align offsets, checkpoints, state stores and sink commits; document the actual exactly-once boundary.
-4. Bound state, retries, backpressure and DLQ growth; monitor lag and recovery.
-5. Test late events, rebalance, worker loss, sink timeout and replay.
+1. Design topic keys and partition counts before joins; co-partitioned joins require compatible partitioning and serialization.
+2. Choose stream-table, table-table or windowed stream-stream join from update and event-time semantics.
+3. Define state-store and changelog retention, replication and restore expectations.
+4. Select processing guarantee and configure producer/consumer transaction settings consistently; document external sink separately.
+5. Set commit interval, cache, standby replicas, task assignment and state directory for the deployment model.
+6. For ksqlDB define persistent query lifecycle, output topic naming, key/value formats and registry integration.
+7. Plan rolling deployment and application reset/reprocessing; resets can re-emit side effects.
 
 ## Failure modes and recovery
-- Validate the complete source-to-sink or control-plane boundary; component-level success is not an end-to-end guarantee.
-- Verify partial commits, duplicate/replay behavior, schema drift, concurrency and rollback limits.
-- Do not disable security controls or claim unverified exactly-once, atomicity or performance.
+- Join partition mismatch: repartition upstream with a stable key and validate serialization.
+- Rebalance loop: inspect poll interval, processing time, task migration and deployment churn.
+- Slow state restore: review changelog retention, standby replicas and local disk.
+- Reset duplicates: require idempotent sinks or reconcile output topics.
+- Schema evolution break: validate key and value compatibility.
 
 ## Validation and acceptance
-- Verify deployed versions and exact connector/engine compatibility against primary documentation.
-- Test representative success, duplicate/replay, schema evolution and partial-failure recovery.
-- Record ownership, monitoring, rollback and unresolved assumptions.
+- Test repartitioned joins, out-of-order events, task migration, broker restart, state restore and reset.
+- Validate output key correctness and changelog replay.
+- Measure rebalance time, lag, state restore duration and output latency.
+
+## Output contract
+Return topology/key design, state/changelog plan, processing guarantee, deployment and recovery evidence.
 
 ## Official or primary references
 - https://kafka.apache.org/documentation/streams/
-- https://docs.ksqldb.io/
-
-## Output contract
-Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+- https://docs.ksqldb.io/en/latest/

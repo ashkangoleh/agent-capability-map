@@ -1,37 +1,45 @@
 ---
 name: data-schema-migration-release-management
-description: "Plan schema migrations with expand-contract rollout, compatibility windows, backfills and rollback limits."
+description: "Release data schema changes with compatibility analysis, expand-contract sequencing, backfill controls and rollback boundaries."
+license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # data-schema-migration-release-management
 
 ## Activation boundary
-Plan schema migrations with expand-contract rollout, compatibility windows, backfills and rollback limits.
+Use for schema/contract changes across producers, pipelines, tables and consumers. This is distinct from full platform migration.
 
 ## Required context
-Schema versions, producers/consumers, engine, compatibility, deployment order, volume and rollback constraints.
+Current/target schema; producers/consumers; format/catalog; volume; update/delete behavior; deployment order; compatibility window; rollback.
 
 ## Production procedure
-1. Separate unit, contract, integration, end-to-end, replay and performance tests.
-2. Pin runtimes, native dependencies, containers and fixtures; keep secrets outside source.
-3. Review migration plans, compatibility windows and rollback limits.
-4. Gate releases on reproducible checks, provenance and owner approval.
-5. Test partial deployment, concurrent writers, backfill interruption and rollback.
+1. Classify change as additive, restrictive, rename, type/key change, semantic change or physical-layout change.
+2. Map all readers/writers and downstream consumers, including exports and dashboards.
+3. Define compatibility for old producer/new consumer and new producer/old consumer.
+4. Use expand-contract for breaking changes: add representation, dual-read/write or backfill, validate, switch consumers, then remove old.
+5. For table formats check engine/catalog compatibility, snapshot history, partition evolution and delete semantics.
+6. Backfill in bounded idempotent ranges with checkpointing, throttling and reconciliation.
+7. Gate release on schema validation, consumer contract tests and downstream readiness.
+8. Define rollback and no-return boundary before destructive changes.
 
 ## Failure modes and recovery
-- Validate the complete source-to-sink or control-plane boundary; component-level success is not an end-to-end guarantee.
-- Verify partial commits, duplicate/replay behavior, schema drift, concurrency and rollback limits.
-- Do not disable security controls or claim unverified exactly-once, atomicity or performance.
+- Consumer deployed too late: roll back producer or keep dual representation.
+- Type narrowing: reject/quarantine values that cannot be represented.
+- Rename treated as additive: preserve old field until consumers migrate.
+- Backfill overlap: deduplicate by stable key/version.
+- Physical rewrite rollback: verify snapshot/time-travel retention before promising reversibility.
 
 ## Validation and acceptance
-- Verify deployed versions and exact connector/engine compatibility against primary documentation.
-- Test representative success, duplicate/replay, schema evolution and partial-failure recovery.
-- Record ownership, monitoring, rollback and unresolved assumptions.
+- Test all producer/consumer version combinations.
+- Replay historical payloads and run representative SQL/API consumers.
+- Verify backfill idempotency and key reconciliation.
+- Record schema version, migration window, owner approvals and rollback criteria.
+
+## Output contract
+Return compatibility matrix, rollout sequence, backfill plan, validation and rollback boundary.
 
 ## Official or primary references
 - https://docs.confluent.io/platform/current/schema-registry/fundamentals/schema-evolution.html
-
-## Output contract
-Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+- https://iceberg.apache.org/docs/latest/evolution/

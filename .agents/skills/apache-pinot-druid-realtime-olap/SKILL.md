@@ -1,38 +1,42 @@
 ---
 name: apache-pinot-druid-realtime-olap
-description: "Design Pinot and Druid real-time OLAP ingestion, segments, indexes, retention and low-latency aggregation."
+description: "Design Apache Pinot and Apache Druid real-time OLAP ingestion, segments, indexes, retention and low-latency aggregation."
+license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # apache-pinot-druid-realtime-olap
 
 ## Activation boundary
-Design Pinot and Druid real-time OLAP ingestion, segments, indexes, retention and low-latency aggregation.
+Use for high-concurrency, low-latency event analytics. Do not treat Pinot/Druid as general lakehouse warehouses without workload fit.
 
 ## Required context
-Latency/concurrency, event rate, cardinality, retention, segment size, index and late-event policy.
+Ingestion rate; event dimensions; query patterns; freshness; segment size; retention; replication; broker/stream source; availability target.
 
 ## Production procedure
-1. Inspect EXPLAIN/runtime profiles for scan, exchange, join, aggregation, skew and pushdown.
-2. Choose partitioning, clustering, sort/distribution and indexes using real predicates.
-3. Set workload isolation, concurrency, memory/spill, quotas and cost attribution.
-4. Verify type, timezone, transaction, MERGE and delete semantics by release.
-5. Test source outage, queue saturation, large joins, partial loads and recovery.
+1. Model query dimensions, metrics, filters, group-bys and cardinality before schema/index design.
+2. Choose real-time ingestion and offline/batch segment paths; define handoff and deduplication.
+3. Set partitioning, replicas, segment size and retention from throughput and query parallelism.
+4. Select inverted, range, text, star-tree or other indexes only where measured query patterns justify them.
+5. Define upsert/dedup semantics and primary-key requirements; confirm supported behavior for exact release.
+6. Plan segment compaction, reload, deep storage and retention cleanup.
+7. Protect broker/source systems with bounded ingestion and monitor consumer lag.
 
 ## Failure modes and recovery
-- Validate the complete source-to-sink or control-plane boundary; component-level success is not an end-to-end guarantee.
-- Verify partial commits, duplicate/replay behavior, schema drift, concurrency and rollback limits.
-- Do not disable security controls or claim unverified exactly-once, atomicity or performance.
+- Segment explosion: tune flush/segment sizing and compaction.
+- High-cardinality index blowup: choose indexes selectively.
+- Realtime/offline duplication: validate segment handoff and time boundary.
+- Broker lag: separate ingestion backpressure from query saturation.
+- Upsert memory growth: review primary-key and retention design.
 
 ## Validation and acceptance
-- Verify deployed versions and exact connector/engine compatibility against primary documentation.
-- Test representative success, duplicate/replay, schema evolution and partial-failure recovery.
-- Record ownership, monitoring, rollback and unresolved assumptions.
+- Test realtime-to-offline handoff, late events, duplicate keys, broker outage and segment reload.
+- Measure ingestion lag, segment count, query p95/p99, index size and deep-storage cost.
+
+## Output contract
+Return schema/index plan, ingestion topology, segment lifecycle, retention and benchmark evidence.
 
 ## Official or primary references
 - https://docs.pinot.apache.org/
 - https://druid.apache.org/docs/latest/
-
-## Output contract
-Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.

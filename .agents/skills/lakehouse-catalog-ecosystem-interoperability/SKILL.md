@@ -1,39 +1,47 @@
 ---
 name: lakehouse-catalog-ecosystem-interoperability
-description: "Evaluate Hive Metastore, Glue, Unity Catalog, Nessie, Polaris, Lakekeeper and Gravitino control-plane behavior."
+description: "Evaluate table catalogs and metadata platforms across API compatibility, commit coordination, auth, namespace semantics and engine interoperability."
+license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # lakehouse-catalog-ecosystem-interoperability
 
 ## Activation boundary
-Evaluate Hive Metastore, Glue, Unity Catalog, Nessie, Polaris, Lakekeeper and Gravitino control-plane behavior.
+Use for Iceberg/lakehouse table catalog interoperability across Hive Metastore, Glue, Unity Catalog, Nessie, Polaris, Lakekeeper and Gravitino. Metadata governance catalogs are a separate role.
 
 ## Required context
-Table format, engines, catalog APIs, auth, credential vending, storage and metadata backup.
+Format/version; catalog/version; engines/versions; REST/native protocol; auth/credential vending; object store; writer concurrency; tenancy.
 
 ## Production procedure
-1. Verify format/catalog/engine compatibility for deployed versions and required features.
-2. Define authoritative writer, commit protocol, schema/partition evolution and conflict handling.
-3. Plan snapshots, manifests, compaction, vacuum and orphan cleanup with retention.
-4. Validate identity, credential vending and direct object access separately from catalog policy.
-5. Test concurrent commits, metadata outage, maintenance interruption and restore.
+1. Classify catalog role: transactional table metadata, metadata governance/discovery or cloud control plane.
+2. Build engine × format × catalog matrix for read, append, overwrite, deletes, schema evolution and maintenance.
+3. Verify REST API, OAuth/signing, credential vending, namespace behavior and extensions.
+4. Define commit coordination, optimistic concurrency, locking and conflict resolution.
+5. Separate catalog authorization from object-store authorization; test credential vending and direct storage access.
+6. Define namespace ownership, multi-tenant isolation, audit, metadata backup and DR.
+7. Test one engine write, another read and a third maintenance operation, including concurrent commits.
+8. Plan catalog migration with metadata preservation, identifier mapping, cutover freeze and rollback.
 
 ## Failure modes and recovery
-- Validate the complete source-to-sink or control-plane boundary; component-level success is not an end-to-end guarantee.
-- Verify partial commits, duplicate/replay behavior, schema drift, concurrency and rollback limits.
-- Do not disable security controls or claim unverified exactly-once, atomicity or performance.
+- Catalog accepts metadata but engine cannot read: inspect unsupported extensions and auth flow.
+- Concurrent commit conflict: retry only after refresh and idempotency proof.
+- Credential vending failure: separate catalog auth from object-store IAM.
+- Catalog backup without files: restore metadata and storage from coordinated points.
+- Governance catalog mistaken for table catalog: keep lineage separate from commit path.
 
 ## Validation and acceptance
-- Verify deployed versions and exact connector/engine compatibility against primary documentation.
-- Test representative success, duplicate/replay, schema evolution and partial-failure recovery.
-- Record ownership, monitoring, rollback and unresolved assumptions.
-
-## Official or primary references
-- https://projectnessie.org/
-- https://gravitino.apache.org/docs/1.3.0/overview/
-- https://iceberg.apache.org/spec/#rest-catalog-api
+- Test cross-engine read/write, concurrent commit, schema evolution, deletes, credential expiry and failover.
+- Validate namespace isolation, backup/restore and migration.
+- Record exact versions and unsupported combinations.
 
 ## Output contract
-Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+Return catalog role, compatibility matrix, commit/auth model, migration and recovery design.
+
+## Official or primary references
+- https://iceberg.apache.org/docs/latest/rest-catalog/
+- https://polaris.apache.org/
+- https://docs.lakekeeper.io/
+- https://projectnessie.org/
+- https://gravitino.apache.org/
