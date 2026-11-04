@@ -13,11 +13,13 @@ Iceberg REST is a **protocol** used by multiple catalog implementations. Apache 
 | Verify REST endpoint discovery, catalog authentication, delegated storage access, commit conflict or cross-engine read/write on a generic Iceberg REST catalog | `iceberg-rest-catalog-operations` |
 | Operate Polaris-specific principal roles, catalog roles, storage grants or deployment | `polaris-iceberg-catalog-operations` |
 | Operate Lakekeeper-specific warehouse permissions, storage profiles or lifecycle | `lakekeeper-iceberg-catalog-operations` |
+| Manage Nessie branches/tags/merge conflicts or migration to its Iceberg REST integration | `nessie-versioned-catalog-operations` |
+| Manage Gravitino metalakes, catalog federation, or its Iceberg REST service | `gravitino-federated-catalog-operations` |
 | Manage Iceberg schema/partition changes | `iceberg-table-schema-partition-evolution` |
 | Plan Iceberg compaction/snapshot expiry | `iceberg-compaction-retention` |
 | Operate OpenMetadata metadata ingestion and lineage | `openmetadata-catalog-operations` |
 
-The generic route intentionally excludes `polaris` and `lakekeeper`. Cross-vendor comparison requests may need explicit composition; the deterministic router is not a semantic planner.
+The generic route intentionally excludes `polaris`, `lakekeeper`, `nessie` and `gravitino`. Cross-vendor comparison requests may need explicit composition; the deterministic router is not a semantic planner.
 
 ## Operational evidence checklist
 
@@ -43,7 +45,8 @@ The generic route intentionally excludes `polaris` and `lakekeeper`. Cross-vendo
 python -m capability_map validate
 python scripts/report_coverage.py --summary
 python scripts/evaluate_graph.py
-python -m unittest tests.test_iceberg_rest_catalog_coverage -v
+python -m unittest discover -s tests -p 'test_iceberg_rest_catalog_coverage.py' -v
+python -m unittest discover -s tests -p 'test_catalog_vendor_coverage.py' -v
 python -m unittest discover -s tests -v
 ```
 
@@ -51,7 +54,7 @@ The new fixtures include vendor-neutral discovery, delegated credential expiry, 
 
 ## Remaining catalog backlog
 
-- Nessie and Gravitino: inventory their maintained production feature sets, route boundaries, version-specific implementations and auth; add skills only where distinct operations justify them.
+- Nessie and Gravitino: their distinct specialist routes are now registered. Independently verify deployment, behavior and auth claims against exact release versions; Project Nessie's published Iceberg REST guide calls its integration experimental. Gravitino's unified server is distinct from its Iceberg REST service, and optional features vary by release.
 - Polaris and Lakekeeper: independently check operational claims against supported releases and reproduce IAM/credential vending cases.
 - Engine compatibility: generate a version-pinned Spark/Flink/Trino/DuckDB matrix from official adapters and run representative integrations.
 - CI/host integration: confirm full router tests and real host invocation. Record false-positive, near-miss and abstention rates.
