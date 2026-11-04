@@ -64,7 +64,7 @@ edges:
     to: [data, data-engineering, data-observability, freshness-slo]
     relation: supports
     rationale: Data quality checks complement operational freshness and delivery SLOs.
-  - from: [data, data-science, feature-engineering]
+  - from: [data-science, feature-engineering]
     to: [ai-ml, mlops, feature-store]
     relation: related_to
     rationale: ML offline and online features must preserve point-in-time definitions and availability contracts.
