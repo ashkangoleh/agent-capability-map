@@ -1,0 +1,11 @@
+schema_version: 1
+id: observability-stack
+kind: skill-registry
+skills:
+  - id: observability-stack-logs-traces-metrics
+    path: .agents/skills/observability-stack-logs-traces-metrics/SKILL.md
+    description: "Design infrastructure observability across metrics, logs, traces, profiles, alerts and service context."
+    triggers:
+      - "infrastructure observability stack"
+    excludes: []
+    status: active

@@ -1,5 +1,5 @@
 schema_version: 1
-id: sre
+id: sre-practices
 kind: skill-registry
 skills:
   - id: sre-slo-error-budget
@@ -21,13 +21,6 @@ skills:
     description: "Run controlled failure-injection experiments with blast-radius limits, hypotheses and recovery verification."
     triggers:
       - "chaos engineering failure injection"
-    excludes: []
-    status: active
-  - id: observability-stack-logs-traces-metrics
-    path: .agents/skills/observability-stack-logs-traces-metrics/SKILL.md
-    description: "Design infrastructure observability across metrics, logs, traces, profiles, alerts and service context."
-    triggers:
-      - "infrastructure observability stack"
     excludes: []
     status: active
   - id: backup-dr-restore-exercises

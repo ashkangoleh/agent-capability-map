@@ -12,11 +12,3 @@ skills:
       - "helm values schema"
     excludes: []
     status: active
-  - id: platform-operations
-    path: .agents/skills/platform-operations/SKILL.md
-    description: "Review Kubernetes Helm upgrade operations and release safety from runtime evidence."
-    triggers:
-      - "helm upgrade"
-      - "helm"
-    excludes: []
-    status: active

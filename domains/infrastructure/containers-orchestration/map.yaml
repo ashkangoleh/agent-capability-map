@@ -1,0 +1,45 @@
+schema_version: 1
+id: containers-orchestration
+kind: map
+children:
+  - id: container-runtime
+    description: "OCI runtimes, containerd, CRI-O, Podman and Docker"
+    triggers:
+      - "containerd cri o podman runtime isolation"
+    status: active
+    skills: domains/infrastructure/containers/runtime/skills.yaml
+  - id: container-build
+    description: "Container image build and hardening"
+    triggers:
+      - "container build security"
+      - "docker image hardening"
+      - "dockerfile security"
+    status: active
+    skills: domains/infrastructure/platform/container/skills.yaml
+  - id: kubernetes
+    description: "Kubernetes orchestration and workload lifecycle"
+    triggers:
+      - "kubernetes helm upgrade"
+      - "kubernetes helm chart validation"
+      - "helm chart validation"
+      - "kubernetes rollout"
+      - "kubernetes networkpolicy"
+      - "kubernetes storage"
+      - "kubernetes workload security"
+      - "kubernetes cluster upgrade capacity"
+      - "kubernetes operator crd lifecycle"
+      - "kubernetes cni ebpf operations"
+    status: active
+    map: domains/infrastructure/kubernetes/map.yaml
+  - id: service-mesh
+    description: "Service mesh traffic, identity and telemetry"
+    triggers:
+      - "istio service mesh operations"
+    status: active
+    skills: domains/infrastructure/service-mesh/skills.yaml
+  - id: service-discovery
+    description: "Service discovery and distributed coordination"
+    triggers:
+      - "consul etcd service discovery quorum health checks"
+    status: active
+    skills: domains/infrastructure/containers/service-discovery/skills.yaml

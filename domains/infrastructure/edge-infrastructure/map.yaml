@@ -1,0 +1,16 @@
+schema_version: 1
+id: edge-infrastructure
+kind: map
+children:
+  - id: edge-compute
+    description: "Edge Kubernetes and remote compute fleet"
+    triggers:
+      - "k3s edge fleet management intermittent connectivity ota"
+    status: active
+    skills: domains/infrastructure/edge/compute/skills.yaml
+  - id: cdn-delivery
+    description: "CDN caching and edge delivery"
+    triggers:
+      - "cdn edge cache origin shield purge"
+    status: active
+    skills: domains/infrastructure/edge/cdn/skills.yaml

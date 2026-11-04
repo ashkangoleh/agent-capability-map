@@ -1,0 +1,17 @@
+schema_version: 1
+id: ci-cd
+kind: map
+children:
+  - id: release-engineering
+    description: "CI/CD pipelines, immutable promotion and rollback"
+    triggers:
+      - "ci cd release engineering"
+    status: active
+    skills: domains/infrastructure/devops/release/skills.yaml
+  - id: artifact-provenance
+    description: "Build provenance, signing and supply-chain attestation"
+    triggers:
+      - "ci cd supply chain artifact signing"
+      - "github actions security"
+    status: active
+    skills: domains/infrastructure/devops-sre/delivery/skills.yaml

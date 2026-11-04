@@ -23,3 +23,10 @@ skills:
       - "windows server operations"
     excludes: []
     status: active
+  - id: unix-bsd-systems-operations
+    path: .agents/skills/unix-bsd-systems-operations/SKILL.md
+    description: "Administer FreeBSD, OpenBSD, NetBSD and Unix-like systems with platform-specific boot, service, network, storage and security controls."
+    triggers:
+      - "unix bsd systems operations"
+    excludes: []
+    status: active

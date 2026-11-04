@@ -10,5 +10,6 @@ skills:
       - "kubernetes canary"
       - "k8s rollout"
       - "helm rollback plan"
+      - "kubernetes helm upgrade"
     excludes: []
     status: active

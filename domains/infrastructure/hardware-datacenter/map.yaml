@@ -1,0 +1,22 @@
+schema_version: 1
+id: hardware-datacenter
+kind: map
+children:
+  - id: bare-metal
+    description: "Bare-metal provisioning and server lifecycle"
+    triggers:
+      - "bare metal server provisioning pxe ipxe maas metal3"
+    status: active
+    skills: domains/infrastructure/hardware/bare-metal/skills.yaml
+  - id: server-firmware
+    description: "Server firmware, BMC, Redfish, IPMI and UEFI"
+    triggers:
+      - "server firmware bmc redfish ipmi uefi secure boot"
+    status: active
+    skills: domains/infrastructure/hardware/firmware/skills.yaml
+  - id: datacenter-facilities
+    description: "Rack, power, cooling, UPS/PDU and DCIM"
+    triggers:
+      - "data center rack power cooling ups pdu dcim"
+    status: active
+    skills: domains/infrastructure/hardware/facilities/skills.yaml

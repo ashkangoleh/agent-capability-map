@@ -60,7 +60,7 @@ class DataScienceCoverageTests(unittest.TestCase):
     def test_master_index_includes_all_new_specialists(self):
         index = set(load_yaml(ROOT, "catalog/master-skill-ids.yaml")["ids"])
         self.assertTrue(NEW_DATA_SCIENCE_SKILLS.issubset(index))
-        self.assertEqual(len(index), 287)
+        self.assertEqual(len(index), 322)
 
 
 if __name__ == "__main__":

@@ -1,26 +1,47 @@
 # Infrastructure Engineering Tool and Concept Matrix
 
-| Domain | Open-source / self-managed tools | Commercial / managed ecosystems | Concepts |
-|---|---|---|---|
-| Linux / OS | Linux, systemd, eBPF, perf, bpftrace, LVM, mdadm, ZFS | RHEL, SUSE, Ubuntu Pro, Windows Server | kernel, cgroups, namespaces, boot, drivers, filesystems, resource limits |
-| Virtualization | KVM, QEMU, Proxmox, Xen, OpenStack | VMware vSphere, Nutanix, cloud VMs | hypervisors, HA, live migration, snapshots, overcommit, NUMA |
-| Containers | Docker, containerd, CRI-O, Buildah, Podman | ECR, GCR/Artifact Registry, ACR | OCI images, registries, layers, build cache, runtime isolation |
-| Kubernetes | Kubernetes, Helm, Kustomize, Operators, Crossplane | EKS, GKE, AKS, OpenShift | scheduling, CRDs, controllers, RBAC, CNI, CSI, HPA/VPA, PDB, upgrades |
-| Platform engineering | Backstage, Crossplane, Karpenter, KEDA, Argo CD, Flux | Humanitec, Port, cloud platform services | IDP, golden paths, self-service, control plane, service catalog |
-| IaC / config | Terraform, OpenTofu, Pulumi, Ansible, Packer, CloudFormation | HCP Terraform, enterprise automation platforms | state, locking, modules, drift, imports, immutable images, policy |
-| CI/CD / GitOps | GitHub Actions, GitLab CI, Jenkins, Tekton, Argo CD, Flux | GitHub/GitLab SaaS, hosted CI | runners, artifacts, promotion, rollback, provenance, reconciliation |
-| DevSecOps | Trivy, Grype, Syft, Cosign, Sigstore, Falco, OPA, Kyverno | Snyk, Wiz, Prisma, Aqua, enterprise scanners | SBOM, SLSA, signing, attestation, SAST/DAST/SCA, admission, runtime defense |
-| Secrets / identity | Vault, SPIFFE/SPIRE, cert-manager, External Secrets | Cloud KMS/Secrets Manager, HSM/PKI services | workload identity, short-lived credentials, rotation, mTLS, trust roots |
-| Networking | FRR, BIRD, Cilium, Calico, Envoy, HAProxy, NGINX, WireGuard | Cloud VPC/VNet, hardware network vendors | TCP/IP, DNS, BGP, routing, NAT, MTU, firewall, proxy, VPN, TLS, PKI, IPAM |
-| Service mesh | Istio, Linkerd, Consul Connect | Managed mesh services | mTLS, traffic shifting, retries, circuit breaking, gateways, telemetry |
-| Observability / SRE | Prometheus, Grafana, Loki, Tempo, OpenTelemetry, Alertmanager, VictoriaMetrics | Datadog, New Relic, Dynatrace, Splunk | SLIs/SLOs, error budgets, burn rates, traces, logs, metrics, profiles, cardinality |
-| Resilience | Chaos Mesh, LitmusChaos, Velero, Restic | Cloud backup and DR services | chaos experiments, backup immutability, RPO/RTO, failover, restore drills |
-| Storage | Ceph, ZFS, LVM, Longhorn, Rook, MinIO | SAN/NAS vendors, S3/GCS/ADLS | block/file/object, replication, snapshots, rebuild, encryption, durability |
-| Database operations | PostgreSQL, MySQL, PgBouncer, ProxySQL, Patroni | RDS, Cloud SQL, Azure Database | WAL/binlog, replication, failover, pooling, backups, upgrades, consistency |
-| Cloud foundations | AWS, Google Cloud, Azure, OpenStack | Cloud landing-zone services | accounts/projects, IAM, regions, CIDR, private endpoints, quotas, egress, FinOps |
+This is a maintained discovery baseline, not an endorsement list. A tool is not promoted to an active specialist solely because it is popular; official references, task boundaries and failure/recovery procedures are required.
 
-## Production operating concepts
+| Capability area | Concepts and standards | Representative tools and ecosystems |
+|---|---|---|
+| Compute & OS | CPU, NUMA, memory, kernel, boot, systemd/rc, patch rings, package provenance, cgroups | Linux, Windows Server, FreeBSD, OpenBSD, NetBSD, Solaris/illumos, systemd, DNF/APT, cloud-init |
+| HPC & accelerators | Batch scheduling, fair-share, QoS, GPU partitioning, NUMA, RDMA, InfiniBand, checkpoint/requeue | Slurm, PBS, NVIDIA GPUs, MIG, CUDA, NCCL, ROCm, InfiniBand |
+| Network foundations | Ethernet, VLAN, STP, LACP, IPv4/IPv6, ARP/ND, MTU, VRF, QoS, routing convergence | Cisco IOS/NX-OS, Juniper Junos, Arista EOS, FRRouting, SONiC |
+| Routing and fabric | BGP, OSPF, IS-IS, EVPN/VXLAN, ECMP, route policy, anycast, SD-WAN | FRR, BIRD, GoBGP, vendor routing stacks |
+| Network services | DNS, DNSSEC, DHCP, DHCPv6, IPAM, NTP/PTP, RADIUS, TACACS+, PKI | BIND, Unbound, CoreDNS, Kea, Infoblox, NetBox, chrony, FreeRADIUS |
+| Network automation | Source of truth, NETCONF, RESTCONF, gNMI/gNOI, YANG, OpenConfig, drift, intent | NetBox, Nornir, Ansible Network, pyATS, Batfish, OpenConfig |
+| Network security | Segmentation, firewall policy, NAC, 802.1X, VPN, IPsec, WireGuard, WAF, DDoS | nftables, iptables, pf, Palo Alto, Fortinet, WireGuard, strongSwan |
+| Load balancing and proxy | L4/L7, reverse proxy, TLS termination, health checks, connection draining, rate limits | HAProxy, Envoy, NGINX, Traefik, F5, A10, cloud load balancers |
+| Cloud foundations | Organizations, accounts, subscriptions, projects, landing zones, regions, zones, quotas | AWS Organizations/Control Tower, Azure CAF/Management Groups, GCP Resource Manager/Shared VPC, OCI compartments/VCN |
+| Cloud network | VPC/VNet/VCN, transit, peering, private endpoints, NAT, DNS, egress | AWS Transit Gateway/Cloud WAN, Azure Virtual WAN, GCP Cloud Router, OCI DRG |
+| Cloud IAM and security | Federation, workload identity, policy inheritance, KMS, audit, CSPM/CNAPP | IAM Identity Center, Entra ID, GCP IAM, OCI IAM, Security Hub, Defender for Cloud, Security Command Center |
+| Cloud cost and capacity | Allocation, tagging, showback, unit economics, commitments, egress, rightsizing, quotas | AWS Cost Explorer, Azure Cost Management, GCP Billing, OCI Cost Analysis, OpenCost, Kubecost |
+| Serverless infrastructure | FaaS, managed containers, event sources, concurrency, retries, DLQ, cold starts | AWS Lambda, Azure Functions, Cloud Run, Knative |
+| IaC | Declarative plans, state, drift, imports, policy checks, module contracts, provider pinning | Terraform, OpenTofu, Pulumi, CloudFormation, CDK, Bicep, ARM, Crossplane |
+| Configuration management | Desired state, idempotency, convergence, agent/pull models, package/policy management | Ansible, Puppet, Chef, Salt, CFEngine, Nix |
+| Image lifecycle | Immutable images, golden images, provenance, promotion, SBOM | Packer, Image Builder, cloud image pipelines, OpenSCAP |
+| Virtualization/private cloud | Hypervisors, live migration, virtual networking, HCI, VM lifecycle, quotas | KVM, QEMU, Proxmox, VMware vSphere/VCF, Hyper-V, OpenStack, Nutanix |
+| Container runtime | OCI image/runtime, namespaces, cgroups v2, seccomp, AppArmor, SELinux, rootless | containerd, CRI-O, Docker Engine, Podman, BuildKit, runc, crun |
+| Kubernetes core | API server, etcd, scheduler, controllers, kubelet, admission, RBAC, quotas, upgrades | Kubernetes, kubeadm, Cluster API, managed Kubernetes distributions |
+| Kubernetes networking | CNI, IPAM, NetworkPolicy, Gateway API, ingress, service routing, eBPF datapath | Cilium, Calico, Flannel, Antrea, Gateway API controllers, CoreDNS |
+| Kubernetes storage | CSI, PV/PVC, StorageClass, topology, snapshots, expansion, attach/mount recovery | CSI drivers, Ceph RBD, EBS, Azure Disk, GCE PD, Longhorn |
+| Kubernetes packaging/policy | Helm, Kustomize, CRDs, operators, GitOps, admission and policy | Helm, Kustomize, Operator SDK, OPA Gatekeeper, Kyverno |
+| Service mesh/discovery | mTLS, traffic policy, retries, telemetry, registration, quorum, DNS discovery | Istio, Linkerd, Consul, etcd, CoreDNS |
+| CI/CD and delivery | Build isolation, artifact promotion, immutable releases, canary, blue/green, rollback | GitHub Actions, GitLab CI, Jenkins, Tekton, Argo CD, Flux |
+| Supply-chain security | SBOM, SLSA provenance, signing, attestations, verification, trusted builders | Sigstore Cosign, Fulcio, Rekor, in-toto, Syft, Grype, Trivy |
+| Platform engineering | IDP, catalog, golden paths, platform APIs, control planes, self-service, tenancy | Backstage, Crossplane, Karpenter, KEDA, Humanitec, Port, Cortex |
+| SRE and incident | SLI/SLO, error budgets, on-call, incident command, postmortem, chaos, RPO/RTO | Prometheus, Grafana, PagerDuty, Opsgenie, Litmus, Chaos Mesh |
+| Observability | Metrics, logs, traces, profiles, sampling, cardinality, retention, telemetry pipelines | OpenTelemetry, Prometheus, Grafana, Loki, Tempo, Jaeger, Mimir, VictoriaMetrics, eBPF |
+| Storage infrastructure | Block/file/object, SAN/NAS, Fibre Channel, iSCSI, NVMe-oF, RAID, snapshots, replication | Ceph, ZFS, LVM, NetApp, Dell PowerStore, Pure Storage, MinIO, S3 |
+| Database infrastructure | HA, replication, failover, WAL/binlog, PITR, pooling, sharding, compaction, persistence | PostgreSQL, Patroni, repmgr, MySQL InnoDB Cluster, ProxySQL, PgBouncer, MongoDB, Redis, Cassandra |
+| Edge and CDN | Offline autonomy, fleet lifecycle, OTA, local orchestration, cache key, TTL, purge, origin shield | K3s, KubeEdge, MicroK8s, Cloudflare, CloudFront, Fastly, Akamai |
+| Hardware/data center | Bare metal, PXE/iPXE, BMC, Redfish, IPMI, UEFI, Secure Boot, rack, PDU, UPS, cooling, DCIM | MAAS, Metal3, Tinkerbell, Redfish, OpenBMC, Open Compute Project, DCIM platforms |
+| Asset/architecture governance | CMDB, source of truth, ownership, configuration items, NFRs, ADRs, dependency graph, lifecycle | NetBox, ServiceNow CMDB, cloud asset inventory, ADRs |
 
-Identity and least privilege; network segmentation; immutable artifacts; state locking; idempotent automation; reconciliation; capacity headroom; SLO/error budget; incident command; patch/upgrade compatibility; SBOM/provenance/signing; secrets rotation; backup restore drills; RPO/RTO; cost allocation; change windows; blast radius and rollback.
+## Boundary rules
 
-This is a taxonomy of major current infrastructure ecosystems, not a claim to enumerate every vendor, plugin or hardware platform. Select tools from requirements and operational ownership, not popularity alone.
+- Infrastructure database operations cover availability, replication, backup, patching, capacity and failover. Data-domain database engineering covers schema, SQL semantics, modeling and analytical workloads.
+- Infrastructure storage covers storage systems and durability. Data Engineering covers table formats, lakehouse metadata and data lifecycle semantics.
+- Infrastructure networking covers enterprise and cloud network foundations. Telecommunications covers carrier networks, radio access, 5G core and telecom signaling.
+- Infrastructure security covers control-plane, host, network and cloud foundations. Enterprise cybersecurity remains a separate cross-domain specialization.
+- Kubernetes is a runtime/orchestration platform, not a substitute for cloud, network, storage, security, SRE or platform engineering.

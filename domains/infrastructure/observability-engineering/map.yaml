@@ -1,0 +1,34 @@
+schema_version: 1
+id: observability-engineering
+kind: map
+children:
+  - id: metrics-alerting
+    description: "Prometheus metrics and SLO alerts"
+    triggers:
+      - "prometheus alert rules"
+      - "prometheus slo"
+      - "prometheus recording rules"
+      - "slo burn rate"
+    status: active
+    skills: domains/infrastructure/devops-sre/metrics/skills.yaml
+  - id: telemetry-pipelines
+    description: "OpenTelemetry collection and trace propagation"
+    triggers:
+      - "opentelemetry collector pipeline tracing"
+      - "opentelemetry tracing"
+      - "otel pipeline"
+    status: active
+    skills: domains/infrastructure/devops-sre/telemetry/skills.yaml
+  - id: observability-stack
+    description: "Infrastructure logs, metrics and traces architecture"
+    triggers:
+      - "infrastructure observability stack"
+    status: active
+    skills: domains/infrastructure/observability/stack/skills.yaml
+  - id: profiling-capacity
+    description: "Continuous profiling, eBPF and capacity performance"
+    triggers:
+      - "infrastructure continuous profiling ebpf telemetry cost"
+      - "infrastructure capacity headroom saturation rightsizing"
+    status: active
+    skills: domains/infrastructure/observability/profiling/skills.yaml

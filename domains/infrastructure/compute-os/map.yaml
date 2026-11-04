@@ -1,0 +1,31 @@
+schema_version: 1
+id: compute-os
+kind: map
+children:
+  - id: systems
+    description: "Linux kernel, Windows Server and Unix/BSD systems"
+    triggers:
+      - "linux kernel performance diagnostics"
+      - "linux storage filesystem operations"
+      - "windows server operations"
+      - "unix bsd systems operations"
+    status: active
+    skills: domains/infrastructure/systems/skills.yaml
+  - id: linux-service-management
+    description: "Linux service supervision and systemd"
+    triggers:
+      - "linux systemd service restart loop"
+    status: active
+    skills: domains/infrastructure/linux/skills.yaml
+  - id: os-fleet
+    description: "Fleet patching, OS compliance and kernel lifecycle"
+    triggers:
+      - "linux windows server patching fleet compliance"
+    status: active
+    skills: domains/infrastructure/compute/os-fleet/skills.yaml
+  - id: hpc-gpu
+    description: "HPC, GPU, accelerator and batch scheduling"
+    triggers:
+      - "hpc gpu compute scheduling"
+    status: active
+    skills: domains/infrastructure/compute/hpc/skills.yaml

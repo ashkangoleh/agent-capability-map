@@ -1,53 +1,42 @@
 ---
 name: platform-operations
-description: Use when operating or designing Kubernetes, Docker, Helm, cloud infrastructure, CI/CD, networking, observability, reliability, or production incident workflows.
+description: "Review platform operational readiness, ownership, service boundaries, maintenance and recovery controls."
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
-# Purpose
+# platform-operations
 
-Make infrastructure and production operations safe, observable, reversible, and aligned with the actual environment.
+## Activation boundary
+Use only for cross-cutting platform operational-readiness reviews when explicitly requested. Do not use as a generic Kubernetes, Helm, cloud, network, Linux or DevOps implementation skill; select the relevant specialist instead.
 
-## Inputs and prerequisites
+## Required context
+Platform/service owner, environment, dependencies, SLOs, maintenance model, on-call path, access boundaries, backup/restore evidence and lifecycle stage.
 
-Identify environment, cluster/context, namespace, versions, deployment mechanism, access level, SLO, blast radius, maintenance window, and change authorization.
+## Production procedure
+1. Define platform boundary, consumers, critical journeys, dependencies and named service owner.
+2. Review SLOs, dashboards, alerts, runbooks, escalation and incident communication.
+3. Verify identity, secrets, access reviews, audit retention, patch cadence and security exceptions.
+4. Review release, maintenance, capacity, backup/restore, DR, deprecation and support lifecycle.
+5. Identify unsupported components, single-person knowledge, manual steps and cross-team handoffs.
+6. Produce a readiness assessment with evidence, severity, owner, due date and explicit go/no-go criteria.
 
-## Procedure
+## Failure modes and recovery
+- A platform without a named owner or on-call route is not operationally ready.
+- Dashboard presence is not evidence of alert coverage; verify alerts against user-facing symptoms.
+- Backup jobs without restore exercises do not establish recoverability.
+- Do not approve production change when access, rollback, dependency ownership or escalation is ambiguous.
 
-1. Start with read-only inspection. Confirm active account, context, cluster, namespace, release, and target resources.
-2. Inspect manifests, Helm values, chart versions, image tags, policies, and current state.
-3. Distinguish desired state from observed state.
-4. Identify blast radius, dependencies, capacity, security boundaries, and failure domains.
-5. Prefer declarative and repeatable changes. Avoid imperative mutations when a reviewed manifest or release process is available.
-6. For changes, define prechecks, rollout strategy, health gates, rollback, and recovery.
-7. Never run destructive commands or production mutations without explicit authorization.
-8. Verify post-change state using independent signals: resource status, events, logs, metrics, and application-level checks.
-9. Record exact commands and actual outputs. Redact secrets.
+## Validation and evidence
+- Verify one normal operation, one incident workflow, one restore workflow and one access-review workflow.
+- Confirm SLOs, alert routing, runbook freshness, ownership and exception expiry.
+- Separate observed controls from planned controls and unverified assumptions.
 
-## Evidence requirements
-
-Use actual cluster output, manifests, chart metadata, release notes, and official version-specific documentation. Do not assume a context or namespace from a prior task.
+## Official references
+- https://sre.google/sre-book/service-level-objectives/
+- https://sre.google/workbook/incident-response/
+- https://www.cncf.io/architecture/
 
 ## Output contract
-
-Provide diagnosis, evidence, safe commands, expected observations, stop conditions, rollback, and residual risk.
-
-## Failure modes and abstention
-
-Stop if target identity is ambiguous, access is insufficient, the change is irreversible, or rollback cannot be established for a high-impact operation. Do not state that a deployment succeeded until observed.
-
-## Validation checklist
-
-- [ ] Target environment and context are verified.
-- [ ] Read-only inspection preceded mutation.
-- [ ] Blast radius and dependencies are known.
-- [ ] Authorization and rollback are explicit.
-- [ ] Post-change health is verified.
-
-## Official starting references
-
-Verify the applicable version and publication date before using these sources:
-- https://kubernetes.io/docs/home/
-- https://helm.sh/docs/
+Return a readiness decision, evidence-backed findings, prioritized gaps, named owners, go/no-go criteria and smallest safe next actions. Never claim a control was tested without evidence.

@@ -2,17 +2,10 @@ schema_version: 1
 id: architecture
 kind: skill-registry
 skills:
-  - id: platform-operations
-    path: .agents/skills/platform-operations/SKILL.md
-    description: "Review deployment, Kubernetes, cloud and platform operation safeguards, environment evidence and rollback before production change."
+  - id: cloud-architecture-reference-design
+    path: .agents/skills/cloud-architecture-reference-design/SKILL.md
+    description: "Review hybrid and multi-cloud infrastructure against availability, security, networking, operations and cost requirements."
     triggers:
-      - "kubernetes"
-      - "helm"
-      - "devops"
-      - "sre"
-      - "cloud architecture"
-      - "networking"
-      - "linux server"
-      - "platform engineering"
+      - "hybrid cloud reference architecture"
     excludes: []
     status: active

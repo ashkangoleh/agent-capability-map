@@ -1,0 +1,12 @@
+schema_version: 1
+id: operations
+kind: skill-registry
+skills:
+  - id: platform-operations
+    path: .agents/skills/platform-operations/SKILL.md
+    description: "Review platform operational readiness, ownership, service boundaries, maintenance and recovery controls."
+    triggers:
+      - "platform operations readiness review"
+      - "infrastructure platform operational safety review"
+    excludes: []
+    status: active

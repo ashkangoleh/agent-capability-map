@@ -1,0 +1,33 @@
+schema_version: 1
+id: infrastructure-security
+kind: map
+children:
+  - id: devsecops
+    description: "DevSecOps, policy as code, runtime and supply-chain security"
+    triggers:
+      - "devsecops security gates"
+      - "policy as code opa kyverno"
+      - "falco runtime security detection"
+      - "sigstore cosign image signing"
+      - "slsa provenance attestation"
+      - "spiffe workload identity"
+    status: active
+    skills: domains/infrastructure/devsecops/skills.yaml
+  - id: identity-access
+    description: "Infrastructure IAM, PAM, federation and privileged access"
+    triggers:
+      - "infrastructure iam pam jit access federation"
+    status: active
+    skills: domains/infrastructure/security/identity-access/skills.yaml
+  - id: zero-trust
+    description: "Zero-trust network access and microsegmentation"
+    triggers:
+      - "zero trust network access microsegmentation"
+    status: active
+    skills: domains/infrastructure/security/zero-trust/skills.yaml
+  - id: cloud-posture
+    description: "Cloud security posture and CNAPP governance"
+    triggers:
+      - "cloud security posture management cnapp"
+    status: active
+    skills: domains/infrastructure/security/cloud-posture/skills.yaml

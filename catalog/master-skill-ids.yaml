@@ -20,29 +20,38 @@ ids:
   - arrow-flight-substrait-interoperability
   - avro-protobuf-schema-engineering
   - aws-data-platform-engineering
+  - aws-infrastructure-operations
   - azure-data-platform-engineering
+  - azure-infrastructure-operations
   - backup-dr-restore-exercises
+  - bare-metal-provisioning-lifecycle
   - beam-runner-portability
   - biodiversity-observation-quality
   - bitemporal-event-data-modeling
   - business-strategy-analysis
   - carbon-inventory-boundary-review
   - causal-inference-observational
+  - cdn-edge-delivery-operations
   - chaos-engineering-failure-injection
   - ci-cd-artifact-provenance
   - ci-cd-release-engineering
   - clickhouse-mergetree-operability
+  - cloud-architecture-reference-design
   - cloud-cost-capacity-review
   - cloud-iam-least-privilege
   - cloud-landing-zone-multicloud
   - cloud-network-vpc-routing
   - cloud-object-storage-data-lake-operations
+  - cloud-security-posture-governance
+  - cloud-serverless-managed-runtime
   - cloud-warehouse-engineering
   - cohort-retention-analysis
   - computer-vision-dataset-evaluation
+  - configuration-management-puppet-chef-salt
   - construction-bim-data-coordination
   - container-build-hardening
   - container-image-signing-sigstore
+  - container-runtime-operations
   - content-editorial-brief
   - curriculum-outcomes-assessment
   - customer-support-knowledge-design
@@ -63,8 +72,11 @@ ids:
   - data-serving-api-design
   - data-vault-2-modeling
   - data-visualization-evidence
+  - database-ha-replication-recovery
+  - database-nosql-cache-operations
   - database-platform-mysql-operations
   - database-platform-postgres-operations
+  - datacenter-power-cooling-dcim
   - dataform-warehouse-transformations
   - datahub-metadata-catalog-governance
   - dbt-incremental-modeling
@@ -73,6 +85,7 @@ ids:
   - deequ-data-quality-at-scale
   - delta-lake-merge-change-feed
   - devsecops-security-gates
+  - dhcp-ipam-network-services
   - dimensional-modeling-grain
   - distributed-query-engine-performance
   - dlt-pipeline-engineering
@@ -113,6 +126,7 @@ ids:
   - ds-survival-analysis
   - duckdb-parquet-transformation
   - ecommerce-product-catalog-audit
+  - edge-compute-fleet-operations
   - elasticsearch-pit-bulk-extraction
   - end-to-end-delivery-semantics
   - end-to-end-pipeline-reliability
@@ -132,18 +146,25 @@ ids:
   - funnel-conversion-analysis
   - game-design-prototype-plan
   - gcp-data-platform-engineering
+  - gcp-infrastructure-operations
   - geospatial-analysis-crs-quality
   - great-expectations-validation-gates
   - hadoop-hdfs-hive-yarn-operations
   - hbase-distributed-storage
   - helm-chart-contract-testing
+  - hpc-gpu-compute-scheduling
   - hudi-cow-mor-table-design
   - huggingface-peft-finetuning
   - humanities-primary-source-critique
   - hybrid-search-ranking-design
   - iceberg-compaction-retention
   - iceberg-table-schema-partition-evolution
+  - identity-access-privileged-infrastructure
   - imbalanced-classification-evaluation
+  - infrastructure-architecture-decision-review
+  - infrastructure-asset-configuration-inventory
+  - infrastructure-capacity-performance
+  - infrastructure-observability-profiling
   - jurisdictional-legal-source-review
   - kafka-connect-cdc-design
   - kafka-consumer-rebalance-replay
@@ -153,6 +174,8 @@ ids:
   - kinesis-stream-consumer-recovery
   - kubernetes-cluster-upgrade-capacity
   - kubernetes-cni-ebpf-operations
+  - kubernetes-gateway-api-ingress
+  - kubernetes-multicluster-tenancy
   - kubernetes-networking-triage
   - kubernetes-operator-crd-lifecycle
   - kubernetes-rollout-safety
@@ -181,22 +204,28 @@ ids:
   - mongodb-change-streams-cdc
   - multi-engine-data-platform-interoperability
   - mysql-binlog-cdc-integrity
+  - network-automation-sdn
   - network-dns-tls-diagnostics
   - network-ebpf-observability
   - network-firewall-segmentation
   - network-load-balancing-proxy
   - network-routing-bgp
+  - network-switching-enterprise-routing
   - network-vpn-wireguard
   - nifi-flowfile-backpressure-operations
   - nonprofit-grant-evidence-plan
   - nosql-data-platform-integration
+  - object-storage-infrastructure-operations
   - observability-stack-logs-traces-metrics
+  - oci-infrastructure-operations
   - open-table-format-selection
   - openlineage-metadata-instrumentation
   - opensearch-analytics-index-engineering
+  - openstack-private-cloud-operations
   - opentelemetry-collector-pipeline
   - opentofu-iac-state-migration
   - oracle-goldengate-cdc-operations
+  - os-fleet-patching-compliance
   - packer-image-lifecycle
   - pandas-eda-data-profiling
   - pandera-dataframe-validation
@@ -246,6 +275,8 @@ ids:
   - seo-audit-strategy
   - seo-indexability-diagnostics
   - seo-structured-data-validation
+  - server-hardware-firmware-management
+  - service-discovery-control-plane-operations
   - service-mesh-istio-operations
   - skill-authoring-validation
   - sklearn-leakage-free-validation
@@ -270,6 +301,7 @@ ids:
   - starrocks-stream-load-transaction
   - statistical-inference-design
   - storage-ceph-zfs-lvm
+  - storage-san-nas-nvmeof
   - streaming-event-time-watermark-window
   - superset-dashboard-metric-governance
   - supply-chain-demand-planning
@@ -282,8 +314,11 @@ ids:
   - transactional-outbox-dlq-replay
   - travel-itinerary-source-review
   - trino-federated-query-optimization
+  - unix-bsd-systems-operations
   - ux-research-design-review
   - vault-secrets-rotation-operations
   - virtualization-kvm-proxmox-vmware
   - vllm-inference-serving-operations
   - windows-server-operations
+  - wireless-lan-network-engineering
+  - zero-trust-network-access-engineering

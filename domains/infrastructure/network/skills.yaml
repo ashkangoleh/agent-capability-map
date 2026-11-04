@@ -1,5 +1,5 @@
 schema_version: 1
-id: network-engineering
+id: network-core
 kind: skill-registry
 skills:
   - id: network-dns-tls-diagnostics
@@ -11,19 +11,5 @@ skills:
       - "network diagnostics"
       - "networking"
       - "dns"
-    excludes: []
-    status: active
-  - id: platform-operations
-    path: .agents/skills/platform-operations/SKILL.md
-    description: "Review deployment, Kubernetes, cloud and platform operation safeguards, environment evidence and rollback before production change."
-    triggers:
-      - "kubernetes"
-      - "helm"
-      - "devops"
-      - "sre"
-      - "cloud architecture"
-      - "networking"
-      - "linux server"
-      - "platform engineering"
     excludes: []
     status: active

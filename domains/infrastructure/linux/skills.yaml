@@ -12,17 +12,3 @@ skills:
       - "linux service failure"
     excludes: []
     status: active
-  - id: platform-operations
-    path: .agents/skills/platform-operations/SKILL.md
-    description: "Review deployment, Kubernetes, cloud and platform operation safeguards, environment evidence and rollback before production change."
-    triggers:
-      - "kubernetes"
-      - "helm"
-      - "devops"
-      - "sre"
-      - "cloud architecture"
-      - "networking"
-      - "linux server"
-      - "platform engineering"
-    excludes: []
-    status: active

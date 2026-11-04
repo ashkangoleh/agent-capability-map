@@ -1,0 +1,16 @@
+schema_version: 1
+id: virtualization-private-cloud
+kind: map
+children:
+  - id: hypervisors
+    description: "KVM, Proxmox, VMware and VM lifecycle"
+    triggers:
+      - "kvm proxmox vmware virtualization"
+    status: active
+    skills: domains/infrastructure/virtualization/skills.yaml
+  - id: private-cloud
+    description: "OpenStack and private-cloud control planes"
+    triggers:
+      - "openstack private cloud nova neutron cinder"
+    status: active
+    skills: domains/infrastructure/virtualization/private-cloud/skills.yaml

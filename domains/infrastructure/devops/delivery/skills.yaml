@@ -1,0 +1,11 @@
+schema_version: 1
+id: flux
+kind: skill-registry
+skills:
+  - id: flux-gitops-reconciliation
+    path: .agents/skills/flux-gitops-reconciliation/SKILL.md
+    description: "Operate Flux GitOps reconciliation with source artifacts, Kustomize/Helm controllers and drift recovery."
+    triggers:
+      - "flux gitops reconciliation"
+    excludes: []
+    status: active

@@ -1,0 +1,21 @@
+schema_version: 1
+id: sre-reliability
+kind: map
+children:
+  - id: sre-practices
+    description: "SLOs, error budgets, capacity, chaos and disaster recovery"
+    triggers:
+      - "sre slo error budget"
+      - "sre capacity load testing"
+      - "chaos engineering failure injection"
+      - "infrastructure backup disaster recovery"
+    status: active
+    skills: domains/infrastructure/sre/skills.yaml
+  - id: incident-management
+    description: "Incident diagnosis, mitigation and postmortems"
+    triggers:
+      - "sre incident postmortem"
+      - "incident rca"
+      - "production outage postmortem"
+    status: active
+    skills: domains/infrastructure/devops-sre/incident/skills.yaml

@@ -253,7 +253,7 @@ class GraphRoutingTests(unittest.TestCase):
             ("Write a product PRD", "product-discovery-prd"),
             ("Audit technical SEO canonical tags", "seo-audit-strategy"),
             ("Create marketing campaign strategy", "marketing-strategy-campaign"),
-            ("Review a Kubernetes Helm upgrade", "platform-operations"),
+            ("Review a Kubernetes Helm upgrade", "kubernetes-rollout-safety"),
         ]
         for task, skill_id in cases:
             with self.subTest(task=task):

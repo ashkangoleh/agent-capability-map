@@ -2,126 +2,24 @@ schema_version: 1
 id: infrastructure
 kind: map
 children:
-  - id: kubernetes
-    description: "kubernetes"
+  - id: compute-os
+    description: "Compute, operating systems, host lifecycle and HPC"
     triggers:
-      - "pod security"
-      - "kubernetes storage"
-      - "helm chart"
-      - "k8s networkpolicy"
-      - "csi driver"
-      - "pvc"
-      - "kubernetes"
-      - "k8s"
-      - "helm"
-      - "pod"
-      - "cluster"
+      - "linux kernel performance diagnostics"
+      - "linux storage filesystem operations"
+      - "windows server operations"
+      - "unix bsd systems operations"
+      - "linux systemd service restart loop"
+      - "linux windows server patching fleet compliance"
+      - "hpc gpu compute scheduling"
     status: active
-    map: domains/infrastructure/kubernetes/map.yaml
-  - id: devops-sre
-    description: "devops sre"
-    triggers:
-      - "sre incident"
-      - "incident postmortem"
-      - "opentelemetry"
-      - "prometheus"
-      - "ci cd supply chain"
-      - "github actions"
-      - "gitops"
-      - "argo cd"
-      - "ansible"
-      - "terraform"
-      - "devops"
-      - "sre"
-      - "ci/cd"
-      - "incident"
-      - "observability"
-      - "deployment"
-    status: active
-    map: domains/infrastructure/devops-sre/map.yaml
-  - id: cloud-engineering
-    description: "cloud engineering"
-    triggers:
-      - "cloud capacity"
-      - "finops"
-      - "cloud cost"
-      - "iam least privilege"
-      - "cloud iam"
-      - "cloud architecture"
-      - "aws"
-      - "gcp"
-      - "azure"
-      - "cloud engineering"
-    status: active
-    map: domains/infrastructure/cloud/map.yaml
-  - id: network-engineering
-    description: "network engineering"
+    map: domains/infrastructure/compute-os/map.yaml
+  - id: networking
+    description: "Enterprise networking, routing, DNS, access, automation and network services"
     triggers:
       - "network diagnostics"
       - "tls handshake"
       - "dns troubleshooting"
-      - "networking"
-      - "dns"
-      - "tcp"
-      - "routing"
-      - "load balancer"
-    status: active
-    skills: domains/infrastructure/network/skills.yaml
-  - id: linux-systems
-    description: "linux systems"
-    triggers:
-      - "systemd restart loop"
-      - "systemd service"
-      - "linux server"
-      - "shell administration"
-      - "systemd"
-    status: active
-    skills: domains/infrastructure/linux/skills.yaml
-  - id: platform-engineering
-    description: "platform engineering"
-    triggers:
-      - "golden path"
-      - "container build"
-      - "vault secrets"
-      - "platform engineering"
-      - "internal developer platform"
-    status: active
-    map: domains/infrastructure/platform/map.yaml
-  - id: devops
-    description: "Infrastructure as code, image builds, GitOps and release engineering"
-    triggers:
-      - "opentofu state migration"
-      - "pulumi infrastructure as code"
-      - "packer machine image lifecycle"
-      - "flux gitops reconciliation"
-      - "ci cd release engineering"
-    status: active
-    skills: domains/infrastructure/devops/skills.yaml
-  - id: devsecops
-    description: "Security automation, policy-as-code and software supply-chain controls"
-    triggers:
-      - "devsecops security gates"
-      - "policy as code opa kyverno"
-      - "falco runtime security detection"
-      - "sigstore cosign image signing"
-      - "slsa sbom software supply chain"
-      - "slsa provenance attestation"
-      - "spiffe workload identity"
-    status: active
-    skills: domains/infrastructure/devsecops/skills.yaml
-  - id: sre
-    description: "SLOs, capacity, chaos, observability and disaster recovery"
-    triggers:
-      - "sre slo error budget"
-      - "sre capacity load testing"
-      - "chaos engineering failure injection"
-      - "infrastructure observability stack"
-      - "infrastructure backup disaster recovery"
-    status: active
-    skills: domains/infrastructure/sre/skills.yaml
-  - id: network-advanced
-    description: "Routing, firewall, proxies, VPN, eBPF, DNS and PKI"
-    triggers:
       - "network routing bgp"
       - "network firewall segmentation"
       - "network load balancing proxy"
@@ -129,62 +27,166 @@ children:
       - "ebpf network observability"
       - "authoritative dns infrastructure"
       - "tls pki certificate lifecycle"
+      - "dhcp ipam network services"
+      - "network automation sdn"
+      - "network switching enterprise routing"
+      - "wireless lan network engineering"
     status: active
-    skills: domains/infrastructure/network-advanced/skills.yaml
-  - id: cloud
-    description: "Cloud networking, landing zones and FinOps"
+    map: domains/infrastructure/networking/map.yaml
+  - id: cloud-engineering
+    description: "Public, private and hybrid cloud foundations, provider operations, governance and FinOps"
     triggers:
       - "cloud network vpc routing"
       - "cloud landing zone architecture"
       - "finops cost allocation"
+      - "cloud cost finops capacity"
+      - "cloud iam least privilege"
+      - "cloud cost capacity review"
+      - "hybrid cloud reference architecture"
+      - "aws infrastructure account guardrails"
+      - "azure subscription management landing zone policy"
+      - "gcp organization folders shared vpc infrastructure"
+      - "oci tenancy compartments vcn guardrails"
+      - "serverless managed runtime lambda cloud run functions"
+      - "cloud security posture management cnapp"
     status: active
-    skills: domains/infrastructure/cloud/skills.yaml
-  - id: systems
-    description: "Linux and Windows operating systems"
+    map: domains/infrastructure/cloud/map.yaml
+  - id: iac-configuration
+    description: "Infrastructure as Code, configuration management and immutable image lifecycle"
     triggers:
-      - "linux kernel performance diagnostics"
-      - "linux storage filesystem operations"
-      - "windows server operations"
+      - "terraform state module"
+      - "terraform state module drift migration"
+      - "terraform state migration"
+      - "opentofu state migration"
+      - "pulumi infrastructure as code"
+      - "packer machine image lifecycle"
+      - "ansible playbook idempotency"
+      - "puppet chef salt configuration management"
     status: active
-    skills: domains/infrastructure/systems/skills.yaml
-  - id: virtualization
-    description: "Hypervisors and virtual machine platforms"
+    map: domains/infrastructure/iac-configuration/map.yaml
+  - id: virtualization-private-cloud
+    description: "Hypervisors, virtual machine platforms, private cloud and HCI"
     triggers:
       - "kvm proxmox vmware virtualization"
+      - "openstack private cloud nova neutron cinder"
     status: active
-    skills: domains/infrastructure/virtualization/skills.yaml
-  - id: storage
-    description: "Block, filesystem and distributed storage"
+    map: domains/infrastructure/virtualization-private-cloud/map.yaml
+  - id: containers-orchestration
+    description: "Container runtimes, Kubernetes, service mesh and service discovery"
     triggers:
-      - "ceph zfs lvm storage operations"
-    status: active
-    skills: domains/infrastructure/storage/skills.yaml
-  - id: database
-    description: "Database platform operations"
-    triggers:
-      - "postgresql infrastructure operations"
-      - "mysql infrastructure operations"
-    status: active
-    skills: domains/infrastructure/database/skills.yaml
-  - id: kubernetes-platform
-    description: "Kubernetes cluster, operator and CNI lifecycle"
-    triggers:
+      - "containerd cri o podman runtime isolation"
+      - "container security"
+      - "container build security"
+      - "dockerfile security"
+      - "kubernetes helm upgrade"
+      - "kubernetes helm chart validation"
+      - "helm chart validation"
+      - "kubernetes rollout"
+      - "kubernetes networkpolicy"
+      - "kubernetes storage"
+      - "kubernetes workload security"
       - "kubernetes cluster upgrade capacity"
       - "kubernetes operator crd lifecycle"
       - "kubernetes cni ebpf operations"
-    status: active
-    skills: domains/infrastructure/kubernetes/skills.yaml
-  - id: service-mesh
-    description: "Service mesh traffic, identity and telemetry"
-    triggers:
       - "istio service mesh operations"
+      - "consul etcd service discovery quorum health checks"
     status: active
-    skills: domains/infrastructure/service-mesh/skills.yaml
-  - id: platform
-    description: "Internal developer platforms and control planes"
+    map: domains/infrastructure/containers-orchestration/map.yaml
+  - id: devops-delivery
+    description: "CI/CD, GitOps, release engineering and artifact provenance"
+    triggers:
+      - "argo cd gitops sync drift"
+      - "flux gitops reconciliation"
+      - "ci cd release engineering"
+      - "ci cd supply chain artifact signing"
+      - "github actions security"
+    status: active
+    map: domains/infrastructure/devops-delivery/map.yaml
+  - id: platform-engineering
+    description: "Internal developer platforms, control planes, golden paths, secrets and platform operations"
     triggers:
       - "backstage internal developer platform"
       - "crossplane infrastructure control plane"
       - "karpenter keda autoscaling"
+      - "golden path"
+      - "internal developer platform"
+      - "vault secrets"
+      - "vault secrets rotation operations"
+      - "platform operations readiness review"
     status: active
-    skills: domains/infrastructure/platform/skills.yaml
+    map: domains/infrastructure/platform/map.yaml
+  - id: sre-reliability
+    description: "Service reliability, SLOs, incidents, chaos, capacity and disaster recovery"
+    triggers:
+      - "sre slo error budget"
+      - "sre capacity load testing"
+      - "chaos engineering failure injection"
+      - "infrastructure backup disaster recovery"
+      - "sre incident postmortem"
+    status: active
+    map: domains/infrastructure/sre-reliability/map.yaml
+  - id: observability-engineering
+    description: "Metrics, logs, traces, telemetry pipelines, profiling and operational signal cost"
+    triggers:
+      - "prometheus alert rules"
+      - "prometheus slo"
+      - "opentelemetry collector pipeline tracing"
+      - "infrastructure observability stack"
+      - "infrastructure continuous profiling ebpf telemetry cost"
+      - "infrastructure capacity headroom saturation rightsizing"
+    status: active
+    map: domains/infrastructure/observability-engineering/map.yaml
+  - id: infrastructure-security
+    description: "Infrastructure identity, privileged access, DevSecOps, cloud posture and zero trust"
+    triggers:
+      - "devsecops security gates"
+      - "policy as code opa kyverno"
+      - "falco runtime security detection"
+      - "sigstore cosign image signing"
+      - "slsa provenance attestation"
+      - "spiffe workload identity"
+      - "infrastructure iam pam jit access federation"
+      - "zero trust network access microsegmentation"
+      - "cloud security posture management cnapp"
+    status: active
+    map: domains/infrastructure/infrastructure-security/map.yaml
+  - id: storage-engineering
+    description: "Block, file, distributed and object storage infrastructure"
+    triggers:
+      - "ceph zfs lvm storage operations"
+      - "linux storage filesystem operations"
+      - "san nas fibre channel iscsi nvmeof storage"
+      - "s3 compatible object storage lifecycle replication object lock"
+    status: active
+    map: domains/infrastructure/storage-engineering/map.yaml
+  - id: database-infrastructure
+    description: "Database platform operations, HA, replication, backup and NoSQL infrastructure"
+    triggers:
+      - "postgresql infrastructure operations"
+      - "mysql infrastructure operations"
+      - "database ha replication failover pitr"
+      - "mongodb redis cassandra replication persistence failover"
+    status: active
+    map: domains/infrastructure/database-infrastructure/map.yaml
+  - id: edge-infrastructure
+    description: "Edge compute fleets, remote sites and CDN delivery"
+    triggers:
+      - "k3s edge fleet management intermittent connectivity ota"
+      - "cdn edge cache origin shield purge"
+    status: active
+    map: domains/infrastructure/edge-infrastructure/map.yaml
+  - id: hardware-datacenter
+    description: "Bare metal, server hardware, firmware, BMC and data-center facilities"
+    triggers:
+      - "bare metal server provisioning pxe ipxe maas metal3"
+      - "server firmware bmc redfish ipmi uefi secure boot"
+      - "data center rack power cooling ups pdu dcim"
+    status: active
+    map: domains/infrastructure/hardware-datacenter/map.yaml
+  - id: architecture-governance
+    description: "Infrastructure architecture, technical decisions, asset inventory and configuration governance"
+    triggers:
+      - "infrastructure architecture nfr failure domains adr"
+      - "infrastructure asset inventory cmdb discovery configuration drift"
+    status: active
+    map: domains/infrastructure/architecture-governance/map.yaml

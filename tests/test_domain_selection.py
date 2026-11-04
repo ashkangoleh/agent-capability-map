@@ -81,7 +81,7 @@ class DomainSelectionTests(unittest.TestCase):
         requests = [
             ("Create a new PySpark project", "pyspark-project-bootstrap"),
             ("Data scientist: bayesian modeling pymc stan", "ds-bayesian-pymc-stan"),
-            ("Review a Kubernetes Helm upgrade", "platform-operations"),
+            ("Review a Kubernetes Helm upgrade", "kubernetes-rollout-safety"),
         ]
         for request, expected in requests:
             with self.subTest(request=request):

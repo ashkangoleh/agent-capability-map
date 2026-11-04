@@ -43,7 +43,7 @@ cases:
   - id: kubernetes
     request: Review a Kubernetes Helm upgrade
     status: matched
-    skill: platform-operations
+    skill: kubernetes-rollout-safety
   - id: agent-authoring
     request: Create an agent skill registry
     status: matched
@@ -1245,3 +1245,144 @@ cases:
     request: "بازیابی MongoDB Change Streams با resume token بعد از invalidate را طراحی کن"
     status: matched
     skill: mongodb-change-streams-cdc
+
+  - id: infra-specialist-hpc-gpu-compute-scheduling
+    request: "Plan Slurm GPU compute scheduling with NUMA and RDMA constraints"
+    status: matched
+    skill: hpc-gpu-compute-scheduling
+  - id: infra-specialist-os-fleet-patching-compliance
+    request: "Plan Linux Windows server patching fleet compliance and kernel lifecycle"
+    status: matched
+    skill: os-fleet-patching-compliance
+  - id: infra-specialist-unix-bsd-systems-operations
+    request: "Diagnose FreeBSD OpenBSD Unix service and storage operations"
+    status: matched
+    skill: unix-bsd-systems-operations
+  - id: infra-specialist-dhcp-ipam-network-services
+    request: "Design DHCP IPAM NTP network services with DNS integration"
+    status: matched
+    skill: dhcp-ipam-network-services
+  - id: infra-specialist-network-automation-sdn
+    request: "Automate network configuration with NetBox Nornir gNMI and OpenConfig"
+    status: matched
+    skill: network-automation-sdn
+  - id: infra-specialist-network-switching-enterprise-routing
+    request: "Troubleshoot VLAN STP LACP OSPF EVPN VXLAN switching"
+    status: matched
+    skill: network-switching-enterprise-routing
+  - id: infra-specialist-wireless-lan-network-engineering
+    request: "Design enterprise WiFi WLAN 802.1X RADIUS NAC roaming"
+    status: matched
+    skill: wireless-lan-network-engineering
+  - id: infra-specialist-cloud-architecture-reference-design
+    request: "Review hybrid cloud reference architecture and failure domains"
+    status: matched
+    skill: cloud-architecture-reference-design
+  - id: infra-specialist-aws-infrastructure-operations
+    request: "Review AWS infrastructure account guardrails and VPC endpoints"
+    status: matched
+    skill: aws-infrastructure-operations
+  - id: infra-specialist-azure-infrastructure-operations
+    request: "Design Azure subscription management and landing zone policy"
+    status: matched
+    skill: azure-infrastructure-operations
+  - id: infra-specialist-gcp-infrastructure-operations
+    request: "Design GCP organization folders and shared VPC infrastructure"
+    status: matched
+    skill: gcp-infrastructure-operations
+  - id: infra-specialist-oci-infrastructure-operations
+    request: "Review OCI tenancy compartments and VCN guardrails"
+    status: matched
+    skill: oci-infrastructure-operations
+  - id: infra-specialist-cloud-serverless-managed-runtime
+    request: "Design AWS Lambda and Cloud Run runtime limits"
+    status: matched
+    skill: cloud-serverless-managed-runtime
+  - id: infra-specialist-cloud-security-posture-governance
+    request: "Audit cloud security posture management and CNAPP findings"
+    status: matched
+    skill: cloud-security-posture-governance
+  - id: infra-specialist-configuration-management-puppet-chef-salt
+    request: "Design Puppet Chef Salt configuration management policy"
+    status: matched
+    skill: configuration-management-puppet-chef-salt
+  - id: infra-specialist-openstack-private-cloud-operations
+    request: "Operate OpenStack private cloud Nova Neutron Cinder services"
+    status: matched
+    skill: openstack-private-cloud-operations
+  - id: infra-specialist-container-runtime-operations
+    request: "Diagnose containerd CRI-O Podman runtime isolation and cgroups"
+    status: matched
+    skill: container-runtime-operations
+  - id: infra-specialist-kubernetes-multicluster-tenancy
+    request: "Design Kubernetes multi cluster fleet management and tenant isolation"
+    status: matched
+    skill: kubernetes-multicluster-tenancy
+  - id: infra-specialist-kubernetes-gateway-api-ingress
+    request: "Migrate Kubernetes ingress controllers to Gateway API"
+    status: matched
+    skill: kubernetes-gateway-api-ingress
+  - id: infra-specialist-service-discovery-control-plane-operations
+    request: "Review Consul etcd service discovery quorum and health checks"
+    status: matched
+    skill: service-discovery-control-plane-operations
+  - id: infra-specialist-infrastructure-observability-profiling
+    request: "Diagnose infrastructure continuous profiling eBPF telemetry cost"
+    status: matched
+    skill: infrastructure-observability-profiling
+  - id: infra-specialist-infrastructure-capacity-performance
+    request: "Model infrastructure capacity headroom saturation and rightsizing"
+    status: matched
+    skill: infrastructure-capacity-performance
+  - id: infra-specialist-identity-access-privileged-infrastructure
+    request: "Design infrastructure IAM PAM JIT access federation"
+    status: matched
+    skill: identity-access-privileged-infrastructure
+  - id: infra-specialist-zero-trust-network-access-engineering
+    request: "Design zero trust network access microsegmentation and continuous verification"
+    status: matched
+    skill: zero-trust-network-access-engineering
+  - id: infra-specialist-storage-san-nas-nvmeof
+    request: "Design SAN NAS Fibre Channel iSCSI NVMeoF storage multipathing"
+    status: matched
+    skill: storage-san-nas-nvmeof
+  - id: infra-specialist-object-storage-infrastructure-operations
+    request: "Operate S3 compatible object storage lifecycle replication and object lock"
+    status: matched
+    skill: object-storage-infrastructure-operations
+  - id: infra-specialist-database-ha-replication-recovery
+    request: "Plan database HA replication failover and point in time recovery"
+    status: matched
+    skill: database-ha-replication-recovery
+  - id: infra-specialist-database-nosql-cache-operations
+    request: "Operate MongoDB Redis Cassandra replication and persistence"
+    status: matched
+    skill: database-nosql-cache-operations
+  - id: infra-specialist-edge-compute-fleet-operations
+    request: "Deploy K3s edge fleet management with intermittent connectivity and OTA updates"
+    status: matched
+    skill: edge-compute-fleet-operations
+  - id: infra-specialist-cdn-edge-delivery-operations
+    request: "Tune CDN edge cache origin shield purge and cache invalidation"
+    status: matched
+    skill: cdn-edge-delivery-operations
+  - id: infra-specialist-bare-metal-provisioning-lifecycle
+    request: "Provision bare metal servers with PXE iPXE MAAS Metal3"
+    status: matched
+    skill: bare-metal-provisioning-lifecycle
+  - id: infra-specialist-server-hardware-firmware-management
+    request: "Manage server firmware BMC Redfish IPMI UEFI Secure Boot lifecycle"
+    status: matched
+    skill: server-hardware-firmware-management
+  - id: infra-specialist-datacenter-power-cooling-dcim
+    request: "Plan data center rack power cooling UPS PDU and DCIM capacity"
+    status: matched
+    skill: datacenter-power-cooling-dcim
+  - id: infra-specialist-infrastructure-architecture-decision-review
+    request: "Review infrastructure architecture NFR failure domains and ADR tradeoffs"
+    status: matched
+    skill: infrastructure-architecture-decision-review
+  - id: infra-specialist-infrastructure-asset-configuration-inventory
+    request: "Design infrastructure asset inventory CMDB discovery ownership and configuration drift"
+    status: matched
+    skill: infrastructure-asset-configuration-inventory

@@ -1,0 +1,19 @@
+schema_version: 1
+id: gitops
+kind: map
+children:
+  - id: argocd
+    description: "Argo CD sync, drift and rollback"
+    triggers:
+      - "argo cd"
+      - "argocd drift"
+      - "gitops sync"
+      - "argocd rollback"
+    status: active
+    skills: domains/infrastructure/devops-sre/gitops/skills.yaml
+  - id: flux
+    description: "Flux source and reconciliation lifecycle"
+    triggers:
+      - "flux gitops reconciliation"
+    status: active
+    skills: domains/infrastructure/devops/delivery/skills.yaml
