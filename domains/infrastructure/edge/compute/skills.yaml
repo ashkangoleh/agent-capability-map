@@ -3,7 +3,7 @@ id: compute
 kind: skill-registry
 skills:
   - id: edge-compute-fleet-operations
-    path: .agents/skills/edge-compute-fleet-operations/SKILL.md
+    path: .agents/skills/infrastructure/edge/compute/edge-compute-fleet-operations/SKILL.md
     description: "Operate distributed edge fleets with K3s/KubeEdge, intermittent connectivity, local autonomy and secure OTA."
     triggers:
       - "k3s edge fleet management intermittent connectivity ota"
