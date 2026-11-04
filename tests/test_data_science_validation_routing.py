@@ -54,7 +54,9 @@ class DataScienceValidationRoutingTests(unittest.TestCase):
         self.assertIn("sklearn grouped cross validation", skill["triggers"])
 
     def test_skill_contains_actual_validation_contract_and_references(self):
-        path = ROOT / ".agents" / "skills" / "sklearn-leakage-free-validation" / "SKILL.md"
+        registry = load_yaml(ROOT, "domains/data/data-science/model-validation/skills.yaml")
+        path = ROOT / next(item["path"] for item in registry["skills"]
+                           if item["id"] == "sklearn-leakage-free-validation")
         content = path.read_text(encoding="utf-8")
         for heading in (
             "## Activation boundary",
