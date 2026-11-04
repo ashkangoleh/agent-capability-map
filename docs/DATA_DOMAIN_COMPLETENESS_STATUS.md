@@ -80,6 +80,14 @@ The four existing forecasting skills were deepened with rolling/expanding origin
 
 This completes a **forecasting implementation increment**, not forecasting certification: independent full Python graph/CI run, release-pinned statistical libraries, trained-model benchmarks, handling of non-additive hierarchies and actual lead-time inventory evaluation remain incomplete. **Next within Data Science: statistical inference, surveys and robustness**. The entire Data root remains incomplete.
 
+### Statistical inference and survey progress — 2026-11-05
+
+Strengthened **five existing** skills for multiple hypothesis testing, complex sampling, missingness, robust resampling and Bayesian sampler diagnostics. Added `examples/data_science/inference_integrity.py` and **23 locally executed passing Python tests**. The adjusted-p method output was compared to **600** seeded statsmodels 0.14.6 reference cases; arithmetic matched. Also added **22** new bilingual/negative-boundary routing cases, bringing the fixture file to **467 cases** while master IDs remain **344**.
+
+Limits: full Python Router/CI remains unverified; no design-based survey SE, pooled multiple-imputation confidence intervals, actual Bayesian chain run or true cross-host agent benchmark were executed. This is a **specialist-depth increment**, not a completed statistical validation domain. Details: `docs/DATA_SCIENCE_INFERENCE_SURVEY_VALIDATION_PROTOCOL.md`.
+
+**Next within Data Science:** finish the remaining 42-skill specialist audit, complete missing reproducible end-to-end benchmarks and real host routing behavior; do not yet switch to Analytics Engineering or another top-level domain.
+
 ### Next workstream: Data Science validation
 
 Start with the 42 specialist skills and their mapped task boundaries. Compare real method assumptions and independent reference datasets, especially leakage-free validation, survey/multiple-testing inference, causal identification, forecasting under distribution shift and conformal calibration. Verify primary references and test both positive and hard negative prompts rather than adding unrelated libraries. The [scikit-learn common pitfalls guide](https://scikit-learn.org/stable/common_pitfalls.html) is a canonical source for data leakage and preprocessing boundaries. The dbt [Semantic Layer YAML reference](https://docs.getdbt.com/reference/semantic-layer-reference) and [model governance](https://docs.getdbt.com/docs/mesh/govern/about-model-governance) are reference starting points for the **later** Analytics Engineering workstream; validate version and product entitlement before applying.
