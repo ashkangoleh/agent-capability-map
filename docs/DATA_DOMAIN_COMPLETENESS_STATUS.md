@@ -56,6 +56,12 @@ The exact `pre_release` tree contains nine child entries. These statements descr
 5. Record executed CI commit SHA, full test counts and real host/behavioral evaluation results. Mark unavailable evidence **NOT VERIFIED**, not PASS.
 6. Only then close the subdomain or record explicitly scoped limitations; revisit the Data root assessment after all nine workstreams.
 
+### Data Science progress recorded on 2026-11-04
+
+The `model-validation` workstream has a hardened existing sklearn specialist, a dependency-free executable split-integrity example, 17 locally executed boundary checks, 11 additional deterministic route fixtures and a dedicated test suite. The 42-specialist inventory has **not** increased; this is a depth/quality improvement, not more taxonomy. `docs/DATA_SCIENCE_VALIDATION_PROTOCOL.md` defines its acceptance evidence.
+
+**Not finished:** full repo Python/CI validation, reproducible sklearn experiment, causal identification/experimentation, conformal/calibration, forecasting and statistical inference validation, all-domain behavioral benchmark and multi-host tests. Data Science remains structurally covered but not independently certified. Continue with **causal inference and experimentation** after resolving/recording the new CI/test evidence.
+
 ### Next workstream: Data Science validation
 
 Start with the 42 specialist skills and their mapped task boundaries. Compare real method assumptions and independent reference datasets, especially leakage-free validation, survey/multiple-testing inference, causal identification, forecasting under distribution shift and conformal calibration. Verify primary references and test both positive and hard negative prompts rather than adding unrelated libraries. The [scikit-learn common pitfalls guide](https://scikit-learn.org/stable/common_pitfalls.html) is a canonical source for data leakage and preprocessing boundaries. The dbt [Semantic Layer YAML reference](https://docs.getdbt.com/reference/semantic-layer-reference) and [model governance](https://docs.getdbt.com/docs/mesh/govern/about-model-governance) are reference starting points for the **later** Analytics Engineering workstream; validate version and product entitlement before applying.
