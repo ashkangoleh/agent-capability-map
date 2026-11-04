@@ -3,21 +3,21 @@ id: formats
 kind: skill-registry
 skills:
   - id: avro-protobuf-schema-engineering
-    path: .agents/skills/avro-protobuf-schema-engineering/SKILL.md
+    path: .agents/skills/data/data-engineering/formats/avro-protobuf-schema-engineering/SKILL.md
     description: "Design Avro and Protobuf schemas for durable serialization, compatibility, field identity and replay."
     triggers:
       - "avro protobuf schema evolution"
     excludes: []
     status: active
   - id: parquet-orc-columnar-storage
-    path: .agents/skills/parquet-orc-columnar-storage/SKILL.md
+    path: .agents/skills/data/data-engineering/formats/parquet-orc-columnar-storage/SKILL.md
     description: "Choose and tune Parquet and ORC using row groups/stripes, codecs, statistics and scan patterns."
     triggers:
       - "parquet orc columnar file layout"
     excludes: []
     status: active
   - id: arrow-flight-substrait-interoperability
-    path: .agents/skills/arrow-flight-substrait-interoperability/SKILL.md
+    path: .agents/skills/data/data-engineering/formats/arrow-flight-substrait-interoperability/SKILL.md
     description: "Use Arrow IPC/Flight and Substrait for columnar exchange and portable query plans across compatible engines."
     triggers:
       - "arrow flight substrait interoperability"
