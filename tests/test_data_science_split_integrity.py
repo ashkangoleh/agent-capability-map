@@ -34,6 +34,15 @@ class SplitIntegrityTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "n_samples"):
             validate_split_contract([0], [1], n_samples=True)
 
+    def test_numpy_indices_when_available(self):
+        try:
+            import numpy as np
+        except ImportError:
+            self.skipTest("optional numpy is not installed")
+        result = validate_split_contract(np.array([0, 1]), np.array([2, 3]), n_samples=4,
+                                         groups=np.array(["a", "a", "b", "b"]))
+        self.assertEqual(result, {"train_rows": 2, "test_rows": 2})
+
     def test_out_of_range_rejected(self):
         with self.assertRaisesRegex(ValueError, "invalid indices"):
             validate_split_contract([0], [3], n_samples=3)
