@@ -120,6 +120,13 @@ children:
       - "probabilistic forecasting quantile"
       - "intermittent demand forecasting"
       - "multilingual nlp evaluation"
+      - "scikit-learn leakage safe validation"
+      - "scikit-learn cross validation"
+      - "sklearn grouped cross validation"
+      - "sklearn time series split"
+      - "group cross validation leakage"
+      - "time series cross validation leakage"
+      - "نشت داده در اعتبارسنجی مدل"
     map: domains/data/data-science/map.yaml
     status: active
   - id: analytics-engineering
