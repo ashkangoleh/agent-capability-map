@@ -3,7 +3,7 @@ id: public-sector
 kind: skill-registry
 skills:
   - id: public-policy-program-evaluation
-    path: .agents/skills/public-policy-program-evaluation/SKILL.md
+    path: .agents/skills/public-sector/core/public-policy-program-evaluation/SKILL.md
     description: "Evaluate public policy program logic, outcomes, equity and causal evidence using context-aware OECD criteria."
     triggers:
       - "public policy intervention"

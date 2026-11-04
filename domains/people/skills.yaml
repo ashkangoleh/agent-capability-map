@@ -3,7 +3,7 @@ id: people
 kind: skill-registry
 skills:
   - id: recruiting-interview-scorecard
-    path: .agents/skills/recruiting-interview-scorecard/SKILL.md
+    path: .agents/skills/people/core/recruiting-interview-scorecard/SKILL.md
     description: "Build fair job-relevant structured recruiting interview scorecards with anchored evidence-based ratings."
     triggers:
       - "recruiting interview scorecard"

@@ -3,7 +3,7 @@ id: nonprofit
 kind: skill-registry
 skills:
   - id: nonprofit-grant-evidence-plan
-    path: .agents/skills/nonprofit-grant-evidence-plan/SKILL.md
+    path: .agents/skills/nonprofit/core/nonprofit-grant-evidence-plan/SKILL.md
     description: "Use to prepare nonprofit grant briefs with verified eligibility, logic models, realistic budgets and safeguards."
     triggers:
       - "nonprofit grant proposal"

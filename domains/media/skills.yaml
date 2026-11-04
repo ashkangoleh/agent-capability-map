@@ -3,7 +3,7 @@ id: media
 kind: skill-registry
 skills:
   - id: podcast-production-brief
-    path: .agents/skills/podcast-production-brief/SKILL.md
+    path: .agents/skills/media/core/podcast-production-brief/SKILL.md
     description: "Plan a podcast episode production brief with research, participant consent, licensing, transcript and publishing QA."
     triggers:
       - "podcast production brief"
