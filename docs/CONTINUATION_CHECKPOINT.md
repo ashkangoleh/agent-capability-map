@@ -1,12 +1,12 @@
 # Continuation Checkpoint — Agent Capability Map
 
-**Updated:** 2026-11-04
+**Updated:** 2026-11-05
 **Canonical repository:** `ashkangoleh/agent-capability-map` (private)
 **Canonical working branch:** `pre_release`
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## Current authoritative continuation — Data Science (2026-11-05)
+## Earlier continuation — Data Science uncertainty/calibration (2026-11-05)
 
 **Repository:** `ashkangoleh/agent-capability-map` (private); **working branch:** `pre_release`; `main` must remain unchanged without explicit approval.  
 **Verified HEAD before checkpoint update:** `c9bc535441075852b6d58e2d61ee18182f3dfc58`. In a future chat, always fetch live HEAD; this SHA becomes historical as soon as this checkpoint is committed.  
@@ -50,6 +50,38 @@
 2. In Data Science only, audit and strengthen `ds-conformal-prediction-uncertainty` and `ds-model-calibration` with clear exchangeability/calibration/test isolation, risk/coverage guarantees, subgroup uncertainty, temporal drift and credible version-specific references.
 3. Add targeted executable, negative and bilingual fixtures; separately evaluate real model task selection across hosts. Then proceed within Data Science to forecasting, statistical/survey methods and the rest of its 42-skill inventory.
 4. Data Engineering still has catalog, broker/streaming and versioned production-recovery gaps; return to it only by an explicit progression decision. Work through the nine Data subdomains and seek approval before another **top-level** domain.
+
+## LATEST ACTIVE CHECKPOINT — Data Science Forecasting completed increment (2026-11-05)
+
+**Canonical repo:** `ashkangoleh/agent-capability-map` (private)  
+**Working branch:** `pre_release` (no `main` merge, no new feature/fix branch without explicit approval)  
+**HEAD verified immediately before this checkpoint commit:** `b5e24555163f95a25c2d96d41e1d952a6b74eccb` — always fetch live `pre_release` HEAD again at the start of a future chat.  
+**Active top-level domain:** `data` (nine subdomains; overall INCOMPLETE)  
+**Active subdomain:** `data/data-science` (42 structural specialist skills, 26 declared capability areas; not production-certified)  
+**NEXT focused specialty family:** statistical inference, survey design, robust/Bayesian uncertainty and multiple-testing validity. **Do not change to another Data subdomain until user authorizes a move; do not switch to Infrastructure.**
+
+### Just implemented, verified and committed
+
+1. Hardened **four existing** forecasting SKILL packages in place: `time-series-forecast-backtesting`, `ds-probabilistic-forecasting`, `ds-hierarchical-forecasting` and `ds-intermittent-demand-forecasting`; no new skill IDs. Defined operation contracts for origin/label/covariate availability, rolling-origin vs calendar gap, pinball loss and quantile crossing, hierarchy version/coherence and stockout-censored demand.
+2. Created `examples/data_science/forecast_integrity.py` and `tests/test_data_science_forecast_integrity.py`: **30/30 tests actually ran locally and passed** using standard-library Python. Verified both files have the **exact same Git blob SHAs** in `pre_release` as the locally executed files (source `c7e5d72ea84364f03ad35814fd9e5aee8dd0daa3`, tests `e8ff06777b921e03b59b7a3852e7d95174c978ad`).
+3. Added `tests/test_data_science_forecast_routing.py` and **22** `ds-forecast-*` positive, near-miss and mixed-language fixtures. File inventory now **445** deterministic routing fixtures and **344** unique master skill IDs.
+4. Verified **22/22** of the new routes with a separate **JavaScript reconstruction** of lexical matching against the GitHub YAML graph, and found no duplicate triggers in edited maps. **This is NOT execution of the actual Python Router, nor evidence that all 445 fixtures pass.**
+5. Recorded decision matrix, references, reproducible examples, safeguards and acceptance commands in `docs/DATA_SCIENCE_FORECASTING_VALIDATION_PROTOCOL.md`; updated README, Data Science audit and Data top-level status docs.
+
+### Exact limits and remaining validation
+
+- Full `python -m capability_map validate`, `python scripts/evaluate_graph.py`, `python scripts/report_coverage.py --summary`, `python -m unittest discover -s tests -v` **on live branch HEAD** and GitHub Actions push CI result: **NOT VERIFIED**. Previous GitHub connector status checks returned no status entries; do not describe that as PASS.
+- The forecasting helper does **not** fit actual models or establish calendar-aware embargo, as-of source data provenance, hierarchical probabilistic reconciliation, version-specific engine compatibility or uncensored demand.
+- Before declaring Data Science complete, obtain reproducible trained-model/horizon backtests, independent statistical review, actual real-agent host routing benchmarks and full coverage of all declared capability areas.
+- The larger top-level Data domain still has seven unaudited subdomains, plus unresolved Data Engineering reliability/broker/catalog/warehouse evidence. Never state that Data is complete.
+
+### Immediate action for a new conversation
+
+1. Fetch `pre_release` HEAD and read this **LATEST ACTIVE CHECKPOINT**, `docs/DATA_DOMAIN_COMPLETENESS_STATUS.md`, `docs/DATA_SCIENCE_COVERAGE_AUDIT.md` and the last forecasting validation protocol.
+2. Run or independently retrieve the full Python tests and GitHub push CI status. Fix any failures and record actual SHA/log evidence before claiming branch health.
+3. Advance **within Data Science** to existing statistical inference/survey/robust/Bayesian skills: audit estimator assumptions, multiplicity, survey weights/design effects, missing-data mechanisms and inference under dependence. Improve evidence and negative/ambiguous/bilingual routes with runnable reference checks; do not add duplicates for quantity.
+4. After this Data Science subfamily, finish the remaining Data Science review and seek explicit approval before switching to the next of the nine Data subdomains. Do not select another top-level domain unilaterally.
+5. Update this file after each substantive increment, with new HEAD, executed test evidence, actual files, open risks and next workstream.
 
 ## Product intent — non-negotiable
 
