@@ -7,6 +7,10 @@ skills:
     description: "Forecast hierarchical time series and reconcile product, geography and aggregate levels."
     triggers:
       - "hierarchical time series reconciliation"
+      - "hierarchical forecasting reconciliation"
+      - "hierarchical forecast coherence"
+      - "hierarchical summing matrix"
+      - "hierarchical forecasting"
     excludes: []
     status: active
   - id: ds-probabilistic-forecasting
