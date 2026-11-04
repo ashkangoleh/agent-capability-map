@@ -3,7 +3,7 @@ id: dashboard
 kind: skill-registry
 skills:
   - id: data-visualization-evidence
-    path: .agents/skills/data-visualization-evidence/SKILL.md
+    path: .agents/skills/data/business-intelligence/dashboard/data-visualization-evidence/SKILL.md
     description: "Present analytical dashboards with metric provenance, accurate charts and accessible conclusions."
     triggers:
       - "business intelligence"

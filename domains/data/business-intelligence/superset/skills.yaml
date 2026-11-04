@@ -3,7 +3,7 @@ id: superset
 kind: skill-registry
 skills:
   - id: superset-dashboard-metric-governance
-    path: .agents/skills/superset-dashboard-metric-governance/SKILL.md
+    path: .agents/skills/data/business-intelligence/superset/superset-dashboard-metric-governance/SKILL.md
     description: "Build secure Apache Superset dashboards, dataset metrics, cache policies and performance validation."
     triggers:
       - "superset dashboard"

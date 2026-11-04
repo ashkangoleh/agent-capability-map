@@ -3,7 +3,7 @@ id: dimensional-modeling
 kind: skill-registry
 skills:
   - id: dimensional-modeling-grain
-    path: .agents/skills/dimensional-modeling-grain/SKILL.md
+    path: .agents/skills/data/analytics-engineering/dimensional/dimensional-modeling-grain/SKILL.md
     description: "Model conformed facts and dimensions with explicit business grain, SCD joins and additive metric semantics."
     triggers:
       - "dimensional modeling"

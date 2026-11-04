@@ -3,7 +3,7 @@ id: trino
 kind: skill-registry
 skills:
   - id: trino-federated-query-optimization
-    path: .agents/skills/trino-federated-query-optimization/SKILL.md
+    path: .agents/skills/data/data-engineering/warehouse/trino/trino-federated-query-optimization/SKILL.md
     description: "Optimize Trino federated queries using connector-specific pushdown, physical plans and measured cross-source data movement."
     triggers:
       - "trino federation"

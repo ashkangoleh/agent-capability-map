@@ -3,7 +3,7 @@ id: data-architecture
 kind: skill-registry
 skills:
   - id: data-platform-architecture-review
-    path: .agents/skills/data-platform-architecture-review/SKILL.md
+    path: .agents/skills/data/architecture/core/data-platform-architecture-review/SKILL.md
     description: "Evaluate multi-engine data platform and lakehouse architecture with workload SLOs, integration, replay and cost tradeoffs."
     triggers:
       - "data platform architecture"
