@@ -3,7 +3,7 @@ id: fine-tuning
 kind: skill-registry
 skills:
   - id: huggingface-peft-finetuning
-    path: .agents/skills/huggingface-peft-finetuning/SKILL.md
+    path: .agents/skills/ai-ml/deep-learning/transformers/huggingface-peft-finetuning/SKILL.md
     description: "Fine-tune Hugging Face transformer models using verified PEFT LoRA and held-out evaluations."
     triggers:
       - "peft"
