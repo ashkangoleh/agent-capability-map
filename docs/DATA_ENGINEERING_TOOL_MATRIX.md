@@ -12,7 +12,7 @@
 | Transformation | dbt, SQLMesh, Dataform, Spark/Flink SQL, Hop | dbt Cloud, warehouse-native | ETL/ELT, incremental models, SCD, contracts, snapshots, restatement |
 | File / interchange | Parquet, ORC, Avro, Protobuf, JSON Schema, Arrow IPC/Flight, Substrait | Vendor-optimized formats | row groups, codecs, logical types, compatibility, query-plan exchange |
 | Lakehouse | Iceberg, Delta Lake, Hudi, Paimon, DuckLake | Managed lakehouse implementations | snapshots, manifests, commits, deletes, schema evolution, compaction |
-| Catalogs | Hive Metastore, Polaris, Nessie, Lakekeeper, Gravitino, DataHub, OpenMetadata | Glue Catalog, Unity Catalog | REST catalog, namespaces, credential vending, lineage, ownership |
+| Catalogs | Iceberg REST protocol, Hive Metastore, Polaris, Nessie, Lakekeeper, Gravitino, DataHub, OpenMetadata | Glue Catalog, Unity Catalog | endpoint discovery, namespace/table metadata, optimistic commits, ambiguous commit recovery, credential vending and expiry, catalog/storage permissions, cross-engine compatibility; distinguish operational catalogs from governance catalogs |
 | Storage / NoSQL | MinIO, HDFS, HBase, Ceph, Cassandra, MongoDB Change Streams, Redis | S3, GCS, ADLS and managed NoSQL | durability, replication, TTL, tombstones, lifecycle, recovery |
 | Warehouses / federation | Trino, Presto, Dremio, StarRocks, Doris, ClickHouse | Snowflake, BigQuery, Redshift, Databricks SQL, Synapse/Fabric | MPP, pushdown, plans, sort/distribution keys, concurrency, cost |
 | Real-time OLAP / search | Pinot, Druid, Elasticsearch, OpenSearch | Managed search/OLAP | segments, shards, indexes, refresh, upsert, retention |
