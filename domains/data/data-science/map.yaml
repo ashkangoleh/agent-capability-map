@@ -77,14 +77,14 @@ children:
       - "jupyter notebook reproducibility"
     status: active
     skills: domains/data/data-science/foundations/skills.yaml
-  - id: statistics
+  - id: statistics-advanced
     description: "Inference, Bayesian methods, power and missing data"
     triggers:
       - "statistical power sample size"
       - "bayesian modeling pymc stan"
       - "missing data mechanism imputation"
     status: active
-    skills: domains/data/data-science/statistics/skills.yaml
+    skills: domains/data/data-science/statistics-advanced/skills.yaml
   - id: experimentation
     description: "Experiments and causal design"
     triggers:
@@ -108,7 +108,7 @@ children:
       - "survival analysis censoring"
     status: active
     skills: domains/data/data-science/survival/skills.yaml
-  - id: forecasting
+  - id: forecasting-advanced
     description: "Hierarchical forecasting"
     triggers:
       - "hierarchical time series reconciliation"
@@ -126,12 +126,12 @@ children:
       - "graph network science analysis"
     status: active
     skills: domains/data/data-science/graph-science/skills.yaml
-  - id: geospatial
+  - id: geospatial-advanced
     description: "Spatial statistics"
     triggers:
       - "geospatial statistical modeling"
     status: active
-    skills: domains/data/data-science/geospatial/skills.yaml
+    skills: domains/data/data-science/geospatial-advanced/skills.yaml
   - id: simulation
     description: "Monte Carlo and uncertainty"
     triggers:

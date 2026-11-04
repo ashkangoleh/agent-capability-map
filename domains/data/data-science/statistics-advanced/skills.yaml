@@ -1,0 +1,25 @@
+schema_version: 1
+id: statistics-advanced
+kind: skill-registry
+skills:
+  - id: ds-power-sample-size
+    path: .agents/skills/ds-power-sample-size/SKILL.md
+    description: "Plan sample size and power using effect size, variance, alpha, power and multiplicity assumptions."
+    triggers:
+      - "statistical power sample size"
+    excludes: []
+    status: active
+  - id: ds-bayesian-pymc-stan
+    path: .agents/skills/ds-bayesian-pymc-stan/SKILL.md
+    description: "Build Bayesian models with explicit priors, likelihoods, posterior diagnostics and sensitivity analysis."
+    triggers:
+      - "bayesian modeling pymc stan"
+    excludes: []
+    status: active
+  - id: ds-missing-data
+    path: .agents/skills/ds-missing-data/SKILL.md
+    description: "Diagnose MCAR/MAR/MNAR assumptions and choose defensible imputation or sensitivity methods."
+    triggers:
+      - "missing data mechanism imputation"
+    excludes: []
+    status: active

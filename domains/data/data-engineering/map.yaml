@@ -134,7 +134,7 @@ children:
       - "redpanda kafka api compatibility"
     status: active
     skills: domains/data/data-engineering/streaming/skills.yaml
-  - id: orchestration
+  - id: orchestration-advanced
     description: "Durable workflows and orchestration"
     triggers:
       - "kestra flow orchestration"
@@ -167,7 +167,7 @@ children:
       - "cloud object storage data lake lifecycle"
     status: active
     skills: domains/data/data-engineering/storage/skills.yaml
-  - id: warehouse
+  - id: warehouse-platforms
     description: "Warehouses, federation and real-time OLAP"
     triggers:
       - "cloud data warehouse engineering"
@@ -231,7 +231,7 @@ children:
       - "data serving api design"
     status: active
     skills: domains/data/data-engineering/serving/skills.yaml
-  - id: lakehouse
+  - id: lakehouse-advanced
     description: "Lakehouse formats and catalogs"
     triggers:
       - "apache paimon streaming lakehouse"

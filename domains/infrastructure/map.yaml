@@ -118,7 +118,7 @@ children:
       - "infrastructure backup disaster recovery"
     status: active
     skills: domains/infrastructure/sre/skills.yaml
-  - id: network
+  - id: network-advanced
     description: "Routing, firewall, proxies, VPN, eBPF, DNS and PKI"
     triggers:
       - "network routing bgp"
@@ -129,7 +129,7 @@ children:
       - "authoritative dns infrastructure"
       - "tls pki certificate lifecycle"
     status: active
-    skills: domains/infrastructure/network/skills.yaml
+    skills: domains/infrastructure/network-advanced/skills.yaml
   - id: cloud
     description: "Cloud networking, landing zones and FinOps"
     triggers:
@@ -165,7 +165,7 @@ children:
       - "mysql infrastructure operations"
     status: active
     skills: domains/infrastructure/database/skills.yaml
-  - id: kubernetes
+  - id: kubernetes-platform
     description: "Kubernetes cluster, operator and CNI lifecycle"
     triggers:
       - "kubernetes cluster upgrade capacity"
