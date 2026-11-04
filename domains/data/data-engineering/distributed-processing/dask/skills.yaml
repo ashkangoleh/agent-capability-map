@@ -3,7 +3,7 @@ id: dask
 kind: skill-registry
 skills:
   - id: dask-distributed-data-engineering
-    path: .agents/skills/dask-distributed-data-engineering/SKILL.md
+    path: .agents/skills/data/data-engineering/distributed-processing/dask/dask-distributed-data-engineering/SKILL.md
     description: "Engineer Dask DataFrame and task-graph workloads with partition sizing, shuffle, scheduler, worker memory and recovery controls."
     triggers:
       - "dask dataframe"
