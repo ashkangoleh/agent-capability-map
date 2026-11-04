@@ -1534,3 +1534,45 @@ cases:
     request: "بررسی Apache Gravitino metalake و امنیت کاتالوگ"
     status: matched
     skill: gravitino-federated-catalog-operations
+
+  - id: ds-validation-underspecified-sklearn
+    request: "sklearn"
+    status: needs_clarification
+  - id: ds-validation-underspecified-scikit
+    request: "scikit-learn"
+    status: needs_clarification
+  - id: ds-validation-tool-only
+    request: "Build a scikit-learn project"
+    status: needs_clarification
+  - id: ds-validation-pipeline
+    request: "Create scikit-learn leakage safe validation pipeline"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ds-validation-grouped
+    request: "Design sklearn grouped cross validation to prevent leakage"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ds-validation-temporal
+    request: "Audit sklearn time series split label availability"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ds-validation-calendar
+    request: "Review time series cross validation leakage after delayed labels"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ds-validation-persian
+    request: "نشت داده در اعتبارسنجی مدل"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ds-validation-feature-boundary
+    request: "Build point in time features without leakage"
+    status: matched
+    skill: feature-engineering-point-in-time
+  - id: ds-validation-conformal-boundary
+    request: "Construct conformal prediction intervals with coverage checks"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-validation-group-boundary
+    request: "Design group cross validation leakage checks"
+    status: matched
+    skill: sklearn-leakage-free-validation
