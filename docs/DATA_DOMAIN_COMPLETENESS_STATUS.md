@@ -60,7 +60,13 @@ The exact `pre_release` tree contains nine child entries. These statements descr
 
 The `model-validation` workstream has a hardened existing sklearn specialist, a dependency-free executable split-integrity example, 17 locally executed boundary checks, 11 additional deterministic route fixtures and a dedicated test suite. The 42-specialist inventory has **not** increased; this is a depth/quality improvement, not more taxonomy. `docs/DATA_SCIENCE_VALIDATION_PROTOCOL.md` defines its acceptance evidence.
 
-**Not finished:** full repo Python/CI validation, reproducible sklearn experiment, causal identification/experimentation, conformal/calibration, forecasting and statistical inference validation, all-domain behavioral benchmark and multi-host tests. Data Science remains structurally covered but not independently certified. Continue with **causal inference and experimentation** after resolving/recording the new CI/test evidence.
+**Not finished:** full repo Python/CI validation, reproducible sklearn experiment, causal identification/experimentation, conformal/calibration, forecasting and statistical inference validation, all-domain behavioral benchmark and multi-host tests. Data Science remains structurally covered but not independently certified. The next specialty slice is **conformal prediction and probability calibration** after checking current CI/test evidence.
+
+### Causal and experimentation progress — 2026-11-04
+
+Existing randomized A/B, causal identification and sequential experimentation specialists were deepened without increasing the 42-skill Data Science inventory. An assignment-level two-arm SRM diagnostic was added with **18 locally executed unit tests**, while **12** additional positive/negative-domain routing fixtures were registered. For design constraints and evidence see `docs/DATA_SCIENCE_CAUSAL_EXPERIMENTATION_PROTOCOL.md`. All-domain routing fixtures now total **408**; repo-wide Python validator and push CI status remain unverified.
+
+This closes one **implementation increment**, not the entire causal domain: real A/A calibration, clustered/stratified allocation, version-pinned estimator evaluations, actual early-stopping simulations and multi-host task tests remain open. **Next Data Science subfamily: conformal prediction and probability calibration**, then forecasting and inferential statistics. The top-level Data domain remains incomplete.
 
 ### Next workstream: Data Science validation
 
