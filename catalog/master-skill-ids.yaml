@@ -158,6 +158,7 @@ ids:
   - gcp-data-platform-engineering
   - gcp-infrastructure-operations
   - geospatial-analysis-crs-quality
+  - gravitino-federated-catalog-operations
   - great-expectations-validation-gates
   - hadoop-hdfs-hive-yarn-operations
   - hbase-distributed-storage
@@ -217,6 +218,7 @@ ids:
   - multi-engine-data-platform-interoperability
   - mysql-binlog-cdc-integrity
   - nats-jetstream-data-streaming
+  - nessie-versioned-catalog-operations
   - network-automation-sdn
   - network-dns-tls-diagnostics
   - network-ebpf-observability
