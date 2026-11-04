@@ -663,3 +663,244 @@ cases:
     request: "Deploy vLLM inference serving with GPU budget"
     status: matched
     skill: vllm-inference-serving-operations
+
+  - id: de-expanded-data-engineering-foundations-lifecycle
+    request: "Data engineering: data engineering lifecycle"
+    status: matched
+    skill: data-engineering-foundations-lifecycle
+  - id: de-expanded-enterprise-data-modeling-pattern-selection
+    request: "Data engineering: enterprise data modeling patterns"
+    status: matched
+    skill: enterprise-data-modeling-pattern-selection
+  - id: de-expanded-data-vault-2-modeling
+    request: "Data engineering: data vault 2.0 modeling"
+    status: matched
+    skill: data-vault-2-modeling
+  - id: de-expanded-bitemporal-event-data-modeling
+    request: "Data engineering: bitemporal data modeling"
+    status: matched
+    skill: bitemporal-event-data-modeling
+  - id: de-expanded-python-data-engineering-runtime-performance
+    request: "Data engineering: python data engineering runtime"
+    status: matched
+    skill: python-data-engineering-runtime-performance
+  - id: de-expanded-airbyte-connector-operations
+    request: "Data engineering: airbyte incremental state"
+    status: matched
+    skill: airbyte-connector-operations
+  - id: de-expanded-dlt-pipeline-engineering
+    request: "Data engineering: dlt incremental pipeline"
+    status: matched
+    skill: dlt-pipeline-engineering
+  - id: de-expanded-meltano-singer-elt-engineering
+    request: "Data engineering: meltano singer state"
+    status: matched
+    skill: meltano-singer-elt-engineering
+  - id: de-expanded-api-ingestion-pagination-rate-limits
+    request: "Data engineering: api ingestion cursor pagination"
+    status: matched
+    skill: api-ingestion-pagination-rate-limits
+  - id: de-expanded-file-ingestion-landing-zone
+    request: "Data engineering: file landing zone manifest checksum"
+    status: matched
+    skill: file-ingestion-landing-zone
+  - id: de-expanded-managed-elt-fivetran-estuary-operations
+    request: "Data engineering: managed elt connector operations"
+    status: matched
+    skill: managed-elt-fivetran-estuary-operations
+  - id: de-expanded-flink-cdc-source-sink-engineering
+    request: "Data engineering: flink cdc snapshot handoff"
+    status: matched
+    skill: flink-cdc-source-sink-engineering
+  - id: de-expanded-streaming-event-time-watermark-window
+    request: "Data engineering: stream event time watermark window"
+    status: matched
+    skill: streaming-event-time-watermark-window
+  - id: de-expanded-end-to-end-delivery-semantics
+    request: "Data engineering: end to end exactly once semantics"
+    status: matched
+    skill: end-to-end-delivery-semantics
+  - id: de-expanded-schema-registry-compatibility
+    request: "Data engineering: schema registry compatibility policy"
+    status: matched
+    skill: schema-registry-compatibility
+  - id: de-expanded-kafka-streams-ksqldb-engineering
+    request: "Data engineering: kafka streams stateful join"
+    status: matched
+    skill: kafka-streams-ksqldb-engineering
+  - id: de-expanded-redpanda-event-streaming
+    request: "Data engineering: redpanda kafka api compatibility"
+    status: matched
+    skill: redpanda-event-streaming
+  - id: de-expanded-kestra-data-orchestration
+    request: "Data engineering: kestra flow orchestration"
+    status: matched
+    skill: kestra-data-orchestration
+  - id: de-expanded-temporal-durable-workflows
+    request: "Data engineering: temporal durable workflow"
+    status: matched
+    skill: temporal-durable-workflows
+  - id: de-expanded-flyte-kubeflow-pipeline-orchestration
+    request: "Data engineering: flyte kubeflow pipeline"
+    status: matched
+    skill: flyte-kubeflow-pipeline-orchestration
+  - id: de-expanded-sqlmesh-stateful-transformations
+    request: "Data engineering: sqlmesh plan backfill"
+    status: matched
+    skill: sqlmesh-stateful-transformations
+  - id: de-expanded-dataform-warehouse-transformations
+    request: "Data engineering: dataform incremental assertions"
+    status: matched
+    skill: dataform-warehouse-transformations
+  - id: de-expanded-apache-hop-etl-operations
+    request: "Data engineering: apache hop etl pipeline"
+    status: matched
+    skill: apache-hop-etl-operations
+  - id: de-expanded-avro-protobuf-schema-engineering
+    request: "Data engineering: avro protobuf schema evolution"
+    status: matched
+    skill: avro-protobuf-schema-engineering
+  - id: de-expanded-parquet-orc-columnar-storage
+    request: "Data engineering: parquet orc columnar file layout"
+    status: matched
+    skill: parquet-orc-columnar-storage
+  - id: de-expanded-arrow-flight-substrait-interoperability
+    request: "Data engineering: arrow flight substrait interoperability"
+    status: matched
+    skill: arrow-flight-substrait-interoperability
+  - id: de-expanded-hadoop-hdfs-hive-yarn-operations
+    request: "Data engineering: hadoop hdfs hive yarn operations"
+    status: matched
+    skill: hadoop-hdfs-hive-yarn-operations
+  - id: de-expanded-hbase-distributed-storage
+    request: "Data engineering: hbase region design compaction"
+    status: matched
+    skill: hbase-distributed-storage
+  - id: de-expanded-nosql-data-platform-integration
+    request: "Data engineering: nosql cdc tombstone ttl integration"
+    status: matched
+    skill: nosql-data-platform-integration
+  - id: de-expanded-cloud-object-storage-data-lake-operations
+    request: "Data engineering: cloud object storage data lake lifecycle"
+    status: matched
+    skill: cloud-object-storage-data-lake-operations
+  - id: de-expanded-cloud-warehouse-engineering
+    request: "Data engineering: cloud data warehouse engineering"
+    status: matched
+    skill: cloud-warehouse-engineering
+  - id: de-expanded-dremio-presto-query-federation
+    request: "Data engineering: dremio presto query federation"
+    status: matched
+    skill: dremio-presto-query-federation
+  - id: de-expanded-apache-pinot-druid-realtime-olap
+    request: "Data engineering: pinot druid realtime olap"
+    status: matched
+    skill: apache-pinot-druid-realtime-olap
+  - id: de-expanded-apache-doris-olap-engineering
+    request: "Data engineering: apache doris unique key model"
+    status: matched
+    skill: apache-doris-olap-engineering
+  - id: de-expanded-opensearch-analytics-index-engineering
+    request: "Data engineering: opensearch bulk index lifecycle"
+    status: matched
+    skill: opensearch-analytics-index-engineering
+  - id: de-expanded-soda-data-quality-engineering
+    request: "Data engineering: soda data quality scans"
+    status: matched
+    skill: soda-data-quality-engineering
+  - id: de-expanded-deequ-data-quality-at-scale
+    request: "Data engineering: deequ spark data quality"
+    status: matched
+    skill: deequ-data-quality-at-scale
+  - id: de-expanded-pandera-dataframe-validation
+    request: "Data engineering: pandera dataframe schema validation"
+    status: matched
+    skill: pandera-dataframe-validation
+  - id: de-expanded-data-contract-odcs-engineering
+    request: "Data engineering: open data contract standard odcs"
+    status: matched
+    skill: data-contract-odcs-engineering
+  - id: de-expanded-data-access-control-masking
+    request: "Data engineering: data access control masking"
+    status: matched
+    skill: data-access-control-masking
+  - id: de-expanded-privacy-preserving-data-engineering
+    request: "Data engineering: privacy preserving data engineering"
+    status: matched
+    skill: privacy-preserving-data-engineering
+  - id: de-expanded-data-retention-lifecycle-governance
+    request: "Data engineering: data retention lifecycle governance"
+    status: matched
+    skill: data-retention-lifecycle-governance
+  - id: de-expanded-data-pipeline-testing-ci-cd
+    request: "Data engineering: data pipeline testing ci cd"
+    status: matched
+    skill: data-pipeline-testing-ci-cd
+  - id: de-expanded-data-schema-migration-release-management
+    request: "Data engineering: data schema migration release"
+    status: matched
+    skill: data-schema-migration-release-management
+  - id: de-expanded-end-to-end-pipeline-reliability
+    request: "Data engineering: end to end pipeline reliability"
+    status: matched
+    skill: end-to-end-pipeline-reliability
+  - id: de-expanded-transactional-outbox-dlq-replay
+    request: "Data engineering: transactional outbox dlq replay"
+    status: matched
+    skill: transactional-outbox-dlq-replay
+  - id: de-expanded-data-platform-backup-disaster-recovery
+    request: "Data engineering: data platform disaster recovery"
+    status: matched
+    skill: data-platform-backup-disaster-recovery
+  - id: de-expanded-distributed-query-engine-performance
+    request: "Data engineering: distributed query engine performance"
+    status: matched
+    skill: distributed-query-engine-performance
+  - id: de-expanded-data-platform-cost-capacity-engineering
+    request: "Data engineering: data platform cost capacity"
+    status: matched
+    skill: data-platform-cost-capacity-engineering
+  - id: de-expanded-aws-data-platform-engineering
+    request: "Data engineering: aws data platform engineering"
+    status: matched
+    skill: aws-data-platform-engineering
+  - id: de-expanded-gcp-data-platform-engineering
+    request: "Data engineering: gcp data platform engineering"
+    status: matched
+    skill: gcp-data-platform-engineering
+  - id: de-expanded-azure-data-platform-engineering
+    request: "Data engineering: azure data platform engineering"
+    status: matched
+    skill: azure-data-platform-engineering
+  - id: de-expanded-reverse-etl-data-activation
+    request: "Data engineering: reverse etl data activation"
+    status: matched
+    skill: reverse-etl-data-activation
+  - id: de-expanded-data-serving-api-design
+    request: "Data engineering: data serving api design"
+    status: matched
+    skill: data-serving-api-design
+  - id: de-expanded-apache-paimon-streaming-lakehouse
+    request: "Data engineering: apache paimon streaming lakehouse"
+    status: matched
+    skill: apache-paimon-streaming-lakehouse
+  - id: de-expanded-lakehouse-catalog-ecosystem-interoperability
+    request: "Data engineering: lakehouse catalog interoperability"
+    status: matched
+    skill: lakehouse-catalog-ecosystem-interoperability
+  - id: de-expanded-open-table-format-selection
+    request: "Data engineering: open table format selection"
+    status: matched
+    skill: open-table-format-selection
+  - id: de-expanded-multi-engine-data-platform-interoperability
+    request: "Data engineering: multi engine data platform interoperability"
+    status: matched
+    skill: multi-engine-data-platform-interoperability
+  - id: de-expanded-data-mesh-data-product-architecture
+    request: "Data engineering: data mesh data product architecture"
+    status: matched
+    skill: data-mesh-data-product-architecture
+  - id: de-expanded-medallion-lambda-kappa-architecture
+    request: "Data engineering: medallion lambda kappa architecture"
+    status: matched
+    skill: medallion-lambda-kappa-architecture

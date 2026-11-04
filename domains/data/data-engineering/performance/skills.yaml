@@ -1,0 +1,18 @@
+schema_version: 1
+id: performance
+kind: skill-registry
+skills:
+  - id: distributed-query-engine-performance
+    path: .agents/skills/distributed-query-engine-performance/SKILL.md
+    description: "Tune Trino, Presto and Dremio with plans, pushdown, join distribution, memory, spill and source concurrency."
+    triggers:
+      - "distributed query engine performance"
+    excludes: []
+    status: active
+  - id: data-platform-cost-capacity-engineering
+    path: .agents/skills/data-platform-cost-capacity-engineering/SKILL.md
+    description: "Plan data platform capacity and FinOps across compute, storage, network, metadata, ingestion and query concurrency."
+    triggers:
+      - "data platform cost capacity"
+    excludes: []
+    status: active

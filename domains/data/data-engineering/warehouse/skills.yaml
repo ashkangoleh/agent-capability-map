@@ -1,0 +1,39 @@
+schema_version: 1
+id: warehouse
+kind: skill-registry
+skills:
+  - id: cloud-warehouse-engineering
+    path: .agents/skills/cloud-warehouse-engineering/SKILL.md
+    description: "Design Snowflake, BigQuery, Redshift, Databricks SQL and Synapse workloads with engine-specific semantics and cost controls."
+    triggers:
+      - "cloud data warehouse engineering"
+    excludes: []
+    status: active
+  - id: dremio-presto-query-federation
+    path: .agents/skills/dremio-presto-query-federation/SKILL.md
+    description: "Design Dremio and Presto/Trino federation with pushdown, source limits, identity and consistency boundaries."
+    triggers:
+      - "dremio presto query federation"
+    excludes: []
+    status: active
+  - id: apache-pinot-druid-realtime-olap
+    path: .agents/skills/apache-pinot-druid-realtime-olap/SKILL.md
+    description: "Design Pinot and Druid real-time OLAP ingestion, segments, indexes, retention and low-latency aggregation."
+    triggers:
+      - "pinot druid realtime olap"
+    excludes: []
+    status: active
+  - id: apache-doris-olap-engineering
+    path: .agents/skills/apache-doris-olap-engineering/SKILL.md
+    description: "Operate Apache Doris table models, ingestion, materialized views, replication and workload management."
+    triggers:
+      - "apache doris unique key model"
+    excludes: []
+    status: active
+  - id: opensearch-analytics-index-engineering
+    path: .agents/skills/opensearch-analytics-index-engineering/SKILL.md
+    description: "Use OpenSearch for search-oriented ingestion and analytics with mappings, shards, refresh, ISM and bulk APIs."
+    triggers:
+      - "opensearch bulk index lifecycle"
+    excludes: []
+    status: active

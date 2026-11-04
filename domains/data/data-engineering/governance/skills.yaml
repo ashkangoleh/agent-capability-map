@@ -1,0 +1,32 @@
+schema_version: 1
+id: governance
+kind: skill-registry
+skills:
+  - id: data-contract-odcs-engineering
+    path: .agents/skills/data-contract-odcs-engineering/SKILL.md
+    description: "Create and enforce versioned Open Data Contract Standard contracts for producer-consumer interfaces."
+    triggers:
+      - "open data contract standard odcs"
+    excludes: []
+    status: active
+  - id: data-access-control-masking
+    path: .agents/skills/data-access-control-masking/SKILL.md
+    description: "Enforce data classification and least-privilege access at query, catalog and object-storage layers."
+    triggers:
+      - "data access control masking"
+    excludes: []
+    status: active
+  - id: privacy-preserving-data-engineering
+    path: .agents/skills/privacy-preserving-data-engineering/SKILL.md
+    description: "Protect personal data across ingestion, transformation, storage, logs, exports and derived datasets."
+    triggers:
+      - "privacy preserving data engineering"
+    excludes: []
+    status: active
+  - id: data-retention-lifecycle-governance
+    path: .agents/skills/data-retention-lifecycle-governance/SKILL.md
+    description: "Govern retention and deletion with physical-copy inventory, legal holds and verifiable lifecycle controls."
+    triggers:
+      - "data retention lifecycle governance"
+    excludes: []
+    status: active

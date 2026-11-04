@@ -4,15 +4,26 @@ ids:
   - agent-evaluation-suite
   - agriculture-field-data-quality
   - ai-rag-engineering
+  - airbyte-connector-operations
   - airflow-backfill-scheduling
   - airflow-dag-engineering
   - analytics-reconciliation-root-cause
   - anomaly-detection-baselines
   - ansible-safe-automation
+  - apache-doris-olap-engineering
+  - apache-hop-etl-operations
+  - apache-paimon-streaming-lakehouse
+  - apache-pinot-druid-realtime-olap
+  - api-ingestion-pagination-rate-limits
   - argo-workflows-data-orchestration
   - argocd-gitops-drift-recovery
+  - arrow-flight-substrait-interoperability
+  - avro-protobuf-schema-engineering
+  - aws-data-platform-engineering
+  - azure-data-platform-engineering
   - beam-runner-portability
   - biodiversity-observation-quality
+  - bitemporal-event-data-modeling
   - business-strategy-analysis
   - carbon-inventory-boundary-review
   - causal-inference-observational
@@ -20,6 +31,8 @@ ids:
   - clickhouse-mergetree-operability
   - cloud-cost-capacity-review
   - cloud-iam-least-privilege
+  - cloud-object-storage-data-lake-operations
+  - cloud-warehouse-engineering
   - cohort-retention-analysis
   - computer-vision-dataset-evaluation
   - construction-bim-data-coordination
@@ -28,31 +41,56 @@ ids:
   - curriculum-outcomes-assessment
   - customer-support-knowledge-design
   - dagster-asset-partition-orchestration
+  - data-access-control-masking
+  - data-contract-odcs-engineering
+  - data-engineering-foundations-lifecycle
   - data-engineering-implementation
+  - data-mesh-data-product-architecture
   - data-observability-freshness-slo
+  - data-pipeline-testing-ci-cd
   - data-platform-architecture-review
+  - data-platform-backup-disaster-recovery
+  - data-platform-cost-capacity-engineering
   - data-quality-contracts
+  - data-retention-lifecycle-governance
+  - data-schema-migration-release-management
+  - data-serving-api-design
+  - data-vault-2-modeling
   - data-visualization-evidence
+  - dataform-warehouse-transformations
   - datahub-metadata-catalog-governance
   - dbt-incremental-modeling
   - dbt-snapshot-scd2
   - debezium-cdc-bootstrap
+  - deequ-data-quality-at-scale
   - delta-lake-merge-change-feed
   - dimensional-modeling-grain
+  - distributed-query-engine-performance
+  - dlt-pipeline-engineering
+  - dremio-presto-query-federation
   - duckdb-parquet-transformation
   - ecommerce-product-catalog-audit
   - elasticsearch-pit-bulk-extraction
+  - end-to-end-delivery-semantics
+  - end-to-end-pipeline-reliability
+  - enterprise-data-modeling-pattern-selection
   - evidence-research
   - experiment-analysis-results
   - feast-online-offline-feature-store
   - feature-engineering-point-in-time
+  - file-ingestion-landing-zone
   - financial-budget-scenarios
+  - flink-cdc-source-sink-engineering
   - flink-checkpoint-savepoint-recovery
   - flink-sql-event-time-modeling
+  - flyte-kubeflow-pipeline-orchestration
   - funnel-conversion-analysis
   - game-design-prototype-plan
+  - gcp-data-platform-engineering
   - geospatial-analysis-crs-quality
   - great-expectations-validation-gates
+  - hadoop-hdfs-hive-yarn-operations
+  - hbase-distributed-storage
   - helm-chart-contract-testing
   - hudi-cow-mor-table-design
   - huggingface-peft-finetuning
@@ -65,18 +103,24 @@ ids:
   - kafka-connect-cdc-design
   - kafka-consumer-rebalance-replay
   - kafka-streaming-reliability
+  - kafka-streams-ksqldb-engineering
+  - kestra-data-orchestration
   - kinesis-stream-consumer-recovery
   - kubernetes-networking-triage
   - kubernetes-rollout-safety
   - kubernetes-storage-pvc-recovery
   - kubernetes-workload-security
+  - lakehouse-catalog-ecosystem-interoperability
   - lakekeeper-iceberg-catalog-operations
   - linux-systemd-service-debug
   - llm-production-evaluation-suite
   - llm-prompt-injection-boundaries
+  - managed-elt-fivetran-estuary-operations
   - manufacturing-quality-investigation
   - marketing-measurement-attribution
   - marketing-strategy-campaign
+  - medallion-lambda-kappa-architecture
+  - meltano-singer-elt-engineering
   - milvus-vector-index-lifecycle
   - minio-s3-object-storage-reliability
   - ml-drift-performance-monitoring
@@ -84,14 +128,20 @@ ids:
   - mlflow-experiment-registry-lifecycle
   - model-data-label-governance
   - model-quantization-benchmark
+  - multi-engine-data-platform-interoperability
   - mysql-binlog-cdc-integrity
   - network-dns-tls-diagnostics
   - nifi-flowfile-backpressure-operations
   - nonprofit-grant-evidence-plan
+  - nosql-data-platform-integration
+  - open-table-format-selection
   - openlineage-metadata-instrumentation
+  - opensearch-analytics-index-engineering
   - opentelemetry-collector-pipeline
   - pandas-eda-data-profiling
+  - pandera-dataframe-validation
   - parquet-file-layout-tuning
+  - parquet-orc-columnar-storage
   - personal-workflow-planning
   - pipeline-backfill-recovery
   - platform-operations
@@ -101,6 +151,7 @@ ids:
   - polars-lazy-query-analytics
   - postgresql-logical-cdc-integrity
   - prefect-flow-reliability
+  - privacy-preserving-data-engineering
   - product-discovery-prd
   - product-experiment-design
   - product-metrics-instrumentation
@@ -110,15 +161,19 @@ ids:
   - pulsar-subscription-replay
   - pyspark-project-bootstrap
   - pyspark-transformations
+  - python-data-engineering-runtime-performance
   - pytorch-distributed-training-recovery
   - rabbitmq-consumer-delivery-safety
   - rag-evidence-sufficiency-evaluation
   - ray-data-pipeline-engineering
   - real-estate-due-diligence
   - recruiting-interview-scorecard
+  - redpanda-event-streaming
   - responsible-ai-risk-assessment
+  - reverse-etl-data-activation
   - robotics-ros2-interface-review
   - sales-pipeline-forecast-audit
+  - schema-registry-compatibility
   - scientific-experiment-review
   - security-threat-model-review
   - seo-audit-strategy
@@ -127,6 +182,7 @@ ids:
   - skill-authoring-validation
   - sklearn-leakage-free-validation
   - social-science-survey-quality
+  - soda-data-quality-engineering
   - software-engineering-implementation
   - spark-performance-diagnostics
   - spark-scala-job-engineering
@@ -136,16 +192,20 @@ ids:
   - sports-training-evidence-plan
   - sql-explain-plan-optimization
   - sql-metric-definition-analysis
+  - sqlmesh-stateful-transformations
   - sre-incident-rca-runbook
   - starrocks-primary-key-cdc
   - starrocks-stream-load-transaction
   - statistical-inference-design
+  - streaming-event-time-watermark-window
   - superset-dashboard-metric-governance
   - supply-chain-demand-planning
   - technical-writing-docs
   - telecom-network-change-review
+  - temporal-durable-workflows
   - terraform-state-module-safety
   - time-series-forecast-backtesting
+  - transactional-outbox-dlq-replay
   - travel-itinerary-source-review
   - trino-federated-query-optimization
   - ux-research-design-review

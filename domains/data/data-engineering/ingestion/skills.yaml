@@ -1,0 +1,53 @@
+schema_version: 1
+id: ingestion
+kind: skill-registry
+skills:
+  - id: airbyte-connector-operations
+    path: .agents/skills/airbyte-connector-operations/SKILL.md
+    description: "Operate Airbyte connectors with correct sync modes, incremental state, schema discovery and recovery."
+    triggers:
+      - "airbyte incremental state"
+    excludes: []
+    status: active
+  - id: dlt-pipeline-engineering
+    path: .agents/skills/dlt-pipeline-engineering/SKILL.md
+    description: "Build dlt pipelines with source resources, incremental state, schema evolution and destination-aware loading."
+    triggers:
+      - "dlt incremental pipeline"
+    excludes: []
+    status: active
+  - id: meltano-singer-elt-engineering
+    path: .agents/skills/meltano-singer-elt-engineering/SKILL.md
+    description: "Operate Meltano and Singer taps/targets with catalog selection, state messages and incremental replication."
+    triggers:
+      - "meltano singer state"
+    excludes: []
+    status: active
+  - id: api-ingestion-pagination-rate-limits
+    path: .agents/skills/api-ingestion-pagination-rate-limits/SKILL.md
+    description: "Implement API ingestion with cursor pagination, rate-limit handling, authentication and idempotent publication."
+    triggers:
+      - "api ingestion cursor pagination"
+    excludes: []
+    status: active
+  - id: file-ingestion-landing-zone
+    path: .agents/skills/file-ingestion-landing-zone/SKILL.md
+    description: "Engineer SFTP and object-store file ingestion with manifests, checksums, schema validation and safe publication."
+    triggers:
+      - "file landing zone manifest checksum"
+    excludes: []
+    status: active
+  - id: managed-elt-fivetran-estuary-operations
+    path: .agents/skills/managed-elt-fivetran-estuary-operations/SKILL.md
+    description: "Operate managed ELT connectors with connector limits, CDC semantics, destination cost and exit planning."
+    triggers:
+      - "managed elt connector operations"
+    excludes: []
+    status: active
+  - id: flink-cdc-source-sink-engineering
+    path: .agents/skills/flink-cdc-source-sink-engineering/SKILL.md
+    description: "Design Flink CDC snapshot/log handoff, offsets, incremental snapshots and sink consistency."
+    triggers:
+      - "flink cdc snapshot handoff"
+    excludes: []
+    status: active

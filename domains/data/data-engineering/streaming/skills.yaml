@@ -1,0 +1,39 @@
+schema_version: 1
+id: streaming
+kind: skill-registry
+skills:
+  - id: streaming-event-time-watermark-window
+    path: .agents/skills/streaming-event-time-watermark-window/SKILL.md
+    description: "Model event-time streams with watermarks, windows, allowed lateness and deterministic corrections."
+    triggers:
+      - "stream event time watermark window"
+    excludes: []
+    status: active
+  - id: end-to-end-delivery-semantics
+    path: .agents/skills/end-to-end-delivery-semantics/SKILL.md
+    description: "Reason about at-most-once, at-least-once and exactly-once across source offsets, processor state and external sinks."
+    triggers:
+      - "end to end exactly once semantics"
+    excludes: []
+    status: active
+  - id: schema-registry-compatibility
+    path: .agents/skills/schema-registry-compatibility/SKILL.md
+    description: "Govern Avro, Protobuf and JSON Schema evolution with subject naming and compatibility policies."
+    triggers:
+      - "schema registry compatibility policy"
+    excludes: []
+    status: active
+  - id: kafka-streams-ksqldb-engineering
+    path: .agents/skills/kafka-streams-ksqldb-engineering/SKILL.md
+    description: "Build Kafka Streams and ksqlDB applications with partition-aware joins, state stores and changelog topics."
+    triggers:
+      - "kafka streams stateful join"
+    excludes: []
+    status: active
+  - id: redpanda-event-streaming
+    path: .agents/skills/redpanda-event-streaming/SKILL.md
+    description: "Operate Redpanda with Kafka API compatibility, partitioning, tiered storage and migration controls."
+    triggers:
+      - "redpanda kafka api compatibility"
+    excludes: []
+    status: active

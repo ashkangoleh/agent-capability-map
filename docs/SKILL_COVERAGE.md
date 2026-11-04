@@ -66,3 +66,7 @@ See [DATA_ENGINEERING_SKILLS.md](DATA_ENGINEERING_SKILLS.md) for the deep specia
 ## Unified reference branch
 
 See `docs/MASTER_REFERENCE_EXPANSION.md` for scope, intended technology boundaries and evaluation gaps. The live registry contains 151 SKILL.md packages (88 prior + 63 new), subject to successful YAML registry validation and CI. Do not treat all `mapped` subdomains as active.
+
+## Comprehensive Data Engineering expansion
+
+The current feature branch adds specialist packages beyond the 29 historical deep-engineering skills. Run `python scripts/report_coverage.py --summary` for live counts; the skill registry and fixture set are the executable source of truth. Structural routing tests do not certify production behavior or semantic accuracy.

@@ -218,3 +218,7 @@ The canonical work branch `feat/master-reference-platform-data-ai` extends the s
 **`feat/master-reference-platform-data-ai` is the single combined reference branch** for the current domain expansion. Do not combine separate feature branches manually. It adds 63 specialized skills on top of 88 existing ones, keeping all 41 top-level domains. Read [MASTER_REFERENCE_EXPANSION.md](docs/MASTER_REFERENCE_EXPANSION.md) for technology coverage and known limits. Run the live coverage report instead of trusting hard-coded counts.
 
 > The CLI validates and selects skill paths. The referenced software tools (e.g. Spark, Airflow, PyTorch, Kubernetes, MLflow) are **not installed by this repository**. Skill text describes procedures, not executable infrastructure or verified cloud access. Host-specific global instruction installation remains an independent, permission-scoped step.
+
+## Comprehensive Data Engineering expansion
+
+This branch adds 49 specialist packages for lifecycle/modeling, ingestion/CDC, streaming, orchestration, SQL transformation, formats, storage, warehouses/OLAP, quality, governance, DataOps, reliability, performance, cloud data platforms, serving, lakehouse and multi-engine architecture. See `docs/DATA_ENGINEERING_TOOL_MATRIX.md`. Tool inclusion is not proof of installation or availability.

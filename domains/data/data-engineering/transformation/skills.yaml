@@ -1,0 +1,25 @@
+schema_version: 1
+id: transformation
+kind: skill-registry
+skills:
+  - id: sqlmesh-stateful-transformations
+    path: .agents/skills/sqlmesh-stateful-transformations/SKILL.md
+    description: "Build SQLMesh models with versioned environments, plans, audits, interval tracking and controlled backfills."
+    triggers:
+      - "sqlmesh plan backfill"
+    excludes: []
+    status: active
+  - id: dataform-warehouse-transformations
+    path: .agents/skills/dataform-warehouse-transformations/SKILL.md
+    description: "Engineer Dataform SQL transformations with dependency graphs, assertions, incremental tables and release controls."
+    triggers:
+      - "dataform incremental assertions"
+    excludes: []
+    status: active
+  - id: apache-hop-etl-operations
+    path: .agents/skills/apache-hop-etl-operations/SKILL.md
+    description: "Build Apache Hop visual ETL workflows with metadata environments, parameters and row-level error handling."
+    triggers:
+      - "apache hop etl pipeline"
+    excludes: []
+    status: active

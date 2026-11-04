@@ -102,3 +102,148 @@ children:
       - "data reconciliation"
     status: active
     map: domains/data/data-engineering/observability/map.yaml
+  - id: foundations
+    description: "Data engineering foundations and modeling"
+    triggers:
+      - "data engineering lifecycle"
+      - "enterprise data modeling patterns"
+      - "data vault 2.0 modeling"
+      - "bitemporal data modeling"
+      - "python data engineering runtime"
+    status: active
+    skills: domains/data/data-engineering/foundations/skills.yaml
+  - id: ingestion
+    description: "Connectors, APIs, files and CDC ingestion"
+    triggers:
+      - "airbyte incremental state"
+      - "dlt incremental pipeline"
+      - "meltano singer state"
+      - "api ingestion cursor pagination"
+      - "file landing zone manifest checksum"
+      - "managed elt connector operations"
+      - "flink cdc snapshot handoff"
+    status: active
+    skills: domains/data/data-engineering/ingestion/skills.yaml
+  - id: streaming
+    description: "Event-time, delivery semantics and streaming"
+    triggers:
+      - "stream event time watermark window"
+      - "end to end exactly once semantics"
+      - "schema registry compatibility policy"
+      - "kafka streams stateful join"
+      - "redpanda kafka api compatibility"
+    status: active
+    skills: domains/data/data-engineering/streaming/skills.yaml
+  - id: orchestration
+    description: "Durable workflows and orchestration"
+    triggers:
+      - "kestra flow orchestration"
+      - "temporal durable workflow"
+      - "flyte kubeflow pipeline"
+    status: active
+    skills: domains/data/data-engineering/orchestration/skills.yaml
+  - id: transformation
+    description: "SQL transformation and ELT"
+    triggers:
+      - "sqlmesh plan backfill"
+      - "dataform incremental assertions"
+      - "apache hop etl pipeline"
+    status: active
+    skills: domains/data/data-engineering/transformation/skills.yaml
+  - id: formats
+    description: "Serialization and columnar interchange"
+    triggers:
+      - "avro protobuf schema evolution"
+      - "parquet orc columnar file layout"
+      - "arrow flight substrait interoperability"
+    status: active
+    skills: domains/data/data-engineering/formats/skills.yaml
+  - id: storage
+    description: "Distributed storage and NoSQL"
+    triggers:
+      - "hadoop hdfs hive yarn operations"
+      - "hbase region design compaction"
+      - "nosql cdc tombstone ttl integration"
+      - "cloud object storage data lake lifecycle"
+    status: active
+    skills: domains/data/data-engineering/storage/skills.yaml
+  - id: warehouse
+    description: "Warehouses, federation and real-time OLAP"
+    triggers:
+      - "cloud data warehouse engineering"
+      - "dremio presto query federation"
+      - "pinot druid realtime olap"
+      - "apache doris unique key model"
+      - "opensearch bulk index lifecycle"
+    status: active
+    skills: domains/data/data-engineering/warehouse/skills.yaml
+  - id: quality
+    description: "Data quality frameworks"
+    triggers:
+      - "soda data quality scans"
+      - "deequ spark data quality"
+      - "pandera dataframe schema validation"
+    status: active
+    skills: domains/data/data-engineering/quality/skills.yaml
+  - id: governance
+    description: "Data contracts, privacy and access control"
+    triggers:
+      - "open data contract standard odcs"
+      - "data access control masking"
+      - "privacy preserving data engineering"
+      - "data retention lifecycle governance"
+    status: active
+    skills: domains/data/data-engineering/governance/skills.yaml
+  - id: dataops
+    description: "DataOps and release engineering"
+    triggers:
+      - "data pipeline testing ci cd"
+      - "data schema migration release"
+    status: active
+    skills: domains/data/data-engineering/dataops/skills.yaml
+  - id: reliability
+    description: "Idempotency, outbox, replay and DR"
+    triggers:
+      - "end to end pipeline reliability"
+      - "transactional outbox dlq replay"
+      - "data platform disaster recovery"
+    status: active
+    skills: domains/data/data-engineering/reliability/skills.yaml
+  - id: performance
+    description: "Query performance and capacity"
+    triggers:
+      - "distributed query engine performance"
+      - "data platform cost capacity"
+    status: active
+    skills: domains/data/data-engineering/performance/skills.yaml
+  - id: cloud
+    description: "Cloud data platforms"
+    triggers:
+      - "aws data platform engineering"
+      - "gcp data platform engineering"
+      - "azure data platform engineering"
+    status: active
+    skills: domains/data/data-engineering/cloud/skills.yaml
+  - id: serving
+    description: "Serving APIs and reverse ETL"
+    triggers:
+      - "reverse etl data activation"
+      - "data serving api design"
+    status: active
+    skills: domains/data/data-engineering/serving/skills.yaml
+  - id: lakehouse
+    description: "Lakehouse formats and catalogs"
+    triggers:
+      - "apache paimon streaming lakehouse"
+      - "lakehouse catalog interoperability"
+      - "open table format selection"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/skills.yaml
+  - id: architecture
+    description: "Multi-engine and domain architecture"
+    triggers:
+      - "multi engine data platform interoperability"
+      - "data mesh data product architecture"
+      - "medallion lambda kappa architecture"
+    status: active
+    skills: domains/data/data-engineering/architecture/skills.yaml

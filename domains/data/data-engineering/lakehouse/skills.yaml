@@ -1,0 +1,25 @@
+schema_version: 1
+id: lakehouse
+kind: skill-registry
+skills:
+  - id: apache-paimon-streaming-lakehouse
+    path: .agents/skills/apache-paimon-streaming-lakehouse/SKILL.md
+    description: "Design Apache Paimon tables with LSM storage, changelog production, Flink/Spark integration and compaction."
+    triggers:
+      - "apache paimon streaming lakehouse"
+    excludes: []
+    status: active
+  - id: lakehouse-catalog-ecosystem-interoperability
+    path: .agents/skills/lakehouse-catalog-ecosystem-interoperability/SKILL.md
+    description: "Evaluate Hive Metastore, Glue, Unity Catalog, Nessie, Polaris, Lakekeeper and Gravitino control-plane behavior."
+    triggers:
+      - "lakehouse catalog interoperability"
+    excludes: []
+    status: active
+  - id: open-table-format-selection
+    path: .agents/skills/open-table-format-selection/SKILL.md
+    description: "Select Iceberg, Delta Lake, Hudi, Paimon or DuckLake by workload, interoperability and maintenance requirements."
+    triggers:
+      - "open table format selection"
+    excludes: []
+    status: active

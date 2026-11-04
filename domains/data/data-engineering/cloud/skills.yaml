@@ -1,0 +1,25 @@
+schema_version: 1
+id: cloud
+kind: skill-registry
+skills:
+  - id: aws-data-platform-engineering
+    path: .agents/skills/aws-data-platform-engineering/SKILL.md
+    description: "Design AWS data platforms across S3, Glue, Athena, EMR, Redshift, Kinesis/MSK and Lake Formation."
+    triggers:
+      - "aws data platform engineering"
+    excludes: []
+    status: active
+  - id: gcp-data-platform-engineering
+    path: .agents/skills/gcp-data-platform-engineering/SKILL.md
+    description: "Design GCP data platforms across BigQuery, Dataflow, Dataproc, Pub/Sub and Cloud Storage."
+    triggers:
+      - "gcp data platform engineering"
+    excludes: []
+    status: active
+  - id: azure-data-platform-engineering
+    path: .agents/skills/azure-data-platform-engineering/SKILL.md
+    description: "Design Azure data platforms across ADLS Gen2, Data Factory, Fabric, Synapse and Event Hubs."
+    triggers:
+      - "azure data platform engineering"
+    excludes: []
+    status: active
