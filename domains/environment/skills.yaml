@@ -3,7 +3,7 @@ id: environment
 kind: skill-registry
 skills:
   - id: biodiversity-observation-quality
-    path: .agents/skills/biodiversity-observation-quality/SKILL.md
+    path: .agents/skills/environment/core/biodiversity-observation-quality/SKILL.md
     description: "Use for ecological occurrence QA, taxonomy validity, sensitive locations and field sampling bias."
     triggers:
       - "biodiversity occurrence data"

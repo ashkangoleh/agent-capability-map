@@ -3,7 +3,7 @@ id: health
 kind: skill-registry
 skills:
   - id: public-health-evidence-review
-    path: .agents/skills/public-health-evidence-review/SKILL.md
+    path: .agents/skills/health/core/public-health-evidence-review/SKILL.md
     description: "Review public health evidence by study design and population relevance without individual medical diagnosis."
     triggers:
       - "public health"

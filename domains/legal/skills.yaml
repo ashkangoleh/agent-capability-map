@@ -3,7 +3,7 @@ id: legal
 kind: skill-registry
 skills:
   - id: jurisdictional-legal-source-review
-    path: .agents/skills/jurisdictional-legal-source-review/SKILL.md
+    path: .agents/skills/legal/core/jurisdictional-legal-source-review/SKILL.md
     description: "Research legal memoranda using official jurisdiction-specific legislation, updates and authority citations without advice."
     triggers:
       - "legal memorandum"
