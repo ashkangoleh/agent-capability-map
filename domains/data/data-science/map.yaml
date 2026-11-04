@@ -5,14 +5,21 @@ children:
   - id: model-validation
     description: "model validation"
     triggers:
-      - "scikit-learn"
-      - "sklearn"
       - "imbalance"
       - "imbalanced classification"
       - "conformal prediction intervals"
       - "distribution free prediction sets"
       - "fairness subgroup evaluation"
       - "equalized odds demographic parity"
+      - "scikit-learn leakage safe validation"
+      - "scikit-learn cross validation"
+      - "sklearn grouped cross validation"
+      - "sklearn time series split"
+      - "group cross validation leakage"
+      - "time series cross validation leakage"
+      - "نشت داده در اعتبارسنجی مدل"
+      - "sklearn pipeline"
+      - "sklearn cross validation"
     status: active
     skills: domains/data/data-science/model-validation/skills.yaml
   - id: statistics
