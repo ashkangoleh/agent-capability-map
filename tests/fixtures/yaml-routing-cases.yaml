@@ -1684,3 +1684,91 @@ cases:
     request: "Data scientist: fairness subgroup evaluation equalized odds demographic parity"
     status: matched
     skill: ds-fairness-subgroup-evaluation
+  - id: ds-forecast-origin-window
+    request: "Design rolling origin forecast backtesting with delayed labels"
+    status: matched
+    skill: time-series-forecast-backtesting
+  - id: ds-forecast-origin-availability
+    request: "Audit forecast origin data availability for future covariates"
+    status: matched
+    skill: time-series-forecast-backtesting
+  - id: ds-forecast-origin-weekly
+    request: "Evaluate rolling forecasting origin for weekly sales"
+    status: matched
+    skill: time-series-forecast-backtesting
+  - id: ds-forecast-origin-persian
+    request: "بررسی rolling origin forecast برای ارزیابی زمانی"
+    status: matched
+    skill: time-series-forecast-backtesting
+  - id: ds-forecast-quantile-crossing
+    request: "Evaluate probabilistic forecasting quantile crossing for distribution predictions"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-forecast-quantile-pinball
+    request: "Calculate forecast pinball loss by horizon"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-forecast-quantile-coverage
+    request: "Audit forecast quantile coverage by horizon under shift"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-forecast-quantile-persian
+    request: "ارزیابی probabilistic forecasting quantile برای خروجی توزیع"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-forecast-hierarchy-reconciliation
+    request: "Design hierarchical forecasting reconciliation for regions and products"
+    status: matched
+    skill: ds-hierarchical-forecasting
+  - id: ds-forecast-hierarchy-coherence
+    request: "Audit hierarchical forecast coherence in country totals"
+    status: matched
+    skill: ds-hierarchical-forecasting
+  - id: ds-forecast-hierarchy-summing
+    request: "Verify hierarchical summing matrix for bottom-up forecast totals"
+    status: matched
+    skill: ds-hierarchical-forecasting
+  - id: ds-forecast-hierarchy-persian
+    request: "بررسی hierarchical forecasting reconciliation برای سطوح منطقه"
+    status: matched
+    skill: ds-hierarchical-forecasting
+  - id: ds-forecast-intermittent-croston
+    request: "Evaluate intermittent demand croston tsb obsolescence"
+    status: matched
+    skill: ds-intermittent-demand-forecasting
+  - id: ds-forecast-intermittent-stockout
+    request: "Audit sparse demand forecast stockout censoring"
+    status: matched
+    skill: ds-intermittent-demand-forecasting
+  - id: ds-forecast-intermittent-coldstart
+    request: "Review intermittent demand forecasting with cold start"
+    status: matched
+    skill: ds-intermittent-demand-forecasting
+  - id: ds-forecast-intermittent-persian
+    request: "بررسی intermittent demand croston tsb برای سفارش قطعات"
+    status: matched
+    skill: ds-intermittent-demand-forecasting
+  - id: ds-forecast-existing-probabilistic
+    request: "Data scientist: probabilistic forecasting quantile prediction intervals calibration"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-forecast-existing-intermittent
+    request: "Data scientist: intermittent demand forecasting Croston SBA TSB"
+    status: matched
+    skill: ds-intermittent-demand-forecasting
+  - id: ds-forecast-existing-hierarchy
+    request: "Data scientist: hierarchical time series reconciliation for geographic hierarchy"
+    status: matched
+    skill: ds-hierarchical-forecasting
+  - id: ds-forecast-nearmiss-conformal
+    request: "Construct conformal prediction intervals with coverage checks"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-forecast-nearmiss-features
+    request: "Build point in time features without leakage"
+    status: matched
+    skill: feature-engineering-point-in-time
+  - id: ds-forecast-nearmiss-dense
+    request: "Data scientist: time series forecast dense seasonal electricity load"
+    status: matched
+    skill: time-series-forecast-backtesting
