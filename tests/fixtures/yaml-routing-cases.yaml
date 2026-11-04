@@ -1031,7 +1031,7 @@ cases:
     status: matched
     skill: container-image-signing-sigstore
   - id: infra-expanded-software-supply-chain-slsa-sbom
-    request: "Infrastructure: slsa sbom software supply chain"
+    request: "slsa sbom software supply chain"
     status: matched
     skill: software-supply-chain-slsa-sbom
   - id: infra-expanded-secrets-workload-identity-spiffe
