@@ -3,7 +3,7 @@ id: polars
 kind: skill-registry
 skills:
   - id: polars-lazy-query-analytics
-    path: .agents/skills/polars-lazy-query-analytics/SKILL.md
+    path: .agents/skills/data/data-analysis/polars/polars-lazy-query-analytics/SKILL.md
     description: "Use Polars lazy query optimization with streaming operators, joins and memory validation."
     triggers:
       - "polars"

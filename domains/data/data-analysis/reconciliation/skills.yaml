@@ -3,7 +3,7 @@ id: reconciliation
 kind: skill-registry
 skills:
   - id: analytics-reconciliation-root-cause
-    path: .agents/skills/analytics-reconciliation-root-cause/SKILL.md
+    path: .agents/skills/data/data-analysis/reconciliation/analytics-reconciliation-root-cause/SKILL.md
     description: "Diagnose analytics metric mismatches and dashboard discrepancies with scoped source reconciliation."
     triggers:
       - "analytics reconciliation"

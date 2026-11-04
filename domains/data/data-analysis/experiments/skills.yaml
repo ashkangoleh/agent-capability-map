@@ -3,7 +3,7 @@ id: experiments
 kind: skill-registry
 skills:
   - id: experiment-analysis-results
-    path: .agents/skills/experiment-analysis-results/SKILL.md
+    path: .agents/skills/data/data-analysis/experiments/experiment-analysis-results/SKILL.md
     description: "Analyze randomized experiment assignment integrity, treatment effects and guardrail uncertainty."
     triggers:
       - "experiment result analysis"

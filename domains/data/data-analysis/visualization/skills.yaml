@@ -3,7 +3,7 @@ id: visualization
 kind: skill-registry
 skills:
   - id: data-visualization-evidence
-    path: .agents/skills/data-visualization-evidence/SKILL.md
+    path: .agents/skills/data/business-intelligence/dashboard/data-visualization-evidence/SKILL.md
     description: "Design evidence-led analytical data visualization with clear units and accessibility."
     triggers:
       - "data visualization"
