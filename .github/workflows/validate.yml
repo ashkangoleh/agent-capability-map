@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - "feat/**"
+      - pre_release
   pull_request:
 
 permissions:
