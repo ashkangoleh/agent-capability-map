@@ -1472,3 +1472,36 @@ cases:
   - id: de-near-miss-streaming
     request: "Explain what streaming data means without choosing a platform"
     status: needs_clarification
+
+  - id: de-iceberg-rest-basic
+    request: "Review Iceberg REST catalog protocol compatibility between Spark and Flink"
+    status: matched
+    skill: iceberg-rest-catalog-operations
+  - id: de-iceberg-rest-vending
+    request: "Audit Iceberg REST catalog credential vending and short-lived storage token expiry"
+    status: matched
+    skill: iceberg-rest-catalog-operations
+  - id: de-iceberg-rest-timeout
+    request: "Review Iceberg catalog commit retry after an ambiguous timeout"
+    status: matched
+    skill: iceberg-rest-catalog-operations
+  - id: de-iceberg-rest-discovery
+    request: "Validate Iceberg REST endpoint discovery before enabling catalog writes"
+    status: matched
+    skill: iceberg-rest-catalog-operations
+  - id: de-iceberg-rest-persian
+    request: "بررسی امنیت و اعتبار Iceberg REST catalog credential vending"
+    status: matched
+    skill: iceberg-rest-catalog-operations
+  - id: de-iceberg-rest-polaris
+    request: "Operate Polaris Iceberg REST catalog credential vending"
+    status: matched
+    skill: polaris-iceberg-catalog-operations
+  - id: de-iceberg-rest-lakekeeper
+    request: "Operate Lakekeeper Iceberg REST catalog credential vending"
+    status: matched
+    skill: lakekeeper-iceberg-catalog-operations
+  - id: de-iceberg-rest-schema-near-miss
+    request: "Review Iceberg schema evolution and partition changes"
+    status: matched
+    skill: iceberg-table-schema-partition-evolution
