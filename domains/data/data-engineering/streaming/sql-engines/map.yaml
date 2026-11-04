@@ -1,0 +1,17 @@
+schema_version: 1
+id: streaming-sql-engines
+kind: map
+children:
+  - id: risingwave
+    description: "RisingWave streaming database and incremental materialized views"
+    triggers:
+      - "risingwave"
+    status: active
+    skills: domains/data/data-engineering/streaming/sql-engines/risingwave/skills.yaml
+  - id: materialize
+    description: "Materialize streaming SQL, indexes and logical timestamps"
+    triggers:
+      - "materialize streaming sql"
+      - "materialize"
+    status: active
+    skills: domains/data/data-engineering/streaming/sql-engines/materialize/skills.yaml

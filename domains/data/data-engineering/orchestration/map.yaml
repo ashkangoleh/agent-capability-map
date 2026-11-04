@@ -3,7 +3,7 @@ id: orchestration
 kind: map
 children:
   - id: airflow
-    description: "airflow"
+    description: "Apache Airflow DAG scheduling, data intervals and backfills"
     triggers:
       - "airflow data interval"
       - "airflow backfill"
@@ -12,20 +12,32 @@ children:
     status: active
     skills: domains/data/data-engineering/orchestration/airflow/skills.yaml
   - id: prefect
-    description: "prefect"
+    description: "Prefect flow execution, retries and state"
     triggers:
       - "prefect"
     status: active
     skills: domains/data/data-engineering/orchestration/prefect/skills.yaml
   - id: dagster
-    description: "dagster"
+    description: "Dagster asset, partition and sensor orchestration"
     triggers:
       - "dagster"
     status: active
     skills: domains/data/data-engineering/orchestration/dagster/skills.yaml
   - id: argo-workflows
-    description: "argo workflows"
+    description: "Argo Workflows DAG and CronWorkflow orchestration"
     triggers:
       - "argo workflows"
     status: active
     skills: domains/data/data-engineering/orchestration/argo-workflows/skills.yaml
+  - id: durable-workflows
+    description: "Kestra, Temporal, Flyte, Kubeflow and alternative orchestrator selection"
+    triggers:
+      - "kestra flow orchestration"
+      - "temporal durable workflow"
+      - "flyte kubeflow pipeline"
+      - "mage"
+      - "dolphinscheduler"
+      - "luigi"
+      - "oozie"
+    status: active
+    skills: domains/data/data-engineering/orchestration/skills.yaml

@@ -23,3 +23,20 @@ skills:
       - "azure data platform engineering"
     excludes: []
     status: active
+  - id: oci-data-platform-engineering
+    path: .agents/skills/oci-data-platform-engineering/SKILL.md
+    description: "Design Oracle Cloud data platforms across Object Storage, Data Flow, GoldenGate, Streaming and Autonomous Database."
+    triggers:
+      - "oci data platform"
+      - "oracle cloud data platform"
+    excludes: []
+    status: active
+  - id: databricks-lakeflow-data-engineering
+    path: .agents/skills/databricks-lakeflow-data-engineering/SKILL.md
+    description: "Engineer Databricks Lakeflow Connect, pipelines and Jobs with Unity Catalog, SDP boundaries and operational controls."
+    triggers:
+      - "databricks lakeflow"
+      - "databricks lakeflow data engineering"
+      - "lakeflow pipelines"
+    excludes: []
+    status: active

@@ -3,7 +3,7 @@ id: distributed-processing
 kind: map
 children:
   - id: spark
-    description: "spark"
+    description: "Apache Spark batch, SQL, streaming, runtime and declarative pipelines"
     triggers:
       - "pyspark"
       - "اسپارک"
@@ -11,10 +11,11 @@ children:
       - "spark sql"
       - "spark streaming"
       - "spark tuning"
+      - "spark declarative pipelines"
     status: active
     map: domains/data/data-engineering/distributed-processing/spark/map.yaml
   - id: flink
-    description: "flink"
+    description: "Apache Flink stateful stream and batch processing"
     triggers:
       - "flink checkpoint"
       - "flink"
@@ -22,7 +23,7 @@ children:
     status: active
     skills: domains/data/data-engineering/distributed-processing/flink/skills.yaml
   - id: beam
-    description: "beam"
+    description: "Apache Beam portable data processing"
     triggers:
       - "beam portability"
       - "beam runner"
@@ -31,9 +32,21 @@ children:
     status: active
     skills: domains/data/data-engineering/distributed-processing/beam/skills.yaml
   - id: ray
-    description: "ray"
+    description: "Ray Data distributed Python data processing"
     triggers:
       - "ray dataset"
       - "ray data"
     status: active
     skills: domains/data/data-engineering/distributed-processing/ray/skills.yaml
+  - id: dask
+    description: "Dask distributed DataFrame and task-graph execution"
+    triggers:
+      - "dask dataframe"
+    status: active
+    skills: domains/data/data-engineering/distributed-processing/dask/skills.yaml
+  - id: datafusion
+    description: "Apache DataFusion and Ballista Arrow-native query execution"
+    triggers:
+      - "datafusion"
+    status: active
+    skills: domains/data/data-engineering/distributed-processing/datafusion/skills.yaml

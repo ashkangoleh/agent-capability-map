@@ -23,8 +23,7 @@ skills:
       - "iceberg maintenance"
     excludes: []
     status: active
-  - id: data-engineering-implementation
-    path: .agents/skills/data-engineering-implementation/SKILL.md
+
     description: "General data pipeline and analytical transformation design when no narrower specialist is identified."
     triggers:
       - "data pipeline"

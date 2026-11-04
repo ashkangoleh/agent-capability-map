@@ -1,0 +1,21 @@
+schema_version: 1
+id: streaming
+kind: map
+children:
+  - id: semantics
+    description: "Event-time, watermarks, delivery semantics and schema compatibility"
+    triggers:
+      - "stream event time watermark window"
+      - "end to end exactly once semantics"
+      - "schema registry compatibility policy"
+      - "kafka streams stateful join"
+      - "redpanda kafka api compatibility"
+    status: active
+    skills: domains/data/data-engineering/streaming/skills.yaml
+  - id: sql-engines
+    description: "Streaming SQL databases and continuously maintained materialized views"
+    triggers:
+      - "risingwave streaming sql"
+      - "materialize streaming sql"
+    status: active
+    map: domains/data/data-engineering/streaming/sql-engines/map.yaml

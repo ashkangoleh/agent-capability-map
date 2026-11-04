@@ -2,50 +2,36 @@ schema_version: 1
 id: data-engineering
 kind: map
 children:
-  - id: distributed-processing
-    description: "distributed processing"
+  - id: foundations
+    description: "Lifecycle, generic pipeline design, engineering principles and runtime foundations"
     triggers:
-      - "ray data"
-      - "flink checkpoint"
-      - "spark scala"
-      - "structured streaming"
-      - "pyspark"
-      - "اسپارک"
+      - "data engineering"
       - "مهندسی داده"
-      - "spark"
-      - "flink"
-      - "ray dataset"
-      - "apache beam"
-      - "distributed processing"
+      - "data pipeline architecture"
+      - "generic etl pipeline"
+      - "data engineering lifecycle"
+      - "enterprise data modeling patterns"
+      - "data vault 2.0 modeling"
+      - "bitemporal data modeling"
+      - "python data engineering runtime"
     status: active
-    map: domains/data/data-engineering/distributed-processing/map.yaml
-  - id: orchestration
-    description: "orchestration"
+    skills: domains/data/data-engineering/foundations/skills.yaml
+  - id: ingestion
+    description: "Source connectors, APIs, managed ELT and connector state"
     triggers:
-      - "argo workflows"
-      - "airflow backfill"
-      - "airflow"
-      - "dagster"
-      - "prefect"
-      - "orchestration"
-      - "workflow scheduling"
+      - "airbyte incremental state"
+      - "dlt incremental pipeline"
+      - "meltano singer state"
+      - "api ingestion cursor pagination"
+      - "file landing zone manifest checksum"
+      - "managed elt connector operations"
+      - "flink cdc snapshot handoff"
+      - "apache seatunnel"
+      - "apache seatunnel data integration"
     status: active
-    map: domains/data/data-engineering/orchestration/map.yaml
-  - id: messaging
-    description: "messaging"
-    triggers:
-      - "apache pulsar"
-      - "kafka consumer rebalance"
-      - "kafka connect"
-      - "kafka"
-      - "kinesis"
-      - "rabbitmq"
-      - "message broker"
-      - "event streaming"
-    status: active
-    map: domains/data/data-engineering/messaging/map.yaml
+    skills: domains/data/data-engineering/ingestion/skills.yaml
   - id: batch-ingestion
-    description: "batch ingestion"
+    description: "Batch landing, CDC snapshots, file extraction, backfill and bulk ingestion"
     triggers:
       - "elasticsearch extraction"
       - "elasticsearch pit"
@@ -60,14 +46,103 @@ children:
       - "mongodb change streams"
       - "data backfill"
       - "pipeline replay"
-      - "data ingestion"
       - "batch etl"
       - "incremental ingestion"
-      - "backfill"
+      - "kafka connect cdc"
     status: active
     map: domains/data/data-engineering/batch-ingestion/map.yaml
+  - id: messaging
+    description: "Event brokers, durable messaging, partitioning, consumer groups and replay"
+    triggers:
+      - "apache pulsar"
+      - "kafka consumer rebalance"
+      - "kafka connect"
+      - "kafka"
+      - "kinesis"
+      - "rabbitmq"
+      - "message broker"
+      - "event streaming"
+      - "nats jetstream"
+      - "nats"
+    status: active
+    map: domains/data/data-engineering/messaging/map.yaml
+  - id: streaming
+    description: "Event-time semantics, stream processing contracts and streaming SQL engines"
+    triggers:
+      - "stream event time watermark window"
+      - "end to end exactly once semantics"
+      - "schema registry compatibility policy"
+      - "kafka streams stateful join"
+      - "redpanda kafka api compatibility"
+      - "risingwave"
+      - "risingwave streaming sql"
+      - "materialize streaming sql"
+    status: active
+    map: domains/data/data-engineering/streaming/map.yaml
+  - id: distributed-processing
+    description: "Distributed batch and stream compute engines"
+    triggers:
+      - "ray data"
+      - "flink checkpoint"
+      - "spark scala"
+      - "structured streaming"
+      - "pyspark"
+      - "اسپارک"
+      - "spark"
+      - "flink"
+      - "ray dataset"
+      - "apache beam"
+      - "distributed processing"
+      - "dask dataframe"
+      - "datafusion"
+    status: active
+    map: domains/data/data-engineering/distributed-processing/map.yaml
+  - id: orchestration
+    description: "Data workflow orchestration, DAGs, assets, durable execution and scheduling"
+    triggers:
+      - "argo workflows"
+      - "airflow backfill"
+      - "airflow"
+      - "dagster"
+      - "prefect"
+      - "orchestration"
+      - "workflow scheduling"
+      - "kestra flow orchestration"
+      - "temporal durable workflow"
+      - "flyte kubeflow pipeline"
+      - "mage"
+      - "dolphinscheduler"
+      - "luigi"
+      - "oozie"
+    status: active
+    map: domains/data/data-engineering/orchestration/map.yaml
+  - id: transformation
+    description: "SQL transformation frameworks, ELT planning and declarative transformations"
+    triggers:
+      - "sqlmesh plan backfill"
+      - "dataform incremental assertions"
+      - "apache hop etl pipeline"
+    status: active
+    skills: domains/data/data-engineering/transformation/skills.yaml
+  - id: formats
+    description: "Serialization, schema encodings and columnar interchange formats"
+    triggers:
+      - "avro protobuf schema evolution"
+      - "parquet orc columnar file layout"
+      - "arrow flight substrait interoperability"
+    status: active
+    skills: domains/data/data-engineering/formats/skills.yaml
+  - id: storage
+    description: "Distributed data storage, Hadoop ecosystem and operational NoSQL integration"
+    triggers:
+      - "hadoop hdfs hive yarn operations"
+      - "hbase region design compaction"
+      - "nosql cdc tombstone ttl integration"
+      - "cloud object storage data lake lifecycle"
+    status: active
+    skills: domains/data/data-engineering/storage/skills.yaml
   - id: lakehouse
-    description: "lakehouse"
+    description: "Open table formats, table maintenance, streaming lakehouse and table catalogs"
     triggers:
       - "iceberg catalog"
       - "lakekeeper"
@@ -79,133 +154,71 @@ children:
       - "delta lake"
       - "hudi"
       - "lakehouse"
+      - "apache paimon"
+      - "ducklake"
+      - "apache fluss"
+      - "fluss streaming storage"
     status: active
     map: domains/data/data-engineering/lakehouse/map.yaml
   - id: warehouse
-    description: "warehouse"
+    description: "MPP warehouses, query federation, real-time OLAP and warehouse engines"
     triggers:
       - "clickhouse mergetree"
       - "clickhouse"
       - "trino federation"
       - "duckdb parquet"
+      - "starrocks olap"
       - "starrocks"
       - "trino"
       - "duckdb"
-      - "warehouse modeling"
-    status: active
-    map: domains/data/data-engineering/warehouse/map.yaml
-  - id: data-observability
-    description: "data observability"
-    triggers:
-      - "pipeline freshness"
-      - "data freshness slo"
-      - "data observability"
-      - "data quality"
-      - "data monitoring"
-      - "data reconciliation"
-    status: active
-    map: domains/data/data-engineering/observability/map.yaml
-  - id: foundations
-    description: "Data engineering foundations and modeling"
-    triggers:
-      - "data engineering lifecycle"
-      - "enterprise data modeling patterns"
-      - "data vault 2.0 modeling"
-      - "bitemporal data modeling"
-      - "python data engineering runtime"
-    status: active
-    skills: domains/data/data-engineering/foundations/skills.yaml
-  - id: ingestion
-    description: "Connectors, APIs, files and CDC ingestion"
-    triggers:
-      - "airbyte incremental state"
-      - "dlt incremental pipeline"
-      - "meltano singer state"
-      - "api ingestion cursor pagination"
-      - "file landing zone manifest checksum"
-      - "managed elt connector operations"
-      - "flink cdc snapshot handoff"
-    status: active
-    skills: domains/data/data-engineering/ingestion/skills.yaml
-  - id: streaming
-    description: "Event-time, delivery semantics and streaming"
-    triggers:
-      - "stream event time watermark window"
-      - "end to end exactly once semantics"
-      - "schema registry compatibility policy"
-      - "kafka streams stateful join"
-      - "redpanda kafka api compatibility"
-    status: active
-    skills: domains/data/data-engineering/streaming/skills.yaml
-  - id: orchestration-advanced
-    description: "Durable workflows and orchestration"
-    triggers:
-      - "kestra flow orchestration"
-      - "temporal durable workflow"
-      - "flyte kubeflow pipeline"
-    status: active
-    skills: domains/data/data-engineering/orchestration/skills.yaml
-  - id: transformation
-    description: "SQL transformation and ELT"
-    triggers:
-      - "sqlmesh plan backfill"
-      - "dataform incremental assertions"
-      - "apache hop etl pipeline"
-    status: active
-    skills: domains/data/data-engineering/transformation/skills.yaml
-  - id: formats
-    description: "Serialization and columnar interchange"
-    triggers:
-      - "avro protobuf schema evolution"
-      - "parquet orc columnar file layout"
-      - "arrow flight substrait interoperability"
-    status: active
-    skills: domains/data/data-engineering/formats/skills.yaml
-  - id: storage
-    description: "Distributed storage and NoSQL"
-    triggers:
-      - "hadoop hdfs hive yarn operations"
-      - "hbase region design compaction"
-      - "nosql cdc tombstone ttl integration"
-      - "cloud object storage data lake lifecycle"
-    status: active
-    skills: domains/data/data-engineering/storage/skills.yaml
-  - id: warehouse-platforms
-    description: "Warehouses, federation and real-time OLAP"
-    triggers:
       - "cloud data warehouse engineering"
       - "dremio presto query federation"
       - "pinot druid realtime olap"
       - "apache doris unique key model"
       - "opensearch bulk index lifecycle"
+      - "snowflake"
+      - "bigquery"
+      - "redshift"
     status: active
-    skills: domains/data/data-engineering/warehouse/skills.yaml
+    map: domains/data/data-engineering/warehouse/map.yaml
+  - id: data-observability
+    description: "Pipeline freshness, operational monitoring, reconciliation and delivery SLOs"
+    triggers:
+      - "pipeline freshness"
+      - "data freshness slo"
+      - "data observability"
+      - "data monitoring"
+      - "data reconciliation"
+    status: active
+    map: domains/data/data-engineering/observability/map.yaml
   - id: quality
-    description: "Data quality frameworks"
+    description: "Data quality frameworks, validation, profiling and contract checks"
     triggers:
       - "soda data quality scans"
       - "deequ spark data quality"
       - "pandera dataframe schema validation"
+      - "great expectations validation gates"
     status: active
     skills: domains/data/data-engineering/quality/skills.yaml
   - id: governance
-    description: "Data contracts, privacy and access control"
+    description: "Data contracts, metadata ingestion, privacy, access control and retention"
     triggers:
       - "open data contract standard odcs"
       - "data access control masking"
       - "privacy preserving data engineering"
       - "data retention lifecycle governance"
+      - "openmetadata"
     status: active
     skills: domains/data/data-engineering/governance/skills.yaml
   - id: dataops
-    description: "DataOps and release engineering"
+    description: "DataOps, testing, schema migration and release engineering"
     triggers:
       - "data pipeline testing ci cd"
       - "data schema migration release"
     status: active
     skills: domains/data/data-engineering/dataops/skills.yaml
   - id: reliability
-    description: "Idempotency, outbox, replay and DR"
+    description: "Idempotency, outbox, replay, disaster recovery and restore"
     triggers:
       - "end to end pipeline reliability"
       - "transactional outbox dlq replay"
@@ -213,37 +226,50 @@ children:
     status: active
     skills: domains/data/data-engineering/reliability/skills.yaml
   - id: performance
-    description: "Query performance and capacity"
+    description: "Query performance, resource efficiency, capacity and platform cost"
     triggers:
       - "distributed query engine performance"
       - "data platform cost capacity"
     status: active
     skills: domains/data/data-engineering/performance/skills.yaml
   - id: cloud
-    description: "Cloud data platforms"
+    description: "Managed cloud data platforms and provider-native data services"
     triggers:
       - "aws data platform engineering"
       - "gcp data platform engineering"
       - "azure data platform engineering"
+      - "oci data platform"
+      - "databricks lakeflow"
     status: active
     skills: domains/data/data-engineering/cloud/skills.yaml
   - id: serving
-    description: "Serving APIs and reverse ETL"
+    description: "Data serving APIs, read models and reverse ETL activation"
     triggers:
       - "reverse etl data activation"
       - "data serving api design"
     status: active
     skills: domains/data/data-engineering/serving/skills.yaml
-  - id: lakehouse-advanced
-    description: "Lakehouse formats and catalogs"
+  - id: data-migration
+    description: "Cross-platform data migration, cutover, CDC convergence and reconciliation"
     triggers:
-      - "apache paimon streaming lakehouse"
-      - "lakehouse catalog interoperability"
-      - "open table format selection"
+      - "data migration cutover"
+      - "warehouse migration"
+      - "data platform migration"
+      - "cdc migration cutover"
     status: active
-    skills: domains/data/data-engineering/lakehouse/skills.yaml
+    skills: domains/data/data-engineering/data-migration/skills.yaml
+  - id: unstructured-data
+    description: "Document, binary, semi-structured and multimodal raw-data ingestion"
+    triggers:
+      - "unstructured data ingestion"
+      - "document ingestion pipeline"
+      - "binary file ingestion"
+      - "pdf ingestion data lake"
+      - "multimodal raw data ingestion"
+    status: active
+    skills: domains/data/data-engineering/unstructured/skills.yaml
   - id: architecture
-    description: "Multi-engine and domain architecture"
+    description: "Multi-engine data platform, data mesh, medallion, lambda and kappa architecture"
     triggers:
       - "multi engine data platform interoperability"
       - "data mesh data product architecture"

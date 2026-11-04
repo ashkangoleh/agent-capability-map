@@ -1,0 +1,14 @@
+schema_version: 1
+id: data-migration
+kind: skill-registry
+skills:
+  - id: data-migration-cutover-reconciliation
+    path: .agents/skills/data-migration-cutover-reconciliation/SKILL.md
+    description: "Plan cross-platform data migrations using consistent snapshots, CDC convergence, cutover gates, reconciliation, rollback and dual-run controls."
+    triggers:
+      - "data migration cutover"
+      - "warehouse migration"
+      - "data platform migration"
+      - "cdc migration cutover"
+    excludes: []
+    status: active

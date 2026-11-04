@@ -1,0 +1,26 @@
+schema_version: 1
+id: cloud-warehouses
+kind: map
+children:
+  - id: snowflake
+    description: "Snowflake ingestion, streams, tasks and dynamic tables"
+    triggers:
+      - "snowflake"
+      - "snowpipe streaming"
+      - "snowflake streams tasks"
+    status: active
+    skills: domains/data/data-engineering/warehouse/cloud/snowflake/skills.yaml
+  - id: bigquery
+    description: "BigQuery ingestion, Storage Write API and physical design"
+    triggers:
+      - "bigquery"
+      - "bigquery storage write api"
+    status: active
+    skills: domains/data/data-engineering/warehouse/cloud/bigquery/skills.yaml
+  - id: redshift
+    description: "Amazon Redshift loading, streaming ingestion and MPP design"
+    triggers:
+      - "redshift"
+      - "redshift streaming ingestion"
+    status: active
+    skills: domains/data/data-engineering/warehouse/cloud/redshift/skills.yaml

@@ -23,3 +23,15 @@ skills:
       - "flyte kubeflow pipeline"
     excludes: []
     status: active
+  - id: data-orchestration-platform-selection
+    path: .agents/skills/data-orchestration-platform-selection/SKILL.md
+    description: "Select or migrate data workflow orchestrators using execution semantics, scheduling, durability, deployment and operational fit."
+    triggers:
+      - "mage"
+      - "dolphinscheduler"
+      - "luigi"
+      - "oozie"
+      - "compare data orchestrators"
+      - "migrate data workflow scheduler"
+    excludes: []
+    status: active

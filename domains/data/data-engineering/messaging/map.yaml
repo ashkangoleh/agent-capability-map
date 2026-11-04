@@ -3,7 +3,7 @@ id: messaging
 kind: map
 children:
   - id: kafka
-    description: "kafka"
+    description: "Apache Kafka brokers, consumer groups, Connect and Streams"
     triggers:
       - "kafka consumer rebalance"
       - "kafka connect"
@@ -12,20 +12,27 @@ children:
     status: active
     skills: domains/data/data-engineering/messaging/kafka/skills.yaml
   - id: kinesis
-    description: "kinesis"
+    description: "Amazon Kinesis stream and consumer operations"
     triggers:
       - "kinesis"
     status: active
     skills: domains/data/data-engineering/messaging/kinesis/skills.yaml
   - id: rabbitmq
-    description: "rabbitmq"
+    description: "RabbitMQ queue and consumer delivery"
     triggers:
       - "rabbitmq"
     status: active
     skills: domains/data/data-engineering/messaging/rabbitmq/skills.yaml
   - id: pulsar
-    description: "pulsar"
+    description: "Apache Pulsar topics, subscriptions and replay"
     triggers:
       - "apache pulsar"
     status: active
     skills: domains/data/data-engineering/messaging/pulsar/skills.yaml
+  - id: nats
+    description: "NATS JetStream persistence, consumers and replay"
+    triggers:
+      - "nats jetstream"
+      - "nats"
+    status: active
+    skills: domains/data/data-engineering/messaging/nats/skills.yaml

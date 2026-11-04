@@ -30,3 +30,12 @@ skills:
       - "data retention lifecycle governance"
     excludes: []
     status: active
+  - id: openmetadata-catalog-operations
+    path: .agents/skills/openmetadata-catalog-operations/SKILL.md
+    description: "Operate OpenMetadata ingestion, lineage, ownership, profiling, quality and catalog governance workflows."
+    triggers:
+      - "openmetadata"
+      - "openmetadata metadata ingestion lineage"
+      - "openmetadata catalog operations"
+    excludes: []
+    status: active

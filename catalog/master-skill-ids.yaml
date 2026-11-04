@@ -11,9 +11,12 @@ ids:
   - anomaly-detection-baselines
   - ansible-safe-automation
   - apache-doris-olap-engineering
+  - apache-fluss-streaming-storage
   - apache-hop-etl-operations
   - apache-paimon-streaming-lakehouse
   - apache-pinot-druid-realtime-olap
+  - apache-seatunnel-data-integration
+  - apache-spark-declarative-pipelines
   - api-ingestion-pagination-rate-limits
   - argo-workflows-data-orchestration
   - argocd-gitops-drift-recovery
@@ -26,6 +29,7 @@ ids:
   - backup-dr-restore-exercises
   - bare-metal-provisioning-lifecycle
   - beam-runner-portability
+  - bigquery-data-platform-engineering
   - biodiversity-observation-quality
   - bitemporal-event-data-modeling
   - business-strategy-analysis
@@ -56,12 +60,15 @@ ids:
   - curriculum-outcomes-assessment
   - customer-support-knowledge-design
   - dagster-asset-partition-orchestration
+  - dask-distributed-data-engineering
   - data-access-control-masking
   - data-contract-odcs-engineering
   - data-engineering-foundations-lifecycle
   - data-engineering-implementation
   - data-mesh-data-product-architecture
+  - data-migration-cutover-reconciliation
   - data-observability-freshness-slo
+  - data-orchestration-platform-selection
   - data-pipeline-testing-ci-cd
   - data-platform-architecture-review
   - data-platform-backup-disaster-recovery
@@ -76,8 +83,10 @@ ids:
   - database-nosql-cache-operations
   - database-platform-mysql-operations
   - database-platform-postgres-operations
+  - databricks-lakeflow-data-engineering
   - datacenter-power-cooling-dcim
   - dataform-warehouse-transformations
+  - datafusion-arrow-query-engine
   - datahub-metadata-catalog-governance
   - dbt-incremental-modeling
   - dbt-snapshot-scd2
@@ -125,6 +134,7 @@ ids:
   - ds-survey-sampling-design
   - ds-survival-analysis
   - duckdb-parquet-transformation
+  - ducklake-lakehouse-format-engineering
   - ecommerce-product-catalog-audit
   - edge-compute-fleet-operations
   - elasticsearch-pit-bulk-extraction
@@ -192,6 +202,7 @@ ids:
   - manufacturing-quality-investigation
   - marketing-measurement-attribution
   - marketing-strategy-campaign
+  - materialize-streaming-sql-engineering
   - medallion-lambda-kappa-architecture
   - meltano-singer-elt-engineering
   - milvus-vector-index-lifecycle
@@ -204,6 +215,7 @@ ids:
   - mongodb-change-streams-cdc
   - multi-engine-data-platform-interoperability
   - mysql-binlog-cdc-integrity
+  - nats-jetstream-data-streaming
   - network-automation-sdn
   - network-dns-tls-diagnostics
   - network-ebpf-observability
@@ -217,9 +229,11 @@ ids:
   - nosql-data-platform-integration
   - object-storage-infrastructure-operations
   - observability-stack-logs-traces-metrics
+  - oci-data-platform-engineering
   - oci-infrastructure-operations
   - open-table-format-selection
   - openlineage-metadata-instrumentation
+  - openmetadata-catalog-operations
   - opensearch-analytics-index-engineering
   - openstack-private-cloud-operations
   - opentelemetry-collector-pipeline
@@ -263,8 +277,10 @@ ids:
   - real-estate-due-diligence
   - recruiting-interview-scorecard
   - redpanda-event-streaming
+  - redshift-data-platform-engineering
   - responsible-ai-risk-assessment
   - reverse-etl-data-activation
+  - risingwave-streaming-sql-engineering
   - robotics-ros2-interface-review
   - runtime-security-falco
   - sales-pipeline-forecast-audit
@@ -280,6 +296,7 @@ ids:
   - service-mesh-istio-operations
   - skill-authoring-validation
   - sklearn-leakage-free-validation
+  - snowflake-data-platform-engineering
   - social-science-survey-quality
   - soda-data-quality-engineering
   - software-engineering-implementation
@@ -297,6 +314,7 @@ ids:
   - sre-capacity-load-testing
   - sre-incident-rca-runbook
   - sre-slo-error-budget
+  - starrocks-olap-warehouse-engineering
   - starrocks-primary-key-cdc
   - starrocks-stream-load-transaction
   - statistical-inference-design
@@ -315,6 +333,7 @@ ids:
   - travel-itinerary-source-review
   - trino-federated-query-optimization
   - unix-bsd-systems-operations
+  - unstructured-data-ingestion-engineering
   - ux-research-design-review
   - vault-secrets-rotation-operations
   - virtualization-kvm-proxmox-vmware

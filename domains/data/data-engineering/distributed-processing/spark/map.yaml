@@ -3,7 +3,7 @@ id: spark
 kind: map
 children:
   - id: pyspark
-    description: "pyspark"
+    description: "PySpark project setup and DataFrame transformations"
     triggers:
       - "pyspark"
       - "اسپارک با پایتون"
@@ -13,14 +13,14 @@ children:
     status: active
     skills: domains/data/data-engineering/distributed-processing/spark/pyspark/skills.yaml
   - id: spark-sql
-    description: "spark sql"
+    description: "Spark SQL query and execution-plan engineering"
     triggers:
       - "spark sql"
       - "spark query"
     status: active
     skills: domains/data/data-engineering/distributed-processing/spark/sql/skills.yaml
   - id: scala
-    description: "scala"
+    description: "Scala Spark application engineering"
     triggers:
       - "spark scala job"
       - "scala spark"
@@ -28,7 +28,7 @@ children:
     status: active
     skills: domains/data/data-engineering/distributed-processing/spark/scala/skills.yaml
   - id: spark-runtime
-    description: "spark runtime"
+    description: "Spark runtime, cluster and performance operations"
     triggers:
       - "spark cluster"
       - "spark submit"
@@ -36,3 +36,10 @@ children:
       - "spark performance"
     status: active
     skills: domains/data/data-engineering/distributed-processing/spark/runtime/skills.yaml
+  - id: declarative-pipelines
+    description: "Apache Spark Declarative Pipelines and Databricks Lakeflow boundaries"
+    triggers:
+      - "spark declarative pipelines"
+      - "apache spark declarative pipelines"
+    status: active
+    skills: domains/data/data-engineering/distributed-processing/spark/declarative-pipelines/skills.yaml

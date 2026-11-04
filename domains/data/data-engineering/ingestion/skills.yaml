@@ -51,3 +51,12 @@ skills:
       - "flink cdc snapshot handoff"
     excludes: []
     status: active
+  - id: apache-seatunnel-data-integration
+    path: .agents/skills/apache-seatunnel-data-integration/SKILL.md
+    description: "Engineer Apache SeaTunnel batch and streaming data integration with connector, engine, checkpoint and sink guarantees."
+    triggers:
+      - "apache seatunnel"
+      - "apache seatunnel data integration"
+      - "seatunnel cdc"
+    excludes: []
+    status: active

@@ -3,7 +3,7 @@ id: batch-ingestion
 kind: map
 children:
   - id: cdc
-    description: "Change data capture bootstrapping"
+    description: "Change data capture snapshot, log handoff and source-specific recovery"
     triggers:
       - "debezium"
       - "cdc snapshot"
@@ -20,8 +20,7 @@ children:
       - "parquet small files"
       - "parquet file layout"
       - "parquet row groups"
-      - "data ingestion"
-      - "batch etl"
+      - "parquet compaction"
     status: active
     skills: domains/data/data-engineering/batch-ingestion/parquet/skills.yaml
   - id: recovery
@@ -34,7 +33,7 @@ children:
     status: active
     skills: domains/data/general-skills.yaml
   - id: nifi
-    description: "nifi"
+    description: "Apache NiFi flow and backpressure operations"
     triggers:
       - "nifi"
       - "apache nifi"
@@ -42,7 +41,7 @@ children:
     status: active
     skills: domains/data/data-engineering/batch-ingestion/nifi/skills.yaml
   - id: elasticsearch
-    description: "elasticsearch"
+    description: "Elasticsearch PIT and bulk extraction"
     triggers:
       - "elasticsearch pit"
       - "elasticsearch extraction"

@@ -1,0 +1,11 @@
+schema_version: 1
+id: starrocks
+kind: skill-registry
+skills:
+  - id: starrocks-olap-warehouse-engineering
+    path: .agents/skills/starrocks-olap-warehouse-engineering/SKILL.md
+    description: "Design StarRocks OLAP tables, distribution and partitioning, materialized views, compaction, workload groups and query performance."
+    triggers:
+      - "starrocks olap"
+    excludes: []
+    status: active

@@ -1,0 +1,12 @@
+schema_version: 1
+id: materialize
+kind: skill-registry
+skills:
+  - id: materialize-streaming-sql-engineering
+    path: .agents/skills/materialize-streaming-sql-engineering/SKILL.md
+    description: "Engineer Materialize streaming SQL with sources, sinks, indexes, logical timestamps, arrangements and compaction."
+    triggers:
+      - "materialize streaming sql"
+      - "materialize"
+    excludes: []
+    status: active

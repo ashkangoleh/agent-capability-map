@@ -25,9 +25,9 @@ cases:
     status: matched
     skill: kafka-streaming-reliability
   - id: data-warehouse
-    request: Design a Trino data pipeline
+    request: Optimize Trino federation pushdown and EXPLAIN
     status: matched
-    skill: data-engineering-implementation
+    skill: trino-federated-query-optimization
   - id: product-prd
     request: Write a product PRD
     status: matched
@@ -375,8 +375,7 @@ cases:
     skill: data-engineering-implementation
   - id: de-nearmiss-trino-generic
     request: "Design a Trino data pipeline"
-    status: matched
-    skill: data-engineering-implementation
+    status: needs_clarification
   - id: de-nearmiss-kafka-base
     request: "Review Kafka consumer offsets and ordering"
     status: matched
@@ -1386,3 +1385,90 @@ cases:
     request: "Design infrastructure asset inventory CMDB discovery ownership and configuration drift"
     status: matched
     skill: infrastructure-asset-configuration-inventory
+
+  - id: de-specialist-apache-seatunnel
+    request: "Build an Apache SeaTunnel CDC integration from PostgreSQL to object storage"
+    status: matched
+    skill: apache-seatunnel-data-integration
+  - id: de-specialist-dask
+    request: "Optimize a Dask DataFrame distributed shuffle and worker memory"
+    status: matched
+    skill: dask-distributed-data-engineering
+  - id: de-specialist-datafusion
+    request: "Build an Apache DataFusion Arrow-native query engine with Ballista evaluation"
+    status: matched
+    skill: datafusion-arrow-query-engine
+  - id: de-specialist-spark-sdp
+    request: "Create an Apache Spark Declarative Pipelines SQL streaming table"
+    status: matched
+    skill: apache-spark-declarative-pipelines
+  - id: de-specialist-risingwave
+    request: "Design RisingWave streaming SQL materialized views with Kafka sources"
+    status: matched
+    skill: risingwave-streaming-sql-engineering
+  - id: de-specialist-materialize
+    request: "Operate Materialize streaming SQL indexes and logical timestamps"
+    status: matched
+    skill: materialize-streaming-sql-engineering
+  - id: de-specialist-fluss
+    request: "Design Apache Fluss primary-key tables and Flink lakehouse tiering"
+    status: matched
+    skill: apache-fluss-streaming-storage
+  - id: de-specialist-ducklake
+    request: "Design DuckLake snapshots and DuckDB catalog interoperability"
+    status: matched
+    skill: ducklake-lakehouse-format-engineering
+  - id: de-specialist-starrocks-olap
+    request: "Design StarRocks OLAP tables, distribution keys and materialized views"
+    status: matched
+    skill: starrocks-olap-warehouse-engineering
+  - id: de-specialist-nats
+    request: "Configure NATS JetStream durable consumers with acknowledgements and replay"
+    status: matched
+    skill: nats-jetstream-data-streaming
+  - id: de-specialist-data-migration
+    request: "Plan a warehouse data migration cutover with CDC convergence and reconciliation"
+    status: matched
+    skill: data-migration-cutover-reconciliation
+  - id: de-specialist-unstructured
+    request: "Build an unstructured PDF and binary document ingestion pipeline"
+    status: matched
+    skill: unstructured-data-ingestion-engineering
+  - id: de-specialist-snowflake
+    request: "Design Snowflake Snowpipe Streaming with Streams and Tasks"
+    status: matched
+    skill: snowflake-data-platform-engineering
+  - id: de-specialist-bigquery
+    request: "Implement BigQuery Storage Write API gRPC ingestion with stream offsets"
+    status: matched
+    skill: bigquery-data-platform-engineering
+  - id: de-specialist-redshift
+    request: "Design Redshift streaming ingestion and MPP sort/distribution keys"
+    status: matched
+    skill: redshift-data-platform-engineering
+  - id: de-specialist-databricks
+    request: "Build a Databricks Lakeflow pipeline with Unity Catalog and AUTO CDC"
+    status: matched
+    skill: databricks-lakeflow-data-engineering
+  - id: de-specialist-oci
+    request: "Design an OCI data platform using Data Flow and GoldenGate"
+    status: matched
+    skill: oci-data-platform-engineering
+  - id: de-specialist-orchestration
+    request: "Compare Mage, Apache DolphinScheduler, Luigi and Oozie for data workflows"
+    status: matched
+    skill: data-orchestration-platform-selection
+  - id: de-specialist-openmetadata
+    request: "Operate OpenMetadata metadata ingestion and column-level lineage"
+    status: matched
+    skill: openmetadata-catalog-operations
+  - id: de-generic-fallback
+    request: "Design a generic data engineering pipeline architecture"
+    status: matched
+    skill: data-engineering-implementation
+  - id: de-ambiguous-trino
+    request: "Use Trino"
+    status: needs_clarification
+  - id: de-near-miss-streaming
+    request: "Explain what streaming data means without choosing a platform"
+    status: needs_clarification

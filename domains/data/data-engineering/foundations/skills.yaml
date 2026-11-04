@@ -37,3 +37,13 @@ skills:
       - "python data engineering runtime"
     excludes: []
     status: active
+  - id: data-engineering-implementation
+    path: .agents/skills/data-engineering-implementation/SKILL.md
+    description: "General data pipeline design fallback when the request does not identify a specific engine, connector or operational task."
+    triggers:
+      - "data engineering"
+      - "مهندسی داده"
+      - "data pipeline architecture"
+      - "generic etl pipeline"
+    excludes: []
+    status: active

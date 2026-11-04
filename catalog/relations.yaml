@@ -113,3 +113,32 @@ edges:
     to: [software-engineering, backend]
     relation: supports
     rationale: Internal developer platforms provide governed self-service interfaces for software delivery teams.
+
+  - from: [data, data-engineering, ingestion]
+    to: [data, data-engineering, batch-ingestion, cdc]
+    relation: supports
+    rationale: Connector ingestion and source CDC bootstrap share source-state and replay contracts.
+  - from: [data, data-engineering, lakehouse, ducklake]
+    to: [data, data-engineering, warehouse, duckdb]
+    relation: uses
+    rationale: DuckLake is accessed through compatible DuckDB clients; catalog and extension versions must align.
+  - from: [data, data-engineering, lakehouse, streaming-storage]
+    to: [data, data-engineering, distributed-processing, flink]
+    relation: uses
+    rationale: Flink integrations can write and read supported Fluss streaming tables and tiered data.
+  - from: [data, data-engineering, warehouse, starrocks]
+    to: [data, database-engineering, starrocks]
+    relation: related_to
+    rationale: Analytical warehouse design complements database-level StarRocks CDC and load transaction procedures.
+  - from: [data, data-engineering, streaming, sql-engines, risingwave]
+    to: [data, data-engineering, messaging, kafka]
+    relation: uses
+    rationale: RisingWave can consume Kafka sources when connector and delivery semantics are verified.
+  - from: [data, data-engineering, cloud, databricks]
+    to: [data, data-engineering, distributed-processing, spark]
+    relation: related_to
+    rationale: Databricks Lakeflow extends Spark Declarative Pipelines and must be distinguished from upstream runtime capabilities.
+  - from: [data, data-engineering, governance, openmetadata]
+    to: [data, data-governance, data-catalog]
+    relation: related_to
+    rationale: OpenMetadata operational ingestion complements enterprise catalog ownership, glossary and lineage governance.

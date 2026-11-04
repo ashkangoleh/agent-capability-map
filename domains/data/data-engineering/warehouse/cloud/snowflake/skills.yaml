@@ -1,0 +1,12 @@
+schema_version: 1
+id: snowflake
+kind: skill-registry
+skills:
+  - id: snowflake-data-platform-engineering
+    path: .agents/skills/snowflake-data-platform-engineering/SKILL.md
+    description: "Engineer Snowflake file and row ingestion, Snowpipe, Snowpipe Streaming, Streams and Tasks, Dynamic Tables and cost-aware refresh."
+    triggers:
+      - "snowflake"
+      - "snowpipe streaming"
+    excludes: []
+    status: active
