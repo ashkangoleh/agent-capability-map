@@ -3,7 +3,7 @@ id: bigquery
 kind: skill-registry
 skills:
   - id: bigquery-data-platform-engineering
-    path: .agents/skills/bigquery-data-platform-engineering/SKILL.md
+    path: .agents/skills/data/data-engineering/warehouse/cloud/bigquery/bigquery-data-platform-engineering/SKILL.md
     description: "Engineer BigQuery batch and streaming ingestion, Storage Write API offsets, partitioning, clustering, materialized views and cost controls."
     triggers:
       - "bigquery"

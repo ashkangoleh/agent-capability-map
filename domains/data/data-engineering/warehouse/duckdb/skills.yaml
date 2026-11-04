@@ -3,7 +3,7 @@ id: duckdb
 kind: skill-registry
 skills:
   - id: duckdb-parquet-transformation
-    path: .agents/skills/duckdb-parquet-transformation/SKILL.md
+    path: .agents/skills/data/data-engineering/warehouse/duckdb/duckdb-parquet-transformation/SKILL.md
     description: "Build bounded-memory DuckDB Parquet transformations with explicit process concurrency and safe publication."
     triggers:
       - "duckdb parquet"

@@ -3,7 +3,7 @@ id: snowflake
 kind: skill-registry
 skills:
   - id: snowflake-data-platform-engineering
-    path: .agents/skills/snowflake-data-platform-engineering/SKILL.md
+    path: .agents/skills/data/data-engineering/warehouse/cloud/snowflake/snowflake-data-platform-engineering/SKILL.md
     description: "Engineer Snowflake file and row ingestion, Snowpipe, Snowpipe Streaming, Streams and Tasks, Dynamic Tables and cost-aware refresh."
     triggers:
       - "snowflake"
