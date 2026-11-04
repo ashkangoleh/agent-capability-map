@@ -168,6 +168,7 @@ ids:
   - humanities-primary-source-critique
   - hybrid-search-ranking-design
   - iceberg-compaction-retention
+  - iceberg-rest-catalog-operations
   - iceberg-table-schema-partition-evolution
   - identity-access-privileged-infrastructure
   - imbalanced-classification-evaluation
