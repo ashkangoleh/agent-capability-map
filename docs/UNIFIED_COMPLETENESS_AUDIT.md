@@ -29,6 +29,12 @@ The `pre_release` branch was created from the latest unified branch, then integr
 
 These are structural inventory values, not a completeness or production-readiness score. Use `python scripts/report_coverage.py --summary` for live counts.
 
+## Post-audit structural additions (2026-11-04; not a new test certification)
+
+After the historical audited SHA above, Data Engineering added 19 specialist packages and three additional catalog specialists: vendor-neutral Iceberg REST, Project Nessie and Apache Gravitino. At this documentation update, the committed master skill-ID YAML lists **344 IDs** and the deterministic fixture YAML lists **385 cases**. These are direct file inventory counts. The historical 322 active skills, 348 fixtures and 54 unit tests in the audit table above refer to an earlier validated snapshot; they are **not** claimed as passing results on the updated branch.
+
+The catalog update includes protocol version and credential-delegation boundaries, vendor-specific routing exclusions, merge/commit timeout recovery, and tests for Persian/English and negative scope collisions. See `docs/DATA_ENGINEERING_CATALOG_OPERATIONS.md`. Full `Router.validate()`, routing fixture evaluation, unit suite, host integrations and real external catalog tests must be rerun and recorded against the newest HEAD.
+
 ## Domain maturity assessment
 
 | Domain | Assessment | What exists | What remains incomplete |
