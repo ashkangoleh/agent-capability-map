@@ -74,6 +74,12 @@ Two existing specialist skills were deepened for marginal conformal coverage ver
 
 **Next Data Science family is forecasting**, with rolling-origin, horizon-aware leakage, intermittent demand, probabilistic coverage and hierarchical reconciliation. The parent Data domain and Data Science are **incomplete**; Analytics Engineering and the other seven Data subdomains remain queued. See `docs/DATA_SCIENCE_UNCERTAINTY_CALIBRATION_PROTOCOL.md`.
 
+### Forecasting progression — 2026-11-05
+
+The four existing forecasting skills were deepened with rolling/expanding origin, as-of target/covariate availability, quantile scoring/crossing, additive hierarchy-coherence and stockout-vs-zero demand safeguards. A dependency-free example and **30 locally executed passing tests** were registered; **22** bilingual/near-miss routes were added. Inventory now has **445 routing fixture cases**, **344 master skill IDs**. See `docs/DATA_SCIENCE_FORECASTING_VALIDATION_PROTOCOL.md`.
+
+This completes a **forecasting implementation increment**, not forecasting certification: independent full Python graph/CI run, release-pinned statistical libraries, trained-model benchmarks, handling of non-additive hierarchies and actual lead-time inventory evaluation remain incomplete. **Next within Data Science: statistical inference, surveys and robustness**. The entire Data root remains incomplete.
+
 ### Next workstream: Data Science validation
 
 Start with the 42 specialist skills and their mapped task boundaries. Compare real method assumptions and independent reference datasets, especially leakage-free validation, survey/multiple-testing inference, causal identification, forecasting under distribution shift and conformal calibration. Verify primary references and test both positive and hard negative prompts rather than adding unrelated libraries. The [scikit-learn common pitfalls guide](https://scikit-learn.org/stable/common_pitfalls.html) is a canonical source for data leakage and preprocessing boundaries. The dbt [Semantic Layer YAML reference](https://docs.getdbt.com/reference/semantic-layer-reference) and [model governance](https://docs.getdbt.com/docs/mesh/govern/about-model-governance) are reference starting points for the **later** Analytics Engineering workstream; validate version and product entitlement before applying.
