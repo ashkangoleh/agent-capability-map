@@ -75,7 +75,10 @@ class ForecastRoutingTests(unittest.TestCase):
         }
         for skill_id, required in markers.items():
             with self.subTest(skill=skill_id):
-                content = (ROOT / ".agents" / "skills" / skill_id / "SKILL.md").read_text(encoding="utf-8").casefold()
+                category = "forecast" if skill_id == "time-series-forecast-backtesting" else "forecasting"
+                registry = load_yaml(ROOT, f"domains/data/data-science/{category}/skills.yaml")
+                path = next(item["path"] for item in registry["skills"] if item["id"] == skill_id)
+                content = (ROOT / path).read_text(encoding="utf-8").casefold()
                 for phrase in required:
                     self.assertIn(phrase.casefold(), content)
                 self.assertIn("## Failure modes and abstention".casefold(), content)
