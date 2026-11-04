@@ -54,6 +54,10 @@ children:
       - "time series forecast"
       - "forecast backtesting"
       - "demand forecasting"
+      - "rolling origin forecast backtesting"
+      - "forecast origin data availability"
+      - "rolling forecasting origin"
+      - "rolling origin forecast"
     status: active
     skills: domains/data/data-science/forecast/skills.yaml
   - id: feature-engineering
