@@ -9,7 +9,12 @@ This repository is the canonical source of the global YAML capability graph. Do 
 3. The resolver traverses catalog/root.yaml, then only relevant map.yaml and skills.yaml files; do not scan unrelated siblings.
 4. Read the returned skill_path only when status is matched. Load only the needed references for that skill. When a request explicitly spans domains, inspect typed relations with the related subcommand; never load all linked skills automatically. Existing project instructions and authorization requirements still apply.
 5. For needs_clarification, resolve the material ambiguity. For unavailable/unmatched, do not fabricate a skill or source.
+6. Respect the user-scoped domain allowlist at ~/.config/agent-capability-map/domains.yaml. If status is domain_not_enabled, do not bypass the selection by scanning other branches; show the required route and ask the user to enable it with the domains CLI.
 6. Separate verified facts, assumptions, inferences and recommendations; check current official documentation for changing APIs and versions. Never claim a benchmark or test was run without evidence.
+
+## User-selected domain scopes
+
+Users can inspect scopes with `capability-map domains list` and `capability-map domains status`. They can enable up to five non-overlapping scopes with `capability-map domains apply --domains <route...> --apply`; dry-run is the default. The profile is user-local and restricts resolver traversal without copying or executing skills. `domains clear --apply` restores unrestricted routing. See `docs/DOMAIN_SELECTION.md`.
 
 ## Personal and project skills
 

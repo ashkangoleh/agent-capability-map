@@ -2,7 +2,7 @@
 
 Global-first, YAML-driven, hierarchical discovery for reusable skills across coding agents. A single master map serves all projects. A user can **add personal skills** globally or per project without changing the master repository.
 
-The current `pre_release` baseline contains 42 top-level domains and 276 active SKILL.md packages. The deterministic routing suite contains 297 fixtures; passing it validates the YAML graph and lexical resolver, not semantic LLM accuracy or production execution. Many fine-grained subdomains remain mapped-only and require focused implementation and evaluation. Get live counts with `python scripts/report_coverage.py --summary`. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
+The current `pre_release` baseline contains 41 top-level domains and 276 active SKILL.md packages. The deterministic routing suite contains 297 fixtures; passing it validates the YAML graph and lexical resolver, not semantic LLM accuracy or production execution. Many fine-grained subdomains remain mapped-only and require focused implementation and evaluation. Get live counts with `python scripts/report_coverage.py --summary`. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
 
 ## Operating contract
 
@@ -54,6 +54,36 @@ For Claude Code, the installer also updates the user-level `settings.json` (or `
 These are host-specific entry points, **not guarantees** that all remote/cloud agent runs discover local user instructions. Native skill discovery, invocation and permissions vary. For VS Code/Cursor, verify the active harness, environment and applicable user rules. Global installation means the current user/machine; repeat in each remote worker/cloud container as appropriate.
 
 The installed Python interpreter must remain available and the cloned repository path must remain stable. The installer intentionally supports dry-run by default and refuses unsafe symlink targets or unmanaged Cursor skill collisions.
+
+## Select the domains available to the router
+
+Domain selection is user-controlled and independent of host installation. The user may enable up to **five non-overlapping domain scopes** in one operation. A scope can be a top-level domain (for example `infrastructure`) or a nested domain (for example `data/data-engineering` or `data/data-science`). Selecting `data` enables all of its descendants; selecting `data` together with `data/data-engineering` is rejected as redundant.
+
+Preview the available scopes and current profile:
+
+~~~sh
+capability-map domains list
+capability-map domains list --prefix data
+capability-map domains status
+~~~
+
+Replace the current selection (dry-run by default):
+
+~~~sh
+capability-map domains apply --domains data/data-engineering data/data-science infrastructure
+~~~
+
+Persist the selection only after reviewing the preview:
+
+~~~sh
+capability-map domains apply --domains data/data-engineering data/data-science infrastructure --apply
+~~~
+
+Use `domains add` and `domains remove` for incremental changes; use `domains clear --apply` to remove the allowlist and restore unrestricted routing. The profile is stored at `~/.config/agent-capability-map/domains.yaml`, is local to the user, and is shared by hosts that invoke this CLI. Apply is an atomic profile update; it does not copy, install, or execute domain software or skill files.
+
+When a profile exists, the resolver traverses only selected branches. A request outside the selection returns `domain_not_enabled`; it must not bypass the allowlist by scanning the repository. With no profile, existing unrestricted routing behavior is preserved. The five-scope limit controls enabled domain roots, **not** the number of skills inside them: progressive disclosure still returns one selected skill path at a time.
+
+See [Domain selection](docs/DOMAIN_SELECTION.md) for validation, overlap rules and lifecycle details.
 
 ## Use and inspect the YAML graph
 
@@ -225,7 +255,7 @@ This branch adds 49 specialist packages for lifecycle/modeling, ingestion/CDC, s
 
 ## First-class Data Science domain
 
-Data Science is a peer domain of Data Engineering, Infrastructure and AI/ML. It covers statistical inference, experiments, causal inference, classical ML, forecasting, survival, recommendation, geospatial science, optimization and scientific computing. See docs/DATA_SCIENCE_TOOL_MATRIX.md. AI/ML remains separate for deep learning, LLM engineering, MLOps and model serving.
+Data Science is a first-class subdomain under Data & Analytics, alongside Data Engineering, Analytics Engineering, Data Analysis, Database Engineering, BI and Governance. It covers statistical inference, experiments, causal inference, classical ML, forecasting, survival, recommendation, geospatial science, optimization and scientific computing. See docs/DATA_SCIENCE_TOOL_MATRIX.md. AI/ML remains a separate top-level domain for deep learning, LLM engineering, MLOps and model serving.
 
 ## Expanded Infrastructure Engineering
 

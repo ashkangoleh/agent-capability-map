@@ -51,6 +51,33 @@ children:
       - "iceberg"
     status: active
     map: domains/data/data-engineering/map.yaml
+  - id: data-science
+    label: "Data Science & Applied Statistics"
+    description: "Statistical reasoning, experimentation, scientific computing, classical machine learning and quantitative decision science."
+    triggers:
+      - "causal experiment design"
+      - "pandas eda"
+      - "imbalanced classification"
+      - "geospatial analysis"
+      - "point in time features"
+      - "anomaly detection"
+      - "data scientist"
+      - "data science"
+      - "statistical inference"
+      - "hypothesis testing"
+      - "causal inference"
+      - "bayesian modeling"
+      - "survival analysis"
+      - "time series forecast"
+      - "scikit-learn"
+      - "sklearn"
+      - "xgboost"
+      - "scientific computing"
+      - "model explainability"
+      - "geospatial statistics"
+      - "operations research"
+    map: domains/data/data-science/map.yaml
+    status: active
   - id: analytics-engineering
     description: "analytics engineering"
     triggers:

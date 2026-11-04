@@ -7,13 +7,25 @@ The authoritative source is a **hierarchical YAML capability graph**, not the ea
 ## Levels
 
 1. Global host instructions (`~/.claude/CLAUDE.md`, `~/.codex/AGENTS.md`, or relevant adapter) contain only small routing guidance and shell-safety rules.
-2. `catalog/root.yaml` maps user intent to one top-level domain.
-3. `domains/<domain>/map.yaml` routes into successive subdomains/technology families.
-4. A leaf `skills.yaml` advertises narrow skill IDs, descriptions, positive triggers and negative exclusions.
-5. The resolver returns only the selected `SKILL.md` path, or an explicit unmatched/unavailable/clarification status.
-6. Host agents load one selected skill and requested supporting references only when needed.
+2. The user-scoped allowlist at `~/.config/agent-capability-map/domains.yaml` optionally limits which top-level or nested domain scopes are eligible. With no profile, all active scopes remain eligible.
+3. `catalog/root.yaml` maps user intent to one top-level domain; only branches compatible with the allowlist are traversed.
+4. `domains/<domain>/map.yaml` routes into successive subdomains/technology families.
+5. A leaf `skills.yaml` advertises narrow skill IDs, descriptions, positive triggers and negative exclusions.
+6. The resolver returns only the selected `SKILL.md` path, or an explicit `domain_not_enabled`, unmatched, unavailable or clarification status.
+7. Host agents load one selected skill and requested supporting references only when needed.
 
 The Graph is intentionally **not** a graph database. `catalog/relations.yaml` supplies typed cross-domain edges for explicit `related` lookup, separate from default hierarchical traversal.
+
+## User-selected domain scopes
+
+- Users can list active selectable scopes and their structural coverage with `capability-map domains list`.
+- `capability-map domains apply --domains <route...>` previews a replacement allowlist; `--apply` writes it atomically.
+- Up to five non-overlapping routes are allowed. A parent scope includes all descendants, so parent/child pairs are rejected as redundant.
+- `add`, `remove`, `status` and `clear` manage the profile. Clearing restores unrestricted routing.
+- Selection is user-local and changes resolver eligibility only; it does not copy skills, install tools, or change the repository graph.
+- A disabled matching route returns `domain_not_enabled`; the host must not bypass the profile by scanning unselected branches.
+
+See `docs/DOMAIN_SELECTION.md`.
 
 ## Global and Personal Skills
 

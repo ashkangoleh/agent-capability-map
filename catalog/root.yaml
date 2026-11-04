@@ -3,8 +3,8 @@ id: root
 kind: root
 children:
   - id: data
-    label: "Data Engineering & Analytics"
-    description: "Data engineering, analytics, warehousing, governance, quality and business intelligence."
+    label: "Data & Analytics"
+    description: "Data engineering, data science, analytics, warehousing, governance, quality and business intelligence."
     triggers:
       - "experiment result analysis"
       - "sql explain plan"
@@ -85,18 +85,6 @@ children:
       - "data analytics"
       - "starrocks"
       - "sql transformation"
-    map: domains/data/map.yaml
-    status: active
-  - id: data-science
-    label: "Data Science & Applied Statistics"
-    description: "Statistical reasoning, experimentation, scientific computing, classical machine learning and quantitative decision science."
-    triggers:
-      - "causal experiment design"
-      - "pandas eda"
-      - "imbalanced classification"
-      - "geospatial analysis"
-      - "point in time features"
-      - "anomaly detection"
       - "data scientist"
       - "data science"
       - "statistical inference"
@@ -112,7 +100,11 @@ children:
       - "model explainability"
       - "geospatial statistics"
       - "operations research"
-    map: domains/data/data-science/map.yaml
+      - "pandas eda"
+      - "imbalanced classification"
+      - "point in time features"
+      - "anomaly detection"
+    map: domains/data/map.yaml
     status: active
   - id: infrastructure
     label: "Infrastructure & Platform"

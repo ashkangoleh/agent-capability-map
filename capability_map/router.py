@@ -5,6 +5,8 @@ from pathlib import Path
 
 import yaml
 
+from .domain_selection import load_domain_selection, route_is_in_scope
+
 
 class RouterError(ValueError):
     """Invalid, unsafe, or internally inconsistent capability mapping."""
@@ -147,6 +149,7 @@ class Router:
         self.root = Path(repo_root).expanduser().resolve()
         self.project = Path(project).expanduser().resolve() if project else None
         self.home = Path(home).expanduser().resolve() if home else Path.home().resolve()
+        self.domain_selection = load_domain_selection(self.root, self.home)
         self.inspected = []
 
     def _yaml(self, root, relative):
@@ -162,6 +165,8 @@ class Router:
             "candidates": list(candidates),
             "inspected_files": list(dict.fromkeys(self.inspected)),
         }
+        if self.domain_selection is not None:
+            result["enabled_domains"] = list(self.domain_selection)
         if skill is not None:
             result["selected_skill"] = skill["id"]
             result["skill_path"] = str(skill["path"])
@@ -207,6 +212,28 @@ class Router:
             children = data.get("children", [])
             if not isinstance(children, list):
                 raise RouterError(f"Expected children list at {path}")
+            if self.domain_selection is not None:
+                full_matches = ranked(request, children, include_mapped=True)
+                scoped_children = [
+                    child for child in children
+                    if route_is_in_scope(route + [child.get("id", "")], self.domain_selection)
+                ]
+                scoped_matches = ranked(request, scoped_children, include_mapped=True)
+                if full_matches and not scoped_matches:
+                    return self._result(
+                        "domain_not_enabled",
+                        route=route,
+                        message=(
+                            "The request matches a domain that is not enabled in this user profile. "
+                            "Inspect available domains and explicitly apply the required scope."
+                        ),
+                        candidates=[
+                            "/".join(route + [match[1]["id"]])
+                            for match in full_matches[:5]
+                        ],
+                    )
+                children = scoped_children
+
             node, failure = self._choose(request, children, route, include_mapped=True)
             if failure:
                 if not route and failure.get("message") == "The request does not identify a specific validated child capability.":

@@ -3,7 +3,7 @@
 ## Current integration baseline — 2026-11-04
 
 - Canonical branch: `pre_release`.
-- Inventory: 42 top-level domains and 276 active SKILL.md packages.
+- Inventory: 41 top-level domains and 276 active SKILL.md packages.
 - Validation: 297 deterministic routing fixtures and 31 unit tests pass on the current baseline.
 - Data Engineering expansion is in progress; the first source-specific CDC tranche covers Oracle GoldenGate, SQL Server CDC/Change Tracking and MongoDB Change Streams.
 - Next priorities: engine-specific warehouse skills, managed/event-streaming platforms, catalog and metadata operations, then deeper per-skill version and recovery evidence.
@@ -61,7 +61,7 @@ Prioritize skills by actual recurring tasks and evaluation gaps:
 
 ## Cross-domain specialist expansion (2026-11-03)
 
-A separate branch `feat/cross-domain-skill-expansion` adds 29 specialist skills across 29 previously unsupported or new top-level domains, plus 8 taxonomy extensions. All top-level domains now have at least one active skill but complete subdomain coverage, semantic/multilingual routing, and independent host-level quality assessment remain planned work.
+A separate branch `feat/cross-domain-skill-expansion` adds 29 specialist skills across 29 previously unsupported or new top-level domains, plus 8 taxonomy extensions. All 41 top-level domains now have at least one active skill but complete subdomain coverage, semantic/multilingual routing, and independent host-level quality assessment remain planned work.
 
 ## Deep Data Engineering expansion — 2026-11-03
 

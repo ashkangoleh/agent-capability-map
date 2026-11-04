@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Top-level domains: 42, all with at least one linked active skill.
+- Top-level domains: 41, all with at least one linked active skill.
 - Active skill packages: 276 (verified against the master index on `pre_release`).
 - Most fine-grained subdomains remain mapped-only and require focused skill development.
 - For exact current counts run `python scripts/report_coverage.py --summary`.
@@ -60,7 +60,7 @@ No measured hallucination reduction, token savings or all-host compatibility is 
 
 ## Cross-domain expansion
 
-See [CROSS_DOMAIN_EXPANSION.md](CROSS_DOMAIN_EXPANSION.md) for the additional 29 skills and 42-domain taxonomy. See [RESEARCH_SOURCES.md](RESEARCH_SOURCES.md) for the verified primary-source starting points. These are structurally active skills, not a claim of comprehensive expert evaluation.
+See [CROSS_DOMAIN_EXPANSION.md](CROSS_DOMAIN_EXPANSION.md) for the additional 29 skills and 41-domain taxonomy. See [RESEARCH_SOURCES.md](RESEARCH_SOURCES.md) for the verified primary-source starting points. These are structurally active skills, not a claim of comprehensive expert evaluation.
 
 ## Deep Data Engineering
 

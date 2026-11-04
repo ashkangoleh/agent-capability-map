@@ -19,7 +19,7 @@ The `pre_release` branch was created from the latest unified branch, then integr
 
 | Measure | Current value |
 |---|---:|
-| Top-level domains | 42 |
+| Top-level domains | 41 |
 | Active SKILL.md packages | 276 |
 | Nested map files | 68 |
 | Skill registries | 186 |
@@ -43,7 +43,7 @@ These are structural inventory values, not a completeness or production-readines
 
 - YAML graph validation: **PASS** (276 indexed active skills; 186 registries; typed relations validated).
 - Deterministic routing evaluation: **PASS** (297 fixtures; no failed cases).
-- Coverage report: **PASS** (42 top-level domains; 276 indexed active skills; 68 maps).
+- Coverage report: **PASS** (41 top-level domains; 276 indexed active skills; 68 maps).
 - CLI, security and overlay unit tests: **PASS** (31/31).
 - Host compatibility (Codex, OpenCode, Copilot, Claude Code, Cursor): **NOT VERIFIED**.
 - Semantic routing quality and false-positive/false-negative rates: **NOT MEASURED**.
