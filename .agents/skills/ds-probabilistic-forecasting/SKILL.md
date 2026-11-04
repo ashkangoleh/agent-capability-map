@@ -1,49 +1,65 @@
 ---
 name: ds-probabilistic-forecasting
-description: Use when forecasting predictive distributions, quantiles, prediction intervals, or uncertainty across multiple time-series horizons.
+description: "Validate forecast quantiles and predictive distributions with horizon-specific pinball loss, crossing, calibration, support and distribution-shift safeguards."
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # ds-probabilistic-forecasting
 
 ## Activation boundary
 
-Use when decisions depend on uncertainty, tail risk, service levels or quantiles rather than only a point forecast. Use ds-intermittent-demand-forecasting for sparse demand with many zero periods.
+Use for forecasting **conditional distributions or quantiles by future horizon** where business cost depends on uncertainty. A point forecast plus an arbitrary percentage band is not a calibrated prediction interval. Use `ds-conformal-prediction-uncertainty` for exchangeability-dependent split-conformal guarantees, `ds-hierarchical-forecasting` for joint hierarchical coherence, and `ds-intermittent-demand-forecasting` for sparse-demand lifecycle decisions.
 
 ## Required context
 
-Series grain, frequency, horizon, forecast origin, target distribution, covariate availability, seasonality, hierarchy, decision loss and interval/quantile requirements.
+Target and support (nonnegative, count, bounded or continuous); forecast origin and horizons; quantile levels/interval mass; decision cost and tail risk; calibration/evaluation windows; seasonality, entity and event segments; availability/shift assumptions; runtime versions and group sample sizes.
 
-## Workflow
+## Production workflow
 
-1. Define the predictive target and horizon. Specify whether decisions use quantiles, intervals, full distributions, exceedance probabilities or scenario paths.
-2. Establish seasonal-naive and simple statistical baselines. Use rolling-origin backtests with the same information available at each forecast origin.
-3. Select a distributional strategy: parametric predictive distributions, quantile regression, model ensembles, simulation or conformalized intervals. State the assumptions and what uncertainty sources are represented.
-4. Evaluate with proper scoring rules aligned to the target: pinball loss for quantiles, CRPS or log score for distributions, and coverage/width for intervals.
-5. Check calibration by horizon, series segment, season, geography and target range. Inspect sharpness only alongside calibration.
-6. Handle non-negative, count, bounded and zero-inflated outcomes with appropriate support. Do not clip negative forecasts without quantifying the resulting bias.
-7. Reconcile probabilistic forecasts across hierarchies when aggregation constraints matter; point reconciliation alone does not define coherent joint uncertainty.
-8. Evaluate covariate uncertainty, scenario assumptions, structural breaks and distribution shift. Distinguish parameter uncertainty from irreducible process variation.
-9. Report forecast distributions, quantiles, calibration, proper scores, horizon degradation and decision implications.
+1. Specify a predictive target, valid support and **each horizon**. Quantiles describe predictive distribution tails; quantile interval mass `q_high-q_low` is a target mass, not an empirical or conditional coverage guarantee.
+2. Use rolling-origin windows and an honest out-of-sample holdout with the information actually available at origin; never calibrate intervals on all-series in-sample residuals and reuse those same outcomes as independent tests.
+3. Choose a release-supported quantile/parametric/ensemble/simulation/conformal forecasting method. Record forecast origin, model version, quantile levels and covariate scenarios, especially uncertainty in future covariates.
+4. Validate **quantile monotonicity on every observation and horizon** (`q_0.1 <= q_0.5 <= q_0.9`). Do not silently sort crossing predictions into apparently valid outputs; correct the model/reconciliation method and revalidate.
+5. Measure **pinball loss** separately by quantile and horizon, empirical interval coverage and mean width; use CRPS or log score only for methods providing the relevant distribution, with assumptions and implementation version recorded. Mean pinball at `q=0.5` is half MAE for the same predictions.
+6. Check calibration/sharpness together and distribution support: zero inflation, bounded/count outputs, tail events, holiday spikes and subgroup sample sizes. Avoid clipping negative forecasts without evaluating the induced distribution and bias.
+7. Under shift, recalibrate and report degraded empirical reliability explicitly. IID conformal marginal coverage is **not automatically valid** under temporal dependence, even if nominal coverage happened to hold historically.
+8. For hierarchies, point forecasts adding correctly does **not** imply coherent joint predictive distributions; validate sample/pathwise or probabilistic reconciliation separately.
+9. Publish version-pinned model, origin/horizon metrics, scenario assumptions, monitoring thresholds and a baseline fallback/retrain policy. Use decision cost rather than narrowest interval as the default objective.
+
+## Runnable arithmetic and scope
+
+```python
+from examples.data_science.forecast_integrity import quantile_forecast_report
+
+out = quantile_forecast_report([0, 10], {0.1: [-2, 8], 0.9: [2, 12]})
+assert out["empirical_interval_coverage"] == 1.0
+assert out["nominal_interval_mass"] == 0.8
+```
+
+This is arithmetic on supplied **already held-out** observations. It does not fit a probabilistic model, check independence or guarantee nominal coverage. Test quantile crossing and numerical overflow with `python -m unittest discover -s tests -p 'test_data_science_forecast_integrity.py' -v`.
 
 ## Failure modes and abstention
 
-- Do not call a point forecast plus an arbitrary percentage band a prediction interval.
-- Do not use in-sample residuals as if they were independent future errors.
-- Do not compare quantile forecasts using only point-error metrics.
-- Do not claim conditional coverage from a marginal guarantee.
-- If the calibration window is unrepresentative or regime shift is severe, report degraded reliability.
+- Crossing quantiles, missing horizons or invalid probability levels → fail rather than silently rearrange scores.
+- Short calibration sample, drift, autocorrelation or changed covariate distribution → report nominal guarantee as unsupported.
+- Sparse counts or inventory stockouts → use zero-demand and availability controls, not a continuous Gaussian forecast by default.
+- Aggregate marginal interval coverage hiding undercoverage at important horizons/segments → report each segment separately and treat tiny groups as uncertain.
 
-## Validation checklist
+## Validation and evidence
 
-- [ ] Forecast origin and information set are explicit.
-- [ ] Backtesting is rolling-origin and leakage-safe.
-- [ ] Proper probabilistic scores and calibration are reported.
-- [ ] Coverage and sharpness are evaluated by horizon and subgroup.
-- [ ] Distribution support and hierarchy constraints are checked.
+- [ ] Origin/horizon, target support, quantile semantics and data lineage identified.
+- [ ] No quantile crossing; proper scores and empirical coverage reported by horizon.
+- [ ] Probabilistic/marginal assumptions distinguished from conditional guarantees.
+- [ ] Tail, shift, subgroup and decision-cost diagnostics documented.
+- [ ] Runtime version, model comparison and rollback/fallback supported by evidence.
 
-## Authoritative references
+## Output contract
 
-- https://nixtlaverse.nixtla.io/statsforecast/
-- https://scikit-learn.org/stable/modules/calibration.html
+Return supported quantile/distribution contract, per-horizon proper scores, coverage/width, support and crossing checks, uncertainty and operational cost, assumptions and fallback. No fabricated confidence, coverage guarantees or model results.
+
+## Official references
+
+- https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_pinball_loss.html
+- https://otexts.com/fpp3/
+- https://nixtla.github.io/statsforecast/docs/tutorials/crossvalidation.html
