@@ -101,6 +101,10 @@ python -m unittest discover -s tests -v
 
 Then run a version-pinned StatsForecast rolling-window backtest on a small, well-defined dataset, a horizon-specific quantile scoring experiment, and a HierarchicalForecast reconciliation experiment with a versioned hierarchy. Independently test stockout observations and lead-time inventory decisions. Record measured metrics and runtime.
 
+## Subsequent inference and survey workstream
+
+The later statistical inference/survey increment deepens existing multiple-testing, complex survey and missing-data skills. Its more recent evidence and known limits are in `docs/DATA_SCIENCE_INFERENCE_SURVEY_VALIDATION_PROTOCOL.md`. Continue with the **remaining Data Science specialist and host-behavioral audit**, not another top-level domain.
+
 ## Next Data Science focus
 
 Review statistical inference/survey methods (design effects, cluster/sampling weights, multiple testing, missingness, robust/bayesian uncertainty), then the remaining specialist boundaries. **Data Science and the top-level Data domain remain incomplete** until all required evidence and nine Data subdomain audits are finished.
