@@ -10,7 +10,7 @@ The repository exposed one comprehensive feature branch containing the Data Engi
 
 - Consolidated source branch: `feat/comprehensive-data-science-infrastructure`
 - Source head: `29505024130134fc4587990a7dba84e362a278b7`
-- Delta against `main` at audit time: 60 commits ahead, 0 behind at source-branch snapshot; the unified branch adds consolidation fixes and audit documentation.
+- Delta against `main` at audit time: 69 commits ahead, 0 behind; 300 changed paths against `main`.
 - Inventory at source head: 273 `SKILL.md` files and 42 top-level domain maps.
 - `main` remains unchanged. This branch is not yet merged into `main`.
 
@@ -55,19 +55,19 @@ This is not a defect if the intended state is discoverable taxonomy. It is incom
 
 ## Validation status and blockers
 
-The initial GitHub Actions run exposed duplicate sibling route IDs and stale cross-domain relation endpoints. These were corrected by disambiguating the new specialist nodes and preserving the original statistics, geospatial and network registries.
+The initial GitHub Actions runs exposed duplicate sibling route IDs, overwritten legacy registries, stale cross-domain relation endpoints and ambiguous routing fixtures. These were corrected: legacy statistics/geospatial/network registries were restored, new specialist registries were separated, route IDs were made unique and relation endpoints updated.
 
 ```
 Duplicate sibling ID orchestration: domains/data/data-engineering/map.yaml
 ```
 
-The root catalog now validates with 273 unique active skill IDs. The remaining workflow failure at the last completed run is a stale unit-test assertion that expected 41 top-level domains; Data Science promotion correctly increases the count to 42. The assertion and coverage snapshot are being updated, then the workflow must be rerun.
+The final GitHub Actions run passes all workflow steps. The coverage assertions were updated from 41 to 42 domains after promoting Data Science to a first-class root domain.
 
 The failed graph-validation step prevented the CLI/security/overlay test step from running. Therefore:
 - YAML graph validation: **PASS** (273 unique active skills; 186 registries; 25 typed relations)
-- Graph evaluation: **PASS** (289/291 routing fixtures at the previous run; two specialist triggers were corrected in the next commit; rerun pending)
-- Coverage report: **PASS at structural step**; final refreshed report pending
-- CLI, security and overlay unit tests: **30/31 passed**; one stale assertion expected 41 rather than 42 top-level domains
+- Graph evaluation: **PASS** (291/291 deterministic routing fixtures)
+- Coverage report: **PASS** (42 top-level domains; 273 indexed active skills)
+- CLI, security and overlay unit tests: **PASS** (31/31 tests)
 - Host compatibility (Codex, OpenCode, Copilot, Claude Code, etc.): **NOT VERIFIED**
 - Semantic routing quality: **NOT MEASURED**
 - Production readiness: **NOT ESTABLISHED**
@@ -82,7 +82,7 @@ The failed graph-validation step prevented the CLI/security/overlay test step fr
 6. Add per-skill version/context prerequisites, evidence requirements, safe execution boundaries and recovery/rollback behavior where relevant.
 7. Add reproducible examples and versioned compatibility notes for major tools; distinguish conceptual skills from runnable integrations.
 8. Run host-specific compatibility tests and record exact host/model/version combinations.
-9. Only after required checks pass, open/review/merge the pull request to `main`.
+9. Required automated checks now pass. Human review is still required before merging the pull request to `main`.
 
 ## Interpretation
 
