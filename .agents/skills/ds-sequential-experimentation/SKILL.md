@@ -2,7 +2,7 @@
 name: ds-sequential-experimentation
 description: Use when experiments are monitored repeatedly, stopped early, adapted, or analyzed with sequentially valid inference.
 metadata:
-  version: "1.2.0"
+  version: "1.1.0"
 ---
 
 # ds-sequential-experimentation
