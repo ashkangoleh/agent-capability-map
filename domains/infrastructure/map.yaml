@@ -100,6 +100,7 @@ children:
   - id: devsecops
     description: "Security automation, policy-as-code and software supply-chain controls"
     triggers:
+      - "slsa provenance attestation"
       - "devsecops security gates"
       - "policy as code opa kyverno"
       - "falco runtime security detection"

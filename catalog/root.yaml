@@ -89,6 +89,7 @@ children:
     label: "Data Science & Applied Statistics"
     description: "Statistical reasoning, experimentation, scientific computing, classical machine learning and quantitative decision science."
     triggers:
+      - "causal inference sensitivity analysis"
       - "point in time features"
       - "imbalanced classification"
       - "geospatial analysis"
@@ -114,6 +115,7 @@ children:
     label: "Infrastructure & Platform"
     description: "Cloud engineering, DevOps, Kubernetes, networking, systems and reliability."
     triggers:
+      - "slsa provenance attestation"
       - "linux systemd"
       - "container security"
       - "internal developer platform"

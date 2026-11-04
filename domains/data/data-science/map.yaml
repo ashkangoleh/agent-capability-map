@@ -88,6 +88,7 @@ children:
   - id: experimentation
     description: "Experiments and causal design"
     triggers:
+      - "causal inference sensitivity analysis"
       - "ab test guardrail analysis"
       - "causal experiment design"
     status: active

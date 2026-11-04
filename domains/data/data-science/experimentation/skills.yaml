@@ -14,5 +14,6 @@ skills:
     description: "Choose randomized, quasi-experimental or observational causal designs from estimand and identification assumptions."
     triggers:
       - "causal experiment design"
+      - "causal inference sensitivity analysis"
     excludes: []
     status: active

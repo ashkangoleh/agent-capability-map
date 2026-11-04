@@ -35,6 +35,7 @@ skills:
     description: "Harden software supply chains with SLSA provenance, SBOM, dependency attestations and release verification."
     triggers:
       - "slsa sbom software supply chain"
+      - "slsa provenance attestation"
     excludes: []
     status: active
   - id: secrets-workload-identity-spiffe

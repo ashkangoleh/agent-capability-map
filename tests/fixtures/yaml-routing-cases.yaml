@@ -938,7 +938,7 @@ cases:
     status: matched
     skill: ds-ab-experimentation
   - id: ds-expanded-ds-causal-inference
-    request: "Data scientist: causal experiment design"
+    request: "causal inference sensitivity analysis"
     status: matched
     skill: ds-causal-inference
   - id: ds-expanded-ds-gradient-boosting
@@ -1031,7 +1031,7 @@ cases:
     status: matched
     skill: container-image-signing-sigstore
   - id: infra-expanded-software-supply-chain-slsa-sbom
-    request: "slsa sbom software supply chain"
+    request: "slsa provenance attestation"
     status: matched
     skill: software-supply-chain-slsa-sbom
   - id: infra-expanded-secrets-workload-identity-spiffe
