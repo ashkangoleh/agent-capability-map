@@ -105,6 +105,18 @@ The existing `ds-conformal-prediction-uncertainty` and `ds-model-calibration` sp
 
 No guarantee of conditional coverage, exchangeability, cross-group fairness, calibration under shift, or production readiness is established by these structural/source tests.
 
+## Forecasting specialist operational hardening — 2026-11-05 (post-audit)
+
+Four existing Data Science forecasting skills were deepened in place: `time-series-forecast-backtesting`, `ds-probabilistic-forecasting`, `ds-hierarchical-forecasting` and `ds-intermittent-demand-forecasting`. Their IDs and the existing **42-skill** Data Science structural inventory are unchanged.
+
+- Added `examples/data_science/forecast_integrity.py` for bounded rolling origin generation, time/target/covariate availability checks, quantile crossing and pinball scoring, basic one-level hierarchy coherence and true-zero versus stockout/missing-demand profiling.
+- Added `tests/test_data_science_forecast_integrity.py`: **30/30 actual locally executed tests PASS**; exact Git blob SHAs match the locally executed source/test files. This is **not** a trained-model benchmark.
+- Added `tests/test_data_science_forecast_routing.py` and **22** `ds-forecast-*` deterministic fixtures (positive, bilingual and near-miss). Current fixture file totals **445** cases; `catalog/master-skill-ids.yaml` still contains **344 unique IDs**.
+- JavaScript reconstruction of the lexical resolver using the live GitHub YAML matched **22/22 new routes**; no duplicate triggers in the changed maps/registries. **Actual Python Router, full-suite test execution and GitHub push CI remain NOT VERIFIED.**
+- Formal scope/failure/verification details: `docs/DATA_SCIENCE_FORECASTING_VALIDATION_PROTOCOL.md`. No production engine performance, version-pinned StatsForecast/HierarchicalForecast run, real-agent host behavior or independent statistical review has been established.
+
+**Next Data Science family:** statistical inference and surveys, with proper multiplicity, sampling weights, missingness, robust/Bayesian uncertainty and validity boundaries. Do not mark Data Science or the top-level Data domain complete.
+
 ## Remaining limitations
 
 1. Routing fixtures measure deterministic lexical matching, not semantic accuracy of an LLM choosing when to call the resolver.
