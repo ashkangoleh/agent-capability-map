@@ -162,6 +162,16 @@ children:
       - "forecast prediction intervals calibration"
       - "intermittent demand forecasting"
       - "croston sba tsb"
+      - "probabilistic forecasting quantile crossing"
+      - "forecast pinball loss by horizon"
+      - "forecast quantile coverage by horizon"
+      - "hierarchical forecasting reconciliation"
+      - "hierarchical forecast coherence"
+      - "hierarchical summing matrix"
+      - "hierarchical forecasting"
+      - "intermittent demand croston tsb"
+      - "sparse demand forecast stockout"
+      - "intermittent demand obsolescence"
     status: active
     skills: domains/data/data-science/forecasting/skills.yaml
   - id: recommendation
