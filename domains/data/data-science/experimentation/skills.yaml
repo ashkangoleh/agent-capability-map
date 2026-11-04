@@ -28,6 +28,9 @@ skills:
       - "sequential experimentation"
       - "always valid inference"
       - "group sequential ab testing"
+      - "group sequential alpha spending"
+      - "continuous monitoring sequential experiment"
+      - "sequential experiment early stopping"
     excludes:
       - "fixed horizon ab test analysis"
     status: active
