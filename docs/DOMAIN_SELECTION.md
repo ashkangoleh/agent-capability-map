@@ -61,7 +61,7 @@ capability-map domains clear
 capability-map domains clear --apply
 ~~~
 
-`apply` replaces the complete selection. `add` is idempotent for already registered routes. `remove` only removes currently registered routes and refuses to leave an empty restricted profile; use `clear` to deliberately restore unrestricted routing.
+`apply` replaces the complete selection. `add` is idempotent for already registered routes. If no profile exists, `add` starts a restricted allowlist containing only the requested scopes; it does not mean “all domains plus these scopes”. `remove` only removes currently registered routes and refuses to leave an empty restricted profile; use `clear` to deliberately restore unrestricted routing.
 
 ## Storage and transaction semantics
 

@@ -43,6 +43,17 @@ class DomainSelectionTests(unittest.TestCase):
         self.assertFalse(Path(result["profile_path"]).exists())
         self.assertEqual(domain_status(ROOT, self.home)["mode"], "all")
 
+    def test_add_from_unrestricted_starts_a_restricted_selection(self):
+        result = update_domain_selection(
+            ROOT, self.home, ["infrastructure"], operation="add", apply=True
+        )
+        self.assertEqual(result["before_mode"], "all")
+        self.assertEqual(result["after_mode"], "restricted")
+        self.assertEqual(result["after_domains"], ["infrastructure"])
+        self.assertEqual(
+            domain_status(ROOT, self.home)["registered_domains"], ["infrastructure"]
+        )
+
     def test_apply_restricts_router_to_selected_domain(self):
         self.apply(["data/data-engineering"])
         result = Router(ROOT, home=self.home).resolve("Create a new PySpark project")

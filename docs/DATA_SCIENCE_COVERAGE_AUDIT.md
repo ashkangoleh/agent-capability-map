@@ -14,12 +14,16 @@ Data Science is a first-class subdomain under `data`, with canonical route `data
 | Active subdomain maps | 20 |
 | Active specialist skills | 42 |
 | New specialist skills in this expansion | 11 |
+| Existing specialist skills materially rewritten | 15 |
+| Defined capability areas with active routes | 26 / 26 |
 | Positive fixtures for new specialists | 11 |
 | Near-miss fixtures for cross-domain boundaries | 5 |
 
 The 42 count is the active registry inventory, not a benchmark score.
 
 ## Capability coverage matrix
+
+All 26 areas below have at least one active specialist route and registry. This is 100% structural coverage of the declared matrix; it is not a claim that every statistical method, package, or production use case has been independently certified.
 
 | Capability area | Current specialist coverage | Status |
 |---|---|---|
