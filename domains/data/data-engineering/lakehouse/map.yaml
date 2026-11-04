@@ -35,6 +35,8 @@ children:
       - "polaris"
       - "lakekeeper"
       - "iceberg rest catalog"
+      - "iceberg catalog commit retry"
+      - "iceberg rest endpoint discovery"
     status: active
     map: domains/data/data-engineering/lakehouse/catalogs/map.yaml
   - id: object-storage
