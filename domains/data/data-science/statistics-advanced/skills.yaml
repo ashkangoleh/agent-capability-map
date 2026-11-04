@@ -14,6 +14,9 @@ skills:
     description: "Build Bayesian models with explicit priors, likelihoods, posterior diagnostics and sensitivity analysis."
     triggers:
       - "bayesian modeling pymc stan"
+      - "rank normalized rhat ess bayesian"
+      - "pymc prior posterior predictive check"
+      - "bayesian mcmc divergence diagnostic"
     excludes: []
     status: active
   - id: ds-missing-data
