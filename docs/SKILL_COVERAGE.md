@@ -74,3 +74,7 @@ The current feature branch adds specialist packages beyond the 29 historical dee
 ## Infrastructure Engineering expansion
 
 The new specialist packages add explicit DevSecOps, SRE, networking, cloud foundations, systems, storage, virtualization, database operations, Kubernetes lifecycle, service mesh and platform-engineering routes. This is structural coverage; validate runtime compatibility and operational behavior against deployed versions.
+
+## Unified completeness audit
+
+See `UNIFIED_COMPLETENESS_AUDIT.md` for the consolidated branch inventory, domain-by-domain gaps, CI failure and explicit completion gates. Do not equate an active route or a SKILL.md file with a production-validated capability.

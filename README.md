@@ -230,3 +230,7 @@ Data Science is a peer domain of Data Engineering, Infrastructure and AI/ML. It 
 ## Expanded Infrastructure Engineering
 
 Infrastructure now has dedicated specialist routes for DevOps/IaC, DevSecOps, SRE, networking, cloud, Linux/Windows systems, virtualization, storage, databases, Kubernetes, service mesh and platform engineering. See docs/INFRASTRUCTURE_TOOL_MATRIX.md. Existing Kubernetes, Terraform, Ansible, GitOps, Prometheus, OpenTelemetry, Vault and network diagnostics skills remain intact.
+
+## Unified master branch
+
+The consolidated development branch is `feat/unified-master-capability-map`. See `docs/UNIFIED_COMPLETENESS_AUDIT.md` for domain maturity, known gaps, validation status and merge gates. This branch is not production-certified and has not been merged to `main`.
