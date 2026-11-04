@@ -6,6 +6,7 @@ children:
     label: "Data Engineering & Analytics"
     description: "Data engineering, analytics, warehousing, governance, quality and business intelligence."
     triggers:
+      - "experiment result analysis"
       - "sql explain plan"
       - "clickhouse mergetree"
       - "elasticsearch pit"
@@ -92,7 +93,6 @@ children:
       - "imbalanced classification"
       - "geospatial analysis"
       - "point in time features"
-      - "experiment result analysis"
       - "anomaly detection"
       - "data scientist"
       - "data science"
