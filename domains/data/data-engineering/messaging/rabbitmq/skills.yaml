@@ -3,7 +3,7 @@ id: rabbitmq-consumer-delivery-safety
 kind: skill-registry
 skills:
   - id: rabbitmq-consumer-delivery-safety
-    path: .agents/skills/rabbitmq-consumer-delivery-safety/SKILL.md
+    path: .agents/skills/data/data-engineering/messaging/rabbitmq/rabbitmq-consumer-delivery-safety/SKILL.md
     description: "Engineer RabbitMQ consumer acknowledgments, publisher confirms, quorum queues and dead-letter replay without message loss claims."
     triggers:
       - "rabbitmq"

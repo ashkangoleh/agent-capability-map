@@ -3,7 +3,7 @@ id: nats
 kind: skill-registry
 skills:
   - id: nats-jetstream-data-streaming
-    path: .agents/skills/nats-jetstream-data-streaming/SKILL.md
+    path: .agents/skills/data/data-engineering/messaging/nats/nats-jetstream-data-streaming/SKILL.md
     description: "Operate NATS JetStream streams and durable consumers with acknowledgement, redelivery, replay, retention and idempotent sink handling."
     triggers:
       - "nats jetstream"

@@ -3,7 +3,7 @@ id: kinesis-stream-consumer-recovery
 kind: skill-registry
 skills:
   - id: kinesis-stream-consumer-recovery
-    path: .agents/skills/kinesis-stream-consumer-recovery/SKILL.md
+    path: .agents/skills/data/data-engineering/messaging/kinesis/kinesis-stream-consumer-recovery/SKILL.md
     description: "Design Kinesis Data Streams consumers, shard checkpoints, resharding and replay with measured read capacity and sink safety."
     triggers:
       - "kinesis"

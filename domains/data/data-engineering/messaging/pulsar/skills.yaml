@@ -3,7 +3,7 @@ id: pulsar-subscription-replay
 kind: skill-registry
 skills:
   - id: pulsar-subscription-replay
-    path: .agents/skills/pulsar-subscription-replay/SKILL.md
+    path: .agents/skills/data/data-engineering/messaging/pulsar/pulsar-subscription-replay/SKILL.md
     description: "Design Apache Pulsar subscriptions, acknowledgment and redelivery semantics with ordering, retention and dead-letter behavior."
     triggers:
       - "apache pulsar"
