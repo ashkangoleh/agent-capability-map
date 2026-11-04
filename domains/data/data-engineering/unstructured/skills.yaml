@@ -1,5 +1,5 @@
 schema_version: 1
-id: unstructured
+id: unstructured-data
 kind: skill-registry
 skills:
   - id: unstructured-data-ingestion-engineering
