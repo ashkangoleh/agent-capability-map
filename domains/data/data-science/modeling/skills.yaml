@@ -14,6 +14,10 @@ skills:
     description: "Evaluate probability calibration and decision thresholds against prevalence, asymmetric costs and constraints."
     triggers:
       - "model calibration threshold analysis"
+      - "probability calibration reliability diagram"
+      - "calibrated classifier cv"
+      - "classifier calibration brier score"
+      - "کالیبراسیون احتمال طبقه بندی"
     excludes: []
     status: active
   - id: ds-shap-explainability
