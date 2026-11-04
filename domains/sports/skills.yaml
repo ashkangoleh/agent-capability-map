@@ -3,7 +3,7 @@ id: sports
 kind: skill-registry
 skills:
   - id: sports-training-evidence-plan
-    path: .agents/skills/sports-training-evidence-plan/SKILL.md
+    path: .agents/skills/sports/core/sports-training-evidence-plan/SKILL.md
     description: "Develop evidence-aware general fitness training progression and recovery plans without medical diagnosis."
     triggers:
       - "fitness training"

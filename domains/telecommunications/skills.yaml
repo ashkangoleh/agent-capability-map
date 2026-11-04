@@ -3,7 +3,7 @@ id: telecommunications
 kind: skill-registry
 skills:
   - id: telecom-network-change-review
-    path: .agents/skills/telecom-network-change-review/SKILL.md
+    path: .agents/skills/telecommunications/core/telecom-network-change-review/SKILL.md
     description: "Use for telecom network change review with verified topology, signaling dependencies and outage rollback gates."
     triggers:
       - "telecom network change"
