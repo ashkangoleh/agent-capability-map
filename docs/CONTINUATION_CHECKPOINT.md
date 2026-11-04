@@ -46,6 +46,27 @@ Domain selection: users choose **up to five non-overlapping selectable domain sc
 - GitHub connector returned no associated PR workflow runs or combined status checks for the last observed commit. **Do not say the latest CI is green** on that evidence alone.
 - Real semantic routing accuracy, false activation rates, actual token usage improvements and end-to-end multi-host compatibility remain unmeasured/unverified.
 
+## Data Science working slice — 2026-11-04 (active)
+
+**Current active subdomain is still `data/data-science`**; only the model-validation family was improved in this increment. Neither Data Science nor the whole Data domain is complete. Data Engineering remains broad but unverified and separately backlogged.
+
+Changes on `pre_release`:
+- Rewrote existing `.agents/skills/sklearn-leakage-free-validation/SKILL.md` (version 1.1.0) for split selection, group/time leakage, future label availability, nested tuning, preprocessing isolation, failure/recovery and version-aware source references.
+- Changed `catalog/root.yaml`, `domains/data/map.yaml`, `domains/data/data-science/map.yaml`, and `domains/data/data-science/model-validation/skills.yaml` to preserve Data Science discovery but **abstain** on lone `sklearn` or `scikit-learn`, requiring task-discriminative validation intent.
+- Added `examples/data_science/split_integrity.py` (no mandatory third-party dependencies; optional NumPy arrays) and `tests/test_data_science_split_integrity.py`. Local tests run on the source-equivalent helper: **17 passed**. Catches index/group/time/label-availability boundary violations, but does NOT certify whole-pipeline leakage freedom.
+- Added 11 `ds-validation-*` routing fixtures and `tests/test_data_science_validation_routing.py`; total fixture YAML **396**; master skill ID YAML remains **344 unique**. The 11 cases were checked successfully with a **separate JS lexical routing reconstruction**, NOT Python `Router.resolve` or CI.
+- Updated `README.md`, `docs/DATA_SCIENCE_COVERAGE_AUDIT.md`, and `docs/DATA_DOMAIN_COMPLETENESS_STATUS.md`. Detailed decision matrix and evidence limits: `docs/DATA_SCIENCE_VALIDATION_PROTOCOL.md`.
+
+**Critical nuance:** future forecasting of known entities may reuse entities across train/test; group-disjoint evaluation is specifically needed for unseen-entity generalization. A `TimeSeriesSplit` sample gap is not equivalent to a wall-clock embargo, and overlapping labels can invalidate simple chronological validation.
+
+**Next steps within Data Science:**
+1. Obtain actual `pre_release` push GitHub Actions validation and run `python -m capability_map validate`, `python scripts/evaluate_graph.py`, `python scripts/report_coverage.py --summary`, and `python -m unittest discover -s tests -v` at the current head. No full-suite green result has been verified.
+2. Validate a version-pinned sklearn synthetic example using actual `Pipeline`, group/time splitters, late labels, nested tuning and real fitted data; measure and label all results (not invented benchmarks).
+3. Advance to the **causal inference + experimentation** specialist family: causal identification assumptions, randomized unit/cluster integrity, inference and sequential stopping with hard negative and bilingual routing tests.
+4. Then conformal/calibration, forecasting, inference/survey science and the remaining 42-skill specialist review. Keep all nine Data subdomains open until their own gates pass.
+
+**Checkpoint source HEAD before this documentation update:** `8f11ffdd8ec666996f821aab785e43f6f4c7c037`. Fetch live branch HEAD at the beginning of the next chat.
+
 ## Data top-level scope decision — 2026-11-04
 
 The user explicitly clarified that the completion target is **all of `data`**, not only `data/data-engineering`, and authorized the next subdomain. The top-level Data domain is **NOT COMPLETE**. It has **nine first-class subdomains**. Do **not** switch to Infrastructure or any unrelated top-level domain now.
