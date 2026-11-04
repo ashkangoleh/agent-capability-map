@@ -93,6 +93,18 @@ The three existing skills `ds-causal-inference`, `ds-ab-experimentation` and `ds
 
 See `docs/DATA_SCIENCE_CAUSAL_EXPERIMENTATION_PROTOCOL.md` for error assumptions and the required execution/reproduction gates.
 
+## Conformal prediction and probability calibration — 2026-11-05 (post-audit)
+
+The existing `ds-conformal-prediction-uncertainty` and `ds-model-calibration` specialists were hardened without adding skill IDs. The first now specifies finite-sample split-conformal quantile rank and exchangeability/coverage boundaries; the second separates probability reliability, discrimination and threshold utility, including scikit-learn 1.6 `FrozenEstimator` and 1.8 temperature scaling compatibility.
+
+- New dependency-free arithmetic example: `examples/data_science/uncertainty_integrity.py`.
+- **23/23 locally executed** standard-library tests on the exact code replicated in `tests/test_data_science_uncertainty_integrity.py` (partition collisions, quantile rank, sparse calibration, probability bounds, numeric overflow).
+- **15 new** positive, bilingual and near-miss `ds-uncertainty-*` routing fixtures, guarded by `tests/test_data_science_uncertainty_routing.py`. Fixture file total is **423**; index remains **344 unique** master skill IDs.
+- An independent JS reconstruction of lexical routing matched 15/15 newly proposed requests. **Python router/CI/full-suite results and real-agent performance remain NOT VERIFIED.**
+- Detailed claims, mathematical/operational limitations, and acceptance procedure: `docs/DATA_SCIENCE_UNCERTAINTY_CALIBRATION_PROTOCOL.md`.
+
+No guarantee of conditional coverage, exchangeability, cross-group fairness, calibration under shift, or production readiness is established by these structural/source tests.
+
 ## Remaining limitations
 
 1. Routing fixtures measure deterministic lexical matching, not semantic accuracy of an LLM choosing when to call the resolver.
