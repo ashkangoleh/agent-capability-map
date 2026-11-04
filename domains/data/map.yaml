@@ -5,6 +5,14 @@ children:
   - id: data-engineering
     description: "data engineering"
     triggers:
+      - "gravitino iceberg rest"
+      - "gravitino federated catalog"
+      - "gravitino metalake"
+      - "apache gravitino"
+      - "nessie iceberg rest"
+      - "nessie branch merge"
+      - "project nessie"
+      - "nessie versioned catalog"
       - "clickhouse"
       - "elasticsearch pit"
       - "nifi"
