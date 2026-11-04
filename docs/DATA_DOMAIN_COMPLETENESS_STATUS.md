@@ -68,6 +68,12 @@ Existing randomized A/B, causal identification and sequential experimentation sp
 
 This closes one **implementation increment**, not the entire causal domain: real A/A calibration, clustered/stratified allocation, version-pinned estimator evaluations, actual early-stopping simulations and multi-host task tests remain open. **Next Data Science subfamily: conformal prediction and probability calibration**, then forecasting and inferential statistics. The top-level Data domain remains incomplete.
 
+### Conformal and probability calibration progress — 2026-11-05
+
+Two existing specialist skills were deepened for marginal conformal coverage versus calibrated class probabilities, separate calibration/test data, finite-sample score rank, sparse subgroup evidence, shift, and versioned sklearn/MAPIE APIs. Added `examples/data_science/uncertainty_integrity.py` and **23 locally executed tests** plus **15** hard-negative and bilingual route cases. Current source fixture inventory: **423** cases; master skill index **344** entries. Full GitHub push CI, Python graph validation and model-level evaluation remain unverified.
+
+**Next Data Science family is forecasting**, with rolling-origin, horizon-aware leakage, intermittent demand, probabilistic coverage and hierarchical reconciliation. The parent Data domain and Data Science are **incomplete**; Analytics Engineering and the other seven Data subdomains remain queued. See `docs/DATA_SCIENCE_UNCERTAINTY_CALIBRATION_PROTOCOL.md`.
+
 ### Next workstream: Data Science validation
 
 Start with the 42 specialist skills and their mapped task boundaries. Compare real method assumptions and independent reference datasets, especially leakage-free validation, survey/multiple-testing inference, causal identification, forecasting under distribution shift and conformal calibration. Verify primary references and test both positive and hard negative prompts rather than adding unrelated libraries. The [scikit-learn common pitfalls guide](https://scikit-learn.org/stable/common_pitfalls.html) is a canonical source for data leakage and preprocessing boundaries. The dbt [Semantic Layer YAML reference](https://docs.getdbt.com/reference/semantic-layer-reference) and [model governance](https://docs.getdbt.com/docs/mesh/govern/about-model-governance) are reference starting points for the **later** Analytics Engineering workstream; validate version and product entitlement before applying.
