@@ -50,6 +50,10 @@ class AssignmentIntegrityTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unknown arm"):
             audit_assignment_ratio([("u1", "C")], {"A": .5, "B": .5})
 
+    def test_unhashable_arm_rejected(self):
+        with self.assertRaisesRegex(ValueError, "Arm must be a string"):
+            audit_assignment_ratio([("u1", ["A"])], {"A": .5, "B": .5})
+
     def test_malformed_event_rejected(self):
         with self.assertRaisesRegex(ValueError, "pair"):
             audit_assignment_ratio([("u1",)], {"A": .5, "B": .5})
