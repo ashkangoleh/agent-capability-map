@@ -1624,3 +1624,63 @@ cases:
     request: "Analyze experiment result analysis and guardrails"
     status: matched
     skill: experiment-analysis-results
+  - id: ds-uncertainty-conformal-rank
+    request: "Audit split conformal regression finite sample quantile"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-uncertainty-conformal-marginal
+    request: "Evaluate conformal marginal coverage for regression predictions"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-uncertainty-conformal-subgroup
+    request: "Review conformal subgroup coverage under distribution shift"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-uncertainty-conformal-residual
+    request: "Compute conformal residual quantile on held out calibration"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-uncertainty-conformal-persian
+    request: "بررسی بازه پیش‌بینی کانفورمال برای پوشش داده"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-uncertainty-calibration-reliability
+    request: "Audit probability calibration reliability diagram for binary classifier"
+    status: matched
+    skill: ds-model-calibration
+  - id: ds-uncertainty-calibration-frozen
+    request: "Check calibrated classifier cv with FrozenEstimator and disjoint data"
+    status: matched
+    skill: ds-model-calibration
+  - id: ds-uncertainty-calibration-brier
+    request: "Review classifier calibration brier score and bin reliability"
+    status: matched
+    skill: ds-model-calibration
+  - id: ds-uncertainty-calibration-persian
+    request: "ارزیابی کالیبراسیون احتمال طبقه بندی و نمودار reliability"
+    status: matched
+    skill: ds-model-calibration
+  - id: ds-uncertainty-calibration-existing
+    request: "Data scientist: model calibration threshold analysis"
+    status: matched
+    skill: ds-model-calibration
+  - id: ds-uncertainty-forecast-near-miss
+    request: "Data scientist: probabilistic forecasting quantile prediction intervals calibration"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-uncertainty-parameter-near-miss
+    request: "Plan statistical inference confidence interval study"
+    status: matched
+    skill: statistical-inference-design
+  - id: ds-uncertainty-bayesian-near-miss
+    request: "Data scientist: bayesian modeling pymc stan posterior credible interval"
+    status: matched
+    skill: ds-bayesian-pymc-stan
+  - id: ds-uncertainty-conformal-existing
+    request: "Construct conformal prediction intervals with coverage checks"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-uncertainty-fairness-near-miss
+    request: "Data scientist: fairness subgroup evaluation equalized odds demographic parity"
+    status: matched
+    skill: ds-fairness-subgroup-evaluation
