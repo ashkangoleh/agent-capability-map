@@ -9,5 +9,9 @@ skills:
       - "time series forecast"
       - "forecast backtesting"
       - "demand forecasting"
+      - "rolling origin forecast backtesting"
+      - "forecast origin data availability"
+      - "rolling forecasting origin"
+      - "rolling origin forecast"
     excludes: []
     status: active
