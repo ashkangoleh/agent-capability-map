@@ -75,25 +75,6 @@ children:
       - "query optimization"
     status: active
     map: domains/data/database-engineering/map.yaml
-  - id: data-science
-    description: "data science"
-    triggers:
-      - "pandas eda data profiling"
-      - "anomaly detection"
-      - "geospatial analysis"
-      - "pandas eda"
-      - "imbalanced classification"
-      - "point in time features"
-      - "time series forecast"
-      - "causal inference"
-      - "statistical inference"
-      - "sklearn"
-      - "scikit-learn"
-      - "data science"
-      - "statistical analysis"
-      - "feature engineering"
-    status: active
-    map: domains/data/data-science/map.yaml
   - id: data-analysis
     description: "Data analysis, statistical reporting and analytical metric diagnosis"
     triggers:

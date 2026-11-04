@@ -1,0 +1,46 @@
+schema_version: 1
+id: devsecops
+kind: skill-registry
+skills:
+  - id: devsecops-security-gates
+    path: .agents/skills/devsecops-security-gates/SKILL.md
+    description: "Integrate security controls into build and deployment pipelines without hiding risk behind green checks."
+    triggers:
+      - "devsecops security gates"
+    excludes: []
+    status: active
+  - id: policy-as-code-opa-kyverno
+    path: .agents/skills/policy-as-code-opa-kyverno/SKILL.md
+    description: "Design policy-as-code controls with OPA/Gatekeeper and Kyverno for admission, validation and mutation."
+    triggers:
+      - "policy as code opa kyverno"
+    excludes: []
+    status: active
+  - id: runtime-security-falco
+    path: .agents/skills/runtime-security-falco/SKILL.md
+    description: "Deploy runtime threat detection with Falco rules, signal quality, response ownership and safe tuning."
+    triggers:
+      - "falco runtime security detection"
+    excludes: []
+    status: active
+  - id: container-image-signing-sigstore
+    path: .agents/skills/container-image-signing-sigstore/SKILL.md
+    description: "Sign and verify container artifacts with Sigstore/Cosign and enforce provenance at deployment boundaries."
+    triggers:
+      - "sigstore cosign image signing"
+    excludes: []
+    status: active
+  - id: software-supply-chain-slsa-sbom
+    path: .agents/skills/software-supply-chain-slsa-sbom/SKILL.md
+    description: "Harden software supply chains with SLSA provenance, SBOM, dependency attestations and release verification."
+    triggers:
+      - "slsa sbom software supply chain"
+    excludes: []
+    status: active
+  - id: secrets-workload-identity-spiffe
+    path: .agents/skills/secrets-workload-identity-spiffe/SKILL.md
+    description: "Design workload identity with SPIFFE/SPIRE, short-lived credentials, attestation and rotation."
+    triggers:
+      - "spiffe workload identity"
+    excludes: []
+    status: active

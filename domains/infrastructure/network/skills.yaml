@@ -1,29 +1,53 @@
 schema_version: 1
-id: network-engineering
+id: network
 kind: skill-registry
 skills:
-  - id: network-dns-tls-diagnostics
-    path: .agents/skills/network-dns-tls-diagnostics/SKILL.md
-    description: "Troubleshoot DNS resolution, TCP reachability, proxies and TLS trust chains with reproducible network probes."
+  - id: network-routing-bgp
+    path: .agents/skills/network-routing-bgp/SKILL.md
+    description: "Diagnose and design routing with BGP, route policy, convergence, redundancy and failure containment."
     triggers:
-      - "dns troubleshooting"
-      - "tls handshake"
-      - "network diagnostics"
-      - "networking"
-      - "dns"
+      - "network routing bgp"
     excludes: []
     status: active
-  - id: platform-operations
-    path: .agents/skills/platform-operations/SKILL.md
-    description: "Review deployment, Kubernetes, cloud and platform operation safeguards, environment evidence and rollback before production change."
+  - id: network-firewall-segmentation
+    path: .agents/skills/network-firewall-segmentation/SKILL.md
+    description: "Design network segmentation and firewall policy with least privilege, stateful flow reasoning and auditability."
     triggers:
-      - "kubernetes"
-      - "helm"
-      - "devops"
-      - "sre"
-      - "cloud architecture"
-      - "networking"
-      - "linux server"
-      - "platform engineering"
+      - "network firewall segmentation"
+    excludes: []
+    status: active
+  - id: network-load-balancing-proxy
+    path: .agents/skills/network-load-balancing-proxy/SKILL.md
+    description: "Operate L4/L7 load balancers and reverse proxies with health checks, TLS, routing and connection limits."
+    triggers:
+      - "network load balancing proxy"
+    excludes: []
+    status: active
+  - id: network-vpn-wireguard
+    path: .agents/skills/network-vpn-wireguard/SKILL.md
+    description: "Design VPN connectivity with WireGuard/IPsec, key rotation, routing and least-privilege network access."
+    triggers:
+      - "wireguard vpn routing"
+    excludes: []
+    status: active
+  - id: network-ebpf-observability
+    path: .agents/skills/network-ebpf-observability/SKILL.md
+    description: "Use eBPF-based telemetry and diagnostics to analyze kernel/network behavior and policy enforcement."
+    triggers:
+      - "ebpf network observability"
+    excludes: []
+    status: active
+  - id: dns-authoritative-infrastructure
+    path: .agents/skills/dns-authoritative-infrastructure/SKILL.md
+    description: "Operate authoritative DNS zones, recursive resolvers, split-horizon records, delegation and DNSSEC."
+    triggers:
+      - "authoritative dns infrastructure"
+    excludes: []
+    status: active
+  - id: tls-pki-certificate-lifecycle
+    path: .agents/skills/tls-pki-certificate-lifecycle/SKILL.md
+    description: "Design PKI and TLS certificate issuance, trust chains, renewal, revocation and mTLS identity."
+    triggers:
+      - "tls pki certificate lifecycle"
     excludes: []
     status: active

@@ -1,0 +1,11 @@
+schema_version: 1
+id: graph-science
+kind: skill-registry
+skills:
+  - id: ds-graph-science
+    path: .agents/skills/ds-graph-science/SKILL.md
+    description: "Analyze graph structure, centrality, communities and network effects without inferring causality."
+    triggers:
+      - "graph network science analysis"
+    excludes: []
+    status: active

@@ -1,0 +1,18 @@
+schema_version: 1
+id: experimentation
+kind: skill-registry
+skills:
+  - id: ds-ab-experimentation
+    path: .agents/skills/ds-ab-experimentation/SKILL.md
+    description: "Analyze randomized experiments with predeclared primary metrics, guardrails and sequential validity."
+    triggers:
+      - "ab test guardrail analysis"
+    excludes: []
+    status: active
+  - id: ds-causal-inference
+    path: .agents/skills/ds-causal-inference/SKILL.md
+    description: "Choose randomized, quasi-experimental or observational causal designs from estimand and identification assumptions."
+    triggers:
+      - "causal experiment design"
+    excludes: []
+    status: active

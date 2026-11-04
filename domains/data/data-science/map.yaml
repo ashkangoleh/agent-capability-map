@@ -68,3 +68,85 @@ children:
       - "anomaly detection baseline"
     status: active
     skills: domains/data/data-science/anomaly/skills.yaml
+  - id: foundations
+    description: "Scientific programming, problem framing and reproducible analysis"
+    triggers:
+      - "data science problem framing"
+      - "scientific python numerical computing"
+      - "r statistical computing workflow"
+      - "jupyter notebook reproducibility"
+    status: active
+    skills: domains/data/data-science/foundations/skills.yaml
+  - id: statistics
+    description: "Inference, Bayesian methods, power and missing data"
+    triggers:
+      - "statistical power sample size"
+      - "bayesian modeling pymc stan"
+      - "missing data mechanism imputation"
+    status: active
+    skills: domains/data/data-science/statistics/skills.yaml
+  - id: experimentation
+    description: "Experiments and causal design"
+    triggers:
+      - "ab test guardrail analysis"
+      - "causal experiment design"
+    status: active
+    skills: domains/data/data-science/experimentation/skills.yaml
+  - id: modeling
+    description: "Classical ML, model selection and explainability"
+    triggers:
+      - "xgboost lightgbm catboost modeling"
+      - "model calibration threshold analysis"
+      - "model explainability shap"
+      - "clustering segmentation evaluation"
+      - "optuna hyperparameter optimization"
+    status: active
+    skills: domains/data/data-science/modeling/skills.yaml
+  - id: survival
+    description: "Time-to-event analysis"
+    triggers:
+      - "survival analysis censoring"
+    status: active
+    skills: domains/data/data-science/survival/skills.yaml
+  - id: forecasting
+    description: "Hierarchical forecasting"
+    triggers:
+      - "hierarchical time series reconciliation"
+    status: active
+    skills: domains/data/data-science/forecasting/skills.yaml
+  - id: recommendation
+    description: "Recommendation and ranking science"
+    triggers:
+      - "recommender offline ranking evaluation"
+    status: active
+    skills: domains/data/data-science/recommendation/skills.yaml
+  - id: graph-science
+    description: "Graph and network science"
+    triggers:
+      - "graph network science analysis"
+    status: active
+    skills: domains/data/data-science/graph-science/skills.yaml
+  - id: geospatial
+    description: "Spatial statistics"
+    triggers:
+      - "geospatial statistical modeling"
+    status: active
+    skills: domains/data/data-science/geospatial/skills.yaml
+  - id: simulation
+    description: "Monte Carlo and uncertainty"
+    triggers:
+      - "monte carlo simulation uncertainty"
+    status: active
+    skills: domains/data/data-science/simulation/skills.yaml
+  - id: optimization
+    description: "Operations research"
+    triggers:
+      - "operations research optimization"
+    status: active
+    skills: domains/data/data-science/optimization/skills.yaml
+  - id: text-analytics
+    description: "Text mining and classical NLP"
+    triggers:
+      - "classical text mining nlp"
+    status: active
+    skills: domains/data/data-science/text-analytics/skills.yaml
