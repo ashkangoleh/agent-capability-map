@@ -136,6 +136,15 @@ children:
       - "sequential experiment early stopping"
       - "causal identification assumptions"
       - "causal experiment design interference"
+      - "split conformal regression"
+      - "conformal marginal coverage"
+      - "conformal subgroup coverage"
+      - "conformal residual quantile"
+      - "بازه پیش‌بینی کانفورمال"
+      - "probability calibration reliability diagram"
+      - "calibrated classifier cv"
+      - "classifier calibration brier score"
+      - "کالیبراسیون احتمال طبقه بندی"
     map: domains/data/data-science/map.yaml
     status: active
   - id: analytics-engineering
