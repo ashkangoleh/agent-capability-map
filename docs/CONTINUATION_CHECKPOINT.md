@@ -6,7 +6,34 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Domain-organized source skills (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Data Science Foundations categorized (2026-11-05)
+
+**User scope:** Keep organizing `.agents/skills` by domain/subdomain/category, avoid adding unnecessary examples, preserve IDs and the explicit YAML Router. Current top-level work stays on **all of Data**; active subdomain remains **Data Science**, not another domain.
+
+**Repository:** `ashkangoleh/agent-capability-map` (private). **Working branch:** `pre_release`. Never merge `main` or create unrelated branches without explicit approval.  
+**Head observed before this checkpoint commit:** `34bf0b80e1d31a874d993979f97d72d2dc530812` — fetch live HEAD again in a new conversation.
+
+### This increment completed
+
+- **Phase 2: `foundations`**: moved four instruction-only SKILL packages to `.agents/skills/data/data-science/foundations/<skill-id>/SKILL.md`: `ds-problem-framing`, `ds-scientific-python`, `ds-r-statistics`, `ds-jupyter-reproducibility`.
+- Verified all **4/4** destination Git blob SHAs are identical to source; updated `domains/data/data-science/foundations/skills.yaml`; removed **4/4** flat originals after verifying copies.
+- Updated `tests/test_data_science_skill_layout.py` to verify both migrated families, ten stable routing cases and unique source ownership for all 42 Data Science skills.
+- Audited `tests/test_data_science_coverage.py` and `tests/test_data_science_inference_routing.py` for relevant hardcoded flat-path dependencies; no outstanding direct references found in those inspected test files.
+- Reconciled layout documentation in `docs/SKILL_LIBRARY_LAYOUT.md`, `.agents/skills/README.md`, `docs/DATA_SCIENCE_REMAINING_SKILLS_AUDIT.md`, and the root `README.md`.
+- **Cumulative state: 10 of 42 Data Science skills in 2 migrated categories**, 32 remain in old flat paths; **344 total master skill IDs** and **467 routing fixtures** are intentionally unchanged. No new examples, skill IDs or trigger phrases.
+- Recreated the exact published Python lexical scoring formula in independent JS and checked **10/10** moved skill selection requests against the live YAML. This is **not** real Python Router execution or host compatibility evidence.
+
+### Blocking evidence and next action
+
+1. **Actual CI is still UNVERIFIED.** The GitHub connector yielded `statuses: []` and its workflow-runs API is restricted to PR-triggered runs. Its empty response is **not a passing push workflow**. Container network access does not permit cloning private GitHub. Do not claim the branch has passed validation.
+2. Prioritize verification of a checked-out `pre_release` with `python -m capability_map validate`, `python scripts/evaluate_graph.py`, `python scripts/report_coverage.py --summary`, and `python -m unittest discover -s tests -v`. Record actual exit codes and SHA. Independently test native/explicit selection in target hosts; nested source directories may not be auto-discovered everywhere.
+3. When validation evidence permits, **next category** for tidy source migration: `data/data-science/model-validation` (4 registered skills). Inspect its full companion bundles and references, migrate as a unit, update its registry and tests, compare Git blob SHAs, retire originals. Do not move all 32 remaining in a single unsafe change.
+4. Continue the remaining Data Science method/deployment reviews. Do not assert Data Science or the entire nine-subdomain Data domain is complete. Confirm which Data subdomain to tackle next only after Data Science acceptance.
+
+**Authoritative detailed files:** `docs/SKILL_LIBRARY_LAYOUT.md`, `docs/DATA_SCIENCE_REMAINING_SKILLS_AUDIT.md`, and the previous checkpoint history below.
+
+
+## HISTORICAL CHECKPOINT — Domain-organized source skills phase 1 (2026-11-05)
 
 **User instruction:** Stop adding unnecessary example files. Clean up `.agents/skills` by organizing skills inside meaningful domain/subdomain/category folders, **without breaking the master router**. Continue only with the active `data/data-science` subdomain, not Infrastructure or other top-level domains.
 
