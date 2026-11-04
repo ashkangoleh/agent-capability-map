@@ -44,6 +44,8 @@ def audit_assignment_ratio(
         unit, arm = item
         if not isinstance(unit, str) or not unit.strip():
             raise ValueError("Randomization unit IDs must be non-empty strings")
+        if not isinstance(arm, str):
+            raise ValueError("Arm must be a string")
         if arm not in expected_allocation:
             raise ValueError("Assignment contains an unknown arm")
         if unit in units:
