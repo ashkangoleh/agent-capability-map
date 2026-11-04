@@ -16,6 +16,9 @@ skills:
       - "probabilistic forecasting quantile"
       - "forecast prediction intervals calibration"
       - "crps pinball loss"
+      - "probabilistic forecasting quantile crossing"
+      - "forecast pinball loss by horizon"
+      - "forecast quantile coverage by horizon"
     excludes:
       - "intermittent demand croston"
     status: active
