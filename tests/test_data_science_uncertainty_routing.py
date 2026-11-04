@@ -72,7 +72,10 @@ class DataScienceUncertaintyRoutingTests(unittest.TestCase):
               "scikit-learn 1.8"]),
         ):
             with self.subTest(skill=skill_id):
-                content = (ROOT / ".agents" / "skills" / skill_id / "SKILL.md").read_text(encoding="utf-8")
+                category = "model-validation" if skill_id == "ds-conformal-prediction-uncertainty" else "modeling"
+                registry = load_yaml(ROOT, f"domains/data/data-science/{category}/skills.yaml")
+                path = next(item["path"] for item in registry["skills"] if item["id"] == skill_id)
+                content = (ROOT / path).read_text(encoding="utf-8")
                 for phrase in phrases:
                     self.assertIn(phrase.casefold(), content.casefold())
                 self.assertIn("https://", content)
