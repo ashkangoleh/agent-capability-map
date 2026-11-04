@@ -3,7 +3,7 @@ id: cost
 kind: skill-registry
 skills:
   - id: cloud-cost-capacity-review
-    path: .agents/skills/cloud-cost-capacity-review/SKILL.md
+    path: .agents/skills/infrastructure/cloud/cost/cloud-cost-capacity-review/SKILL.md
     description: "Review cloud cost and capacity using allocation, utilization, commitments, egress and workload unit economics."
     triggers:
       - "cloud cost capacity review"

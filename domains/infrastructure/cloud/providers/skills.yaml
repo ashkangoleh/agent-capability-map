@@ -3,14 +3,14 @@ id: providers
 kind: skill-registry
 skills:
   - id: aws-infrastructure-operations
-    path: .agents/skills/aws-infrastructure-operations/SKILL.md
+    path: .agents/skills/infrastructure/cloud/providers/aws-infrastructure-operations/SKILL.md
     description: "Operate AWS foundations across Organizations, accounts, IAM, VPC, logging and regional resilience."
     triggers:
       - "aws infrastructure account guardrails"
     excludes: []
     status: active
   - id: azure-infrastructure-operations
-    path: .agents/skills/azure-infrastructure-operations/SKILL.md
+    path: .agents/skills/infrastructure/cloud/providers/azure-infrastructure-operations/SKILL.md
     description: "Operate Azure foundations across management groups, subscriptions, Entra identity, hub-spoke, Policy and governance."
     triggers:
       - "azure subscription management landing zone policy"
@@ -18,7 +18,7 @@ skills:
     excludes: []
     status: active
   - id: gcp-infrastructure-operations
-    path: .agents/skills/gcp-infrastructure-operations/SKILL.md
+    path: .agents/skills/infrastructure/cloud/providers/gcp-infrastructure-operations/SKILL.md
     description: "Operate Google Cloud foundations across organization/folders/projects, Shared VPC, IAM and centralized audit."
     triggers:
       - "gcp organization folders shared vpc infrastructure"
@@ -26,7 +26,7 @@ skills:
     excludes: []
     status: active
   - id: oci-infrastructure-operations
-    path: .agents/skills/oci-infrastructure-operations/SKILL.md
+    path: .agents/skills/infrastructure/cloud/providers/oci-infrastructure-operations/SKILL.md
     description: "Operate OCI foundations across tenancies, compartments, VCNs, DRGs, IAM, Cloud Guard and fault domains."
     triggers:
       - "oci tenancy compartments vcn guardrails"
