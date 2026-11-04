@@ -30,6 +30,14 @@ children:
   - id: catalogs
     description: "Iceberg REST and table catalog control planes"
     triggers:
+      - "gravitino iceberg rest"
+      - "gravitino federated catalog"
+      - "gravitino metalake"
+      - "apache gravitino"
+      - "nessie iceberg rest"
+      - "nessie branch merge"
+      - "project nessie"
+      - "nessie versioned catalog"
       - "polaris iceberg catalog"
       - "lakekeeper iceberg catalog"
       - "polaris"
