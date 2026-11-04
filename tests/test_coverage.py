@@ -11,7 +11,7 @@ class CoverageReportTests(unittest.TestCase):
     def test_all_top_level_domains_have_a_real_linked_skill(self):
         report = compute_coverage(ROOT)
         self.assertEqual(report["domain_count"], 42)
-        self.assertEqual(report["domains_with_active_skills"], 41)
+        self.assertEqual(report["domains_with_active_skills"], 42)
         self.assertEqual(report["domains_without_active_skills"], [])
         self.assertGreaterEqual(report["unique_active_skills"], 59)
         self.assertEqual(report["unique_active_skills"], len(load_yaml(ROOT, "catalog/master-skill-ids.yaml")["ids"]))
