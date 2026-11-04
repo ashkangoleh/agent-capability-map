@@ -3,7 +3,7 @@ id: telemetry
 kind: skill-registry
 skills:
   - id: opentelemetry-collector-pipeline
-    path: .agents/skills/opentelemetry-collector-pipeline/SKILL.md
+    path: .agents/skills/infrastructure/devops-sre/telemetry/opentelemetry-collector-pipeline/SKILL.md
     description: "Instrument OpenTelemetry collectors and trace propagation with bounded resource and private attribute policies."
     triggers:
       - "opentelemetry collector"

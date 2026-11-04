@@ -3,7 +3,7 @@ id: incident
 kind: skill-registry
 skills:
   - id: sre-incident-rca-runbook
-    path: .agents/skills/sre-incident-rca-runbook/SKILL.md
+    path: .agents/skills/infrastructure/devops-sre/incident/sre-incident-rca-runbook/SKILL.md
     description: "Conduct evidence-led SRE incident diagnosis, safe mitigation and blameless postmortem with explicit timelines."
     triggers:
       - "sre incident"

@@ -3,7 +3,7 @@ id: delivery
 kind: skill-registry
 skills:
   - id: ci-cd-artifact-provenance
-    path: .agents/skills/ci-cd-artifact-provenance/SKILL.md
+    path: .agents/skills/infrastructure/devops-sre/delivery/ci-cd-artifact-provenance/SKILL.md
     description: "Secure CI and CD artifact provenance, build runner trust boundaries and immutable promotion controls."
     triggers:
       - "ci cd supply chain"
