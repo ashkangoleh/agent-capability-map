@@ -2,8 +2,8 @@
 
 ## Scope
 
-- Top-level domains: 41, all with at least one linked active skill.
-- Active skill packages: 151 (88 previously registered plus 63 new unified-reference skills).
+- Top-level domains: 42, all with at least one linked active skill.
+- Active skill packages: 273 (verified against the master index on the unified branch).
 - Most fine-grained subdomains remain mapped-only and require focused skill development.
 - For exact current counts run `python scripts/report_coverage.py --summary`.
 - Distinction: a mapped node is discoverable taxonomy but may not provide an executable skill.
@@ -57,7 +57,7 @@ No measured hallucination reduction, token savings or all-host compatibility is 
 
 ## Cross-domain expansion
 
-See [CROSS_DOMAIN_EXPANSION.md](CROSS_DOMAIN_EXPANSION.md) for the additional 29 skills and 41-domain taxonomy. See [RESEARCH_SOURCES.md](RESEARCH_SOURCES.md) for the verified primary-source starting points. These are structurally active skills, not a claim of comprehensive expert evaluation.
+See [CROSS_DOMAIN_EXPANSION.md](CROSS_DOMAIN_EXPANSION.md) for the additional 29 skills and 42-domain taxonomy. See [RESEARCH_SOURCES.md](RESEARCH_SOURCES.md) for the verified primary-source starting points. These are structurally active skills, not a claim of comprehensive expert evaluation.
 
 ## Deep Data Engineering
 
@@ -65,7 +65,7 @@ See [DATA_ENGINEERING_SKILLS.md](DATA_ENGINEERING_SKILLS.md) for the deep specia
 
 ## Unified reference branch
 
-See `docs/MASTER_REFERENCE_EXPANSION.md` for scope, intended technology boundaries and evaluation gaps. The live registry contains 151 SKILL.md packages (88 prior + 63 new), subject to successful YAML registry validation and CI. Do not treat all `mapped` subdomains as active.
+See `docs/MASTER_REFERENCE_EXPANSION.md` for scope, intended technology boundaries and evaluation gaps. The live registry contains 273 indexed SKILL.md packages, subject to successful YAML registry validation and CI. Do not treat all `mapped` subdomains as active.
 
 ## Comprehensive Data Engineering expansion
 
