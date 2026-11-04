@@ -16,7 +16,7 @@ class CoverageReportTests(unittest.TestCase):
         self.assertGreaterEqual(report["unique_active_skills"], 59)
         self.assertEqual(report["unique_active_skills"], len(load_yaml(ROOT, "catalog/master-skill-ids.yaml")["ids"]))
         self.assertGreater(report["mapped_only_subdomain_nodes"], 0)
-        self.assertEqual(len({item["id"] for item in report["domains"]}), 41)
+        self.assertEqual(len({item["id"] for item in report["domains"]}), 42)
 
     def test_all_reported_skills_are_unique_per_domain(self):
         report = compute_coverage(ROOT)
