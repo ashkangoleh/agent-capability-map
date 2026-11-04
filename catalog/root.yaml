@@ -103,6 +103,7 @@ children:
       - "survival analysis"
       - "time series forecast"
       - "scikit-learn"
+      - "sklearn"
       - "xgboost"
       - "scientific computing"
       - "model explainability"

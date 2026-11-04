@@ -8,8 +8,7 @@ children:
       - "sklearn"
       - "scikit-learn"
       - "machine learning validation"
-    status: active
-    skills: domains/ai-ml/machine-learning/validation/skills.yaml
+    status: mapped
   - id: features
     description: "features"
     triggers:

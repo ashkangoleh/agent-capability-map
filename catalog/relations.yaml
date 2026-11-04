@@ -100,3 +100,7 @@ edges:
     to: [data-science, model-validation]
     relation: supports
     rationale: MLflow run lineage can capture leakage-safe validation artifacts and model comparisons.
+  - from: [ai-ml, machine-learning, validation]
+    to: [data-science, model-validation]
+    relation: related_to
+    rationale: Scikit-learn leakage-safe validation is canonically maintained in Data Science and reused by ML engineering through an explicit cross-domain route.
