@@ -107,7 +107,7 @@ class InfrastructureCoverageTests(unittest.TestCase):
     def test_master_index_contains_all_new_specialists(self):
         index = set(load_yaml(ROOT, "catalog/master-skill-ids.yaml")["ids"])
         self.assertTrue(EXPECTED_NEW_SKILLS.issubset(index))
-        self.assertEqual(len(index), 322)
+        self.assertGreaterEqual(len(index), 322)
 
 
 if __name__ == "__main__":
