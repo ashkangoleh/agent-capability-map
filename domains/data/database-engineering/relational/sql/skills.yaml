@@ -3,7 +3,7 @@ id: sql-performance
 kind: skill-registry
 skills:
   - id: sql-explain-plan-optimization
-    path: .agents/skills/sql-explain-plan-optimization/SKILL.md
+    path: .agents/skills/data/database-engineering/relational/sql/sql-explain-plan-optimization/SKILL.md
     description: "Optimize physical SQL plans with correct join cardinality and measured engine-specific runtime."
     triggers:
       - "sql explain plan"

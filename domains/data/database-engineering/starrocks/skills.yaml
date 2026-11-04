@@ -3,7 +3,7 @@ id: starrocks
 kind: skill-registry
 skills:
   - id: data-engineering-implementation
-    path: .agents/skills/data-engineering-implementation/SKILL.md
+    path: .agents/skills/data/data-engineering/foundations/data-engineering-implementation/SKILL.md
     description: "General data pipeline and analytical transformation design when no narrower specialist is identified."
     triggers:
       - "data pipeline"
@@ -18,7 +18,7 @@ skills:
     excludes: []
     status: active
   - id: starrocks-stream-load-transaction
-    path: .agents/skills/starrocks-stream-load-transaction/SKILL.md
+    path: .agents/skills/data/database-engineering/starrocks/starrocks-stream-load-transaction/SKILL.md
     description: "Design recoverable StarRocks Stream Load transactions, labels and publish timeout handling across supported versions."
     triggers:
       - "starrocks stream load"
@@ -28,7 +28,7 @@ skills:
     excludes: []
     status: active
   - id: starrocks-primary-key-cdc
-    path: .agents/skills/starrocks-primary-key-cdc/SKILL.md
+    path: .agents/skills/data/database-engineering/starrocks/starrocks-primary-key-cdc/SKILL.md
     description: "Design StarRocks Primary Key upserts, CDC deletes, conditional and partial update ordering."
     triggers:
       - "starrocks primary key"
