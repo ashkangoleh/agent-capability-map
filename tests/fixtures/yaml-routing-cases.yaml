@@ -1772,3 +1772,91 @@ cases:
     request: "Data scientist: time series forecast dense seasonal electricity load"
     status: matched
     skill: time-series-forecast-backtesting
+  - id: ds-inference-fdr-bh
+    request: "Audit fdr benjamini hochberg multiple testing across metrics"
+    status: matched
+    skill: ds-multiple-testing-control
+  - id: ds-inference-holm
+    request: "Apply holm familywise error correction to pre-registered hypotheses"
+    status: matched
+    skill: ds-multiple-testing-control
+  - id: ds-inference-by
+    request: "Review benjamini yekutieli dependency assumptions"
+    status: matched
+    skill: ds-multiple-testing-control
+  - id: ds-inference-fdr-persian
+    request: "بررسی اصلاح چند آزمونی fdr روی فرضیه‌ها"
+    status: matched
+    skill: ds-multiple-testing-control
+  - id: ds-inference-survey-lonely
+    request: "Audit survey lonely psu variance in stratified sample"
+    status: matched
+    skill: ds-survey-sampling-design
+  - id: ds-inference-survey-design
+    request: "Evaluate survey complex sampling variance and design effects"
+    status: matched
+    skill: ds-survey-sampling-design
+  - id: ds-inference-survey-strata
+    request: "Review survey strata cluster design before population estimate"
+    status: matched
+    skill: ds-survey-sampling-design
+  - id: ds-inference-survey-persian
+    request: "بررسی طرح نمونه گیری خوشه ای survey و وزن‌ها"
+    status: matched
+    skill: ds-survey-sampling-design
+  - id: ds-inference-rubin-pool
+    request: "Validate rubin multiple imputation pooling variances"
+    status: matched
+    skill: ds-missing-data
+  - id: ds-inference-mnar
+    request: "Investigate mnar missingness sensitivity before imputation"
+    status: matched
+    skill: ds-missing-data
+  - id: ds-inference-mcar-mar
+    request: "Review missing data mcar mar mnar assumptions"
+    status: matched
+    skill: ds-missing-data
+  - id: ds-inference-imputation-persian
+    request: "بررسی تجمیع multiple imputation برآوردها"
+    status: matched
+    skill: ds-missing-data
+  - id: ds-inference-bootstrap-cluster
+    request: "Review cluster bootstrap resampling for dependent observations"
+    status: matched
+    skill: ds-robust-nonparametric-inference
+  - id: ds-inference-permutation-paired
+    request: "Plan paired permutation test exchangeability check"
+    status: matched
+    skill: ds-robust-nonparametric-inference
+  - id: ds-inference-bca
+    request: "Validate robust bootstrap bca interval with ties"
+    status: matched
+    skill: ds-robust-nonparametric-inference
+  - id: ds-inference-bayesian-rhat
+    request: "Review rank normalized rhat ess bayesian diagnostics"
+    status: matched
+    skill: ds-bayesian-pymc-stan
+  - id: ds-inference-bayesian-ppc
+    request: "Audit pymc prior posterior predictive check with low ESS"
+    status: matched
+    skill: ds-bayesian-pymc-stan
+  - id: ds-inference-bayesian-divergence
+    request: "Analyze bayesian mcmc divergence diagnostic failure"
+    status: matched
+    skill: ds-bayesian-pymc-stan
+  - id: ds-inference-nearmiss-ci
+    request: "Plan statistical inference confidence interval study"
+    status: matched
+    skill: statistical-inference-design
+  - id: ds-inference-nearmiss-conformal
+    request: "Construct conformal prediction intervals with coverage checks"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-inference-nearmiss-sequential
+    request: "Review sequential experiment early stopping and delayed outcomes"
+    status: matched
+    skill: ds-sequential-experimentation
+  - id: ds-inference-nearmiss-feature
+    request: "Build point in time features without leakage"
+    status: matched
+    skill: feature-engineering-point-in-time
