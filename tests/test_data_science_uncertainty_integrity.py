@@ -68,6 +68,14 @@ class UncertaintyIntegrityTests(unittest.TestCase):
             with self.subTest(radius=radius), self.assertRaises(ValueError):
                 regression_interval_report([1], [1], radius=radius)
 
+    def test_overflowing_prediction_difference_rejected(self):
+        with self.assertRaisesRegex(ValueError, "errors must be finite"):
+            regression_interval_report([1e308], [-1e308], radius=1)
+
+    def test_massive_integer_probability_rejected(self):
+        with self.assertRaisesRegex(ValueError, "finite real number"):
+            binary_probability_report([1], [10 ** 1000])
+
     def test_mismatched_interval_sizes(self):
         with self.assertRaisesRegex(ValueError, "nonzero length"):
             regression_interval_report([1, 2], [1], radius=1)
