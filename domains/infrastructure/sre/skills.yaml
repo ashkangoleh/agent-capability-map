@@ -3,28 +3,28 @@ id: sre-practices
 kind: skill-registry
 skills:
   - id: sre-slo-error-budget
-    path: .agents/skills/sre-slo-error-budget/SKILL.md
+    path: .agents/skills/infrastructure/sre/sre-slo-error-budget/SKILL.md
     description: "Define SLIs, SLOs, error budgets and burn-rate alerts aligned with user-visible reliability."
     triggers:
       - "sre slo error budget"
     excludes: []
     status: active
   - id: sre-capacity-load-testing
-    path: .agents/skills/sre-capacity-load-testing/SKILL.md
+    path: .agents/skills/infrastructure/sre/sre-capacity-load-testing/SKILL.md
     description: "Plan capacity and load tests using workload models, saturation signals, headroom and failure thresholds."
     triggers:
       - "sre capacity load testing"
     excludes: []
     status: active
   - id: chaos-engineering-failure-injection
-    path: .agents/skills/chaos-engineering-failure-injection/SKILL.md
+    path: .agents/skills/infrastructure/sre/chaos-engineering-failure-injection/SKILL.md
     description: "Run controlled failure-injection experiments with blast-radius limits, hypotheses and recovery verification."
     triggers:
       - "chaos engineering failure injection"
     excludes: []
     status: active
   - id: backup-dr-restore-exercises
-    path: .agents/skills/backup-dr-restore-exercises/SKILL.md
+    path: .agents/skills/infrastructure/sre/backup-dr-restore-exercises/SKILL.md
     description: "Design and test infrastructure backup, failover and restoration against explicit RPO/RTO."
     triggers:
       - "infrastructure backup disaster recovery"

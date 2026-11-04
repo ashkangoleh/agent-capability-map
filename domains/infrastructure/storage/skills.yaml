@@ -3,14 +3,14 @@ id: storage
 kind: skill-registry
 skills:
   - id: storage-ceph-zfs-lvm
-    path: .agents/skills/storage-ceph-zfs-lvm/SKILL.md
+    path: .agents/skills/infrastructure/storage/storage-ceph-zfs-lvm/SKILL.md
     description: "Design and troubleshoot Ceph, ZFS and LVM storage with durability, replication and recovery constraints."
     triggers:
       - "ceph zfs lvm storage operations"
     excludes: []
     status: active
   - id: linux-storage-filesystems
-    path: .agents/skills/linux-storage-filesystems/SKILL.md
+    path: .agents/skills/infrastructure/storage/linux-storage-filesystems/SKILL.md
     description: "Operate Linux block devices, filesystems, LVM, mounts and capacity with safe recovery planning."
     triggers:
       - "linux storage filesystem operations"
