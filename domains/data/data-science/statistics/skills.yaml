@@ -3,7 +3,7 @@ id: statistics
 kind: skill-registry
 skills:
   - id: statistical-inference-design
-    path: .agents/skills/statistical-inference-design/SKILL.md
+    path: .agents/skills/data/data-science/statistics/statistical-inference-design/SKILL.md
     description: "Design confidence intervals and statistical inference with correct units and multiple testing."
     triggers:
       - "statistical inference"

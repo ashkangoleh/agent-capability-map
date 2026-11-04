@@ -3,14 +3,14 @@ id: text-analytics
 kind: skill-registry
 skills:
   - id: ds-classical-nlp
-    path: .agents/skills/ds-classical-nlp/SKILL.md
+    path: .agents/skills/data/data-science/text-analytics/ds-classical-nlp/SKILL.md
     description: "Build classical NLP workflows with tokenization, sparse features and language-aware evaluation."
     triggers:
       - "classical text mining nlp"
     excludes: []
     status: active
   - id: ds-multilingual-nlp-evaluation
-    path: .agents/skills/ds-multilingual-nlp-evaluation/SKILL.md
+    path: .agents/skills/data/data-science/text-analytics/ds-multilingual-nlp-evaluation/SKILL.md
     description: "Evaluate classical NLP across languages, scripts, dialects and code-switched text."
     triggers:
       - "multilingual nlp evaluation"

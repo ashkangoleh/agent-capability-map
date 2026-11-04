@@ -3,7 +3,7 @@ id: simulation
 kind: skill-registry
 skills:
   - id: ds-monte-carlo
-    path: .agents/skills/ds-monte-carlo/SKILL.md
+    path: .agents/skills/data/data-science/simulation/ds-monte-carlo/SKILL.md
     description: "Quantify uncertainty with Monte Carlo simulation, convergence checks and scenario analysis."
     triggers:
       - "monte carlo simulation uncertainty"
