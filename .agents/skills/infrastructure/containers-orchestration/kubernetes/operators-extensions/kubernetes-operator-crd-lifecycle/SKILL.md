@@ -2,7 +2,7 @@
 name: kubernetes-operator-crd-lifecycle
 description: "Design Kubernetes CRDs and operators with reconciliation, finalizers, status conditions and upgrade safety."
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # kubernetes-operator-crd-lifecycle
@@ -43,3 +43,6 @@ Provide actual cluster/controller/CRD versions, old/new schema diff, served and 
 
 ## Output contract
 Return a version-pinned, evidence-based Operator/CRD design or recovery plan: resource schema, controller reconcile/ownership/permissions contract, compatibility migration stages, failure matrix, measurable acceptance criteria, abort/rollback or forward-recovery procedure, owner and explicit unknowns. Never imply operational authority or production validation without proof.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

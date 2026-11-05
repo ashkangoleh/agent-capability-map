@@ -3,7 +3,7 @@ name: hpc-gpu-compute-scheduling
 description: "Plan HPC and GPU clusters with scheduler, accelerator, NUMA and high-speed fabric constraints."
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # hpc-gpu-compute-scheduling
@@ -46,3 +46,6 @@ Scheduler/release, node/GPU inventory, drivers, CUDA/ROCm, fabric, job shape, qu
 
 ## Output contract
 Return exact scope, assumptions, observed evidence, safe procedure, failure modes, verification, rollback and residual risk. Distinguish facts from hypotheses and never claim tests or production changes that were not actually performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

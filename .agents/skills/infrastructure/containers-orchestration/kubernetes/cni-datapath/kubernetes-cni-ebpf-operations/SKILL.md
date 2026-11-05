@@ -2,7 +2,7 @@
 name: kubernetes-cni-ebpf-operations
 description: "Operate Kubernetes CNI and eBPF networking with IPAM, routing, policy, MTU and datapath diagnostics."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # kubernetes-cni-ebpf-operations
@@ -36,3 +36,6 @@ CNI/version, kernel, IPAM mode, routing mode, kube-proxy replacement and network
 
 ## Output contract
 Return the requested design or diagnosis with exact scope, assumptions, evidence, safe procedure, failure modes, validation and rollback. Never claim production changes or tests that were not performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
