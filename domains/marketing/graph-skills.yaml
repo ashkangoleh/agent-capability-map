@@ -3,7 +3,7 @@ id: marketing
 kind: skill-registry
 skills:
   - id: marketing-strategy-campaign
-    path: .agents/skills/marketing-strategy-campaign/SKILL.md
+    path: .agents/skills/marketing/campaign-strategy/marketing-strategy-campaign/SKILL.md
     description: "Use to design go-to-market, campaign, lifecycle and channel strategy with grounded audience and measurement assumptions."
     triggers:
       - "campaign"
@@ -20,7 +20,7 @@ skills:
       - "organic seo audit"
     status: active
   - id: marketing-measurement-attribution
-    path: .agents/skills/marketing-measurement-attribution/SKILL.md
+    path: .agents/skills/marketing/marketing-analytics/marketing-measurement-attribution/SKILL.md
     description: "Define campaign tracking and GA4 event quality, conversion reconciliation and limitations of attribution versus incrementality."
     triggers:
       - "ga4 event tracking"

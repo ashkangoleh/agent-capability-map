@@ -3,7 +3,7 @@ id: new-specialists
 kind: skill-registry
 skills:
   - id: database-ha-replication-recovery
-    path: .agents/skills/database-ha-replication-recovery/SKILL.md
+    path: .agents/skills/infrastructure/database-infrastructure/ha-nosql/database-ha-replication-recovery/SKILL.md
     description: "Design database HA, replication, failover and PITR with consistency and client reconnection guarantees."
     triggers:
       - "database ha replication failover pitr"
@@ -11,7 +11,7 @@ skills:
     excludes: []
     status: active
   - id: database-nosql-cache-operations
-    path: .agents/skills/database-nosql-cache-operations/SKILL.md
+    path: .agents/skills/infrastructure/database-infrastructure/ha-nosql/database-nosql-cache-operations/SKILL.md
     description: "Operate MongoDB, Redis, Cassandra and compatible NoSQL/cache clusters with quorum, persistence and recovery controls."
     triggers:
       - "mongodb redis cassandra replication persistence failover"

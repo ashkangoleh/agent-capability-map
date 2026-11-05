@@ -3,7 +3,7 @@ id: agent-systems
 kind: skill-registry
 skills:
   - id: skill-authoring-validation
-    path: .agents/skills/skill-authoring-validation/SKILL.md
+    path: .agents/skills/agent-systems/skill-authoring/skill-authoring-validation/SKILL.md
     description: "Use when creating, evaluating or improving portable Agent Skills and routing registries with positive and negative tests."
     triggers:
       - "skill router"
@@ -17,7 +17,7 @@ skills:
       - "ordinary application code"
     status: active
   - id: agent-evaluation-suite
-    path: .agents/skills/agent-evaluation-suite/SKILL.md
+    path: .agents/skills/agent-systems/agent-evaluation/agent-evaluation-suite/SKILL.md
     description: "Build grounded, safety-aware agent evaluations for skill routing, adversarial tasks, source support and measured token cost."
     triggers:
       - "agent evaluation"

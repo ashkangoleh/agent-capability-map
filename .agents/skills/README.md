@@ -5,10 +5,11 @@ Skills are routed through the explicitly registered domain/subdomain/category YA
 ## Current structural status — 2026-11-05
 
 - Total canonical skill manifests: **344**.
-- Domain-nested canonical manifests: **328 (95.35%)**.
-- Legacy flat manifests: **16 (4.65%)**.
+- Domain-nested canonical manifests: **344 (100%)**.
+- Legacy flat manifests: **0 (0%)**.
 - The Infrastructure / Storage Engineering / Advanced Storage category is complete: both `object-storage-infrastructure-operations` and `storage-san-nas-nvmeof` are in `infrastructure/storage-engineering/advanced-storage/<skill-id>/SKILL.md`.
 - The Data Engineering / Batch Ingestion / Recovery `pipeline-backfill-recovery` skill now has exactly one canonical nested manifest; its registered `path` in `domains/data/general-skills.yaml` has changed without altering routing triggers.
+- The final 16 flat skills were migrated into their domain/category directories with unchanged Git blob SHAs and updated YAML registry paths; this is source-layout completion, not host compatibility certification.
 - Only move a skill with all bundled resources; update all referencing registries, ensure there is only one canonical physical manifest, and test the path before deleting the old one.
 - Native nested-skill discovery is host-dependent. The YAML Router is the authoritative source selector, and host-specific packaging must be validated separately.
 

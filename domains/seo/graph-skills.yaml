@@ -3,7 +3,7 @@ id: seo
 kind: skill-registry
 skills:
   - id: seo-audit-strategy
-    path: .agents/skills/seo-audit-strategy/SKILL.md
+    path: .agents/skills/seo/core/seo-audit-strategy/SKILL.md
     description: "Use to audit organic search, indexing, structured data and technical SEO with observed crawl evidence and official guidance."
     triggers:
       - "seo"
@@ -21,7 +21,7 @@ skills:
       - "paid search ad"
     status: active
   - id: seo-indexability-diagnostics
-    path: .agents/skills/seo-indexability-diagnostics/SKILL.md
+    path: .agents/skills/seo/technical-seo/seo-indexability-diagnostics/SKILL.md
     description: "Diagnose real crawl and indexation defects with URL inspection, canonical signals, robots and sitemap evidence."
     triggers:
       - "canonical mismatch"
@@ -34,7 +34,7 @@ skills:
       - "paid search ads"
     status: active
   - id: seo-structured-data-validation
-    path: .agents/skills/seo-structured-data-validation/SKILL.md
+    path: .agents/skills/seo/structured-data/seo-structured-data-validation/SKILL.md
     description: "Validate Google rich-result feature eligibility and truthful rendered JSON-LD/structured markup against current official policies."
     triggers:
       - "structured data validation"

@@ -6,7 +6,18 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Data Engineering backfill recovery source migration (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Final 16 legacy-flat skills nested (2026-11-05)
+
+- Canonical working branch: `pre_release`; baseline HEAD before this migration: `61b304fdf8e4749bcd87a5de76912c2f79968c63`. Do not merge `main` or create feat/fix branches.
+- Migrated all 16 remaining flat `SKILL.md` manifests to domain/category paths, retaining **identical Git blob SHA** for each moved file; no SKILL body, ID, trigger, exclusion or routing map changed. The migrated skill folders had no bundled sibling source files.
+- Updated exactly eight owner registries: `domains/agent-systems/graph-skills.yaml`, `domains/business/graph-skills.yaml`, `domains/infrastructure/database/new-specialists.yaml`, `domains/marketing/graph-skills.yaml`, `domains/product/graph-skills.yaml`, `domains/seo/graph-skills.yaml`, `domains/research/graph-skills.yaml`, `domains/design/graph-skills.yaml`.
+- Canonical physical layout now **344/344 nested, zero flat** (structural only); verify final Git tree before declaring this checked.
+- Added a global source/registry consistency test ensuring every physical `SKILL.md` is registered, registered paths have one physical manifest, every manifest is under its owning top-level domain and no legacy flat path remains.
+- The current `data/data-engineering/batch-ingestion/recovery` route still references a shared general registry; changing this routing semantics requires separate tests and an independent change.
+- Validation gates: check post-commit GitHub Actions push run including YAML graph/fixture and entire unittest suite; do not claim PASS from old runs. Native discovery/integration for Codex, Claude Code, Cursor, Copilot, and OpenCode is **NOT VERIFIED**.
+- **Data** breadth/depth and host-level production certification remain **INCOMPLETE** even though physical nesting is structurally complete. Do not switch domain workstream without explicit user approval.
+
+## HISTORICAL CHECKPOINT — Data Engineering backfill recovery source migration (2026-11-05)
 
 - Canonical branch: `pre_release`; baseline HEAD before this atomic migration: `48e169c52421318ed5bd294bc4f23ff4e5dd2d3d`. Never merge to `main` or create a new branch without user approval.
 - Target: `pipeline-backfill-recovery`, categorized as **Data / Data Engineering / Batch Ingestion / Recovery**.

@@ -3,7 +3,7 @@ id: business
 kind: skill-registry
 skills:
   - id: business-strategy-analysis
-    path: .agents/skills/business-strategy-analysis/SKILL.md
+    path: .agents/skills/business/business-strategy/business-strategy-analysis/SKILL.md
     description: "Use for business strategy, unit economics, operating-model and commercial analysis with explicit formulas and sensitivities."
     triggers:
       - "business case"

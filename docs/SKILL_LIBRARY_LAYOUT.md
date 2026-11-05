@@ -8,14 +8,15 @@
 
 The category tables below document **historical early migration phases**, not the current repository-wide inventory.
 
-- **328/344 (95.35%)** canonical skill manifests now live under domain-nested folders; **16** still use flat paths.
+- **344/344 (100%)** canonical skill manifests now live under domain-nested folders; **0** use flat paths.
 - **Data Science is structurally 42/42 nested.** Other Data, AI/ML, Infrastructure and several top-level domains also have nested sources.
-- The latest category migration is `data/data-engineering/batch-ingestion/recovery` (1/1 skill), retaining the exact original Git blob SHA for `pipeline-backfill-recovery` and updating its registered path in `domains/data/general-skills.yaml`.
+- The latest structural sweep moved the remaining 16 legacy flat skill packages, with all original Git blob SHAs unchanged, to domain/category paths in Agent Systems, Business, Infrastructure, Marketing, Product, SEO, Research and Design. All eight owning YAML registries now point at the moved locations; source manifest count remains 344.
+- The previous `data/data-engineering/batch-ingestion/recovery` migration remains unchanged, and `domains/data/general-skills.yaml` retains its original recovery route selection behavior.
 - Previously migrated `infrastructure/storage-engineering/advanced-storage` remains 2/2 nested, with unchanged skill blobs and registered paths.
 - The batch-ingestion recovery map still references the shared `data-general` registry. This migration intentionally changes no routing triggers, exclusions or selection semantics; refining the shared registry boundary is a separate behavior-change task.
 - Structural completion is separate from tested router correctness or host native discovery. Earlier stale generic Data registry paths and flat-path test assumptions were repaired; verify the latest CI result via `docs/CONTINUATION_CHECKPOINT.md` and GitHub Actions before claiming overall validity.
 
-All future migrations must preserve stable IDs, update every registry that references a moved skill and keep a single canonical manifest.
+All future migrations must preserve stable IDs, update every registry that references a moved skill and keep a single canonical manifest. A global invariant test now checks registry-to-file correspondence and top-level domain ownership for every active skill, including orphan and duplicate prevention. This does not imply every native agent host discovers deep source folders automatically.
 
 ## Original canary directory contract (historical)
 

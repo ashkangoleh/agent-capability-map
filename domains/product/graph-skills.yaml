@@ -3,7 +3,7 @@ id: product
 kind: skill-registry
 skills:
   - id: product-discovery-prd
-    path: .agents/skills/product-discovery-prd/SKILL.md
+    path: .agents/skills/product/discovery-requirements/product-discovery-prd/SKILL.md
     description: "Use for product discovery and PRDs; define the user problem, research evidence, metrics, requirements and acceptance criteria."
     triggers:
       - "prd"
@@ -17,7 +17,7 @@ skills:
       - "marketing campaign"
     status: active
   - id: product-experiment-design
-    path: .agents/skills/product-experiment-design/SKILL.md
+    path: .agents/skills/product/experimentation/product-experiment-design/SKILL.md
     description: "Define rigorous randomized product experiments, primary outcomes, guardrails, instrumentation QA and causal analysis plans."
     triggers:
       - "a/b test"
@@ -30,7 +30,7 @@ skills:
       - "marketing campaign"
     status: active
   - id: product-metrics-instrumentation
-    path: .agents/skills/product-metrics-instrumentation/SKILL.md
+    path: .agents/skills/product/product-analytics/product-metrics-instrumentation/SKILL.md
     description: "Define product activation, funnels, cohorts and retention metrics with explicit identity, denominator and event-quality contracts."
     triggers:
       - "product analytics"
