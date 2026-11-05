@@ -3,7 +3,7 @@ id: data-general
 kind: skill-registry
 skills:
   - id: data-engineering-implementation
-    path: .agents/skills/data-engineering-implementation/SKILL.md
+    path: .agents/skills/data/data-engineering/foundations/data-engineering-implementation/SKILL.md
     description: "Use for data pipelines, lakehouse, SQL models and ingestion; verify grain, replay, schema evolution and source-to-sink correctness."
     triggers:
       - "dbt"
@@ -21,7 +21,7 @@ skills:
       - "pyspark project"
     status: active
   - id: dbt-incremental-modeling
-    path: .agents/skills/dbt-incremental-modeling/SKILL.md
+    path: .agents/skills/data/analytics-engineering/dbt/dbt-incremental-modeling/SKILL.md
     description: "Design and test dbt incremental models with adapter-specific MERGE/overwrite behavior, source uniqueness and late corrections."
     triggers:
       - "dbt incremental"
