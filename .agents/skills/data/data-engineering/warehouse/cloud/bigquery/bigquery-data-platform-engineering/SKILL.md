@@ -3,7 +3,7 @@ name: bigquery-data-platform-engineering
 description: "Engineer BigQuery batch and streaming ingestion, Storage Write API offsets, partitioning, clustering, materialized views and cost controls."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # bigquery-data-platform-engineering
@@ -41,3 +41,6 @@ Return API choice, offset design, table layout, IAM, recovery and cost limits.
 ## Official references
 - https://docs.cloud.google.com/bigquery/docs/write-api-intro
 - https://docs.cloud.google.com/bigquery/docs/write-api-grpc
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

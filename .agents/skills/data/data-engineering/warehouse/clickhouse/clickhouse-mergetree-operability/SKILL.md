@@ -2,7 +2,7 @@
 name: clickhouse-mergetree-operability
 description: Model ClickHouse MergeTree or ReplacingMergeTree tables with event-time partitioning, dedup caveats and merge/TTL costs.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # clickhouse-mergetree-operability
@@ -33,3 +33,6 @@ ClickHouse version, MergeTree engine, ORDER BY, partition key, update pattern, i
 
 ## Output contract
 Return requested runnable deliverable or assessment, assumptions, source-to-sink guarantees, test/rollout/rollback and operational cost. Mark unknown evidence explicitly.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

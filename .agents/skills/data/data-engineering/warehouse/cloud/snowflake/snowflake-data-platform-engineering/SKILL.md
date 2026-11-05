@@ -3,7 +3,7 @@ name: snowflake-data-platform-engineering
 description: "Engineer Snowflake file and row ingestion, Snowpipe, Snowpipe Streaming, Streams and Tasks, Dynamic Tables and cost-aware refresh."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # snowflake-data-platform-engineering
@@ -40,3 +40,6 @@ Return ingestion decision, pipeline topology, freshness/cost model and replay pl
 ## Official references
 - https://docs.snowflake.com/en/user-guide/data-load-overview
 - https://docs.snowflake.com/en/user-guide/data-pipelines-intro
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

@@ -3,7 +3,7 @@ name: redshift-data-platform-engineering
 description: "Engineer Amazon Redshift COPY and streaming ingestion, MPP distribution, sort keys, materialized views, WLM and maintenance."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # redshift-data-platform-engineering
@@ -40,3 +40,6 @@ Return load strategy, physical design, WLM, maintenance, security and benchmark 
 ## Official references
 - https://docs.aws.amazon.com/redshift/latest/dg/c_best-practices-sort-key.html
 - https://docs.aws.amazon.com/redshift/latest/dg/c_choosing_dist_sort.html
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

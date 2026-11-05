@@ -3,7 +3,7 @@ name: apache-doris-olap-engineering
 description: "Operate Apache Doris table models, ingestion, materialized views, replication and workload management."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # apache-doris-olap-engineering
@@ -39,3 +39,6 @@ Return table model, physical layout, ingestion, MV, workload and recovery plan.
 
 ## Official or primary references
 - https://doris.apache.org/docs/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

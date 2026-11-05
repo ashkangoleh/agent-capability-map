@@ -3,7 +3,7 @@ name: apache-pinot-druid-realtime-olap
 description: "Design Apache Pinot and Apache Druid real-time OLAP ingestion, segments, indexes, retention and low-latency aggregation."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # apache-pinot-druid-realtime-olap
@@ -40,3 +40,6 @@ Return schema/index plan, ingestion topology, segment lifecycle, retention and b
 ## Official or primary references
 - https://docs.pinot.apache.org/
 - https://druid.apache.org/docs/latest/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

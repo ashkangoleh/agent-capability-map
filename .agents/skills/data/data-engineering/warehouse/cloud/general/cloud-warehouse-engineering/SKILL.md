@@ -3,7 +3,7 @@ name: cloud-warehouse-engineering
 description: "Select and architect cloud warehouses across Snowflake, BigQuery, Redshift, Databricks SQL and Synapse using workload semantics, governance and cost."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # cloud-warehouse-engineering
@@ -45,3 +45,6 @@ Return weighted decision matrix, reference architecture, cost model, governance 
 - https://docs.cloud.google.com/bigquery/docs
 - https://docs.aws.amazon.com/redshift/latest/dg/welcome.html
 - https://docs.databricks.com/aws/en/sql/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

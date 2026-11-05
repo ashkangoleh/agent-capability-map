@@ -3,7 +3,7 @@ name: unstructured-data-ingestion-engineering
 description: "Build governed ingestion for document and binary datasets with manifests, MIME detection, checksums, extraction stages, quarantine and reproducible reprocessing."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # unstructured-data-ingestion-engineering
@@ -40,3 +40,6 @@ Return manifest schema, raw/derived layout, extraction stages and replay/securit
 ## Official references
 - https://tika.apache.org/
 - https://docs.unstructured.io/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

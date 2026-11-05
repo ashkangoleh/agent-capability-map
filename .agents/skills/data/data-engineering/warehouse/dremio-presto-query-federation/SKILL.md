@@ -3,7 +3,7 @@ name: dremio-presto-query-federation
 description: "Design Dremio and Presto/Trino federation with pushdown, source limits, identity and consistency boundaries."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # dremio-presto-query-federation
@@ -40,3 +40,6 @@ Return federation topology, pushdown evidence, identity model, source-protection
 ## Official or primary references
 - https://trino.io/docs/current/
 - https://docs.dremio.com/current/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.
