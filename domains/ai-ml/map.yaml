@@ -29,6 +29,10 @@ children:
   - id: rag-retrieval
     description: "rag retrieval"
     triggers:
+      - "rag migrate vector embeddings between model versions"
+      - "rag reranker relevance and ndcg"
+      - "rag enforce tenant permissions before retrieval"
+      - "rag split documents by headings and tables"
       - "hybrid retrieval"
       - "retrieval evaluation"
       - "milvus"
@@ -49,6 +53,7 @@ children:
   - id: machine-learning
     description: "machine learning"
     triggers:
+      - "ml train pipeline reproducible artifacts"
       - "ml model serving"
       - "model canary"
       - "dataset annotation"

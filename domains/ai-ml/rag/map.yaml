@@ -41,24 +41,28 @@ children:
   - id: chunking
     description: "rag chunk boundary evaluation: source formats and labeled retrieval queries"
     triggers:
+      - "rag split documents by headings and tables"
       - "rag chunk boundary evaluation"
     status: active
     skills: domains/ai-ml/rag/chunking/skills.yaml
   - id: access-control
     description: "rag document level acl enforcement: group identity, ACL snapshots and revocation"
     triggers:
+      - "rag enforce tenant permissions before retrieval"
       - "rag document level acl enforcement"
     status: active
     skills: domains/ai-ml/rag/access-control/skills.yaml
   - id: reranking
     description: "rag cross encoder reranking evaluation: candidate top K and labeled relevance judgments"
     triggers:
+      - "rag reranker relevance and ndcg"
       - "rag cross encoder reranking evaluation"
     status: active
     skills: domains/ai-ml/rag/reranking/skills.yaml
   - id: index-migrations
     description: "rag embedding reindex migration: model dimensions, index aliases and replay state"
     triggers:
+      - "rag migrate vector embeddings between model versions"
       - "rag embedding reindex migration"
     status: active
     skills: domains/ai-ml/rag/index-migrations/skills.yaml

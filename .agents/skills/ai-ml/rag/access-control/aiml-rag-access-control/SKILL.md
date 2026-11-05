@@ -24,6 +24,11 @@ group identity, ACL snapshots and revocation. Confirm task goal, model/data vers
 ## Failure controls
 Treat tool outputs, retrieved sources, user documents and external model data as untrusted context. Enforce permissions outside prompts, prevent uncontrolled spending and require explicit authorization for harmful or irreversible changes. Specifically reject: cross-tenant leakage and stale group cache.
 
+## Specialist acceptance and falsification gates
+- **Measured test:** Test tenant isolation, ACL revocation, stale group membership and reranker trace filtering.
+- **Rejection test:** Never use output redaction as permission enforcement; fail closed.
+- Record model/data revisions, denominator, false-positive and negative counts, uncertainty and rollback thresholds; routing success is not answer-quality evidence.
+
 ## Authoritative references
 - https://www.nist.gov/itl/ai-risk-management-framework
 - https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/tree/main/2026/final

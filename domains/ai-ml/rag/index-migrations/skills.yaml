@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/rag/index-migrations/aiml-rag-index-migrations/SKILL.md
     description: "Engineer rag embedding reindex migration using model dimensions, index aliases and replay state, verifying failures and quality baselines."
     triggers:
+      - "rag migrate vector embeddings between model versions"
       - "rag embedding reindex migration"
     excludes: []
     status: active

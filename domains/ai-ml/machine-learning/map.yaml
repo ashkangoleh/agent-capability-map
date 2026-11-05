@@ -42,6 +42,7 @@ children:
   - id: training-pipelines
     description: "ml training pipeline artifact lineage: data snapshots, training code and seed policy"
     triggers:
+      - "ml train pipeline reproducible artifacts"
       - "ml training pipeline artifact lineage"
     status: active
     skills: domains/ai-ml/machine-learning/training-pipelines/skills.yaml
