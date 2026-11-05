@@ -3,7 +3,7 @@ name: swe-software-architecture-service-boundaries
 description: Use for microservice boundary consistency tasks in Software Architecture and Systems Design; verify choose service boundaries and failure semantics before splitting deployments. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Software Architecture and Systems Design: service boundaries
@@ -38,3 +38,6 @@ Reject assumptions that conceal Distributed transactions without policy, chatty 
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

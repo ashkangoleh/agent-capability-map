@@ -3,7 +3,7 @@ name: swe-requirements-engineering-acceptance-criteria
 description: Use for software acceptance criteria scenarios tasks in Software Requirements and Specification; verify write executable acceptance criteria with positive and negative examples. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Software Requirements and Specification: acceptance criteria
@@ -38,3 +38,6 @@ Reject assumptions that conceal Happy-path-only scenarios, undefined errors and 
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

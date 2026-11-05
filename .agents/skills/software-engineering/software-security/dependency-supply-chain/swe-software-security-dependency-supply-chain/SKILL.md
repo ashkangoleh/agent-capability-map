@@ -3,7 +3,7 @@ name: swe-software-security-dependency-supply-chain
 description: Use for software dependency sbom vulnerability tasks in Application Security Engineering; verify audit vulnerable dependencies and artifact trust with minimal disruption. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Application Security Engineering: dependency supply chain
@@ -38,3 +38,6 @@ Reject assumptions that conceal Blind major upgrades, forged provenance and over
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

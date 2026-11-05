@@ -3,7 +3,7 @@ name: swe-software-architecture-architecture-decisions
 description: Use for software architecture decision record tasks in Software Architecture and Systems Design; verify record tradeoffs, constraints and consequences rather than architecture-by-fashion. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Software Architecture and Systems Design: architecture decisions
@@ -38,3 +38,6 @@ Reject assumptions that conceal Non-falsifiable ADRs, hidden lock-in and unsuppo
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

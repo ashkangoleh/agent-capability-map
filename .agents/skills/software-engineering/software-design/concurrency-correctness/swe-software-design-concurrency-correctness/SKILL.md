@@ -3,7 +3,7 @@ name: swe-software-design-concurrency-correctness
 description: Use for application concurrency race deadlock tasks in Software Design and Interface Contracts; verify specify lock ordering, atomicity and cancellation across shared state. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Software Design and Interface Contracts: concurrency correctness
@@ -38,3 +38,6 @@ Reject assumptions that conceal Data races, deadlocks, starvation and false exac
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
