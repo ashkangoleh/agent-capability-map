@@ -2,7 +2,7 @@
 name: kubernetes-networking-triage
 description: Diagnose Kubernetes DNS, Services, NetworkPolicy and ingress routing using scoped packet and endpoint evidence.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # kubernetes-networking-triage
@@ -33,3 +33,6 @@ Cluster version/context, CNI plugin, namespaces, Service/EndpointSlice, DNS, sou
 
 ## Result contract
 Return decision, exact environment scope, observed facts versus hypotheses, impact, safe next commands or implementation, verification evidence and rollback. Never claim tested changes or measured savings without observed results.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

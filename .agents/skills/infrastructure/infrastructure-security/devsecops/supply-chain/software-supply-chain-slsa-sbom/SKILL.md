@@ -2,7 +2,7 @@
 name: software-supply-chain-slsa-sbom
 description: "Harden software supply chains with SLSA provenance, SBOM, dependency attestations and release verification."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # software-supply-chain-slsa-sbom
@@ -37,3 +37,6 @@ Build system, source identity, artifact digest, provenance format, SBOM and trus
 
 ## Output contract
 Return the requested design or diagnosis with exact scope, assumptions, evidence, safe procedure, failure modes, validation and rollback. Never claim production changes or tests that were not performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

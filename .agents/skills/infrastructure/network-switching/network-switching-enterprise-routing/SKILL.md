@@ -3,7 +3,7 @@ name: network-switching-enterprise-routing
 description: "Engineer switching and routed fabrics across VLAN, STP, LACP, OSPF, IS-IS, VRF and EVPN/VXLAN."
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # network-switching-enterprise-routing
@@ -46,3 +46,6 @@ Topology, NOS versions, VLAN/VRF plan, STP root, LACP bundles, routing adjacenci
 
 ## Output contract
 Return exact scope, assumptions, observed evidence, safe procedure, failure modes, verification, rollback and residual risk. Distinguish facts from hypotheses and never claim tests or production changes that were not actually performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
