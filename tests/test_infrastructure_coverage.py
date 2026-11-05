@@ -254,6 +254,49 @@ class InfrastructureCoverageTests(unittest.TestCase):
         self.assertEqual(network_policy["status"], "matched", network_policy)
         self.assertEqual(network_policy["selected_skill"], "kubernetes-networking-triage")
 
+    def test_sre_reliability_specialists_have_independent_routes(self):
+        categories = {
+            "sre-slo-error-budget": "slo-governance",
+            "sre-capacity-load-testing": "capacity-engineering",
+            "chaos-engineering-failure-injection": "failure-injection",
+            "backup-dr-restore-exercises": "disaster-recovery",
+        }
+        graph = load_yaml(ROOT, "domains/infrastructure/sre-reliability/map.yaml")
+        entries = {item["id"]: item for item in graph["children"]}
+        self.assertTrue(set(categories.values()).issubset(entries))
+        for category in categories.values():
+            registry = load_yaml(ROOT, entries[category]["skills"])
+            self.assertEqual(len(registry["skills"]), 1)
+        cases = [
+            case for case in self.cases
+            if case.get("skill") in categories and case["id"].startswith("infra-expanded-")
+        ]
+        self.assertEqual({case["skill"] for case in cases}, set(categories))
+        for case in cases:
+            skill_id = case["skill"]
+            category = categories[skill_id]
+            with self.subTest(skill=skill_id):
+                result = self.router.resolve(case["request"])
+                self.assertEqual(result["status"], "matched", result)
+                self.assertEqual(result["selected_skill"], skill_id)
+                self.assertEqual(result["route"], [
+                    "infrastructure", "sre-reliability", category
+                ])
+                self.assertLessEqual(len(result["inspected_files"]), 10)
+                expected_path = ROOT / (
+                    f".agents/skills/infrastructure/sre-reliability/"
+                    f"{category}/{skill_id}/SKILL.md"
+                )
+                self.assertEqual(Path(result["skill_path"]).resolve(), expected_path.resolve())
+                self.assertTrue(expected_path.is_file())
+                self.assertFalse(
+                    (ROOT / ".agents/skills/infrastructure/sre" / skill_id / "SKILL.md").exists()
+                )
+        # Incident management must remain separate from reliability objectives.
+        incident = self.router.resolve("Infrastructure: sre incident postmortem")
+        self.assertEqual(incident["status"], "matched", incident)
+        self.assertEqual(incident["selected_skill"], "sre-incident-rca-runbook")
+
     def test_all_active_infrastructure_skills_have_routing_fixtures(self):
         seen_maps = set()
         active = set()

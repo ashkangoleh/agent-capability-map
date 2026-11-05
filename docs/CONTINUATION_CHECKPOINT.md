@@ -6,7 +6,16 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Infrastructure Kubernetes split (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Infrastructure SRE taxonomy (2026-11-05)
+
+- Baseline `pre_release` HEAD: `6bb09f00c3866234ec633a9f4cb29e86d8034fed`; only Infrastructure work is authorized. No `main` changes and no new branches.
+- Decomposed the four-skill `sre-practices` registry into explicit `slo-governance`, `capacity-engineering`, `failure-injection` and `disaster-recovery` routes under `domains/infrastructure/sre-reliability/map.yaml`.
+- Four SKILL.md manifest Git blobs are relocated byte-for-byte to `.agents/skills/infrastructure/sre-reliability/<category>/<skill-id>/SKILL.md`; original content, skill IDs, triggers, excludes and descriptions preserved. Removed old registry/path entries.
+- Added targeted tests for four existing `infra-expanded-` fixtures and a negative near-miss to retain Incident Management ownership. Existing 469 routing fixtures remain unchanged.
+- Required CI gates: validate all YAML maps, 469 fixtures and full unit suite at **new** commit SHA. Required physical inventory 344 global / 95 Infrastructure / 0 flat.
+- Scope is structural routing only; Infrastructure remains incomplete pending specialist code/procedure reviews, version-pinned system testing, injected failures, multi-host validation and source-aligned taxonomy for other categories.
+
+## HISTORICAL CHECKPOINT — Infrastructure Kubernetes split (2026-11-05)
 
 - Previous `pre_release` HEAD: `9196917d7467134e15e1f0e46576dda14b386337` (DevSecOps split; CI must be confirmed independently for that commit).
 - Continued **Infrastructure only**, no new branch or merge to `main`.

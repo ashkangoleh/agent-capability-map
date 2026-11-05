@@ -97,6 +97,19 @@ The three original `SKILL.md` Git blobs are preserved exactly and the old multi-
 
 This is a structural/behavior-preserving specialization for existing explicit triggers. It does not certify real Kubernetes commands, integration versions or live agent selection.
 
+## SRE & Reliability taxonomy increment — 2026-11-05
+
+The earlier `sre-practices` registry combined four operationally distinct capabilities. It is now four selectable sibling categories under `sre-reliability`: `slo-governance`, `capacity-engineering`, `failure-injection` and `disaster-recovery`. The existing `incident-management` category remains separate.
+
+All four `SKILL.md` source files retain their original Git blobs; stable skill IDs, descriptions, positive trigger strings and exclusions are unchanged. Registry source paths and map boundaries changed, with no new registered skills. Existing fixtures verify route changes, and a regression check prevents incident management from being routed into an SLO category.
+
+References for reasoning about SLO/error-budget policy, load testing/capacity and restore/disaster recovery readiness:
+- https://sre.google/workbook/error-budget-policy/
+- https://sre.google/sre-book/service-best-practices/
+- https://sre.google/sre-book/launch-checklist/
+
+This is routing/taxonomy normalization, **not** a verification that the individual failure-injection procedures are safe in production or that backup restores meet their actual RPO/RTO.
+
 ## Completion gates
 
 1. Review every existing and new `SKILL.md` for specialist depth, not just frontmatter and headings.

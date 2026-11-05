@@ -1,0 +1,11 @@
+schema_version: 1
+id: slo-governance
+kind: skill-registry
+skills:
+  - id: sre-slo-error-budget
+    path: .agents/skills/infrastructure/sre-reliability/slo-governance/sre-slo-error-budget/SKILL.md
+    description: "Define SLIs, SLOs, error budgets and burn-rate alerts aligned with user-visible reliability."
+    triggers:
+      - "sre slo error budget"
+    excludes: []
+    status: active

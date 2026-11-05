@@ -2,15 +2,30 @@ schema_version: 1
 id: sre-reliability
 kind: map
 children:
-  - id: sre-practices
-    description: "SLOs, error budgets, capacity, chaos and disaster recovery"
+  - id: slo-governance
+    description: "SLIs, SLOs, error budgets and reliability objectives"
     triggers:
       - "sre slo error budget"
+    status: active
+    skills: domains/infrastructure/sre-reliability/slo-governance/skills.yaml
+  - id: capacity-engineering
+    description: "Service capacity models, load tests and saturation headroom"
+    triggers:
       - "sre capacity load testing"
+    status: active
+    skills: domains/infrastructure/sre-reliability/capacity-engineering/skills.yaml
+  - id: failure-injection
+    description: "Controlled chaos experiments, blast-radius bounds and recovery"
+    triggers:
       - "chaos engineering failure injection"
+    status: active
+    skills: domains/infrastructure/sre-reliability/failure-injection/skills.yaml
+  - id: disaster-recovery
+    description: "Backup, restore, failover and recovery-point/time objectives"
+    triggers:
       - "infrastructure backup disaster recovery"
     status: active
-    skills: domains/infrastructure/sre/skills.yaml
+    skills: domains/infrastructure/sre-reliability/disaster-recovery/skills.yaml
   - id: incident-management
     description: "Incident diagnosis, mitigation and postmortems"
     triggers:
