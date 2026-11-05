@@ -3,7 +3,7 @@ name: technical-writing-docs
 description: Use when creating or improving technical documentation, architecture records, runbooks, API documentation, tutorials, or engineering reports.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Purpose
@@ -45,3 +45,6 @@ If implementation evidence is missing, mark the section as unverified or ask for
 - [ ] Examples are valid or labeled illustrative.
 - [ ] Version scope is explicit.
 - [ ] Links and commands were checked.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

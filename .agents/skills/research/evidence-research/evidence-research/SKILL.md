@@ -3,7 +3,7 @@ name: evidence-research
 description: Use when a task requires current external research, factual verification, evidence synthesis, source comparison, or a defensible answer with citations.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Purpose
@@ -51,3 +51,6 @@ Stop short of a definitive conclusion when primary evidence is inaccessible, sou
 - [ ] Facts, assumptions, and inferences are distinguished.
 - [ ] Conflicts and unknowns are explicit.
 - [ ] No unsupported citation or quote is present.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

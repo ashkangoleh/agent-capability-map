@@ -2,7 +2,7 @@
 name: security-threat-model-review
 description: Identify and prioritize security threats in an application design using explicit assets, trust boundaries and actionable mitigations.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # security-threat-model-review
@@ -35,3 +35,6 @@ When evidence or permissions are insufficient, explain the specific blocker and 
 
 ## Deliverable and verification
 Provide the bounded requested artifact, assumptions, evidence table or source links, tests/verification actually performed, failure cases and follow-up checks. Keep the output proportional to the task.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

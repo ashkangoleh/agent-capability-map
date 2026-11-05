@@ -3,7 +3,7 @@ name: product-discovery-prd
 description: Use when framing a product problem, planning discovery, synthesizing user needs, defining requirements, writing a PRD, prioritizing scope, or defining acceptance criteria.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Purpose
@@ -45,3 +45,6 @@ Do not claim product-market fit, user demand, or causal impact from anecdotal ev
 - [ ] Metrics are operationally defined.
 - [ ] Requirements are testable.
 - [ ] Non-goals and risks are explicit.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

@@ -3,7 +3,7 @@ name: seo-audit-strategy
 description: Use when auditing or planning technical SEO, on-page SEO, content SEO, internal linking, structured data, local SEO, international SEO, or organic search performance.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Purpose
@@ -53,3 +53,6 @@ Verify the applicable version and publication date before using these sources:
 - https://developers.google.com/search/docs/essentials
 - https://developers.google.com/search/docs/fundamentals/seo-starter-guide
 - https://developers.google.com/search/docs/fundamentals/creating-helpful-content
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
