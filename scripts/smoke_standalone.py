@@ -57,7 +57,15 @@ def smoke(archive):
         env.pop("CAPABILITY_MAP_PYTHON", None)
         env["PATH"] = str(bundle)
         if os.name == "nt":
-            env["PATH"] += os.pathsep + os.path.join(env["SystemRoot"], "System32")
+            # Windows environment key spelling is not guaranteed by CI runners.
+            # System DLL loading does not require a Python or Node interpreter.
+            system_root = next(
+                (value for key, value in env.items()
+                 if key.casefold() in ("systemroot", "windir") and value),
+                None,
+            )
+            if system_root:
+                env["PATH"] += os.pathsep + os.path.join(system_root, "System32")
         outside = work / "outside checkout with spaces"
         outside.mkdir()
         status = invoke(executable, ["validate"], cwd=outside, env=env)

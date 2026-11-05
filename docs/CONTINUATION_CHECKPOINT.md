@@ -6,7 +6,14 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Native Linux/Windows standalone ZIP distributions (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Standalone Windows smoke env correction (2026-11-05)
+
+- Baseline `pre_release` head `65a726c921aa83137c5fa601a50157b13dc18bcf`; workflow `42087730688` produced and smoke-tested Linux x64 bundle successfully, Windows binary **build succeeded** but Windows smoke failed before executable invocation at `env["SystemRoot"]` (`KeyError`). Other existing Python/Node CLI smoke jobs passed.
+- Removed case-sensitive assumption about Windows environment keys. The smoke test now searches case-insensitively for `SystemRoot` or `windir`, and uses the system directory only if present; Python and Node remain excluded from PATH.
+- The old Windows CI failure is an **unverified executable test**, not proof of functional failure; the corrected head must pass full native Windows smoke, Linux smoke and base test suite before reporting complete.
+- Preserved all role/skill content, registry counts and immutable release archive design.
+
+## HISTORICAL CHECKPOINT — Native Linux/Windows standalone ZIP distributions (2026-11-05)
 
 - Baseline: `pre_release` at `4fcf1c77e9846bfd5b983c48ad1cb72d00ba7cfb` (passed previous cross-platform CI). Work remains scoped to Infrastructure + distribution hardening; do not start any other domain or merge main.
 - Build design is **PyInstaller 6.22.3 --onefile executable plus permanent sidecar data** for Linux x64 and Windows x64. Entire distribution ZIP is self-contained for end users: **no separate Python, Node, Git Bash or WSL installation needed**, but the executable **cannot be distributed alone** because the 344 SKILL.md files, 263 domain ROLE.md files and YAML registries must exist at stable paths.
