@@ -6,7 +6,26 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Data Science Foundations categorized (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Infrastructure Advanced Storage migration (2026-11-05)
+
+**Repository:** `ashkangoleh/agent-capability-map`, **branch:** `pre_release` only.
+**Head before this checkpoint edit:** `c694c947d479527f1650bb89a01962e29d706f20`. Always fetch live HEAD on future continuation.
+**User request:** choose one previously flat domain, classify skills #8 and #9, migrate one category, and report structural progress after each change. Do not add examples.
+
+- #8 `object-storage-infrastructure-operations`: **Infrastructure / Storage Engineering / Advanced Storage**.
+- #9 `pipeline-backfill-recovery`: **Data / Data Engineering / Batch Ingestion / Recovery**. It is **not moved in this increment** and remains a flat skill.
+- Migrated the complete Advanced Storage registry's **two** skills (#8 and #17 `storage-san-nas-nvmeof`) to `.agents/skills/infrastructure/storage-engineering/advanced-storage/<skill-id>/SKILL.md`.
+- Updated `domains/infrastructure/storage/new-specialists.yaml` and extended `tests/test_infrastructure_coverage.py` to enforce canonical paths and absence of old flat duplicates.
+- Pre-commit tree validation verified **2/2 identical Git blob SHAs**, removal of flat originals and constant 344 physical SKILL manifests.
+- **Structural progress:** 327/344 domain-nested (95.06%), 17 flat (4.94%). This is **file layout only**, not project completion, all-agent compatibility or production readiness.
+- GitHub Actions run `41998581960` for the migration commit **failed** on a separate, pre-existing stale registry reference: `Missing registered file: .agents/skills/data-engineering-implementation/SKILL.md` from `domains/data/general-skills.yaml`. The file exists in the new `data/data-engineering/foundations` location. Fix and revalidate all stale shared-registry references before claiming branch health. Tests added for this increment were **not executed to completion in CI** because this earlier validation gate stopped the workflow.
+- Historical `docs/SKILL_LIBRARY_LAYOUT.md` describes the earlier two-category canary. Current source of truth is the registered `path` in the relevant YAML; independent native host discovery of deeply nested paths remains host-specific.
+- Next candidate for a **separate user-approved category migration**: `pipeline-backfill-recovery` via `domains/data/general-skills.yaml` and the batch-ingestion recovery route. Maintain a one-file-per-ID invariant and update all referencing registries.
+
+**Acceptance status:** content/tree verified; full Python Router, global regression suite, host discovery and green GitHub Actions **NOT VERIFIED**.
+
+
+## HISTORICAL CHECKPOINT — Data Science Foundations categorized (2026-11-05)
 
 **User scope:** Keep organizing `.agents/skills` by domain/subdomain/category, avoid adding unnecessary examples, preserve IDs and the explicit YAML Router. Current top-level work stays on **all of Data**; active subdomain remains **Data Science**, not another domain.
 
