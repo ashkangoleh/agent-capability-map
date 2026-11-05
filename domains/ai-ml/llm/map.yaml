@@ -50,3 +50,27 @@ children:
       - "model serving"
     status: active
     skills: domains/ai-ml/llm/general/skills.yaml
+  - id: context-engineering
+    description: "llm prompt context budgeting: tokenizer limits, provenance and truncation order"
+    triggers:
+      - "llm prompt context budgeting"
+    status: active
+    skills: domains/ai-ml/llm/context-engineering/skills.yaml
+  - id: structured-generation
+    description: "llm json schema constrained decoding: consumer schema, decoder version and invalid outputs"
+    triggers:
+      - "llm json schema constrained decoding"
+    status: active
+    skills: domains/ai-ml/llm/structured-generation/skills.yaml
+  - id: inference-optimization
+    description: "llm speculative decoding throughput profiling: batch and GPU budget, KV cache and p99 latency"
+    triggers:
+      - "llm speculative decoding throughput profiling"
+    status: active
+    skills: domains/ai-ml/llm/inference-optimization/skills.yaml
+  - id: model-selection
+    description: "llm model selection task benchmark: held-out domain tasks, privacy and token costs"
+    triggers:
+      - "llm model selection task benchmark"
+    status: active
+    skills: domains/ai-ml/llm/model-selection/skills.yaml

@@ -1,0 +1,11 @@
+schema_version: 1
+id: index-migrations
+kind: skill-registry
+skills:
+  - id: aiml-rag-index-migrations
+    path: .agents/skills/ai-ml/rag/index-migrations/aiml-rag-index-migrations/SKILL.md
+    description: "Engineer rag embedding reindex migration using model dimensions, index aliases and replay state, verifying failures and quality baselines."
+    triggers:
+      - "rag embedding reindex migration"
+    excludes: []
+    status: active

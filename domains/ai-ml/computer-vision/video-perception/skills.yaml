@@ -1,0 +1,11 @@
+schema_version: 1
+id: video-perception
+kind: skill-registry
+skills:
+  - id: aiml-computer-vision-video-perception
+    path: .agents/skills/ai-ml/computer-vision/video-perception/aiml-computer-vision-video-perception/SKILL.md
+    description: "Engineer video action recognition temporal evaluation using camera cohorts, frame sequences and windows, verifying failures and quality baselines."
+    triggers:
+      - "video action recognition temporal evaluation"
+    excludes: []
+    status: active

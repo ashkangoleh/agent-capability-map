@@ -1,0 +1,11 @@
+schema_version: 1
+id: reranking
+kind: skill-registry
+skills:
+  - id: aiml-rag-reranking
+    path: .agents/skills/ai-ml/rag/reranking/aiml-rag-reranking/SKILL.md
+    description: "Engineer rag cross encoder reranking evaluation using candidate top K and labeled relevance judgments, verifying failures and quality baselines."
+    triggers:
+      - "rag cross encoder reranking evaluation"
+    excludes: []
+    status: active

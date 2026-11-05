@@ -1,0 +1,11 @@
+schema_version: 1
+id: reproducibility
+kind: skill-registry
+skills:
+  - id: aiml-mlops-reproducibility
+    path: .agents/skills/ai-ml/mlops/reproducibility/aiml-mlops-reproducibility/SKILL.md
+    description: "Engineer ml experiment environment reproducibility audit using container hashes, data version and random seeds, verifying failures and quality baselines."
+    triggers:
+      - "ml experiment environment reproducibility audit"
+    excludes: []
+    status: active

@@ -1,0 +1,11 @@
+schema_version: 1
+id: structured-generation
+kind: skill-registry
+skills:
+  - id: aiml-llm-structured-generation
+    path: .agents/skills/ai-ml/llm/structured-generation/aiml-llm-structured-generation/SKILL.md
+    description: "Engineer llm json schema constrained decoding using consumer schema, decoder version and invalid outputs, verifying failures and quality baselines."
+    triggers:
+      - "llm json schema constrained decoding"
+    excludes: []
+    status: active

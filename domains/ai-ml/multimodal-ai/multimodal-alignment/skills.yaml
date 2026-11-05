@@ -1,0 +1,11 @@
+schema_version: 1
+id: multimodal-alignment
+kind: skill-registry
+skills:
+  - id: aiml-multimodal-ai-multimodal-alignment
+    path: .agents/skills/ai-ml/multimodal-ai/multimodal-alignment/aiml-multimodal-ai-multimodal-alignment/SKILL.md
+    description: "Engineer multimodal audio video text temporal alignment using timebases, audio rate and video fps, verifying failures and quality baselines."
+    triggers:
+      - "multimodal audio video text temporal alignment"
+    excludes: []
+    status: active

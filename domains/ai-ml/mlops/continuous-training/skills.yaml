@@ -1,0 +1,11 @@
+schema_version: 1
+id: continuous-training
+kind: skill-registry
+skills:
+  - id: aiml-mlops-continuous-training
+    path: .agents/skills/ai-ml/mlops/continuous-training/aiml-mlops-continuous-training/SKILL.md
+    description: "Engineer mlops continuous training trigger design using data quality and label arrival thresholds, verifying failures and quality baselines."
+    triggers:
+      - "mlops continuous training trigger design"
+    excludes: []
+    status: active

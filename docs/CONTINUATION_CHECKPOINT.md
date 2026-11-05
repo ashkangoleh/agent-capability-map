@@ -1,5 +1,12 @@
 # Continuation Checkpoint — Agent Capability Map
 
+## LATEST ACTIVE CHECKPOINT — AI/ML hierarchy (2026-11-05)
+
+- User approved continuing the next domain AI/ML. Only `pre_release`; base commit `04bbf7496ee904bfe2a56ae8013b96b0a5c73dae`; do not merge main or open another branch.
+- 12 first-level AI/ML domains, 66 active terminal capabilities, 79 independent roles, 43 specialist skills and 43 positive fixtures. Historical skills remain unchanged; ML validation mapped status is preserved.
+- Need verify full CI, Linux/Windows standalone, security-domain/agent/data routing regression and scoped allowlists on the exact new head. No native agent quality claim.
+
+
 **Updated:** 2026-11-05
 **Canonical repository:** `ashkangoleh/agent-capability-map` (private)
 **Canonical working branch:** `pre_release`

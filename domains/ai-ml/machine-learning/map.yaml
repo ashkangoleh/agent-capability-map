@@ -39,3 +39,27 @@ children:
       - "training labels"
     status: active
     skills: domains/ai-ml/machine-learning/annotations/skills.yaml
+  - id: training-pipelines
+    description: "ml training pipeline artifact lineage: data snapshots, training code and seed policy"
+    triggers:
+      - "ml training pipeline artifact lineage"
+    status: active
+    skills: domains/ai-ml/machine-learning/training-pipelines/skills.yaml
+  - id: hyperparameter-tuning
+    description: "ml hyperparameter search leakage prevention: train and validation splits, search budgets"
+    triggers:
+      - "ml hyperparameter search leakage prevention"
+    status: active
+    skills: domains/ai-ml/machine-learning/hyperparameter-tuning/skills.yaml
+  - id: explainability
+    description: "ml model explanation stability audit: feature attribution context and correlated variables"
+    triggers:
+      - "ml model explanation stability audit"
+    status: active
+    skills: domains/ai-ml/machine-learning/explainability/skills.yaml
+  - id: dataset-shift
+    description: "ml dataset distribution shift detection: baseline distribution, cohort keys and label lag"
+    triggers:
+      - "ml dataset distribution shift detection"
+    status: active
+    skills: domains/ai-ml/machine-learning/dataset-shift/skills.yaml

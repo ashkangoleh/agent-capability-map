@@ -16,6 +16,10 @@ children:
       - "model serving"
       - "prompt engineering"
       - "litellm"
+      - "llm prompt context budgeting"
+      - "llm json schema constrained decoding"
+      - "llm speculative decoding throughput profiling"
+      - "llm model selection task benchmark"
     status: active
     map: domains/ai-ml/llm/map.yaml
   - id: rag-retrieval
@@ -32,6 +36,10 @@ children:
       - "retrieval"
       - "vector search"
       - "reranking"
+      - "rag chunk boundary evaluation"
+      - "rag document level acl enforcement"
+      - "rag cross encoder reranking evaluation"
+      - "rag embedding reindex migration"
     status: active
     map: domains/ai-ml/rag/map.yaml
   - id: machine-learning
@@ -46,6 +54,10 @@ children:
       - "machine learning"
       - "ml model"
       - "supervised learning"
+      - "ml training pipeline artifact lineage"
+      - "ml hyperparameter search leakage prevention"
+      - "ml model explanation stability audit"
+      - "ml dataset distribution shift detection"
     status: active
     map: domains/ai-ml/machine-learning/map.yaml
   - id: deep-learning
@@ -57,6 +69,10 @@ children:
       - "deep learning"
       - "neural network"
       - "transformer training"
+      - "deep learning distributed training collective recovery"
+      - "deep learning mixed precision optimizer stability"
+      - "deep learning sharded checkpoint restoration"
+      - "deep learning contrastive representation evaluation"
     status: active
     map: domains/ai-ml/deep-learning/map.yaml
   - id: mlops
@@ -70,6 +86,10 @@ children:
       - "mlops"
       - "model deployment"
       - "model monitoring"
+      - "mlops continuous training trigger design"
+      - "ml model registry approval audit"
+      - "mlops production model release safety gate"
+      - "ml experiment environment reproducibility audit"
     status: active
     map: domains/ai-ml/mlops/map.yaml
   - id: computer-vision
@@ -78,8 +98,11 @@ children:
       - "vision model"
       - "image classification"
       - "object detection"
+      - "computer vision instance segmentation evaluation"
+      - "document ai ocr layout evaluation"
+      - "video action recognition temporal evaluation"
     status: active
-    skills: domains/ai-ml/computer-vision/skills.yaml
+    map: domains/ai-ml/computer-vision/map.yaml
   - id: speech-audio-ai
     description: "speech audio ai"
     triggers:
@@ -87,8 +110,11 @@ children:
       - "asr"
       - "speech recognition"
       - "text to speech"
+      - "speech speaker diarization overlap evaluation"
+      - "speech text to speech intelligibility safety"
+      - "speech audio pii redaction evaluation"
     status: active
-    skills: domains/ai-ml/speech-audio-ai/skills.yaml
+    map: domains/ai-ml/speech-audio-ai/map.yaml
   - id: responsible-ai
     description: "responsible ai"
     triggers:
@@ -96,5 +122,36 @@ children:
       - "model bias"
       - "ai risk"
       - "ai safety"
+      - "responsible ai subgroup fairness audit"
+      - "responsible ai model transparency disclosure"
+      - "responsible ai postdeployment impact monitoring"
     status: active
-    skills: domains/ai-ml/responsible-ai/skills.yaml
+    map: domains/ai-ml/responsible-ai/map.yaml
+  - id: natural-language-processing
+    description: "natural-language-processing model engineering"
+    triggers:
+      - "nlp text classification calibration benchmark"
+      - "natural language processing"
+    status: active
+    map: domains/ai-ml/natural-language-processing/map.yaml
+  - id: recommender-systems
+    description: "recommender-systems model engineering"
+    triggers:
+      - "recommender candidate generation recall evaluation"
+      - "recommender systems"
+    status: active
+    map: domains/ai-ml/recommender-systems/map.yaml
+  - id: reinforcement-learning
+    description: "reinforcement-learning model engineering"
+    triggers:
+      - "reinforcement learning offline policy evaluation support"
+      - "reinforcement learning"
+    status: active
+    map: domains/ai-ml/reinforcement-learning/map.yaml
+  - id: multimodal-ai
+    description: "multimodal-ai model engineering"
+    triggers:
+      - "multimodal vision language grounding evaluation"
+      - "multimodal ai"
+    status: active
+    map: domains/ai-ml/multimodal-ai/map.yaml

@@ -1,0 +1,11 @@
+schema_version: 1
+id: checkpoint-recovery
+kind: skill-registry
+skills:
+  - id: aiml-deep-learning-checkpoint-recovery
+    path: .agents/skills/ai-ml/deep-learning/checkpoint-recovery/aiml-deep-learning-checkpoint-recovery/SKILL.md
+    description: "Engineer deep learning sharded checkpoint restoration using optimizer shards, manifests and storage atomicity, verifying failures and quality baselines."
+    triggers:
+      - "deep learning sharded checkpoint restoration"
+    excludes: []
+    status: active

@@ -1,0 +1,29 @@
+schema_version: 1
+id: speech-audio-ai
+kind: map
+children:
+  - id: asr-evaluation
+    description: "Existing speech-audio-ai validated skill"
+    triggers:
+      - "speech recognition"
+      - "asr evaluation"
+    status: active
+    skills: domains/ai-ml/speech-audio-ai/skills.yaml
+  - id: speaker-diarization
+    description: "speech speaker diarization overlap evaluation: speaker boundaries, overlaps and channels"
+    triggers:
+      - "speech speaker diarization overlap evaluation"
+    status: active
+    skills: domains/ai-ml/speech-audio-ai/speaker-diarization/skills.yaml
+  - id: speech-synthesis
+    description: "speech text to speech intelligibility safety: language, consent and human listening rubric"
+    triggers:
+      - "speech text to speech intelligibility safety"
+    status: active
+    skills: domains/ai-ml/speech-audio-ai/speech-synthesis/skills.yaml
+  - id: speech-privacy
+    description: "speech audio pii redaction evaluation: PII label set, audio consent and transcript data"
+    triggers:
+      - "speech audio pii redaction evaluation"
+    status: active
+    skills: domains/ai-ml/speech-audio-ai/speech-privacy/skills.yaml

@@ -1,0 +1,11 @@
+schema_version: 1
+id: document-ai
+kind: skill-registry
+skills:
+  - id: aiml-computer-vision-document-ai
+    path: .agents/skills/ai-ml/computer-vision/document-ai/aiml-computer-vision-document-ai/SKILL.md
+    description: "Engineer document ai ocr layout evaluation using page layouts, character scripts and table labels, verifying failures and quality baselines."
+    triggers:
+      - "document ai ocr layout evaluation"
+    excludes: []
+    status: active

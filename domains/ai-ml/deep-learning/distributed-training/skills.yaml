@@ -1,0 +1,11 @@
+schema_version: 1
+id: distributed-training
+kind: skill-registry
+skills:
+  - id: aiml-deep-learning-distributed-training
+    path: .agents/skills/ai-ml/deep-learning/distributed-training/aiml-deep-learning-distributed-training/SKILL.md
+    description: "Engineer deep learning distributed training collective recovery using framework and world size, interconnect and gradients, verifying failures and quality baselines."
+    triggers:
+      - "deep learning distributed training collective recovery"
+    excludes: []
+    status: active

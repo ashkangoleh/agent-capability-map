@@ -2077,3 +2077,175 @@ cases:
     request: "software engineering software dependency sbom vulnerability"
     status: matched
     skill: swe-software-security-dependency-supply-chain
+  - id: ai-hier-llm-context-engineering
+    request: "Design and evaluate llm prompt context budgeting"
+    status: matched
+    skill: aiml-llm-context-engineering
+  - id: ai-hier-llm-structured-generation
+    request: "Design and evaluate llm json schema constrained decoding"
+    status: matched
+    skill: aiml-llm-structured-generation
+  - id: ai-hier-llm-inference-optimization
+    request: "Design and evaluate llm speculative decoding throughput profiling"
+    status: matched
+    skill: aiml-llm-inference-optimization
+  - id: ai-hier-llm-model-selection
+    request: "Design and evaluate llm model selection task benchmark"
+    status: matched
+    skill: aiml-llm-model-selection
+  - id: ai-hier-rag-chunking
+    request: "Design and evaluate rag chunk boundary evaluation"
+    status: matched
+    skill: aiml-rag-chunking
+  - id: ai-hier-rag-access-control
+    request: "Design and evaluate rag document level acl enforcement"
+    status: matched
+    skill: aiml-rag-access-control
+  - id: ai-hier-rag-reranking
+    request: "Design and evaluate rag cross encoder reranking evaluation"
+    status: matched
+    skill: aiml-rag-reranking
+  - id: ai-hier-rag-index-migrations
+    request: "Design and evaluate rag embedding reindex migration"
+    status: matched
+    skill: aiml-rag-index-migrations
+  - id: ai-hier-machine-learning-training-pipelines
+    request: "Design and evaluate ml training pipeline artifact lineage"
+    status: matched
+    skill: aiml-machine-learning-training-pipelines
+  - id: ai-hier-machine-learning-hyperparameter-tuning
+    request: "Design and evaluate ml hyperparameter search leakage prevention"
+    status: matched
+    skill: aiml-machine-learning-hyperparameter-tuning
+  - id: ai-hier-machine-learning-explainability
+    request: "Design and evaluate ml model explanation stability audit"
+    status: matched
+    skill: aiml-machine-learning-explainability
+  - id: ai-hier-machine-learning-dataset-shift
+    request: "Design and evaluate ml dataset distribution shift detection"
+    status: matched
+    skill: aiml-machine-learning-dataset-shift
+  - id: ai-hier-deep-learning-distributed-training
+    request: "Design and evaluate deep learning distributed training collective recovery"
+    status: matched
+    skill: aiml-deep-learning-distributed-training
+  - id: ai-hier-deep-learning-training-optimization
+    request: "Design and evaluate deep learning mixed precision optimizer stability"
+    status: matched
+    skill: aiml-deep-learning-training-optimization
+  - id: ai-hier-deep-learning-checkpoint-recovery
+    request: "Design and evaluate deep learning sharded checkpoint restoration"
+    status: matched
+    skill: aiml-deep-learning-checkpoint-recovery
+  - id: ai-hier-deep-learning-representation-learning
+    request: "Design and evaluate deep learning contrastive representation evaluation"
+    status: matched
+    skill: aiml-deep-learning-representation-learning
+  - id: ai-hier-mlops-continuous-training
+    request: "Design and evaluate mlops continuous training trigger design"
+    status: matched
+    skill: aiml-mlops-continuous-training
+  - id: ai-hier-mlops-model-registry-governance
+    request: "Design and evaluate ml model registry approval audit"
+    status: matched
+    skill: aiml-mlops-model-registry-governance
+  - id: ai-hier-mlops-release-gates
+    request: "Design and evaluate mlops production model release safety gate"
+    status: matched
+    skill: aiml-mlops-release-gates
+  - id: ai-hier-mlops-reproducibility
+    request: "Design and evaluate ml experiment environment reproducibility audit"
+    status: matched
+    skill: aiml-mlops-reproducibility
+  - id: ai-hier-computer-vision-detection-segmentation
+    request: "Design and evaluate computer vision instance segmentation evaluation"
+    status: matched
+    skill: aiml-computer-vision-detection-segmentation
+  - id: ai-hier-computer-vision-document-ai
+    request: "Design and evaluate document ai ocr layout evaluation"
+    status: matched
+    skill: aiml-computer-vision-document-ai
+  - id: ai-hier-computer-vision-video-perception
+    request: "Design and evaluate video action recognition temporal evaluation"
+    status: matched
+    skill: aiml-computer-vision-video-perception
+  - id: ai-hier-speech-audio-ai-speaker-diarization
+    request: "Design and evaluate speech speaker diarization overlap evaluation"
+    status: matched
+    skill: aiml-speech-audio-ai-speaker-diarization
+  - id: ai-hier-speech-audio-ai-speech-synthesis
+    request: "Design and evaluate speech text to speech intelligibility safety"
+    status: matched
+    skill: aiml-speech-audio-ai-speech-synthesis
+  - id: ai-hier-speech-audio-ai-speech-privacy
+    request: "Design and evaluate speech audio pii redaction evaluation"
+    status: matched
+    skill: aiml-speech-audio-ai-speech-privacy
+  - id: ai-hier-responsible-ai-fairness-audit
+    request: "Design and evaluate responsible ai subgroup fairness audit"
+    status: matched
+    skill: aiml-responsible-ai-fairness-audit
+  - id: ai-hier-responsible-ai-explanation-governance
+    request: "Design and evaluate responsible ai model transparency disclosure"
+    status: matched
+    skill: aiml-responsible-ai-explanation-governance
+  - id: ai-hier-responsible-ai-risk-monitoring
+    request: "Design and evaluate responsible ai postdeployment impact monitoring"
+    status: matched
+    skill: aiml-responsible-ai-risk-monitoring
+  - id: ai-hier-natural-language-processing-text-classification
+    request: "Design and evaluate nlp text classification calibration benchmark"
+    status: matched
+    skill: aiml-natural-language-processing-text-classification
+  - id: ai-hier-natural-language-processing-entity-extraction
+    request: "Design and evaluate nlp named entity extraction span evaluation"
+    status: matched
+    skill: aiml-natural-language-processing-entity-extraction
+  - id: ai-hier-natural-language-processing-multilingual-evaluation
+    request: "Design and evaluate nlp multilingual evaluation code switching"
+    status: matched
+    skill: aiml-natural-language-processing-multilingual-evaluation
+  - id: ai-hier-natural-language-processing-text-embeddings
+    request: "Design and evaluate nlp sentence embedding semantic retrieval evaluation"
+    status: matched
+    skill: aiml-natural-language-processing-text-embeddings
+  - id: ai-hier-recommender-systems-candidate-generation
+    request: "Design and evaluate recommender candidate generation recall evaluation"
+    status: matched
+    skill: aiml-recommender-systems-candidate-generation
+  - id: ai-hier-recommender-systems-ranking
+    request: "Design and evaluate recommender learning to rank online safeguards"
+    status: matched
+    skill: aiml-recommender-systems-ranking
+  - id: ai-hier-recommender-systems-cold-start
+    request: "Design and evaluate recommender cold start exploration policy"
+    status: matched
+    skill: aiml-recommender-systems-cold-start
+  - id: ai-hier-recommender-systems-offline-online-evaluation
+    request: "Design and evaluate recommender counterfactual offline online evaluation"
+    status: matched
+    skill: aiml-recommender-systems-offline-online-evaluation
+  - id: ai-hier-reinforcement-learning-offline-policy-evaluation
+    request: "Design and evaluate reinforcement learning offline policy evaluation support"
+    status: matched
+    skill: aiml-reinforcement-learning-offline-policy-evaluation
+  - id: ai-hier-reinforcement-learning-reward-design
+    request: "Design and evaluate reinforcement learning reward model specification"
+    status: matched
+    skill: aiml-reinforcement-learning-reward-design
+  - id: ai-hier-reinforcement-learning-safe-exploration
+    request: "Design and evaluate reinforcement learning safe exploration budget"
+    status: matched
+    skill: aiml-reinforcement-learning-safe-exploration
+  - id: ai-hier-multimodal-ai-vision-language-evaluation
+    request: "Design and evaluate multimodal vision language grounding evaluation"
+    status: matched
+    skill: aiml-multimodal-ai-vision-language-evaluation
+  - id: ai-hier-multimodal-ai-image-generation-evaluation
+    request: "Design and evaluate multimodal image generation fidelity evaluation"
+    status: matched
+    skill: aiml-multimodal-ai-image-generation-evaluation
+  - id: ai-hier-multimodal-ai-multimodal-alignment
+    request: "Design and evaluate multimodal audio video text temporal alignment"
+    status: matched
+    skill: aiml-multimodal-ai-multimodal-alignment

@@ -1,0 +1,28 @@
+schema_version: 1
+id: recommender-systems
+kind: map
+children:
+  - id: candidate-generation
+    description: "recommender candidate generation recall evaluation: event time, catalog eligibility and index freshness"
+    triggers:
+      - "recommender candidate generation recall evaluation"
+    status: active
+    skills: domains/ai-ml/recommender-systems/candidate-generation/skills.yaml
+  - id: ranking
+    description: "recommender learning to rank online safeguards: exposure logging, rank labels and guardrail metrics"
+    triggers:
+      - "recommender learning to rank online safeguards"
+    status: active
+    skills: domains/ai-ml/recommender-systems/ranking/skills.yaml
+  - id: cold-start
+    description: "recommender cold start exploration policy: new user/item cohorts and metadata"
+    triggers:
+      - "recommender cold start exploration policy"
+    status: active
+    skills: domains/ai-ml/recommender-systems/cold-start/skills.yaml
+  - id: offline-online-evaluation
+    description: "recommender counterfactual offline online evaluation: propensities, randomized tests and delayed conversions"
+    triggers:
+      - "recommender counterfactual offline online evaluation"
+    status: active
+    skills: domains/ai-ml/recommender-systems/offline-online-evaluation/skills.yaml

@@ -18,3 +18,27 @@ children:
       - "transformer fine tuning"
     status: active
     skills: domains/ai-ml/deep-learning/transformers/skills.yaml
+  - id: distributed-training
+    description: "deep learning distributed training collective recovery: framework and world size, interconnect and gradients"
+    triggers:
+      - "deep learning distributed training collective recovery"
+    status: active
+    skills: domains/ai-ml/deep-learning/distributed-training/skills.yaml
+  - id: training-optimization
+    description: "deep learning mixed precision optimizer stability: gradient scaling, dtype and optimizer state"
+    triggers:
+      - "deep learning mixed precision optimizer stability"
+    status: active
+    skills: domains/ai-ml/deep-learning/training-optimization/skills.yaml
+  - id: checkpoint-recovery
+    description: "deep learning sharded checkpoint restoration: optimizer shards, manifests and storage atomicity"
+    triggers:
+      - "deep learning sharded checkpoint restoration"
+    status: active
+    skills: domains/ai-ml/deep-learning/checkpoint-recovery/skills.yaml
+  - id: representation-learning
+    description: "deep learning contrastive representation evaluation: positive and negative pairs, held-out transfers"
+    triggers:
+      - "deep learning contrastive representation evaluation"
+    status: active
+    skills: domains/ai-ml/deep-learning/representation-learning/skills.yaml

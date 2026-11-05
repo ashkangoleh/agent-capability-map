@@ -1,0 +1,11 @@
+schema_version: 1
+id: multilingual-evaluation
+kind: skill-registry
+skills:
+  - id: aiml-natural-language-processing-multilingual-evaluation
+    path: .agents/skills/ai-ml/natural-language-processing/multilingual-evaluation/aiml-natural-language-processing-multilingual-evaluation/SKILL.md
+    description: "Engineer nlp multilingual evaluation code switching using language dialect samples and mixed scripts, verifying failures and quality baselines."
+    triggers:
+      - "nlp multilingual evaluation code switching"
+    excludes: []
+    status: active

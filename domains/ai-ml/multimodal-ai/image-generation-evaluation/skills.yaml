@@ -1,0 +1,11 @@
+schema_version: 1
+id: image-generation-evaluation
+kind: skill-registry
+skills:
+  - id: aiml-multimodal-ai-image-generation-evaluation
+    path: .agents/skills/ai-ml/multimodal-ai/image-generation-evaluation/aiml-multimodal-ai-image-generation-evaluation/SKILL.md
+    description: "Engineer multimodal image generation fidelity evaluation using licensed image sets, human rubrics and prompts, verifying failures and quality baselines."
+    triggers:
+      - "multimodal image generation fidelity evaluation"
+    excludes: []
+    status: active

@@ -1,0 +1,28 @@
+schema_version: 1
+id: natural-language-processing
+kind: map
+children:
+  - id: text-classification
+    description: "nlp text classification calibration benchmark: label taxonomy, class imbalance, token lengths"
+    triggers:
+      - "nlp text classification calibration benchmark"
+    status: active
+    skills: domains/ai-ml/natural-language-processing/text-classification/skills.yaml
+  - id: entity-extraction
+    description: "nlp named entity extraction span evaluation: span annotations, token offsets and nesting"
+    triggers:
+      - "nlp named entity extraction span evaluation"
+    status: active
+    skills: domains/ai-ml/natural-language-processing/entity-extraction/skills.yaml
+  - id: multilingual-evaluation
+    description: "nlp multilingual evaluation code switching: language dialect samples and mixed scripts"
+    triggers:
+      - "nlp multilingual evaluation code switching"
+    status: active
+    skills: domains/ai-ml/natural-language-processing/multilingual-evaluation/skills.yaml
+  - id: text-embeddings
+    description: "nlp sentence embedding semantic retrieval evaluation: text pairs, hard negatives and embedding versions"
+    triggers:
+      - "nlp sentence embedding semantic retrieval evaluation"
+    status: active
+    skills: domains/ai-ml/natural-language-processing/text-embeddings/skills.yaml

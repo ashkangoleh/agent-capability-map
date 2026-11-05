@@ -1,0 +1,29 @@
+schema_version: 1
+id: responsible-ai
+kind: map
+children:
+  - id: risk-assessment
+    description: "Existing responsible-ai validated skill"
+    triggers:
+      - "responsible ai"
+      - "risk assessment"
+    status: active
+    skills: domains/ai-ml/responsible-ai/skills.yaml
+  - id: fairness-audit
+    description: "responsible ai subgroup fairness audit: authorized cohorts, labels and error base rates"
+    triggers:
+      - "responsible ai subgroup fairness audit"
+    status: active
+    skills: domains/ai-ml/responsible-ai/fairness-audit/skills.yaml
+  - id: explanation-governance
+    description: "responsible ai model transparency disclosure: model purpose, governance and appeal policy"
+    triggers:
+      - "responsible ai model transparency disclosure"
+    status: active
+    skills: domains/ai-ml/responsible-ai/explanation-governance/skills.yaml
+  - id: risk-monitoring
+    description: "responsible ai postdeployment impact monitoring: complaints, risk register and incident owners"
+    triggers:
+      - "responsible ai postdeployment impact monitoring"
+    status: active
+    skills: domains/ai-ml/responsible-ai/risk-monitoring/skills.yaml

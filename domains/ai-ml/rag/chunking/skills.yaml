@@ -1,0 +1,11 @@
+schema_version: 1
+id: chunking
+kind: skill-registry
+skills:
+  - id: aiml-rag-chunking
+    path: .agents/skills/ai-ml/rag/chunking/aiml-rag-chunking/SKILL.md
+    description: "Engineer rag chunk boundary evaluation using source formats and labeled retrieval queries, verifying failures and quality baselines."
+    triggers:
+      - "rag chunk boundary evaluation"
+    excludes: []
+    status: active

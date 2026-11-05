@@ -33,3 +33,27 @@ children:
       - "ml drift"
     status: active
     skills: domains/ai-ml/mlops/monitoring/skills.yaml
+  - id: continuous-training
+    description: "mlops continuous training trigger design: data quality and label arrival thresholds"
+    triggers:
+      - "mlops continuous training trigger design"
+    status: active
+    skills: domains/ai-ml/mlops/continuous-training/skills.yaml
+  - id: model-registry-governance
+    description: "ml model registry approval audit: registry artifact immutability and approvals"
+    triggers:
+      - "ml model registry approval audit"
+    status: active
+    skills: domains/ai-ml/mlops/model-registry-governance/skills.yaml
+  - id: release-gates
+    description: "mlops production model release safety gate: canary cohorts, feature schema and serving SLOs"
+    triggers:
+      - "mlops production model release safety gate"
+    status: active
+    skills: domains/ai-ml/mlops/release-gates/skills.yaml
+  - id: reproducibility
+    description: "ml experiment environment reproducibility audit: container hashes, data version and random seeds"
+    triggers:
+      - "ml experiment environment reproducibility audit"
+    status: active
+    skills: domains/ai-ml/mlops/reproducibility/skills.yaml

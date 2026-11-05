@@ -1,0 +1,11 @@
+schema_version: 1
+id: explanation-governance
+kind: skill-registry
+skills:
+  - id: aiml-responsible-ai-explanation-governance
+    path: .agents/skills/ai-ml/responsible-ai/explanation-governance/aiml-responsible-ai-explanation-governance/SKILL.md
+    description: "Engineer responsible ai model transparency disclosure using model purpose, governance and appeal policy, verifying failures and quality baselines."
+    triggers:
+      - "responsible ai model transparency disclosure"
+    excludes: []
+    status: active

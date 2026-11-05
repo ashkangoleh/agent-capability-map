@@ -4,6 +4,49 @@ ids:
   - agent-evaluation-suite
   - agriculture-field-data-quality
   - ai-rag-engineering
+  - aiml-computer-vision-detection-segmentation
+  - aiml-computer-vision-document-ai
+  - aiml-computer-vision-video-perception
+  - aiml-deep-learning-checkpoint-recovery
+  - aiml-deep-learning-distributed-training
+  - aiml-deep-learning-representation-learning
+  - aiml-deep-learning-training-optimization
+  - aiml-llm-context-engineering
+  - aiml-llm-inference-optimization
+  - aiml-llm-model-selection
+  - aiml-llm-structured-generation
+  - aiml-machine-learning-dataset-shift
+  - aiml-machine-learning-explainability
+  - aiml-machine-learning-hyperparameter-tuning
+  - aiml-machine-learning-training-pipelines
+  - aiml-mlops-continuous-training
+  - aiml-mlops-model-registry-governance
+  - aiml-mlops-release-gates
+  - aiml-mlops-reproducibility
+  - aiml-multimodal-ai-image-generation-evaluation
+  - aiml-multimodal-ai-multimodal-alignment
+  - aiml-multimodal-ai-vision-language-evaluation
+  - aiml-natural-language-processing-entity-extraction
+  - aiml-natural-language-processing-multilingual-evaluation
+  - aiml-natural-language-processing-text-classification
+  - aiml-natural-language-processing-text-embeddings
+  - aiml-rag-access-control
+  - aiml-rag-chunking
+  - aiml-rag-index-migrations
+  - aiml-rag-reranking
+  - aiml-recommender-systems-candidate-generation
+  - aiml-recommender-systems-cold-start
+  - aiml-recommender-systems-offline-online-evaluation
+  - aiml-recommender-systems-ranking
+  - aiml-reinforcement-learning-offline-policy-evaluation
+  - aiml-reinforcement-learning-reward-design
+  - aiml-reinforcement-learning-safe-exploration
+  - aiml-responsible-ai-explanation-governance
+  - aiml-responsible-ai-fairness-audit
+  - aiml-responsible-ai-risk-monitoring
+  - aiml-speech-audio-ai-speaker-diarization
+  - aiml-speech-audio-ai-speech-privacy
+  - aiml-speech-audio-ai-speech-synthesis
   - airbyte-connector-operations
   - airflow-backfill-scheduling
   - airflow-dag-engineering

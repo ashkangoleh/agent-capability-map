@@ -1,0 +1,11 @@
+schema_version: 1
+id: hyperparameter-tuning
+kind: skill-registry
+skills:
+  - id: aiml-machine-learning-hyperparameter-tuning
+    path: .agents/skills/ai-ml/machine-learning/hyperparameter-tuning/aiml-machine-learning-hyperparameter-tuning/SKILL.md
+    description: "Engineer ml hyperparameter search leakage prevention using train and validation splits, search budgets, verifying failures and quality baselines."
+    triggers:
+      - "ml hyperparameter search leakage prevention"
+    excludes: []
+    status: active

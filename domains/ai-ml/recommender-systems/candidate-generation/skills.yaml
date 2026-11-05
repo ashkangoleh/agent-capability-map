@@ -1,0 +1,11 @@
+schema_version: 1
+id: candidate-generation
+kind: skill-registry
+skills:
+  - id: aiml-recommender-systems-candidate-generation
+    path: .agents/skills/ai-ml/recommender-systems/candidate-generation/aiml-recommender-systems-candidate-generation/SKILL.md
+    description: "Engineer recommender candidate generation recall evaluation using event time, catalog eligibility and index freshness, verifying failures and quality baselines."
+    triggers:
+      - "recommender candidate generation recall evaluation"
+    excludes: []
+    status: active

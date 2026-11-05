@@ -1,0 +1,11 @@
+schema_version: 1
+id: speech-synthesis
+kind: skill-registry
+skills:
+  - id: aiml-speech-audio-ai-speech-synthesis
+    path: .agents/skills/ai-ml/speech-audio-ai/speech-synthesis/aiml-speech-audio-ai-speech-synthesis/SKILL.md
+    description: "Engineer speech text to speech intelligibility safety using language, consent and human listening rubric, verifying failures and quality baselines."
+    triggers:
+      - "speech text to speech intelligibility safety"
+    excludes: []
+    status: active
