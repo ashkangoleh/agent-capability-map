@@ -24,6 +24,11 @@ held-out domain tasks, privacy and token costs. Confirm task goal, model/data ve
 ## Failure controls
 Treat tool outputs, retrieved sources, user documents and external model data as untrusted context. Enforce permissions outside prompts, prevent uncontrolled spending and require explicit authorization for harmful or irreversible changes. Specifically reject: benchmark leakage and vendor lock-in.
 
+## Specialist acceptance and falsification gates
+- **Measured test:** Evaluate blinded held-out multilingual task cohorts, unsafe completions and per-request costs.
+- **Rejection test:** Reject data leakage and one-number public benchmark comparisons.
+- Record evaluation sample count, model version, measured errors, uncertainty and rollback conditions; router fixture passes are not output-quality evidence.
+
 ## Authoritative references
 - https://www.nist.gov/itl/ai-risk-management-framework
 - https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/tree/main/2026/final

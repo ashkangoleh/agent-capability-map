@@ -5,6 +5,10 @@ children:
   - id: llm-engineering
     description: "llm engineering"
     triggers:
+      - "compare llm model quality and inference costs"
+      - "llm kv cache prefill latency benchmark"
+      - "llm schema validated json response"
+      - "llm context window truncation strategy"
       - "llm serving"
       - "hugging face fine tuning"
       - "llm evaluation"
