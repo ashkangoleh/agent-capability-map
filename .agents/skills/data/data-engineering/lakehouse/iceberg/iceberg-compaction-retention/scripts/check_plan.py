@@ -11,7 +11,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-TABLE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*\\.[A-Za-z_][A-Za-z0-9_]*\\.[A-Za-z_][A-Za-z0-9_]*$")
+TABLE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*[.][A-Za-z_][A-Za-z0-9_]*[.][A-Za-z_][A-Za-z0-9_]*$")
 OPERATIONS = {"rewrite_data_files", "rewrite_manifests", "expire_snapshots", "remove_orphan_files"}
 MAX_BYTES = 65536
 
@@ -31,7 +31,7 @@ def validate_plan(plan):
     if plan.get("schema_version") != 1 or type(plan.get("schema_version")) is not int:
         errors.append("schema_version must be integer 1")
     operation = plan.get("operation")
-    if operation not in OPERATIONS:
+    if type(operation) is not str or operation not in OPERATIONS:
         errors.append("operation is not recognized")
         return errors
     table = plan.get("table")
