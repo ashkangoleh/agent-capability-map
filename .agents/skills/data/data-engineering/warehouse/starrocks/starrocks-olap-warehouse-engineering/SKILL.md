@@ -3,7 +3,7 @@ name: starrocks-olap-warehouse-engineering
 description: "Design StarRocks OLAP tables, distribution and partitioning, materialized views, compaction, workload groups and query performance."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # starrocks-olap-warehouse-engineering
@@ -40,3 +40,6 @@ Return table model, physical design, MV strategy, workload isolation and benchma
 ## Official references
 - https://docs.starrocks.io/
 - https://docs.starrocks.io/docs/table_design/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

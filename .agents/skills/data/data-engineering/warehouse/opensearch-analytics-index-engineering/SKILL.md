@@ -3,7 +3,7 @@ name: opensearch-analytics-index-engineering
 description: "Use OpenSearch for search-oriented ingestion and analytics with mappings, shards, refresh, ISM and bulk APIs."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # opensearch-analytics-index-engineering
@@ -40,3 +40,6 @@ Return mapping, shard/rollover design, bulk policy, ISM/snapshot plan and operat
 ## Official or primary references
 - https://opensearch.org/docs/latest/
 - https://opensearch.org/docs/latest/im-plugin/ism/index/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.
