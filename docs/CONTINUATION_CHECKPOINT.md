@@ -6,7 +6,14 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Software Engineering hierarchical expansion (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Cross-domain Security routing regression correction (2026-11-05)
+
+- Baseline `pre_release` commit `12c0f0c0c7fc06b98ca56b6ae945876fab660c8a`, run `42091570776`: YAML validation completed, but deterministic fixtures returned **520/521**. All 52 new Software Engineering positive fixtures passed. Existing `security-threat-model` was now `needs_clarification` because overly generic Software Engineering root trigger `"application security"` tied closely with Security's `"threat modeling"`.
+- Removed only that broad Software Engineering root trigger, keeping precise specialist trigger `"application threat model data flow"`. Added an explicit permanent test that `"Review application security threat modeling for an API"` still resolves `security-threat-model-review` under top domain `security`.
+- No changes to 395 canonical SKILL.md files, 330 roles, software taxonomy/registry paths, or CLI distribution.
+- Need verify new commit full CI, YAML fixtures and both OS-native standalone smoke before reporting success.
+
+## HISTORICAL CHECKPOINT — Software Engineering hierarchical expansion (2026-11-05)
 
 - Working branch `pre_release` at verified baseline `4a5187dc5838e1d610d027288a186ee8c10f5a83`. User requested the next domain **one domain at a time** with independent role contracts at every meaningful hierarchy level. **Only `software-engineering` is being changed.** Do not touch `main` or create another branch.
 - Baseline: 7 first-level software areas (6 active, mobile mapped) and a single shared general `software-engineering-implementation` skill, 1 root role.

@@ -97,6 +97,14 @@ class SoftwareEngineeringHierarchyTests(unittest.TestCase):
         self.assertEqual(Path(result["skill_path"]), source)
         self.assertIn("Deliver correct, maintainable software changes", source.read_text("utf-8"))
 
+    def test_security_threat_model_keeps_security_domain_ownership(self):
+        result = Router(ROOT).resolve(
+            "Review application security threat modeling for an API"
+        )
+        self.assertEqual(result["status"], "matched", result)
+        self.assertEqual(result["selected_skill"], "security-threat-model-review", result)
+        self.assertEqual(result["route"][0], "security", result)
+
     def test_domain_scoping_blocks_sibling_and_keeps_data_in_own_domain(self):
         with tempfile.TemporaryDirectory() as directory:
             home = Path(directory)
