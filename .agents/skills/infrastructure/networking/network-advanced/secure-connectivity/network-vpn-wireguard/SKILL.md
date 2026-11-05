@@ -2,7 +2,7 @@
 name: network-vpn-wireguard
 description: "Design VPN connectivity with WireGuard/IPsec, key rotation, routing and least-privilege network access."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # network-vpn-wireguard
@@ -36,3 +36,6 @@ Peers, routes, allowed IPs, MTU, NAT, key lifecycle and remote-access policy.
 
 ## Output contract
 Return the requested design or diagnosis with exact scope, assumptions, evidence, safe procedure, failure modes, validation and rollback. Never claim production changes or tests that were not performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

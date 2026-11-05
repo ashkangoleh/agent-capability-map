@@ -3,7 +3,7 @@ name: platform-operations
 description: "Review platform operational readiness, ownership, service boundaries, maintenance and recovery controls."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # platform-operations
@@ -40,3 +40,6 @@ Platform/service owner, environment, dependencies, SLOs, maintenance model, on-c
 
 ## Output contract
 Return a readiness decision, evidence-backed findings, prioritized gaps, named owners, go/no-go criteria and smallest safe next actions. Never claim a control was tested without evidence.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

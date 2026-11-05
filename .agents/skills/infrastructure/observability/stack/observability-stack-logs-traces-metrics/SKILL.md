@@ -2,7 +2,7 @@
 name: observability-stack-logs-traces-metrics
 description: "Design infrastructure observability across metrics, logs, traces, profiles, alerts and service context."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # observability-stack-logs-traces-metrics
@@ -37,3 +37,6 @@ Telemetry sources, cardinality, retention, sampling, privacy, cost and incident 
 
 ## Output contract
 Return the requested design or diagnosis with exact scope, assumptions, evidence, safe procedure, failure modes, validation and rollback. Never claim production changes or tests that were not performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

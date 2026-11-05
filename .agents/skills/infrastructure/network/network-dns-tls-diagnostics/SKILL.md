@@ -2,7 +2,7 @@
 name: network-dns-tls-diagnostics
 description: Troubleshoot DNS, TCP, routing and TLS failures by separating resolution, transport, proxy and trust-chain evidence.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # network-dns-tls-diagnostics
@@ -33,3 +33,6 @@ Client/server locations, DNS resolvers, hostname, proxy settings, ports, certifi
 
 ## Result contract
 Return decision, exact environment scope, observed facts versus hypotheses, impact, safe next commands or implementation, verification evidence and rollback. Never claim tested changes or measured savings without observed results.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

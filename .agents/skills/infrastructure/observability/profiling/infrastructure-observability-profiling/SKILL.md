@@ -3,7 +3,7 @@ name: infrastructure-observability-profiling
 description: "Design infrastructure telemetry and continuous profiling with cardinality, sampling, privacy and cost controls."
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # infrastructure-observability-profiling
@@ -46,3 +46,6 @@ Signal sources, OTel, Prometheus, backend, profiling agent, sampling, cardinalit
 
 ## Output contract
 Return exact scope, assumptions, observed evidence, safe procedure, failure modes, verification, rollback and residual risk. Distinguish facts from hypotheses and never claim tests or production changes that were not actually performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
