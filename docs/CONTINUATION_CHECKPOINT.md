@@ -1,5 +1,12 @@
 # Continuation Checkpoint — Agent Capability Map
 
+## CURRENT — Data Engineering 123-skill structural evidence rollout (2026-11-06)
+
+- Continue only in `pre_release`; no changes to `main` or domain graph. 123 existing Data Engineering SKILL.md packages enhanced with per-package references; 35 reusable family fault-recovery profiles. Skill IDs and ownership unchanged.
+- New structural audit and CI guard: `scripts/audit_data_engineering_skills.py`, `tests/test_data_engineering_skill_depth.py`. Confirm exact-commit CI before claiming success. Report distinguishes L1 evidence design from unverified L2 executable engine specificity and L3/L4 real integration/host quality.
+- Next actions: collect audit output and prioritize L2 runbooks for CDC, streaming, lakehouse and warehouses. Avoid automatic tools/scripts unless explicitly authorized; no real Spark/Kafka/Flink/StarRocks clusters were tested.
+
+
 ## ACTIVE CHECKPOINT — Data Engineering per-skill deepening (2026-11-05)
 
 - User approved one Data Engineering skill at a time; start with `iceberg-compaction-retention`. Parent baseline `665571922089e23d8e4fcf21041be65cac7f4176`; branch `pre_release` only; no main merge.

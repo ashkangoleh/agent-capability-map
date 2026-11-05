@@ -28,6 +28,7 @@ jobs:
           python scripts/evaluate_graph.py
           python scripts/evaluate_ai_ml_quality.py
           python scripts/report_coverage.py --summary
+          python scripts/audit_data_engineering_skills.py --summary --strict
       - name: Test CLI, security and overlays
         run: python -m unittest discover -s tests -v
 
