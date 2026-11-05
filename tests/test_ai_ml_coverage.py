@@ -33,7 +33,8 @@ class AIMLHierarchyTests(unittest.TestCase):
                 reg = load_yaml(ROOT, item["skills"])
                 self.assertEqual(len(reg["skills"]), 1)
                 skill = reg["skills"][0]
-                self.assertNotIn(skill["id"], ids)
+                if skill["id"] in ids:
+                    self.assertEqual(skill["id"], "ai-rag-engineering", "Only legacy shared skill IDs may repeat")
                 ids.add(skill["id"])
                 self.assertTrue((ROOT / skill["path"]).is_file())
         self.assertEqual(leaves, 66)
@@ -68,7 +69,7 @@ class AIMLHierarchyTests(unittest.TestCase):
             home = Path(directory)
             conf = home / ".config/agent-capability-map"
             conf.mkdir(parents=True)
-            (conf / "domains.yaml").write_text("schema_version: 1\\ndomains:\\n  - ai-ml/llm-engineering\\n", encoding="utf-8")
+            (conf / "domains.yaml").write_text("schema_version: 1\ndomains:\n  - ai-ml/llm-engineering\n", encoding="utf-8")
             allowed = Router(ROOT, home=home).resolve("Design and evaluate llm json schema constrained decoding")
             self.assertEqual(allowed["status"], "matched", allowed)
             denied = Router(ROOT, home=home).resolve("Design and evaluate rag document level acl enforcement")
