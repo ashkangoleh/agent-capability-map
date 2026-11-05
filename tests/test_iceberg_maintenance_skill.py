@@ -63,7 +63,7 @@ class IcebergMaintenanceSkillTests(unittest.TestCase):
         plan["retention"]["planned_retention_days"] = 3
         code, report = self.run_plan(plan)
         self.assertEqual(code, 1, report)
-        self.assertIn("retention floor", " ".join(report["errors"]))
+        self.assertIn("planned_retention_days violates", " ".join(report["errors"]))
 
     def test_orphan_cleanup_must_be_dry_run_and_older_than_writers(self):
         plan = self.plan()
