@@ -3,7 +3,7 @@ name: data-migration-cutover-reconciliation
 description: "Plan cross-platform data migrations using consistent snapshots, CDC convergence, cutover gates, reconciliation, rollback and dual-run controls."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # data-migration-cutover-reconciliation
@@ -41,3 +41,6 @@ Return inventory, mapping, snapshot/CDC strategy, reconciliation and cutover/rol
 ## Official references
 - https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html
 - https://debezium.io/documentation/reference/stable/
+
+## Independent operational verification
+For deployable changes or incidents, read [specialist acceptance and recovery evidence](references/acceptance-and-recovery.md) on demand. Its specific fault/restore oracle is a review gate, not proof of execution or permission to modify a system.

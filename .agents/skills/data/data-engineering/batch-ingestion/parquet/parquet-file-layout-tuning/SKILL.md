@@ -2,7 +2,7 @@
 name: parquet-file-layout-tuning
 description: Optimize Parquet file and row-group layout for workload-aware scans, partitioning and storage cost without unsafe rewrite assumptions.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # parquet-file-layout-tuning
@@ -36,3 +36,6 @@ Inspect actual schemas, code, execution plans and operational logs first. Confir
 
 ## Delivery contract
 Provide the requested fully scoped implementation or assessment, with explicit assumptions, data grain, idempotency/replay contract, observability, test/rollout/rollback and trade-offs. Mark unknowns instead of fabricating engine APIs, performance or consistency.
+
+## Independent operational verification
+For deployable changes or incidents, read [specialist acceptance and recovery evidence](references/acceptance-and-recovery.md) on demand. Its specific fault/restore oracle is a review gate, not proof of execution or permission to modify a system.

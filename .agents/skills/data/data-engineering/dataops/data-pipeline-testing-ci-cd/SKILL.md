@@ -3,7 +3,7 @@ name: data-pipeline-testing-ci-cd
 description: "Test data pipelines from pure transformation logic through connector contracts, engine integration, replay and production deployment."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # data-pipeline-testing-ci-cd
@@ -44,3 +44,6 @@ Return test pyramid, CI gates, fixture matrix, deployment/rollback process and c
 - https://docs.getdbt.com/docs/build/data-tests
 - https://docs.pytest.org/
 - https://docs.dagster.io/guides/test
+
+## Independent operational verification
+For deployable changes or incidents, read [specialist acceptance and recovery evidence](references/acceptance-and-recovery.md) on demand. Its specific fault/restore oracle is a review gate, not proof of execution or permission to modify a system.

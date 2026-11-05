@@ -3,7 +3,7 @@ name: databricks-lakeflow-data-engineering
 description: "Engineer Databricks Lakeflow Connect, pipelines and Jobs with Unity Catalog, SDP boundaries and operational controls."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # databricks-lakeflow-data-engineering
@@ -40,3 +40,6 @@ Return product boundary, pipeline design, identity model, deployment and monitor
 ## Official references
 - https://docs.databricks.com/aws/en/data-engineering
 - https://docs.databricks.com/aws/en/ldp/concepts/spark-declarative-pipelines
+
+## Independent operational verification
+For deployable changes or incidents, read [specialist acceptance and recovery evidence](references/acceptance-and-recovery.md) on demand. Its specific fault/restore oracle is a review gate, not proof of execution or permission to modify a system.

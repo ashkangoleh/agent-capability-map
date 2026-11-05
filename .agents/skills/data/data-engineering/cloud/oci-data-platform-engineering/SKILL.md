@@ -3,7 +3,7 @@ name: oci-data-platform-engineering
 description: "Design Oracle Cloud data platforms across Object Storage, Data Flow, GoldenGate, Streaming and Autonomous Database."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # oci-data-platform-engineering
@@ -40,3 +40,6 @@ Return service topology, IAM design, data flow, recovery and rollout gates.
 ## Official references
 - https://docs.oracle.com/en-us/iaas/data-flow/using/home.htm
 - https://docs.oracle.com/en-us/iaas/goldengate/
+
+## Independent operational verification
+For deployable changes or incidents, read [specialist acceptance and recovery evidence](references/acceptance-and-recovery.md) on demand. Its specific fault/restore oracle is a review gate, not proof of execution or permission to modify a system.

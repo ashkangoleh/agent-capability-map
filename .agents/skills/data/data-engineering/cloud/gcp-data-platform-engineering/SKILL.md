@@ -3,7 +3,7 @@ name: gcp-data-platform-engineering
 description: "Design GCP data platforms across BigQuery, Dataflow, Dataproc, Pub/Sub and Cloud Storage."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # gcp-data-platform-engineering
@@ -41,3 +41,6 @@ Return GCP service topology, identity/perimeter model, ingestion/compute choice 
 - https://cloud.google.com/architecture/data-lakes
 - https://cloud.google.com/dataflow/docs
 - https://cloud.google.com/bigquery/docs
+
+## Independent operational verification
+For deployable changes or incidents, read [specialist acceptance and recovery evidence](references/acceptance-and-recovery.md) on demand. Its specific fault/restore oracle is a review gate, not proof of execution or permission to modify a system.

@@ -2,7 +2,7 @@
 name: pipeline-backfill-recovery
 description: Use when planning a batch pipeline replay or backfill after gaps, late arrivals, failures, schema changes or partial publications.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # pipeline-backfill-recovery
@@ -34,3 +34,6 @@ Never claim a backfill is lossless when source retention, checkpoints or sink co
 
 ## Output contract
 Return only the requested deliverable, plus decision-critical assumptions, verification performed, missing evidence, operational risks and next validation steps. Never claim to have run a test without actual tool evidence.
+
+## Independent operational verification
+For deployable changes or incidents, read [specialist acceptance and recovery evidence](references/acceptance-and-recovery.md) on demand. Its specific fault/restore oracle is a review gate, not proof of execution or permission to modify a system.

@@ -3,7 +3,7 @@ name: azure-data-platform-engineering
 description: "Design Azure data platforms across ADLS Gen2, Data Factory, Fabric, Synapse and Event Hubs."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # azure-data-platform-engineering
@@ -41,3 +41,6 @@ Return Azure service topology, identity/network/governance model, workload place
 - https://learn.microsoft.com/azure/architecture/data-guide/
 - https://learn.microsoft.com/azure/storage/blobs/data-lake-storage-introduction
 - https://learn.microsoft.com/azure/event-hubs/event-hubs-about
+
+## Independent operational verification
+For deployable changes or incidents, read [specialist acceptance and recovery evidence](references/acceptance-and-recovery.md) on demand. Its specific fault/restore oracle is a review gate, not proof of execution or permission to modify a system.

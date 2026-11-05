@@ -3,7 +3,7 @@ name: data-schema-migration-release-management
 description: "Release data schema changes with compatibility analysis, expand-contract sequencing, backfill controls and rollback boundaries."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # data-schema-migration-release-management
@@ -43,3 +43,6 @@ Return compatibility matrix, rollout sequence, backfill plan, validation and rol
 ## Official or primary references
 - https://docs.confluent.io/platform/current/schema-registry/fundamentals/schema-evolution.html
 - https://iceberg.apache.org/docs/latest/evolution/
+
+## Independent operational verification
+For deployable changes or incidents, read [specialist acceptance and recovery evidence](references/acceptance-and-recovery.md) on demand. Its specific fault/restore oracle is a review gate, not proof of execution or permission to modify a system.

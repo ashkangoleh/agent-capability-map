@@ -3,7 +3,7 @@ name: aws-data-platform-engineering
 description: "Design AWS data platforms across S3, Glue, Athena, EMR, Redshift, Kinesis/MSK and Lake Formation."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # aws-data-platform-engineering
@@ -41,3 +41,6 @@ Return AWS service topology, IAM/catalog model, data flow, recovery and cost pla
 - https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/building-data-lake-aws.html
 - https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-lake-formation.html
 - https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html
+
+## Independent operational verification
+For deployable changes or incidents, read [specialist acceptance and recovery evidence](references/acceptance-and-recovery.md) on demand. Its specific fault/restore oracle is a review gate, not proof of execution or permission to modify a system.
