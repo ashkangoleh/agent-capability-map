@@ -1,9 +1,14 @@
-# Registered skill source library
+# Skill source library
 
-Skills are selected from the domain/subdomain YAML graph, not by listing and injecting every `SKILL.md` into a prompt.
+Skills are routed through the explicitly registered domain/subdomain/category YAML graph. The registry's `path` field is authoritative; **do not infer source locations from skill IDs or load the entire library eagerly**.
 
-The source layout is migrating incrementally to domain/category directories. **The registered `path` field is authoritative.** Skills not yet migrated remain in their existing flat folders. Do not infer paths from IDs, create duplicate `SKILL.md` copies or rely on automatic native discovery of arbitrary nested folders.
+## Current structural status — 2026-11-05
 
-Migrated Data Science families: `statistics-advanced` (six skills) and `foundations` (four skills). The remaining 32 Data Science skills, and other domains, retain their existing registered paths.
+- Total canonical skill manifests: **344**.
+- Domain-nested canonical manifests: **327 (95.06%)**.
+- Legacy flat manifests: **17 (4.94%)**.
+- The Infrastructure / Storage Engineering / Advanced Storage category is complete: both `object-storage-infrastructure-operations` and `storage-san-nas-nvmeof` are in `infrastructure/storage-engineering/advanced-storage/<skill-id>/SKILL.md`.
+- Only move a skill with all bundled resources; update all referencing registries, ensure there is only one canonical physical manifest, and test the path before deleting the old one.
+- Native nested-skill discovery is host-dependent. The YAML Router is the authoritative source selector, and host-specific packaging must be validated separately.
 
-See `docs/SKILL_LIBRARY_LAYOUT.md` for the migration contract, native-host compatibility limitations and required validation.
+**Global Python/CI status:** not green as of the latest checked migration run; a stale `domains/data/general-skills.yaml` reference to the moved `data-engineering-implementation` skill blocks validation. See `docs/CONTINUATION_CHECKPOINT.md` for current evidence and `docs/SKILL_LIBRARY_LAYOUT.md` for the migration contract.
