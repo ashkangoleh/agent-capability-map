@@ -4,6 +4,12 @@
 **Reviewed:** 2026-11-05  
 **Canonical sources:** 344 nested `SKILL.md` manifests selected by a YAML registry; all native-host conclusions below remain version-specific.
 
+## Windows and Node.js CLI plus role-file read scope
+
+The installer uses an absolute `--root` argument and OS-specific quoting (PowerShell on Windows, sh-compatible quoting on Unix). The Node.js entrypoint is a `shell: false` bridge to the same Python router, **not** a separate routing engine or Python-free distribution. See `docs/CROSS_PLATFORM_CLI.md`.
+
+Claude Code's preview/apply now includes both the skill library directory and `domains/` role-contract directory in additionalDirectories, with scoped built-in Edit-deny entries for each. This is not OS-level read-only enforcement; user-driven shells and other host tools require independent review. No native-host runtime compatibility is claimed solely from these settings.
+
 ## Optional role-aware output review (41 top-level domains)
 
 For a matched master skill, the Python resolver now supplies `role_path` for its single top-level domain, in addition to the selected `skill_path`. Installed host instructions request reading **only these two paths**, not the full role or skill library. A blocked, ambiguous or unmatched request, or a personal/project overlay, must not advertise a domain role.

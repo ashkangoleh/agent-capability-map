@@ -31,6 +31,17 @@ def _resolve_skill_root(root):
     return resolved
 
 
+def _resolve_role_root(root):
+    root = Path(root).expanduser().resolve(strict=True)
+    roles = root / "domains"
+    if roles.is_symlink() or not roles.is_dir():
+        raise RouterError("Master domain role directory is missing or symlinked")
+    resolved = roles.resolve(strict=True)
+    if not resolved.is_relative_to(root):
+        raise RouterError("Domain roles directory escapes repository root")
+    return resolved
+
+
 def _escape_gitignore_segment(segment):
     special = {"\\", "*", "?", "[", "]", "!", "#"}
     return "".join("\\" + char if char in special else char for char in segment)
@@ -65,6 +76,7 @@ def _atomic_write(path, payload):
 def configure_claude_skill_access(config_dir, root, apply=False):
     """Add read access and a built-in-tool edit deny for the master skill directory."""
     skills_root = _resolve_skill_root(root)
+    roles_root = _resolve_role_root(root)
     settings_path = Path(config_dir).expanduser().resolve() / "settings.json"
 
     if settings_path.is_symlink():
@@ -94,15 +106,23 @@ def configure_claude_skill_access(config_dir, root, apply=False):
         raise RouterError(f"Claude permissions.deny must be an array of strings: {settings_path}")
 
     skill_path = str(skills_root)
+    role_path = str(roles_root)
     edit_rule = _edit_deny_rule(skills_root)
+    role_edit_rule = _edit_deny_rule(roles_root)
     add_directory = skill_path not in directories
     add_deny = edit_rule not in deny
+    add_role_directory = role_path not in directories
+    add_role_deny = role_edit_rule not in deny
     if add_directory:
         directories.append(skill_path)
+    if add_role_directory:
+        directories.append(role_path)
     if add_deny:
         deny.append(edit_rule)
+    if add_role_deny:
+        deny.append(role_edit_rule)
 
-    changed = add_directory or add_deny
+    changed = add_directory or add_deny or add_role_directory or add_role_deny
     if apply and changed:
         payload = json.dumps(settings, ensure_ascii=False, indent=2) + "\n"
         _atomic_write(settings_path, payload)
@@ -110,6 +130,9 @@ def configure_claude_skill_access(config_dir, root, apply=False):
     return {
         "path": str(settings_path),
         "skills_root": skill_path,
+        "roles_root": role_path,
+        "added_role_directory": add_role_directory,
+        "added_role_edit_deny": add_role_deny,
         "changed": changed,
         "applied": bool(apply and changed),
         "added_additional_directory": add_directory,

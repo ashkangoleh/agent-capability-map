@@ -6,7 +6,19 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Data role inheritance fixture repair (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Infrastructure hierarchical roles + cross-platform CLI (2026-11-05)
+
+- Working branch `pre_release`, verified baseline before changes `fe54e763f7fb9e01e9598927eea266681edb1cf1`. No `main` merge and no other branches.
+- Added **96** new `domains/infrastructure/<logical-route>/ROLE.md` contracts to existing Infrastructure root role. Expected **97/97** active graph nodes across **22** Infrastructure map files with independent roles, including 16 first-level scopes and deep Kubernetes/Network Advanced/DevSecOps/GitOps/CI-CD.
+- New role inventory expected: **263** roles (127 Data, 97 Infrastructure, 39 other roots). Existing SKILL.md content, registration, ids, triggers and status unchanged: 344 total / 95 Infrastructure / 0 flat.
+- Dynamic `tests/test_domain_roles.py` inventory asserts no missing/orphan Infrastructure role, exact logical routes, no inheritance truncation, <=8192 bytes per selected route, and representative route checks.
+- Added cross-platform Node CLI `node/bin/capability-map.mjs` with `package.json` bin `capability-map-node`, local `npm link`. This is a `shell:false` Python subprocess bridge requiring Python >=3.10, installed project and source checkout. NOT a Node-only implementation, NOT published to npm.
+- Improved host instruction generation to embed `--root` and platform-specific Unix/PowerShell quoting. Enabled Claude role directory read access and scoped Edit-deny settings; still not OS-level read-only. Added Python CLI and Node integration tests and a Windows+Ubuntu GitHub Actions matrix.
+- Docs: `docs/CROSS_PLATFORM_CLI.md`, `docs/DOMAIN_ROLE_DESIGN_BACKLOG.md`, `docs/HOST_COMPATIBILITY_ACCEPTANCE.md` and README.
+- Full CI against **new commit** is REQUIRED. Current modifications are not yet production-certified, real native agents not tested, no measured A/B role quality improvements; the remaining **39** top-level domains still lack complete nested role hierarchies.
+- Next domain requires explicit user approval; stay scoped to Infrastructure and cross-platform launcher fixes until CI is green.
+
+## HISTORICAL CHECKPOINT — Data role inheritance fixture repair (2026-11-05)
 
 - Previous `pre_release` HEAD: `831d5d0ac61d725314aa11eaa81ecf18e574e9d0`. Workflow run `42056541209` graph/routing checks PASSED; the full unittest phase FAILED only two stale test expectations for Airflow/Kafka role inheritance (225 tests, 2 failures, 1 skipped).
 - Both requests resolve their correct existing skills and now return a more specific leaf role, at `data/data-engineering/orchestration/airflow` and `data/data-engineering/messaging/kafka` respectively. Old test expectations stopped at the parent. Corrected exactly these two expectations; no role files, skill bodies, routing semantics or allowlist policy modified.

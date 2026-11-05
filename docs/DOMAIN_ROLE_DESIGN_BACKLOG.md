@@ -18,7 +18,7 @@
 - Role paths are derived only from the **selected verified route**, never by guessing directory layouts or scanning unrelated domains. Absent deep roles inherit the nearest defined ancestor; an invalid present role fails closed.
 - Individual role files max 4096 bytes; the complete selected chain max **8192 bytes and 8 roles**. No silent truncation; overly verbose roles are a validation failure and must be consolidated.
 - The semantic responsibilities are layered: parent provides general principles, more-specific role provides specialized evaluation criteria, while the selected SKILL.md remains the procedural authority. A role never grants permissions, modifies the deterministic route or authorizes external actions.
-- **Data domain:** 127/127 active logical graph nodes now have distinct ROLE.md files, including the root Data role, nine first-level subdomains, all Data Engineering and Data Science capabilities, and nested Lakehouse/SQL, Spark, Kafka, Airflow, dbt and relational DB routes. The dynamic test walks all 21 reachable Data map files, verifies exact route-to-role ownership, detects missing and orphan contracts, and rejects future nodes without roles. Other 40 top-level domains retain their existing root roles until individual hierarchical reviews; never misstate full 41-domain subdomain coverage.
+- **Data domain:** 127/127 active logical graph nodes now have distinct ROLE.md files, including the root Data role, nine first-level subdomains, all Data Engineering and Data Science capabilities, and nested Lakehouse/SQL, Spark, Kafka, Airflow, dbt and relational DB routes. The dynamic test walks all 21 reachable Data map files, verifies exact route-to-role ownership, detects missing and orphan contracts, and rejects future nodes without roles. **Infrastructure** now has 97/97 roles across 22 maps (16 first-level scopes, 96 non-root active nodes) with a separate dynamic inventory test. The remaining **39** domains still only have root roles; hierarchical role coverage across all 41 is NOT complete.
 - Unit tests enforce selected role order, file safety, match-only availability, profile isolation and overall context bounds. Native host execution / output-quality uplift are still not measured.
 
 ## One-role-per-domain contract
@@ -31,8 +31,8 @@ Each `ROLE.md` contains a concise, distinct decision lens, domain-specific evide
 - **Resolver and host instruction integration:** implemented; no native host API changes.
 - **Host runtime tests:** NOT VERIFIED on Codex, Claude Code, OpenCode, GitHub Copilot or Cursor. Actual file reads and allowlist enforcement must be observed on pinned versions.
 - **Quality improvement:** NOT VERIFIED. Run blinded A/B evaluations with and without each role, measuring task correctness, unsafe/incomplete advice, false claims, omissions, response length and token/latency overhead.
-- **Infrastructure pilot:** fault recovery, Kubernetes operator migration, IAM boundaries and DR exercise scenarios. A role should be revised or disabled if its extra context harms correctness.
-- **Maintenance:** add a new role whenever a top-level domain is registered; `Router.validate()` must fail without it. No subdomain role stacking without an explicit evaluated design.
+- **Infrastructure role coverage:** 97/97 graph nodes (structural only); review A/B outputs for fault recovery, Kubernetes operator migration, IAM boundaries, networking and DR. A role should be revised or disabled if its extra context harms correctness.
+- **Maintenance:** new active Data or Infrastructure graph nodes require matching role contracts in CI. Parent-to-child role inheritance is bounded at 8 files/8192 bytes. Do not add other domains' nested roles without a domain review and tests.
 
 ## Official reference basis
 

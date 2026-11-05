@@ -1,5 +1,6 @@
 """Opt-in, non-destructive user-level agent instruction installation."""
 
+import os
 import shlex
 import sys
 from pathlib import Path
@@ -19,9 +20,24 @@ HOST_FILES = {
 CURSOR_SKILL = ".cursor/skills/master-capability-router/SKILL.md"
 
 
-def instruction_text():
-    executable = shlex.quote(sys.executable)
-    command = executable + " -m capability_map resolve"
+def _powershell_quote(value):
+    return "'" + str(value).replace("'", "''") + "'"
+
+
+def instruction_text(root=None):
+    master_root = Path(root or Path(__file__).resolve().parents[1]).expanduser().resolve()
+    if os.name == "nt":
+        command = (
+            "& " + _powershell_quote(sys.executable)
+            + " -m capability_map --root "
+            + _powershell_quote(master_root) + " resolve"
+        )
+    else:
+        command = (
+            shlex.quote(sys.executable)
+            + " -m capability_map --root "
+            + shlex.quote(str(master_root)) + " resolve"
+        )
     return (
         "## Global Master Capability Router\n\n"
         "For substantive requests that benefit from a reusable specialist procedure, "
@@ -59,14 +75,14 @@ def instruction_text():
     )
 
 
-def cursor_text():
+def cursor_text(root=None):
     return (
         "---\n"
         "name: master-capability-router\n"
         "description: Automatically discover specialist skills when users request software, data, "
         "infrastructure, AI, product, marketing, SEO, research, or other mapped work.\n"
         "---\n\n"
-        + instruction_text()
+        + instruction_text(root)
         + "\n<!-- capability-map:generated -->\n"
     )
 
@@ -107,7 +123,7 @@ def install(hosts, home, apply=False, root=None, claude_config_dir=None):
             target = home / CURSOR_SKILL
             if target.is_symlink() or (target.exists() and not target.is_file()):
                 raise RouterError(f"Unsafe Cursor destination: {target}")
-            content = cursor_text()
+            content = cursor_text(master_root)
             existing = target.read_text(encoding="utf-8") if target.exists() else ""
             if existing and "<!-- capability-map:generated -->" not in existing:
                 raise RouterError(f"Refusing to overwrite unmanaged Cursor skill: {target}")
@@ -120,11 +136,11 @@ def install(hosts, home, apply=False, root=None, claude_config_dir=None):
             config_dir = resolve_claude_config_dir(home, claude_config_dir)
             target = config_dir / "CLAUDE.md"
             # Preflight both destinations before changing either one.
-            instruction_preview = _upsert(target, instruction_text(), apply=False)
+            instruction_preview = _upsert(target, instruction_text(master_root), apply=False)
             permission_preview = configure_claude_skill_access(config_dir, master_root, apply=False)
             if apply:
                 permission_result = configure_claude_skill_access(config_dir, master_root, apply=True)
-                instruction_result = _upsert(target, instruction_text(), apply=True)
+                instruction_result = _upsert(target, instruction_text(master_root), apply=True)
             else:
                 permission_result = permission_preview
                 instruction_result = instruction_preview
@@ -132,5 +148,5 @@ def install(hosts, home, apply=False, root=None, claude_config_dir=None):
             results.append(instruction_result)
         else:
             target = home / HOST_FILES[host]
-            results.append(_upsert(target, instruction_text(), apply))
+            results.append(_upsert(target, instruction_text(master_root), apply))
     return results

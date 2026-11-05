@@ -15,6 +15,10 @@ The last recorded full graph audit counted 41 top-level domains and 322 active S
 
 **No slash command is required** to express the task. However, a host must actually follow its global instructions and be able to invoke the CLI. Invocation reliability and token savings are not yet measured; this is not a universal native plugin.
 
+## Linux, Windows and Node.js CLI
+
+The same authoritative Python router can be invoked with the native `capability-map` console script on Linux and Windows, or through the local `capability-map-node` Node.js shim. Every installed host bootstrap embeds the absolute master repository path. Node.js requires Python 3.10+ and a checked-out, installed copy of this repository; the npm package is not published. See [Cross-platform CLI](docs/CROSS_PLATFORM_CLI.md) for validated platform-specific examples and security limitations.
+
 ## Install globally (per user, local machine)
 
 Prerequisites: Python 3.10+, Git, and permission to create global instruction files.

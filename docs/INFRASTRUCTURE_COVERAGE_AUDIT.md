@@ -29,6 +29,14 @@ Explicit boundaries:
 - Cellular RAN, 5G core, telecom signaling and carrier network engineering remain under Telecommunications.
 - Industrial control systems and OT safety remain under relevant industrial domains.
 
+## Infrastructure role inheritance — 2026-11-05
+
+All **97 active Infrastructure graph nodes** (root plus 96 subordinate active nodes across 22 maps) now have distinct, versioned quality-review ROLE.md contracts stored at their **logical** route paths. Domain map filenames do not always match logical route names (e.g. `cloud-engineering` maps to `cloud/map.yaml`, `containers-orchestration/kubernetes` maps to `kubernetes/map.yaml`). Roles focus on operational evidence, failure domains, safety and rollback for their own specialties.
+
+A dynamic CI test traverses all active Infrastructure maps, requires one role per node with no orphan role files, and validates parent-to-child inheritance size. This is a taxonomy/output-review contract, not a claim that every role improves LLM output. The 95 skill bodies, procedures, routing rules and identifiers were not changed. Native host execution, operational fault drills and empirical A/B evaluation remain open.
+
+A cross-platform CLI bridge and Windows/Linux smoke matrix were added. See `docs/CROSS_PLATFORM_CLI.md`; Node.js still requires the authoritative Python router, and npm publication is not claimed.
+
 ## First-class selectable scopes
 
 | Scope | Coverage |

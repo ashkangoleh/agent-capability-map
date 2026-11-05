@@ -349,6 +349,7 @@ class GraphRoutingTests(unittest.TestCase):
             config = home / ".claude"
             skills = root / ".agents" / "skills"
             skills.mkdir(parents=True)
+            (root / "domains").mkdir(parents=True)
             config.mkdir(parents=True)
             settings_path = config / "settings.json"
             settings_path.write_text(
@@ -368,7 +369,10 @@ class GraphRoutingTests(unittest.TestCase):
             settings = json.loads(settings_path.read_text(encoding="utf-8"))
             rule = f"Edit(//{skills.resolve().as_posix().lstrip('/')}/**)"
             self.assertIn(str(skills.resolve()), settings["permissions"]["additionalDirectories"])
+            self.assertIn(str((root / "domains").resolve()), settings["permissions"]["additionalDirectories"])
+            role_rule = f"Edit(//{(root / 'domains').resolve().as_posix().lstrip('/')}/**)"
             self.assertIn(rule, settings["permissions"]["deny"])
+            self.assertIn(role_rule, settings["permissions"]["deny"])
             self.assertEqual(settings["permissions"]["allow"], ["Bash(git status)"])
             self.assertIn("Bash(rm *)", settings["permissions"]["deny"])
             self.assertEqual(settings["model"], "existing-model")
@@ -380,6 +384,7 @@ class GraphRoutingTests(unittest.TestCase):
             self.assertFalse(repeated["permissions"]["changed"])
             self.assertEqual(settings["permissions"]["additionalDirectories"].count(str(skills.resolve())), 1)
             self.assertEqual(settings["permissions"]["deny"].count(rule), 1)
+            self.assertEqual(settings["permissions"]["deny"].count(role_rule), 1)
 
     def test_claude_dry_run_does_not_create_files(self):
         with tempfile.TemporaryDirectory() as workspace:
@@ -387,6 +392,7 @@ class GraphRoutingTests(unittest.TestCase):
             home = base / "home"
             root = base / "master"
             (root / ".agents" / "skills").mkdir(parents=True)
+            (root / "domains").mkdir(parents=True)
             result = install(["claude"], home, root=root, apply=False)[0]
             self.assertTrue(result["changed"])
             self.assertTrue(result["permissions"]["changed"])
@@ -399,6 +405,7 @@ class GraphRoutingTests(unittest.TestCase):
             root = base / "master"
             config = home / ".claude"
             (root / ".agents" / "skills").mkdir(parents=True)
+            (root / "domains").mkdir(parents=True)
             config.mkdir(parents=True)
             (config / "settings.json").write_text("{ invalid", encoding="utf-8")
             with self.assertRaises(RouterError):
@@ -412,6 +419,7 @@ class GraphRoutingTests(unittest.TestCase):
             config = base / "custom-claude-config"
             root = base / "master"
             (root / ".agents" / "skills").mkdir(parents=True)
+            (root / "domains").mkdir(parents=True)
             with mock.patch.dict(os.environ, {"CLAUDE_CONFIG_DIR": str(config)}):
                 result = install(["claude"], home, root=root, apply=True)[0]
             self.assertEqual(result["path"], str(config.resolve() / "CLAUDE.md"))

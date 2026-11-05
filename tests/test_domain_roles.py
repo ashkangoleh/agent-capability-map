@@ -235,6 +235,69 @@ class DomainRoleTests(unittest.TestCase):
         self.assertEqual(match["route"][0], "product")
         self.assertEqual(match["role_paths"], [str(ROOT / "domains/product/ROLE.md")])
 
+
+    def test_complete_infrastructure_graph_role_inventory(self):
+        """Every active Infrastructure graph node must own an independent role."""
+        from capability_map.router import role_paths_for_route
+        expected = {"infrastructure"}
+        visited = set()
+        routes = []
+
+        def walk(map_path, route):
+            if map_path in visited:
+                self.fail(f"Infrastructure map visited twice: {map_path}")
+            visited.add(map_path)
+            graph = load_yaml(ROOT, map_path)
+            for node in graph["children"]:
+                if node.get("status") != "active":
+                    continue
+                scope = route + (node["id"],)
+                name = "/".join(scope)
+                expected.add(name)
+                routes.append(scope)
+                with self.subTest(route=name):
+                    contract = role_contract_path(ROOT, scope)
+                    self.assertEqual(contract, ROOT / "domains" / name / "ROLE.md")
+                    self.assertLessEqual(contract.stat().st_size, 4096)
+                    selected = role_paths_for_route(ROOT, scope)
+                    self.assertEqual(len(selected), len(scope))
+                    self.assertLessEqual(sum(Path(p).stat().st_size for p in selected), 8192)
+                if node.get("map"):
+                    walk(node["map"], scope)
+
+        role_contract_path(ROOT, "infrastructure")
+        walk("domains/infrastructure/map.yaml", ("infrastructure",))
+        actual = {
+            file.parent.relative_to(ROOT / "domains").as_posix()
+            for file in (ROOT / "domains/infrastructure").rglob("ROLE.md")
+        }
+        self.assertEqual(actual, expected)
+        self.assertEqual(len(visited), 22)
+        self.assertEqual(len(expected), 97)
+        self.assertEqual(len(routes), 96)
+
+    def test_infrastructure_representative_role_chains(self):
+        cases = [
+            ("Infrastructure: falco runtime security detection",
+             "infrastructure/infrastructure-security/devsecops/runtime-security"),
+            ("Infrastructure: kubernetes operator crd lifecycle",
+             "infrastructure/containers-orchestration/kubernetes/operators-extensions"),
+            ("Infrastructure: infrastructure backup disaster recovery",
+             "infrastructure/sre-reliability/disaster-recovery"),
+            ("Infrastructure: network routing bgp",
+             "infrastructure/networking/network-advanced/routing-delivery"),
+        ]
+        for request, route in cases:
+            with self.subTest(route=route):
+                result = Router(ROOT).resolve(request)
+                self.assertEqual(result["status"], "matched", result)
+                self.assertEqual("/".join(result["route"]), route)
+                self.assertEqual(
+                    result["role_paths"],
+                    [str(ROOT / "domains" / "/".join(route.split("/")[:k]) / "ROLE.md")
+                     for k in range(1, len(route.split("/")) + 1)],
+                )
+
     def test_installer_mentions_roles_conditionally(self):
         instructions = instruction_text()
         self.assertIn("role_paths", instructions)

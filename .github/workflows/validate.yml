@@ -29,3 +29,27 @@ jobs:
           python scripts/report_coverage.py --summary
       - name: Test CLI, security and overlays
         run: python -m unittest discover -s tests -v
+
+  cross-platform-cli:
+    name: CLI smoke (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Python router
+        run: python -m pip install -e .
+      - name: Test cross-platform Python CLI
+        run: python -m unittest discover -s tests -p test_cross_platform_cli.py -v
+      - name: Test Node.js CLI bridge
+        env:
+          CAPABILITY_MAP_PYTHON: python
+        run: npm test
