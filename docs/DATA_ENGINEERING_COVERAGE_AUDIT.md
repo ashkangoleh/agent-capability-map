@@ -52,3 +52,11 @@ This tranche adds 19 active specialists: Apache SeaTunnel, Dask, Apache DataFusi
 5. Verify actual skill loading in Codex, OpenCode, Copilot, Claude Code and Cursor.
 
 Passing YAML and routing tests establish structural correctness, not semantic accuracy, runtime compatibility or production readiness.
+
+## First per-skill deepening: Iceberg compaction and retention (2026-11-05)
+
+- Existing canonical `iceberg-compaction-retention` ID, trigger registry and route are unchanged; SKILL.md advanced from version 1.0.0 to 1.1.0. Only this Data Engineering capability's package was deepened in this increment.
+- Added on-demand `references/operations.md` and `references/failure-recovery.md`, read-only `examples/spark_maintenance.sql`, an illustrative offline JSON plan, and standard-library `scripts/check_plan.py`. Preflight **never executes Spark/Catalog/SQL/storage calls** and returns `can_execute: false` even when static checks pass.
+- Added `tests/test_iceberg_maintenance_skill.py` covering unchanged route, retention floor, legal hold, active writer orphan safety, manifest review, JSON rejection and non-authorization. The SQL shows mutating procedures as commented examples only.
+- Official reference basis: Iceberg Spark procedures, maintenance guide, metadata queries, specification. Deployed engine/catalog compatibility, real table metrics, recovery evidence, human authorization and live tests remain **UNKNOWN**; do not claim production readiness from successful static CI.
+- After CI is green on the exact new SHA, review one next Data Engineering skill in the same staged, one-at-a-time fashion; do not expand taxonomy or touch main.

@@ -1,5 +1,12 @@
 # Continuation Checkpoint — Agent Capability Map
 
+## ACTIVE CHECKPOINT — Data Engineering per-skill deepening (2026-11-05)
+
+- User approved one Data Engineering skill at a time; start with `iceberg-compaction-retention`. Parent baseline `665571922089e23d8e4fcf21041be65cac7f4176`; branch `pre_release` only; no main merge.
+- Preserve skill ID and route. Add short primary SKILL.md, two on-demand references, one read-only SQL example, a plan JSON, static preflight script and dedicated tests. No changes to 438 skill count or 408 role count.
+- Preflight cannot authorize table operations. Verify CI on resulting commit before claiming the increment validated; real Spark/Catalog/MinIO integration, execution-quality A/B and production correctness remain unverified.
+
+
 ## ACTIVE CHECKPOINT — AI/ML quality gates (2026-11-05)
 
 - Same `pre_release` branch, base SHA `d585309d1c19bdadb29d295bf5b72dae5bec95b6`. Existing 438 skill IDs, 408 roles and 66 AI/ML active leaves unchanged.
