@@ -11,7 +11,7 @@ The category tables below document **historical early migration phases**, not th
 - **327/344 (95.06%)** canonical skill manifests now live under domain-nested folders; **17** still use flat paths.
 - **Data Science is structurally 42/42 nested.** Other Data, AI/ML, Infrastructure and several top-level domains also have nested sources.
 - The latest completed category migration is `infrastructure/storage-engineering/advanced-storage` (2/2 skills), retaining unchanged Git blobs and updated paths in `domains/infrastructure/storage/new-specialists.yaml`.
-- Structural completion is separate from tested router correctness or host native discovery. The current CI blocker is an older stale source path in `domains/data/general-skills.yaml`; see `docs/CONTINUATION_CHECKPOINT.md` for live status.
+- Structural completion is separate from tested router correctness or host native discovery. Earlier stale generic Data registry paths and flat-path test assumptions were repaired; verify the latest CI result via `docs/CONTINUATION_CHECKPOINT.md` and GitHub Actions before claiming overall validity.
 
 All future migrations must preserve stable IDs, update every registry that references a moved skill and keep a single canonical manifest.
 

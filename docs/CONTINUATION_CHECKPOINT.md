@@ -18,11 +18,11 @@
 - Updated `domains/infrastructure/storage/new-specialists.yaml` and extended `tests/test_infrastructure_coverage.py` to enforce canonical paths and absence of old flat duplicates.
 - Pre-commit tree validation verified **2/2 identical Git blob SHAs**, removal of flat originals and constant 344 physical SKILL manifests.
 - **Structural progress:** 327/344 domain-nested (95.06%), 17 flat (4.94%). This is **file layout only**, not project completion, all-agent compatibility or production readiness.
-- GitHub Actions run `41998581960` for the migration commit **failed** on a separate, pre-existing stale registry reference: `Missing registered file: .agents/skills/data-engineering-implementation/SKILL.md` from `domains/data/general-skills.yaml`. The file exists in the new `data/data-engineering/foundations` location. Fix and revalidate all stale shared-registry references before claiming branch health. Tests added for this increment were **not executed to completion in CI** because this earlier validation gate stopped the workflow.
+- Initial CI runs failed due to stale generic Data registry paths. Those two references were corrected in `domains/data/general-skills.yaml`, and the PySpark test now reads the path selected by Router. The next CI run passed YAML graph validation but reported 22 legacy flat-path assertions in three older coverage test files. All three have been updated to read registry/router-selected canonical paths in commit `e3233c36ad423543fb21e43d66e6717f6a53e4c7`. Full CI success must still be checked at the latest live HEAD.
 - Historical `docs/SKILL_LIBRARY_LAYOUT.md` describes the earlier two-category canary. Current source of truth is the registered `path` in the relevant YAML; independent native host discovery of deeply nested paths remains host-specific.
 - Next candidate for a **separate user-approved category migration**: `pipeline-backfill-recovery` via `domains/data/general-skills.yaml` and the batch-ingestion recovery route. Maintain a one-file-per-ID invariant and update all referencing registries.
 
-**Acceptance status:** content/tree verified; full Python Router, global regression suite, host discovery and green GitHub Actions **NOT VERIFIED**.
+**Acceptance status:** 2/2 identical Git blob SHAs and registry paths verified; YAML graph validation passed after generic registry repairs. The full Python unit suite and host discovery require a successful post-fix CI run; do not claim green CI without checking the latest workflow.
 
 
 ## HISTORICAL CHECKPOINT — Data Science Foundations categorized (2026-11-05)

@@ -11,4 +11,4 @@ Skills are routed through the explicitly registered domain/subdomain/category YA
 - Only move a skill with all bundled resources; update all referencing registries, ensure there is only one canonical physical manifest, and test the path before deleting the old one.
 - Native nested-skill discovery is host-dependent. The YAML Router is the authoritative source selector, and host-specific packaging must be validated separately.
 
-**Global Python/CI status:** not green as of the latest checked migration run; a stale `domains/data/general-skills.yaml` reference to the moved `data-engineering-implementation` skill blocks validation. See `docs/CONTINUATION_CHECKPOINT.md` for current evidence and `docs/SKILL_LIBRARY_LAYOUT.md` for the migration contract.
+**Global Python/CI status:** the earlier generic registry path failures were repaired; legacy flat-path assumptions in three coverage tests were also corrected. Confirm the latest GitHub Actions run before declaring the full repository green. See `docs/CONTINUATION_CHECKPOINT.md` for evidence and `docs/SKILL_LIBRARY_LAYOUT.md` for layout invariants.
