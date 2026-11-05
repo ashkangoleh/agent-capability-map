@@ -189,6 +189,52 @@ class DomainRoleTests(unittest.TestCase):
             self.assertEqual(denied["status"], "domain_not_enabled")
             self.assertNotIn("role_paths", denied)
 
+
+    def test_complete_data_graph_role_inventory(self):
+        """Every active logical Data route has one independently reviewable contract."""
+        from capability_map.router import role_paths_for_route
+        expected = {"data"}
+        visited = set()
+
+        def walk(map_path, route):
+            if map_path in visited:
+                self.fail(f"Data graph map visited twice without scoped contract: {map_path}")
+            visited.add(map_path)
+            graph = load_yaml(ROOT, map_path)
+            for node in graph["children"]:
+                if node.get("status") != "active":
+                    continue
+                scope = route + (node["id"],)
+                name = "/".join(scope)
+                expected.add(name)
+                with self.subTest(route=name):
+                    candidate = role_contract_path(ROOT, scope)
+                    self.assertEqual(candidate, ROOT / "domains" / name / "ROLE.md")
+                    self.assertLessEqual(candidate.stat().st_size, 4096)
+                if node.get("map"):
+                    walk(node["map"], scope)
+
+        role_contract_path(ROOT, "data")
+        walk("domains/data/map.yaml", ("data",))
+        actual = {
+            path.parent.relative_to(ROOT / "domains").as_posix()
+            for path in (ROOT / "domains/data").rglob("ROLE.md")
+        }
+        self.assertEqual(actual, expected)
+        self.assertEqual(len(expected), 127)
+        self.assertEqual(len(visited), 21)
+        deepest = Router(ROOT).resolve("Create a new PySpark project")
+        self.assertEqual(len(deepest["role_paths"]), len(deepest["route"]))
+        self.assertEqual(
+            role_paths_for_route(ROOT, deepest["route"]), deepest["role_paths"]
+        )
+
+    def test_other_domains_still_inherit_root_without_sibling_roles(self):
+        match = Router(ROOT).resolve("Write a product PRD")
+        self.assertEqual(match["status"], "matched")
+        self.assertEqual(match["route"][0], "product")
+        self.assertEqual(match["role_paths"], [str(ROOT / "domains/product/ROLE.md")])
+
     def test_installer_mentions_roles_conditionally(self):
         instructions = instruction_text()
         self.assertIn("role_paths", instructions)

@@ -6,7 +6,17 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Hierarchical Domain Roles, Data Pilot (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Complete Data Graph role coverage (2026-11-05)
+
+- Verified baseline `pre_release` HEAD `9cdd9e1a665bae6e87a8c7d6c2d4b59ac078e6f7`, full CI run `42055168134` passed for hierarchical role loading (YAML graph + full tests). Do not merge `main` or create feature branches.
+- Added 58 additional distinct Data specialist ROLE.md files across analytics engineering, BI, data analysis, relational/database engineering, governance, messaging, orchestration, streaming SQL, Lakehouse catalogs, and warehouse/cloud engines.
+- Total now **127 Data role contracts including Data root**, corresponding to **all 127 active logical Data graph nodes** across 21 map files. Each node's `role_id` is its **logical route**, not its sometimes-different physical YAML map path. All 41 top-level domain roles remain; repository total roles should be **167** (41 root + 126 nested Data).
+- Added dynamic `test_complete_data_graph_role_inventory` to traverse all active Data node scopes; enforce role existence, exact route ownership, no orphan role contract, 21 maps and 127 role scopes. This is structural coverage only, **not** demonstration of answer quality or production validity.
+- `role_paths` list is parent-to-child, with compatibility `role_path` alias and bounded 8 files/8192 bytes, only after master matched result. Domain allowlist and overlays remain constrained. New domains/subdomains require role contracts when they become part of the relevant rollout.
+- Expected inventory remains 344 SKILL.md total, 95 Infrastructure and 0 flat; do not claim CI for this new head until GitHub Actions run is independently checked.
+- Next domain role hierarchy is Infrastructure **only after explicit user approval under one-domain-at-a-time workflow**; native five-host and A/B quality evaluations remain UNVERIFIED.
+
+## HISTORICAL CHECKPOINT — Hierarchical Domain Roles, Data Pilot (2026-11-05)
 
 - Baseline `pre_release` HEAD `95e1da143ab5dfb3cdd4069062e76676d2a52b1d`; no main merge or feature branch. User requires **independent specialist roles at meaningful hierarchical layers**, not only root domains.
 - Added support for parent-to-child `role_paths` on matched master results; preserved existing top-level `role_path` compatibility alias, existing skill_id and skill_path, and five-domain user allowlist. Overlay/non-matched results provide no role paths.
