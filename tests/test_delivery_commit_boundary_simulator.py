@@ -40,7 +40,7 @@ class CommitBoundarySimulatorTests(unittest.TestCase):
         self.assertFalse(r["actual_end_to_end_exactly_once_verified"])
 
     def test_skill_route_canonical(self):
-        r=Router(ROOT).resolve("Verify end to end delivery semantics of streaming sink")
+        r=Router(ROOT).resolve("Explain end to end exactly once semantics across a sink")
         self.assertEqual(r["selected_skill"],"end-to-end-delivery-semantics",r)
 
 
