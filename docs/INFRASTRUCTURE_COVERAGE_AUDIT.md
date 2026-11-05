@@ -59,6 +59,12 @@ Explicit boundaries:
 
 This is structural coverage, not production certification. Existing packages still require per-skill depth review, version-specific verification and independent task evaluation.
 
+## Advanced Networking taxonomy increment — 2026-11-05
+
+Seven existing skills formerly shared one broad `network-advanced` registry. They are now grouped by existing task boundaries in five categories: `routing-delivery`, `secure-connectivity`, `telemetry`, `dns`, and `pki`. This preserves the original IDs, descriptions, triggers, exclusions, and complete `SKILL.md` Git blobs; only explicit paths and the depth of the YAML route change. Existing routing fixtures remain unchanged, and a new regression test verifies all seven canonical routes and uniqueness. This is **one reviewed category**, not completion of the 95-specialist infrastructure depth audit.
+
+**Outstanding:** Many infrastructure source paths still reflect historical packaging rather than their exact logical route (e.g. `devops-sre` versus `devops-delivery`); native host integration, individual skill correctness and recovery/failure testing remain unverified. Do not claim production-ready or taxonomy-complete based on 95 registered skills.
+
 ## Completion gates
 
 1. Review every existing and new `SKILL.md` for specialist depth, not just frontmatter and headings.

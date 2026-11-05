@@ -1,0 +1,11 @@
+schema_version: 1
+id: telemetry
+kind: skill-registry
+skills:
+  - id: network-ebpf-observability
+    path: .agents/skills/infrastructure/networking/network-advanced/telemetry/network-ebpf-observability/SKILL.md
+    description: "Use eBPF-based telemetry and diagnostics to analyze kernel/network behavior and policy enforcement."
+    triggers:
+      - "ebpf network observability"
+    excludes: []
+    status: active

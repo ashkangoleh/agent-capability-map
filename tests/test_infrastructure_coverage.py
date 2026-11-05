@@ -121,6 +121,47 @@ class InfrastructureCoverageTests(unittest.TestCase):
                     source.read_text(encoding="utf-8"),
                 )
 
+    def test_advanced_networking_has_distinct_canonical_routes(self):
+        expected = {
+            "network-routing-bgp": "routing-delivery",
+            "network-load-balancing-proxy": "routing-delivery",
+            "network-firewall-segmentation": "secure-connectivity",
+            "network-vpn-wireguard": "secure-connectivity",
+            "network-ebpf-observability": "telemetry",
+            "dns-authoritative-infrastructure": "dns",
+            "tls-pki-certificate-lifecycle": "pki",
+        }
+        graph = load_yaml(ROOT, "domains/infrastructure/networking/map.yaml")
+        advanced = next(item for item in graph["children"] if item["id"] == "network-advanced")
+        self.assertEqual(advanced["map"], "domains/infrastructure/networking/network-advanced/map.yaml")
+        self.assertNotIn("skills", advanced)
+        nested = load_yaml(ROOT, advanced["map"])
+        self.assertEqual({node["id"] for node in nested["children"]}, set(expected.values()))
+        fixtures = [
+            case for case in self.cases
+            if case.get("skill") in expected and case["id"].startswith("infra-expanded-")
+        ]
+        self.assertEqual({case["skill"] for case in fixtures}, set(expected))
+        for case in fixtures:
+            skill_id = case["skill"]
+            category = expected[skill_id]
+            with self.subTest(skill=skill_id):
+                result = self.router.resolve(case["request"])
+                self.assertEqual(result["status"], "matched", result)
+                self.assertEqual(result["selected_skill"], skill_id)
+                self.assertEqual(result["route"], [
+                    "infrastructure", "networking", "network-advanced", category,
+                ])
+                self.assertLessEqual(len(result["inspected_files"]), 10)
+                expected_path = ROOT / (
+                    f".agents/skills/infrastructure/networking/network-advanced/"
+                    f"{category}/{skill_id}/SKILL.md"
+                )
+                self.assertEqual(Path(result["skill_path"]).resolve(), expected_path.resolve())
+                self.assertTrue(expected_path.is_file())
+                self.assertFalse((ROOT / ".agents" / "skills" / "infrastructure" /
+                                  "network-advanced" / skill_id / "SKILL.md").exists())
+
     def test_infrastructure_scopes_are_selectable(self):
         scopes = {item["route"] for item in discover_domains(ROOT, prefix="infrastructure")}
         for route in ("infrastructure/networking",

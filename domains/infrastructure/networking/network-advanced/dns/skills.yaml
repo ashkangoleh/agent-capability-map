@@ -1,0 +1,11 @@
+schema_version: 1
+id: dns
+kind: skill-registry
+skills:
+  - id: dns-authoritative-infrastructure
+    path: .agents/skills/infrastructure/networking/network-advanced/dns/dns-authoritative-infrastructure/SKILL.md
+    description: "Operate authoritative DNS zones, recursive resolvers, split-horizon records, delegation and DNSSEC."
+    triggers:
+      - "authoritative dns infrastructure"
+    excludes: []
+    status: active

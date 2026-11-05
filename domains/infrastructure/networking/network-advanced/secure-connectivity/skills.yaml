@@ -1,0 +1,18 @@
+schema_version: 1
+id: secure-connectivity
+kind: skill-registry
+skills:
+  - id: network-firewall-segmentation
+    path: .agents/skills/infrastructure/networking/network-advanced/secure-connectivity/network-firewall-segmentation/SKILL.md
+    description: "Design network segmentation and firewall policy with least privilege, stateful flow reasoning and auditability."
+    triggers:
+      - "network firewall segmentation"
+    excludes: []
+    status: active
+  - id: network-vpn-wireguard
+    path: .agents/skills/infrastructure/networking/network-advanced/secure-connectivity/network-vpn-wireguard/SKILL.md
+    description: "Design VPN connectivity with WireGuard/IPsec, key rotation, routing and least-privilege network access."
+    triggers:
+      - "wireguard vpn routing"
+    excludes: []
+    status: active

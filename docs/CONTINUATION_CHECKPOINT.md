@@ -6,7 +6,19 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Host-bootstrap verification contract (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Infrastructure Advanced Networking taxonomy (2026-11-05)
+
+- Canonical branch: `pre_release`; verified baseline HEAD: `8d0e3324185619f26e21ed3b1cc74edf217f4c2e`. Never merge `main` or open new feature/fix branches for this work.
+- User explicitly prioritized Infrastructure before any other domain. There are **95 Infrastructure specialist manifests**, **16 first-level active scopes**, all physical skills are domain nested; expert-depth, semantic routing quality and host compatibility remain **NOT CERTIFIED**.
+- Identified `domains/infrastructure/networking/map.yaml` → `network-advanced` as an overloaded seven-skill registry; created `domains/infrastructure/networking/network-advanced/map.yaml` with five real capability categories and five dedicated registries.
+- Migrated seven SKILL.md manifests (each reuses its exact prior Git blob SHA) under `.agents/skills/infrastructure/networking/network-advanced/<category>/<skill-id>/SKILL.md`; deleted the seven old paths and stale `domains/infrastructure/network-advanced/skills.yaml`.
+- Preserved all seven skill IDs, complete Markdown bodies, triggers, exclusions and existing deterministic fixture cases. Route strings now have one extra category level: `infrastructure/networking/network-advanced/<category>`.
+- Extended `tests/test_infrastructure_coverage.py` to assert all seven fixture selections, exact hierarchical route, canonical source path, absence of obsolete source and bounded file inspection.
+- Structural invariants required after commit: 344 physical skill manifests, 95 Infrastructure skills, zero flat legacy manifests. CI on the new HEAD must pass graph validation, deterministic fixtures and full Python test suite before stating green.
+- **Remaining Infrastructure work:** inspect other broad registries (DevSecOps, Kubernetes cluster-lifecycle, SRE) and historically inconsistent source paths; audit 95 specialist procedures against official versioned docs with failure/recovery tests; perform real-agent host benchmarks. Do not treat physical nesting, one successful CI, or the agent-skills format as evidence of domain professional completeness.
+- Latest previous successful CI: `42016010204` at `8d0e3324185619f26e21ed3b1cc74edf217f4c2e`. A new CI outcome is necessary for this change.
+
+## HISTORICAL CHECKPOINT — Host-bootstrap verification contract (2026-11-05)
 
 - Baseline HEAD before this change: `a65d48a59188ea00a16840b4b846deea31a2c9e1` on `pre_release`.
 - Final 16 flat skill migration **PASSED** full GitHub Actions run `42014842454` at `1678fe619d708071131e98e0db52764c202629ae`.
