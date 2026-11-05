@@ -5,6 +5,7 @@ children:
   - id: candidate-generation
     description: "recommender candidate generation recall evaluation: event time, catalog eligibility and index freshness"
     triggers:
+      - "recommender retrieval recall at k cold users"
       - "recommender candidate generation recall evaluation"
     status: active
     skills: domains/ai-ml/recommender-systems/candidate-generation/skills.yaml

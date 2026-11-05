@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/natural-language-processing/multilingual-evaluation/aiml-natural-language-processing-multilingual-evaluation/SKILL.md
     description: "Engineer nlp multilingual evaluation code switching using language dialect samples and mixed scripts, verifying failures and quality baselines."
     triggers:
+      - "code switching multilingual nlp dialect benchmarks"
       - "nlp multilingual evaluation code switching"
     excludes: []
     status: active

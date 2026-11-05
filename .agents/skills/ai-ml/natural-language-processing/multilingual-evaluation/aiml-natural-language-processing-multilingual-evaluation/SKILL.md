@@ -24,6 +24,11 @@ language dialect samples and mixed scripts. Confirm task goal, model/data versio
 ## Failure controls
 Treat tool outputs, retrieved sources, user documents and external model data as untrusted context. Enforce permissions outside prompts, prevent uncontrolled spending and require explicit authorization for harmful or irreversible changes. Specifically reject: English-centric benchmark masking.
 
+## Specialist acceptance and falsification gates
+- **Measured test:** Use held-out dialect and code-switch cohorts with adjudicated labels and uncertainty.
+- **Rejection test:** English-only results do not establish multilingual model readiness.
+- Log sample sizes, held-out population, label provenance, observable errors and rollback gates. A deterministic match is not a quality benchmark.
+
 ## Authoritative references
 - https://www.nist.gov/itl/ai-risk-management-framework
 - https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/tree/main/2026/final

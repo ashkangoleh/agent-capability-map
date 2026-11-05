@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/recommender-systems/candidate-generation/aiml-recommender-systems-candidate-generation/SKILL.md
     description: "Engineer recommender candidate generation recall evaluation using event time, catalog eligibility and index freshness, verifying failures and quality baselines."
     triggers:
+      - "recommender retrieval recall at k cold users"
       - "recommender candidate generation recall evaluation"
     excludes: []
     status: active

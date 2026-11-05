@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/natural-language-processing/entity-extraction/aiml-natural-language-processing-entity-extraction/SKILL.md
     description: "Engineer nlp named entity extraction span evaluation using span annotations, token offsets and nesting, verifying failures and quality baselines."
     triggers:
+      - "ner exact span f1 nested offsets"
       - "nlp named entity extraction span evaluation"
     excludes: []
     status: active

@@ -446,6 +446,11 @@ children:
     label: "AI & Machine Learning"
     description: "Machine learning, deep learning, generative AI, RAG and MLOps."
     triggers:
+      - "recommender retrieval recall at k cold users"
+      - "sentence embeddings hard negative retrieval benchmark"
+      - "code switching multilingual nlp dialect benchmarks"
+      - "ner exact span f1 nested offsets"
+      - "text classifier macro f1 calibration by language"
       - "ai harm complaint monitoring remediation owners"
       - "model card user disclosure appeal mechanism"
       - "model subgroup fairness confidence intervals review"

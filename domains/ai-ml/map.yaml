@@ -159,6 +159,10 @@ children:
   - id: natural-language-processing
     description: "natural-language-processing model engineering"
     triggers:
+      - "sentence embeddings hard negative retrieval benchmark"
+      - "code switching multilingual nlp dialect benchmarks"
+      - "ner exact span f1 nested offsets"
+      - "text classifier macro f1 calibration by language"
       - "nlp text classification calibration benchmark"
       - "natural language processing"
       - "nlp named entity extraction span evaluation"
@@ -169,6 +173,7 @@ children:
   - id: recommender-systems
     description: "recommender-systems model engineering"
     triggers:
+      - "recommender retrieval recall at k cold users"
       - "recommender candidate generation recall evaluation"
       - "recommender systems"
       - "recommender learning to rank online safeguards"
