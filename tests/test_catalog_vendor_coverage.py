@@ -62,9 +62,15 @@ class CatalogVendorCoverageTests(unittest.TestCase):
                 self.assertEqual(result["selected_skill"], skill, result)
 
     def test_production_skill_contracts(self):
+        catalog = load_yaml(ROOT, "domains/data/data-engineering/lakehouse/catalogs/map.yaml")
+        registered = {}
+        for child in catalog["children"]:
+            if child.get("skills"):
+                for item in load_yaml(ROOT, child["skills"])["skills"]:
+                    registered[item["id"]] = ROOT / item["path"]
         for name in EXPECTED:
             with self.subTest(skill=name):
-                path = ROOT / ".agents" / "skills" / name / "SKILL.md"
+                path = registered[name]
                 content = path.read_text(encoding="utf-8")
                 for heading in (
                     "## Activation boundary", "## Required inputs", "## Production workflow",

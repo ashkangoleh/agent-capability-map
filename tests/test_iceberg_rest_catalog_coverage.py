@@ -52,7 +52,10 @@ class IcebergRestCatalogCoverageTests(unittest.TestCase):
                     )
 
     def test_generic_skill_has_operational_boundaries(self):
-        content = (ROOT / ".agents" / "skills" / SKILL / "SKILL.md").read_text(encoding="utf-8")
+        catalog = load_yaml(ROOT, "domains/data/data-engineering/lakehouse/catalogs/map.yaml")
+        generic = next(item for item in catalog["children"] if item["id"] == "iceberg-rest")
+        registry = load_yaml(ROOT, generic["skills"])
+        content = (ROOT / registry["skills"][0]["path"]).read_text(encoding="utf-8")
         for heading in (
             "## Activation boundary",
             "## Required inputs",

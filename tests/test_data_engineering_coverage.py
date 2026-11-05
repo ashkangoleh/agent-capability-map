@@ -80,7 +80,13 @@ class DataEngineeringCoverageTests(unittest.TestCase):
     def test_new_skills_have_production_sections_and_references(self):
         for skill_id in EXPECTED_SKILLS:
             with self.subTest(skill=skill_id):
-                content = (ROOT / ".agents" / "skills" / skill_id / "SKILL.md").read_text(encoding="utf-8")
+                case = next(
+                    item for item in self.cases
+                    if item["id"].startswith("de-specialist-") and item["skill"] == skill_id
+                )
+                result = self.router.resolve(case["request"])
+                self.assertEqual(result["selected_skill"], skill_id, result)
+                content = Path(result["skill_path"]).read_text(encoding="utf-8")
                 for heading in ("## Activation boundary", "## Required inputs", "## Production workflow",
                                 "## Failure modes and recovery", "## Validation and evidence", "## Official references"):
                     self.assertIn(heading, content)
