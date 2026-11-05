@@ -3,7 +3,7 @@ name: ai-rag-engineering
 description: Use when designing, implementing, debugging, or evaluating LLM applications, AI agents, RAG, embeddings, chunking, reranking, retrieval fusion, or grounded generation.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Purpose
@@ -51,3 +51,6 @@ Do not claim hallucinations are eliminated. Do not claim exactly-once ingestion,
 
 Verify the applicable version and publication date before using these sources:
 - https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
