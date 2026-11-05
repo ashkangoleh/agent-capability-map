@@ -3,7 +3,7 @@ name: end-to-end-delivery-semantics
 description: "Reason about at-most-once, at-least-once and exactly-once across source offsets, processor state, transactions and external sinks."
 license: Proprietary
 metadata:
-  version: "1.1.1"
+  version: "1.2.0"
 ---
 
 # end-to-end-delivery-semantics
@@ -21,6 +21,9 @@ Source offset/ack model; processor checkpoint/state; sink transaction; idempoten
 4. For Kafka distinguish producer idempotence, transactions and consumer offset commits; for Flink inspect checkpoint mode and sink two-phase commit support.
 5. For warehouses/object stores validate transaction or manifest commit semantics; processor checkpoints do not make every sink atomic.
 6. Define DLQ/replay behavior and ordering guarantees by partition/key; document cross-partition operations.
+
+## Commit-boundary failure model
+Use the optional, standard-library [commit-boundary simulator](scripts/commit_boundary_simulator.py) to expose loss/duplicate trade-offs on a **single logical event**; review [failure scenarios](references/commit-boundary-experiment.md). The simulator has no Kafka/Flink/warehouse connectivity and cannot prove an actual connector's end-to-end exactly-once behavior. Never mistake a modeled outcome for an executed sink crash test. Run real fault injection only on authorized, isolated infrastructure.
 
 ## Failure modes and recovery
 - Crash after sink write before source ack causes duplicates unless sink is idempotent or transactionally coupled.
