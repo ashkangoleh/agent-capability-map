@@ -2,7 +2,7 @@
 name: ds-gradient-boosting
 description: Use when training, tuning, diagnosing, or comparing gradient-boosted tree models such as XGBoost, LightGBM, and CatBoost.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-gradient-boosting
@@ -54,3 +54,6 @@ Target and prediction timestamp, entity grain, feature schema, split strategy, c
 - https://xgboost.readthedocs.io/
 - https://lightgbm.readthedocs.io/
 - https://catboost.ai/en/docs/
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

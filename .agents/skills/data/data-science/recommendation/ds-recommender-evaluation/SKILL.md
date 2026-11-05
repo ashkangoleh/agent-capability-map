@@ -2,7 +2,7 @@
 name: ds-recommender-evaluation
 description: "Evaluate recommendation systems with temporal splits, candidate generation and ranking metrics."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # ds-recommender-evaluation
@@ -35,3 +35,6 @@ User/item grain, exposure logs, candidates, labels, temporal split and objective
 
 ## Output contract
 Return the analysis/modeling result with estimand, assumptions, validation design, uncertainty, reproducibility and decision implications. Separate observed evidence from inference.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

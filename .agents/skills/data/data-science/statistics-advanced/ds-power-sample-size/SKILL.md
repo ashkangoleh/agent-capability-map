@@ -2,7 +2,7 @@
 name: ds-power-sample-size
 description: Use when calculating or simulating sample size, statistical power, minimum detectable effects, or experiment duration.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-power-sample-size
@@ -52,3 +52,6 @@ Estimand, outcome type, baseline rate/variance, smallest worthwhile effect, alph
 
 - https://www.statsmodels.org/stable/stats.html
 - https://docs.scipy.org/doc/scipy/reference/stats.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

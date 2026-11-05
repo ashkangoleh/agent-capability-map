@@ -2,7 +2,7 @@
 name: ds-clustering-evaluation
 description: Use when selecting, validating, comparing, or interpreting unsupervised clustering and segmentation solutions.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-clustering-evaluation
@@ -51,3 +51,6 @@ Feature grain, entity definition, time window, distance semantics, categorical/n
 ## Authoritative reference
 
 - https://scikit-learn.org/stable/modules/clustering.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

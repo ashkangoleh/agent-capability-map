@@ -2,7 +2,7 @@
 name: ds-model-calibration
 description: "Evaluate or fit classification probability calibration with independent splits, reliability analysis, version-aware CalibratedClassifierCV, prevalence shift and threshold decisions."
 metadata:
-  version: "1.2.0"
+  version: "1.2.1"
 ---
 
 # ds-model-calibration
@@ -79,3 +79,6 @@ Return calibration objective, data-split contract, method and version, held-out 
 - https://scikit-learn.org/stable/modules/calibration.html
 - https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html
 - https://scikit-learn.org/1.7/modules/generated/sklearn.calibration.CalibratedClassifierCV.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

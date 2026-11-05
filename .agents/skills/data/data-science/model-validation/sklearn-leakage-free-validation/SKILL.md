@@ -2,7 +2,7 @@
 name: sklearn-leakage-free-validation
 description: "Design leakage-resistant scikit-learn model validation with group-aware, time-aware and label-availability-aware split contracts, nested tuning and honest holdout evidence."
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # sklearn-leakage-free-validation
@@ -94,3 +94,6 @@ Return the prediction/label availability contract; selected split strategy and w
 - https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html
 - https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html
 - https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedGroupKFold.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

@@ -2,7 +2,7 @@
 name: imbalanced-classification-evaluation
 description: Evaluate imbalanced-classification models with calibrated probabilities, prevalence-aware metrics and threshold costs.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # imbalanced-classification-evaluation
@@ -33,3 +33,6 @@ Base prevalence, true operational cost matrix, labels, sampling, score outputs, 
 
 ## Output contract
 Return the requested analysis, actual reproducible methods, source and uncertainty, validation results, caveats and deployment implications. Unknown facts remain explicitly unknown.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

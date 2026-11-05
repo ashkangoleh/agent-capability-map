@@ -2,7 +2,7 @@
 name: ds-shap-explainability
 description: Use when explaining model predictions or feature contributions with SHAP while checking attribution assumptions, stability, and interpretation limits.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-shap-explainability
@@ -52,3 +52,6 @@ Model type, output scale, feature pipeline, background/reference population, cor
 ## Authoritative reference
 
 - https://shap.readthedocs.io/en/latest/
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

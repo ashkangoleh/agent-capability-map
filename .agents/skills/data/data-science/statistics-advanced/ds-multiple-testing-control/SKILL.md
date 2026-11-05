@@ -2,7 +2,7 @@
 name: ds-multiple-testing-control
 description: Use when controlling family-wise error or false discovery across multiple hypotheses, metrics, segments, features, or repeated analyses.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # ds-multiple-testing-control
@@ -68,3 +68,6 @@ This is not proof of control under optional stopping or invalid p-values. Never 
 
 - https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.false_discovery_control.html
 - https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

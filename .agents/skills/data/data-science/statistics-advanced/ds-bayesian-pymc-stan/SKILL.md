@@ -2,7 +2,7 @@
 name: ds-bayesian-pymc-stan
 description: Use when specifying, fitting, diagnosing, comparing, or reporting Bayesian models with PyMC or Stan.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-bayesian-pymc-stan
@@ -66,3 +66,6 @@ Use for Bayesian generative modeling, hierarchical partial pooling, posterior in
 - https://python.arviz.org/en/stable/
 - https://python.arviz.org/projects/stats/en/latest/api/generated/arviz_stats.diagnose.html
 - https://www.pymc.io/projects/docs/en/stable/learn/usage_overview.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

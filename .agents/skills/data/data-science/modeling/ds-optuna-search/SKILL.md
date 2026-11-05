@@ -2,7 +2,7 @@
 name: ds-optuna-search
 description: Use when designing reproducible hyperparameter optimization studies with Optuna, pruning, constraints, or multi-objective trade-offs.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-optuna-search
@@ -45,3 +45,6 @@ Prediction target, split strategy, metric, compute budget, search space, constra
 ## Authoritative reference
 
 - https://optuna.readthedocs.io/en/stable/
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

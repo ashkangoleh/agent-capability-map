@@ -2,7 +2,7 @@
 name: ds-missing-data
 description: Use when diagnosing missingness mechanisms and selecting imputation, weighting, likelihood, or MNAR sensitivity methods.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-missing-data
@@ -75,3 +75,6 @@ assert result["confidence_interval"] is None
 - https://stefvanbuuren.name/fimd/
 - https://search.r-project.org/CRAN/refmans/mice/html/pool.html
 - https://www.statsmodels.org/stable/imputation.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
