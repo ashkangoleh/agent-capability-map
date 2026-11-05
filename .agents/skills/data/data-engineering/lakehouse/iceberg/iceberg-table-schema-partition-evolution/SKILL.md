@@ -2,7 +2,7 @@
 name: iceberg-table-schema-partition-evolution
 description: Design Iceberg schema, partition-spec and snapshot-safe table evolution across actual Spark or Trino catalog versions.
 metadata:
-  version: "1.0.1"
+  version: "1.1.0"
 ---
 
 # iceberg-table-schema-partition-evolution
@@ -21,6 +21,9 @@ Iceberg format version and runtime, catalog implementation, storage, schema/fiel
 5. Plan concurrent commits, catalog availability, optimistic conflicts and retry conditions; never assume that object-store file rename commits the Iceberg table.
 6. Compare snapshot/metadata state before and after migration; protect rollback and time-travel retention while downstream jobs continue.
 7. Test mixed partition specs, column renames, deletes, writer conflict, reader version mismatch and failed catalog commit.
+
+## Offline field-ID compatibility gate
+For flat-schema change proposals only, run the optional standard-library [schema evolution preflight](scripts/check_schema_evolution.py) against the [illustrative JSON plan](examples/schema_evolution_plan.json). The script rejects obvious field-ID reuse, unreviewed rename, type narrowing, and unsafe required-field changes; **it does not validate nested schemas, partition transformations, actual catalog state, or reader/writer compatibility**. A zero exit code is always `manual_review_required`, never permission to issue ALTER TABLE or change a production spec. Use the [independent acceptance protocol](references/acceptance-and-recovery.md) for operational failure evidence and the official [Iceberg specification](https://iceberg.apache.org/spec/) for release-specific details.
 
 ## Validation and failure realism
 - Validate snapshot IDs, field IDs, partition transforms and reader compatibility on a cloned table.
