@@ -3,7 +3,7 @@ name: ux-research-design-review
 description: Use when planning UX research, evaluating a user journey or interface, reviewing interaction patterns, design systems, or accessibility.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Purpose
@@ -43,3 +43,6 @@ Do not generalize from one screenshot to the whole product. Do not claim WCAG co
 - [ ] Severity is justified.
 - [ ] Accessibility claims are test-backed.
 - [ ] Recommendations are testable.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

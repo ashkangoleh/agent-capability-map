@@ -2,7 +2,7 @@
 name: great-expectations-validation-gates
 description: Build Great Expectations validation suites and checkpoint gates with explicit severity and reproducible data-quality metrics.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # great-expectations-validation-gates
@@ -33,3 +33,6 @@ Great Expectations version, datasource/batch identifiers, expectation suites, bu
 
 ## Output contract
 Return requested runnable deliverable or assessment, assumptions, source-to-sink guarantees, test/rollout/rollback and operational cost. Mark unknown evidence explicitly.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
