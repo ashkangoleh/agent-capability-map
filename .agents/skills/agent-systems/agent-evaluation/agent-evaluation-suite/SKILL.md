@@ -2,7 +2,7 @@
 name: agent-evaluation-suite
 description: Use to build agent task evaluations covering skill routing, tool use, groundedness, refusal, reliability, cost and adversarial inputs.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # agent-evaluation-suite
@@ -35,3 +35,6 @@ Do not claim universal host compatibility, statistically improved grounding or f
 
 ## Output contract
 Return only the requested deliverable, plus decision-critical assumptions, verification performed, missing evidence, operational risks and next validation steps. Never claim to have run a test without actual tool evidence.
+
+## Independent specialist evaluation
+For substantive decisions, load the [specialist verification and acceptance protocol](references/acceptance-and-recovery.md) on demand. Its proposed tests are not execution evidence, and it cannot authorize unsafe actions.

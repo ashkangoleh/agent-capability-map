@@ -2,7 +2,7 @@
 name: computer-vision-dataset-evaluation
 description: Build image model datasets and validation pipelines with label quality, split leakage and robustness checks.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # computer-vision-dataset-evaluation
@@ -33,3 +33,6 @@ Image tasks, label ontology, data licensing, subject/camera identity, model libr
 
 ## Output contract
 Provide the actual requested architecture, implementation or evaluation with explicit preconditions, evidence, reproducibility, monitoring, rollback and unresolved uncertainty. Do not execute risky operations without permission.
+
+## Independent specialist evaluation
+For substantive decisions, load the [specialist verification and acceptance protocol](references/acceptance-and-recovery.md) on demand. Its proposed tests are not execution evidence, and it cannot authorize unsafe actions.

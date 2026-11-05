@@ -3,7 +3,7 @@ name: skill-authoring-validation
 description: Use when designing, creating, reviewing, validating, or improving Agent Skills, skill registries, routing policies, or capability maps.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Purpose
@@ -52,3 +52,6 @@ Do not create a skill merely to increase count. Do not claim zero hallucinations
 
 Verify the applicable version and publication date before using these sources:
 - https://agentskills.io/specification
+
+## Independent specialist evaluation
+For substantive decisions, load the [specialist verification and acceptance protocol](references/acceptance-and-recovery.md) on demand. Its proposed tests are not execution evidence, and it cannot authorize unsafe actions.

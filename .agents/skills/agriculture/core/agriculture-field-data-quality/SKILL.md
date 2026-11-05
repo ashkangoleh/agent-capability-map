@@ -2,7 +2,7 @@
 name: agriculture-field-data-quality
 description: Design agricultural field-data collection and quality checks for spatial, seasonal and agronomic datasets without unsupported recommendations.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # agriculture-field-data-quality
@@ -35,3 +35,6 @@ When evidence or permissions are insufficient, explain the specific blocker and 
 
 ## Deliverable and verification
 Provide the bounded requested artifact, assumptions, evidence table or source links, tests/verification actually performed, failure cases and follow-up checks. Keep the output proportional to the task.
+
+## Independent specialist evaluation
+For substantive decisions, load the [specialist verification and acceptance protocol](references/acceptance-and-recovery.md) on demand. Its proposed tests are not execution evidence, and it cannot authorize unsafe actions.

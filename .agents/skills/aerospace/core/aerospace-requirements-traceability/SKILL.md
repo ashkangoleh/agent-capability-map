@@ -2,7 +2,7 @@
 name: aerospace-requirements-traceability
 description: Develop aerospace systems requirements traceability and verification matrices without claiming flight qualification.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # aerospace-requirements-traceability
@@ -34,3 +34,6 @@ Unknown scope, insufficient source access or unsafe operations require explicit 
 
 ## Deliverable and verification
 Provide the requested work product, factual/source basis, assumptions, QA evidence, residual risks and independent review gates. Do not claim to have tested, filed, certified or executed anything without tool evidence.
+
+## Independent specialist evaluation
+For substantive decisions, load the [specialist verification and acceptance protocol](references/acceptance-and-recovery.md) on demand. Its proposed tests are not execution evidence, and it cannot authorize unsafe actions.
