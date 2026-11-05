@@ -3,7 +3,7 @@ name: data-engineering-implementation
 description: Use when designing, implementing, debugging, or reviewing data pipelines, batch or streaming jobs, SQL transformations, data models, warehouses, lakehouses, and data quality workflows.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Purpose
@@ -48,3 +48,6 @@ Do not recommend a production design without understanding source/sink consisten
 - [ ] Data quality and reconciliation are measurable.
 - [ ] Performance and cost assumptions are labeled.
 - [ ] Failure and recovery paths are documented.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

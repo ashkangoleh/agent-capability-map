@@ -2,7 +2,7 @@
 name: arrow-flight-substrait-interoperability
 description: "Use Arrow IPC/Flight and Substrait for columnar exchange and portable query plans across compatible engines."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # arrow-flight-substrait-interoperability
@@ -36,3 +36,6 @@ Arrow/Substrait versions, endpoint support, schema, auth/TLS, network and operat
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

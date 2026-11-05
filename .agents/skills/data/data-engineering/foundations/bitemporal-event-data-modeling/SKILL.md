@@ -2,7 +2,7 @@
 name: bitemporal-event-data-modeling
 description: "Model valid-time and system-time history for reproducible as-of queries and retroactive corrections."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # bitemporal-event-data-modeling
@@ -35,3 +35,6 @@ Event/valid/system time, interval semantics, timezone, clock quality and correct
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

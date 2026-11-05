@@ -2,7 +2,7 @@
 name: spark-performance-diagnostics
 description: Diagnose PySpark and Spark SQL performance using plans, runtime metrics, partition and skew evidence.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # spark-performance-diagnostics
@@ -32,3 +32,6 @@ Abstain from unsupported API, compatibility, correctness or performance claims. 
 
 ## Output and validation
 Provide the requested deliverable with explicit constraints, checked tests, source references, failure behavior and residual risks. Never assert that a test ran unless a tool result verifies it.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

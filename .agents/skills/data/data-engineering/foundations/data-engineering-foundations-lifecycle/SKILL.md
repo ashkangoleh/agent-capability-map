@@ -2,7 +2,7 @@
 name: data-engineering-foundations-lifecycle
 description: "Design an end-to-end data engineering lifecycle from acquisition to governed, reliable data products."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # data-engineering-foundations-lifecycle
@@ -36,3 +36,6 @@ Owners, producers/consumers, volume, freshness SLOs, classification, budget, RPO
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

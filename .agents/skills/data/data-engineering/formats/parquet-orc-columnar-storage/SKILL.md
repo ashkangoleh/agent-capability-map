@@ -2,7 +2,7 @@
 name: parquet-orc-columnar-storage
 description: "Choose and tune Parquet and ORC using row groups/stripes, codecs, statistics and scan patterns."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # parquet-orc-columnar-storage
@@ -36,3 +36,6 @@ Reader/writer engines, file sizes, row groups, cardinality, predicates and objec
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.
