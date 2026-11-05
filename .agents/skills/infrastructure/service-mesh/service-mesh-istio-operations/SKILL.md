@@ -2,7 +2,7 @@
 name: service-mesh-istio-operations
 description: "Operate Istio service mesh traffic, mTLS, authorization, telemetry and sidecar/ambient lifecycle."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # service-mesh-istio-operations
@@ -36,3 +36,6 @@ Istio release, data plane mode, gateways, certificates, policies and service top
 
 ## Output contract
 Return the requested design or diagnosis with exact scope, assumptions, evidence, safe procedure, failure modes, validation and rollback. Never claim production changes or tests that were not performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

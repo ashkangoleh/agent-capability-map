@@ -3,7 +3,7 @@ name: object-storage-infrastructure-operations
 description: "Operate S3-compatible and distributed object storage with lifecycle, versioning, replication and object-lock controls."
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # object-storage-infrastructure-operations
@@ -46,3 +46,6 @@ Provider/software version, bucket policy, identity, object sizes, lifecycle, ver
 
 ## Output contract
 Return exact scope, assumptions, observed evidence, safe procedure, failure modes, verification, rollback and residual risk. Distinguish facts from hypotheses and never claim tests or production changes that were not actually performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

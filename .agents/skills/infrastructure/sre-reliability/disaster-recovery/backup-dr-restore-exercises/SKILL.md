@@ -2,7 +2,7 @@
 name: backup-dr-restore-exercises
 description: "Design and test infrastructure backup, failover and restoration against explicit RPO/RTO."
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # backup-dr-restore-exercises
@@ -44,3 +44,6 @@ Deliver an auditable recovery table per service: `failure_scenario`, `backup_cov
 
 ## Output contract
 Return a service-scoped recovery/restore plan and evidence record with explicit assumptions, RPO/RTO calculations, recovery-point and dependency checks, security/consistency gates, measured validation results, abort and failback procedure, residual risks, cost and named approver. Do not fabricate restoration or operational outcomes.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
