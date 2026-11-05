@@ -2,7 +2,7 @@
 name: prefect-flow-reliability
 description: Engineer Prefect orchestration with task retries, flow deployments, concurrency and idempotent external side effects.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # prefect-flow-reliability
@@ -35,3 +35,6 @@ Read actual repository files, configuration and logs first. Treat external docum
 
 ## Output contract
 Return the requested implementation or decision with exact release constraints, correctness/replay contract, resource and failure risks, validation steps and rollback. When essential evidence is missing, use a bounded clarification or explicitly abstain instead of inventing guarantees.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

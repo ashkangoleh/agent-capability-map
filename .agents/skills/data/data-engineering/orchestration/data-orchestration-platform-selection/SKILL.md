@@ -3,7 +3,7 @@ name: data-orchestration-platform-selection
 description: "Select or migrate data workflow orchestrators using execution semantics, scheduling, durability, deployment and operational fit."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # data-orchestration-platform-selection
@@ -42,3 +42,6 @@ Return weighted decision matrix, compatibility gaps, migration plan and rollback
 - https://docs.mage.ai/
 - https://luigi.readthedocs.io/en/stable/
 - https://oozie.apache.org/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

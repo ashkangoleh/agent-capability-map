@@ -2,7 +2,7 @@
 name: pulsar-subscription-replay
 description: Design Apache Pulsar subscriptions, acknowledgment and redelivery semantics with ordering, retention and dead-letter behavior.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # pulsar-subscription-replay
@@ -35,3 +35,6 @@ Prioritize inspected system state and official release-specific references. Retr
 
 ## Delivery contract
 Provide the requested configuration/implementation or assessment, exact version and compatibility, delivery/retry/replay semantics, monitoring, rollback and validation evidence. Avoid invented performance numbers or unsupported exactly-once claims.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

@@ -2,7 +2,7 @@
 name: flyte-kubeflow-pipeline-orchestration
 description: "Design Flyte and Kubeflow Pipelines for reproducible containerized workflows, artifacts and Kubernetes isolation."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # flyte-kubeflow-pipeline-orchestration
@@ -36,3 +36,6 @@ Platform release, Kubernetes, task images, artifact store, metadata DB and cache
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

@@ -2,7 +2,7 @@
 name: temporal-durable-workflows
 description: "Use Temporal durable workflows for resumable long-running data operations, signals, timers and human intervention."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # temporal-durable-workflows
@@ -36,3 +36,6 @@ Temporal server/SDK, workflow duration, activity boundaries, idempotency and ret
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

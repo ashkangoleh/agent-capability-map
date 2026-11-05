@@ -2,7 +2,7 @@
 name: argo-workflows-data-orchestration
 description: Design Argo Workflows DAGs, CronWorkflows, artifact handling, retries and data backfills safely on Kubernetes.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # argo-workflows-data-orchestration
@@ -36,3 +36,6 @@ Prioritize inspected system state and official release-specific references. Retr
 
 ## Delivery contract
 Provide the requested configuration/implementation or assessment, exact version and compatibility, delivery/retry/replay semantics, monitoring, rollback and validation evidence. Avoid invented performance numbers or unsupported exactly-once claims.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

@@ -2,7 +2,7 @@
 name: kestra-data-orchestration
 description: "Operate Kestra declarative workflows with event triggers, plugins, retries, secrets and execution state."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # kestra-data-orchestration
@@ -35,3 +35,6 @@ Kestra release, backend, worker topology, plugin versions, triggers, secrets and
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.
