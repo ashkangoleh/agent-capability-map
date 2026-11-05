@@ -6,7 +6,13 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Complete Data Graph role coverage (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Data role inheritance fixture repair (2026-11-05)
+
+- Previous `pre_release` HEAD: `831d5d0ac61d725314aa11eaa81ecf18e574e9d0`. Workflow run `42056541209` graph/routing checks PASSED; the full unittest phase FAILED only two stale test expectations for Airflow/Kafka role inheritance (225 tests, 2 failures, 1 skipped).
+- Both requests resolve their correct existing skills and now return a more specific leaf role, at `data/data-engineering/orchestration/airflow` and `data/data-engineering/messaging/kafka` respectively. Old test expectations stopped at the parent. Corrected exactly these two expectations; no role files, skill bodies, routing semantics or allowlist policy modified.
+- Re-run full GitHub Actions for the new commit before marking the migration green. The 127/127-role Data inventory test had passed independently in the failed run.
+
+## HISTORICAL CHECKPOINT — Complete Data Graph role coverage (2026-11-05)
 
 - Verified baseline `pre_release` HEAD `9cdd9e1a665bae6e87a8c7d6c2d4b59ac078e6f7`, full CI run `42055168134` passed for hierarchical role loading (YAML graph + full tests). Do not merge `main` or create feature branches.
 - Added 58 additional distinct Data specialist ROLE.md files across analytics engineering, BI, data analysis, relational/database engineering, governance, messaging, orchestration, streaming SQL, Lakehouse catalogs, and warehouse/cloud engines.

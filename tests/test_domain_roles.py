@@ -144,9 +144,9 @@ class DomainRoleTests(unittest.TestCase):
             ("Plan a pipeline backfill recovery for missing dates",
              "data/data-engineering/batch-ingestion/recovery"),
             ("Create an Airflow DAG with retries",
-             "data/data-engineering/orchestration"),
+             "data/data-engineering/orchestration/airflow"),
             ("Review Kafka consumer offsets and ordering",
-             "data/data-engineering/messaging"),
+             "data/data-engineering/messaging/kafka"),
         ]
         for request, expected in cases:
             with self.subTest(request=request):
