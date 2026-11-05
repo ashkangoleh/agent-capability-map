@@ -1,0 +1,11 @@
+schema_version: 1
+id: runtime-security
+kind: skill-registry
+skills:
+  - id: runtime-security-falco
+    path: .agents/skills/infrastructure/infrastructure-security/devsecops/runtime-security/runtime-security-falco/SKILL.md
+    description: "Deploy runtime threat detection with Falco rules, signal quality, response ownership and safe tuning."
+    triggers:
+      - "falco runtime security detection"
+    excludes: []
+    status: active

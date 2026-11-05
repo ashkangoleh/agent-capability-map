@@ -162,6 +162,55 @@ class InfrastructureCoverageTests(unittest.TestCase):
                 self.assertFalse((ROOT / ".agents" / "skills" / "infrastructure" /
                                   "network-advanced" / skill_id / "SKILL.md").exists())
 
+    def test_devsecops_has_separate_security_capability_routes(self):
+        expected = {
+            "devsecops-security-gates": "policy-gates",
+            "policy-as-code-opa-kyverno": "policy-gates",
+            "container-image-signing-sigstore": "supply-chain",
+            "software-supply-chain-slsa-sbom": "supply-chain",
+            "runtime-security-falco": "runtime-security",
+            "secrets-workload-identity-spiffe": "workload-identity",
+        }
+        root = load_yaml(ROOT, "domains/infrastructure/infrastructure-security/map.yaml")
+        node = next(item for item in root["children"] if item["id"] == "devsecops")
+        self.assertEqual(
+            node["map"], "domains/infrastructure/infrastructure-security/devsecops/map.yaml"
+        )
+        self.assertNotIn("skills", node)
+        graph = load_yaml(ROOT, node["map"])
+        self.assertEqual({item["id"] for item in graph["children"]}, set(expected.values()))
+        registry_ids = []
+        for child in graph["children"]:
+            registry = load_yaml(ROOT, child["skills"])
+            registry_ids.extend(item["id"] for item in registry["skills"])
+        self.assertEqual(set(registry_ids), set(expected))
+        self.assertEqual(len(registry_ids), len(expected))
+        fixtures = [
+            case for case in self.cases
+            if case.get("skill") in expected and case["id"].startswith("infra-expanded-")
+        ]
+        self.assertEqual({case["skill"] for case in fixtures}, set(expected))
+        for case in fixtures:
+            skill_id = case["skill"]
+            category = expected[skill_id]
+            with self.subTest(skill=skill_id):
+                result = self.router.resolve(case["request"])
+                self.assertEqual(result["status"], "matched", result)
+                self.assertEqual(result["selected_skill"], skill_id)
+                self.assertEqual(result["route"], [
+                    "infrastructure", "infrastructure-security", "devsecops", category,
+                ])
+                self.assertLessEqual(len(result["inspected_files"]), 10)
+                expected_path = ROOT / (
+                    f".agents/skills/infrastructure/infrastructure-security/"
+                    f"devsecops/{category}/{skill_id}/SKILL.md"
+                )
+                self.assertEqual(Path(result["skill_path"]).resolve(), expected_path.resolve())
+                self.assertTrue(expected_path.is_file())
+                self.assertFalse(
+                    (ROOT / ".agents/skills/infrastructure/devsecops" / skill_id / "SKILL.md").exists()
+                )
+
     def test_all_active_infrastructure_skills_have_routing_fixtures(self):
         seen_maps = set()
         active = set()

@@ -12,7 +12,7 @@ children:
       - "slsa provenance attestation"
       - "spiffe workload identity"
     status: active
-    skills: domains/infrastructure/devsecops/skills.yaml
+    map: domains/infrastructure/infrastructure-security/devsecops/map.yaml
   - id: identity-access
     description: "Infrastructure IAM, PAM, federation and privileged access"
     triggers:

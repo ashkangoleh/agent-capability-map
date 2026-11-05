@@ -69,6 +69,19 @@ Seven existing skills formerly shared one broad `network-advanced` registry. The
 
 Prior to this change, **94/95** active Infrastructure skill IDs were covered by at least one deterministic routing fixture; the missing specialist was `platform-operations`. Two explicit requests (English and Persian/English mixed) now verify its route. A regression assertion checks that **every** registered active Infrastructure specialist has at least one matching fixture. This closes one fixture-inventory gap, **not** the broader need for hard negatives, blind multilingual task evaluation and real host/agent execution. Most specialists still have just one positive fixture.
 
+## DevSecOps capability routing increment — 2026-11-05
+
+The previous six-skill shared DevSecOps registry mixed policy enforcement, software supply-chain provenance, runtime detection and workload identity. It is now split into **four** explicitly routed capability groups with **six unchanged specialist skills**:
+
+- `policy-gates` — CI/deployment security gates and admission policy controls (2)
+- `supply-chain` — artifact signatures, attestations, SBOM and provenance verification (2)
+- `runtime-security` — Falco-based runtime detection and operational response (1)
+- `workload-identity` — SPIFFE/SPIRE identity, attestation and credential lifecycle (1)
+
+This division follows the distinct deploy, distribution/supply-chain and runtime concerns of CNCF TAG Security's cloud-native security model. Evidence: https://github.com/cncf/tag-security and https://github.com/cncf/tag-security/blob/main/community/resources/security-whitepaper/v2/cloud-native-security-whitepaper.md .
+
+All six `SKILL.md` files are moved by preserving their original Git blob SHA; IDs, descriptions, registry skill triggers and exclusions are unchanged. No new specialist was added, and the **469 pre-existing routing fixtures** remain unchanged. The additional unit test verifies registry partitioning, end-to-end selection, canonical category path and old-path removal. The result is improved taxonomy isolation, **not** independent security assurance or production-ready procedures.
+
 ## Completion gates
 
 1. Review every existing and new `SKILL.md` for specialist depth, not just frontmatter and headings.

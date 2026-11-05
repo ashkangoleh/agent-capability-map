@@ -6,7 +6,19 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Infrastructure all-specialist fixture inventory (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Infrastructure DevSecOps category isolation (2026-11-05)
+
+- Base HEAD: `32b4f903d3214e46d6b8252eeb26afcfa50ece9d` on `pre_release`. This increment remains **Infrastructure-only**; no branch creation or `main` changes.
+- Decomposed a six-entry `domains/infrastructure/devsecops/skills.yaml` registry into `domains/infrastructure/infrastructure-security/devsecops/map.yaml` with four leaf categories (`policy-gates`, `supply-chain`, `runtime-security`, `workload-identity`) and dedicated skill registries.
+- Reused original six SKILL.md Git blob SHAs at new paths under `.agents/skills/infrastructure/infrastructure-security/devsecops/<category>/<skill-id>/SKILL.md`. Deleted their old physical paths, and the obsolete broad registry.
+- Updated `domains/infrastructure/infrastructure-security/map.yaml` to follow the DevSecOps submap. All IDs, contents, skill triggers, excludes and **469** existing fixtures remain the same; only the routing path gains one category.
+- Extended `tests/test_infrastructure_coverage.py` to verify 6/6 existing fixture resolutions, exact category routes, one-to-one registry ownership, canonical paths and removal of flat/old DevSecOps paths.
+- Structural invariants required: **344** global skill manifests, **95** Infrastructure manifests, **0** flat legacy manifests, and exactly six unique DevSecOps specialists.
+- `CI` for this new commit must be verified by matching the GitHub Actions run's head SHA, not inherited from `32b4f903d3214e46d6b8252eeb26afcfa50ece9d`.
+- Additional Infrastructure gaps remain: cluster-lifecycle Kubernetes, SRE and other multi-skill registries; negative/ambiguous/bilingual routing benchmarks; per-skill source/version audits and failure-injection recovery procedures; native integration and domain allowlist enforcement on five actual agent hosts.
+- External evidence: CNCF TAG Security cloud-native security lifecycle/supply-chain guidance. This supports taxonomy boundaries, not correctness certification.
+
+## HISTORICAL CHECKPOINT — Infrastructure all-specialist fixture inventory (2026-11-05)
 
 - Baseline `pre_release` commit: `c72c9be560f198b7d90f30e4a72c4b5bb48abfd7`. Continue **Infrastructure** only; user did not authorize moving to other domains.
 - After auditing all **95** active Infrastructure IDs against `tests/fixtures/yaml-routing-cases.yaml`, **94/95** had a deterministic matching fixture; `platform-operations` had none.
