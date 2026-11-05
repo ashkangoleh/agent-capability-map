@@ -19,7 +19,9 @@ class GraphRoutingTests(unittest.TestCase):
         self.assertGreaterEqual(report["unique_active_skills"], 18)
 
     def test_pyspark_bootstrap_evidence_guardrails_exist(self):
-        text = (ROOT / ".agents" / "skills" / "pyspark-project-bootstrap" / "SKILL.md").read_text(encoding="utf-8")
+        resolved = Router(ROOT).resolve("Create a new PySpark project")
+        self.assertEqual(resolved["selected_skill"], "pyspark-project-bootstrap", resolved)
+        text = Path(resolved["skill_path"]).read_text(encoding="utf-8")
         for required in (
             "latest stable",
             "cluster release",
