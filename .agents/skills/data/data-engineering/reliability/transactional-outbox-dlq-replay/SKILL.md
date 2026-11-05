@@ -2,7 +2,7 @@
 name: transactional-outbox-dlq-replay
 description: "Implement transactional outbox, dead-letter queues and poison-message recovery for event-driven integration."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # transactional-outbox-dlq-replay
@@ -36,3 +36,6 @@ Application DB transaction, outbox schema, CDC relay, event key, broker retentio
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

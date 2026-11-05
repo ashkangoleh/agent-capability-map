@@ -2,7 +2,7 @@
 name: end-to-end-pipeline-reliability
 description: "Engineer reliable pipelines with idempotency, deduplication, retries, checkpoints, replay and partial-publication recovery."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # end-to-end-pipeline-reliability
@@ -36,3 +36,6 @@ Source guarantees, business keys, target write model, checkpoints, retry budget 
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

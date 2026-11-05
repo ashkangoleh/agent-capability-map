@@ -2,7 +2,7 @@
 name: data-platform-cost-capacity-engineering
 description: "Plan data platform capacity and FinOps across compute, storage, network, metadata, ingestion and query concurrency."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # data-platform-cost-capacity-engineering
@@ -35,3 +35,6 @@ Volumes, peak concurrency, query profiles, storage growth, pricing, egress, SLO 
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

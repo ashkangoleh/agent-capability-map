@@ -2,7 +2,7 @@
 name: hadoop-hdfs-hive-yarn-operations
 description: "Operate HDFS, YARN and Hive with capacity, replication, metastore, security and migration controls."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # hadoop-hdfs-hive-yarn-operations
@@ -37,3 +37,6 @@ Distribution/version, HDFS HA, DataNode topology, YARN queues, metastore and Ker
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.
