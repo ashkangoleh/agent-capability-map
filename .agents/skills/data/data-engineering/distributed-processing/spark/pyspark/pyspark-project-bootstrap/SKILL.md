@@ -2,7 +2,7 @@
 name: pyspark-project-bootstrap
 description: Create a new PySpark application with verified runtime compatibility, tested data contracts, storage-aware delivery semantics, and reproducible recovery.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # pyspark-project-bootstrap
@@ -51,3 +51,6 @@ For substantive designs include: scope, inspected evidence, explicit assumptions
 - User asks for PySpark project without a Spark version: **do not** claim an unverified "latest stable" or default to Spark 3.5 as a current recommendation.
 - User says "write partitioned Parquet" without naming storage: **do not** claim staging plus rename is universally atomic or guarantees idempotency.
 - User asks to propose a structure without creating files: produce the structure without writing and avoid unnecessary multi-question gating.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

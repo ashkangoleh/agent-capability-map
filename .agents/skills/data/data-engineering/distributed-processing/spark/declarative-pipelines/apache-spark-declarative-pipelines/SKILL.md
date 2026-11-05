@@ -3,7 +3,7 @@ name: apache-spark-declarative-pipelines
 description: "Design declarative batch and streaming pipelines in SQL/Python while separating upstream Spark Declarative Pipelines from Databricks Lakeflow extensions."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # apache-spark-declarative-pipelines
@@ -41,3 +41,6 @@ Return portable/platform feature matrix, pipeline graph, state plan and deployme
 ## Official references
 - https://spark.apache.org/docs/latest/
 - https://docs.databricks.com/aws/en/ldp/concepts/spark-declarative-pipelines
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

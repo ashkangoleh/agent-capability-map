@@ -3,7 +3,7 @@ name: datafusion-arrow-query-engine
 description: "Build Arrow-native query and DataFrame execution with Apache DataFusion; use Ballista only when distributed execution is explicitly required."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # datafusion-arrow-query-engine
@@ -39,3 +39,6 @@ Return deployment mode, Arrow type contract, plan evidence and recovery strategy
 ## Official references
 - https://datafusion.apache.org/user-guide/introduction.html
 - https://datafusion.apache.org/ballista/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

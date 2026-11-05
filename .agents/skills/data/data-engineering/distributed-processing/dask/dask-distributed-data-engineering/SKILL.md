@@ -3,7 +3,7 @@ name: dask-distributed-data-engineering
 description: "Engineer Dask DataFrame and task-graph workloads with partition sizing, shuffle, scheduler, worker memory and recovery controls."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # dask-distributed-data-engineering
@@ -39,3 +39,6 @@ Return suitability decision, partition/shuffle plan, worker sizing and failure-t
 ## Official references
 - https://docs.dask.org/en/stable/
 - https://distributed.dask.org/en/stable/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

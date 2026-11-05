@@ -2,7 +2,7 @@
 name: spark-structured-streaming
 description: Use for Spark Structured Streaming pipelines with state, event-time watermarks, output modes, checkpoints and replay behavior.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # spark-structured-streaming
@@ -34,3 +34,6 @@ Do not promise end-to-end exactly-once or universal watermark behavior without t
 
 ## Output contract
 Return only the requested deliverable, plus decision-critical assumptions, verification performed, missing evidence, operational risks and next validation steps. Never claim to have run a test without actual tool evidence.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.
