@@ -3,7 +3,7 @@ name: ducklake-lakehouse-format-engineering
 description: "Design DuckLake catalogs, snapshots, schema evolution, file lifecycle and multi-client compatibility with explicit DuckDB version gates."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ducklake-lakehouse-format-engineering
@@ -38,3 +38,6 @@ Return version matrix, catalog/storage topology, concurrency and lifecycle polic
 
 ## Official references
 - https://ducklake.select/docs/stable/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

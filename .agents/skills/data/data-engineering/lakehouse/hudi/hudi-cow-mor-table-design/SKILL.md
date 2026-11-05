@@ -2,7 +2,7 @@
 name: hudi-cow-mor-table-design
 description: Select Apache Hudi Copy-on-Write or Merge-on-Read with indexing, record keys, precombine and compaction/recovery policies.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # hudi-cow-mor-table-design
@@ -36,3 +36,6 @@ Inspect actual schemas, code, execution plans and operational logs first. Confir
 
 ## Delivery contract
 Provide the requested fully scoped implementation or assessment, with explicit assumptions, data grain, idempotency/replay contract, observability, test/rollout/rollback and trade-offs. Mark unknowns instead of fabricating engine APIs, performance or consistency.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

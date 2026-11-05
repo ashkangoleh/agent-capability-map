@@ -3,7 +3,7 @@ name: apache-fluss-streaming-storage
 description: "Operate Apache Fluss as streaming storage with log and primary-key tables, buckets, replication, remote storage and Flink tiering."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # apache-fluss-streaming-storage
@@ -39,3 +39,6 @@ Return table model, topology, bucket strategy, tiering design and recovery limit
 ## Official references
 - https://fluss.apache.org/docs/
 - https://github.com/apache/fluss
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

@@ -2,7 +2,7 @@
 name: open-table-format-selection
 description: "Select Iceberg, Delta Lake, Hudi, Paimon or DuckLake by workload, interoperability and maintenance requirements."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # open-table-format-selection
@@ -39,3 +39,6 @@ Engine releases, catalog, object store, append/upsert/delete, streaming, schema 
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

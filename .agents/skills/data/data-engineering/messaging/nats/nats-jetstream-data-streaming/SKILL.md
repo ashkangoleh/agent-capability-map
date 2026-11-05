@@ -3,7 +3,7 @@ name: nats-jetstream-data-streaming
 description: "Operate NATS JetStream streams and durable consumers with acknowledgement, redelivery, replay, retention and idempotent sink handling."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # nats-jetstream-data-streaming
@@ -39,3 +39,6 @@ Return stream/consumer config, retention rationale, ack boundary and replay runb
 ## Official references
 - https://docs.nats.io/concepts/jetstream
 - https://docs.nats.io/learn/jetstream/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

@@ -3,7 +3,7 @@ name: lakehouse-catalog-ecosystem-interoperability
 description: "Evaluate table catalogs and metadata platforms across API compatibility, commit coordination, auth, namespace semantics and engine interoperability."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # lakehouse-catalog-ecosystem-interoperability
@@ -45,3 +45,6 @@ Return catalog role, compatibility matrix, commit/auth model, migration and reco
 - https://docs.lakekeeper.io/
 - https://projectnessie.org/
 - https://gravitino.apache.org/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

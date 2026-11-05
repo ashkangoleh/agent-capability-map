@@ -2,7 +2,7 @@
 name: iceberg-compaction-retention
 description: Plan safe Apache Iceberg file compaction, manifest rewrites, snapshot expiration and orphan cleanup using catalog-aware preflight, targeted procedures and recovery evidence.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # Iceberg compaction and retention
@@ -37,3 +37,6 @@ Return the exact operation and its purpose, observed vs missing evidence, affect
 - Apache Iceberg Spark procedures: https://iceberg.apache.org/docs/latest/spark-procedures/
 - Apache Iceberg Spark metadata queries: https://iceberg.apache.org/docs/latest/spark-queries/
 - Apache Iceberg specification (optimistic concurrency): https://iceberg.apache.org/spec/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

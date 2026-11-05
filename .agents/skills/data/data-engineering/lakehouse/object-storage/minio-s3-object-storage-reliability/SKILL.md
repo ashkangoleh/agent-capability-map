@@ -2,7 +2,7 @@
 name: minio-s3-object-storage-reliability
 description: Design MinIO/S3-compatible lake object storage usage with multipart consistency, lifecycle, credentials and publication safety.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # minio-s3-object-storage-reliability
@@ -33,3 +33,6 @@ Object storage implementation/version, bucket policy, endpoint, path-style acces
 
 ## Output contract
 Return requested runnable deliverable or assessment, assumptions, source-to-sink guarantees, test/rollout/rollback and operational cost. Mark unknown evidence explicitly.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

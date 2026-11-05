@@ -2,7 +2,7 @@
 name: kinesis-stream-consumer-recovery
 description: Design Kinesis Data Streams consumers, shard checkpoints, resharding and replay with measured read capacity and sink safety.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # kinesis-stream-consumer-recovery
@@ -36,3 +36,6 @@ Prioritize inspected system state and official release-specific references. Retr
 
 ## Delivery contract
 Provide the requested configuration/implementation or assessment, exact version and compatibility, delivery/retry/replay semantics, monitoring, rollback and validation evidence. Avoid invented performance numbers or unsupported exactly-once claims.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.
