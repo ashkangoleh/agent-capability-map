@@ -2,7 +2,7 @@
 name: argocd-gitops-drift-recovery
 description: Diagnose Argo CD GitOps drift, sync waves, health status and rollback without overriding source-of-truth governance.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # argocd-gitops-drift-recovery
@@ -33,3 +33,6 @@ Argo CD version, Application/AppSet manifest, tracked revision, sync policy, clu
 
 ## Result contract
 Return decision, exact environment scope, observed facts versus hypotheses, impact, safe next commands or implementation, verification evidence and rollback. Never claim tested changes or measured savings without observed results.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
