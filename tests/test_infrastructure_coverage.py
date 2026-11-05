@@ -317,6 +317,59 @@ class InfrastructureCoverageTests(unittest.TestCase):
         self.assertEqual(result["selected_skill"], "runtime-security-falco", result)
         self.assertEqual(Path(result["skill_path"]).resolve(), path.resolve())
 
+    def test_operator_and_dr_skills_have_domain_specific_failure_contracts(self):
+        skills = {
+            "kubernetes-operator-crd-lifecycle": {
+                "path": (
+                    ".agents/skills/infrastructure/containers-orchestration/kubernetes/"
+                    "operators-extensions/kubernetes-operator-crd-lifecycle/SKILL.md"
+                ),
+                "request": "Infrastructure: kubernetes operator crd lifecycle",
+                "required": (
+                    "reconcile", "idempotent", "resourceVersion", "observedGeneration",
+                    "finalizers", "deletionTimestamp", "conversion webhook",
+                    "status.storedVersions", "storage: true", "RBAC",
+                    "## Failure modes and recovery", "## Validation and evidence",
+                    "kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/",
+                ),
+                "forbidden": (
+                    "Use staged node pools/canaries and preserve capacity",
+                ),
+            },
+            "backup-dr-restore-exercises": {
+                "path": (
+                    ".agents/skills/infrastructure/sre-reliability/disaster-recovery/"
+                    "backup-dr-restore-exercises/SKILL.md"
+                ),
+                "request": "Infrastructure: infrastructure backup disaster recovery",
+                "required": (
+                    "T_failure - T_recovery_point", "application-consistent",
+                    "split-brain", "KMS", "PITR", "integrity", "failback",
+                    "restore job", "target_rto", "measured_rto",
+                    "## Failure modes and recovery", "## Validation and evidence",
+                    "aws.amazon.com/aws-backup/latest/devguide/restore-testing.html",
+                ),
+                "forbidden": (
+                    "Define user-visible SLIs, SLOs, error budgets",
+                ),
+            },
+        }
+        for skill_id, specification in skills.items():
+            with self.subTest(skill=skill_id):
+                path = ROOT / specification["path"]
+                self.assertTrue(path.is_file())
+                content = path.read_text(encoding="utf-8")
+                self.assertIn(f"name: {skill_id}", content)
+                self.assertIn('version: "1.1.0"', content)
+                for required in specification["required"]:
+                    self.assertIn(required, content)
+                for obsolete in specification["forbidden"]:
+                    self.assertNotIn(obsolete, content)
+                selected = self.router.resolve(specification["request"])
+                self.assertEqual(selected["status"], "matched", selected)
+                self.assertEqual(selected["selected_skill"], skill_id)
+                self.assertEqual(Path(selected["skill_path"]).resolve(), path.resolve())
+
     def test_all_active_infrastructure_skills_have_routing_fixtures(self):
         seen_maps = set()
         active = set()

@@ -120,6 +120,20 @@ Sources: https://falco.org/docs/setup/download/ , https://falco.org/docs/concept
 
 The new regression test checks the Falco-specific operational content and preserves the existing deterministic routing fixture. **This is one specialist-depth improvement, not proof that all 95 Infrastructure skills are production-ready.** Other sampled instructions (notably Kubernetes Operator and DR/restore) still show generic procedural content and require their own validated rewrites.
 
+## Specialist depth corrections — Operator/CRD and Backup/DR (2026-11-05)
+
+Two existing named specialist skills still contained cross-specialty generic procedures. The Operator/CRD skill described cluster node-pool upgrades rather than a reconcile/controller lifecycle. The Backup/DR skill outlined broad SLI/SLO telemetry rather than recoverability testing. Both are now versioned `1.1.0` with their existing IDs, registry paths and activation triggers unchanged.
+
+- `kubernetes-operator-crd-lifecycle`: structural CRD schema, idempotent reconciliation, status/observedGeneration, finalizers and safe cleanup, conversion webhooks, served/storage versions and stored-version migration, canary/rollback and evidence. Official Kubernetes docs: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/ and https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definition-versioning/ .
+- `backup-dr-restore-exercises`: service dependencies, immutable recovery-point evidence, key/permission isolation, point-in-time recovery, cross-system consistency, isolated drills, actual RPO/RTO measurement, integrity checks, failback and cleanup. Official AWS guidance: https://docs.aws.amazon.com/aws-backup/latest/devguide/restore-testing.html and https://docs.aws.amazon.com/prescriptive-guidance/latest/security-best-practices/test.html .
+- `tests/test_infrastructure_coverage.py` now checks focused specialist terms, exclusion of old generic procedures and unchanged deterministic router selections.
+
+**Limit:** static content tests and CI do not execute a Kubernetes controller, a conversion webhook, a restored service or a five-host agent run. Actual version-specific effectiveness, blast radius and observed RPO/RTO remain unverified. All other 93 Infrastructure skill bodies still need their own evidence-driven depth review.
+
+## Role contract future work
+
+The user requires a dedicated quality-improving **Domain Role** for each domain, designed later. See `docs/DOMAIN_ROLE_DESIGN_BACKLOG.md`. It is an **unimplemented, optional post-router reviewer contract**, not a new role-loading feature, a change in the deterministic allowlist, or a claim that all 41 domains have been analyzed.
+
 ## Completion gates
 
 1. Review every existing and new `SKILL.md` for specialist depth, not just frontmatter and headings.

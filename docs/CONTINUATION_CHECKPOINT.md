@@ -6,7 +6,18 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Falco specialist-depth review (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Kubernetes Operator and DR specialist-depth review + domain roles backlog (2026-11-05)
+
+- Canonical working branch is `pre_release`. Baseline verified HEAD before this change: `8bc0555ce36309da76f7857f2f9bca088947d475`. Do not merge to `main` or create new branches.
+- Updated **exactly two** existing SKILL.md bodies: `kubernetes-operator-crd-lifecycle` and `backup-dr-restore-exercises`; metadata version `1.0.0` → `1.1.0`. Stable IDs, physical paths, source registries, triggers and excludes unchanged.
+- Kubernetes Operator/CRD content now covers schema validation, controller idempotent reconcile, status and observedGeneration, deletion finalizers, conversion webhook/served/storage versions, stored-version migration, rollback limitations, failure injections and real evidence.
+- Backup/DR content now covers dependency-aware recovery points, backup immutability/keys, isolation, PITR, actual RPO/RTO evidence, consistency and validation, split brain, failback and cost/cleanup.
+- Added focused content/path/routing regression test in `tests/test_infrastructure_coverage.py` and audited the corrective rationale in `docs/INFRASTRUCTURE_COVERAGE_AUDIT.md`. No fixture count change (469).
+- **Explicit user requirement for future work:** design a separate quality-enhancing **role per domain**. Captured in `docs/DOMAIN_ROLE_DESIGN_BACKLOG.md`; this is **not implemented**, must be optionally loaded only after authorized skill resolution, preserve minimal bootstrap, avoid redundant role stacking, and be evaluated per-domain with host/quality/token/security tests before rollout. Infrastructure pilot role candidate is Principal Infrastructure Reliability & Platform Architect.
+- Do not claim production compatibility or tested RPO/RTO; **no Kubernetes cluster or AWS resource was operated**. Final gate: verify GitHub Actions run bound to the new commit SHA; required inventory stays 344 total/95 Infrastructure/0 flat.
+- Infrastructure overall expert-depth/completeness remains **NOT CERTIFIED** and next domain is blocked pending explicit user approval.
+
+## HISTORICAL CHECKPOINT — Falco specialist-depth review (2026-11-05)
 
 - Baseline `pre_release` HEAD: `c4918e585f5153de82275b9615625ce2d1731a59`. Continue Infrastructure only; no branch creation or main merge.
 - After completing DevSecOps, Kubernetes and SRE structural splits, reviewed representative SKILL.md bodies and found a **nontrivial quality gap**: the Falco runtime skill had generic SAST/DAST/SCA content rather than Falco-specific detection, event-drop and driver operations.
