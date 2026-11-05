@@ -4,7 +4,20 @@
 **Phase:** Data Science / Advanced Statistics and Foundations  
 **Scope:** Source-tree organization only; existing skill IDs, trigger phrases, YAML routing, and user-selected domain profile semantics are unchanged.
 
-## Directory contract
+## Current status superseding the original canary inventory — 2026-11-05
+
+The category tables below document **historical early migration phases**, not the current repository-wide inventory.
+
+- **327/344 (95.06%)** canonical skill manifests now live under domain-nested folders; **17** still use flat paths.
+- **Data Science is structurally 42/42 nested.** Other Data, AI/ML, Infrastructure and several top-level domains also have nested sources.
+- The latest completed category migration is `infrastructure/storage-engineering/advanced-storage` (2/2 skills), retaining unchanged Git blobs and updated paths in `domains/infrastructure/storage/new-specialists.yaml`.
+- Structural completion is separate from tested router correctness or host native discovery. The current CI blocker is an older stale source path in `domains/data/general-skills.yaml`; see `docs/CONTINUATION_CHECKPOINT.md` for live status.
+
+All future migrations must preserve stable IDs, update every registry that references a moved skill and keep a single canonical manifest.
+
+## Original canary directory contract (historical)
+
+
 
 The canonical source location for the ten migrated Data Science skills is:
 
