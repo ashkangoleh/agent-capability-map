@@ -3,7 +3,7 @@ name: swe-quality-testing-property-testing
 description: Use for property based fuzz testing tasks in Software Testing and Verification; verify derive generative invariants and shrinking strategies from domain rules. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Software Testing and Verification: property testing
@@ -38,3 +38,6 @@ Reject assumptions that conceal Unconstrained random tests, false invariants and
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

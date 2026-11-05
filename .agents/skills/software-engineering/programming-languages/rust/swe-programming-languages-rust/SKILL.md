@@ -3,7 +3,7 @@ name: swe-programming-languages-rust
 description: Use for rust ownership async error handling tasks in Programming Language Engineering; verify use ownership, Send/Sync boundaries and typed errors to prevent lifecycle faults. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Programming Language Engineering: rust
@@ -38,3 +38,6 @@ Reject assumptions that conceal Unchecked unwrap in services, deadlocks, uninten
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
