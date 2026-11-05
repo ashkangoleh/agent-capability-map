@@ -107,7 +107,7 @@ def role_contract_path(root, scope):
     """Validate a fixed-path, source-controlled advisory role at any graph depth."""
     parts = _role_parts(scope)
     candidate = _role_candidate(root, parts)
-    path = secure_path(root, str(Path("domains", *parts, "ROLE.md")))
+    path = secure_path(root, "/".join(("domains", *parts, "ROLE.md")))
     if path != candidate:
         raise RouterError("Unexpected domain role location")
     if path.stat().st_size > MAX_ROLE_BYTES:

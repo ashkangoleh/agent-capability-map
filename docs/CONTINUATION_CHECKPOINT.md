@@ -6,7 +6,15 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Infrastructure hierarchical roles + cross-platform CLI (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Windows role path portability fix (2026-11-05)
+
+- Baseline `pre_release` commit: `525134eac830d6b5626dc8ae5b6918d18c57643b`; workflow `42081744103` failed because **Windows** `role_contract_path` constructed a backslash path via native `Path` but `secure_path` correctly rejects backslashes in catalog-relative paths.
+- Fixed internal role path construction to use `"/".join(("domains", *parts, "ROLE.md"))` from already validated route components, identical across Linux/Windows, without weakening security checks.
+- Linux unit suite and Node CLI smoke passed for baseline; Windows Python smoke failed only `validate` with `Unsafe path: domains\\data\\ROLE.md`; Node smoke was skipped because preceding step failed.
+- Added a real installed `capability-map[.exe]` console-script smoke test to `tests/test_cross_platform_cli.py`, in addition to `python -m` calls.
+- Re-run the updated GitHub Actions workflow matrix and full suite. Do not call Windows or complete CI green until exact new SHA passed.
+
+## HISTORICAL CHECKPOINT — Infrastructure hierarchical roles + cross-platform CLI (2026-11-05)
 
 - Working branch `pre_release`, verified baseline before changes `fe54e763f7fb9e01e9598927eea266681edb1cf1`. No `main` merge and no other branches.
 - Added **96** new `domains/infrastructure/<logical-route>/ROLE.md` contracts to existing Infrastructure root role. Expected **97/97** active graph nodes across **22** Infrastructure map files with independent roles, including 16 first-level scopes and deep Kubernetes/Network Advanced/DevSecOps/GitOps/CI-CD.

@@ -3,6 +3,7 @@ import json
 import os
 import subprocess
 import sys
+import sysconfig
 import tempfile
 import unittest
 from pathlib import Path
@@ -45,6 +46,19 @@ class CrossPlatformCliTests(unittest.TestCase):
                           "--home", home)
             self.assertEqual(json.loads(blocked.stdout)["status"], "domain_not_enabled")
             self.assertNotIn("role_paths", json.loads(blocked.stdout))
+
+    def test_installed_console_script_works_on_native_os(self):
+        script = Path(sysconfig.get_path("scripts")) / (
+            "capability-map.exe" if os.name == "nt" else "capability-map"
+        )
+        self.assertTrue(script.is_file(), f"Console-script not installed: {script}")
+        completed = subprocess.run(
+            [str(script), "--root", str(ROOT), "domains", "list",
+             "--prefix", "infrastructure"],
+            capture_output=True, text=True, encoding="utf-8", check=False,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertEqual(json.loads(completed.stdout)["status"], "ok")
 
     def test_installer_embeds_root_and_uses_native_shell_quoting(self):
         with tempfile.TemporaryDirectory(prefix="capability map quoted home ") as workspace:
