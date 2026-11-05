@@ -4,8 +4,8 @@
   "table": "prod.analytics.events",
   "environment": "staging",
   "change_ticket": "EXAMPLE-ONLY",
-  "spark_version": "3.5.x-review-installed-build",
-  "iceberg_version": "verify-installed-build",
+  "spark_version": "3.5.5",
+  "iceberg_version": "1.12.0",
   "catalog_commit_contract_reviewed": true,
   "baseline_snapshot_id": 123456789,
   "concurrency": {

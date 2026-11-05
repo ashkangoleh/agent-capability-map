@@ -102,6 +102,14 @@ class IcebergMaintenanceSkillTests(unittest.TestCase):
         plan["parameters"]["planning_baseline_reviewed"] = True
         self.assertEqual(self.run_plan(plan)[0], 0)
 
+    def test_version_placeholders_are_rejected(self):
+        plan = self.plan()
+        plan["iceberg_version"] = "latest"
+        self.assertEqual(self.run_plan(plan)[0], 1)
+        plan["iceberg_version"] = "1.12.0"
+        plan["spark_version"] = "3.5.x"
+        self.assertEqual(self.run_plan(plan)[0], 1)
+
     def test_missing_or_invalid_snapshot_rejected(self):
         plan = self.plan()
         plan["baseline_snapshot_id"] = True

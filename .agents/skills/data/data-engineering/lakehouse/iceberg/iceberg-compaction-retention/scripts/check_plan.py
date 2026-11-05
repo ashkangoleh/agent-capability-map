@@ -14,6 +14,7 @@ from pathlib import Path
 TABLE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*[.][A-Za-z_][A-Za-z0-9_]*[.][A-Za-z_][A-Za-z0-9_]*$")
 OPERATIONS = {"rewrite_data_files", "rewrite_manifests", "expire_snapshots", "remove_orphan_files"}
 MAX_BYTES = 65536
+RELEASE = re.compile(r"^[0-9]+[.][0-9]+[.][0-9]+(?:[-+][A-Za-z0-9_.-]+)?$")
 
 
 def _integer(value, minimum=0):
@@ -38,8 +39,8 @@ def validate_plan(plan):
     if type(table) is not str or not TABLE.fullmatch(table):
         errors.append("table must be a simple, qualified catalog.namespace.table name")
     for key in ("spark_version", "iceberg_version"):
-        if type(plan.get(key)) is not str or not plan[key].strip():
-            errors.append(f"{key} is required as version evidence")
+        if type(plan.get(key)) is not str or not RELEASE.fullmatch(plan[key]):
+            errors.append(f"{key} must name a concrete release, not a placeholder")
     if plan.get("environment") not in ("staging", "production"):
         errors.append("environment must be staging or production")
     if plan.get("environment") == "production":
