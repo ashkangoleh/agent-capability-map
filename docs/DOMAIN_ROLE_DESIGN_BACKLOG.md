@@ -18,7 +18,7 @@
 - Role paths are derived only from the **selected verified route**, never by guessing directory layouts or scanning unrelated domains. Absent deep roles inherit the nearest defined ancestor; an invalid present role fails closed.
 - Individual role files max 4096 bytes; the complete selected chain max **8192 bytes and 8 roles**. No silent truncation; overly verbose roles are a validation failure and must be consolidated.
 - The semantic responsibilities are layered: parent provides general principles, more-specific role provides specialized evaluation criteria, while the selected SKILL.md remains the procedural authority. A role never grants permissions, modifies the deterministic route or authorizes external actions.
-- **Data domain:** 127/127 active logical graph nodes now have distinct ROLE.md files, including the root Data role, nine first-level subdomains, all Data Engineering and Data Science capabilities, and nested Lakehouse/SQL, Spark, Kafka, Airflow, dbt and relational DB routes. The dynamic test walks all 21 reachable Data map files, verifies exact route-to-role ownership, detects missing and orphan contracts, and rejects future nodes without roles. **Infrastructure** now has 97/97 roles across 22 maps (16 first-level scopes, 96 non-root active nodes) with a separate dynamic inventory test. The remaining **38** domains still only have root roles; hierarchical role coverage across all 41 is NOT complete.
+- **Data domain:** 127/127 active logical graph nodes now have distinct ROLE.md files, including the root Data role, nine first-level subdomains, all Data Engineering and Data Science capabilities, and nested Lakehouse/SQL, Spark, Kafka, Airflow, dbt and relational DB routes. The dynamic test walks all 21 reachable Data map files, verifies exact route-to-role ownership, detects missing and orphan contracts, and rejects future nodes without roles. **Infrastructure** now has 97/97 roles across 22 maps (16 first-level scopes, 96 non-root active nodes) with a separate dynamic inventory test. The remaining **37** domains still only have root roles; hierarchical role coverage across all 41 is NOT complete.
 - Unit tests enforce selected role order, file safety, match-only availability, profile isolation and overall context bounds. Native host execution / output-quality uplift are still not measured.
 
 ## One-role-per-domain contract
@@ -45,4 +45,11 @@ Each `ROLE.md` contains a concise, distinct decision lens, domain-specific evide
 - 15 active first-level Software Engineering domains, each with a role; 52 terminal capability nodes, each with a leaf role. Root + 15 + 52 = **68 roles**.
 - 51 additional specialist SKILL.md packages and 52 one-skill terminal registries (one still points to the unchanged legacy skill).
 - 52 positive route fixtures + dynamic graph/role/source inventory tests. No change to Data/Infrastructure routing contracts or five-scope allowlist.
-- Other **38** top-level domains still have only one root role. This structure is not proof of response quality: execute blinded task-level evaluation and real host read checks before production signoff.
+- Other **37** top-level domains still have only one root role. This structure is not proof of response quality: execute blinded task-level evaluation and real host read checks before production signoff.
+
+## AI/ML specialist role rollout — 2026-11-05
+
+- 12 first-level areas and 66 active terminal capability routes, each with an independent role contract: root + 12 + 66 = **79 AI/ML role contracts**.
+- 43 new specialist SKILL.md packages; existing skill IDs, package content and legacy registry locations are preserved. One legacy generic skill is intentionally shared across two existing terminal routes. The mapped ML validation route remains unavailable and is not counted as active.
+- Across the repository this results in **438 active skill packages** and **408 role contracts**. Remaining top-level domains with root-only role guidance: **37**.
+- New deterministic fixtures, graph ownership tests, and negative cross-domain/scoped tests are in `tests/test_ai_ml_coverage.py`. Structural pass does not prove useful outputs, host integration or release qualification; use commit-pinned CI and blinded A/B evaluations.

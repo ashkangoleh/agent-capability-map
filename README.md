@@ -8,6 +8,10 @@ The last recorded full graph audit counted 41 top-level domains and 322 active S
 
 Software Engineering routes through 15 first-level subdomains and 52 terminal capability nodes, with a distinct versioned ROLE.md at each level. It includes 51 new specialist skills plus the original unchanged `software-engineering-implementation`; the repository inventory grows to **395 active skills** and **330 role contracts**. Mobile Development becomes active (Android, iOS, cross-platform and store release). This count is based on the staged tree; actual test status must be taken from the current GitHub Actions run. See [Software Engineering coverage audit](docs/SOFTWARE_ENGINEERING_COVERAGE_AUDIT.md). Note that general-role or generic skill creation alone would not be sufficient to certify software-engineering expertise.
 
+## AI/ML specialist hierarchy (2026-11-05)
+
+The AI/ML domain now has **12 first-level subdomains**, **66 active terminal capability routes**, and **79 versioned hierarchical role contracts**, including its root. This rollout adds **43 specialist SKILL.md files** while retaining existing skill contents, paths and IDs. The full repository inventory at this staged revision is **438 canonical skills** and **408 role contracts**. The preexisting Machine Learning validation node remains mapped-only and is not claimed implemented. See [AI/ML hierarchy audit](docs/AI_ML_HIERARCHY.md). These figures are structural inventory, not measured host capability or task quality; use the current commit's CI evidence.
+
 ## Operating contract
 
 1. An agent receives an ordinary task, such as "Create a new PySpark project."
