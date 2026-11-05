@@ -2,7 +2,7 @@
 name: mongodb-change-streams-cdc
 description: Build MongoDB Change Streams ingestion with durable resume-token handling, oplog-window recovery and event-time correctness.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # MongoDB Change Streams CDC Engineering
@@ -58,3 +58,6 @@ Collect MongoDB server and driver versions, replica-set or sharded-cluster topol
 ## Output contract
 
 Deliver the topology and watch scope, event schema, resume-token persistence protocol, oplog and image retention requirements, sink idempotency, invalidate/re-snapshot recovery, monitoring and reproducible failure tests. Mark unverified server/driver compatibility explicitly.
+
+## Independent operational verification
+For production-impacting recommendations or incident handling, load [acceptance and recovery protocol](references/acceptance-and-recovery.md) only after this skill is selected. It defines a domain-specific fault-injection oracle, evidence ledger and safe recovery conditions. Do not imply the tests were executed or that this reference grants tool permissions.

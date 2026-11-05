@@ -2,7 +2,7 @@
 name: sqlserver-cdc-change-tracking
 description: Design SQL Server Change Data Capture and Change Tracking ingestion with LSN validity, retention and consistent incremental extraction.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # SQL Server CDC and Change Tracking Engineering
@@ -71,3 +71,6 @@ Collect SQL Server/Azure SQL product and version, database compatibility level, 
 ## Output contract
 
 Deliver the CDC-versus-CT decision, exact source prerequisites, LSN/version checkpoint model, retention and cleanup policy, sink idempotency, recovery/re-baseline plan, monitoring and reconciliation tests. Verify behavior for the exact SQL Server or Azure SQL deployment before giving production commands.
+
+## Independent operational verification
+For production-impacting recommendations or incident handling, load [acceptance and recovery protocol](references/acceptance-and-recovery.md) only after this skill is selected. It defines a domain-specific fault-injection oracle, evidence ledger and safe recovery conditions. Do not imply the tests were executed or that this reference grants tool permissions.

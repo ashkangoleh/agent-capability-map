@@ -2,7 +2,7 @@
 name: oracle-goldengate-cdc-operations
 description: Operate Oracle GoldenGate Extract, trails, distribution paths and Replicat with recoverable CDC and controlled initial-load handoff.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Oracle GoldenGate CDC Operations
@@ -58,3 +58,6 @@ Collect source and target database products and versions, GoldenGate release and
 ## Output contract
 
 Deliver a version-specific capture/apply design, source preparation checklist, initial-load handoff, trail/checkpoint topology, monitoring plan, recovery runbook, validation evidence and explicit limits. Mark unsupported source/target combinations and unknown licensing or deployment constraints instead of guessing.
+
+## Independent operational verification
+For production-impacting recommendations or incident handling, load [acceptance and recovery protocol](references/acceptance-and-recovery.md) only after this skill is selected. It defines a domain-specific fault-injection oracle, evidence ledger and safe recovery conditions. Do not imply the tests were executed or that this reference grants tool permissions.

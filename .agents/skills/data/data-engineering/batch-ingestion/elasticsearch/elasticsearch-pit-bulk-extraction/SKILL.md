@@ -2,7 +2,7 @@
 name: elasticsearch-pit-bulk-extraction
 description: Implement Elasticsearch Point-in-Time and search_after extraction with stable sorting, retries and resumable publication.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # elasticsearch-pit-bulk-extraction
@@ -33,3 +33,6 @@ Elasticsearch version, index/data stream, query filter, expected hits, PIT keep_
 
 ## Output contract
 Return requested runnable deliverable or assessment, assumptions, source-to-sink guarantees, test/rollout/rollback and operational cost. Mark unknown evidence explicitly.
+
+## Independent operational verification
+For production-impacting recommendations or incident handling, load [acceptance and recovery protocol](references/acceptance-and-recovery.md) only after this skill is selected. It defines a domain-specific fault-injection oracle, evidence ledger and safe recovery conditions. Do not imply the tests were executed or that this reference grants tool permissions.

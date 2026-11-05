@@ -2,7 +2,7 @@
 name: data-mesh-data-product-architecture
 description: "Design Data Mesh domains and data products with federated governance and explicit producer-consumer contracts."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # data-mesh-data-product-architecture
@@ -35,3 +35,6 @@ Business domains, product owners, consumers, platform capabilities, contracts an
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For production-impacting recommendations or incident handling, load [acceptance and recovery protocol](references/acceptance-and-recovery.md) only after this skill is selected. It defines a domain-specific fault-injection oracle, evidence ledger and safe recovery conditions. Do not imply the tests were executed or that this reference grants tool permissions.

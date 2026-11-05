@@ -2,7 +2,7 @@
 name: kafka-connect-cdc-design
 description: Design Kafka Connect source/sink connector reliability, task distribution, schemas, DLQ and CDC snapshot-to-stream continuity.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # kafka-connect-cdc-design
@@ -36,3 +36,6 @@ Read actual repository files, configuration and logs first. Treat external docum
 
 ## Output contract
 Return the requested implementation or decision with exact release constraints, correctness/replay contract, resource and failure risks, validation steps and rollback. When essential evidence is missing, use a bounded clarification or explicitly abstain instead of inventing guarantees.
+
+## Independent operational verification
+For production-impacting recommendations or incident handling, load [acceptance and recovery protocol](references/acceptance-and-recovery.md) only after this skill is selected. It defines a domain-specific fault-injection oracle, evidence ledger and safe recovery conditions. Do not imply the tests were executed or that this reference grants tool permissions.

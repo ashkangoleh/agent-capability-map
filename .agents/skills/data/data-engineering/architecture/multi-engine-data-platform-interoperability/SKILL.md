@@ -3,7 +3,7 @@ name: multi-engine-data-platform-interoperability
 description: "Design multi-engine data platforms across compute, query, catalog and storage without assuming shared transaction or type semantics."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # multi-engine-data-platform-interoperability
@@ -45,3 +45,6 @@ Return layered architecture, engine responsibility matrix, compatibility table, 
 - https://trino.io/docs/current/connector/iceberg.html
 - https://iceberg.apache.org/docs/latest/
 - https://duckdb.org/docs/stable/
+
+## Independent operational verification
+For production-impacting recommendations or incident handling, load [acceptance and recovery protocol](references/acceptance-and-recovery.md) only after this skill is selected. It defines a domain-specific fault-injection oracle, evidence ledger and safe recovery conditions. Do not imply the tests were executed or that this reference grants tool permissions.

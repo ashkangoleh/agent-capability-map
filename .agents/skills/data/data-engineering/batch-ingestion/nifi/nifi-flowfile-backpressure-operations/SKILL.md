@@ -2,7 +2,7 @@
 name: nifi-flowfile-backpressure-operations
 description: Operate Apache NiFi FlowFile pipelines with provenance, backpressure, retry loops and safe processor-group deployment.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # nifi-flowfile-backpressure-operations
@@ -33,3 +33,6 @@ NiFi release, flow definition, source/sink processors, content repository, queue
 
 ## Output contract
 Return requested runnable deliverable or assessment, assumptions, source-to-sink guarantees, test/rollout/rollback and operational cost. Mark unknown evidence explicitly.
+
+## Independent operational verification
+For production-impacting recommendations or incident handling, load [acceptance and recovery protocol](references/acceptance-and-recovery.md) only after this skill is selected. It defines a domain-specific fault-injection oracle, evidence ledger and safe recovery conditions. Do not imply the tests were executed or that this reference grants tool permissions.
