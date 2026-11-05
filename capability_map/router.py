@@ -64,6 +64,51 @@ def load_yaml(root, relative):
     return content
 
 
+
+
+MAX_ROLE_BYTES = 4096
+ROLE_REQUIRED_SECTIONS = (
+    "## Decision lens", "## Required evidence", "## Review gates",
+    "## Rejection signals", "## Output contract", "## Authority boundary",
+)
+
+
+def role_contract_path(root, domain_id):
+    """Validate a domain-owned fixed-path reviewer contract without executing it."""
+    require_id(domain_id)
+    root = Path(root).expanduser().resolve()
+    domain_dir = root / "domains" / domain_id
+    original = domain_dir / "ROLE.md"
+    if domain_dir.is_symlink() or original.is_symlink():
+        raise RouterError(f"Symlinked domain role is not permitted: {domain_id}")
+    path = secure_path(root, f"domains/{domain_id}/ROLE.md")
+    if path.stat().st_size > MAX_ROLE_BYTES:
+        raise RouterError(f"Domain role exceeds size limit: {domain_id}")
+    try:
+        content = path.read_text(encoding="utf-8")
+    except UnicodeError as exc:
+        raise RouterError(f"Domain role is not valid UTF-8: {domain_id}") from exc
+    if not content.startswith("---\n"):
+        raise RouterError(f"Domain role lacks YAML frontmatter: {domain_id}")
+    frontmatter, sep, body = content[4:].partition("\n---\n")
+    if not sep:
+        raise RouterError(f"Domain role frontmatter is not terminated: {domain_id}")
+    try:
+        info = yaml.load(frontmatter, Loader=StrictLoader)
+    except yaml.YAMLError as exc:
+        raise RouterError(f"Invalid domain role frontmatter: {domain_id}") from exc
+    if not isinstance(info, dict) or set(info) != {"role_id", "version", "title"}:
+        raise RouterError(f"Invalid domain role metadata schema: {domain_id}")
+    if info["role_id"] != domain_id:
+        raise RouterError(f"Domain role ID mismatch: {domain_id}")
+    if not isinstance(info["version"], str) or not re.fullmatch(r"1\.\d+\.\d+", info["version"]):
+        raise RouterError(f"Unsupported domain role version: {domain_id}")
+    if not isinstance(info["title"], str) or not 8 <= len(info["title"]) <= 128:
+        raise RouterError(f"Invalid domain role title: {domain_id}")
+    if any(heading not in body for heading in ROLE_REQUIRED_SECTIONS):
+        raise RouterError(f"Missing domain role review section: {domain_id}")
+    return path
+
 def require_id(value):
     if not isinstance(value, str) or len(value) > 64 or not ID.fullmatch(value):
         raise RouterError(f"Invalid capability or skill id: {value!r}")
@@ -172,6 +217,8 @@ class Router:
             result["skill_path"] = str(skill["path"])
             result["source"] = source
             result["match_strength"] = score
+            if status == "matched" and source == "master" and route:
+                result["role_path"] = str(role_contract_path(self.root, route[0]))
         return result
 
     def _choose(self, request, entries, route, *, include_mapped=False):
@@ -493,6 +540,8 @@ class Router:
                 if name in names:
                     raise RouterError(f"Duplicate sibling ID {name}: {path}; sibling_ids={[child.get('id') for child in children]}")
                 names.add(name)
+                if depth == 0 and node.get("status") == "active":
+                    role_contract_path(self.root, name)
                 if not isinstance(node.get("triggers"), list) or not node["triggers"]:
                     raise RouterError(f"Missing node triggers: {name}")
                 if node.get("map") and node.get("skills"):

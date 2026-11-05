@@ -1,55 +1,31 @@
-# Domain role contracts — design backlog (not implemented)
+# Domain roles — implemented contracts and open evaluation gates
 
-**Status:** DESIGN BACKLOG ONLY — user requested on 2026-11-05. No roles are enabled by this file.
-**Branch:** `pre_release`.
-**Scope:** all currently published top-level domains, one reviewed domain at a time.
+**Status:** All 41 currently registered top-level domains have a versioned role contract. The resolver returns a domain-specific `role_path` only for authorized matched master skills. Real-host execution and measurable output uplift remain unverified.
 
-## Problem / explicit design intent
+## Implementation
 
-A domain role should improve *how the selected skill's output is reviewed and structured* without changing the authoritative deterministic domain/skill selection. A role is an execution-time advisory contract, **not a second router**, a permission grant, a global character persona, a new user prompt-injection surface, or an excuse to read all skills.
+- Canonical role file: `domains/<domain-id>/ROLE.md`. This is an advisory reviewer contract, **not** a routable Agent Skill, an additional LLM, a new permission level or a second router.
+- The deterministic resolver first applies the existing user-scoped allowlist (maximum five non-overlapping roots), then selects one master skill. Only a `matched` master result includes `role_path` beside the unchanged `skill_path`.
+- `role_path` is absent for `unmatched`, `unavailable`, `needs_clarification`, `domain_not_enabled` and project/personal overlay selections.
+- `role_contract_path` validates the top-level domain ID and exact path, rejects role-file and parent-directory symlinks, limits to 4096 bytes, checks UTF-8 and unique YAML frontmatter with `role_id` / `version` / `title`, and requires six review sections.
+- `Router.validate()` verifies all 41 active top-level roles. `AGENTS.md` and installers now tell hosts to read only the matched role and selected skill. Other roles are never advertised on each request.
+- Role text can improve review questions, assumptions and output structure, but cannot re-route the skill, grant permissions, invent evidence, change user approvals or override the safety/security policy. Python validation is a path/schema check, **not** an LLM prompt-injection sandbox.
 
-## Proposed progressive-loading execution order
+## One-role-per-domain contract
 
-1. **Bootstrap**: read only the small global instructions; resolve user-selected domain scopes (at most five non-overlapping scopes).
-2. **Deterministic router**: discover the authorized domain/subdomain/skill; return validated route, source and `skill_path`. An unmatched or `domain_not_enabled` request must stop before any domain role loads.
-3. **Role contract (FUTURE, conditional)**: only after an authorized, matched domain, load a small versioned `domains/<domain>/ROLE.md` (or explicit YAML-registered path). Child-category role overrides, if ever needed, must be explicitly registered and inheritance rules reviewed; never scan sibling domains.
-4. **Selected SKILL.md**: load only the matched skill and required references. Role may influence evaluation rubric, deliverables, terminology and challenge questions but must not override skill activation/exclusion, user instructions, safety/security policy, permissions or confirmed facts.
-5. **Output evaluation**: role-specific reviewer checks assertions, assumptions, operational risks, evidence provenance, testability and constraints. Report missing evidence as unknown, not as a passed verification. Measure quality and tokens before general rollout.
+Each `ROLE.md` contains a concise, distinct decision lens, domain-specific evidence needs, review gates, failure/rejection criteria, and output contract. Domains remain separate: the Data domain role does not claim to subsume Data Science, and the Security domain role does not grant authorization for offensive activity.
 
-## Contract schema proposal (draft, not active)
+## Maturity and acceptance
 
-- `id`: stable domain ID; `version`: explicit contract version; `role_title`: short discipline-relevant reviewer identity (not model-authority escalation)
-- `responsibility_boundaries`: in/out domain ownership and escalation to another domain
-- `decision_principles`: simplest production-safe approach; cost and operability over hype
-- `required_inputs`: environment/version/constraints; ask only one essential question if blocked
-- `output_contract`: reproducible artifacts, checks and uncertainty labels
-- `review_gates`: correctness, security, rollback, performance/cost, and cited/current evidence where needed
-- `failure_modes`: known bad advice patterns to reject
-- `token_budget`: measured maximum added prompt footprint, with opt-out
-- `evaluation_cases`: blind positive/negative/ambiguous cases with expected improvements
+- **41/41 roles present and validated:** repository completeness, not a measured quality score.
+- **Resolver and host instruction integration:** implemented; no native host API changes.
+- **Host runtime tests:** NOT VERIFIED on Codex, Claude Code, OpenCode, GitHub Copilot or Cursor. Actual file reads and allowlist enforcement must be observed on pinned versions.
+- **Quality improvement:** NOT VERIFIED. Run blinded A/B evaluations with and without each role, measuring task correctness, unsafe/incomplete advice, false claims, omissions, response length and token/latency overhead.
+- **Infrastructure pilot:** fault recovery, Kubernetes operator migration, IAM boundaries and DR exercise scenarios. A role should be revised or disabled if its extra context harms correctness.
+- **Maintenance:** add a new role whenever a top-level domain is registered; `Router.validate()` must fail without it. No subdomain role stacking without an explicit evaluated design.
 
-**Infrastructure candidate role (PROPOSED only):** `Principal Infrastructure Reliability & Platform Architect`. Require environment/version assumptions, availability and failure-domain analysis, blast radius, rollback/recovery, observability, least privilege, operational ownership and staged acceptance tests. Prefer native simpler services unless a more complex control plane is justified.
+## Official reference basis
 
-**Data candidate role (PROPOSED only):** `Principal Data Platform & Reliability Architect`. Require data correctness/grain, schema evolution, replay/backfill, idempotency, reconciliation, SLO/latency, cost and observability. Do not assume `Data Engineering` covers all `Data Science` review needs; test nested role composition before adopting.
-
-Do not preassign generic titles to all 41 domains. Co-design each role with its domain's ownership, benchmark it against current no-role output and review in the same one-domain-at-a-time process.
-
-## Compatibility, security and validation gates
-
-- Reject nested scope/role conflicts, unknown role files, duplicate IDs, path traversal, symlinks and unauthorized profile changes.
-- Ensure a role does not turn a blocked domain into an enabled one, alter the matched skill path, or perform unapproved commands.
-- Protect from lower-trust skill/reference instructions pretending to change role authority.
-- Use deterministic regression suites and blinded task evaluation: measure factual error, false positives/negative routing, omissions, token overhead, latency and useful artifacts on matched vs unmatched tasks.
-- Test on **actual** Codex, Claude Code, OpenCode, Copilot and Cursor versions. Native discovery cannot be assumed to honor the Python domain allowlist.
-- Keep the default behavior **no role loading** until a separately reviewed ADR/RFC, pinned acceptance test and user approval. Avoid unmeasured global prompt expansion and role stacking.
-
-## Future deliverables
-
-A short cross-domain role interface/RFC, one Infrastructure pilot `ROLE.md`, A/B evaluation against existing skill results, versioned and reversible opt-in loader with negative tests; only then replicate to other selected domains with user consent.
-
-## References inside the repository
-
-- `AGENTS.md` — global minimal bootstrap contract.
-- `docs/DOMAIN_SELECTION.md` — allowlist and maximum-five non-overlapping scopes.
-- `docs/HOST_COMPATIBILITY_ACCEPTANCE.md` — host boundaries and explicit router.
-- `docs/INFRASTRUCTURE_COVERAGE_AUDIT.md` — infrastructure procedure-quality gaps.
+- https://github.com/agentskills/agentskills/blob/main/docs/specification.mdx
+- https://learn.chatgpt.com/docs/build-skills
+- https://support.claude.com/en/articles/12512176-what-are-skills

@@ -4,6 +4,12 @@
 **Reviewed:** 2026-11-05  
 **Canonical sources:** 344 nested `SKILL.md` manifests selected by a YAML registry; all native-host conclusions below remain version-specific.
 
+## Optional role-aware output review (41 top-level domains)
+
+For a matched master skill, the Python resolver now supplies `role_path` for its single top-level domain, in addition to the selected `skill_path`. Installed host instructions request reading **only these two paths**, not the full role or skill library. A blocked, ambiguous or unmatched request, or a personal/project overlay, must not advertise a domain role.
+
+This is **not** a statement that all real hosts have been instrumented or that instructions are a security boundary. Test actual path reads, prompt/token overhead and relative output quality with pinned host versions.
+
 ## Two different paths must never be conflated
 
 1. **Explicit global bootstrap (supported implementation):** `capability_map.install` publishes a short host-specific instruction (Cursor receives one small router skill). The host must run the installed Python `capability_map resolve` command, observe the user domain allowlist and read *only* the selected `skill_path`. The user-selected five-scope maximum is enforced by the Python resolver, not by generic host skill scanning.

@@ -6,7 +6,16 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Kubernetes Operator and DR specialist-depth review + domain roles backlog (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Domain roles for all 41 active top-level domains (2026-11-05)
+
+- Baseline `pre_release`: `a559a69e926adbea86a4eaad4760d434bff321fd`. User explicitly authorized roles for **all current domains**, not just Infrastructure. Do not merge `main` or create branches.
+- Add `domains/<domain-id>/ROLE.md` for every active top-level domain in `catalog/root.yaml` (41). Each is a concise domain-specific output-quality review contract, **not a skill**.
+- `capability_map/router.py` now validates role metadata, fixed safe paths, size and section schema; `Router.validate()` checks all top-level roles. For `matched` master results only, the resolver adds `role_path`. Disabled/unmatched/ambiguous/overlay results do not advertise any role. User scope max-five selection and all skill routing remain unchanged.
+- `AGENTS.md` and all host installer instruction texts tell hosts to read the single matched role and selected skill, without scanning sibling domains. This is progressive loading guidance only; no measured LLM uplift, no native-host runtime test, no permission boundary guarantee.
+- New `tests/test_domain_roles.py` covers full catalog, semantic contract fields, role file safety, match/blocked/overlay behavior and installer contract. Expect 344 total skills, 95 Infrastructure, zero flat; 469 preexisting routing fixtures unchanged.
+- Check latest commit CI exact HEAD before claiming PASS; green tests cannot prove all 41 roles improve answer quality. A/B evaluation by domain is still outstanding.
+
+## HISTORICAL CHECKPOINT — Kubernetes Operator and DR specialist-depth review + domain roles backlog (2026-11-05)
 
 - Canonical working branch is `pre_release`. Baseline verified HEAD before this change: `8bc0555ce36309da76f7857f2f9bca088947d475`. Do not merge to `main` or create new branches.
 - Updated **exactly two** existing SKILL.md bodies: `kubernetes-operator-crd-lifecycle` and `backup-dr-restore-exercises`; metadata version `1.0.0` → `1.1.0`. Stable IDs, physical paths, source registries, triggers and excludes unchanged.
