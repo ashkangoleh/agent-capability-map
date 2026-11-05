@@ -2,7 +2,7 @@
 name: linux-storage-filesystems
 description: "Operate Linux block devices, filesystems, LVM, mounts and capacity with safe recovery planning."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # linux-storage-filesystems
@@ -37,3 +37,6 @@ Device topology, filesystem, mount options, LVM/RAID, backups and kernel modules
 
 ## Output contract
 Return the requested design or diagnosis with exact scope, assumptions, evidence, safe procedure, failure modes, validation and rollback. Never claim production changes or tests that were not performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

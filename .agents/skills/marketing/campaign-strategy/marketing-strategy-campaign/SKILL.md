@@ -3,7 +3,7 @@ name: marketing-strategy-campaign
 description: Use when developing marketing strategy, positioning, go-to-market plans, campaign briefs, channel mixes, lifecycle programs, or measurement plans.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Purpose
@@ -45,3 +45,6 @@ Do not forecast outcomes without explicit assumptions and uncertainty ranges. Do
 - [ ] Channels map to funnel roles.
 - [ ] Budget and performance estimates expose assumptions.
 - [ ] Measurement and decision rules are defined.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
