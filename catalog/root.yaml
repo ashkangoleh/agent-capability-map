@@ -446,6 +446,11 @@ children:
     label: "AI & Machine Learning"
     description: "Machine learning, deep learning, generative AI, RAG and MLOps."
     triggers:
+      - "speaker diarization der overlap noise evaluation"
+      - "video action model camera split validation"
+      - "ocr table extraction layout cell accuracy"
+      - "object detector rare class mask iou evaluation"
+      - "rebuild ml experiment from pinned dataset and image"
       - "ml model shadow canary promotion rollback thresholds"
       - "ml registry immutable model provenance approval"
       - "ml continuous retraining after label availability"

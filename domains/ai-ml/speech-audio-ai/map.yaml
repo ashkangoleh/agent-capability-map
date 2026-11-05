@@ -12,6 +12,7 @@ children:
   - id: speaker-diarization
     description: "speech speaker diarization overlap evaluation: speaker boundaries, overlaps and channels"
     triggers:
+      - "speaker diarization der overlap noise evaluation"
       - "speech speaker diarization overlap evaluation"
     status: active
     skills: domains/ai-ml/speech-audio-ai/speaker-diarization/skills.yaml

@@ -57,6 +57,7 @@ children:
   - id: reproducibility
     description: "ml experiment environment reproducibility audit: container hashes, data version and random seeds"
     triggers:
+      - "rebuild ml experiment from pinned dataset and image"
       - "ml experiment environment reproducibility audit"
     status: active
     skills: domains/ai-ml/mlops/reproducibility/skills.yaml

@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/computer-vision/detection-segmentation/aiml-computer-vision-detection-segmentation/SKILL.md
     description: "Engineer computer vision instance segmentation evaluation using object and mask labels, IoU and rare classes, verifying failures and quality baselines."
     triggers:
+      - "object detector rare class mask iou evaluation"
       - "computer vision instance segmentation evaluation"
     excludes: []
     status: active

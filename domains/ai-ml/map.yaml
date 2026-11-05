@@ -94,6 +94,7 @@ children:
   - id: mlops
     description: "mlops"
     triggers:
+      - "rebuild ml experiment from pinned dataset and image"
       - "ml model shadow canary promotion rollback thresholds"
       - "ml registry immutable model provenance approval"
       - "ml continuous retraining after label availability"
@@ -114,6 +115,9 @@ children:
   - id: computer-vision
     description: "computer vision"
     triggers:
+      - "video action model camera split validation"
+      - "ocr table extraction layout cell accuracy"
+      - "object detector rare class mask iou evaluation"
       - "vision model"
       - "image classification"
       - "object detection"
@@ -125,6 +129,7 @@ children:
   - id: speech-audio-ai
     description: "speech audio ai"
     triggers:
+      - "speaker diarization der overlap noise evaluation"
       - "speech evaluation"
       - "asr"
       - "speech recognition"

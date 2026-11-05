@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/speech-audio-ai/speaker-diarization/aiml-speech-audio-ai-speaker-diarization/SKILL.md
     description: "Engineer speech speaker diarization overlap evaluation using speaker boundaries, overlaps and channels, verifying failures and quality baselines."
     triggers:
+      - "speaker diarization der overlap noise evaluation"
       - "speech speaker diarization overlap evaluation"
     excludes: []
     status: active
