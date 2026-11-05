@@ -3,13 +3,23 @@ id: kubernetes
 kind: map
 children:
   - id: cluster-lifecycle
-    description: "Cluster lifecycle, operators, CRDs and CNI"
+    description: "Cluster control-plane/node upgrades, capacity and version skew"
     triggers:
       - "kubernetes cluster upgrade capacity"
+    status: active
+    skills: domains/infrastructure/kubernetes/cluster-lifecycle/skills.yaml
+  - id: operators-extensions
+    description: "CRD schemas, reconciliation controllers, finalizers and operator upgrades"
+    triggers:
       - "kubernetes operator crd lifecycle"
+    status: active
+    skills: domains/infrastructure/kubernetes/operators-extensions/skills.yaml
+  - id: cni-datapath
+    description: "CNI and eBPF datapath operation, MTU, IPAM and policy diagnostics"
+    triggers:
       - "kubernetes cni ebpf operations"
     status: active
-    skills: domains/infrastructure/kubernetes/skills.yaml
+    skills: domains/infrastructure/kubernetes/cni-datapath/skills.yaml
   - id: networking
     description: "Kubernetes Services, NetworkPolicy, DNS and datapath"
     triggers:

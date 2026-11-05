@@ -1,0 +1,11 @@
+schema_version: 1
+id: cni-datapath
+kind: skill-registry
+skills:
+  - id: kubernetes-cni-ebpf-operations
+    path: .agents/skills/infrastructure/containers-orchestration/kubernetes/cni-datapath/kubernetes-cni-ebpf-operations/SKILL.md
+    description: "Operate Kubernetes CNI and eBPF networking with IPAM, routing, policy, MTU and datapath diagnostics."
+    triggers:
+      - "kubernetes cni ebpf operations"
+    excludes: []
+    status: active

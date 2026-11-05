@@ -211,6 +211,49 @@ class InfrastructureCoverageTests(unittest.TestCase):
                     (ROOT / ".agents/skills/infrastructure/devsecops" / skill_id / "SKILL.md").exists()
                 )
 
+    def test_kubernetes_cluster_operator_and_cni_routes_are_independent(self):
+        categories = {
+            "kubernetes-cluster-upgrade-capacity": "cluster-lifecycle",
+            "kubernetes-operator-crd-lifecycle": "operators-extensions",
+            "kubernetes-cni-ebpf-operations": "cni-datapath",
+        }
+        graph = load_yaml(ROOT, "domains/infrastructure/kubernetes/map.yaml")
+        nodes = {item["id"]: item for item in graph["children"]}
+        self.assertTrue(set(categories.values()).issubset(nodes))
+        for category in categories.values():
+            self.assertIn("skills", nodes[category])
+            registry = load_yaml(ROOT, nodes[category]["skills"])
+            self.assertEqual(len(registry["skills"]), 1)
+        fixtures = [
+            case for case in self.cases
+            if case.get("skill") in categories and case["id"].startswith("infra-expanded-")
+        ]
+        self.assertEqual({case["skill"] for case in fixtures}, set(categories))
+        for case in fixtures:
+            skill_id = case["skill"]
+            category = categories[skill_id]
+            with self.subTest(skill=skill_id):
+                result = self.router.resolve(case["request"])
+                self.assertEqual(result["status"], "matched", result)
+                self.assertEqual(result["selected_skill"], skill_id)
+                self.assertEqual(result["route"], [
+                    "infrastructure", "containers-orchestration", "kubernetes", category
+                ])
+                self.assertLessEqual(len(result["inspected_files"]), 10)
+                expected_path = ROOT / (
+                    f".agents/skills/infrastructure/containers-orchestration/"
+                    f"kubernetes/{category}/{skill_id}/SKILL.md"
+                )
+                self.assertEqual(Path(result["skill_path"]).resolve(), expected_path.resolve())
+                self.assertTrue(expected_path.is_file())
+                self.assertFalse(
+                    (ROOT / ".agents/skills/infrastructure/kubernetes" / skill_id / "SKILL.md").exists()
+                )
+        # The CNI specialist must not capture higher-level NetworkPolicy troubleshooting.
+        network_policy = self.router.resolve("Review kubernetes networkpolicy")
+        self.assertEqual(network_policy["status"], "matched", network_policy)
+        self.assertEqual(network_policy["selected_skill"], "kubernetes-networking-triage")
+
     def test_all_active_infrastructure_skills_have_routing_fixtures(self):
         seen_maps = set()
         active = set()

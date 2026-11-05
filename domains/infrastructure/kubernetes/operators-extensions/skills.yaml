@@ -1,0 +1,11 @@
+schema_version: 1
+id: operators-extensions
+kind: skill-registry
+skills:
+  - id: kubernetes-operator-crd-lifecycle
+    path: .agents/skills/infrastructure/containers-orchestration/kubernetes/operators-extensions/kubernetes-operator-crd-lifecycle/SKILL.md
+    description: "Design Kubernetes CRDs and operators with reconciliation, finalizers, status conditions and upgrade safety."
+    triggers:
+      - "kubernetes operator crd lifecycle"
+    excludes: []
+    status: active

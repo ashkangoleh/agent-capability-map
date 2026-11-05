@@ -6,7 +6,17 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Infrastructure DevSecOps category isolation (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Infrastructure Kubernetes split (2026-11-05)
+
+- Previous `pre_release` HEAD: `9196917d7467134e15e1f0e46576dda14b386337` (DevSecOps split; CI must be confirmed independently for that commit).
+- Continued **Infrastructure only**, no new branch or merge to `main`.
+- Split `domains/infrastructure/kubernetes/skills.yaml` (3 skills) into three independent leaf registries: `cluster-lifecycle`, `operators-extensions`, `cni-datapath`; replaced the overloaded `cluster-lifecycle` entry in `domains/infrastructure/kubernetes/map.yaml`.
+- Relocated three existing SKILL.md files to `.agents/skills/infrastructure/containers-orchestration/kubernetes/<category>/<skill-id>/SKILL.md` with identical Git blob SHAs. Deleted old source paths and broad registry. All original skill bodies, IDs, triggers and excludes preserved.
+- Added positive route/category/path checks for three existing fixtures and a NetworkPolicy-vs-CNI near-miss regression to `tests/test_infrastructure_coverage.py`. No existing fixtures modified.
+- Required inventory: 344 global manifests, 95 Infrastructure, 0 flat; full YAML graph validation, all 469 routing fixtures and Python unit tests must pass against **this new SHA** before marking successful.
+- Outstanding: SRE broad registry, historically mismatched source taxonomy, genuine negative/ambiguous multilingual benchmark, official version-pinned operations audit for 95 skills and real five-agent loading/allowlist tests. Infrastructure **NOT fully production-certified**.
+
+## HISTORICAL CHECKPOINT — Infrastructure DevSecOps category isolation (2026-11-05)
 
 - Base HEAD: `32b4f903d3214e46d6b8252eeb26afcfa50ece9d` on `pre_release`. This increment remains **Infrastructure-only**; no branch creation or `main` changes.
 - Decomposed a six-entry `domains/infrastructure/devsecops/skills.yaml` registry into `domains/infrastructure/infrastructure-security/devsecops/map.yaml` with four leaf categories (`policy-gates`, `supply-chain`, `runtime-security`, `workload-identity`) and dedicated skill registries.

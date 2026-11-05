@@ -82,6 +82,21 @@ This division follows the distinct deploy, distribution/supply-chain and runtime
 
 All six `SKILL.md` files are moved by preserving their original Git blob SHA; IDs, descriptions, registry skill triggers and exclusions are unchanged. No new specialist was added, and the **469 pre-existing routing fixtures** remain unchanged. The additional unit test verifies registry partitioning, end-to-end selection, canonical category path and old-path removal. The result is improved taxonomy isolation, **not** independent security assurance or production-ready procedures.
 
+## Kubernetes cluster operations taxonomy increment — 2026-11-05
+
+The former `cluster-lifecycle` registry mixed **three different operations**: cluster version upgrades, custom-resource/operator controller lifecycle, and CNI/eBPF datapath troubleshooting. They are now independent siblings under the existing Kubernetes map:
+
+- `cluster-lifecycle` — cluster upgrades and capacity/version-skew operations
+- `operators-extensions` — CRDs, reconciliation/finalizers and operator lifecycle
+- `cni-datapath` — CNI/eBPF datapath, IPAM, MTU and packet policy
+
+The three original `SKILL.md` Git blobs are preserved exactly and the old multi-skill registry is removed. Existing fixtures continue to select the same specialist IDs; tests now assert distinct logical routes, exact physical paths, and a negative near-miss separation between CNI and service NetworkPolicy troubleshooting. The canonical Kubernetes docs distinguish cluster administration, operator patterns and cluster networking:
+- https://kubernetes.io/docs/concepts/cluster-administration/
+- https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
+- https://kubernetes.io/docs/concepts/cluster-administration/networking/
+
+This is a structural/behavior-preserving specialization for existing explicit triggers. It does not certify real Kubernetes commands, integration versions or live agent selection.
+
 ## Completion gates
 
 1. Review every existing and new `SKILL.md` for specialist depth, not just frontmatter and headings.
