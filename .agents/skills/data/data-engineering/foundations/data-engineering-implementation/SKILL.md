@@ -51,3 +51,9 @@ Do not recommend a production design without understanding source/sink consisten
 
 ## Independent operational verification
 For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.
+
+## Official reference baselines
+These are **examples of component-specific semantics**, not a claim that all Data Engineering engines share one contract. Verify each deployed engine and connector version independently.
+- Apache Kafka delivery semantics: https://kafka.apache.org/design/
+- Apache Flink checkpoint and end-to-end fault tolerance: https://nightlies.apache.org/flink/flink-docs-stable/docs/learn-flink/fault_tolerance/
+- Apache Iceberg table and concurrency specification: https://iceberg.apache.org/spec/

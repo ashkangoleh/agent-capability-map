@@ -65,7 +65,7 @@ def audit(root=ROOT):
             errors.append("skill frontmatter name does not match canonical directory")
         if not re.search(r"https?://", content):
             errors.append("skill does not cite a primary URL")
-        if not re.search(r"(?im)^## (?:Production procedure|Production workflow|Procedure|Workflow|Decision procedure|Specialist workflow)", content):
+        if not re.search(r"(?im)^## (?:Production procedure|Production workflow|Procedure|Workflow|Decision procedure|Specialist workflow|CDC production procedure|Change Tracking production procedure)", content):
             errors.append("missing explicit task procedure heading — manual audit needed")
         references = len(re.findall(r"https?://", content))
         has_script = (directory / "scripts").is_dir()
