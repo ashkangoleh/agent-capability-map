@@ -6,7 +6,16 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Infrastructure Advanced Networking taxonomy (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Infrastructure all-specialist fixture inventory (2026-11-05)
+
+- Baseline `pre_release` commit: `c72c9be560f198b7d90f30e4a72c4b5bb48abfd7`. Continue **Infrastructure** only; user did not authorize moving to other domains.
+- After auditing all **95** active Infrastructure IDs against `tests/fixtures/yaml-routing-cases.yaml`, **94/95** had a deterministic matching fixture; `platform-operations` had none.
+- Added two platform-operations fixtures (English and Persian/English) and a dynamic test in `tests/test_infrastructure_coverage.py` requiring at least one matched routing fixture for every active Infrastructure skill ID. Fixture total increases from 467 to **469**; skill inventory remains **344 total**, **95 Infrastructure**.
+- This is a **fixture reachability gate only**. It does not establish semantic classification correctness, false-positive/negative rates, operational production readiness, or real host skill loading.
+- Check the current HEAD's **push CI** graph/fixture and full unit suite before asserting PASS. Additional negative/near-miss and real-version operations evidence remain open.
+- Earlier infrastructure Advanced Networking 7-skill migration (commit `c72c9be560f198b7d90f30e4a72c4b5bb48abfd7`) must have green CI before relying on its new hierarchy.
+
+## HISTORICAL CHECKPOINT — Infrastructure Advanced Networking taxonomy (2026-11-05)
 
 - Canonical branch: `pre_release`; verified baseline HEAD: `8d0e3324185619f26e21ed3b1cc74edf217f4c2e`. Never merge `main` or open new feature/fix branches for this work.
 - User explicitly prioritized Infrastructure before any other domain. There are **95 Infrastructure specialist manifests**, **16 first-level active scopes**, all physical skills are domain nested; expert-depth, semantic routing quality and host compatibility remain **NOT CERTIFIED**.

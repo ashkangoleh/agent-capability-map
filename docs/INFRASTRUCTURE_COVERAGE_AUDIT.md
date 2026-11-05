@@ -65,6 +65,10 @@ Seven existing skills formerly shared one broad `network-advanced` registry. The
 
 **Outstanding:** Many infrastructure source paths still reflect historical packaging rather than their exact logical route (e.g. `devops-sre` versus `devops-delivery`); native host integration, individual skill correctness and recovery/failure testing remain unverified. Do not claim production-ready or taxonomy-complete based on 95 registered skills.
 
+## Infrastructure routing fixture inventory — 2026-11-05
+
+Prior to this change, **94/95** active Infrastructure skill IDs were covered by at least one deterministic routing fixture; the missing specialist was `platform-operations`. Two explicit requests (English and Persian/English mixed) now verify its route. A regression assertion checks that **every** registered active Infrastructure specialist has at least one matching fixture. This closes one fixture-inventory gap, **not** the broader need for hard negatives, blind multilingual task evaluation and real host/agent execution. Most specialists still have just one positive fixture.
+
 ## Completion gates
 
 1. Review every existing and new `SKILL.md` for specialist depth, not just frontmatter and headings.

@@ -1860,3 +1860,12 @@ cases:
     request: "Build point in time features without leakage"
     status: matched
     skill: feature-engineering-point-in-time
+
+  - id: infra-coverage-platform-operations
+    request: "Infrastructure: platform operations readiness review for maintenance and recovery"
+    status: matched
+    skill: platform-operations
+  - id: infra-coverage-platform-operations-fa
+    request: "بررسی platform operations readiness review برای بازیابی سرویس زیرساخت"
+    status: matched
+    skill: platform-operations

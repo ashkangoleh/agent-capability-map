@@ -162,6 +162,32 @@ class InfrastructureCoverageTests(unittest.TestCase):
                 self.assertFalse((ROOT / ".agents" / "skills" / "infrastructure" /
                                   "network-advanced" / skill_id / "SKILL.md").exists())
 
+    def test_all_active_infrastructure_skills_have_routing_fixtures(self):
+        seen_maps = set()
+        active = set()
+
+        def visit(path):
+            if path in seen_maps:
+                return
+            seen_maps.add(path)
+            document = load_yaml(ROOT, path)
+            for child in document["children"]:
+                if child.get("map"):
+                    visit(child["map"])
+                elif child.get("skills"):
+                    registry = load_yaml(ROOT, child["skills"])
+                    active.update(entry["id"] for entry in registry["skills"]
+                                  if entry.get("status") == "active")
+
+        visit("domains/infrastructure/map.yaml")
+        covered = {
+            case.get("skill") for case in self.cases
+            if case.get("status") == "matched"
+        }
+        self.assertEqual(len(active), 95)
+        self.assertFalse(active - covered,
+                         f"Infrastructure skills without deterministic routing fixtures: {sorted(active - covered)}")
+
     def test_infrastructure_scopes_are_selectable(self):
         scopes = {item["route"] for item in discover_domains(ROOT, prefix="infrastructure")}
         for route in ("infrastructure/networking",
