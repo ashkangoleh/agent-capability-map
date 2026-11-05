@@ -11,7 +11,7 @@ class AIMLHierarchyTests(unittest.TestCase):
         root = load_yaml(ROOT, "domains/ai-ml/map.yaml")
         self.assertEqual(len(root["children"]), 12)
         actual = {"ai-ml"}
-        ids = set()
+        ids = {}
         leaves = 0
         for branch in root["children"]:
             self.assertEqual(branch["status"], "active")
@@ -34,8 +34,9 @@ class AIMLHierarchyTests(unittest.TestCase):
                 self.assertEqual(len(reg["skills"]), 1)
                 skill = reg["skills"][0]
                 if skill["id"] in ids:
-                    self.assertEqual(skill["id"], "ai-rag-engineering", "Only legacy shared skill IDs may repeat")
-                ids.add(skill["id"])
+                    self.assertEqual(ids[skill["id"]], skill["path"], "Shared legacy skill must keep the same canonical source")
+                    self.assertFalse(skill["id"].startswith("aiml-"), "New terminal skills must have distinct IDs")
+                ids[skill["id"]] = skill["path"]
                 self.assertTrue((ROOT / skill["path"]).is_file())
         self.assertEqual(leaves, 66)
         expected = {p.parent.relative_to(ROOT / "domains").as_posix() for p in (ROOT / "domains/ai-ml").rglob("ROLE.md")}
