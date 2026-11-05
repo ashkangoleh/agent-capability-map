@@ -3,7 +3,7 @@ name: swe-maintenance-evolution-legacy-refactoring
 description: Use for legacy refactor characterization tests tasks in Software Maintenance and Evolution; verify use behavior characterization before decomposing legacy code. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Software Maintenance and Evolution: legacy refactoring
@@ -38,3 +38,6 @@ Reject assumptions that conceal Unobserved behavior changes and large unreviewab
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

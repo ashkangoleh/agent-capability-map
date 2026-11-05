@@ -3,7 +3,7 @@ name: swe-mobile-development-android-delivery
 description: Use for android app lifecycle architecture tasks in Native and Cross-Platform Mobile Engineering; verify implement Android lifecycle, permissions and background work according to SDK constraints. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Native and Cross-Platform Mobile Engineering: android delivery
@@ -38,3 +38,6 @@ Reject assumptions that conceal Background kills, stale UI state, unauthorized p
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

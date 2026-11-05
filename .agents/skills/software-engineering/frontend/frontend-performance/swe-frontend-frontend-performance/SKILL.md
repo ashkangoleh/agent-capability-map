@@ -3,7 +3,7 @@ name: swe-frontend-frontend-performance
 description: Use for frontend bundle web performance tasks in Frontend and Browser Engineering; verify optimize real user performance against a browser-based budget. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Frontend and Browser Engineering: frontend performance
@@ -38,3 +38,6 @@ Reject assumptions that conceal Unmeasured lazy-loading, layout shift, blocking 
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

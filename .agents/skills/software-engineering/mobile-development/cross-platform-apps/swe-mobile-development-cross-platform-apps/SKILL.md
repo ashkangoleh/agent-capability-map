@@ -3,7 +3,7 @@ name: swe-mobile-development-cross-platform-apps
 description: Use for flutter react native mobile architecture tasks in Native and Cross-Platform Mobile Engineering; verify choose shared versus native modules based on performance, platform behavior and maintainability. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Native and Cross-Platform Mobile Engineering: cross platform apps
@@ -38,3 +38,6 @@ Reject assumptions that conceal Incompatible native dependencies, platform-speci
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

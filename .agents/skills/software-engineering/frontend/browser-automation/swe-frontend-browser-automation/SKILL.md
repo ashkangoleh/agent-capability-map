@@ -3,7 +3,7 @@ name: swe-frontend-browser-automation
 description: Use for browser end to end testing tasks in Frontend and Browser Engineering; verify test critical journeys with deterministic selectors and controlled test data. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Frontend and Browser Engineering: browser automation
@@ -38,3 +38,6 @@ Reject assumptions that conceal Flaky timing, unsafe test credentials, screensho
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
