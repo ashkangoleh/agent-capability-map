@@ -48,6 +48,10 @@ class IcebergMaintenanceSkillTests(unittest.TestCase):
             self.assertIn(rel, skill)
             self.assertTrue((FOLDER / rel).is_file())
         self.assertLess(len(skill.splitlines()), 500)
+        sql = (FOLDER / "examples/spark_maintenance.sql").read_text(encoding="utf-8")
+        self.assertIn("where =>", sql)
+        self.assertFalse(any(line.lstrip().startswith("CALL ") for line in sql.splitlines()),
+                         "Mutating procedure must remain commented out")
         script = SCRIPT.read_text(encoding="utf-8")
         self.assertNotIn("subprocess.", script)
         self.assertNotIn("os.system(", script)

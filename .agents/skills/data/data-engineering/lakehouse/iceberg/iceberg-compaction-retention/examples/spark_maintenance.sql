@@ -18,7 +18,8 @@ FROM prod.analytics.events.files
 GROUP BY content;
 
 SELECT *
-FROM prod.analytics.events.partitions;
+FROM prod.analytics.events.partitions
+LIMIT 100;
 
 -- MUTATIONS BELOW ARE COMMENTS ONLY. NEVER RUN AS A BATCH.
 -- After approval and version-specific verification, choose exactly one.
@@ -27,6 +28,7 @@ FROM prod.analytics.events.partitions;
 -- CALL prod.system.rewrite_data_files(
 --   table => 'analytics.events',
 --   strategy => 'binpack',
+--   where => 'event_date = DATE ''2026-01-01''',  -- illustrative; verify real partition/filter
 --   options => map('target-file-size-bytes', '536870912')
 -- );
 --
