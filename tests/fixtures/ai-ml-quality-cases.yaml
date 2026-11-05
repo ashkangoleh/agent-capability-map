@@ -1,0 +1,326 @@
+schema_version: 1
+cases:
+  - id: ai-natural-llm-context-engineering
+    category: natural-intent
+    request: "Please help me llm context window truncation strategy for a production project"
+    status: matched
+    route: [ai-ml, llm-engineering, context-engineering]
+    skill: aiml-llm-context-engineering
+  - id: ai-natural-llm-structured-generation
+    category: natural-intent
+    request: "Please help me llm schema validated json response for a production project"
+    status: matched
+    route: [ai-ml, llm-engineering, structured-generation]
+    skill: aiml-llm-structured-generation
+  - id: ai-natural-llm-inference-optimization
+    category: natural-intent
+    request: "Please help me llm kv cache prefill latency benchmark for a production project"
+    status: matched
+    route: [ai-ml, llm-engineering, inference-optimization]
+    skill: aiml-llm-inference-optimization
+  - id: ai-natural-llm-model-selection
+    category: natural-intent
+    request: "Please help me compare llm model quality and inference costs for a production project"
+    status: matched
+    route: [ai-ml, llm-engineering, model-selection]
+    skill: aiml-llm-model-selection
+  - id: ai-natural-rag-chunking
+    category: natural-intent
+    request: "Please help me rag split documents by headings and tables for a production project"
+    status: matched
+    route: [ai-ml, rag-retrieval, chunking]
+    skill: aiml-rag-chunking
+  - id: ai-natural-rag-access-control
+    category: natural-intent
+    request: "Please help me rag enforce tenant permissions before retrieval for a production project"
+    status: matched
+    route: [ai-ml, rag-retrieval, access-control]
+    skill: aiml-rag-access-control
+  - id: ai-natural-rag-reranking
+    category: natural-intent
+    request: "Please help me rag reranker relevance and ndcg for a production project"
+    status: matched
+    route: [ai-ml, rag-retrieval, reranking]
+    skill: aiml-rag-reranking
+  - id: ai-natural-rag-index-migrations
+    category: natural-intent
+    request: "Please help me rag migrate vector embeddings between model versions for a production project"
+    status: matched
+    route: [ai-ml, rag-retrieval, index-migrations]
+    skill: aiml-rag-index-migrations
+  - id: ai-natural-machine-learning-training-pipelines
+    category: natural-intent
+    request: "Please help me ml train pipeline reproducible artifacts for a production project"
+    status: matched
+    route: [ai-ml, machine-learning, training-pipelines]
+    skill: aiml-machine-learning-training-pipelines
+  - id: ai-natural-machine-learning-hyperparameter-tuning
+    category: natural-intent
+    request: "Please help me ml hyperparameter tuning nested cross validation for a production project"
+    status: matched
+    route: [ai-ml, machine-learning, hyperparameter-tuning]
+    skill: aiml-machine-learning-hyperparameter-tuning
+  - id: ai-natural-machine-learning-explainability
+    category: natural-intent
+    request: "Please help me ml explanation shap correlated features stability for a production project"
+    status: matched
+    route: [ai-ml, machine-learning, explainability]
+    skill: aiml-machine-learning-explainability
+  - id: ai-natural-machine-learning-dataset-shift
+    category: natural-intent
+    request: "Please help me ml input drift by cohort and label lag for a production project"
+    status: matched
+    route: [ai-ml, machine-learning, dataset-shift]
+    skill: aiml-machine-learning-dataset-shift
+  - id: ai-natural-deep-learning-distributed-training
+    category: natural-intent
+    request: "Please help me torch distributed rank failure checkpoint restart for a production project"
+    status: matched
+    route: [ai-ml, deep-learning, distributed-training]
+    skill: aiml-deep-learning-distributed-training
+  - id: ai-natural-deep-learning-training-optimization
+    category: natural-intent
+    request: "Please help me mixed precision gradient overflow loss scaling for a production project"
+    status: matched
+    route: [ai-ml, deep-learning, training-optimization]
+    skill: aiml-deep-learning-training-optimization
+  - id: ai-natural-deep-learning-checkpoint-recovery
+    category: natural-intent
+    request: "Please help me restore sharded optimizer checkpoint on new workers for a production project"
+    status: matched
+    route: [ai-ml, deep-learning, checkpoint-recovery]
+    skill: aiml-deep-learning-checkpoint-recovery
+  - id: ai-natural-deep-learning-representation-learning
+    category: natural-intent
+    request: "Please help me contrastive embeddings collapse transfer probe for a production project"
+    status: matched
+    route: [ai-ml, deep-learning, representation-learning]
+    skill: aiml-deep-learning-representation-learning
+  - id: ai-natural-mlops-continuous-training
+    category: natural-intent
+    request: "Please help me ml continuous retraining after label availability for a production project"
+    status: matched
+    route: [ai-ml, mlops, continuous-training]
+    skill: aiml-mlops-continuous-training
+  - id: ai-natural-mlops-model-registry-governance
+    category: natural-intent
+    request: "Please help me ml registry immutable model provenance approval for a production project"
+    status: matched
+    route: [ai-ml, mlops, model-registry-governance]
+    skill: aiml-mlops-model-registry-governance
+  - id: ai-natural-mlops-release-gates
+    category: natural-intent
+    request: "Please help me ml model shadow canary promotion rollback thresholds for a production project"
+    status: matched
+    route: [ai-ml, mlops, release-gates]
+    skill: aiml-mlops-release-gates
+  - id: ai-natural-mlops-reproducibility
+    category: natural-intent
+    request: "Please help me rebuild ml experiment from pinned dataset and image for a production project"
+    status: matched
+    route: [ai-ml, mlops, reproducibility]
+    skill: aiml-mlops-reproducibility
+  - id: ai-natural-computer-vision-detection-segmentation
+    category: natural-intent
+    request: "Please help me object detector rare class mask iou evaluation for a production project"
+    status: matched
+    route: [ai-ml, computer-vision, detection-segmentation]
+    skill: aiml-computer-vision-detection-segmentation
+  - id: ai-natural-computer-vision-document-ai
+    category: natural-intent
+    request: "Please help me ocr table extraction layout cell accuracy for a production project"
+    status: matched
+    route: [ai-ml, computer-vision, document-ai]
+    skill: aiml-computer-vision-document-ai
+  - id: ai-natural-computer-vision-video-perception
+    category: natural-intent
+    request: "Please help me video action model camera split validation for a production project"
+    status: matched
+    route: [ai-ml, computer-vision, video-perception]
+    skill: aiml-computer-vision-video-perception
+  - id: ai-natural-speech-audio-ai-speaker-diarization
+    category: natural-intent
+    request: "Please help me speaker diarization der overlap noise evaluation for a production project"
+    status: matched
+    route: [ai-ml, speech-audio-ai, speaker-diarization]
+    skill: aiml-speech-audio-ai-speaker-diarization
+  - id: ai-natural-speech-audio-ai-speech-synthesis
+    category: natural-intent
+    request: "Please help me tts intelligibility consent and voice controls for a production project"
+    status: matched
+    route: [ai-ml, speech-audio-ai, speech-synthesis]
+    skill: aiml-speech-audio-ai-speech-synthesis
+  - id: ai-natural-speech-audio-ai-speech-privacy
+    category: natural-intent
+    request: "Please help me spoken pii redaction recall on noisy audio for a production project"
+    status: matched
+    route: [ai-ml, speech-audio-ai, speech-privacy]
+    skill: aiml-speech-audio-ai-speech-privacy
+  - id: ai-natural-responsible-ai-fairness-audit
+    category: natural-intent
+    request: "Please help me model subgroup fairness confidence intervals review for a production project"
+    status: matched
+    route: [ai-ml, responsible-ai, fairness-audit]
+    skill: aiml-responsible-ai-fairness-audit
+  - id: ai-natural-responsible-ai-explanation-governance
+    category: natural-intent
+    request: "Please help me model card user disclosure appeal mechanism for a production project"
+    status: matched
+    route: [ai-ml, responsible-ai, explanation-governance]
+    skill: aiml-responsible-ai-explanation-governance
+  - id: ai-natural-responsible-ai-risk-monitoring
+    category: natural-intent
+    request: "Please help me ai harm complaint monitoring remediation owners for a production project"
+    status: matched
+    route: [ai-ml, responsible-ai, risk-monitoring]
+    skill: aiml-responsible-ai-risk-monitoring
+  - id: ai-natural-natural-language-processing-text-classification
+    category: natural-intent
+    request: "Please help me text classifier macro f1 calibration by language for a production project"
+    status: matched
+    route: [ai-ml, natural-language-processing, text-classification]
+    skill: aiml-natural-language-processing-text-classification
+  - id: ai-natural-natural-language-processing-entity-extraction
+    category: natural-intent
+    request: "Please help me ner exact span f1 nested offsets for a production project"
+    status: matched
+    route: [ai-ml, natural-language-processing, entity-extraction]
+    skill: aiml-natural-language-processing-entity-extraction
+  - id: ai-natural-natural-language-processing-multilingual-evaluation
+    category: natural-intent
+    request: "Please help me code switching multilingual nlp dialect benchmarks for a production project"
+    status: matched
+    route: [ai-ml, natural-language-processing, multilingual-evaluation]
+    skill: aiml-natural-language-processing-multilingual-evaluation
+  - id: ai-natural-natural-language-processing-text-embeddings
+    category: natural-intent
+    request: "Please help me sentence embeddings hard negative retrieval benchmark for a production project"
+    status: matched
+    route: [ai-ml, natural-language-processing, text-embeddings]
+    skill: aiml-natural-language-processing-text-embeddings
+  - id: ai-natural-recommender-systems-candidate-generation
+    category: natural-intent
+    request: "Please help me recommender retrieval recall at k cold users for a production project"
+    status: matched
+    route: [ai-ml, recommender-systems, candidate-generation]
+    skill: aiml-recommender-systems-candidate-generation
+  - id: ai-natural-recommender-systems-ranking
+    category: natural-intent
+    request: "Please help me ranking recommender ndcg exposure position bias for a production project"
+    status: matched
+    route: [ai-ml, recommender-systems, ranking]
+    skill: aiml-recommender-systems-ranking
+  - id: ai-natural-recommender-systems-cold-start
+    category: natural-intent
+    request: "Please help me cold start recommender catalog coverage fallback for a production project"
+    status: matched
+    route: [ai-ml, recommender-systems, cold-start]
+    skill: aiml-recommender-systems-cold-start
+  - id: ai-natural-recommender-systems-offline-online-evaluation
+    category: natural-intent
+    request: "Please help me recommender ips propensity logged bandit policy for a production project"
+    status: matched
+    route: [ai-ml, recommender-systems, offline-online-evaluation]
+    skill: aiml-recommender-systems-offline-online-evaluation
+  - id: ai-natural-reinforcement-learning-offline-policy-evaluation
+    category: natural-intent
+    request: "Please help me offline reinforcement learning importance weight effective sample size for a production project"
+    status: matched
+    route: [ai-ml, reinforcement-learning, offline-policy-evaluation]
+    skill: aiml-reinforcement-learning-offline-policy-evaluation
+  - id: ai-natural-reinforcement-learning-reward-design
+    category: natural-intent
+    request: "Please help me rl reward hacking proxy metric constraint testing for a production project"
+    status: matched
+    route: [ai-ml, reinforcement-learning, reward-design]
+    skill: aiml-reinforcement-learning-reward-design
+  - id: ai-natural-reinforcement-learning-safe-exploration
+    category: natural-intent
+    request: "Please help me rl constrained exploration action abort policy for a production project"
+    status: matched
+    route: [ai-ml, reinforcement-learning, safe-exploration]
+    skill: aiml-reinforcement-learning-safe-exploration
+  - id: ai-natural-multimodal-ai-vision-language-evaluation
+    category: natural-intent
+    request: "Please help me vision language model hallucinated objects grounding for a production project"
+    status: matched
+    route: [ai-ml, multimodal-ai, vision-language-evaluation]
+    skill: aiml-multimodal-ai-vision-language-evaluation
+  - id: ai-natural-multimodal-ai-image-generation-evaluation
+    category: natural-intent
+    request: "Please help me image generation prompt adherence human preference safety for a production project"
+    status: matched
+    route: [ai-ml, multimodal-ai, image-generation-evaluation]
+    skill: aiml-multimodal-ai-image-generation-evaluation
+  - id: ai-natural-multimodal-ai-multimodal-alignment
+    category: natural-intent
+    request: "Please help me audio video caption timestamp synchronization drift for a production project"
+    status: matched
+    route: [ai-ml, multimodal-ai, multimodal-alignment]
+    skill: aiml-multimodal-ai-multimodal-alignment
+  - id: boundary-data-pyspark
+    category: cross-domain-boundary
+    request: "Create a new PySpark project"
+    status: matched
+    domain: data
+    skill: pyspark-project-bootstrap
+  - id: boundary-data-science
+    category: cross-domain-boundary
+    request: "Data scientist: bayesian modeling pymc stan"
+    status: matched
+    domain: data
+    skill: ds-bayesian-pymc-stan
+  - id: boundary-agent
+    category: cross-domain-boundary
+    request: "Create an agent skill registry"
+    status: matched
+    domain: agent-systems
+    skill: skill-authoring-validation
+  - id: boundary-security
+    category: cross-domain-boundary
+    request: "Review application security threat modeling for an API"
+    status: matched
+    domain: security
+    skill: security-threat-model-review
+  - id: boundary-infrastructure
+    category: cross-domain-boundary
+    request: "Plan a Kubernetes rollout with canary health checks"
+    status: matched
+    domain: infrastructure
+    skill: kubernetes-rollout-safety
+  - id: boundary-software
+    category: cross-domain-boundary
+    request: "Implement an API endpoint that emits SEO metadata"
+    status: matched
+    domain: software-engineering
+    skill: software-engineering-implementation
+  - id: boundary-existing-rag
+    category: cross-domain-boundary
+    request: "Evaluate RAG evidence sufficiency and citations"
+    status: matched
+    domain: ai-ml
+    skill: rag-evidence-sufficiency-evaluation
+  - id: boundary-existing-mlops
+    category: cross-domain-boundary
+    request: "Design mlops model drift monitoring"
+    status: matched
+    domain: ai-ml
+    skill: ml-drift-performance-monitoring
+  - id: boundary-ml-validation-unavailable
+    category: cross-domain-boundary
+    request: "machine learning validation"
+    status: unavailable
+    domain: ai-ml
+  - id: boundary-unmatched
+    category: cross-domain-boundary
+    request: "Unmapped zqvjkbx domain intent"
+    status: unmatched
+  - id: boundary-multidomain
+    category: cross-domain-boundary
+    request: "Create a PySpark project on Kubernetes"
+    status: needs_clarification
+  - id: boundary-legal-unavailable
+    category: cross-domain-boundary
+    request: "Analyze legal compliance questions"
+    status: unavailable
+    domain: legal

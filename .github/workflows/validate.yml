@@ -26,6 +26,7 @@ jobs:
         run: |
           python -m capability_map validate
           python scripts/evaluate_graph.py
+          python scripts/evaluate_ai_ml_quality.py
           python scripts/report_coverage.py --summary
       - name: Test CLI, security and overlays
         run: python -m unittest discover -s tests -v

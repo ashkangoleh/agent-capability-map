@@ -24,3 +24,7 @@ Working branch: `pre_release`. All existing skill IDs and SKILL.md bodies are pr
 **Sources:** [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework), [OWASP GenAI 2026](https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/tree/main/2026/final), [Google MLOps](https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning), [Agent Skills](https://agentskills.io/specification).
 
 **Unverified:** Real-agent host integration, blinded quality A/B, model-task benchmark outcomes and production readiness. Full CI must pass against the exact new SHA; schema/fixture passes alone do not prove model effectiveness.
+
+## Quality hardening — 2026-11-05
+
+43 registered alternative lexical intents, 43 specialist acceptance/falsification gate sections, 12 boundary-negative cases and one user-scope denial case are documented in [AI/ML quality audit](AI_ML_QUALITY_EVALUATION.md). Model-output A/B remains unverified.

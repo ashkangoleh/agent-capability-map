@@ -1,5 +1,12 @@
 # Continuation Checkpoint — Agent Capability Map
 
+## ACTIVE CHECKPOINT — AI/ML quality gates (2026-11-05)
+
+- Same `pre_release` branch, base SHA `d585309d1c19bdadb29d295bf5b72dae5bec95b6`. Existing 438 skill IDs, 408 roles and 66 AI/ML active leaves unchanged.
+- Each of the 43 new specialist skills has an additional context-specific acceptance/falsification section and alternative registered lexical phrase. 43 new positives, 12 boundary negatives and one allowlist-isolation assertion; CI script and tests added.
+- Verify CI on exact new head before claiming complete. These are routing+contract checks, not measured agent-output A/B results. Keep main unchanged.
+
+
 ## LATEST ACTIVE CHECKPOINT — AI/ML hierarchy (2026-11-05)
 
 - User approved continuing the next domain AI/ML. Only `pre_release`; base commit `04bbf7496ee904bfe2a56ae8013b96b0a5c73dae`; do not merge main or open another branch.
