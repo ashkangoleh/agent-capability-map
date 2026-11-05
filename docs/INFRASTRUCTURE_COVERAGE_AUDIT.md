@@ -110,6 +110,16 @@ References for reasoning about SLO/error-budget policy, load testing/capacity an
 
 This is routing/taxonomy normalization, **not** a verification that the individual failure-injection procedures are safe in production or that backup restores meet their actual RPO/RTO.
 
+## Focused specialist-depth correction — Falco runtime security (2026-11-05)
+
+A source-content spot check showed that the previous `runtime-security-falco` skill used a generic SAST/DAST/SCA and deployment-gates workflow instead of a usable Falco runtime diagnosis. This was a substantive specialist-quality gap even though its YAML routing and canonical path were valid.
+
+Updated the **existing** Falco skill in place (version `1.1.0`, stable skill ID and route) with a source-grounded runtime procedure: syscall event-source/driver support, modern eBPF vs kernel module, version and privilege checks, rule validation/load order, documented override semantics, canary rollout, kernel-side drops, output queue drops, benign detection events, incident ownership and safe rollback. The updated document deliberately avoids asserting any measured production result.
+
+Sources: https://falco.org/docs/setup/download/ , https://falco.org/docs/concepts/rules/overriding/ , https://falco.org/docs/reference/daemon/cli-arguments/ , https://falco.org/docs/concepts/metrics/ and https://falco.org/docs/troubleshooting/dropping/ .
+
+The new regression test checks the Falco-specific operational content and preserves the existing deterministic routing fixture. **This is one specialist-depth improvement, not proof that all 95 Infrastructure skills are production-ready.** Other sampled instructions (notably Kubernetes Operator and DR/restore) still show generic procedural content and require their own validated rewrites.
+
 ## Completion gates
 
 1. Review every existing and new `SKILL.md` for specialist depth, not just frontmatter and headings.

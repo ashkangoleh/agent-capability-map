@@ -297,6 +297,26 @@ class InfrastructureCoverageTests(unittest.TestCase):
         self.assertEqual(incident["status"], "matched", incident)
         self.assertEqual(incident["selected_skill"], "sre-incident-rca-runbook")
 
+    def test_falco_runtime_skill_is_operationally_specific(self):
+        path = ROOT / (
+            ".agents/skills/infrastructure/infrastructure-security/devsecops/"
+            "runtime-security/runtime-security-falco/SKILL.md"
+        )
+        content = path.read_text(encoding="utf-8")
+        for required in (
+            "modern eBPF", "kernel-module", "falco --validate",
+            "scap.n_drops", "falco.outputs_queue_num_drops",
+            "## Failure modes and recovery", "falco.org/docs/concepts/metrics/",
+            "## Official references",
+        ):
+            with self.subTest(required=required):
+                self.assertIn(required, content)
+        self.assertNotIn("Integrate SAST/DAST/SCA", content)
+        result = self.router.resolve("Infrastructure: falco runtime security detection")
+        self.assertEqual(result["status"], "matched", result)
+        self.assertEqual(result["selected_skill"], "runtime-security-falco", result)
+        self.assertEqual(Path(result["skill_path"]).resolve(), path.resolve())
+
     def test_all_active_infrastructure_skills_have_routing_fixtures(self):
         seen_maps = set()
         active = set()

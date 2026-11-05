@@ -6,7 +6,17 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Infrastructure SRE taxonomy (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Falco specialist-depth review (2026-11-05)
+
+- Baseline `pre_release` HEAD: `c4918e585f5153de82275b9615625ce2d1731a59`. Continue Infrastructure only; no branch creation or main merge.
+- After completing DevSecOps, Kubernetes and SRE structural splits, reviewed representative SKILL.md bodies and found a **nontrivial quality gap**: the Falco runtime skill had generic SAST/DAST/SCA content rather than Falco-specific detection, event-drop and driver operations.
+- Updated the existing `runtime-security-falco` SKILL.md in place to version `1.1.0`. Kept ID, description, registry, triggers, scope and physical path unchanged. Added official-source-grounded preflight, modern eBPF/kmod driver handling, ruleset validation/overrides, safe rollout/rollback, event/drop/output metrics and benign-event validation.
+- Added a focused `test_falco_runtime_skill_is_operationally_specific` regression test in `tests/test_infrastructure_coverage.py` and an audit explanation in `docs/INFRASTRUCTURE_COVERAGE_AUDIT.md`.
+- No real Falco binary, kernel drivers, Kubernetes cluster or external host was executed. Claims of production rule validity, runtime compatibility and performance **NOT VERIFIED**.
+- Current inventory should remain 344 total SKILL.md, 95 Infrastructure, 0 flat; 469 deterministic fixtures unchanged. Check the new SHA's CI before reporting PASS.
+- Representative spot-check found Kubernetes Operator and Backup/DR skills also contain generic procedures. They are next candidates for version-pinned content audit, not automatically certified by green CI.
+
+## HISTORICAL CHECKPOINT — Infrastructure SRE taxonomy (2026-11-05)
 
 - Baseline `pre_release` HEAD: `6bb09f00c3866234ec633a9f4cb29e86d8034fed`; only Infrastructure work is authorized. No `main` changes and no new branches.
 - Decomposed the four-skill `sre-practices` registry into explicit `slo-governance`, `capacity-engineering`, `failure-injection` and `disaster-recovery` routes under `domains/infrastructure/sre-reliability/map.yaml`.
