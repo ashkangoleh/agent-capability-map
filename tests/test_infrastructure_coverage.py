@@ -95,6 +95,32 @@ class InfrastructureCoverageTests(unittest.TestCase):
         self.assertEqual(len(registrations), len(set(registrations)))
         self.assertEqual(len(registrations), 95)
 
+    def test_advanced_storage_has_canonical_domain_paths(self):
+        registry = load_yaml(ROOT, "domains/infrastructure/storage/new-specialists.yaml")
+        expected = {
+            "storage-san-nas-nvmeof",
+            "object-storage-infrastructure-operations",
+        }
+        entries = {entry["id"]: entry for entry in registry["skills"]}
+        self.assertEqual(set(entries), expected)
+        for skill_id in expected:
+            with self.subTest(skill=skill_id):
+                expected_path = (
+                    ".agents/skills/infrastructure/storage-engineering/"
+                    f"advanced-storage/{skill_id}/SKILL.md"
+                )
+                self.assertEqual(entries[skill_id]["path"], expected_path)
+                source = ROOT / expected_path
+                self.assertTrue(source.is_file())
+                self.assertFalse(source.is_symlink())
+                self.assertFalse(
+                    (ROOT / ".agents" / "skills" / skill_id / "SKILL.md").exists()
+                )
+                self.assertIn(
+                    f"name: {skill_id}\n",
+                    source.read_text(encoding="utf-8"),
+                )
+
     def test_infrastructure_scopes_are_selectable(self):
         scopes = {item["route"] for item in discover_domains(ROOT, prefix="infrastructure")}
         for route in ("infrastructure/networking",
