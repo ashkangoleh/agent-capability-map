@@ -2,7 +2,7 @@
 name: funnel-conversion-analysis
 description: Investigate multi-step funnels with explicit ordered-event semantics, attribution windows, identity stitching and drop-off uncertainty.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # funnel-conversion-analysis
@@ -33,3 +33,6 @@ Step definitions, event schema, conversion window, entry cohort, identity, order
 
 ## Output contract
 Return the requested analysis, actual reproducible methods, source and uncertainty, validation results, caveats and deployment implications. Unknown facts remain explicitly unknown.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

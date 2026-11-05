@@ -2,7 +2,7 @@
 name: ds-panel-econometrics
 description: Use when estimating panel-data relationships with fixed or random effects, clustered inference, event studies, or staggered treatment adoption.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # ds-panel-econometrics
@@ -47,3 +47,6 @@ Entity/time keys, balancedness, outcome, treatment timing, covariates, panel dim
 
 - https://docs.doubleml.org/stable/guide/models.html
 - https://bashtage.github.io/linearmodels/
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

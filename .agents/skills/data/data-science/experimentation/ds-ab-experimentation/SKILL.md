@@ -2,7 +2,7 @@
 name: ds-ab-experimentation
 description: Use when designing or analyzing randomized A/B experiments with primary metrics, guardrails, randomization checks, and treatment-effect inference.
 metadata:
-  version: "1.2.0"
+  version: "1.2.1"
 ---
 
 # ds-ab-experimentation
@@ -80,3 +80,6 @@ Use this only for **two independent randomized arms**; it is a pre-analysis diag
 - https://www.statsig.com/perspectives/ab-testing-statistics
 - https://www.statsmodels.org/stable/stats.html
 - https://exp-platform.com/Documents/2019_KDDFabijanGupchupFuptaOmhoverVermeerDmitriev.pdf
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

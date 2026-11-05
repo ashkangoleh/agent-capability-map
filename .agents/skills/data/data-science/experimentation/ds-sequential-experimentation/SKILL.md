@@ -2,7 +2,7 @@
 name: ds-sequential-experimentation
 description: Use when experiments are monitored repeatedly, stopped early, adapted, or analyzed with sequentially valid inference.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-sequential-experimentation
@@ -63,3 +63,6 @@ Return `estimand | randomization unit | monitoring rule | looks/information frac
 - https://arxiv.org/abs/1512.04922
 - https://www.statsig.com/perspectives/ab-testing-statistics
 - https://online.stat.psu.edu/stat509/Lesson10
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

@@ -2,7 +2,7 @@
 name: pandas-eda-data-profiling
 description: Perform reproducible pandas exploratory analysis with data-type, missingness, duplication and cardinality controls.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # pandas-eda-data-profiling
@@ -33,3 +33,6 @@ Data source/schema, grain, units, time zone, target question, memory budget and 
 
 ## Output contract
 Return the requested analysis, actual reproducible methods, source and uncertainty, validation results, caveats and deployment implications. Unknown facts remain explicitly unknown.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

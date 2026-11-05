@@ -2,7 +2,7 @@
 name: causal-inference-observational
 description: Evaluate observational causal questions with DAGs, identification assumptions, confounders and sensitivity analysis.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # causal-inference-observational
@@ -33,3 +33,6 @@ Treatment, outcome, population, selection mechanism, exposure timing, covariates
 
 ## Output contract
 Return the requested analysis, actual reproducible methods, source and uncertainty, validation results, caveats and deployment implications. Unknown facts remain explicitly unknown.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

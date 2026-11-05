@@ -2,7 +2,7 @@
 name: ds-causal-inference
 description: Use when selecting and defending a causal identification design for an intervention, policy, product change, or observational treatment.
 metadata:
-  version: "1.2.0"
+  version: "1.2.1"
 ---
 
 # ds-causal-inference
@@ -68,3 +68,6 @@ Provide an auditable *identification table*: `estimand | intervention | target p
 - https://docs.doubleml.org/stable/guide/guide.html
 - https://www.pywhy.org/dowhy/
 - https://www.pywhy.org/dowhy/v0.11/user_guide/causal_tasks/estimating_causal_effects/index.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

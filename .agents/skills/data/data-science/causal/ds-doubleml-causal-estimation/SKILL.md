@@ -2,7 +2,7 @@
 name: ds-doubleml-causal-estimation
 description: Use when estimating causal parameters with double or debiased machine learning, orthogonal scores, and cross-fitting.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # ds-doubleml-causal-estimation
@@ -47,3 +47,6 @@ Estimand, treatment type, outcome, observed confounders, instruments if any, sam
 
 - https://docs.doubleml.org/stable/guide/guide.html
 - https://docs.doubleml.org/stable/guide/models.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
