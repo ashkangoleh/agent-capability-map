@@ -6,7 +6,19 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Recovery registry isolation (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Host-bootstrap verification contract (2026-11-05)
+
+- Baseline HEAD before this change: `a65d48a59188ea00a16840b4b846deea31a2c9e1` on `pre_release`.
+- Final 16 flat skill migration **PASSED** full GitHub Actions run `42014842454` at `1678fe619d708071131e98e0db52764c202629ae`.
+- Recovery registry isolation **PASSED** full GitHub Actions run `42015373146` at `a65d48a59188ea00a16840b4b846deea31a2c9e1`.
+- Added `tests/test_host_bootstrap_contract.py` to test simulated installation for Codex, Claude Code, OpenCode, GitHub Copilot and Cursor into an isolated temporary home, and explicit resolver selection for the nested recovery skill. No actual agent host is launched.
+- Added `docs/HOST_COMPATIBILITY_ACCEPTANCE.md` for version-specific native discovery distinctions, explicit router-vs-native loading boundary, scope isolation, production risks and required live host acceptance protocol.
+- Cleaned stale/repeated skill-library README lines; maintained 344/344 nested physical skill manifests and no changes to SKILL.md bodies or 467 routing fixtures.
+- **Critical:** raw source native discovery can advertise skills outside the user's selected scope; the Python router's domain allowlist does not automatically govern native host skill scanners. Explicit bootstrap resolver is the supported integration. Live host invocation and scope enforcement remain **NOT VERIFIED**.
+- The post-commit CI for this host-contract change must be checked; do not claim PASS for a new SHA by relying on the two preceding green runs.
+- Data top-level completeness and production host compatibility still need independent evidence. No other domain scope added.
+
+## HISTORICAL CHECKPOINT — Recovery registry isolation (2026-11-05)
 
 - Branch: `pre_release`; baseline SHA before this change: `1678fe619d708071131e98e0db52764c202629ae`.
 - Created `domains/data/data-engineering/batch-ingestion/recovery/skills.yaml` containing the **unchanged** existing `pipeline-backfill-recovery` registry record.
