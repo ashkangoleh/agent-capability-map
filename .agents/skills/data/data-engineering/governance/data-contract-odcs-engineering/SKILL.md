@@ -3,7 +3,7 @@ name: data-contract-odcs-engineering
 description: "Define versioned Open Data Contract Standard contracts for schema, semantics, quality, SLA, ownership, security and producer-consumer compatibility."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # data-contract-odcs-engineering
@@ -43,3 +43,6 @@ Return contract, version policy, executable enforcement map, owners and measurab
 ## Official or primary references
 - https://bitol-io.github.io/open-data-contract-standard/
 - https://docs.getdbt.com/docs/mesh/govern/model-contracts
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

@@ -2,7 +2,7 @@
 name: privacy-preserving-data-engineering
 description: "Protect personal data across ingestion, transformation, storage, logs, exports and derived datasets."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # privacy-preserving-data-engineering
@@ -36,3 +36,6 @@ Data purpose, sensitive fields, jurisdiction, legal basis, retention and re-iden
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

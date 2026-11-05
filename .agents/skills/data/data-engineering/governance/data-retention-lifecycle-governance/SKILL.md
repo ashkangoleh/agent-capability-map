@@ -2,7 +2,7 @@
 name: data-retention-lifecycle-governance
 description: "Govern retention and deletion with physical-copy inventory, legal holds and verifiable lifecycle controls."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # data-retention-lifecycle-governance
@@ -36,3 +36,6 @@ Classification, purpose, jurisdiction, retention schedule, table formats, backup
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

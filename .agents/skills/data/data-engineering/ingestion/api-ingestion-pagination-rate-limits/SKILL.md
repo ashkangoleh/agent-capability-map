@@ -2,7 +2,7 @@
 name: api-ingestion-pagination-rate-limits
 description: "Implement API ingestion with cursor pagination, rate-limit handling, authentication and idempotent publication."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # api-ingestion-pagination-rate-limits
@@ -36,3 +36,6 @@ API contract, auth, pagination order, quotas, cursor, update/delete semantics an
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

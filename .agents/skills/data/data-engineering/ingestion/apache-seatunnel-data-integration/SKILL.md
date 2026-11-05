@@ -3,7 +3,7 @@ name: apache-seatunnel-data-integration
 description: "Engineer Apache SeaTunnel batch and streaming data integration with connector, engine, checkpoint and sink guarantees."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # apache-seatunnel-data-integration
@@ -38,3 +38,6 @@ Return connector/version matrix, execution architecture, guarantee boundaries, r
 ## Official references
 - https://seatunnel.apache.org/docs/
 - https://github.com/apache/seatunnel
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

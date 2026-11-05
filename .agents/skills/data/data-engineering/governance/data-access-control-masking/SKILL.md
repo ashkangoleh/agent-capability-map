@@ -3,7 +3,7 @@ name: data-access-control-masking
 description: "Enforce data classification and least-privilege access across catalog, warehouse, query, pipeline and object-storage layers."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # data-access-control-masking
@@ -43,3 +43,6 @@ Return access matrix, enforcement map, masking policy, key/secret lifecycle, aud
 ## Official or primary references
 - https://ranger.apache.org/
 - https://trino.io/docs/current/security/file-system-access-control.html
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

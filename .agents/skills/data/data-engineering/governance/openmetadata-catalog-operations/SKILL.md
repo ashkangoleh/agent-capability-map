@@ -3,7 +3,7 @@ name: openmetadata-catalog-operations
 description: "Operate OpenMetadata ingestion, lineage, ownership, profiling, quality and catalog governance workflows."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # openmetadata-catalog-operations
@@ -41,3 +41,6 @@ Return connector matrix, ingestion schedule, governance model, lineage coverage,
 ## Official references
 - https://docs.open-metadata.org/latest/connectors/ingestion
 - https://docs.open-metadata.org/latest/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

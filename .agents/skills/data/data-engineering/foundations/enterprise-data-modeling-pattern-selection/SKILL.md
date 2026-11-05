@@ -2,7 +2,7 @@
 name: enterprise-data-modeling-pattern-selection
 description: "Select normalized, dimensional, Data Vault and wide-table modeling patterns from business grain and query requirements."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # enterprise-data-modeling-pattern-selection
@@ -36,3 +36,6 @@ Business processes, fact grain, source volatility, history, audit requirements a
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.
