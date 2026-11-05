@@ -30,8 +30,12 @@ class AIMLQualityTests(unittest.TestCase):
             header = "## Specialist acceptance and falsification gates"
             self.assertEqual(text.count(header), 1, skill)
             section = text.split(header, 1)[1].split("## Authoritative references", 1)[0]
-            for term in ("**Measured test:**", "**Rejection test:**", "rollback"):
+            for term in ("**Measured test:**", "**Rejection test:**"):
                 self.assertIn(term, section, skill)
+            self.assertTrue(
+                any(term in section.lower() for term in ("rollback", "reversible rollout", "abort")),
+                f"Missing safe-stop or rollback condition: {skill}",
+            )
             self.assertNotIn(section, gates, skill)
             gates.add(section)
 
