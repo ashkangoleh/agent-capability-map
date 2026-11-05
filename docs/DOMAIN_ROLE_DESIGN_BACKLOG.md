@@ -50,6 +50,6 @@ Each `ROLE.md` contains a concise, distinct decision lens, domain-specific evide
 ## AI/ML specialist role rollout — 2026-11-05
 
 - 12 first-level areas and 66 active terminal capability routes, each with an independent role contract: root + 12 + 66 = **79 AI/ML role contracts**.
-- 43 new specialist SKILL.md packages; existing skill IDs, package content and legacy registry locations are preserved. One legacy generic skill is intentionally shared across two existing terminal routes. The mapped ML validation route remains unavailable and is not counted as active.
+- 43 new specialist SKILL.md packages; existing skill IDs, package content and legacy registry locations are preserved. Legacy skill IDs may be referenced by multiple terminal routes only when their canonical source path is identical; newly added specialist skill IDs are unique. The mapped ML validation route remains unavailable and is not counted as active.
 - Across the repository this results in **438 active skill packages** and **408 role contracts**. Remaining top-level domains with root-only role guidance: **37**.
 - New deterministic fixtures, graph ownership tests, and negative cross-domain/scoped tests are in `tests/test_ai_ml_coverage.py`. Structural pass does not prove useful outputs, host integration or release qualification; use commit-pinned CI and blinded A/B evaluations.
