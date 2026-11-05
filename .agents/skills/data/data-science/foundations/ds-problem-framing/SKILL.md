@@ -2,7 +2,7 @@
 name: ds-problem-framing
 description: Use when translating an ambiguous business or scientific question into a measurable data science problem, estimand, prediction target, and evaluation plan.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-problem-framing
@@ -56,3 +56,6 @@ Return a concise problem statement, decision/estimand, data requirements, baseli
 ## Authoritative reference
 
 - https://scikit-learn.org/stable/getting_started.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

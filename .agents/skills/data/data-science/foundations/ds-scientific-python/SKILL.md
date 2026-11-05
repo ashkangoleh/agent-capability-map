@@ -2,7 +2,7 @@
 name: ds-scientific-python
 description: Use when building reliable numerical and scientific-computing workflows with NumPy, SciPy, pandas, sparse arrays, and reproducible random simulation.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-scientific-python
@@ -46,3 +46,6 @@ Array shapes, units, dtypes, numerical ranges, expected precision, data size, sp
 
 - https://numpy.org/doc/stable/
 - https://docs.scipy.org/doc/scipy/reference/
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

@@ -2,7 +2,7 @@
 name: ds-hierarchical-forecasting
 description: "Design hierarchical forecasting and reconciliation across product/geography/time levels with summation-matrix, probabilistic-coherence and hierarchy-change controls."
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-hierarchical-forecasting
@@ -65,3 +65,6 @@ Return hierarchy/membership contract, exact reconciliation method/version, coher
 - https://nixtla.github.io/hierarchicalforecast/
 - https://github.com/Nixtla/hierarchicalforecast
 - https://otexts.com/fpp3/hierarchical.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

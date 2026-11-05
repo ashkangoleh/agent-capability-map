@@ -2,7 +2,7 @@
 name: ds-graph-science
 description: "Analyze graph structure, centrality, communities and network effects without inferring causality."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # ds-graph-science
@@ -35,3 +35,6 @@ Node/edge grain, direction, weights, time, sampling and graph size.
 
 ## Output contract
 Return the analysis/modeling result with estimand, assumptions, validation design, uncertainty, reproducibility and decision implications. Separate observed evidence from inference.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

@@ -2,7 +2,7 @@
 name: ds-probabilistic-forecasting
 description: "Validate forecast quantiles and predictive distributions with horizon-specific pinball loss, crossing, calibration, support and distribution-shift safeguards."
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-probabilistic-forecasting
@@ -63,3 +63,6 @@ Return supported quantile/distribution contract, per-horizon proper scores, cove
 - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_pinball_loss.html
 - https://otexts.com/fpp3/
 - https://nixtla.github.io/statsforecast/docs/tutorials/crossvalidation.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

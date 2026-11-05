@@ -2,7 +2,7 @@
 name: ds-intermittent-demand-forecasting
 description: "Forecast intermittent demand with zero-versus-stockout-censoring checks, occurrence-size methods, lifecycle drift and lead-time inventory evaluation."
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-intermittent-demand-forecasting
@@ -64,3 +64,6 @@ Return validated demand-observation contract, intermittency profile, version-awa
 - https://nixtla.github.io/statsforecast/
 - https://github.com/Nixtla/statsforecast
 - https://help.sap.com/docs/SAP_HANA_PLATFORM/319d36de4fd64ac3afbf91b1fb3ce8de/croston-tsb-method-8203847.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

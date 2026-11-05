@@ -2,7 +2,7 @@
 name: ds-conformal-prediction-uncertainty
 description: "Audit split-conformal prediction intervals and sets with finite-sample order statistics, independent calibration, exchangeability assumptions, subgroup and shift checks."
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-conformal-prediction-uncertainty
@@ -73,3 +73,6 @@ Return the target/coverage contract, partitions, chosen method and assumptions, 
 - https://mapie.readthedocs.io/en/stable/content/conformal-prediction/conformity-scores/
 - https://mapie.readthedocs.io/en/stable/content/getting-started/choosing-algorithm/
 - https://mapie.readthedocs.io/en/stable/api/regression/
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

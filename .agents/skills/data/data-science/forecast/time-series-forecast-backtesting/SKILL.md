@@ -2,7 +2,7 @@
 name: time-series-forecast-backtesting
 description: "Design and audit rolling-origin forecasting with horizon-specific backtests, delayed labels, origin-time covariates and operational leakage safeguards."
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # time-series-forecast-backtesting
@@ -64,3 +64,6 @@ Return a reproducible origin/horizon plan, data-availability proof, fold evidenc
 - https://otexts.com/fpp3/tscv.html
 - https://nixtla.github.io/statsforecast/docs/tutorials/crossvalidation.html
 - https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

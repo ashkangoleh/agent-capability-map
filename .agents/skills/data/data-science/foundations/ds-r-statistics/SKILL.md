@@ -2,7 +2,7 @@
 name: ds-r-statistics
 description: Use when implementing reproducible statistical analysis or modeling workflows in R and its scientific package ecosystem.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-r-statistics
@@ -46,3 +46,6 @@ R version, project structure, package dependencies, data grain, statistical desi
 
 - https://cran.r-project.org/manuals.html
 - https://rstudio.github.io/renv/
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

@@ -2,7 +2,7 @@
 name: ds-fairness-subgroup-evaluation
 description: Use when measuring statistical performance disparities, calibration, or error trade-offs across protected or operationally important subgroups.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # ds-fairness-subgroup-evaluation
@@ -50,3 +50,6 @@ Decision context, affected populations, sensitive/group attributes, target and l
 
 - https://fairlearn.org/main/
 - https://fairlearn.org/main/user_guide/fairness_in_machine_learning.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
