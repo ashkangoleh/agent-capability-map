@@ -3,7 +3,7 @@ name: business-strategy-analysis
 description: Use when analyzing business models, strategic options, operating models, process performance, business cases, or commercial trade-offs.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Purpose
@@ -44,3 +44,6 @@ Do not present a scenario as a forecast or provide regulated personal financial 
 - [ ] Calculations expose formulas and units.
 - [ ] Uncertainty and sensitivities are explicit.
 - [ ] Recommendation includes decision triggers.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
