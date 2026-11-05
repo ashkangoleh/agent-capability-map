@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/deep-learning/representation-learning/aiml-deep-learning-representation-learning/SKILL.md
     description: "Engineer deep learning contrastive representation evaluation using positive and negative pairs, held-out transfers, verifying failures and quality baselines."
     triggers:
+      - "contrastive embeddings collapse transfer probe"
       - "deep learning contrastive representation evaluation"
     excludes: []
     status: active

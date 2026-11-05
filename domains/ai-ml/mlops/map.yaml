@@ -36,18 +36,21 @@ children:
   - id: continuous-training
     description: "mlops continuous training trigger design: data quality and label arrival thresholds"
     triggers:
+      - "ml continuous retraining after label availability"
       - "mlops continuous training trigger design"
     status: active
     skills: domains/ai-ml/mlops/continuous-training/skills.yaml
   - id: model-registry-governance
     description: "ml model registry approval audit: registry artifact immutability and approvals"
     triggers:
+      - "ml registry immutable model provenance approval"
       - "ml model registry approval audit"
     status: active
     skills: domains/ai-ml/mlops/model-registry-governance/skills.yaml
   - id: release-gates
     description: "mlops production model release safety gate: canary cohorts, feature schema and serving SLOs"
     triggers:
+      - "ml model shadow canary promotion rollback thresholds"
       - "mlops production model release safety gate"
     status: active
     skills: domains/ai-ml/mlops/release-gates/skills.yaml

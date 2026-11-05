@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/deep-learning/checkpoint-recovery/aiml-deep-learning-checkpoint-recovery/SKILL.md
     description: "Engineer deep learning sharded checkpoint restoration using optimizer shards, manifests and storage atomicity, verifying failures and quality baselines."
     triggers:
+      - "restore sharded optimizer checkpoint on new workers"
       - "deep learning sharded checkpoint restoration"
     excludes: []
     status: active

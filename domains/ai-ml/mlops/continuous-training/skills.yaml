@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/mlops/continuous-training/aiml-mlops-continuous-training/SKILL.md
     description: "Engineer mlops continuous training trigger design using data quality and label arrival thresholds, verifying failures and quality baselines."
     triggers:
+      - "ml continuous retraining after label availability"
       - "mlops continuous training trigger design"
     excludes: []
     status: active

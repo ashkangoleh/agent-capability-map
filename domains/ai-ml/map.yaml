@@ -75,6 +75,8 @@ children:
   - id: deep-learning
     description: "deep learning"
     triggers:
+      - "contrastive embeddings collapse transfer probe"
+      - "restore sharded optimizer checkpoint on new workers"
       - "mixed precision gradient overflow loss scaling"
       - "torch distributed rank failure checkpoint restart"
       - "transformer fine tuning"
@@ -92,6 +94,9 @@ children:
   - id: mlops
     description: "mlops"
     triggers:
+      - "ml model shadow canary promotion rollback thresholds"
+      - "ml registry immutable model provenance approval"
+      - "ml continuous retraining after label availability"
       - "model serving"
       - "model canary"
       - "model drift"

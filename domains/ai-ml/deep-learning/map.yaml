@@ -35,12 +35,14 @@ children:
   - id: checkpoint-recovery
     description: "deep learning sharded checkpoint restoration: optimizer shards, manifests and storage atomicity"
     triggers:
+      - "restore sharded optimizer checkpoint on new workers"
       - "deep learning sharded checkpoint restoration"
     status: active
     skills: domains/ai-ml/deep-learning/checkpoint-recovery/skills.yaml
   - id: representation-learning
     description: "deep learning contrastive representation evaluation: positive and negative pairs, held-out transfers"
     triggers:
+      - "contrastive embeddings collapse transfer probe"
       - "deep learning contrastive representation evaluation"
     status: active
     skills: domains/ai-ml/deep-learning/representation-learning/skills.yaml
