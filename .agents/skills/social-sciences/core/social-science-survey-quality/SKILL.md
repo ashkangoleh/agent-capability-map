@@ -2,7 +2,7 @@
 name: social-science-survey-quality
 description: Design and evaluate social-science surveys with sampling, measurement bias, transparent analysis and respondent privacy.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # social-science-survey-quality
@@ -34,3 +34,6 @@ Unknown scope, insufficient source access or unsafe operations require explicit 
 
 ## Deliverable and verification
 Provide the requested work product, factual/source basis, assumptions, QA evidence, residual risks and independent review gates. Do not claim to have tested, filed, certified or executed anything without tool evidence.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

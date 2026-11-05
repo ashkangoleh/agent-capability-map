@@ -3,7 +3,7 @@ name: software-engineering-implementation
 description: Use when implementing, debugging, refactoring, or reviewing application code, APIs, libraries, or software architecture in an existing or new codebase.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Purpose
@@ -45,3 +45,6 @@ Do not edit when target behavior is unclear and a wrong interpretation could cau
 - [ ] Error and boundary cases are covered.
 - [ ] Tests were run or the reason they could not run is stated.
 - [ ] Security and operational consequences were reviewed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

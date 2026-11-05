@@ -3,7 +3,7 @@ name: swe-engineering-process-engineering-adr
 description: Use for engineering decision log governance tasks in Software Engineering Process and Economics; verify record and revisit engineering decisions with explicit governance. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Software Engineering Process and Economics: engineering adr
@@ -38,3 +38,6 @@ Reject assumptions that conceal ADR treated as universal policy or undocumented 
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

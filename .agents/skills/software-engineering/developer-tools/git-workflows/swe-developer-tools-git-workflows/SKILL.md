@@ -3,7 +3,7 @@ name: swe-developer-tools-git-workflows
 description: Use for git workflow merge conflict recovery tasks in Developer Tooling and Workflow Engineering; verify preserve history and ownership through branch/merge conflicts and safe recovery. and reject unsupported release or safety claims.
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Tooling and Workflow Engineering: git workflows
@@ -38,3 +38,6 @@ Reject assumptions that conceal Force-push without lease, losing local changes a
 - [ ] Measurable tests or reason for not executing tests recorded.
 - [ ] Dependency changes, security posture, observability and rollback checked.
 - [ ] No unrelated domain, role or skill was loaded.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
