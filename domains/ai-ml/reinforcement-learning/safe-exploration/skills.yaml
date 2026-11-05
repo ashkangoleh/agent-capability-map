@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/reinforcement-learning/safe-exploration/aiml-reinforcement-learning-safe-exploration/SKILL.md
     description: "Engineer reinforcement learning safe exploration budget using action bounds, simulator gap and stop conditions, verifying failures and quality baselines."
     triggers:
+      - "rl constrained exploration action abort policy"
       - "reinforcement learning safe exploration budget"
     excludes: []
     status: active

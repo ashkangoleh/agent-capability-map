@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/multimodal-ai/image-generation-evaluation/aiml-multimodal-ai-image-generation-evaluation/SKILL.md
     description: "Engineer multimodal image generation fidelity evaluation using licensed image sets, human rubrics and prompts, verifying failures and quality baselines."
     triggers:
+      - "image generation prompt adherence human preference safety"
       - "multimodal image generation fidelity evaluation"
     excludes: []
     status: active

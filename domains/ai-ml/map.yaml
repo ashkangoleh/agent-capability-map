@@ -187,6 +187,7 @@ children:
   - id: reinforcement-learning
     description: "reinforcement-learning model engineering"
     triggers:
+      - "rl constrained exploration action abort policy"
       - "rl reward hacking proxy metric constraint testing"
       - "offline reinforcement learning importance weight effective sample size"
       - "reinforcement learning offline policy evaluation support"
@@ -198,6 +199,9 @@ children:
   - id: multimodal-ai
     description: "multimodal-ai model engineering"
     triggers:
+      - "audio video caption timestamp synchronization drift"
+      - "image generation prompt adherence human preference safety"
+      - "vision language model hallucinated objects grounding"
       - "multimodal vision language grounding evaluation"
       - "multimodal ai"
       - "multimodal image generation fidelity evaluation"
