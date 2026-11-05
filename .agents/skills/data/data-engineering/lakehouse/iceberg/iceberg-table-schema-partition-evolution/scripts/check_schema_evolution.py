@@ -8,7 +8,7 @@ import json
 import re
 from pathlib import Path
 
-DECIMAL = re.compile(r"^decimal\\(([1-9][0-9]*),([0-9]+)\\)$")
+DECIMAL = re.compile(r"^decimal[(]([1-9][0-9]*),([0-9]+)[)]$")
 
 
 def as_fields(value, label, errors):
