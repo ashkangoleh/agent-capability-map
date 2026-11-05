@@ -21,12 +21,14 @@ children:
   - id: distributed-training
     description: "deep learning distributed training collective recovery: framework and world size, interconnect and gradients"
     triggers:
+      - "torch distributed rank failure checkpoint restart"
       - "deep learning distributed training collective recovery"
     status: active
     skills: domains/ai-ml/deep-learning/distributed-training/skills.yaml
   - id: training-optimization
     description: "deep learning mixed precision optimizer stability: gradient scaling, dtype and optimizer state"
     triggers:
+      - "mixed precision gradient overflow loss scaling"
       - "deep learning mixed precision optimizer stability"
     status: active
     skills: domains/ai-ml/deep-learning/training-optimization/skills.yaml

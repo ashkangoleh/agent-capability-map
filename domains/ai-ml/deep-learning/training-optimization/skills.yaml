@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/deep-learning/training-optimization/aiml-deep-learning-training-optimization/SKILL.md
     description: "Engineer deep learning mixed precision optimizer stability using gradient scaling, dtype and optimizer state, verifying failures and quality baselines."
     triggers:
+      - "mixed precision gradient overflow loss scaling"
       - "deep learning mixed precision optimizer stability"
     excludes: []
     status: active

@@ -53,6 +53,9 @@ children:
   - id: machine-learning
     description: "machine learning"
     triggers:
+      - "ml input drift by cohort and label lag"
+      - "ml explanation shap correlated features stability"
+      - "ml hyperparameter tuning nested cross validation"
       - "ml train pipeline reproducible artifacts"
       - "ml model serving"
       - "model canary"
@@ -72,6 +75,8 @@ children:
   - id: deep-learning
     description: "deep learning"
     triggers:
+      - "mixed precision gradient overflow loss scaling"
+      - "torch distributed rank failure checkpoint restart"
       - "transformer fine tuning"
       - "distributed training"
       - "pytorch"

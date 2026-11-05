@@ -49,18 +49,21 @@ children:
   - id: hyperparameter-tuning
     description: "ml hyperparameter search leakage prevention: train and validation splits, search budgets"
     triggers:
+      - "ml hyperparameter tuning nested cross validation"
       - "ml hyperparameter search leakage prevention"
     status: active
     skills: domains/ai-ml/machine-learning/hyperparameter-tuning/skills.yaml
   - id: explainability
     description: "ml model explanation stability audit: feature attribution context and correlated variables"
     triggers:
+      - "ml explanation shap correlated features stability"
       - "ml model explanation stability audit"
     status: active
     skills: domains/ai-ml/machine-learning/explainability/skills.yaml
   - id: dataset-shift
     description: "ml dataset distribution shift detection: baseline distribution, cohort keys and label lag"
     triggers:
+      - "ml input drift by cohort and label lag"
       - "ml dataset distribution shift detection"
     status: active
     skills: domains/ai-ml/machine-learning/dataset-shift/skills.yaml
