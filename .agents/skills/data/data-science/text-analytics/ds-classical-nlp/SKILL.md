@@ -2,7 +2,7 @@
 name: ds-classical-nlp
 description: Use when building classical text analytics or NLP systems with tokenization, sparse features, interpretable baselines, and language-aware evaluation.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # ds-classical-nlp
@@ -45,3 +45,6 @@ Language/script, text unit, labels, class prevalence, privacy constraints, annot
 
 - https://scikit-learn.org/stable/tutorial/text_analytics/
 - https://spacy.io/usage/models
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

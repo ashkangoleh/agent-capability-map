@@ -2,7 +2,7 @@
 name: sql-explain-plan-optimization
 description: Tune analytical SQL using engine-specific physical plans, cardinality estimates, distribution and correctness-preserving rewrites.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # sql-explain-plan-optimization
@@ -33,3 +33,6 @@ Engine and release, SQL, schema/index stats, query shape, input cardinalities, r
 
 ## Output contract
 Return requested runnable deliverable or assessment, assumptions, source-to-sink guarantees, test/rollout/rollback and operational cost. Mark unknown evidence explicitly.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

@@ -2,7 +2,7 @@
 name: postgresql-logical-cdc-integrity
 description: Design PostgreSQL logical replication/CDC publication and slot recovery with consistent snapshots and retention limits.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # postgresql-logical-cdc-integrity
@@ -33,3 +33,6 @@ PostgreSQL server version, publications/replication slots, WAL retention, primar
 
 ## Output contract
 Return requested runnable deliverable or assessment, assumptions, source-to-sink guarantees, test/rollout/rollback and operational cost. Mark unknown evidence explicitly.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

@@ -2,7 +2,7 @@
 name: datahub-metadata-catalog-governance
 description: Instrument DataHub or equivalent catalog metadata ingestion, ownership, domains and lineage with verification of stale entities.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # datahub-metadata-catalog-governance
@@ -33,3 +33,6 @@ Catalog backend and connectors, data platform sources, URN schema, ownership pol
 
 ## Output contract
 Return requested runnable deliverable or assessment, assumptions, source-to-sink guarantees, test/rollout/rollback and operational cost. Mark unknown evidence explicitly.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

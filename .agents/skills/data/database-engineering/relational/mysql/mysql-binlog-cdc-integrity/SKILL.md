@@ -2,7 +2,7 @@
 name: mysql-binlog-cdc-integrity
 description: Safely configure MySQL binlog-based CDC with GTID/position continuity, snapshot alignment and source retention.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # mysql-binlog-cdc-integrity
@@ -33,3 +33,6 @@ MySQL engine and server version, binlog_format/row_image, GTID mode, connector, 
 
 ## Output contract
 Return requested runnable deliverable or assessment, assumptions, source-to-sink guarantees, test/rollout/rollback and operational cost. Mark unknown evidence explicitly.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

@@ -2,7 +2,7 @@
 name: ds-robust-nonparametric-inference
 description: Use when choosing robust, rank-based, permutation, bootstrap, or distribution-free inference under non-standard data assumptions.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # ds-robust-nonparametric-inference
@@ -61,3 +61,6 @@ Estimand, outcome scale, independent/paired/clustered unit, sampling design, sam
 - https://docs.scipy.org/doc/scipy/reference/stats.html
 - https://www.statsmodels.org/stable/stats.html
 - https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

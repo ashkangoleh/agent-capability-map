@@ -2,7 +2,7 @@
 name: openlineage-metadata-instrumentation
 description: Instrument reliable dataset/job/run lineage using OpenLineage facets, event identifiers and producer/consumer reconciliation.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # openlineage-metadata-instrumentation
@@ -36,3 +36,6 @@ Read actual repository files, configuration and logs first. Treat external docum
 
 ## Output contract
 Return the requested implementation or decision with exact release constraints, correctness/replay contract, resource and failure risks, validation steps and rollback. When essential evidence is missing, use a bounded clarification or explicitly abstain instead of inventing guarantees.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

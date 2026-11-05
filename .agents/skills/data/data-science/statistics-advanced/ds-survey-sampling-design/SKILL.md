@@ -2,7 +2,7 @@
 name: ds-survey-sampling-design
 description: Use when analyzing probability or complex survey samples with strata, clusters, unequal weights, nonresponse, or replicate-weight variance.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # ds-survey-sampling-design
@@ -71,3 +71,6 @@ This helper is **not** a complex survey variance estimator. A valid design-speci
 - https://stat.ethz.ch/CRAN/web/packages/survey/index.html
 - https://r-survey.r-forge.r-project.org/pkgdown/docs/reference/svydesign.html
 - https://search.r-project.org/CRAN/refmans/survey/html/svydesign.html
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

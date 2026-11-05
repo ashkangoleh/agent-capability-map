@@ -2,7 +2,7 @@
 name: ds-multilingual-nlp-evaluation
 description: Use when evaluating classical NLP or text classifiers across multiple languages, scripts, dialects, or code-switched content.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # ds-multilingual-nlp-evaluation
@@ -47,3 +47,6 @@ Language/script distribution, dialects, code-switching, text source, annotation 
 
 - https://spacy.io/usage/models
 - https://scikit-learn.org/stable/tutorial/text_analytics/
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

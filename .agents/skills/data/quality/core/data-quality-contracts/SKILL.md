@@ -2,7 +2,7 @@
 name: data-quality-contracts
 description: Use to design measurable data quality contracts, validation gates, freshness and reconciliation for warehouse or pipeline datasets.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # data-quality-contracts
@@ -34,3 +34,6 @@ Do not equate a passing row-count check with correct data; claim observed accura
 
 ## Output contract
 Return only the requested deliverable, plus decision-critical assumptions, verification performed, missing evidence, operational risks and next validation steps. Never claim to have run a test without actual tool evidence.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

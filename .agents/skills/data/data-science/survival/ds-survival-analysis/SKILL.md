@@ -2,7 +2,7 @@
 name: ds-survival-analysis
 description: "Analyze time-to-event outcomes with censoring, competing risks and hazard assumptions."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # ds-survival-analysis
@@ -35,3 +35,6 @@ Time origin, event definition, censoring mechanism, competing events and follow-
 
 ## Output contract
 Return the analysis/modeling result with estimand, assumptions, validation design, uncertainty, reproducibility and decision implications. Separate observed evidence from inference.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

@@ -2,7 +2,7 @@
 name: statistical-inference-design
 description: Design statistical tests and interval estimates with correct sample unit, assumptions, multiple testing and effect-size interpretation.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # statistical-inference-design
@@ -33,3 +33,6 @@ Population, sample frame, metric scale, randomization/selection, hypothesis, obs
 
 ## Output contract
 Return the requested analysis, actual reproducible methods, source and uncertainty, validation results, caveats and deployment implications. Unknown facts remain explicitly unknown.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
