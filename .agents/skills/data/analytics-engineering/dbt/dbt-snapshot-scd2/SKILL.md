@@ -2,7 +2,7 @@
 name: dbt-snapshot-scd2
 description: Design dbt snapshots and type-2 histories with effective dates, unique keys, hard deletes and reproducible reconciliation.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # dbt-snapshot-scd2
@@ -36,3 +36,6 @@ Inspect actual schemas, code, execution plans and operational logs first. Confir
 
 ## Delivery contract
 Provide the requested fully scoped implementation or assessment, with explicit assumptions, data grain, idempotency/replay contract, observability, test/rollout/rollback and trade-offs. Mark unknowns instead of fabricating engine APIs, performance or consistency.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

@@ -2,7 +2,7 @@
 name: dimensional-modeling-grain
 description: Design dimensional warehouse facts and dimensions with explicit grain, conformed keys, SCD semantics and additive metrics.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # dimensional-modeling-grain
@@ -36,3 +36,6 @@ Inspect actual schemas, code, execution plans and operational logs first. Confir
 
 ## Delivery contract
 Provide the requested fully scoped implementation or assessment, with explicit assumptions, data grain, idempotency/replay contract, observability, test/rollout/rollback and trade-offs. Mark unknowns instead of fabricating engine APIs, performance or consistency.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

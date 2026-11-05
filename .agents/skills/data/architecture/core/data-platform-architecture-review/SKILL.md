@@ -2,7 +2,7 @@
 name: data-platform-architecture-review
 description: Review end-to-end data platform architecture choices against workload SLOs, engine interoperability, security and failure behavior.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # data-platform-architecture-review
@@ -37,3 +37,6 @@ Inspect actual schemas, code, execution plans and operational logs first. Confir
 
 ## Delivery contract
 Provide the requested fully scoped implementation or assessment, with explicit assumptions, data grain, idempotency/replay contract, observability, test/rollout/rollback and trade-offs. Mark unknowns instead of fabricating engine APIs, performance or consistency.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

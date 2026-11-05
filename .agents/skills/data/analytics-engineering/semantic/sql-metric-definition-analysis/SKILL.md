@@ -2,7 +2,7 @@
 name: sql-metric-definition-analysis
 description: Implement analytically correct SQL metrics with exact grain, denominator, timezone and join-fanout validation.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # sql-metric-definition-analysis
@@ -33,3 +33,6 @@ SQL engine/version, source tables, business event, target metric, user/order IDs
 
 ## Output contract
 Return the requested analysis, actual reproducible methods, source and uncertainty, validation results, caveats and deployment implications. Unknown facts remain explicitly unknown.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
