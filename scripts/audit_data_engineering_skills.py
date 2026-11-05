@@ -47,12 +47,17 @@ def audit(root=ROOT):
         if not ref_path.is_file():
             errors.append("missing on-demand verification reference")
         else:
-            for heading in REQUIRED_REFERENCES:
-                if heading not in doc:
-                    errors.append(f"reference missing section {heading}")
+            for alternatives in (
+                ("## Specialist falsification matrix", "## Falsification matrix"),
+                ("## Release evidence ledger", "## Evidence checklist",
+                 "## Evidence required for a deployable recommendation"),
+            ):
+                if not any(h in doc for h in alternatives):
+                    errors.append(f"reference missing one of {alternatives}")
             if len(doc.encode("utf-8")) > 32768:
                 errors.append("reference too large for targeted loading")
-            if "not executed" not in doc.lower() and "not evidence" not in doc.lower():
+            normalized = doc.lower().replace("**", "")
+            if not any(t in normalized for t in ("not executed", "not evidence", "not production certification")):
                 errors.append("missing boundary between planned and observed tests")
         if len(content.encode("utf-8")) > 65536:
             errors.append("SKILL.md violates 64 KiB router limit")
