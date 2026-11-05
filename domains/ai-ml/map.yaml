@@ -132,6 +132,9 @@ children:
     triggers:
       - "nlp text classification calibration benchmark"
       - "natural language processing"
+      - "nlp named entity extraction span evaluation"
+      - "nlp multilingual evaluation code switching"
+      - "nlp sentence embedding semantic retrieval evaluation"
     status: active
     map: domains/ai-ml/natural-language-processing/map.yaml
   - id: recommender-systems
@@ -139,6 +142,9 @@ children:
     triggers:
       - "recommender candidate generation recall evaluation"
       - "recommender systems"
+      - "recommender learning to rank online safeguards"
+      - "recommender cold start exploration policy"
+      - "recommender counterfactual offline online evaluation"
     status: active
     map: domains/ai-ml/recommender-systems/map.yaml
   - id: reinforcement-learning
@@ -146,6 +152,8 @@ children:
     triggers:
       - "reinforcement learning offline policy evaluation support"
       - "reinforcement learning"
+      - "reinforcement learning reward model specification"
+      - "reinforcement learning safe exploration budget"
     status: active
     map: domains/ai-ml/reinforcement-learning/map.yaml
   - id: multimodal-ai
@@ -153,5 +161,7 @@ children:
     triggers:
       - "multimodal vision language grounding evaluation"
       - "multimodal ai"
+      - "multimodal image generation fidelity evaluation"
+      - "multimodal audio video text temporal alignment"
     status: active
     map: domains/ai-ml/multimodal-ai/map.yaml
