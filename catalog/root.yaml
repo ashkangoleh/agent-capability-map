@@ -446,6 +446,11 @@ children:
     label: "AI & Machine Learning"
     description: "Machine learning, deep learning, generative AI, RAG and MLOps."
     triggers:
+      - "rl reward hacking proxy metric constraint testing"
+      - "offline reinforcement learning importance weight effective sample size"
+      - "recommender ips propensity logged bandit policy"
+      - "cold start recommender catalog coverage fallback"
+      - "ranking recommender ndcg exposure position bias"
       - "recommender retrieval recall at k cold users"
       - "sentence embeddings hard negative retrieval benchmark"
       - "code switching multilingual nlp dialect benchmarks"
