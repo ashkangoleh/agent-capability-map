@@ -1,4 +1,5 @@
 import unittest
+import re
 from pathlib import Path
 
 from capability_map import Router
@@ -360,7 +361,62 @@ class InfrastructureCoverageTests(unittest.TestCase):
                 self.assertTrue(path.is_file())
                 content = path.read_text(encoding="utf-8")
                 self.assertIn(f"name: {skill_id}", content)
-                self.assertIn('version: "1.1.0"', content)
+                match = re.search(r'(?m)^  version: "(\\d+)\\.(\\d+)\\.(\\d+)"
+                for required in specification["required"]:
+                    self.assertIn(required, content)
+                for obsolete in specification["forbidden"]:
+                    self.assertNotIn(obsolete, content)
+                selected = self.router.resolve(specification["request"])
+                self.assertEqual(selected["status"], "matched", selected)
+                self.assertEqual(selected["selected_skill"], skill_id)
+                self.assertEqual(Path(selected["skill_path"]).resolve(), path.resolve())
+
+    def test_all_active_infrastructure_skills_have_routing_fixtures(self):
+        seen_maps = set()
+        active = set()
+
+        def visit(path):
+            if path in seen_maps:
+                return
+            seen_maps.add(path)
+            document = load_yaml(ROOT, path)
+            for child in document["children"]:
+                if child.get("map"):
+                    visit(child["map"])
+                elif child.get("skills"):
+                    registry = load_yaml(ROOT, child["skills"])
+                    active.update(entry["id"] for entry in registry["skills"]
+                                  if entry.get("status") == "active")
+
+        visit("domains/infrastructure/map.yaml")
+        covered = {
+            case.get("skill") for case in self.cases
+            if case.get("status") == "matched"
+        }
+        self.assertEqual(len(active), 95)
+        self.assertFalse(active - covered,
+                         f"Infrastructure skills without deterministic routing fixtures: {sorted(active - covered)}")
+
+    def test_infrastructure_scopes_are_selectable(self):
+        scopes = {item["route"] for item in discover_domains(ROOT, prefix="infrastructure")}
+        for route in ("infrastructure/networking",
+                      "infrastructure/cloud-engineering",
+                      "infrastructure/containers-orchestration/kubernetes",
+                      "infrastructure/observability-engineering",
+                      "infrastructure/hardware-datacenter"):
+            self.assertIn(route, scopes)
+
+    def test_master_index_contains_all_new_specialists(self):
+        index = set(load_yaml(ROOT, "catalog/master-skill-ids.yaml")["ids"])
+        self.assertTrue(EXPECTED_NEW_SKILLS.issubset(index))
+        self.assertGreaterEqual(len(index), 322)
+
+
+if __name__ == "__main__":
+    unittest.main()
+, content)
+                self.assertIsNotNone(match, "versioned skill metadata required")
+                self.assertGreaterEqual(tuple(map(int, match.groups())), (1, 1, 0))
                 for required in specification["required"]:
                     self.assertIn(required, content)
                 for obsolete in specification["forbidden"]:
