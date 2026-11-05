@@ -1,0 +1,13 @@
+schema_version: 1
+id: reproducible-environments
+kind: skill-registry
+skills:
+  - id: swe-developer-tools-reproducible-environments
+    path: .agents/skills/software-engineering/developer-tools/reproducible-environments/swe-developer-tools-reproducible-environments/SKILL.md
+    description: "Use for reproducible dev environment toolchain tasks in Developer Tooling and Workflow Engineering; verify make toolchains and dependency resolution deterministic and secure. and reject unsupported release or safety claims."
+    triggers:
+      - "reproducible dev environment toolchain"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

@@ -1,0 +1,28 @@
+schema_version: 1
+id: mobile-development
+kind: map
+children:
+  - id: android-delivery
+    description: "Implement Android lifecycle, permissions and background work according to SDK constraints."
+    triggers:
+      - "android app lifecycle architecture"
+    status: active
+    skills: domains/software-engineering/mobile-development/android-delivery/skills.yaml
+  - id: ios-delivery
+    description: "Protect Swift concurrency, app suspension and privacy requirements."
+    triggers:
+      - "ios app state and concurrency"
+    status: active
+    skills: domains/software-engineering/mobile-development/ios-delivery/skills.yaml
+  - id: cross-platform-apps
+    description: "Choose shared versus native modules based on performance, platform behavior and maintainability."
+    triggers:
+      - "flutter react native mobile architecture"
+    status: active
+    skills: domains/software-engineering/mobile-development/cross-platform-apps/skills.yaml
+  - id: mobile-release
+    description: "Deliver signed, reproducible application releases with staged rollout safeguards."
+    triggers:
+      - "mobile app signing store release"
+    status: active
+    skills: domains/software-engineering/mobile-development/mobile-release/skills.yaml

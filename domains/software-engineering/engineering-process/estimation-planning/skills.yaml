@@ -1,0 +1,13 @@
+schema_version: 1
+id: estimation-planning
+kind: skill-registry
+skills:
+  - id: swe-engineering-process-estimation-planning
+    path: .agents/skills/software-engineering/engineering-process/estimation-planning/swe-engineering-process-estimation-planning/SKILL.md
+    description: "Use for software delivery estimation uncertainty tasks in Software Engineering Process and Economics; verify estimate work with risks, dependencies and uncertainty rather than false precision. and reject unsupported release or safety claims."
+    triggers:
+      - "software delivery estimation uncertainty"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

@@ -1,0 +1,13 @@
+schema_version: 1
+id: patterns-tradeoffs
+kind: skill-registry
+skills:
+  - id: swe-software-design-patterns-tradeoffs
+    path: .agents/skills/software-engineering/software-design/patterns-tradeoffs/swe-software-design-patterns-tradeoffs/SKILL.md
+    description: "Use for software design pattern selection tasks in Software Design and Interface Contracts; verify select patterns only when they simplify verified recurring complexity. and reject unsupported release or safety claims."
+    triggers:
+      - "software design pattern selection"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

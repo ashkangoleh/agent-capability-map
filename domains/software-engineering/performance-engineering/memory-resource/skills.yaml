@@ -1,0 +1,13 @@
+schema_version: 1
+id: memory-resource
+kind: skill-registry
+skills:
+  - id: swe-performance-engineering-memory-resource
+    path: .agents/skills/software-engineering/performance-engineering/memory-resource/swe-performance-engineering-memory-resource/SKILL.md
+    description: "Use for application memory leak resource lifecycle tasks in Application Performance and Capacity; verify diagnose memory leaks, resource exhaustion and lifecycle ownership. and reject unsupported release or safety claims."
+    triggers:
+      - "application memory leak resource lifecycle"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

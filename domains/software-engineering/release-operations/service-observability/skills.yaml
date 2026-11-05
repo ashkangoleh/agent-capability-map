@@ -1,0 +1,13 @@
+schema_version: 1
+id: service-observability
+kind: skill-registry
+skills:
+  - id: swe-release-operations-service-observability
+    path: .agents/skills/software-engineering/release-operations/service-observability/swe-release-operations-service-observability/SKILL.md
+    description: "Use for application tracing logging telemetry tasks in Software Delivery and Runtime Operations; verify instrument the user-visible SLO and diagnose cause across service boundaries. and reject unsupported release or safety claims."
+    triggers:
+      - "application tracing logging telemetry"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

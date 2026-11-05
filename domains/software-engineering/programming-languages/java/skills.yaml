@@ -1,0 +1,13 @@
+schema_version: 1
+id: java
+kind: skill-registry
+skills:
+  - id: swe-programming-languages-java
+    path: .agents/skills/software-engineering/programming-languages/java/swe-programming-languages-java/SKILL.md
+    description: "Use for java virtual threads application tasks in Programming Language Engineering; verify match JVM, GC and thread model to current Java release semantics. and reject unsupported release or safety claims."
+    triggers:
+      - "java virtual threads application"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

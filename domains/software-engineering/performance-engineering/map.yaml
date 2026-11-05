@@ -1,0 +1,22 @@
+schema_version: 1
+id: performance-engineering
+kind: map
+children:
+  - id: profiling
+    description: "Locate CPU hotspots by sampling and causal workload comparison."
+    triggers:
+      - "application cpu profiling flamegraph"
+    status: active
+    skills: domains/software-engineering/performance-engineering/profiling/skills.yaml
+  - id: load-testing
+    description: "Model capacity, saturation and tail latency with controlled load profiles."
+    triggers:
+      - "application load test capacity modeling"
+    status: active
+    skills: domains/software-engineering/performance-engineering/load-testing/skills.yaml
+  - id: memory-resource
+    description: "Diagnose memory leaks, resource exhaustion and lifecycle ownership."
+    triggers:
+      - "application memory leak resource lifecycle"
+    status: active
+    skills: domains/software-engineering/performance-engineering/memory-resource/skills.yaml

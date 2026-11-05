@@ -326,6 +326,57 @@ ids:
   - streaming-event-time-watermark-window
   - superset-dashboard-metric-governance
   - supply-chain-demand-planning
+  - swe-backend-integration-resilience
+  - swe-backend-persistence-transactions
+  - swe-backend-service-security
+  - swe-developer-tools-debugging
+  - swe-developer-tools-git-workflows
+  - swe-developer-tools-reproducible-environments
+  - swe-engineering-process-economics-risk
+  - swe-engineering-process-engineering-adr
+  - swe-engineering-process-estimation-planning
+  - swe-foundations-algorithms-complexity
+  - swe-foundations-numerical-correctness
+  - swe-foundations-protocol-interoperability
+  - swe-frontend-accessibility
+  - swe-frontend-browser-automation
+  - swe-frontend-component-architecture
+  - swe-frontend-frontend-performance
+  - swe-maintenance-evolution-compatibility-migrations
+  - swe-maintenance-evolution-incident-debugging
+  - swe-maintenance-evolution-legacy-refactoring
+  - swe-mobile-development-android-delivery
+  - swe-mobile-development-cross-platform-apps
+  - swe-mobile-development-ios-delivery
+  - swe-mobile-development-mobile-release
+  - swe-performance-engineering-load-testing
+  - swe-performance-engineering-memory-resource
+  - swe-performance-engineering-profiling
+  - swe-programming-languages-go
+  - swe-programming-languages-java
+  - swe-programming-languages-python
+  - swe-programming-languages-rust
+  - swe-programming-languages-typescript
+  - swe-quality-testing-code-review
+  - swe-quality-testing-contract-integration
+  - swe-quality-testing-property-testing
+  - swe-quality-testing-unit-testing
+  - swe-release-operations-deployment-recovery
+  - swe-release-operations-release-readiness
+  - swe-release-operations-service-observability
+  - swe-requirements-engineering-acceptance-criteria
+  - swe-requirements-engineering-elicitation-specification
+  - swe-requirements-engineering-nonfunctional-requirements
+  - swe-software-architecture-architecture-decisions
+  - swe-software-architecture-domain-modeling
+  - swe-software-architecture-service-boundaries
+  - swe-software-architecture-system-modernization
+  - swe-software-design-concurrency-correctness
+  - swe-software-design-module-api-design
+  - swe-software-design-patterns-tradeoffs
+  - swe-software-security-authentication-authorization
+  - swe-software-security-dependency-supply-chain
+  - swe-software-security-threat-modeling
   - technical-writing-docs
   - telecom-network-change-review
   - temporal-durable-workflows

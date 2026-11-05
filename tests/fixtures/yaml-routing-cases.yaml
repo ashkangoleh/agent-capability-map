@@ -1869,3 +1869,211 @@ cases:
     request: "بررسی platform operations readiness review برای بازیابی سرویس زیرساخت"
     status: matched
     skill: platform-operations
+  - id: swe-hier-backend-api-implementation
+    request: "software engineering api endpoint"
+    status: matched
+    skill: software-engineering-implementation
+  - id: swe-hier-backend-integration-resilience
+    request: "software engineering service integration retry budget"
+    status: matched
+    skill: swe-backend-integration-resilience
+  - id: swe-hier-backend-persistence-transactions
+    request: "software engineering application transaction concurrency"
+    status: matched
+    skill: swe-backend-persistence-transactions
+  - id: swe-hier-backend-service-security
+    request: "software engineering backend authentication authorization design"
+    status: matched
+    skill: swe-backend-service-security
+  - id: swe-hier-developer-tools-debugging
+    request: "software engineering developer debugging reproducible crash"
+    status: matched
+    skill: swe-developer-tools-debugging
+  - id: swe-hier-developer-tools-git-workflows
+    request: "software engineering git workflow merge conflict recovery"
+    status: matched
+    skill: swe-developer-tools-git-workflows
+  - id: swe-hier-developer-tools-reproducible-environments
+    request: "software engineering reproducible dev environment toolchain"
+    status: matched
+    skill: swe-developer-tools-reproducible-environments
+  - id: swe-hier-engineering-process-estimation-planning
+    request: "software engineering software delivery estimation uncertainty"
+    status: matched
+    skill: swe-engineering-process-estimation-planning
+  - id: swe-hier-engineering-process-economics-risk
+    request: "software engineering software build versus buy economics"
+    status: matched
+    skill: swe-engineering-process-economics-risk
+  - id: swe-hier-engineering-process-engineering-adr
+    request: "software engineering engineering decision log governance"
+    status: matched
+    skill: swe-engineering-process-engineering-adr
+  - id: swe-hier-foundations-algorithms-complexity
+    request: "software engineering algorithm complexity memory bounds"
+    status: matched
+    skill: swe-foundations-algorithms-complexity
+  - id: swe-hier-foundations-numerical-correctness
+    request: "software engineering numeric precision overflow application"
+    status: matched
+    skill: swe-foundations-numerical-correctness
+  - id: swe-hier-foundations-protocol-interoperability
+    request: "software engineering binary protocol serialization compatibility"
+    status: matched
+    skill: swe-foundations-protocol-interoperability
+  - id: swe-hier-frontend-component-architecture
+    request: "software engineering react component state architecture"
+    status: matched
+    skill: swe-frontend-component-architecture
+  - id: swe-hier-frontend-accessibility
+    request: "software engineering frontend accessibility keyboard screen reader"
+    status: matched
+    skill: swe-frontend-accessibility
+  - id: swe-hier-frontend-frontend-performance
+    request: "software engineering frontend bundle web performance"
+    status: matched
+    skill: swe-frontend-frontend-performance
+  - id: swe-hier-frontend-browser-automation
+    request: "software engineering browser end to end testing"
+    status: matched
+    skill: swe-frontend-browser-automation
+  - id: swe-hier-maintenance-evolution-legacy-refactoring
+    request: "software engineering legacy refactor characterization tests"
+    status: matched
+    skill: swe-maintenance-evolution-legacy-refactoring
+  - id: swe-hier-maintenance-evolution-compatibility-migrations
+    request: "software engineering api schema backward compatibility migration"
+    status: matched
+    skill: swe-maintenance-evolution-compatibility-migrations
+  - id: swe-hier-maintenance-evolution-incident-debugging
+    request: "software engineering application incident root cause debugging"
+    status: matched
+    skill: swe-maintenance-evolution-incident-debugging
+  - id: swe-hier-mobile-development-android-delivery
+    request: "software engineering android app lifecycle architecture"
+    status: matched
+    skill: swe-mobile-development-android-delivery
+  - id: swe-hier-mobile-development-ios-delivery
+    request: "software engineering ios app state and concurrency"
+    status: matched
+    skill: swe-mobile-development-ios-delivery
+  - id: swe-hier-mobile-development-cross-platform-apps
+    request: "software engineering flutter react native mobile architecture"
+    status: matched
+    skill: swe-mobile-development-cross-platform-apps
+  - id: swe-hier-mobile-development-mobile-release
+    request: "software engineering mobile app signing store release"
+    status: matched
+    skill: swe-mobile-development-mobile-release
+  - id: swe-hier-performance-engineering-profiling
+    request: "software engineering application cpu profiling flamegraph"
+    status: matched
+    skill: swe-performance-engineering-profiling
+  - id: swe-hier-performance-engineering-load-testing
+    request: "software engineering application load test capacity modeling"
+    status: matched
+    skill: swe-performance-engineering-load-testing
+  - id: swe-hier-performance-engineering-memory-resource
+    request: "software engineering application memory leak resource lifecycle"
+    status: matched
+    skill: swe-performance-engineering-memory-resource
+  - id: swe-hier-programming-languages-python
+    request: "software engineering python typing async application"
+    status: matched
+    skill: swe-programming-languages-python
+  - id: swe-hier-programming-languages-typescript
+    request: "software engineering typescript strict type safety"
+    status: matched
+    skill: swe-programming-languages-typescript
+  - id: swe-hier-programming-languages-go
+    request: "software engineering go goroutine cancellation concurrency"
+    status: matched
+    skill: swe-programming-languages-go
+  - id: swe-hier-programming-languages-java
+    request: "software engineering java virtual threads application"
+    status: matched
+    skill: swe-programming-languages-java
+  - id: swe-hier-programming-languages-rust
+    request: "software engineering rust ownership async error handling"
+    status: matched
+    skill: swe-programming-languages-rust
+  - id: swe-hier-quality-testing-unit-testing
+    request: "software engineering unit test boundary cases"
+    status: matched
+    skill: swe-quality-testing-unit-testing
+  - id: swe-hier-quality-testing-contract-integration
+    request: "software engineering consumer driven contract testing"
+    status: matched
+    skill: swe-quality-testing-contract-integration
+  - id: swe-hier-quality-testing-property-testing
+    request: "software engineering property based fuzz testing"
+    status: matched
+    skill: swe-quality-testing-property-testing
+  - id: swe-hier-quality-testing-code-review
+    request: "software engineering code review safe refactor"
+    status: matched
+    skill: swe-quality-testing-code-review
+  - id: swe-hier-release-operations-release-readiness
+    request: "software engineering software release readiness checklist"
+    status: matched
+    skill: swe-release-operations-release-readiness
+  - id: swe-hier-release-operations-service-observability
+    request: "software engineering application tracing logging telemetry"
+    status: matched
+    skill: swe-release-operations-service-observability
+  - id: swe-hier-release-operations-deployment-recovery
+    request: "software engineering application deployment canary rollback"
+    status: matched
+    skill: swe-release-operations-deployment-recovery
+  - id: swe-hier-requirements-engineering-elicitation-specification
+    request: "software engineering software requirements elicitation specification"
+    status: matched
+    skill: swe-requirements-engineering-elicitation-specification
+  - id: swe-hier-requirements-engineering-acceptance-criteria
+    request: "software engineering software acceptance criteria scenarios"
+    status: matched
+    skill: swe-requirements-engineering-acceptance-criteria
+  - id: swe-hier-requirements-engineering-nonfunctional-requirements
+    request: "software engineering software nonfunctional slo requirements"
+    status: matched
+    skill: swe-requirements-engineering-nonfunctional-requirements
+  - id: swe-hier-software-architecture-architecture-decisions
+    request: "software engineering software architecture decision record"
+    status: matched
+    skill: swe-software-architecture-architecture-decisions
+  - id: swe-hier-software-architecture-service-boundaries
+    request: "software engineering microservice boundary consistency"
+    status: matched
+    skill: swe-software-architecture-service-boundaries
+  - id: swe-hier-software-architecture-domain-modeling
+    request: "software engineering domain driven design bounded contexts"
+    status: matched
+    skill: swe-software-architecture-domain-modeling
+  - id: swe-hier-software-architecture-system-modernization
+    request: "software engineering strangler modernization legacy migration"
+    status: matched
+    skill: swe-software-architecture-system-modernization
+  - id: swe-hier-software-design-module-api-design
+    request: "software engineering module interface cohesion design"
+    status: matched
+    skill: swe-software-design-module-api-design
+  - id: swe-hier-software-design-concurrency-correctness
+    request: "software engineering application concurrency race deadlock"
+    status: matched
+    skill: swe-software-design-concurrency-correctness
+  - id: swe-hier-software-design-patterns-tradeoffs
+    request: "software engineering software design pattern selection"
+    status: matched
+    skill: swe-software-design-patterns-tradeoffs
+  - id: swe-hier-software-security-threat-modeling
+    request: "software engineering application threat model data flow"
+    status: matched
+    skill: swe-software-security-threat-modeling
+  - id: swe-hier-software-security-authentication-authorization
+    request: "software engineering application oauth oidc authorization"
+    status: matched
+    skill: swe-software-security-authentication-authorization
+  - id: swe-hier-software-security-dependency-supply-chain
+    request: "software engineering software dependency sbom vulnerability"
+    status: matched
+    skill: swe-software-security-dependency-supply-chain

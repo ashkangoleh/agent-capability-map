@@ -1,0 +1,13 @@
+schema_version: 1
+id: compatibility-migrations
+kind: skill-registry
+skills:
+  - id: swe-maintenance-evolution-compatibility-migrations
+    path: .agents/skills/software-engineering/maintenance-evolution/compatibility-migrations/swe-maintenance-evolution-compatibility-migrations/SKILL.md
+    description: "Use for api schema backward compatibility migration tasks in Software Maintenance and Evolution; verify stage application/database changes across version overlap. and reject unsupported release or safety claims."
+    triggers:
+      - "api schema backward compatibility migration"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

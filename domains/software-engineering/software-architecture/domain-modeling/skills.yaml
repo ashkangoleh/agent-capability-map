@@ -1,0 +1,13 @@
+schema_version: 1
+id: domain-modeling
+kind: skill-registry
+skills:
+  - id: swe-software-architecture-domain-modeling
+    path: .agents/skills/software-engineering/software-architecture/domain-modeling/swe-software-architecture-domain-modeling/SKILL.md
+    description: "Use for domain driven design bounded contexts tasks in Software Architecture and Systems Design; verify capture domain language and aggregate consistency without turning entities into abstractions. and reject unsupported release or safety claims."
+    triggers:
+      - "domain driven design bounded contexts"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

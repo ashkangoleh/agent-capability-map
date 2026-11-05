@@ -4,6 +4,10 @@ Global-first, YAML-driven, hierarchical discovery for reusable skills across cod
 
 The last recorded full graph audit counted 41 top-level domains and 322 active SKILL.md packages, with 348 deterministic fixtures and 54 unit tests passing **at that historical snapshot**. Subsequent Data Engineering expansion has increased the master skill-ID index to **344 entries** and the routing fixture file to **467 cases**; these new totals are file counts, **not a newly run passing test result**. Re-run the live report, YAML graph validation and all tests on the current branch before asserting active totals or CI success. Infrastructure now has 16 first-class selectable scopes and 95 unique active specialist skills. The Data domain is still incomplete: Data Engineering needs further operational depth, Data Science has structural coverage but incomplete independent validation, and seven other Data subdomains need focused audits. Get live counts with `python scripts/report_coverage.py --summary`. **Mapped is not implemented.** Only validated, registered SKILL.md files are active. The taxonomy is intentionally extensible; no finite list contains every possible specialty.
 
+## Software Engineering specialist hierarchy (2026-11-05)
+
+Software Engineering routes through 15 first-level subdomains and 52 terminal capability nodes, with a distinct versioned ROLE.md at each level. It includes 51 new specialist skills plus the original unchanged `software-engineering-implementation`; the repository inventory grows to **395 active skills** and **330 role contracts**. Mobile Development becomes active (Android, iOS, cross-platform and store release). This count is based on the staged tree; actual test status must be taken from the current GitHub Actions run. See [Software Engineering coverage audit](docs/SOFTWARE_ENGINEERING_COVERAGE_AUDIT.md). Note that general-role or generic skill creation alone would not be sufficient to certify software-engineering expertise.
+
 ## Operating contract
 
 1. An agent receives an ordinary task, such as "Create a new PySpark project."

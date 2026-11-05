@@ -1,0 +1,15 @@
+schema_version: 1
+id: component-architecture
+kind: skill-registry
+skills:
+  - id: swe-frontend-component-architecture
+    path: .agents/skills/software-engineering/frontend/component-architecture/swe-frontend-component-architecture/SKILL.md
+    description: "Use for react component state architecture tasks in Frontend and Browser Engineering; verify design predictable UI component boundaries and state ownership without unnecessary frameworks. and reject unsupported release or safety claims."
+    triggers:
+      - "react component state architecture"
+      - "react"
+      - "frontend"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

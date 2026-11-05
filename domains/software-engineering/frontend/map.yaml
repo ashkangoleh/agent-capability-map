@@ -1,0 +1,30 @@
+schema_version: 1
+id: frontend
+kind: map
+children:
+  - id: component-architecture
+    description: "Design predictable UI component boundaries and state ownership without unnecessary frameworks."
+    triggers:
+      - "react component state architecture"
+      - "react"
+      - "frontend"
+    status: active
+    skills: domains/software-engineering/frontend/component-architecture/skills.yaml
+  - id: accessibility
+    description: "Make interaction operable with keyboard, assistive technology and meaningful semantics."
+    triggers:
+      - "frontend accessibility keyboard screen reader"
+    status: active
+    skills: domains/software-engineering/frontend/accessibility/skills.yaml
+  - id: frontend-performance
+    description: "Optimize real user performance against a browser-based budget."
+    triggers:
+      - "frontend bundle web performance"
+    status: active
+    skills: domains/software-engineering/frontend/frontend-performance/skills.yaml
+  - id: browser-automation
+    description: "Test critical journeys with deterministic selectors and controlled test data."
+    triggers:
+      - "browser end to end testing"
+    status: active
+    skills: domains/software-engineering/frontend/browser-automation/skills.yaml

@@ -1,0 +1,22 @@
+schema_version: 1
+id: foundations
+kind: map
+children:
+  - id: algorithms-complexity
+    description: "Validate complexity using input scale, invariants and pathological cases."
+    triggers:
+      - "algorithm complexity memory bounds"
+    status: active
+    skills: domains/software-engineering/foundations/algorithms-complexity/skills.yaml
+  - id: numerical-correctness
+    description: "Choose numerical representations and rounding rules for the domain."
+    triggers:
+      - "numeric precision overflow application"
+    status: active
+    skills: domains/software-engineering/foundations/numerical-correctness/skills.yaml
+  - id: protocol-interoperability
+    description: "Ensure wire-format evolution preserves consumer expectations."
+    triggers:
+      - "binary protocol serialization compatibility"
+    status: active
+    skills: domains/software-engineering/foundations/protocol-interoperability/skills.yaml

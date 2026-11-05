@@ -1,0 +1,13 @@
+schema_version: 1
+id: persistence-transactions
+kind: skill-registry
+skills:
+  - id: swe-backend-persistence-transactions
+    path: .agents/skills/software-engineering/backend/persistence-transactions/swe-backend-persistence-transactions/SKILL.md
+    description: "Use for application transaction concurrency tasks in Backend and API Engineering; verify protect transaction boundaries, isolation and persistence correctness. and reject unsupported release or safety claims."
+    triggers:
+      - "application transaction concurrency"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

@@ -1,0 +1,13 @@
+schema_version: 1
+id: acceptance-criteria
+kind: skill-registry
+skills:
+  - id: swe-requirements-engineering-acceptance-criteria
+    path: .agents/skills/software-engineering/requirements-engineering/acceptance-criteria/swe-requirements-engineering-acceptance-criteria/SKILL.md
+    description: "Use for software acceptance criteria scenarios tasks in Software Requirements and Specification; verify write executable acceptance criteria with positive and negative examples. and reject unsupported release or safety claims."
+    triggers:
+      - "software acceptance criteria scenarios"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

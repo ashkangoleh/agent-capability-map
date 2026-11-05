@@ -1,0 +1,13 @@
+schema_version: 1
+id: git-workflows
+kind: skill-registry
+skills:
+  - id: swe-developer-tools-git-workflows
+    path: .agents/skills/software-engineering/developer-tools/git-workflows/swe-developer-tools-git-workflows/SKILL.md
+    description: "Use for git workflow merge conflict recovery tasks in Developer Tooling and Workflow Engineering; verify preserve history and ownership through branch/merge conflicts and safe recovery. and reject unsupported release or safety claims."
+    triggers:
+      - "git workflow merge conflict recovery"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

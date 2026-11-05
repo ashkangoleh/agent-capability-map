@@ -6,7 +6,19 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Standalone Windows smoke env correction (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Software Engineering hierarchical expansion (2026-11-05)
+
+- Working branch `pre_release` at verified baseline `4a5187dc5838e1d610d027288a186ee8c10f5a83`. User requested the next domain **one domain at a time** with independent role contracts at every meaningful hierarchy level. **Only `software-engineering` is being changed.** Do not touch `main` or create another branch.
+- Baseline: 7 first-level software areas (6 active, mobile mapped) and a single shared general `software-engineering-implementation` skill, 1 root role.
+- Staged: 15 first-level active subdomains, 52 terminal capabilities, 15 first-level and 52 leaf `ROLE.md` contracts (68 Software Engineering roles including existing root). Each terminal node owns one active skill; 51 new specialist `swe-*` skill IDs, retaining the original skill ID/path/content and old registry at `domains/software-engineering/skills.yaml` (only the new backend/api-implementation leaf references it).
+- Expected complete repository inventory: **395 skills**, **330 role files** (127 Data, 97 Infrastructure, 68 Software Engineering, 38 other roots), **0 flat skills**, all 41 top-level domains remain. Existing skill blob is identical.
+- Root software triggers expanded for concrete specialist capabilities. New maps and registries are deterministic, three-level resolution to selected terminal skill; mobile now active. Scope selection still max-five non-overlapping, overlays retain existing policy.
+- Added **52 positive YAML routing fixtures** and `tests/test_software_engineering_coverage.py` covering all maps, active leaf role paths, registry/file ownership, legacy API endpoint fixture, and disallowed domain scope behavior.
+- Reference basis: IEEE SWEBOK v4.0a (18 knowledge areas), Agent Skills spec progressive disclosure, OWASP ASVS v5.0.0 for application security. This is structural domain coverage, **not** measured real-client/skill performance or exhaustive industry coverage.
+- Standalone Linux/Windows ZIP builders copy entire catalog/domains/.agents/skills, so must rebuild on new HEAD. Check exact commit CI, 52 positive route results, full unit suite, and both standalone Windows/Linux smoke tests; **do not claim PASS before verified**.
+- Next domain requires explicit user approval; A/B quality review and native agent host compatibility remain outstanding.
+
+## HISTORICAL CHECKPOINT — Standalone Windows smoke env correction (2026-11-05)
 
 - Baseline `pre_release` head `65a726c921aa83137c5fa601a50157b13dc18bcf`; workflow `42087730688` produced and smoke-tested Linux x64 bundle successfully, Windows binary **build succeeded** but Windows smoke failed before executable invocation at `env["SystemRoot"]` (`KeyError`). Other existing Python/Node CLI smoke jobs passed.
 - Removed case-sensitive assumption about Windows environment keys. The smoke test now searches case-insensitively for `SystemRoot` or `windir`, and uses the system directory only if present; Python and Node remain excluded from PATH.

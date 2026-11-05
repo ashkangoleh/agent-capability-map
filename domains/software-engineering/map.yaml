@@ -3,7 +3,7 @@ id: software-engineering
 kind: map
 children:
   - id: backend
-    description: "backend"
+    description: "Preserve explicit HTTP and service contracts, transactional invariants, and failure containment."
     triggers:
       - "backend"
       - "api endpoint"
@@ -11,58 +11,177 @@ children:
       - "django"
       - "golang api"
       - "nodejs api"
+      - "backend and api engineering"
+      - "service integration retry budget"
+      - "application transaction concurrency"
+      - "backend authentication authorization design"
     status: active
-    skills: domains/software-engineering/skills.yaml
+    map: domains/software-engineering/backend/map.yaml
   - id: frontend
-    description: "frontend"
+    description: "Optimize accessible user workflows, stable client state and measured browser behavior."
     triggers:
       - "frontend"
       - "react"
       - "vue"
       - "angular"
       - "typescript ui"
+      - "frontend and browser engineering"
+      - "react component state architecture"
+      - "frontend accessibility keyboard screen reader"
+      - "frontend bundle web performance"
+      - "browser end to end testing"
     status: active
-    skills: domains/software-engineering/skills.yaml
+    map: domains/software-engineering/frontend/map.yaml
   - id: mobile-development
-    description: "mobile development"
+    description: "Treat offline behavior, mobile lifecycle and store release constraints as first-class correctness risks."
     triggers:
       - "android"
       - "ios"
       - "flutter"
       - "react native"
-    status: mapped
+      - "mobile development"
+      - "native and cross-platform mobile engineering"
+      - "android app lifecycle architecture"
+      - "ios app state and concurrency"
+      - "flutter react native mobile architecture"
+      - "mobile app signing store release"
+    status: active
+    map: domains/software-engineering/mobile-development/map.yaml
   - id: software-architecture
-    description: "software architecture"
+    description: "Allocate responsibilities and consistency boundaries based on observable business invariants."
     triggers:
       - "software architecture"
       - "microservices"
       - "ddd"
       - "api design"
+      - "software architecture and systems design"
+      - "software architecture decision record"
+      - "microservice boundary consistency"
+      - "domain driven design bounded contexts"
+      - "strangler modernization legacy migration"
     status: active
-    skills: domains/software-engineering/skills.yaml
+    map: domains/software-engineering/software-architecture/map.yaml
   - id: programming-languages
-    description: "programming languages"
+    description: "Apply language-specific runtime, type and concurrency semantics rather than generic syntax recipes."
     triggers:
       - "python code"
       - "golang code"
       - "rust code"
       - "java code"
+      - "programming languages"
+      - "programming language engineering"
+      - "python typing async application"
+      - "typescript strict type safety"
+      - "go goroutine cancellation concurrency"
+      - "java virtual threads application"
+      - "rust ownership async error handling"
     status: active
-    skills: domains/software-engineering/skills.yaml
+    map: domains/software-engineering/programming-languages/map.yaml
   - id: quality-testing
-    description: "quality testing"
+    description: "Optimize tests for falsifying important behavior, not merely increasing coverage percentages."
     triggers:
       - "unit testing"
       - "integration testing"
       - "code review"
       - "refactor"
+      - "quality testing"
+      - "software testing and verification"
+      - "unit test boundary cases"
+      - "consumer driven contract testing"
+      - "property based fuzz testing"
+      - "code review safe refactor"
     status: active
-    skills: domains/software-engineering/skills.yaml
+    map: domains/software-engineering/quality-testing/map.yaml
   - id: developer-tools
-    description: "developer tools"
+    description: "Keep developer workflows reproducible, observable and safe across local and CI environments."
     triggers:
       - "ide integration"
       - "developer tooling"
       - "git automation"
+      - "developer tools"
+      - "developer tooling and workflow engineering"
+      - "developer debugging reproducible crash"
+      - "git workflow merge conflict recovery"
+      - "reproducible dev environment toolchain"
     status: active
-    skills: domains/software-engineering/skills.yaml
+    map: domains/software-engineering/developer-tools/map.yaml
+  - id: requirements-engineering
+    description: "Translate stakeholder intent into testable behavior and explicit nonfunctional boundaries."
+    triggers:
+      - "requirements engineering"
+      - "software requirements and specification"
+      - "software requirements elicitation specification"
+      - "software acceptance criteria scenarios"
+      - "software nonfunctional slo requirements"
+    status: active
+    map: domains/software-engineering/requirements-engineering/map.yaml
+  - id: software-design
+    description: "Prefer cohesive modules and explicit state transitions over pattern proliferation."
+    triggers:
+      - "software design"
+      - "software design and interface contracts"
+      - "module interface cohesion design"
+      - "application concurrency race deadlock"
+      - "software design pattern selection"
+    status: active
+    map: domains/software-engineering/software-design/map.yaml
+  - id: software-security
+    description: "Embed defense into application boundaries while keeping offensive testing authorized and scoped."
+    triggers:
+      - "software security"
+      - "application security engineering"
+      - "application threat model data flow"
+      - "application oauth oidc authorization"
+      - "software dependency sbom vulnerability"
+    status: active
+    map: domains/software-engineering/software-security/map.yaml
+  - id: performance-engineering
+    description: "Use representative workloads and trace-level bottleneck evidence instead of tuning folklore."
+    triggers:
+      - "performance engineering"
+      - "application performance and capacity"
+      - "application cpu profiling flamegraph"
+      - "application load test capacity modeling"
+      - "application memory leak resource lifecycle"
+    status: active
+    map: domains/software-engineering/performance-engineering/map.yaml
+  - id: maintenance-evolution
+    description: "Protect existing behavior and upgrade viability while reducing accumulated operational risk."
+    triggers:
+      - "maintenance evolution"
+      - "software maintenance and evolution"
+      - "legacy refactor characterization tests"
+      - "api schema backward compatibility migration"
+      - "application incident root cause debugging"
+    status: active
+    map: domains/software-engineering/maintenance-evolution/map.yaml
+  - id: release-operations
+    description: "Treat release as a reversible operational change with explicit ownership and health checks."
+    triggers:
+      - "release operations"
+      - "software delivery and runtime operations"
+      - "software release readiness checklist"
+      - "application tracing logging telemetry"
+      - "application deployment canary rollback"
+    status: active
+    map: domains/software-engineering/release-operations/map.yaml
+  - id: engineering-process
+    description: "Tie engineering plans to measurable delivery capacity and decision impact."
+    triggers:
+      - "engineering process"
+      - "software engineering process and economics"
+      - "software delivery estimation uncertainty"
+      - "software build versus buy economics"
+      - "engineering decision log governance"
+    status: active
+    map: domains/software-engineering/engineering-process/map.yaml
+  - id: foundations
+    description: "Use foundational correctness proofs where algorithmic assumptions materially affect software behavior."
+    triggers:
+      - "foundations"
+      - "computing and engineering foundations"
+      - "algorithm complexity memory bounds"
+      - "numeric precision overflow application"
+      - "binary protocol serialization compatibility"
+    status: active
+    map: domains/software-engineering/foundations/map.yaml

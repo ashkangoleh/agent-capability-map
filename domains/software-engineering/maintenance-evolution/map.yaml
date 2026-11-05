@@ -1,0 +1,22 @@
+schema_version: 1
+id: maintenance-evolution
+kind: map
+children:
+  - id: legacy-refactoring
+    description: "Use behavior characterization before decomposing legacy code."
+    triggers:
+      - "legacy refactor characterization tests"
+    status: active
+    skills: domains/software-engineering/maintenance-evolution/legacy-refactoring/skills.yaml
+  - id: compatibility-migrations
+    description: "Stage application/database changes across version overlap."
+    triggers:
+      - "api schema backward compatibility migration"
+    status: active
+    skills: domains/software-engineering/maintenance-evolution/compatibility-migrations/skills.yaml
+  - id: incident-debugging
+    description: "Separate mitigation from root cause with evidence-preserving incident analysis."
+    triggers:
+      - "application incident root cause debugging"
+    status: active
+    skills: domains/software-engineering/maintenance-evolution/incident-debugging/skills.yaml

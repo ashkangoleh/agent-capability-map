@@ -1,0 +1,13 @@
+schema_version: 1
+id: economics-risk
+kind: skill-registry
+skills:
+  - id: swe-engineering-process-economics-risk
+    path: .agents/skills/software-engineering/engineering-process/economics-risk/swe-engineering-process-economics-risk/SKILL.md
+    description: "Use for software build versus buy economics tasks in Software Engineering Process and Economics; verify compare architecture and procurement options on lifecycle value and risk. and reject unsupported release or safety claims."
+    triggers:
+      - "software build versus buy economics"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

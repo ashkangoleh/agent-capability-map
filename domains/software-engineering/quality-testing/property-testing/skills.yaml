@@ -1,0 +1,13 @@
+schema_version: 1
+id: property-testing
+kind: skill-registry
+skills:
+  - id: swe-quality-testing-property-testing
+    path: .agents/skills/software-engineering/quality-testing/property-testing/swe-quality-testing-property-testing/SKILL.md
+    description: "Use for property based fuzz testing tasks in Software Testing and Verification; verify derive generative invariants and shrinking strategies from domain rules. and reject unsupported release or safety claims."
+    triggers:
+      - "property based fuzz testing"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

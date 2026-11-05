@@ -1,0 +1,13 @@
+schema_version: 1
+id: integration-resilience
+kind: skill-registry
+skills:
+  - id: swe-backend-integration-resilience
+    path: .agents/skills/software-engineering/backend/integration-resilience/swe-backend-integration-resilience/SKILL.md
+    description: "Use for service integration retry budget tasks in Backend and API Engineering; verify design outbound RPC/HTTP clients with bounded retries, circuit breakers and backpressure. and reject unsupported release or safety claims."
+    triggers:
+      - "service integration retry budget"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

@@ -1,0 +1,29 @@
+schema_version: 1
+id: software-architecture
+kind: map
+children:
+  - id: architecture-decisions
+    description: "Record tradeoffs, constraints and consequences rather than architecture-by-fashion."
+    triggers:
+      - "software architecture decision record"
+      - "software architecture"
+    status: active
+    skills: domains/software-engineering/software-architecture/architecture-decisions/skills.yaml
+  - id: service-boundaries
+    description: "Choose service boundaries and failure semantics before splitting deployments."
+    triggers:
+      - "microservice boundary consistency"
+    status: active
+    skills: domains/software-engineering/software-architecture/service-boundaries/skills.yaml
+  - id: domain-modeling
+    description: "Capture domain language and aggregate consistency without turning entities into abstractions."
+    triggers:
+      - "domain driven design bounded contexts"
+    status: active
+    skills: domains/software-engineering/software-architecture/domain-modeling/skills.yaml
+  - id: system-modernization
+    description: "Migrate incrementally using parity checks and reversible traffic shifting."
+    triggers:
+      - "strangler modernization legacy migration"
+    status: active
+    skills: domains/software-engineering/software-architecture/system-modernization/skills.yaml

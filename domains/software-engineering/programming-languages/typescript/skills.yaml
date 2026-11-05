@@ -1,0 +1,14 @@
+schema_version: 1
+id: typescript
+kind: skill-registry
+skills:
+  - id: swe-programming-languages-typescript
+    path: .agents/skills/software-engineering/programming-languages/typescript/swe-programming-languages-typescript/SKILL.md
+    description: "Use for typescript strict type safety tasks in Programming Language Engineering; verify preserve runtime validation despite compile-time TypeScript types. and reject unsupported release or safety claims."
+    triggers:
+      - "typescript strict type safety"
+      - "typescript"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

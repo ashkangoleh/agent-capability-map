@@ -1,0 +1,13 @@
+schema_version: 1
+id: android-delivery
+kind: skill-registry
+skills:
+  - id: swe-mobile-development-android-delivery
+    path: .agents/skills/software-engineering/mobile-development/android-delivery/swe-mobile-development-android-delivery/SKILL.md
+    description: "Use for android app lifecycle architecture tasks in Native and Cross-Platform Mobile Engineering; verify implement Android lifecycle, permissions and background work according to SDK constraints. and reject unsupported release or safety claims."
+    triggers:
+      - "android app lifecycle architecture"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

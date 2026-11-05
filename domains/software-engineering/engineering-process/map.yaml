@@ -1,0 +1,22 @@
+schema_version: 1
+id: engineering-process
+kind: map
+children:
+  - id: estimation-planning
+    description: "Estimate work with risks, dependencies and uncertainty rather than false precision."
+    triggers:
+      - "software delivery estimation uncertainty"
+    status: active
+    skills: domains/software-engineering/engineering-process/estimation-planning/skills.yaml
+  - id: economics-risk
+    description: "Compare architecture and procurement options on lifecycle value and risk."
+    triggers:
+      - "software build versus buy economics"
+    status: active
+    skills: domains/software-engineering/engineering-process/economics-risk/skills.yaml
+  - id: engineering-adr
+    description: "Record and revisit engineering decisions with explicit governance."
+    triggers:
+      - "engineering decision log governance"
+    status: active
+    skills: domains/software-engineering/engineering-process/engineering-adr/skills.yaml

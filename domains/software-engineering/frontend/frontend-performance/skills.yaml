@@ -1,0 +1,13 @@
+schema_version: 1
+id: frontend-performance
+kind: skill-registry
+skills:
+  - id: swe-frontend-frontend-performance
+    path: .agents/skills/software-engineering/frontend/frontend-performance/swe-frontend-frontend-performance/SKILL.md
+    description: "Use for frontend bundle web performance tasks in Frontend and Browser Engineering; verify optimize real user performance against a browser-based budget. and reject unsupported release or safety claims."
+    triggers:
+      - "frontend bundle web performance"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

@@ -1,0 +1,13 @@
+schema_version: 1
+id: authentication-authorization
+kind: skill-registry
+skills:
+  - id: swe-software-security-authentication-authorization
+    path: .agents/skills/software-engineering/software-security/authentication-authorization/swe-software-security-authentication-authorization/SKILL.md
+    description: "Use for application oauth oidc authorization tasks in Application Security Engineering; verify check identity, session, token audience and per-resource access enforcement. and reject unsupported release or safety claims."
+    triggers:
+      - "application oauth oidc authorization"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

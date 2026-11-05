@@ -1,0 +1,13 @@
+schema_version: 1
+id: cross-platform-apps
+kind: skill-registry
+skills:
+  - id: swe-mobile-development-cross-platform-apps
+    path: .agents/skills/software-engineering/mobile-development/cross-platform-apps/swe-mobile-development-cross-platform-apps/SKILL.md
+    description: "Use for flutter react native mobile architecture tasks in Native and Cross-Platform Mobile Engineering; verify choose shared versus native modules based on performance, platform behavior and maintainability. and reject unsupported release or safety claims."
+    triggers:
+      - "flutter react native mobile architecture"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

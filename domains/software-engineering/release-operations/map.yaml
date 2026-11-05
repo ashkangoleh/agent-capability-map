@@ -1,0 +1,22 @@
+schema_version: 1
+id: release-operations
+kind: map
+children:
+  - id: release-readiness
+    description: "Gate releases on behavior, compatibility, security, operations and rollback."
+    triggers:
+      - "software release readiness checklist"
+    status: active
+    skills: domains/software-engineering/release-operations/release-readiness/skills.yaml
+  - id: service-observability
+    description: "Instrument the user-visible SLO and diagnose cause across service boundaries."
+    triggers:
+      - "application tracing logging telemetry"
+    status: active
+    skills: domains/software-engineering/release-operations/service-observability/skills.yaml
+  - id: deployment-recovery
+    description: "Stage application changes with measurable rollout and data-safe recovery."
+    triggers:
+      - "application deployment canary rollback"
+    status: active
+    skills: domains/software-engineering/release-operations/deployment-recovery/skills.yaml
