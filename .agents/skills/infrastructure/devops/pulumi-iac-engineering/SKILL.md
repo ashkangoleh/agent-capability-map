@@ -2,7 +2,7 @@
 name: pulumi-iac-engineering
 description: "Engineer Pulumi infrastructure programs with typed components, stack configuration, secrets and preview-driven deployment."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # pulumi-iac-engineering
@@ -36,3 +36,6 @@ Pulumi runtime/language, provider versions, stack state, secrets backend and clo
 
 ## Output contract
 Return the requested design or diagnosis with exact scope, assumptions, evidence, safe procedure, failure modes, validation and rollback. Never claim production changes or tests that were not performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

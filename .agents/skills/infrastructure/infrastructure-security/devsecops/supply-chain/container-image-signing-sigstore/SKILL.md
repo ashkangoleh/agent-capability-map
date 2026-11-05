@@ -2,7 +2,7 @@
 name: container-image-signing-sigstore
 description: "Sign and verify container artifacts with Sigstore/Cosign and enforce provenance at deployment boundaries."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # container-image-signing-sigstore
@@ -36,3 +36,6 @@ Registry, identity issuer, keyless/key mode, trust roots, digest policy and admi
 
 ## Output contract
 Return the requested design or diagnosis with exact scope, assumptions, evidence, safe procedure, failure modes, validation and rollback. Never claim production changes or tests that were not performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

@@ -2,7 +2,7 @@
 name: policy-as-code-opa-kyverno
 description: "Design policy-as-code controls with OPA/Gatekeeper and Kyverno for admission, validation and mutation."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # policy-as-code-opa-kyverno
@@ -37,3 +37,6 @@ Cluster/API versions, policy scope, exemptions, audit mode and enforcement rollo
 
 ## Output contract
 Return the requested design or diagnosis with exact scope, assumptions, evidence, safe procedure, failure modes, validation and rollback. Never claim production changes or tests that were not performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

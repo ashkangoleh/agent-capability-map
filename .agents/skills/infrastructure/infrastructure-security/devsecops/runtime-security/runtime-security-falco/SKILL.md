@@ -2,7 +2,7 @@
 name: runtime-security-falco
 description: "Deploy runtime threat detection with Falco rules, signal quality, response ownership and safe tuning."
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # runtime-security-falco
@@ -44,3 +44,6 @@ Report the observed Falco version, driver and target kernel, exact ruleset/overr
 
 ## Output contract
 Produce an environment-specific plan or diagnosis with evidence, exact version assumptions, driver/rules/alerts coverage, canary and rollback gates, observed test results and unresolved risks. Do not execute privileged changes, run simulated attacks or declare detector health without explicit authorization and measured evidence.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

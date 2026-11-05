@@ -3,7 +3,7 @@ name: configuration-management-puppet-chef-salt
 description: "Engineer desired-state host configuration with Puppet, Chef, Salt and Nix-style reproducible configuration."
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # configuration-management-puppet-chef-salt
@@ -46,3 +46,6 @@ Fleet size, OS families, agent/pull model, control plane, desired-state repo, se
 
 ## Output contract
 Return exact scope, assumptions, observed evidence, safe procedure, failure modes, verification, rollback and residual risk. Distinguish facts from hypotheses and never claim tests or production changes that were not actually performed.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
