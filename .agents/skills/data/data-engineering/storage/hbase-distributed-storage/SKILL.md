@@ -2,7 +2,7 @@
 name: hbase-distributed-storage
 description: "Design HBase row keys, regions, compactions, replication and consistency for wide-column workloads."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # hbase-distributed-storage
@@ -35,3 +35,6 @@ HBase/Hadoop release, row-key pattern, region count, write rate, TTL and replica
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

@@ -3,7 +3,7 @@ name: streaming-event-time-watermark-window
 description: "Design event-time streaming windows with watermarks, allowed lateness, idle partitions, triggers, state retention and correction semantics."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # streaming-event-time-watermark-window
@@ -41,3 +41,6 @@ Return event-time definition, window/watermark policy, late-data contract, state
 ## Official or primary references
 - https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/event-time/
 - https://spark.apache.org/docs/latest/streaming/apis-on-dataframes-and-datasets.html
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

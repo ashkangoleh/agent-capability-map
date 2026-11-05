@@ -3,7 +3,7 @@ name: kafka-streams-ksqldb-engineering
 description: "Build Kafka Streams and ksqlDB applications with partition-aware joins, state stores, changelog topics and operational recovery."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # kafka-streams-ksqldb-engineering
@@ -41,3 +41,6 @@ Return topology/key design, state/changelog plan, processing guarantee, deployme
 ## Official or primary references
 - https://kafka.apache.org/documentation/streams/
 - https://docs.ksqldb.io/en/latest/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

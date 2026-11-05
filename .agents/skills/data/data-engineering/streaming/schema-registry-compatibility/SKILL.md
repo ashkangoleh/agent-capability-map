@@ -3,7 +3,7 @@ name: schema-registry-compatibility
 description: "Govern Avro, Protobuf and JSON Schema evolution with subject naming, compatibility modes and producer/consumer rollout controls."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # schema-registry-compatibility
@@ -40,3 +40,6 @@ Return subject strategy, format-specific compatibility analysis, rollout order, 
 ## Official or primary references
 - https://docs.confluent.io/platform/current/schema-registry/fundamentals/schema-evolution.html
 - https://www.apicur.io/registry/docs/apicurio-registry/3.0.x/getting-started/assembly-what-is-apicurio-registry.html
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

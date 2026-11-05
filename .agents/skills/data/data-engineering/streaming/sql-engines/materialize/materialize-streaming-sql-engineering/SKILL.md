@@ -3,7 +3,7 @@ name: materialize-streaming-sql-engineering
 description: "Engineer Materialize streaming SQL with sources, sinks, indexes, logical timestamps, arrangements and compaction."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # materialize-streaming-sql-engineering
@@ -39,3 +39,6 @@ Return source/timestamp model, view/index design, compaction and recovery.
 
 ## Official references
 - https://materialize.com/docs/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

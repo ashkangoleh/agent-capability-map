@@ -3,7 +3,7 @@ name: end-to-end-delivery-semantics
 description: "Reason about at-most-once, at-least-once and exactly-once across source offsets, processor state, transactions and external sinks."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # end-to-end-delivery-semantics
@@ -41,3 +41,6 @@ Return commit-boundary diagram, guarantee matrix, idempotency design, fault-inje
 ## Official or primary references
 - https://kafka.apache.org/documentation/#semantics
 - https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/checkpoints/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

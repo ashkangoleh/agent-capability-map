@@ -3,7 +3,7 @@ name: risingwave-streaming-sql-engineering
 description: "Operate RisingWave streaming SQL with sources, sinks, materialized views, checkpoints, state, backpressure and recovery."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # risingwave-streaming-sql-engineering
@@ -39,3 +39,6 @@ Return SQL/dataflow design, source/sink guarantee matrix, capacity and replay st
 
 ## Official references
 - https://docs.risingwave.com/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

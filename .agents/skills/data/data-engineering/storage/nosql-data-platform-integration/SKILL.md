@@ -2,7 +2,7 @@
 name: nosql-data-platform-integration
 description: "Integrate MongoDB, Cassandra and Redis into analytical pipelines while preserving source semantics."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # nosql-data-platform-integration
@@ -37,3 +37,6 @@ Database/version, key model, change streams/log support, consistency, TTL, neste
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

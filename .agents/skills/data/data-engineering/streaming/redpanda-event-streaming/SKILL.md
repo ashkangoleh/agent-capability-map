@@ -3,7 +3,7 @@ name: redpanda-event-streaming
 description: "Operate Redpanda Kafka-API-compatible streaming clusters with Raft replication, tiered storage, consumer recovery and migration controls."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # redpanda-event-streaming
@@ -40,3 +40,6 @@ Return API compatibility matrix, topology, retention plan, migration runbook and
 ## Official or primary references
 - https://docs.redpanda.com/
 - https://docs.redpanda.com/current/manage/cluster-maintenance/rolling-upgrades/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.
