@@ -2,7 +2,7 @@
 name: feast-online-offline-feature-store
 description: Build Feast offline/online feature serving with point-in-time joins, freshness TTL and train-serve parity.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # feast-online-offline-feature-store
@@ -33,3 +33,6 @@ Feast version, entity keys, data source event time, feature views, offline store
 
 ## Output contract
 Provide the actual requested architecture, implementation or evaluation with explicit preconditions, evidence, reproducibility, monitoring, rollback and unresolved uncertainty. Do not execute risky operations without permission.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.

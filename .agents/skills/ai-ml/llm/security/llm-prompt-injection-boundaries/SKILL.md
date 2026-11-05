@@ -2,7 +2,7 @@
 name: llm-prompt-injection-boundaries
 description: Threat-model and test prompt injection across retrieval, tools and agent messages using least privilege and data isolation.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # llm-prompt-injection-boundaries
@@ -33,3 +33,6 @@ Agent host, tool permissions, retrieved content channels, secrets, sensitive ope
 
 ## Output contract
 Provide the actual requested architecture, implementation or evaluation with explicit preconditions, evidence, reproducibility, monitoring, rollback and unresolved uncertainty. Do not execute risky operations without permission.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
