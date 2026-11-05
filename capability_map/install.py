@@ -25,19 +25,24 @@ def _powershell_quote(value):
 
 
 def instruction_text(root=None):
-    master_root = Path(root or Path(__file__).resolve().parents[1]).expanduser().resolve()
+    fallback = (
+        Path(sys.executable).resolve().parent
+        if getattr(sys, "frozen", False)
+        else Path(__file__).resolve().parents[1]
+    )
+    master_root = Path(root or fallback).expanduser().resolve()
+    # A frozen executable is the application itself, not a Python interpreter.
+    # The host must never be instructed to run "capability-map -m capability_map".
+    app_args = [] if getattr(sys, "frozen", False) else ["-m", "capability_map"]
+    app_args += ["--root", str(master_root), "resolve"]
     if os.name == "nt":
-        command = (
-            "& " + _powershell_quote(sys.executable)
-            + " -m capability_map --root "
-            + _powershell_quote(master_root) + " resolve"
+        command = "& " + " ".join(
+            _powershell_quote(argument) if index == 0 or index == len(app_args) - 1
+            else argument
+            for index, argument in enumerate([sys.executable, *app_args])
         )
     else:
-        command = (
-            shlex.quote(sys.executable)
-            + " -m capability_map --root "
-            + shlex.quote(str(master_root)) + " resolve"
-        )
+        command = " ".join(shlex.quote(argument) for argument in [sys.executable, *app_args])
     return (
         "## Global Master Capability Router\n\n"
         "For substantive requests that benefit from a reusable specialist procedure, "

@@ -1,5 +1,7 @@
 # Cross-platform CLI: Linux, Windows, Node.js
 
+**New:** Linux and Windows users can also run the native frozen CLI without installing either Python or Node.js. It is shipped as a self-contained ZIP (executable + permanent catalog/roles/skills), not a standalone script. See [Standalone distribution](STANDALONE_DISTRIBUTION.md) for download and setup. The instructions below describe the original source-installed Python/Node developer clients.
+
 All entry points share **one authoritative Python router**. Node is a subprocess bridge, not a Python-free implementation. Requirements: Python 3.10+, PyYAML installed with the project, and Node.js 20+ for the Node frontend. The Git checkout containing catalog/, domains/, and .agents/skills/ must remain available. Neither the Python package nor this private Node package is claimed to be published to a public registry.
 
 ## Linux

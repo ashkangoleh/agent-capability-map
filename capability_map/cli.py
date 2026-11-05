@@ -12,7 +12,14 @@ from .router import Router, RouterError
 
 
 def root_location():
-    return Path(os.environ.get("CAPABILITY_MAP_HOME", Path(__file__).resolve().parents[1]))
+    configured = os.environ.get("CAPABILITY_MAP_HOME")
+    if configured:
+        return Path(configured)
+    if getattr(sys, "frozen", False):
+        # External catalogs, roles and skills live beside the shipped executable.
+        # sys._MEIPASS is transient for --onefile and must never be a skill root.
+        return Path(sys.executable).resolve().parent
+    return Path(__file__).resolve().parents[1]
 
 
 def main(argv=None):

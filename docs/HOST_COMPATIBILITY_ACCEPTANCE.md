@@ -4,6 +4,10 @@
 **Reviewed:** 2026-11-05  
 **Canonical sources:** 344 nested `SKILL.md` manifests selected by a YAML registry; all native-host conclusions below remain version-specific.
 
+## Standalone native binary and stable host references
+
+A frozen `capability-map[.exe]` installed from the complete OS-specific distribution ZIP uses its executable's directory as the graph root and writes a native executable invocation into host instructions. Unlike Python source installs, it must **never** write `-m capability_map`, nor point to the PyInstaller temporary extraction directory. All 344 skills and 263 roles are adjacent to the binary and retain stable file paths after process exit. Moving the distribution requires reapplying the host instructions. Tests verify five-host installation and stable paths on Linux and Windows; they do not constitute native-agent execution. See `docs/STANDALONE_DISTRIBUTION.md`.
+
 ## Windows and Node.js CLI plus role-file read scope
 
 The installer uses an absolute `--root` argument and OS-specific quoting (PowerShell on Windows, sh-compatible quoting on Unix). The Node.js entrypoint is a `shell: false` bridge to the same Python router, **not** a separate routing engine or Python-free distribution. See `docs/CROSS_PLATFORM_CLI.md`.

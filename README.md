@@ -15,6 +15,12 @@ The last recorded full graph audit counted 41 top-level domains and 322 active S
 
 **No slash command is required** to express the task. However, a host must actually follow its global instructions and be able to invoke the CLI. Invocation reliability and token savings are not yet measured; this is not a universal native plugin.
 
+## Native standalone executable (no Python, Node.js or Bash installation)
+
+Download the matching **Linux x64** or **Windows x64** distribution ZIP from the successful `standalone-release` job in GitHub Actions, extract the **entire** folder, then invoke its `capability-map` or `capability-map.exe` directly. The PyInstaller-built executable contains its own Python runtime and YAML parser; catalog, roles and skill manifests are shipped beside it at permanent paths. **Do not copy only the executable**; resolver paths and installed host instructions require the full extracted tree. Linux and Windows artifacts are built separately and tested with the external Python/Node toolchains removed from `PATH`.
+
+Detailed commands, archive integrity, limitations and host installation: [Standalone guide](docs/STANDALONE_DISTRIBUTION.md).
+
 ## Linux, Windows and Node.js CLI
 
 The same authoritative Python router can be invoked with the native `capability-map` console script on Linux and Windows, or through the local `capability-map-node` Node.js shim. Every installed host bootstrap embeds the absolute master repository path. Node.js requires Python 3.10+ and a checked-out, installed copy of this repository; the npm package is not published. See [Cross-platform CLI](docs/CROSS_PLATFORM_CLI.md) for validated platform-specific examples and security limitations.

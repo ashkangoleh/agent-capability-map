@@ -6,7 +6,18 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Windows role path portability fix (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Native Linux/Windows standalone ZIP distributions (2026-11-05)
+
+- Baseline: `pre_release` at `4fcf1c77e9846bfd5b983c48ad1cb72d00ba7cfb` (passed previous cross-platform CI). Work remains scoped to Infrastructure + distribution hardening; do not start any other domain or merge main.
+- Build design is **PyInstaller 6.22.3 --onefile executable plus permanent sidecar data** for Linux x64 and Windows x64. Entire distribution ZIP is self-contained for end users: **no separate Python, Node, Git Bash or WSL installation needed**, but the executable **cannot be distributed alone** because the 344 SKILL.md files, 263 domain ROLE.md files and YAML registries must exist at stable paths.
+- New scripts: `scripts/standalone_entry.py`, `scripts/build_standalone.py` and `scripts/smoke_standalone.py`, plus `tests/test_standalone_contract.py`. Build preserves catalog/, domains/, .agents/skills/; emits a manifest of SHA-256 assets and a platform ZIP. Not cryptographically signed.
+- `capability_map/cli.py` detects frozen mode and uses parent of `sys.executable` as root, not transient `sys._MEIPASS`. `capability_map/install.py` writes direct absolute binary invocation without `-m capability_map` in frozen mode, keeping existing Python source behavior unchanged and native PowerShell quoting.
+- Added `standalone-release` GitHub Actions matrix on Ubuntu 24.04 and Windows 2022, installing Python/PyInstaller **only in build jobs**, running archive-extracted smoke with stripped Python/Node PATH and publishing named ZIP artifacts. Includes apply/resolve/validate/host-install regression and path-with-spaces checks.
+- Docs: `docs/STANDALONE_DISTRIBUTION.md`, cross-platform guide, README and host compatibility notes.
+- **CI for new SHA must be verified**. Existing 344 skills, 263 role contracts, deterministic routing and max-five domain scopes must not change. No native-host certification or execution-quality A/B claims.
+- After green CI, return to one-domain-at-a-time expansion with explicit user authorization; next domains' hierarchy and role contracts remain incomplete.
+
+## HISTORICAL CHECKPOINT — Windows role path portability fix (2026-11-05)
 
 - Baseline `pre_release` commit: `525134eac830d6b5626dc8ae5b6918d18c57643b`; workflow `42081744103` failed because **Windows** `role_contract_path` constructed a backslash path via native `Path` but `secure_path` correctly rejects backslashes in catalog-relative paths.
 - Fixed internal role path construction to use `"/".join(("domains", *parts, "ROLE.md"))` from already validated route components, identical across Linux/Windows, without weakening security checks.
