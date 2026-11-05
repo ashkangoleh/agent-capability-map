@@ -3,7 +3,7 @@ name: gravitino-federated-catalog-operations
 description: "Operate Apache Gravitino metalakes, federated catalogs and Iceberg REST service with version-scoped access control, discovery and upgrade recovery."
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # gravitino-federated-catalog-operations
@@ -43,3 +43,6 @@ Return metalake/provider inventory, interface separation, versioned capability m
 - https://gravitino.apache.org/docs/next/iceberg-rest-service/
 - https://gravitino.apache.org/docs/next/catalogs-and-schemas/
 - https://gravitino.apache.org/blog/gravitino-1-3-1-release-notes/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

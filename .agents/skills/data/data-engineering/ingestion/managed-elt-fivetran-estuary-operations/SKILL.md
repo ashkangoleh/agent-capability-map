@@ -2,7 +2,7 @@
 name: managed-elt-fivetran-estuary-operations
 description: "Operate managed ELT connectors with connector limits, CDC semantics, destination cost and exit planning."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # managed-elt-fivetran-estuary-operations
@@ -36,3 +36,6 @@ Provider/plan, connector, sync frequency, delete support, schema drift, pricing 
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

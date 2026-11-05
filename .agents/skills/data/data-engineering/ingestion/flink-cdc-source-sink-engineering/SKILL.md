@@ -2,7 +2,7 @@
 name: flink-cdc-source-sink-engineering
 description: "Design Flink CDC snapshot/log handoff, offsets, incremental snapshots and sink consistency."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # flink-cdc-source-sink-engineering
@@ -35,3 +35,6 @@ Flink CDC release, source DB, WAL/binlog retention, snapshot mode, keys and sink
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

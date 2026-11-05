@@ -3,7 +3,7 @@ name: nessie-versioned-catalog-operations
 description: "Operate Project Nessie versioned data catalogs: branches/tags, merge conflicts, Iceberg REST client migration, reference consistency and safe recovery."
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # nessie-versioned-catalog-operations
@@ -42,3 +42,6 @@ Return branch/tag and writer topology, versioned protocol compatibility, conflic
 ## Official references
 - https://projectnessie.org/guides/about/
 - https://projectnessie.org/guides/iceberg-rest/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

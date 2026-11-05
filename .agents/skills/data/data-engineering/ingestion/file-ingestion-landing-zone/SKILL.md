@@ -2,7 +2,7 @@
 name: file-ingestion-landing-zone
 description: "Engineer SFTP and object-store file ingestion with manifests, checksums, schema validation and safe publication."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # file-ingestion-landing-zone
@@ -36,3 +36,6 @@ Producer protocol, object store, naming, manifest, completion marker and late-fi
 
 ## Output contract
 Deliver the requested implementation or diagnosis with explicit assumptions, version constraints, failure semantics and reproducible validation. Do not fabricate benchmarks, APIs or test results.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

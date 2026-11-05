@@ -2,7 +2,7 @@
 name: polaris-iceberg-catalog-operations
 description: Evaluate and operate Apache Polaris REST catalogs with correct Iceberg authorization, credentials, commit and migration boundaries.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # polaris-iceberg-catalog-operations
@@ -33,3 +33,6 @@ Polaris version, Iceberg REST clients, catalog topology, object storage, identit
 
 ## Output contract
 Return requested runnable deliverable or assessment, assumptions, source-to-sink guarantees, test/rollout/rollback and operational cost. Mark unknown evidence explicitly.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

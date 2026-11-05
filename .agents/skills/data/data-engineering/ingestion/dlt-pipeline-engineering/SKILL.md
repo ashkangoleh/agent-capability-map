@@ -3,7 +3,7 @@ name: dlt-pipeline-engineering
 description: "Build dlt pipelines with explicit source resources, incremental state, schema evolution, destination loading and reproducible recovery."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # dlt-pipeline-engineering
@@ -42,3 +42,6 @@ Return source/resource model, cursor/state design, write disposition, schema pol
 ## Official or primary references
 - https://dlthub.com/docs/
 - https://dlthub.com/docs/general-usage/incremental-loading
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

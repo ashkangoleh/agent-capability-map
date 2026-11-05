@@ -3,7 +3,7 @@ name: apache-paimon-streaming-lakehouse
 description: "Design Apache Paimon tables with LSM storage, changelog production, Flink/Spark integration, compaction and snapshot lifecycle."
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # apache-paimon-streaming-lakehouse
@@ -41,3 +41,6 @@ Return table model, merge/changelog semantics, bucket design, engine compatibili
 ## Official or primary references
 - https://paimon.apache.org/docs/
 - https://github.com/apache/paimon
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

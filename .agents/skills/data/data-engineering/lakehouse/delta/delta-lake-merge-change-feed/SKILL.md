@@ -2,7 +2,7 @@
 name: delta-lake-merge-change-feed
 description: Implement version-compatible Delta Lake MERGE and change-data-feed consumers with deduplication, protocol and retention constraints.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # delta-lake-merge-change-feed
@@ -36,3 +36,6 @@ Inspect actual schemas, code, execution plans and operational logs first. Confir
 
 ## Delivery contract
 Provide the requested fully scoped implementation or assessment, with explicit assumptions, data grain, idempotency/replay contract, observability, test/rollout/rollback and trade-offs. Mark unknowns instead of fabricating engine APIs, performance or consistency.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

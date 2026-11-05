@@ -3,7 +3,7 @@ name: iceberg-rest-catalog-operations
 description: "Operate vendor-neutral Apache Iceberg REST catalogs: endpoint discovery, authorization, short-lived storage credentials, concurrent commits and cross-engine recovery."
 license: Proprietary
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # iceberg-rest-catalog-operations
@@ -52,3 +52,6 @@ Return selected vendor-neutral operations path, compatibility/authorization matr
 - https://iceberg.apache.org/rest-catalog-spec/
 - https://iceberg.apache.org/docs/latest/rest-catalog/
 - https://iceberg.apache.org/docs/nightly/rest-protocol/
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.

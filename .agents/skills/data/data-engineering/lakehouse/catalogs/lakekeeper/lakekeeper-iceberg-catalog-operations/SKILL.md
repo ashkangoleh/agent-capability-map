@@ -2,7 +2,7 @@
 name: lakekeeper-iceberg-catalog-operations
 description: Evaluate and operate Lakekeeper Iceberg REST catalogs with warehouse authorization, metadata consistency and credential scopes.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # lakekeeper-iceberg-catalog-operations
@@ -33,3 +33,6 @@ Lakekeeper version, cloud/storage backends, Iceberg REST integration, project/wa
 
 ## Output contract
 Return requested runnable deliverable or assessment, assumptions, source-to-sink guarantees, test/rollout/rollback and operational cost. Mark unknown evidence explicitly.
+
+## Independent operational verification
+For deployable changes and incident response, consult the [specialist recovery and falsification protocol](references/acceptance-and-recovery.md) on demand. Preserve verified runtime evidence and refuse privileged mutations without authorization.
