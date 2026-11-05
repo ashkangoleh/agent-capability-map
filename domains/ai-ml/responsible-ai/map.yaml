@@ -12,18 +12,21 @@ children:
   - id: fairness-audit
     description: "responsible ai subgroup fairness audit: authorized cohorts, labels and error base rates"
     triggers:
+      - "model subgroup fairness confidence intervals review"
       - "responsible ai subgroup fairness audit"
     status: active
     skills: domains/ai-ml/responsible-ai/fairness-audit/skills.yaml
   - id: explanation-governance
     description: "responsible ai model transparency disclosure: model purpose, governance and appeal policy"
     triggers:
+      - "model card user disclosure appeal mechanism"
       - "responsible ai model transparency disclosure"
     status: active
     skills: domains/ai-ml/responsible-ai/explanation-governance/skills.yaml
   - id: risk-monitoring
     description: "responsible ai postdeployment impact monitoring: complaints, risk register and incident owners"
     triggers:
+      - "ai harm complaint monitoring remediation owners"
       - "responsible ai postdeployment impact monitoring"
     status: active
     skills: domains/ai-ml/responsible-ai/risk-monitoring/skills.yaml

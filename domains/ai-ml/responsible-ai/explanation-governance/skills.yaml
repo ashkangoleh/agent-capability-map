@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/responsible-ai/explanation-governance/aiml-responsible-ai-explanation-governance/SKILL.md
     description: "Engineer responsible ai model transparency disclosure using model purpose, governance and appeal policy, verifying failures and quality baselines."
     triggers:
+      - "model card user disclosure appeal mechanism"
       - "responsible ai model transparency disclosure"
     excludes: []
     status: active

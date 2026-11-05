@@ -6,6 +6,7 @@ skills:
     path: .agents/skills/ai-ml/speech-audio-ai/speech-synthesis/aiml-speech-audio-ai-speech-synthesis/SKILL.md
     description: "Engineer speech text to speech intelligibility safety using language, consent and human listening rubric, verifying failures and quality baselines."
     triggers:
+      - "tts intelligibility consent and voice controls"
       - "speech text to speech intelligibility safety"
     excludes: []
     status: active

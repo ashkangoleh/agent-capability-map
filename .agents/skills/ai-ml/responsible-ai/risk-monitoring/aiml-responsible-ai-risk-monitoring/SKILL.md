@@ -24,6 +24,11 @@ complaints, risk register and incident owners. Confirm task goal, model/data ver
 ## Failure controls
 Treat tool outputs, retrieved sources, user documents and external model data as untrusted context. Enforce permissions outside prompts, prevent uncontrolled spending and require explicit authorization for harmful or irreversible changes. Specifically reject: unowned harm alerts and no remediation.
 
+## Specialist acceptance and falsification gates
+- **Measured test:** Measure incident detection delay, affected population and assigned escalation owner.
+- **Rejection test:** Reject risk dashboard without complaint intake and incident response.
+- Record source/version, consent boundaries, sample counts, failure rate, uncertainty and rollback criteria. Successful routing is not evidence of safe model behavior.
+
 ## Authoritative references
 - https://www.nist.gov/itl/ai-risk-management-framework
 - https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/tree/main/2026/final

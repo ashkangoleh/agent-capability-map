@@ -129,6 +129,8 @@ children:
   - id: speech-audio-ai
     description: "speech audio ai"
     triggers:
+      - "spoken pii redaction recall on noisy audio"
+      - "tts intelligibility consent and voice controls"
       - "speaker diarization der overlap noise evaluation"
       - "speech evaluation"
       - "asr"
@@ -142,6 +144,9 @@ children:
   - id: responsible-ai
     description: "responsible ai"
     triggers:
+      - "ai harm complaint monitoring remediation owners"
+      - "model card user disclosure appeal mechanism"
+      - "model subgroup fairness confidence intervals review"
       - "responsible ai"
       - "model bias"
       - "ai risk"
