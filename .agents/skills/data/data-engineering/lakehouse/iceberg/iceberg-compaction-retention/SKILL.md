@@ -10,10 +10,10 @@ metadata:
 ## Activation boundary
 Use for Iceberg small files, manifest planning overhead, historical snapshot retention and orphan-file investigation. For schema/partition evolution use `iceberg-table-schema-partition-evolution`; for REST-catalog availability or authentication use the catalog specialist. Do not treat unmanaged Parquet folders as Iceberg tables.
 
-## Required evidence
+## Evidence and prerequisites
 Before proposing changes, determine the deployed **Spark, Iceberg and catalog** versions; table name/location and format version; current snapshot and refs; file-size/partition distribution; live writers and maximum write duration; time-travel, CDC/consumer, legal hold and RPO/RTO requirements; maintenance budget; data-file/delete-file semantics; and rollback constraints. Unknown inputs are a stop for irreversible operations, not permission to assume defaults.
 
-## Decision procedure
+## Production procedure
 1. Run only read-only inspection first: see [inspection and guarded SQL examples](examples/spark_maintenance.sql). Snapshot IDs, refs, current file counts and distribution must be observed from a real catalog, not invented.
 2. Choose **one** operation using [operation contracts](references/operations.md). File compaction, manifest rewrite, snapshot expiration and orphan deletion solve different problems and have different reversibility.
 3. For any proposed operation, prepare the JSON [offline plan](examples/preflight_plan.json). When **Python 3.10+ is available**, optionally run `python scripts/check_plan.py --plan examples/preflight_plan.json` from this skill directory. Without Python, perform the same checklist in [operation contracts](references/operations.md) manually; the standalone router does **not** require Python and does not automatically execute bundled scripts. The tool checks static guardrails only, never contacts Spark or deletes data, and always returns `manual_review_required` on success.
