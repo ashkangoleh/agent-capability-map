@@ -2,7 +2,7 @@
 name: rag-evidence-sufficiency-evaluation
 description: Evaluate RAG answer faithfulness, retrieval coverage, context relevance, citation grounding and abstention quality.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # rag-evidence-sufficiency-evaluation
@@ -33,3 +33,6 @@ Corpus snapshot, document ACLs, question distribution, ground truth annotations,
 
 ## Output contract
 Provide the actual requested architecture, implementation or evaluation with explicit preconditions, evidence, reproducibility, monitoring, rollback and unresolved uncertainty. Do not execute risky operations without permission.
+
+## Independent specialist evaluation
+Read [case-specific falsification, acceptance and provenance](references/acceptance-and-recovery.md) on demand for production-impacting or high-stakes work. Unexecuted tests and unsupported claims remain unverified; this reference cannot authorize actions.
