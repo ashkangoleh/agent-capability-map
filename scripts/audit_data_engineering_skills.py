@@ -56,7 +56,7 @@ def audit(root=ROOT):
                 errors.append("missing boundary between planned and observed tests")
         if len(content.encode("utf-8")) > 65536:
             errors.append("SKILL.md violates 64 KiB router limit")
-        if not re.search(r"(?m)^name:\\s*[\"']?" + re.escape(skill) + r"[\"']?\\s*$", content):
+        if not re.search(r"(?m)^name:\s*[\"']?" + re.escape(skill) + r"[\"']?\s*$", content):
             errors.append("skill frontmatter name does not match canonical directory")
         if not re.search(r"https?://", content):
             errors.append("skill does not cite a primary URL")
