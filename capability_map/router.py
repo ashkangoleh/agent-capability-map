@@ -73,41 +73,89 @@ ROLE_REQUIRED_SECTIONS = (
 )
 
 
-def role_contract_path(root, domain_id):
-    """Validate a domain-owned fixed-path reviewer contract without executing it."""
-    require_id(domain_id)
+MAX_ROLE_CHAIN_BYTES = 8192
+MAX_ROLE_CHAIN_FILES = 8
+
+
+def _role_parts(scope):
+    """Return validated canonical route components (not filesystem fragments)."""
+    if isinstance(scope, str):
+        parts = scope.split("/")
+    elif isinstance(scope, (tuple, list)):
+        parts = list(scope)
+    else:
+        raise RouterError("Domain role scope must be a route or route sequence")
+    if not parts or any(not isinstance(p, str) or not ID.fullmatch(p) for p in parts):
+        raise RouterError("Invalid domain role route")
+    return tuple(parts)
+
+
+def _role_candidate(root, parts):
     root = Path(root).expanduser().resolve()
-    domain_dir = root / "domains" / domain_id
-    original = domain_dir / "ROLE.md"
-    if domain_dir.is_symlink() or original.is_symlink():
-        raise RouterError(f"Symlinked domain role is not permitted: {domain_id}")
-    path = secure_path(root, f"domains/{domain_id}/ROLE.md")
+    candidate = root / "domains"
+    for segment in parts:
+        candidate /= segment
+        if candidate.is_symlink():
+            raise RouterError("Symlinked role directory is not permitted")
+    candidate /= "ROLE.md"
+    if candidate.is_symlink():
+        raise RouterError("Symlinked domain role is not permitted")
+    return candidate
+
+
+def role_contract_path(root, scope):
+    """Validate a fixed-path, source-controlled advisory role at any graph depth."""
+    parts = _role_parts(scope)
+    candidate = _role_candidate(root, parts)
+    path = secure_path(root, str(Path("domains", *parts, "ROLE.md")))
+    if path != candidate:
+        raise RouterError("Unexpected domain role location")
     if path.stat().st_size > MAX_ROLE_BYTES:
-        raise RouterError(f"Domain role exceeds size limit: {domain_id}")
+        raise RouterError(f"Domain role exceeds size limit: {'/'.join(parts)}")
     try:
         content = path.read_text(encoding="utf-8")
     except UnicodeError as exc:
-        raise RouterError(f"Domain role is not valid UTF-8: {domain_id}") from exc
+        raise RouterError(f"Domain role is not valid UTF-8: {'/'.join(parts)}") from exc
     if not content.startswith("---\n"):
-        raise RouterError(f"Domain role lacks YAML frontmatter: {domain_id}")
+        raise RouterError(f"Domain role lacks YAML frontmatter: {'/'.join(parts)}")
     frontmatter, sep, body = content[4:].partition("\n---\n")
     if not sep:
-        raise RouterError(f"Domain role frontmatter is not terminated: {domain_id}")
+        raise RouterError(f"Domain role frontmatter is not terminated: {'/'.join(parts)}")
     try:
         info = yaml.load(frontmatter, Loader=StrictLoader)
     except yaml.YAMLError as exc:
-        raise RouterError(f"Invalid domain role frontmatter: {domain_id}") from exc
+        raise RouterError(f"Invalid domain role frontmatter: {'/'.join(parts)}") from exc
     if not isinstance(info, dict) or set(info) != {"role_id", "version", "title"}:
-        raise RouterError(f"Invalid domain role metadata schema: {domain_id}")
-    if info["role_id"] != domain_id:
-        raise RouterError(f"Domain role ID mismatch: {domain_id}")
+        raise RouterError(f"Invalid domain role metadata schema: {'/'.join(parts)}")
+    if info["role_id"] != "/".join(parts):
+        raise RouterError(f"Domain role ID mismatch: {'/'.join(parts)}")
     if not isinstance(info["version"], str) or not re.fullmatch(r"1\.\d+\.\d+", info["version"]):
-        raise RouterError(f"Unsupported domain role version: {domain_id}")
+        raise RouterError(f"Unsupported domain role version: {'/'.join(parts)}")
     if not isinstance(info["title"], str) or not 8 <= len(info["title"]) <= 128:
-        raise RouterError(f"Invalid domain role title: {domain_id}")
+        raise RouterError(f"Invalid domain role title: {'/'.join(parts)}")
     if any(heading not in body for heading in ROLE_REQUIRED_SECTIONS):
-        raise RouterError(f"Missing domain role review section: {domain_id}")
+        raise RouterError(f"Missing domain role review section: {'/'.join(parts)}")
     return path
+
+
+def role_paths_for_route(root, route):
+    """Select only registered-route ancestors with roles, in parent-to-child order."""
+    parts = _role_parts(route)
+    selected = []
+    total_bytes = 0
+    for depth in range(1, len(parts) + 1):
+        scope = parts[:depth]
+        candidate = _role_candidate(root, scope)
+        if candidate.is_file() or candidate.is_symlink():
+            path = role_contract_path(root, scope)
+            selected.append(str(path))
+            total_bytes += path.stat().st_size
+            if len(selected) > MAX_ROLE_CHAIN_FILES or total_bytes > MAX_ROLE_CHAIN_BYTES:
+                raise RouterError("Domain role inheritance exceeds context budget")
+        elif depth == 1:
+            raise RouterError(f"Missing top-level domain role: {parts[0]}")
+    return selected
+
 
 def require_id(value):
     if not isinstance(value, str) or len(value) > 64 or not ID.fullmatch(value):
@@ -218,7 +266,9 @@ class Router:
             result["source"] = source
             result["match_strength"] = score
             if status == "matched" and source == "master" and route:
-                result["role_path"] = str(role_contract_path(self.root, route[0]))
+                role_paths = role_paths_for_route(self.root, route)
+                result["role_paths"] = role_paths
+                result["role_path"] = role_paths[0]  # Backward-compatible top-level alias.
         return result
 
     def _choose(self, request, entries, route, *, include_mapped=False):
@@ -540,8 +590,11 @@ class Router:
                 if name in names:
                     raise RouterError(f"Duplicate sibling ID {name}: {path}; sibling_ids={[child.get('id') for child in children]}")
                 names.add(name)
-                if depth == 0 and node.get("status") == "active":
-                    role_contract_path(self.root, name)
+                if node.get("status") == "active":
+                    scope = current_route
+                    candidate = _role_candidate(self.root, scope)
+                    if depth == 0 or candidate.is_file() or candidate.is_symlink():
+                        role_contract_path(self.root, scope)
                 if not isinstance(node.get("triggers"), list) or not node["triggers"]:
                     raise RouterError(f"Missing node triggers: {name}")
                 if node.get("map") and node.get("skills"):

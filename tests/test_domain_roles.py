@@ -44,8 +44,10 @@ class DomainRoleTests(unittest.TestCase):
                 self.assertEqual(result["source"], "master")
                 self.assertEqual(result["route"][0], domain)
                 self.assertEqual(Path(result["role_path"]), ROOT / "domains" / domain / "ROLE.md")
-                called.assert_called_once()
-                self.assertEqual(called.call_args.args[1], domain)
+                self.assertGreaterEqual(called.call_count, 1)
+                self.assertEqual(called.call_args_list[0].args[1], (domain,))
+                self.assertEqual(Path(result["role_paths"][0]), Path(result["role_path"]))
+                self.assertTrue(all(Path(path).is_file() for path in result["role_paths"]))
                 self.assertNotIn(result["role_path"], result["inspected_files"])
 
     def test_denied_and_unmatched_return_no_role(self):
@@ -61,6 +63,7 @@ class DomainRoleTests(unittest.TestCase):
             denied = Router(ROOT, home=home).resolve("Audit technical SEO canonical tags")
             self.assertEqual(denied["status"], "domain_not_enabled")
             self.assertNotIn("role_path", denied)
+            self.assertNotIn("role_paths", denied)
             allowed = Router(ROOT, home=home).resolve("Create a new PySpark project")
             self.assertEqual(allowed["status"], "matched")
             self.assertEqual(Path(allowed["role_path"]).parent.name, "data")
@@ -85,6 +88,7 @@ class DomainRoleTests(unittest.TestCase):
             self.assertEqual(result["status"], "matched", result)
             self.assertEqual(result["source"], "personal")
             self.assertNotIn("role_path", result)
+            self.assertNotIn("role_paths", result)
 
     def test_invalid_role_rejected(self):
         valid = (
@@ -116,8 +120,78 @@ class DomainRoleTests(unittest.TestCase):
             with self.assertRaises(RouterError):
                 role_contract_path(root, "data")
 
+
+    def test_data_engineering_pyspark_role_inheritance(self):
+        expected = [
+            "data",
+            "data/data-engineering",
+            "data/data-engineering/distributed-processing",
+            "data/data-engineering/distributed-processing/spark",
+            "data/data-engineering/distributed-processing/spark/pyspark",
+        ]
+        matched = Router(ROOT).resolve("Create a new PySpark project")
+        self.assertEqual(matched["status"], "matched")
+        self.assertEqual(matched["route"], expected[-1].split("/"))
+        self.assertEqual(
+            matched["role_paths"],
+            [str(ROOT / "domains" / path / "ROLE.md") for path in expected],
+        )
+        self.assertEqual(matched["role_path"], matched["role_paths"][0])
+        self.assertLessEqual(sum(Path(p).stat().st_size for p in matched["role_paths"]), 8192)
+
+    def test_specialized_data_science_and_backfill_roles(self):
+        cases = [
+            ("Plan a pipeline backfill recovery for missing dates",
+             "data/data-engineering/batch-ingestion/recovery"),
+            ("Create an Airflow DAG with retries",
+             "data/data-engineering/orchestration"),
+            ("Review Kafka consumer offsets and ordering",
+             "data/data-engineering/messaging"),
+        ]
+        for request, expected in cases:
+            with self.subTest(request=request):
+                result = Router(ROOT).resolve(request)
+                self.assertEqual(result["status"], "matched", result)
+                self.assertEqual(result["role_paths"][-1],
+                                 str(ROOT / "domains" / expected / "ROLE.md"))
+                self.assertEqual(result["role_paths"][0],
+                                 str(ROOT / "domains/data/ROLE.md"))
+
+    def test_role_scope_validation_and_symlinked_nested_parent(self):
+        from capability_map.router import role_paths_for_route
+        with self.assertRaises(RouterError):
+            role_paths_for_route(ROOT, ("data", "..", "ROLE.md"))
+        with self.assertRaises(RouterError):
+            role_contract_path(ROOT, "data/../security")
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "domains").mkdir()
+            target = root / "outside"
+            target.mkdir()
+            (root / "domains/data").symlink_to(target, target_is_directory=True)
+            with self.assertRaises(RouterError):
+                role_contract_path(root, "data")
+
+    def test_role_inheritance_does_not_override_profile(self):
+        with tempfile.TemporaryDirectory() as directory:
+            home = Path(directory)
+            config = home / ".config/agent-capability-map"
+            config.mkdir(parents=True)
+            (config / "domains.yaml").write_text(
+                "schema_version: 1\ndomains:\n  - data/data-engineering\n",
+                encoding="utf-8",
+            )
+            allowed = Router(ROOT, home=home).resolve("Create a new PySpark project")
+            self.assertEqual(allowed["status"], "matched")
+            self.assertEqual(allowed["route"][:2], ["data", "data-engineering"])
+            self.assertIn("data-engineering/ROLE.md", allowed["role_paths"][1])
+            denied = Router(ROOT, home=home).resolve("Audit technical SEO canonical tags")
+            self.assertEqual(denied["status"], "domain_not_enabled")
+            self.assertNotIn("role_paths", denied)
+
     def test_installer_mentions_roles_conditionally(self):
         instructions = instruction_text()
+        self.assertIn("role_paths", instructions)
         self.assertIn("role_path", instructions)
         self.assertIn("skill_path", instructions)
         self.assertIn("domain_not_enabled", instructions)

@@ -6,7 +6,17 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Domain roles for all 41 active top-level domains (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Hierarchical Domain Roles, Data Pilot (2026-11-05)
+
+- Baseline `pre_release` HEAD `95e1da143ab5dfb3cdd4069062e76676d2a52b1d`; no main merge or feature branch. User requires **independent specialist roles at meaningful hierarchical layers**, not only root domains.
+- Added support for parent-to-child `role_paths` on matched master results; preserved existing top-level `role_path` compatibility alias, existing skill_id and skill_path, and five-domain user allowlist. Overlay/non-matched results provide no role paths.
+- Canonical nested role location: `domains/<logical-route-components>/ROLE.md`, validated against route IDs and safe paths; optional nested roles inherit the parent if absent; invalid nested roles fail closed. Max **8 roles / 8192 bytes** combined, 4096 per file.
+- Data-only pilot creates independent roles at nine first-level Data subdomains, domain-specific second-level branches and deep Spark and recovery paths. No automatic role for every trivial routing node. The exact added role inventory and validation results must be counted from Git tree and tests; do **not** claim all nested roles for 41 domains are finished.
+- Updated bootstrap and installer to read the returned role_paths in order; changed instructions and regression tests, not routing triggers, skill bodies, permission grants or registered domain scopes.
+- Required validation: 344 global skills, 95 Infrastructure, zero flat and all 41 root roles, all 469 routing fixtures, complete unit suite. Check push CI for **new** commit SHA, separately from base `95e1da143ab5dfb3cdd4069062e76676d2a52b1d`.
+- Follow-up: evaluate actual quality of the Data roles, finish missing meaningful Data subdomains, then continue Infrastructure and other domains **one domain at a time**, checking user approval before advancing when appropriate. Native host load behavior and measured response improvement remain unverified.
+
+## HISTORICAL CHECKPOINT — Domain roles for all 41 active top-level domains (2026-11-05)
 
 - Baseline `pre_release`: `a559a69e926adbea86a4eaad4760d434bff321fd`. User explicitly authorized roles for **all current domains**, not just Infrastructure. Do not merge `main` or create branches.
 - Add `domains/<domain-id>/ROLE.md` for every active top-level domain in `catalog/root.yaml` (41). Each is a concise domain-specific output-quality review contract, **not a skill**.

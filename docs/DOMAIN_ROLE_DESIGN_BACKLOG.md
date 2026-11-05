@@ -11,6 +11,16 @@
 - `Router.validate()` verifies all 41 active top-level roles. `AGENTS.md` and installers now tell hosts to read only the matched role and selected skill. Other roles are never advertised on each request.
 - Role text can improve review questions, assumptions and output structure, but cannot re-route the skill, grant permissions, invent evidence, change user approvals or override the safety/security policy. Python validation is a path/schema check, **not** an LLM prompt-injection sandbox.
 
+## Hierarchical role inheritance (Data pilot: 2026-11-05)
+
+- A `ROLE.md` may be declared at any **existing logical route**: `domains/data/ROLE.md` → `domains/data/data-engineering/ROLE.md` → `domains/data/data-engineering/distributed-processing/ROLE.md` → `domains/data/data-engineering/distributed-processing/spark/ROLE.md` → `domains/data/data-engineering/distributed-processing/spark/pyspark/ROLE.md`.
+- The resolver returns `role_paths` ordered **parent to child** for authorized matched master results only; the historical `role_path` remains a top-level alias for backward compatibility.
+- Role paths are derived only from the **selected verified route**, never by guessing directory layouts or scanning unrelated domains. Absent deep roles inherit the nearest defined ancestor; an invalid present role fails closed.
+- Individual role files max 4096 bytes; the complete selected chain max **8192 bytes and 8 roles**. No silent truncation; overly verbose roles are a validation failure and must be consolidated.
+- The semantic responsibilities are layered: parent provides general principles, more-specific role provides specialized evaluation criteria, while the selected SKILL.md remains the procedural authority. A role never grants permissions, modifies the deterministic route or authorizes external actions.
+- **Data pilot** adds roles at nine first-level subdomains, selected meaningful branches of Data Engineering and Data Science, plus deeper distributed processing, Spark/PySpark and ingestion/recovery layers. Other domains keep existing top-level roles until their focused review and migration; do not misstate full hierarchical coverage for all 41.
+- Unit tests enforce selected role order, file safety, match-only availability, profile isolation and overall context bounds. Native host execution / output-quality uplift are still not measured.
+
 ## One-role-per-domain contract
 
 Each `ROLE.md` contains a concise, distinct decision lens, domain-specific evidence needs, review gates, failure/rejection criteria, and output contract. Domains remain separate: the Data domain role does not claim to subsume Data Science, and the Security domain role does not grant authorization for offensive activity.
