@@ -101,7 +101,7 @@ class DataEngineeringCoverageTests(unittest.TestCase):
     def test_pipeline_backfill_recovery_uses_single_canonical_nested_manifest(self):
         expected = ROOT / ".agents/skills/data/data-engineering/batch-ingestion/recovery/pipeline-backfill-recovery/SKILL.md"
         old = ROOT / ".agents/skills/pipeline-backfill-recovery/SKILL.md"
-        registry = load_yaml(ROOT, "domains/data/general-skills.yaml")
+        registry = load_yaml(ROOT, "domains/data/data-engineering/batch-ingestion/recovery/skills.yaml")
         entries = [skill for skill in registry["skills"] if skill["id"] == "pipeline-backfill-recovery"]
         self.assertEqual(len(entries), 1)
         self.assertEqual(entries[0]["path"], expected.relative_to(ROOT).as_posix())
@@ -119,6 +119,17 @@ class DataEngineeringCoverageTests(unittest.TestCase):
                 self.assertEqual(result["status"], "matched", result)
                 self.assertEqual(result["selected_skill"], "pipeline-backfill-recovery", result)
                 self.assertEqual(Path(result["skill_path"]).resolve(), expected.resolve())
+
+    def test_recovery_registry_does_not_expose_unrelated_data_skills(self):
+        graph = load_yaml(ROOT, "domains/data/data-engineering/batch-ingestion/map.yaml")
+        recovery = next(node for node in graph["children"] if node["id"] == "recovery")
+        self.assertEqual(recovery["skills"], "domains/data/data-engineering/batch-ingestion/recovery/skills.yaml")
+        registry = load_yaml(ROOT, recovery["skills"])
+        self.assertEqual({skill["id"] for skill in registry["skills"]}, {"pipeline-backfill-recovery"})
+        generic = load_yaml(ROOT, "domains/data/general-skills.yaml")
+        self.assertNotIn("pipeline-backfill-recovery", {skill["id"] for skill in generic["skills"]})
+        self.assertEqual(self.router.resolve("Plan a pipeline backfill recovery for missing dates")["selected_skill"],
+                         "pipeline-backfill-recovery")
 
     def test_trino_generic_request_abstains_without_task_semantics(self):
         result = self.router.resolve("Design a Trino data pipeline")

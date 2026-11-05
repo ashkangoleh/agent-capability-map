@@ -33,17 +33,3 @@ skills:
     excludes:
       - "pyspark"
     status: active
-  - id: pipeline-backfill-recovery
-    path: .agents/skills/data/data-engineering/batch-ingestion/recovery/pipeline-backfill-recovery/SKILL.md
-    description: "Plan deterministic pipeline backfills, replay windows, target idempotency and safe recovery with reconciliation gates."
-    triggers:
-      - "backfill recovery"
-      - "pipeline backfill"
-      - "data backfill"
-      - "replay failed pipeline"
-      - "pipeline replay"
-      - "incremental backfill"
-      - "historical backfill"
-    excludes:
-      - "pyspark structured streaming"
-    status: active

@@ -6,7 +6,19 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Final 16 legacy-flat skills nested (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Recovery registry isolation (2026-11-05)
+
+- Branch: `pre_release`; baseline SHA before this change: `1678fe619d708071131e98e0db52764c202629ae`.
+- Created `domains/data/data-engineering/batch-ingestion/recovery/skills.yaml` containing the **unchanged** existing `pipeline-backfill-recovery` registry record.
+- The `recovery` child of `domains/data/data-engineering/batch-ingestion/map.yaml` now uses the dedicated registry rather than `domains/data/general-skills.yaml`.
+- Removed the backfill specialist's former record from `domains/data/general-skills.yaml`, leaving the unrelated general entries intact. This prevents recovery from offering dbt/general engineering choices and stops the database generic route from advertising a backfill specialist.
+- Updated `tests/test_data_engineering_coverage.py` to assert isolated registry contents, canonical manifest path, no stale entry in the shared general registry and representative backfill routing. Existing routing fixtures remain unchanged.
+- Physical manifest count stays **344/344 nested, 0 flat**, with no changes to any SKILL.md contents or IDs.
+- This is an intentional routing-visibility change; recheck actual GitHub Actions graph, routing fixtures and the entire unittest suite on the new commit before reporting PASS.
+- The remaining `data/general-skills.yaml` still serves the database relational generic route; its broader generic skills need separate semantic review, not an unreviewed renaming or wholesale deletion.
+- Host-native skill discovery and actual LLM invocation across five target clients: **NOT VERIFIED**. Data subdomain specialist completeness: **NOT VERIFIED**.
+
+## HISTORICAL CHECKPOINT — Final 16 legacy-flat skills nested (2026-11-05)
 
 - Canonical working branch: `pre_release`; baseline HEAD before this migration: `61b304fdf8e4749bcd87a5de76912c2f79968c63`. Do not merge `main` or create feat/fix branches.
 - Migrated all 16 remaining flat `SKILL.md` manifests to domain/category paths, retaining **identical Git blob SHA** for each moved file; no SKILL body, ID, trigger, exclusion or routing map changed. The migrated skill folders had no bundled sibling source files.

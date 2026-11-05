@@ -31,7 +31,7 @@ children:
       - "pipeline replay"
       - "incremental ingestion"
     status: active
-    skills: domains/data/general-skills.yaml
+    skills: domains/data/data-engineering/batch-ingestion/recovery/skills.yaml
   - id: nifi
     description: "Apache NiFi flow and backpressure operations"
     triggers:
