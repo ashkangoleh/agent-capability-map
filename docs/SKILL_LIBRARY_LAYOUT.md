@@ -1,16 +1,18 @@
 # Canonical skill library layout — phased domain organization
 
 **Branch:** `pre_release`  
-**Phase:** Data Science / Advanced Statistics and Foundations  
+**Phase:** Incremental domain-nested skill source organization  
 **Scope:** Source-tree organization only; existing skill IDs, trigger phrases, YAML routing, and user-selected domain profile semantics are unchanged.
 
 ## Current status superseding the original canary inventory — 2026-11-05
 
 The category tables below document **historical early migration phases**, not the current repository-wide inventory.
 
-- **327/344 (95.06%)** canonical skill manifests now live under domain-nested folders; **17** still use flat paths.
+- **328/344 (95.35%)** canonical skill manifests now live under domain-nested folders; **16** still use flat paths.
 - **Data Science is structurally 42/42 nested.** Other Data, AI/ML, Infrastructure and several top-level domains also have nested sources.
-- The latest completed category migration is `infrastructure/storage-engineering/advanced-storage` (2/2 skills), retaining unchanged Git blobs and updated paths in `domains/infrastructure/storage/new-specialists.yaml`.
+- The latest category migration is `data/data-engineering/batch-ingestion/recovery` (1/1 skill), retaining the exact original Git blob SHA for `pipeline-backfill-recovery` and updating its registered path in `domains/data/general-skills.yaml`.
+- Previously migrated `infrastructure/storage-engineering/advanced-storage` remains 2/2 nested, with unchanged skill blobs and registered paths.
+- The batch-ingestion recovery map still references the shared `data-general` registry. This migration intentionally changes no routing triggers, exclusions or selection semantics; refining the shared registry boundary is a separate behavior-change task.
 - Structural completion is separate from tested router correctness or host native discovery. Earlier stale generic Data registry paths and flat-path test assumptions were repaired; verify the latest CI result via `docs/CONTINUATION_CHECKPOINT.md` and GitHub Actions before claiming overall validity.
 
 All future migrations must preserve stable IDs, update every registry that references a moved skill and keep a single canonical manifest.

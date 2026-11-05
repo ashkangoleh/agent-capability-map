@@ -6,7 +6,20 @@
 **Verified branch HEAD immediately before this update:** `67e553cf6306313cee486e2ef205c96cdae8e831` (always fetch HEAD again in a new chat)
 **Integration policy:** Work only in `pre_release` unless the user explicitly changes this. Do not merge into `main` without explicit approval. Do not create `feat/*` or `fix/*` branches for this work.
 
-## LATEST ACTIVE CHECKPOINT — Infrastructure Advanced Storage migration (2026-11-05)
+## LATEST ACTIVE CHECKPOINT — Data Engineering backfill recovery source migration (2026-11-05)
+
+- Canonical branch: `pre_release`; baseline HEAD before this atomic migration: `48e169c52421318ed5bd294bc4f23ff4e5dd2d3d`. Never merge to `main` or create a new branch without user approval.
+- Target: `pipeline-backfill-recovery`, categorized as **Data / Data Engineering / Batch Ingestion / Recovery**.
+- Canonical file: `.agents/skills/data/data-engineering/batch-ingestion/recovery/pipeline-backfill-recovery/SKILL.md`; removed flat `.agents/skills/pipeline-backfill-recovery/SKILL.md`.
+- Source `SKILL.md` is reused with its **unchanged Git blob SHA** `9b48fb6e58cbce15c21618d33cd64fe131e7db94`; original frontmatter, skill ID, instructions, bundled resource inventory and behavior are unchanged.
+- The only YAML registry `path` replacement is in `domains/data/general-skills.yaml`. The `recovery` child in `domains/data/data-engineering/batch-ingestion/map.yaml` deliberately continues to reference that shared registry to avoid a routing behavior change.
+- `tests/test_data_engineering_coverage.py` enforces one canonical nested manifest, absence of the flat source, registry selection and existing deterministic routing fixture behavior. No routing triggers, fixture count, skill IDs or examples added.
+- Expected source inventory after the atomic move: **344 total**, **328 domain-nested (95.35%)**, **16 flat (4.65%)**. Verify against the published tree and run all tests.
+- Pre-migration `pre_release` GitHub Actions push run **42000161037** at baseline HEAD passed validation and unit tests. **The migration commit's own CI run must be independently checked before reporting PASS.**
+- Native auto-discovery of nested skills across Codex, Claude Code, OpenCode, Cursor and Copilot remains **NOT VERIFIED**. The registered YAML Router path is the canonical source mechanism. The full Data domain is still incomplete.
+- Next: inspect actual migration SHA and full push CI job/step conclusions, check unique Git blob SHA and manifest counts, then continue only with the user-approved Data subdomain workstream.
+
+## HISTORICAL CHECKPOINT — Infrastructure Advanced Storage migration (2026-11-05)
 
 **Repository:** `ashkangoleh/agent-capability-map`, **branch:** `pre_release` only.
 **Head before this checkpoint edit:** `c694c947d479527f1650bb89a01962e29d706f20`. Always fetch live HEAD on future continuation.
