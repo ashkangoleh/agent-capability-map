@@ -1,5 +1,14 @@
 # Continuation Checkpoint — Agent Capability Map
 
+## CURRENT — All-domain specialist evidence rollout (2026-11-06)
+
+- Branch `pre_release`, baseline preceding this checkpoint `e897271c40e4ff15303eabc97262b1e602aa1ec3`, no merge to main.
+- 41 top-level domains, 438 preexisting skills, 408 roles. 315 new per-package on-demand evidence references plus preserved 123 Data Engineering ones. 41 domain profiles + 35 family overrides. No ID/route changes.
+- New audit `scripts/audit_all_skill_evidence.py` and tests in CI. Exact SHA must pass before claiming structural acceptance.
+- These are L1 proposals generated from existing skill procedures and profiles, not L2 version-pinned engine-specific implementation, not L3 real integration, not L4 native agent A/B, and not regulated/flight/clinical certification.
+- Further work: independent official-source freshness validation per skill; comprehensive subdomain taxonomy for 37 root-only domains; task-specific executable or expert-reviewed evidence by domain; adversarial multilingual evaluation. Do not overclaim best-in-class.
+
+
 ## CURRENT — Data Engineering 123-skill structural evidence rollout (2026-11-06)
 
 - Continue only in `pre_release`; no changes to `main` or domain graph. 123 existing Data Engineering SKILL.md packages enhanced with per-package references; 35 reusable family fault-recovery profiles. Skill IDs and ownership unchanged.
