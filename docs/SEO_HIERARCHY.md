@@ -38,6 +38,9 @@ Nine hierarchical subdomains, 22 terminal specialists, 19 new skill packages and
 
 Official search documentation reviewed as November 2026 source starting points, not proof of release pinning per specific target. Google robots.txt does not reliably deindex a URL; sitemap submission does not guarantee indexing. Search Console query rows may be non-exhaustive. There is no separate required AI-Overview optimization above Google Search's ordinary index/snippet eligibility. Reject guaranteed rank and AI citation claims.
 
+## 2026 Search Generative AI reporting update
+Google announced dedicated Search Generative AI performance reports in Search Console on 2026-06-03, with worldwide rollout by 2026-08-31. Treat this UI reporting availability separately from the published Search Analytics API schema and avoid invented fields or per-answer citation precision. Official source: https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports. A separate 2026-05-15 Search Central guide provides AI visibility fundamentals: https://developers.google.com/search/blog/2026/05/a-new-resource-for-optimizing.
+
 ## Scope and acceptance
 SEO covers organic search discovery; Marketing covers paid media, Product covers feature experimentation and Data Engineering covers data infrastructure implementation.
 Structural tests must verify canonical skill IDs, every role and map, historical SEO and cross-domain routing. Later external tests must evaluate actual agent-host task correctness, high-risk SEO deployment outcomes and user permission boundaries; static L1 tests do not establish L2/L3/L4.

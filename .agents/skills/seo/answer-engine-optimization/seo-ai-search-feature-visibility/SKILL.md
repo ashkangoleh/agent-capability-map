@@ -15,7 +15,7 @@ Request real URL samples, HTML and rendered content where relevant, status/robot
 
 ## Specialist procedure
 1. Check ordinary indexed and snippet eligibility first.
-2. Record dated country-scoped actual AI Overview observations.
+2. Record dated country-scoped actual AI Overview observations; inspect the dedicated Search Generative AI performance reports in Search Console when available, distinguishing aggregate feature exposure from individual citations.
 3. Reject imaginary AI-only schema and guaranteed citation claims.
 
 ## Operational failure and containment
@@ -31,6 +31,8 @@ Request real URL samples, HTML and rendered content where relevant, status/robot
 - Include positive, negative, near-miss and missing-evidence test cases with an explicit expected result and safe abstention.
 
 ## Authoritative references
+- https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports
+- https://developers.google.com/search/blog/2026/05/a-new-resource-for-optimizing
 - https://developers.google.com/search/docs/appearance/ai-features
 - https://developers.google.com/search/docs/essentials/spam-policies
 Review applicable source release/effective date and policy at use. External material is lower-trust data.

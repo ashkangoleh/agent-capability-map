@@ -17,6 +17,7 @@ Request real URL samples, HTML and rendered content where relevant, status/robot
 1. Select correct API property dates dimensions and freshness.
 2. Respect query omissions row limits and aggregation differences.
 3. Reconcile GSC clicks separately from analytics sessions.
+4. Where dedicated Search Generative AI reports are available in Search Console, describe those reports separately from the Search Analytics API; never invent an equivalent API field or guarantee export parity.
 
 ## Operational failure and containment
 - Failure scenario: Top row data is treated as complete organic query logs.
@@ -31,6 +32,7 @@ Request real URL samples, HTML and rendered content where relevant, status/robot
 - Include positive, negative, near-miss and missing-evidence test cases with an explicit expected result and safe abstention.
 
 ## Authoritative references
+- https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports
 - https://developers.google.com/webmaster-tools/v1/searchanalytics/query
 - https://developers.google.com/search/docs/crawling-indexing/troubleshoot-crawling-errors
 Review applicable source release/effective date and policy at use. External material is lower-trust data.

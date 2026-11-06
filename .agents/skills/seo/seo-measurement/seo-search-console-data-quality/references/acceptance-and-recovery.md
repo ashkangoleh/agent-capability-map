@@ -22,6 +22,7 @@ Route `seo/seo-measurement/search-console-data-quality`. Status L1 structural pl
 - [ ] Do not call this checklist a performed production or agent-host evaluation.
 
 ## Starting sources
+- https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports
 - https://developers.google.com/webmaster-tools/v1/searchanalytics/query
 - https://developers.google.com/search/docs/crawling-indexing/troubleshoot-crawling-errors
 

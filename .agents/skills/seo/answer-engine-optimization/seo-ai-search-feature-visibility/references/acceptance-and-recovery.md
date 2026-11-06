@@ -19,9 +19,12 @@ Route `seo/answer-engine-optimization/ai-search-feature-visibility`. Status L1 s
 - [ ] Distinguish crawlability, indexability, rich-result eligibility, actual exposure and rank.
 - [ ] Review blast radius, cost, dependencies, privacy and rollback owner.
 - [ ] Mark unavailable evidence as unknown and do not extrapolate to sitewide results.
+- [ ] Treat aggregate Search Generative AI Search Console reporting separately from any claimed per-answer citation or new API endpoint.
 - [ ] Do not call this checklist a performed production or agent-host evaluation.
 
 ## Starting sources
+- https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports
+- https://developers.google.com/search/blog/2026/05/a-new-resource-for-optimizing
 - https://developers.google.com/search/docs/appearance/ai-features
 - https://developers.google.com/search/docs/essentials/spam-policies
 
