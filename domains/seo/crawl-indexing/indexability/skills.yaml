@@ -4,7 +4,7 @@ kind: skill-registry
 skills:
   - id: seo-indexability-diagnostics
     path: .agents/skills/seo/technical-seo/seo-indexability-diagnostics/SKILL.md
-    description: "Preserve existing canonical specialist"
+    description: "Diagnose indexing and canonicalization defects using real URL response, Search Console, robots rules and search crawler evidence."
     triggers:
       - "diagnose canonical mismatch on indexed pages"
       - "canonical mismatch"
