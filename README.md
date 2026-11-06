@@ -302,3 +302,7 @@ Nine specialized SEO branches now resolve to 22 leaf skills, including 19 new sp
 ## Content & Publishing hierarchy — 2026-11-06
 
 Nine first-level editorial/publishing branches contain 22 active leaf specialists (21 new plus the unchanged canonical `content-editorial-brief`). Each new skill has a separate acceptance/recovery contract and every active path has an independent hierarchical ROLE.md. Static portfolio target is **493 SKILL.md** packages and **494 ROLE.md** files, awaiting exact-head CI. See `docs/CONTENT_HIERARCHY.md`. This is L1 structural scope, not real-world agent, accessibility, rights or regulatory certification.
+
+## Research & Communication hierarchy — 2026-11-06
+
+Eight first-level specialist domains and 22 active terminal routes include 20 new SKILL.md packages. Canonical `evidence-research` and `technical-writing-docs` SKILL.md paths and contents are preserved. Each new specialist has a task-specific falsifiable acceptance and recovery contract, with 30 new hierarchical roles. Static portfolio: **513 skills** and **524 roles**, pending exact-head CI. See `docs/RESEARCH_HIERARCHY.md`; L1 structure does not establish actual model expertise or research validity.

@@ -1,0 +1,16 @@
+schema_version: 1
+id: general-evidence
+kind: skill-registry
+skills:
+  - id: evidence-research
+    path: .agents/skills/research/evidence-research/evidence-research/SKILL.md
+    description: "Use unchanged original specialist source to research evidence or document implementation with accurate citations and scope."
+    triggers:
+      - "fact check this evidence claim"
+      - "research this"
+      - "fact check"
+      - "official documentation"
+      - "evidence review"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

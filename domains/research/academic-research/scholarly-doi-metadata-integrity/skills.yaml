@@ -1,0 +1,12 @@
+schema_version: 1
+id: scholarly-doi-metadata-integrity
+kind: skill-registry
+skills:
+  - id: research-scholarly-doi-metadata-integrity
+    path: .agents/skills/research/academic-research/research-scholarly-doi-metadata-integrity/SKILL.md
+    description: "Resolve DOI and compare deposited metadata to title author venue and publication date Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research scholarly citation doi crossref retraction validation"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

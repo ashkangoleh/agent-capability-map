@@ -1,0 +1,12 @@
+schema_version: 1
+id: operational-runbook-recovery
+kind: skill-registry
+skills:
+  - id: research-operational-runbook-recovery
+    path: .agents/skills/research/technical-writing/research-operational-runbook-recovery/SKILL.md
+    description: "Define trigger ownership severity prerequisites access and affected service boundary Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research technical operational runbook incident recovery procedure"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

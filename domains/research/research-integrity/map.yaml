@@ -1,0 +1,16 @@
+schema_version: 1
+id: research-integrity
+kind: map
+children:
+  - id: contributor-credit-coi
+    description: "Inventory contributor activities using NISO CRediT without converting roles into authorship rules"
+    triggers:
+      - "research contributor credit conflict interest authorship CRediT"
+    status: active
+    skills: domains/research/research-integrity/contributor-credit-coi/skills.yaml
+  - id: ai-generated-citation-audit
+    description: "Check every AI-suggested citation by exact identifier title and author metadata"
+    triggers:
+      - "research ai generated citation hallucination provenance audit"
+    status: active
+    skills: domains/research/research-integrity/ai-generated-citation-audit/skills.yaml

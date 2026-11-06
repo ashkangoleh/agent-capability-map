@@ -1,0 +1,12 @@
+schema_version: 1
+id: rfc-proposal-tradeoff-review
+kind: skill-registry
+skills:
+  - id: research-rfc-proposal-tradeoff-review
+    path: .agents/skills/research/decision-documents/research-rfc-proposal-tradeoff-review/SKILL.md
+    description: "State decision problem scope non-goals constraints and explicit stakeholder roles Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research technical rfc proposal alternatives tradeoffs requirements"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

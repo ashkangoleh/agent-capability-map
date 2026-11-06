@@ -1,0 +1,16 @@
+schema_version: 1
+id: knowledge-transfer
+kind: map
+children:
+  - id: knowledge-base-source-curation
+    description: "Classify source of truth, business ownership and intended internal users"
+    triggers:
+      - "research knowledge base documentation source freshness ownership"
+    status: active
+    skills: domains/research/knowledge-transfer/knowledge-base-source-curation/skills.yaml
+  - id: handoff-reproducible-findings
+    description: "Bundle research question versions sources decisions methods and unresolved assumptions"
+    triggers:
+      - "research handoff evidence package reproducibility stakeholders"
+    status: active
+    skills: domains/research/knowledge-transfer/handoff-reproducible-findings/skills.yaml

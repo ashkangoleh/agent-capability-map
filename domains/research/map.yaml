@@ -3,39 +3,80 @@ id: research
 kind: map
 children:
   - id: evidence-research
-    description: "evidence research"
+    description: "Primary-source verification, evidence conflict analysis and claim provenance"
     triggers:
-      - "research this"
-      - "verify"
+      - "evidence research research"
+      - "fact check this evidence claim"
+      - "research primary source triangulation independence review"
+      - "research contradictory evidence adjudication primary studies"
+      - "research evidence claim citation provenance ledger"
       - "fact check"
+      - "research this"
       - "evidence"
     status: active
-    skills: domains/research/graph-skills.yaml
-  - id: technical-writing
-    description: "technical writing"
+    map: domains/research/evidence-research/map.yaml
+  - id: academic-research
+    description: "Evidence review reporting, scholarly identifiers and reproducible study protocols"
     triggers:
-      - "technical writing"
+      - "academic research research"
+      - "research systematic review prisma search screening reproducibility"
+      - "research scholarly citation doi crossref retraction validation"
+      - "research study protocol reproducibility artifact versioning"
+    status: active
+    map: domains/research/academic-research/map.yaml
+  - id: technical-writing
+    description: "Implementation-grounded developer documentation, runbooks and documentation quality"
+    triggers:
+      - "technical writing research"
       - "write documentation"
-      - "adr"
+      - "research technical api reference openapi code contract docs"
+      - "research technical operational runbook incident recovery procedure"
+      - "research technical docs version consistency link example checks"
+      - "write documentation"
+      - "technical writing"
       - "rfc"
+      - "adr"
       - "runbook"
     status: active
-    skills: domains/research/graph-skills.yaml
-  - id: academic-research
-    description: "academic research"
+    map: domains/research/technical-writing/map.yaml
+  - id: decision-documents
+    description: "RFC/ADR writing and traceable engineering decision communication"
     triggers:
-      - "literature review"
-      - "research methodology"
-    status: mapped
+      - "decision documents research"
+      - "research technical rfc proposal alternatives tradeoffs requirements"
+      - "research technical adr decision rationale superseded architecture"
+    status: active
+    map: domains/research/decision-documents/map.yaml
   - id: editing-translation
-    description: "editing translation"
+    description: "Meaning-preserving technical editing and bilingual translation"
     triggers:
-      - "translate article"
-      - "copy editing"
-    status: mapped
+      - "editing translation research"
+      - "research technical translation semantic fidelity glossary rtl"
+      - "research technical copyedit correctness terminology change control"
+    status: active
+    map: domains/research/editing-translation/map.yaml
   - id: presentation-reports
-    description: "presentation reports"
+    description: "Evidence-based executive reports, visual claims and technical presentations"
     triggers:
-      - "executive report"
-      - "presentation"
-    status: mapped
+      - "presentation reports research"
+      - "research executive evidence brief decisions confidence assumptions"
+      - "research chart claim integrity denominator axes uncertainty audit"
+      - "research technical presentation source trace slide narrative"
+    status: active
+    map: domains/research/presentation-reports/map.yaml
+  - id: research-integrity
+    description: "Contribution transparency and AI-assisted research authenticity"
+    triggers:
+      - "research integrity research"
+      - "research contributor credit conflict interest authorship CRediT"
+      - "research ai generated citation hallucination provenance audit"
+    status: active
+    map: domains/research/research-integrity/map.yaml
+  - id: knowledge-transfer
+    description: "Maintained organizational knowledge and reproducible research handoff"
+    triggers:
+      - "knowledge transfer research"
+      - "research knowledge base documentation source freshness ownership"
+      - "research handoff evidence package reproducibility stakeholders"
+    status: active
+    map: domains/research/knowledge-transfer/map.yaml

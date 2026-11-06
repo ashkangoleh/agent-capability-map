@@ -672,7 +672,7 @@ children:
     status: active
   - id: research
     label: "Research & Communication"
-    description: "Evidence synthesis, fact checking, documentation and reporting."
+    description: "Primary-source verification, academic evidence methods, technical documentation, decision records, editing and reporting."
     triggers:
       - "research this"
       - "fact check"
@@ -683,6 +683,26 @@ children:
       - "adr"
       - "rfc"
       - "technical writing"
+      - "research primary source triangulation independence review"
+      - "research contradictory evidence adjudication primary studies"
+      - "research evidence claim citation provenance ledger"
+      - "research systematic review prisma search screening reproducibility"
+      - "research scholarly citation doi crossref retraction validation"
+      - "research study protocol reproducibility artifact versioning"
+      - "research technical api reference openapi code contract docs"
+      - "research technical operational runbook incident recovery procedure"
+      - "research technical docs version consistency link example checks"
+      - "research technical rfc proposal alternatives tradeoffs requirements"
+      - "research technical adr decision rationale superseded architecture"
+      - "research technical translation semantic fidelity glossary rtl"
+      - "research technical copyedit correctness terminology change control"
+      - "research executive evidence brief decisions confidence assumptions"
+      - "research chart claim integrity denominator axes uncertainty audit"
+      - "research technical presentation source trace slide narrative"
+      - "research contributor credit conflict interest authorship CRediT"
+      - "research ai generated citation hallucination provenance audit"
+      - "research knowledge base documentation source freshness ownership"
+      - "research handoff evidence package reproducibility stakeholders"
     map: domains/research/map.yaml
     status: active
   - id: business

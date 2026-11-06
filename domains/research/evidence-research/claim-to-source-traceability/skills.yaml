@@ -1,0 +1,12 @@
+schema_version: 1
+id: claim-to-source-traceability
+kind: skill-registry
+skills:
+  - id: research-claim-to-source-traceability
+    path: .agents/skills/research/evidence-research/research-claim-to-source-traceability/SKILL.md
+    description: "Inventory every consequential claim quote figure and page-number assertion Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research evidence claim citation provenance ledger"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

@@ -1,0 +1,12 @@
+schema_version: 1
+id: technical-presentation-evidence
+kind: skill-registry
+skills:
+  - id: research-technical-presentation-evidence
+    path: .agents/skills/research/presentation-reports/research-technical-presentation-evidence/SKILL.md
+    description: "Define target technical audience expected decision and allotted presentation scope Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research technical presentation source trace slide narrative"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

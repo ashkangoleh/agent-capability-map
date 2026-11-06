@@ -1,0 +1,12 @@
+schema_version: 1
+id: knowledge-base-source-curation
+kind: skill-registry
+skills:
+  - id: research-knowledge-base-source-curation
+    path: .agents/skills/research/knowledge-transfer/research-knowledge-base-source-curation/SKILL.md
+    description: "Classify source of truth, business ownership and intended internal users Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research knowledge base documentation source freshness ownership"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

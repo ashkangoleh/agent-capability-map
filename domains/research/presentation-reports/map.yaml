@@ -1,0 +1,22 @@
+schema_version: 1
+id: presentation-reports
+kind: map
+children:
+  - id: executive-evidence-brief
+    description: "Frame the decision and top alternative options before presenting summary numbers"
+    triggers:
+      - "research executive evidence brief decisions confidence assumptions"
+    status: active
+    skills: domains/research/presentation-reports/executive-evidence-brief/skills.yaml
+  - id: visual-claim-integrity
+    description: "Validate metric definitions cohort denominators transformations and chosen time periods"
+    triggers:
+      - "research chart claim integrity denominator axes uncertainty audit"
+    status: active
+    skills: domains/research/presentation-reports/visual-claim-integrity/skills.yaml
+  - id: technical-presentation-evidence
+    description: "Define target technical audience expected decision and allotted presentation scope"
+    triggers:
+      - "research technical presentation source trace slide narrative"
+    status: active
+    skills: domains/research/presentation-reports/technical-presentation-evidence/skills.yaml

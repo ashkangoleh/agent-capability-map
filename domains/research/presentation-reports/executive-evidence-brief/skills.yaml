@@ -1,0 +1,12 @@
+schema_version: 1
+id: executive-evidence-brief
+kind: skill-registry
+skills:
+  - id: research-executive-evidence-brief
+    path: .agents/skills/research/presentation-reports/research-executive-evidence-brief/SKILL.md
+    description: "Frame the decision and top alternative options before presenting summary numbers Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research executive evidence brief decisions confidence assumptions"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

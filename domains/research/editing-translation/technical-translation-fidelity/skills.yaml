@@ -1,0 +1,12 @@
+schema_version: 1
+id: technical-translation-fidelity
+kind: skill-registry
+skills:
+  - id: research-technical-translation-fidelity
+    path: .agents/skills/research/editing-translation/research-technical-translation-fidelity/SKILL.md
+    description: "Pin original revision and glossary of code identifiers constraints units and abbreviations Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research technical translation semantic fidelity glossary rtl"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

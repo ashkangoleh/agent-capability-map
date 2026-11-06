@@ -360,6 +360,26 @@ ids:
   - recruiting-interview-scorecard
   - redpanda-event-streaming
   - redshift-data-platform-engineering
+  - research-adr-decision-traceability
+  - research-ai-generated-citation-audit
+  - research-api-reference-documentation
+  - research-claim-to-source-traceability
+  - research-conflicting-evidence-adjudication
+  - research-contributor-credit-coi
+  - research-documentation-version-qa
+  - research-executive-evidence-brief
+  - research-handoff-reproducible-findings
+  - research-knowledge-base-source-curation
+  - research-operational-runbook-recovery
+  - research-primary-source-triangulation
+  - research-protocol-reproducibility-review
+  - research-rfc-proposal-tradeoff-review
+  - research-scholarly-doi-metadata-integrity
+  - research-systematic-review-reporting
+  - research-technical-copyedit-precision
+  - research-technical-presentation-evidence
+  - research-technical-translation-fidelity
+  - research-visual-claim-integrity
   - responsible-ai-risk-assessment
   - reverse-etl-data-activation
   - risingwave-streaming-sql-engineering

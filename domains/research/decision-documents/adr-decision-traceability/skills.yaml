@@ -1,0 +1,12 @@
+schema_version: 1
+id: adr-decision-traceability
+kind: skill-registry
+skills:
+  - id: research-adr-decision-traceability
+    path: .agents/skills/research/decision-documents/research-adr-decision-traceability/SKILL.md
+    description: "Record decision context date owner considered alternatives and accepted tradeoffs Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research technical adr decision rationale superseded architecture"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

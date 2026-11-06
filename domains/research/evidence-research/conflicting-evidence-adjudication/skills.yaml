@@ -1,0 +1,12 @@
+schema_version: 1
+id: conflicting-evidence-adjudication
+kind: skill-registry
+skills:
+  - id: research-conflicting-evidence-adjudication
+    path: .agents/skills/research/evidence-research/research-conflicting-evidence-adjudication/SKILL.md
+    description: "Normalize rival claims by definition population time period and measurement method Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research contradictory evidence adjudication primary studies"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

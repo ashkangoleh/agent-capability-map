@@ -1,0 +1,12 @@
+schema_version: 1
+id: ai-generated-citation-audit
+kind: skill-registry
+skills:
+  - id: research-ai-generated-citation-audit
+    path: .agents/skills/research/research-integrity/research-ai-generated-citation-audit/SKILL.md
+    description: "Check every AI-suggested citation by exact identifier title and author metadata Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research ai generated citation hallucination provenance audit"
+    excludes:
+      - "marketing paid media campaign"
+    status: active
