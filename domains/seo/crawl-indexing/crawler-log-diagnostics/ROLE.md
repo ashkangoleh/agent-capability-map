@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and Spoofed bot traf
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Time-scoped server/CDN logs, verified crawler origin and URL-status cohorts.
+- Acceptance and ownership: Observed 4xx and 5xx findings reproduce from sanitized raw requests.
+- Stop or escalate: Reject spoofed User-Agent as verified Googlebot evidence.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

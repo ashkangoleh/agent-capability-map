@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and Unrelated pages 
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Matched query-page cohorts, content revisions and intent evidence.
+- Acceptance and ownership: Any merge preserves equivalent intent, relevant redirect and differentiated pages.
+- Stop or escalate: Do not merge distinct intents because they share a broad keyword.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

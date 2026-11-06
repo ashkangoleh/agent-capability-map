@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and Vendor claims gu
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Date-stamped AI Overview query and region samples plus index/snippet eligibility.
+- Acceptance and ownership: Describe observed citation variation without promising persistent inclusion.
+- Stop or escalate: Reject AI-only hidden metadata or guaranteed display offers.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

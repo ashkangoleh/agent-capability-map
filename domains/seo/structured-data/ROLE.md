@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and unverified high-
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Delegation and scope
+- Evidence: Rendered JSON-LD, target Search feature specification and verified entity attributes.
+- Acceptance and ownership: Separate schema syntax from eligibility and observed rich-result display.
+- Stop or escalate: Block fabricated prices ratings business locations or unsupported properties.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

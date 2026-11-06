@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and Fabricated autho
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Original sources, author expertise evidence, quality samples and spam-policy applicability.
+- Acceptance and ownership: Human reviewer verifies original value and material claims before distribution.
+- Stop or escalate: Reject fabricated authorship or scaled content manipulation.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

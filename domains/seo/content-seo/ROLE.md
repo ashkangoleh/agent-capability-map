@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and unverified high-
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Delegation and scope
+- Evidence: Actual user intent, page quality, editorial evidence and canonical page cohorts.
+- Acceptance and ownership: Prevent manipulative scaled pages while preserving genuine distinct reader needs.
+- Stop or escalate: Do not declare algorithm penalty or consolidate unrelated pages from keyword overlap.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

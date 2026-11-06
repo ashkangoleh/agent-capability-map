@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and unverified high-
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Delegation and scope
+- Evidence: AI search result samples with query locale date and ordinary index/snippet eligibility.
+- Acceptance and ownership: Identify observed appearances only; no proprietary optimization promises.
+- Stop or escalate: Escalate guarantee claims or invented AI schema requirements.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

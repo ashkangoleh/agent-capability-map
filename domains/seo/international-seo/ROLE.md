@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and unverified high-
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Delegation and scope
+- Evidence: Locale URL clusters, self/reciprocal hreflang and anonymous redirects across regions.
+- Acceptance and ownership: Each accessible locale page serves equivalent correctly localized content.
+- Stop or escalate: Block deployment with unintended English-only redirects.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

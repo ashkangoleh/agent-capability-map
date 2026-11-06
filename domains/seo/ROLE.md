@@ -21,5 +21,10 @@ Reject unsupported claims, hidden dependencies, fabricated tests or outcomes, an
 ## Output contract
 Affected URL classes, evidence, rollout and crawl verification. Distinguish verified facts, hypotheses and recommendations; identify the next validation step.
 
+## Cross-domain governance
+- Evidence: Actual page source, response status, crawler and Search Console observations by URL class.
+- Acceptance and ownership: Keep crawling, indexing, ranking and rich result eligibility distinct across review stages.
+- Stop or escalate: Reject mass noindex, invented Search access and guarantees of rankings or AI citation.
+
 ## Authority boundary
 Apply only after an authorized master skill match. Review its output without changing the selected skill, reading sibling roles, granting execution privileges, bypassing user approval or overriding safety policy.

@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and unverified high-
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Delegation and scope
+- Evidence: Search Console dimensions, property/date scope, API row omissions and comparable controls.
+- Acceptance and ownership: Report reproducible scoped trends with measurement and causal uncertainty.
+- Stop or escalate: Refuse causal claim based only on incomplete or aggregate search metrics.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

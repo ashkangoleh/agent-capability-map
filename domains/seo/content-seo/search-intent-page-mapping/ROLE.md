@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and Keyword variants
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Observed market-specific query intent and existing canonical page inventory.
+- Acceptance and ownership: Each new page addresses a distinct unmet reader task.
+- Stop or escalate: Block mass generated keyword variant duplicates.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

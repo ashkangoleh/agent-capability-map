@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and A blanket robots
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Parameter cardinalities, indexworthy filter landing pages and log samples.
+- Acceptance and ownership: Low-value URL growth is constrained without blocking priority categories.
+- Stop or escalate: Do not use robots block when you need crawler to process noindex.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

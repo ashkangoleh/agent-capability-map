@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and unverified high-
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Delegation and scope
+- Evidence: Verified business eligibility, staffed/service area presence, owner authorization and public hours.
+- Acceptance and ownership: Listings represent real businesses and verified identity claims.
+- Stop or escalate: Stop creation of phantom business profiles or manipulated reviews.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and unverified high-
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Delegation and scope
+- Evidence: Initial and rendered HTML, HTTP redirects, canonical, navigation and deploy cohorts.
+- Acceptance and ownership: Prove template changes preserve priority content and recoverability.
+- Stop or escalate: Stop sitewide redirect and JavaScript changes without rollback.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.
