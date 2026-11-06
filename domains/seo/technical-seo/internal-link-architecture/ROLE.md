@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and A navigation rel
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Priority URL list and actual rendered anchor paths with status/canonical results.
+- Acceptance and ownership: Every critical page has a reproducible internal path from navigable pages.
+- Stop or escalate: Reject sitemap-only proof of internal discovery.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

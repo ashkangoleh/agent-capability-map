@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and Every branch inh
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Verified branch location records, opening hours and deployed rendered LocalBusiness properties.
+- Acceptance and ownership: Sampled JSON-LD corresponds to actual displayed business entity at each location.
+- Stop or escalate: Reject cloned addresses or fake reviews.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

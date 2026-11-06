@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and All unchanged pa
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Published canonical inventory, XML sitemap feed and meaningful content-change timestamps.
+- Acceptance and ownership: Sampled sitemap URLs resolve to intended live canonical targets.
+- Stop or escalate: Reject lastmod regenerated without relevant content modification.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

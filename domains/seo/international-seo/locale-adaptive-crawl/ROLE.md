@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and French pages red
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Anonymous language and regional request matrix with CDN cache headers and redirects.
+- Acceptance and ownership: Published locale URLs are directly reachable and show intended language.
+- Stop or escalate: Stop forced geo redirect that hides localized pages.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

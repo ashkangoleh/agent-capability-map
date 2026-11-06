@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and English body is 
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Complete alternate-locale URL matrix, self/return references and translated content.
+- Acceptance and ownership: Every sampled locale group has valid bidirectional annotations and equivalent content.
+- Stop or escalate: Reject hreflang to untranslated or noncanonical successor pages.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

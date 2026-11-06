@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and Analytics tag ou
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Search clicks/impressions, analytics sessions, deploy timeline and HTTP failure cohorts.
+- Acceptance and ownership: Reconcile independent signals before identifying organic visibility incident.
+- Stop or escalate: Do not diagnose search ranking penalty from tracking outage alone.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

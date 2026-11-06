@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and A browser loads 
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Initial HTML, rendered DOM, JS resources, URL Inspection and client errors.
+- Acceptance and ownership: Main content and links are present for target crawler rendering.
+- Stop or escalate: Block claim that local browser success proves indexing.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and Top row data is 
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Property/date/query dimensions, dataState and Search Analytics API row limitations.
+- Acceptance and ownership: Reproduce report totals at declared aggregation level with missing-row qualifications.
+- Stop or escalate: Do not present returned top queries as exhaustive event logs.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

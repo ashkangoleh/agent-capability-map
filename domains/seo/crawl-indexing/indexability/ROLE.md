@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and unsupported tech
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Final URLs, X-Robots, canonical declarations and Google-selected canonical observations.
+- Acceptance and ownership: Explain crawl accessibility and chosen canonical separately with representative URL evidence.
+- Stop or escalate: Never promise indexing from a sitemap submission alone.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

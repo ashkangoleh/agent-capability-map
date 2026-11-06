@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and Variant URL retu
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: ProductGroup links, direct variant URL, selected image price and availability by SKU.
+- Acceptance and ownership: Each variant deep link shows its correct commercial selection and canonical design.
+- Stop or escalate: Stop stale selected-variant markup or group identity mismatch.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

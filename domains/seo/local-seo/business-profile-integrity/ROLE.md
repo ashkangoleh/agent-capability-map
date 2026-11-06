@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and A virtual mailbo
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Physical or eligible service-area existence, business records, owner authority and profile attributes.
+- Acceptance and ownership: Listings match approved actual name hours category and legitimate location.
+- Stop or escalate: Hold virtual-address expansion or review manipulation.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

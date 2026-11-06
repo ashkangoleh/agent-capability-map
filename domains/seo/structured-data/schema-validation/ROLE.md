@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and unsupported tech
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Rendered JSON-LD, supported feature-specific properties and on-page entity facts.
+- Acceptance and ownership: Separate parse-valid markup from eligible feature policies and Search display.
+- Stop or escalate: Do not invent rating price author or guaranteed rich result.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

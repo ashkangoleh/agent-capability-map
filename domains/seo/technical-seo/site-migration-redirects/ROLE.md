@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and Unrelated pages 
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Old/new URL mapping, final redirects, staging robots and dual-property monitoring.
+- Acceptance and ownership: Priority old pages resolve to relevant new canonical targets without loops.
+- Stop or escalate: Hold cutover on new site noindex or irrelevant home-page redirects.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

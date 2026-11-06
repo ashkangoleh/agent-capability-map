@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and Search algorithm
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Defined treatment, candidate controls, baseline pretrends, rollout and indexing timestamps.
+- Acceptance and ownership: Reproduce effect analysis with documented confounders and uncertainty.
+- Stop or escalate: Refuse lift attribution under unbalanced seasonal controls.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.

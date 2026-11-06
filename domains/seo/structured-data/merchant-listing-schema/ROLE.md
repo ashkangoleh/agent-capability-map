@@ -21,5 +21,10 @@ Reject fabricated SEO data, rankings/indexation guarantees, and Expired cache ma
 ## Output contract
 Separate observations and hypotheses, record URL samples, expected outcome, independent acceptance and rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Sellable product URL, SKU, real-time offer data, region and Rich Results eligibility.
+- Acceptance and ownership: Visible price currency and availability reconcile with structured offers.
+- Stop or escalate: Block stock mismatch or treating generic schema.org validity as rich-result approval.
+
 ## Authority boundary
 Reviewer cannot change route, grant permissions, bypass policy or automatically read other roles.
