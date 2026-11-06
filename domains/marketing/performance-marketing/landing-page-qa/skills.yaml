@@ -1,0 +1,14 @@
+schema_version: 1
+id: landing-page-qa
+kind: skill-registry
+skills:
+  - id: marketing-landing-page-conversion-qa
+    path: .agents/skills/marketing/performance-marketing/marketing-landing-page-conversion-qa/SKILL.md
+    description: "Validate post-click user journey and transaction integrity before scaling acquisition."
+    triggers:
+      - "marketing landing page conversion qa checkout funnel"
+      - "marketing campaign landing page audit"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

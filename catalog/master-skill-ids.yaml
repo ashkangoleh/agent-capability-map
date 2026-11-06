@@ -245,7 +245,22 @@ ids:
   - llm-prompt-injection-boundaries
   - managed-elt-fivetran-estuary-operations
   - manufacturing-quality-investigation
+  - marketing-affiliate-payout-integrity
+  - marketing-audience-research-evidence
+  - marketing-brand-message-validation
+  - marketing-campaign-release-controls
+  - marketing-campaign-taxonomy-utm
+  - marketing-consent-suppression
+  - marketing-creative-experimentation
+  - marketing-creator-disclosure-review
+  - marketing-email-deliverability
+  - marketing-incrementality-geo-lift
+  - marketing-landing-page-conversion-qa
+  - marketing-launch-readiness
+  - marketing-lifecycle-journey-holdouts
   - marketing-measurement-attribution
+  - marketing-offline-conversion-reconciliation
+  - marketing-spend-pacing
   - marketing-strategy-campaign
   - materialize-streaming-sql-engineering
   - medallion-lambda-kappa-architecture

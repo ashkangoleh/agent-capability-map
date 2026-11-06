@@ -1,0 +1,14 @@
+schema_version: 1
+id: launch-readiness
+kind: skill-registry
+skills:
+  - id: marketing-launch-readiness
+    path: .agents/skills/marketing/campaign-strategy/marketing-launch-readiness/SKILL.md
+    description: "Evaluate cross-functional go-to-market launch readiness before spend or customer exposure."
+    triggers:
+      - "marketing launch readiness dependency gate"
+      - "marketing go to market launch checklist"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

@@ -1,0 +1,14 @@
+schema_version: 1
+id: campaign-taxonomy
+kind: skill-registry
+skills:
+  - id: marketing-campaign-taxonomy-utm
+    path: .agents/skills/marketing/marketing-operations/marketing-campaign-taxonomy-utm/SKILL.md
+    description: "Standardize channel/campaign identifiers without losing historical attribution comparability."
+    triggers:
+      - "marketing campaign taxonomy utm governance audit"
+      - "marketing utm channel naming reconciliation"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

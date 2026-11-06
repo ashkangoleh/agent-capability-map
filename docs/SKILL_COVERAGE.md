@@ -3,7 +3,7 @@
 ## Scope
 
 - Top-level domains: 41, all with at least one linked active skill.
-- Active skill packages: **438** at commit `5e29a873122fdb13d377ba855b0227e374eb259c` (static inventory; run current audit for live counts).
+- Active skill packages: **453** after the Marketing specialization (new commit; pending exact-head CI) (static inventory; run current audit for live counts).
 - Many fine-grained subdomains remain mapped-only; 32 of 41 top-level domains have just one skill, so broad expert coverage is unproven. See [All-domain maturity matrix](ALL_DOMAIN_MATURITY_MATRIX.md).
 - For exact current counts run `python scripts/report_coverage.py --summary`.
 - Distinction: a mapped node is discoverable taxonomy but may not provide an executable skill.

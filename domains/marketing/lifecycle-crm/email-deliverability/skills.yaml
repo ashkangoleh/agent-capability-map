@@ -1,0 +1,14 @@
+schema_version: 1
+id: email-deliverability
+kind: skill-registry
+skills:
+  - id: marketing-email-deliverability
+    path: .agents/skills/marketing/lifecycle-crm/marketing-email-deliverability/SKILL.md
+    description: "Investigate email delivery failures without weakening authentication or bypassing suppression."
+    triggers:
+      - "marketing email sender reputation spf dkim dmarc unsubscribe"
+      - "marketing bulk email deliverability investigation"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

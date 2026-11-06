@@ -1,0 +1,18 @@
+schema_version: 1
+id: brand-positioning
+kind: map
+children:
+  - id: audience-research
+    description: "Separate observed customer evidence from invented personas and biased convenience samples."
+    triggers:
+      - "marketing audience research sampling bias segmentation"
+      - "marketing customer segment validation"
+    status: active
+    skills: domains/marketing/brand-positioning/audience-research/skills.yaml
+  - id: message-validation
+    description: "Validate positioning and advertising claims before publishing creative."
+    triggers:
+      - "marketing brand positioning claim substantiation message test"
+      - "marketing value proposition message validation"
+    status: active
+    skills: domains/marketing/brand-positioning/message-validation/skills.yaml

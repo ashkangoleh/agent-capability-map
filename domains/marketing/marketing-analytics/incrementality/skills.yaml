@@ -1,0 +1,14 @@
+schema_version: 1
+id: incrementality
+kind: skill-registry
+skills:
+  - id: marketing-incrementality-geo-lift
+    path: .agents/skills/marketing/marketing-analytics/marketing-incrementality-geo-lift/SKILL.md
+    description: "Estimate incremental marketing impact with explicit identification assumptions and uncertainty."
+    triggers:
+      - "marketing geo lift incrementality holdout design"
+      - "marketing media mix experiment calibration"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

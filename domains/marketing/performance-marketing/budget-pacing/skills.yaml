@@ -1,0 +1,14 @@
+schema_version: 1
+id: budget-pacing
+kind: skill-registry
+skills:
+  - id: marketing-spend-pacing
+    path: .agents/skills/marketing/performance-marketing/marketing-spend-pacing/SKILL.md
+    description: "Set bounded spend controls without confusing platform-reported ROAS with incremental profit."
+    triggers:
+      - "marketing paid media spend pacing budget guardrails"
+      - "marketing advertising budget pacing"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

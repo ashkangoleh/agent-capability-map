@@ -3,52 +3,61 @@ id: marketing
 kind: map
 children:
   - id: campaign-strategy
-    description: "campaign strategy"
+    description: "launch gates, evidence-backed audience and measurable offers"
     triggers:
-      - "campaign"
-      - "کمپین"
-      - "بازاریابی"
-      - "go-to-market"
-      - "gtm"
-      - "marketing strategy"
+      - "campaign strategy marketing"
+      - "create marketing campaign strategy"
+      - "marketing launch readiness dependency gate"
     status: active
-    skills: domains/marketing/graph-skills.yaml
+    map: domains/marketing/campaign-strategy/map.yaml
   - id: performance-marketing
-    description: "performance marketing"
+    description: "paid media economics, budget exposure and controlled creative experimentation"
     triggers:
-      - "paid ads"
-      - "performance marketing"
-      - "paid media"
+      - "performance marketing marketing"
+      - "marketing paid media spend pacing budget guardrails"
+      - "marketing creative randomized experiment contamination"
+      - "marketing landing page conversion qa checkout funnel"
     status: active
-    skills: domains/marketing/graph-skills.yaml
+    map: domains/marketing/performance-marketing/map.yaml
   - id: brand-positioning
-    description: "brand positioning"
+    description: "research validity, audience evidence and substantiated positioning claims"
     triggers:
-      - "brand positioning"
-      - "brand messaging"
+      - "brand positioning marketing"
+      - "marketing audience research sampling bias segmentation"
+      - "marketing brand positioning claim substantiation message test"
     status: active
-    skills: domains/marketing/graph-skills.yaml
+    map: domains/marketing/brand-positioning/map.yaml
   - id: lifecycle-crm
-    description: "lifecycle crm"
+    description: "consent, suppression, deliverability, and retention without overmessaging"
     triggers:
-      - "crm"
-      - "lifecycle marketing"
-      - "retention campaign"
+      - "lifecycle crm marketing"
+      - "marketing crm consent suppression unsubscribe preference audit"
+      - "marketing lifecycle journey holdout retention experiment"
+      - "marketing email sender reputation spf dkim dmarc unsubscribe"
     status: active
-    skills: domains/marketing/graph-skills.yaml
+    map: domains/marketing/lifecycle-crm/map.yaml
   - id: marketing-analytics
-    description: "marketing analytics"
+    description: "conversion provenance, experimental incrementality and reconciliation"
     triggers:
-      - "marketing measurement"
-      - "conversion tracking"
-      - "ga4"
-      - "marketing attribution"
-      - "channel analytics"
+      - "marketing analytics marketing"
+      - "implement ga4 event tracking for marketing conversions"
+      - "marketing geo lift incrementality holdout design"
+      - "marketing offline conversion upload dedup reconciliation"
     status: active
-    skills: domains/marketing/graph-skills.yaml
+    map: domains/marketing/marketing-analytics/map.yaml
   - id: influencer-partnerships
-    description: "influencer partnerships"
+    description: "material connection disclosure, affiliate reconciliation and fraud boundaries"
     triggers:
-      - "influencer marketing"
-      - "affiliate marketing"
-    status: mapped
+      - "influencer partnerships marketing"
+      - "marketing influencer paid endorsement disclosure review"
+      - "marketing affiliate payout attribution fraud reconciliation"
+    status: active
+    map: domains/marketing/influencer-partnerships/map.yaml
+  - id: marketing-operations
+    description: "tracking taxonomy, safe releases and ownership of marketing configuration"
+    triggers:
+      - "marketing operations marketing"
+      - "marketing campaign taxonomy utm governance audit"
+      - "marketing campaign release preflight checklist approvals"
+    status: active
+    map: domains/marketing/marketing-operations/map.yaml

@@ -290,3 +290,7 @@ Infrastructure now has 16 first-class selectable scopes and 95 unique active spe
 ## Unified master branch
 
 The current consolidated development branch is `pre_release`. See `docs/UNIFIED_COMPLETENESS_AUDIT.md` for domain maturity, known gaps, validation status and merge gates. This branch is not production-certified and has not been merged to `main`.
+
+## Marketing hierarchy expansion (2026-11-06)
+
+The Marketing domain contains seven routed first-level subdomains and 17 specialist leaves (15 new plus two stable original skill IDs). Each route receives a distinct ROLE.md at its subdomain and leaf, case-specific acceptance/recovery evidence, and official source starting points. Existing marketing SKILL.md paths and IDs remain unchanged. Updated inventory: **453 canonical skills** and **432 role contracts**; these are structural counts until exact-commit GitHub Actions confirms them. Marketing lacks independent field evaluations and legal signoff; this is not a production-ready certification. See `docs/MARKETING_HIERARCHY.md`.

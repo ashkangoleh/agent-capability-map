@@ -1,0 +1,14 @@
+schema_version: 1
+id: creative-experimentation
+kind: skill-registry
+skills:
+  - id: marketing-creative-experimentation
+    path: .agents/skills/marketing/performance-marketing/marketing-creative-experimentation/SKILL.md
+    description: "Design a defensible paid-creative experiment with explicit randomization and decision rules."
+    triggers:
+      - "marketing creative randomized experiment contamination"
+      - "marketing paid creative split test"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

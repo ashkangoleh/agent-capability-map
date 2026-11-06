@@ -1,14 +1,14 @@
 # All-domain evidence coverage and maturity — 2026-11-06
 
-Commit inspected: `5e29a873122fdb13d377ba855b0227e374eb259c`, branch `pre_release`.
+Baseline commit: `5e29a873122fdb13d377ba855b0227e374eb259c`; updated Marketing registry on `pre_release` (new count requires exact-head CI audit).
 
 ## Executive result
 
-- 41 top-level domains, 438 canonical `SKILL.md` packages and 408 hierarchical `ROLE.md` files.
-- All 438 packages have a linked `references/acceptance-and-recovery.md` companion (L1 **structural coverage**, not runtime proof).
+- 41 top-level domains, 453 canonical `SKILL.md` packages and 432 hierarchical `ROLE.md` files.
+- All 453 packages have a linked `references/acceptance-and-recovery.md` companion (L1 **structural coverage**, not runtime proof).
 - **32 of 41 domains have only one skill**. These must not be presented as domain-complete taxonomies.
-- 76 cross-domain verification policy profiles exist. Some are reused: they are not 438 independently trialed runbooks.
-- 438 skill profiles **do not** have a verified real-host A/B study; latest-release correctness and safety qualifications remain unverified as a portfolio.
+- 76 cross-domain verification policy profiles exist. Some are reused: they are not 453 independently trialed runbooks.
+- 453 skill profiles **do not** have a verified real-host A/B study; latest-release correctness and safety qualifications remain unverified as a portfolio.
 - For Data Engineering, specialized validation was extended to all 123 skills but only a few packages have standalone offline scripts and examples.
 - Structural CI result for previous revision `5e29a873122fdb13d377ba855b0227e374eb259c`: 5/5 jobs passed, 271 unit tests (one skipped). Re-run for changes to this document or source policy.
 
@@ -38,7 +38,7 @@ Commit inspected: `5e29a873122fdb13d377ba855b0227e374eb259c`, branch `pre_releas
 | `legal` | 1 | 1 | Seed-only — major breadth gap | Not comprehensively verified |
 | `logistics` | 1 | 1 | Seed-only — major breadth gap | Not comprehensively verified |
 | `manufacturing` | 1 | 1 | Seed-only — major breadth gap | Not comprehensively verified |
-| `marketing` | 2 | 2 | Narrow | Not comprehensively verified |
+| `marketing` | 17 | 17 | Seven specialist subdomains; L1 structural, not runtime validated | Not comprehensively verified |
 | `media` | 1 | 1 | Seed-only — major breadth gap | Not comprehensively verified |
 | `nonprofit` | 1 | 1 | Seed-only — major breadth gap | Not comprehensively verified |
 | `people` | 1 | 1 | Seed-only — major breadth gap | Not comprehensively verified |
@@ -70,7 +70,7 @@ Commit inspected: `5e29a873122fdb13d377ba855b0227e374eb259c`, branch `pre_releas
 
 ## Official reference governance
 
-See [Source provenance policy](SOURCE_PROVENANCE_POLICY.md). Confirm applicability and published version before claiming any result. This is not a list of 438 freshly verified, version-pinned external sources.
+See [Source provenance policy](SOURCE_PROVENANCE_POLICY.md). Confirm applicability and published version before claiming any result. This is not a list of 453 freshly verified, version-pinned external sources.
 
 ## Next quality evidence
 
