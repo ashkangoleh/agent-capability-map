@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Cross-device URL routes, checkout sessions, consent events and server-side orders.
+- Acceptance and ownership: Representative payment journey completes and unique purchase events reconcile.
+- Stop or escalate: Block media scale-up on mobile checkout or payment failure.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

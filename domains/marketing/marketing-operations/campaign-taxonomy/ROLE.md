@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Canonical campaign IDs, UTM dictionary, redirects and historic mapping cohorts.
+- Acceptance and ownership: Pre/post click traces preserve IDs and reports reconcile by channel.
+- Stop or escalate: Reject collisions or personal data in tracking URLs.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Conversion action access, order/event IDs, refunds, value currency and retry results.
+- Acceptance and ownership: Idempotent upload sample reconciles with source ledger and provider diagnostics.
+- Stop or escalate: Stop when consent, API permissions or adjustment ownership is unknown.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

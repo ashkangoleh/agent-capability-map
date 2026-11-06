@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Consent origin, event time, channel purpose, opt-out and vendor export snapshot.
+- Acceptance and ownership: Every dispatched contact passes effective-time eligibility and suppression replay.
+- Stop or escalate: Block missing-consent or recently unsubscribed recipients.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

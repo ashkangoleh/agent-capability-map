@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: SPF DKIM DMARC DNS and aligned sender evidence plus bounce/complaint trends.
+- Acceptance and ownership: Authenticate domain and distinguish SMTP acceptance from actual inbox placement.
+- Stop or escalate: Reject attempts to bypass unsubscribe or weaken authentication.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

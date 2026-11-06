@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Pre-registered estimand, treatment and control units, spillover risks and outcome lag.
+- Acceptance and ownership: Independent analysis reproduces lift interval and sensitivity checks.
+- Stop or escalate: Do not treat last-click credited revenue as incremental lift.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Versioned commission rules, unique orders, refunds, partner claims and payout ledger.
+- Acceptance and ownership: Each payable order has one eligible partner and finance-approved adjustment trail.
+- Stop or escalate: Hold payouts with unresolved referral collision or unposted refund.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

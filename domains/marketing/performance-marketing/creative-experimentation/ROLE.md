@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Variant assignment, audience overlap, conversion lag, primary KPI and stopping rule.
+- Acceptance and ownership: Sample-ratio and contamination checks pass before inferring creative lift.
+- Stop or escalate: Reject causal winner when delivery optimizer selects different intent cohorts.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Account permissions, change manifest, budget cap, verified landing and conversion smoke test.
+- Acceptance and ownership: Owner demonstrates pause or rollback and confirms downstream order trace.
+- Stop or escalate: Hold release if spend cannot be stopped by authorized operator.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

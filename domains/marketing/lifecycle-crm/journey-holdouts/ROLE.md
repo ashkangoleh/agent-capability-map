@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Identity resolution rules, event timestamps, cooldowns, journey exit and holdout assignment.
+- Acceptance and ownership: Replay yields intended unique messages without re-entering opted-out identities.
+- Stop or escalate: Quarantine out-of-order reactivation or duplicate sends.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: GA4 event schemas, tag deployment, consent state and canonical transaction IDs.
+- Acceptance and ownership: Reconcile uniquely tracked conversions against order truth with attribution caveats.
+- Stop or escalate: Withhold reporting where client events double-count purchase.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.
