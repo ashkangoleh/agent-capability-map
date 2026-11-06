@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: An unappro
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Final issue, copy/preview, link checks, editorial approval and separate dispatch eligibility.
+- Acceptance and ownership: Internal preview passes editorial QA while sending remains subject to consent gate.
+- Stop or escalate: Do not issue a live send from drafting or bypass suppression.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

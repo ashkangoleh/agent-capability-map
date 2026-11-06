@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: A quote is
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Original quote/audio context, cited page and permitted reuse scope.
+- Acceptance and ownership: Source attribution preserves wording, context and content license.
+- Stop or escalate: Reject fabricated interviews or citation to unread source.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

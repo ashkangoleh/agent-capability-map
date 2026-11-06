@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: Download c
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Hosting delivery logs, bot rules, IAB revision and metric dedup windows.
+- Acceptance and ownership: Clearly label valid downloads versus listeners and completions with filtering caveats.
+- Stop or escalate: Reject treating IP count as unique humans or download as full play.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: Translated
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Pinned bilingual document versions, glossary, numbers, warnings and target script rendering.
+- Acceptance and ownership: Line-level semantic review retains negations, units and safety caveats.
+- Stop or escalate: Stop translation release that reverses permission or hazard condition.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: Noncommerc
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Asset creator, license variant, modification status, territorial and commercial restrictions.
+- Acceptance and ownership: Credits and permitted distribution match actual media usage.
+- Stop or escalate: Quarantine noncommercial licensed media in paid promotional material.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

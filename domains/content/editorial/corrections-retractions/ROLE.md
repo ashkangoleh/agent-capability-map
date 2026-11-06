@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: A factual 
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Prior article revisions, confirmed defect, correction severity and downstream syndication targets.
+- Acceptance and ownership: Visible correction or retraction records actual change with editor signoff.
+- Stop or escalate: Do not silently overwrite harmful error or leave old syndicated copy.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

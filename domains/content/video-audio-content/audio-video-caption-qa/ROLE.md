@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: Captions o
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Actual audio, timestamped captions, speaker IDs and meaningful sound cues.
+- Acceptance and ownership: Human sample checks verify synchronization, warnings and speaker accuracy.
+- Stop or escalate: Stop safety-critical caption omission or unverified auto-caption quality.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: AI-generat
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Provenance of input media, human edits, AI contribution and author byline.
+- Acceptance and ownership: Disclosure and attribution align with what was actually created or verified.
+- Stop or escalate: Reject fake eyewitness attribution or assumed copyright ownership.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.
