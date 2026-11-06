@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Signed legal and finance approvals, live URL checks, inventory and event instrumentation.
+- Acceptance and ownership: Go/no-go ledger independently confirms conversion tracing and pause owner.
+- Stop or escalate: Do not launch when client conversion fires but order ledger has no transaction.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

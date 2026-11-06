@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Offer, business KPI baseline, landing links, budget and launch dependencies.
+- Acceptance and ownership: Sign-off matrix contains the owner and observed green gate for every irreversible exposure.
+- Stop or escalate: Block campaigns with no rollback permission or unverified checkout flow.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

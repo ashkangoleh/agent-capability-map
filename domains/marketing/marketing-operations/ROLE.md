@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Delegation and scope
+- Evidence: Campaign taxonomies, approval ledger, tracker URLs and owner-authorized release snapshot.
+- Acceptance and ownership: Validate source-to-conversion tags and safe pause/rollback permissions.
+- Stop or escalate: Block release if audience/UTM mapping or authorization cannot be reproduced.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

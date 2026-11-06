@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Delegation and scope
+- Evidence: Audience sampling records and product claim substantiation.
+- Acceptance and ownership: Approve positioning only when material claims are corroborated for the target segment.
+- Stop or escalate: Escalate representative-market claims based on convenience interviews.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

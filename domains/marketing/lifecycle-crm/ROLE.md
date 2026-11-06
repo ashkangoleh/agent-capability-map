@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Delegation and scope
+- Evidence: Effective-time subscription events, preference/suppression state and CRM journey identity.
+- Acceptance and ownership: Validate send eligibility at dispatch time and preserve holdouts across replay.
+- Stop or escalate: Stop on stale opt-outs, consent ambiguity or journey re-entry duplication.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

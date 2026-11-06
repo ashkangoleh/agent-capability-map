@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Specialist acceptance contract
+- Evidence: Actual sampling frame, response counts, questionnaire provenance and nonresponse groups.
+- Acceptance and ownership: Verify each reported segment's denominator and bias limits before recommending spend.
+- Stop or escalate: Reject generalization from an opt-in newsletter sample to the full market.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.

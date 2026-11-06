@@ -21,5 +21,10 @@ Reject unsupported forecasts, fabricated access, unapproved spend, and these fai
 ## Output contract
 State observations, assumptions, hard stops, a falsifiable acceptance test, and an authorized rollback owner.
 
+## Delegation and scope
+- Evidence: Conversion contract, source transaction IDs, attribution window and experimental assignment.
+- Acceptance and ownership: Separate platform attribution from counterfactual incrementality and financial reconciliation.
+- Stop or escalate: Refuse causal lift claim without defensible identification and delayed-event handling.
+
 ## Authority boundary
 Review only the matched route; never grant access, replace legal signoff, bypass user authorization, or load sibling role instructions.
