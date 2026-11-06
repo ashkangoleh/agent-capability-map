@@ -1,0 +1,12 @@
+schema_version: 1
+id: hreflang-reciprocity
+kind: skill-registry
+skills:
+  - id: seo-hreflang-reciprocity
+    path: .agents/skills/seo/international-seo/seo-hreflang-reciprocity/SKILL.md
+    description: "Validate language and region codes and actual translated content"
+    triggers:
+      - "seo hreflang reciprocal alternate canonical audit"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

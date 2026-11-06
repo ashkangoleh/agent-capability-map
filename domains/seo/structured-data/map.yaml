@@ -1,0 +1,22 @@
+schema_version: 1
+id: structured-data
+kind: map
+children:
+  - id: schema-validation
+    description: "Existing canonical specialist"
+    triggers:
+      - "validate structured data validation for product pages"
+    status: active
+    skills: domains/seo/structured-data/schema-validation/skills.yaml
+  - id: merchant-listing-schema
+    description: "Confirm eligible product detail page and active purchase experience"
+    triggers:
+      - "seo merchant listing product price availability schema audit"
+    status: active
+    skills: domains/seo/structured-data/merchant-listing-schema/skills.yaml
+  - id: local-business-schema-truth
+    description: "Select supported LocalBusiness subtype and inspect rendered content"
+    triggers:
+      - "seo localbusiness schema opening hours location consistency"
+    status: active
+    skills: domains/seo/structured-data/local-business-schema-truth/skills.yaml

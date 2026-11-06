@@ -349,8 +349,27 @@ ids:
   - scientific-experiment-review
   - secrets-workload-identity-spiffe
   - security-threat-model-review
+  - seo-ai-search-feature-visibility
   - seo-audit-strategy
+  - seo-business-profile-integrity
+  - seo-change-impact-evaluation
+  - seo-content-refresh-overlap-audit
+  - seo-crawler-log-diagnostics
+  - seo-faceted-navigation-controls
+  - seo-hreflang-reciprocity
   - seo-indexability-diagnostics
+  - seo-internal-link-architecture
+  - seo-javascript-rendering
+  - seo-local-business-schema-truth
+  - seo-locale-adaptive-crawl
+  - seo-merchant-listing-schema
+  - seo-organic-regression-triage
+  - seo-people-first-content-review
+  - seo-product-variant-canonical
+  - seo-search-console-data-quality
+  - seo-search-intent-page-mapping
+  - seo-site-migration-redirects
+  - seo-sitemap-canonical-integrity
   - seo-structured-data-validation
   - server-hardware-firmware-management
   - service-discovery-control-plane-operations

@@ -1,0 +1,22 @@
+schema_version: 1
+id: seo-measurement
+kind: map
+children:
+  - id: search-console-data-quality
+    description: "Select correct API property dates dimensions and freshness"
+    triggers:
+      - "seo search console api sampling query page reconciliation"
+    status: active
+    skills: domains/seo/seo-measurement/search-console-data-quality/skills.yaml
+  - id: organic-regression-triage
+    description: "Validate instrumentation freshness before diagnosing search decline"
+    triggers:
+      - "seo organic traffic regression incident diagnose"
+    status: active
+    skills: domains/seo/seo-measurement/organic-regression-triage/skills.yaml
+  - id: change-impact-evaluation
+    description: "Predeclare outcomes and comparable treated control URL cohorts"
+    triggers:
+      - "seo change impact matched control pages test"
+    status: active
+    skills: domains/seo/seo-measurement/change-impact-evaluation/skills.yaml

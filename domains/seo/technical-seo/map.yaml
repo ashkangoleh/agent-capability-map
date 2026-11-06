@@ -1,0 +1,28 @@
+schema_version: 1
+id: technical-seo
+kind: map
+children:
+  - id: site-audit
+    description: "Existing canonical specialist"
+    triggers:
+      - "audit technical seo canonical tags"
+    status: active
+    skills: domains/seo/technical-seo/site-audit/skills.yaml
+  - id: javascript-rendering
+    description: "Compare initial HTML and crawler-rendered page for main content links and canonical tags"
+    triggers:
+      - "seo javascript rendered html visibility inspection"
+    status: active
+    skills: domains/seo/technical-seo/javascript-rendering/skills.yaml
+  - id: site-migration-redirects
+    description: "Map old canonical URLs to relevant successors"
+    triggers:
+      - "seo site migration redirects url mapping rollback"
+    status: active
+    skills: domains/seo/technical-seo/site-migration-redirects/skills.yaml
+  - id: internal-link-architecture
+    description: "Extract crawlable anchor graph from rendered templates"
+    triggers:
+      - "seo internal link architecture orphan page audit"
+    status: active
+    skills: domains/seo/technical-seo/internal-link-architecture/skills.yaml

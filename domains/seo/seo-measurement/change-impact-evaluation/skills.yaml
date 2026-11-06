@@ -1,0 +1,12 @@
+schema_version: 1
+id: change-impact-evaluation
+kind: skill-registry
+skills:
+  - id: seo-change-impact-evaluation
+    path: .agents/skills/seo/seo-measurement/seo-change-impact-evaluation/SKILL.md
+    description: "Predeclare outcomes and comparable treated control URL cohorts"
+    triggers:
+      - "seo change impact matched control pages test"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

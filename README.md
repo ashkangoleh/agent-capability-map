@@ -294,3 +294,7 @@ The current consolidated development branch is `pre_release`. See `docs/UNIFIED_
 ## Marketing hierarchy expansion (2026-11-06)
 
 The Marketing domain contains seven routed first-level subdomains and 17 specialist leaves (15 new plus two stable original skill IDs). Each route receives a distinct ROLE.md at its subdomain and leaf, case-specific acceptance/recovery evidence, and official source starting points. Existing marketing SKILL.md paths and IDs remain unchanged. Updated inventory: **453 canonical skills** and **432 role contracts**; these are structural counts until exact-commit GitHub Actions confirms them. Marketing lacks independent field evaluations and legal signoff; this is not a production-ready certification. See `docs/MARKETING_HIERARCHY.md`.
+
+## SEO hierarchy — 2026-11-06
+
+Nine specialized SEO branches now resolve to 22 leaf skills, including 19 new specialist packages while retaining three original canonical skill file contents and paths. Portfolio targets **472** skills and **463** role contracts. This remains L1 structural coverage pending exact-SHA CI, not real agent or website performance certification. See `docs/SEO_HIERARCHY.md`.

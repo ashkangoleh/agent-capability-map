@@ -1,0 +1,22 @@
+schema_version: 1
+id: content-seo
+kind: map
+children:
+  - id: search-intent-page-mapping
+    description: "Map observed queries to comparable intents by market"
+    triggers:
+      - "seo search intent keyword to page mapping"
+    status: active
+    skills: domains/seo/content-seo/search-intent-page-mapping/skills.yaml
+  - id: people-first-content-review
+    description: "Assess accuracy genuine authorship original work and reader utility"
+    triggers:
+      - "seo people first content spam scaled content audit"
+    status: active
+    skills: domains/seo/content-seo/people-first-content-review/skills.yaml
+  - id: content-refresh-overlap-audit
+    description: "Compare URL-level intent over matched seasonal periods"
+    triggers:
+      - "seo content cannibalization duplicate query page refresh"
+    status: active
+    skills: domains/seo/content-seo/content-refresh-overlap-audit/skills.yaml

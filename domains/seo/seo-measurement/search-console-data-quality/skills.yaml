@@ -1,0 +1,12 @@
+schema_version: 1
+id: search-console-data-quality
+kind: skill-registry
+skills:
+  - id: seo-search-console-data-quality
+    path: .agents/skills/seo/seo-measurement/seo-search-console-data-quality/SKILL.md
+    description: "Select correct API property dates dimensions and freshness"
+    triggers:
+      - "seo search console api sampling query page reconciliation"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

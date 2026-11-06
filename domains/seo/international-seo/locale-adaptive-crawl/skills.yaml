@@ -1,0 +1,12 @@
+schema_version: 1
+id: locale-adaptive-crawl
+kind: skill-registry
+skills:
+  - id: seo-locale-adaptive-crawl
+    path: .agents/skills/seo/international-seo/seo-locale-adaptive-crawl/SKILL.md
+    description: "Test direct localized page URLs across IP language and cache states"
+    triggers:
+      - "seo locale adaptive ip redirect googlebot crawl"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

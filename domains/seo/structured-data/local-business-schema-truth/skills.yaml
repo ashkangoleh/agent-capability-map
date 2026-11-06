@@ -1,0 +1,12 @@
+schema_version: 1
+id: local-business-schema-truth
+kind: skill-registry
+skills:
+  - id: seo-local-business-schema-truth
+    path: .agents/skills/seo/structured-data/seo-local-business-schema-truth/SKILL.md
+    description: "Select supported LocalBusiness subtype and inspect rendered content"
+    triggers:
+      - "seo localbusiness schema opening hours location consistency"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

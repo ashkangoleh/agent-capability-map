@@ -10,7 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 class DomainMaturityTests(unittest.TestCase):
     def test_every_domain_has_linked_l1_contract(self):
         report=audit(ROOT)
-        self.assertEqual((report["domains"],report["skills"],report["referenced_skills"]),(41,453,453))
+        self.assertEqual((report["domains"],report["skills"],report["referenced_skills"]),(41,472,472))
         self.assertEqual(report["problems"],[])
 
     def test_singleton_domains_are_explicit_breadth_gap(self):

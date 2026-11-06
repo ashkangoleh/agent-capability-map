@@ -1,0 +1,12 @@
+schema_version: 1
+id: content-refresh-overlap-audit
+kind: skill-registry
+skills:
+  - id: seo-content-refresh-overlap-audit
+    path: .agents/skills/seo/content-seo/seo-content-refresh-overlap-audit/SKILL.md
+    description: "Compare URL-level intent over matched seasonal periods"
+    triggers:
+      - "seo content cannibalization duplicate query page refresh"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

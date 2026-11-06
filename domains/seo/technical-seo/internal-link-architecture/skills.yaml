@@ -1,0 +1,12 @@
+schema_version: 1
+id: internal-link-architecture
+kind: skill-registry
+skills:
+  - id: seo-internal-link-architecture
+    path: .agents/skills/seo/technical-seo/seo-internal-link-architecture/SKILL.md
+    description: "Extract crawlable anchor graph from rendered templates"
+    triggers:
+      - "seo internal link architecture orphan page audit"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

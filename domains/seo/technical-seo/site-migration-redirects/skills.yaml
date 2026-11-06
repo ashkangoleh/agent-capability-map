@@ -1,0 +1,12 @@
+schema_version: 1
+id: site-migration-redirects
+kind: skill-registry
+skills:
+  - id: seo-site-migration-redirects
+    path: .agents/skills/seo/technical-seo/seo-site-migration-redirects/SKILL.md
+    description: "Map old canonical URLs to relevant successors"
+    triggers:
+      - "seo site migration redirects url mapping rollback"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

@@ -1,0 +1,15 @@
+schema_version: 1
+id: schema-validation
+kind: skill-registry
+skills:
+  - id: seo-structured-data-validation
+    path: .agents/skills/seo/structured-data/seo-structured-data-validation/SKILL.md
+    description: "Preserve existing canonical specialist"
+    triggers:
+      - "validate structured data validation for product pages"
+      - "structured data validation"
+      - "json-ld"
+      - "rich result markup"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

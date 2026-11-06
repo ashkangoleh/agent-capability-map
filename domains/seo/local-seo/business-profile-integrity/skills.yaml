@@ -1,0 +1,12 @@
+schema_version: 1
+id: business-profile-integrity
+kind: skill-registry
+skills:
+  - id: seo-business-profile-integrity
+    path: .agents/skills/seo/local-seo/seo-business-profile-integrity/SKILL.md
+    description: "Verify real profile eligibility and owner authority"
+    triggers:
+      - "seo business profile accurate name address hours verification"
+    excludes:
+      - "paid search advertising campaign"
+    status: active
