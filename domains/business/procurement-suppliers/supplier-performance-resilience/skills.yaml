@@ -1,0 +1,12 @@
+schema_version: 1
+id: supplier-performance-resilience
+kind: skill-registry
+skills:
+  - id: business-supplier-performance-resilience
+    path: .agents/skills/business/procurement-suppliers/business-supplier-performance-resilience/SKILL.md
+    description: "Capture contract SLA metrics, actual incidents, concentration and alternative sources. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations supplier performance sla exit concentration risk"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

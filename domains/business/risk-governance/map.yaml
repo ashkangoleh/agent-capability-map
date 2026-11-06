@@ -1,0 +1,16 @@
+schema_version: 1
+id: risk-governance
+kind: map
+children:
+  - id: risk-register-treatment
+    description: "Set risk owner, impact scales, likelihood evidence and appetite constraints"
+    triggers:
+      - "business operations enterprise risk register appetite residual treatment"
+    status: active
+    skills: domains/business/risk-governance/risk-register-treatment/skills.yaml
+  - id: control-assurance-three-lines
+    description: "Map management, risk oversight and independent assurance responsibilities with ownership"
+    triggers:
+      - "business operations control assurance three lines segregation evidence"
+    status: active
+    skills: domains/business/risk-governance/control-assurance-three-lines/skills.yaml

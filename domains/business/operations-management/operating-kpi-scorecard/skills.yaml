@@ -1,0 +1,12 @@
+schema_version: 1
+id: operating-kpi-scorecard
+kind: skill-registry
+skills:
+  - id: business-operating-kpi-scorecard
+    path: .agents/skills/business/operations-management/business-operating-kpi-scorecard/SKILL.md
+    description: "Define operational metric owners, business definitions, denominators and data latency. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations kpi scorecard metric denominator reconciliation"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

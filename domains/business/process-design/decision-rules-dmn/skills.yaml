@@ -1,0 +1,12 @@
+schema_version: 1
+id: decision-rules-dmn
+kind: skill-registry
+skills:
+  - id: business-decision-rules-dmn
+    path: .agents/skills/business/process-design/business-decision-rules-dmn/SKILL.md
+    description: "Write business decision inputs, owner, eligibility and explicit domain of values. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations dmn 1.6 decision table overlap hit policy"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

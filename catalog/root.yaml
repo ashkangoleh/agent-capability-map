@@ -707,7 +707,7 @@ children:
     status: active
   - id: business
     label: "Business & Operations"
-    description: "Business strategy, commercial analysis, operating models and process design."
+    description: "Business strategy, unit economics, finance scenarios, BPMN processes, sourcing, risk, continuity and decision governance."
     triggers:
       - "business strategy"
       - "unit economics"
@@ -715,6 +715,32 @@ children:
       - "business case"
       - "business process"
       - "commercial analysis"
+      - "business analysis"
+      - "process improvement"
+      - "business operations strategic market sizing tam sam som evidence"
+      - "business operations portfolio investment allocation stage gate"
+      - "business operations unit economics contribution margin per order"
+      - "business operations pricing discount guardrails margin floor"
+      - "business operations revenue cohorts retention net revenue bridge"
+      - "business operations budget rolling forecast variance decomposition"
+      - "business operations cash runway liquidity stress test"
+      - "business operations capital investment npv irr payback decision"
+      - "business operations bpmn workflow exception handoffs audit"
+      - "business operations process bottleneck cycle time improvement"
+      - "business operations dmn 1.6 decision table overlap hit policy"
+      - "business operations capacity staffing backlog queue variability"
+      - "business operations kpi scorecard metric denominator reconciliation"
+      - "business operations continuity recovery drill recovery time capacity"
+      - "business operations enterprise risk register appetite residual treatment"
+      - "business operations control assurance three lines segregation evidence"
+      - "business operations procurement supplier total cost bid evaluation"
+      - "business operations supplier performance sla exit concentration risk"
+      - "business operations partnership viability revenue share incentives"
+      - "business operations commercial contract obligations renewal tracking"
+      - "business operations decision sensitivity scenario tornado assumptions"
+      - "business operations management decision approval policy traceability"
+      - "business operations organizational change readiness phased rollout"
+      - "business operations weekly operating review corrective action ownership"
     map: domains/business/map.yaml
     status: active
   - id: content

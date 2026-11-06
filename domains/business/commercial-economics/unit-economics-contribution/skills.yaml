@@ -1,0 +1,12 @@
+schema_version: 1
+id: unit-economics-contribution
+kind: skill-registry
+skills:
+  - id: business-unit-economics-contribution
+    path: .agents/skills/business/commercial-economics/business-unit-economics-contribution/SKILL.md
+    description: "Define customer, order or transaction unit and same-period cohort and currency. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations unit economics contribution margin per order"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

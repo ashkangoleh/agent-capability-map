@@ -1,0 +1,12 @@
+schema_version: 1
+id: pricing-discount-guardrails
+kind: skill-registry
+skills:
+  - id: business-pricing-discount-guardrails
+    path: .agents/skills/business/commercial-economics/business-pricing-discount-guardrails/SKILL.md
+    description: "Capture price baseline, taxes, demand cohort, incremental fulfilment costs and contract constraints. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations pricing discount guardrails margin floor"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

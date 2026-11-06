@@ -1,0 +1,12 @@
+schema_version: 1
+id: budget-forecast-variance
+kind: skill-registry
+skills:
+  - id: business-budget-forecast-variance
+    path: .agents/skills/business/finance-planning/business-budget-forecast-variance/SKILL.md
+    description: "Align approved baseline budget with actual periods, currency and department ownership. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations budget rolling forecast variance decomposition"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

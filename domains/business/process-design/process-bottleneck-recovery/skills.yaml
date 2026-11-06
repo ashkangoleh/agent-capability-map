@@ -1,0 +1,12 @@
+schema_version: 1
+id: process-bottleneck-recovery
+kind: skill-registry
+skills:
+  - id: business-process-bottleneck-recovery
+    path: .agents/skills/business/process-design/business-process-bottleneck-recovery/SKILL.md
+    description: "Measure queue length, arrival variability, handoff wait and first-pass yield by activity. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations process bottleneck cycle time improvement"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

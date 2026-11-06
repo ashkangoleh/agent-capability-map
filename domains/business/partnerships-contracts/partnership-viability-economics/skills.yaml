@@ -1,0 +1,12 @@
+schema_version: 1
+id: partnership-viability-economics
+kind: skill-registry
+skills:
+  - id: business-partnership-viability-economics
+    path: .agents/skills/business/partnerships-contracts/business-partnership-viability-economics/SKILL.md
+    description: "Verify partner business model, obligations, ownership and baseline counterfactual. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations partnership viability revenue share incentives"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

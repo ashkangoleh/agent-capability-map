@@ -1,0 +1,16 @@
+schema_version: 1
+id: partnerships-contracts
+kind: map
+children:
+  - id: partnership-viability-economics
+    description: "Verify partner business model, obligations, ownership and baseline counterfactual"
+    triggers:
+      - "business operations partnership viability revenue share incentives"
+    status: active
+    skills: domains/business/partnerships-contracts/partnership-viability-economics/skills.yaml
+  - id: commercial-contract-obligations
+    description: "Extract only actually supplied agreement terms including dates, SLA, payment and remedies"
+    triggers:
+      - "business operations commercial contract obligations renewal tracking"
+    status: active
+    skills: domains/business/partnerships-contracts/commercial-contract-obligations/skills.yaml

@@ -1,0 +1,22 @@
+schema_version: 1
+id: commercial-economics
+kind: map
+children:
+  - id: unit-economics-contribution
+    description: "Define customer, order or transaction unit and same-period cohort and currency"
+    triggers:
+      - "business operations unit economics contribution margin per order"
+    status: active
+    skills: domains/business/commercial-economics/unit-economics-contribution/skills.yaml
+  - id: pricing-discount-guardrails
+    description: "Capture price baseline, taxes, demand cohort, incremental fulfilment costs and contract constraints"
+    triggers:
+      - "business operations pricing discount guardrails margin floor"
+    status: active
+    skills: domains/business/commercial-economics/pricing-discount-guardrails/skills.yaml
+  - id: revenue-cohort-retention
+    description: "Define billing versus paid orders, refund adjustments, cohort entry and renewal periods"
+    triggers:
+      - "business operations revenue cohorts retention net revenue bridge"
+    status: active
+    skills: domains/business/commercial-economics/revenue-cohort-retention/skills.yaml

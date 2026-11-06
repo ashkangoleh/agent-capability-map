@@ -1,0 +1,12 @@
+schema_version: 1
+id: operating-review-cadence
+kind: skill-registry
+skills:
+  - id: business-operating-review-cadence
+    path: .agents/skills/business/change-execution/business-operating-review-cadence/SKILL.md
+    description: "Define period, KPI sources, unresolved risks, owner and decision authority for review. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations weekly operating review corrective action ownership"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

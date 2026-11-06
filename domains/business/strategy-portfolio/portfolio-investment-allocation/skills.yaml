@@ -1,0 +1,12 @@
+schema_version: 1
+id: portfolio-investment-allocation
+kind: skill-registry
+skills:
+  - id: business-portfolio-investment-allocation
+    path: .agents/skills/business/strategy-portfolio/business-portfolio-investment-allocation/SKILL.md
+    description: "List mutually competing projects, resource caps, dependencies and status quo. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations portfolio investment allocation stage gate"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

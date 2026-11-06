@@ -1,0 +1,16 @@
+schema_version: 1
+id: change-execution
+kind: map
+children:
+  - id: change-rollout-adoption
+    description: "List impacted roles, real workflow changes, training burden and stakeholders"
+    triggers:
+      - "business operations organizational change readiness phased rollout"
+    status: active
+    skills: domains/business/change-execution/change-rollout-adoption/skills.yaml
+  - id: operating-review-cadence
+    description: "Define period, KPI sources, unresolved risks, owner and decision authority for review"
+    triggers:
+      - "business operations weekly operating review corrective action ownership"
+    status: active
+    skills: domains/business/change-execution/operating-review-cadence/skills.yaml

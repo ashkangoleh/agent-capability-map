@@ -1,0 +1,12 @@
+schema_version: 1
+id: change-rollout-adoption
+kind: skill-registry
+skills:
+  - id: business-change-rollout-adoption
+    path: .agents/skills/business/change-execution/business-change-rollout-adoption/SKILL.md
+    description: "List impacted roles, real workflow changes, training burden and stakeholders. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations organizational change readiness phased rollout"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

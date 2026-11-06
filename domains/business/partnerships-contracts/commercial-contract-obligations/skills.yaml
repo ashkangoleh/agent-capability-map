@@ -1,0 +1,12 @@
+schema_version: 1
+id: commercial-contract-obligations
+kind: skill-registry
+skills:
+  - id: business-commercial-contract-obligations
+    path: .agents/skills/business/partnerships-contracts/business-commercial-contract-obligations/SKILL.md
+    description: "Extract only actually supplied agreement terms including dates, SLA, payment and remedies. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations commercial contract obligations renewal tracking"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

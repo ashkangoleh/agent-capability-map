@@ -1,0 +1,12 @@
+schema_version: 1
+id: strategic-market-sizing
+kind: skill-registry
+skills:
+  - id: business-strategic-market-sizing
+    path: .agents/skills/business/strategy-portfolio/business-strategic-market-sizing/SKILL.md
+    description: "Define market and time period, buyers, reachable channel and observed demand proxies. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations strategic market sizing tam sam som evidence"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

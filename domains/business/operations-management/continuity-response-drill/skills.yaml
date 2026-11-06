@@ -1,0 +1,12 @@
+schema_version: 1
+id: continuity-response-drill
+kind: skill-registry
+skills:
+  - id: business-continuity-response-drill
+    path: .agents/skills/business/operations-management/business-continuity-response-drill/SKILL.md
+    description: "Record critical service dependencies, maximum tolerable downtime and minimum acceptable capacity. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations continuity recovery drill recovery time capacity"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

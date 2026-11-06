@@ -1,0 +1,12 @@
+schema_version: 1
+id: capital-investment-appraisal
+kind: skill-registry
+skills:
+  - id: business-capital-investment-appraisal
+    path: .agents/skills/business/finance-planning/business-capital-investment-appraisal/SKILL.md
+    description: "Define incremental free cash flows by time period, taxation, terminal values and cost of capital. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations capital investment npv irr payback decision"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

@@ -2,37 +2,96 @@ schema_version: 1
 id: business
 kind: map
 children:
-  - id: business-strategy
-    description: "business strategy"
+  - id: strategy-portfolio
+    description: "Investment decisions, competitive evidence and strategic portfolio constraints"
     triggers:
+      - "strategy portfolio business operations"
+      - "Compare a business case with unit economics"
+      - "business operations strategic market sizing tam sam som evidence"
+      - "business operations portfolio investment allocation stage gate"
       - "business strategy"
       - "business case"
       - "unit economics"
-    status: active
-    skills: domains/business/graph-skills.yaml
-  - id: operations
-    description: "operations"
-    triggers:
       - "operating model"
-      - "process improvement"
-    status: active
-    skills: domains/business/graph-skills.yaml
-  - id: business-analysis
-    description: "business analysis"
-    triggers:
       - "commercial analysis"
       - "business analysis"
     status: active
-    skills: domains/business/graph-skills.yaml
-  - id: partnerships
-    description: "partnerships"
+    map: domains/business/strategy-portfolio/map.yaml
+  - id: commercial-economics
+    description: "Contribution economics, pricing and revenue cohort evaluation"
     triggers:
-      - "business partnership"
-      - "commercial negotiation"
-    status: mapped
-  - id: procurement
-    description: "procurement"
+      - "commercial economics business operations"
+      - "business operations unit economics contribution margin per order"
+      - "business operations pricing discount guardrails margin floor"
+      - "business operations revenue cohorts retention net revenue bridge"
+    status: active
+    map: domains/business/commercial-economics/map.yaml
+  - id: finance-planning
+    description: "Forecast controls, cash runway and investment appraisal"
     triggers:
-      - "procurement strategy"
-      - "supplier management"
-    status: mapped
+      - "finance planning business operations"
+      - "business operations budget rolling forecast variance decomposition"
+      - "business operations cash runway liquidity stress test"
+      - "business operations capital investment npv irr payback decision"
+    status: active
+    map: domains/business/finance-planning/map.yaml
+  - id: process-design
+    description: "BPMN workflows, improvement experiments and decision rules"
+    triggers:
+      - "process design business operations"
+      - "business operations bpmn workflow exception handoffs audit"
+      - "business operations process bottleneck cycle time improvement"
+      - "business operations dmn 1.6 decision table overlap hit policy"
+      - "business process"
+      - "process improvement"
+    status: active
+    map: domains/business/process-design/map.yaml
+  - id: operations-management
+    description: "Service capacity, operating scorecards and continuity practice"
+    triggers:
+      - "operations management business operations"
+      - "business operations capacity staffing backlog queue variability"
+      - "business operations kpi scorecard metric denominator reconciliation"
+      - "business operations continuity recovery drill recovery time capacity"
+    status: active
+    map: domains/business/operations-management/map.yaml
+  - id: risk-governance
+    description: "Risk treatment, ownership and independent control assurance"
+    triggers:
+      - "risk governance business operations"
+      - "business operations enterprise risk register appetite residual treatment"
+      - "business operations control assurance three lines segregation evidence"
+    status: active
+    map: domains/business/risk-governance/map.yaml
+  - id: procurement-suppliers
+    description: "Supplier selection, sourcing economics and third-party performance"
+    triggers:
+      - "procurement suppliers business operations"
+      - "business operations procurement supplier total cost bid evaluation"
+      - "business operations supplier performance sla exit concentration risk"
+    status: active
+    map: domains/business/procurement-suppliers/map.yaml
+  - id: partnerships-contracts
+    description: "Partner viability, commercial obligations and controlled renewal"
+    triggers:
+      - "partnerships contracts business operations"
+      - "business operations partnership viability revenue share incentives"
+      - "business operations commercial contract obligations renewal tracking"
+    status: active
+    map: domains/business/partnerships-contracts/map.yaml
+  - id: decision-analytics
+    description: "Decision tables, transparent scenario bounds and management criteria"
+    triggers:
+      - "decision analytics business operations"
+      - "business operations decision sensitivity scenario tornado assumptions"
+      - "business operations management decision approval policy traceability"
+    status: active
+    map: domains/business/decision-analytics/map.yaml
+  - id: change-execution
+    description: "Change rollout, stakeholder readiness and governance operating cadence"
+    triggers:
+      - "change execution business operations"
+      - "business operations organizational change readiness phased rollout"
+      - "business operations weekly operating review corrective action ownership"
+    status: active
+    map: domains/business/change-execution/map.yaml

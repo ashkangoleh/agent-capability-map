@@ -1,0 +1,16 @@
+schema_version: 1
+id: decision-analytics
+kind: map
+children:
+  - id: sensitivity-scenario-comparison
+    description: "Identify measurable decision criteria, base case, realistic downside and status quo"
+    triggers:
+      - "business operations decision sensitivity scenario tornado assumptions"
+    status: active
+    skills: domains/business/decision-analytics/sensitivity-scenario-comparison/skills.yaml
+  - id: policy-rule-approval-trace
+    description: "Catalog approval thresholds, conflict resolution, delegate authority and policy effective time"
+    triggers:
+      - "business operations management decision approval policy traceability"
+    status: active
+    skills: domains/business/decision-analytics/policy-rule-approval-trace/skills.yaml

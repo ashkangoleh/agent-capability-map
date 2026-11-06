@@ -1,0 +1,16 @@
+schema_version: 1
+id: procurement-suppliers
+kind: map
+children:
+  - id: procurement-supplier-selection
+    description: "Specify service scope, constraints, selection criteria and conflict disclosures before bids"
+    triggers:
+      - "business operations procurement supplier total cost bid evaluation"
+    status: active
+    skills: domains/business/procurement-suppliers/procurement-supplier-selection/skills.yaml
+  - id: supplier-performance-resilience
+    description: "Capture contract SLA metrics, actual incidents, concentration and alternative sources"
+    triggers:
+      - "business operations supplier performance sla exit concentration risk"
+    status: active
+    skills: domains/business/procurement-suppliers/supplier-performance-resilience/skills.yaml
