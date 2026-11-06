@@ -3,8 +3,8 @@
 ## Scope
 
 - Top-level domains: 41, all with at least one linked active skill.
-- Active skill packages: **513** after Research expansion (static inventory; exact-head CI required) (static inventory; run current audit for live counts).
-- Many fine-grained subdomains remain mapped-only; 31 of 41 top-level domains have just one skill, so broad expert coverage is unproven. See [All-domain maturity matrix](ALL_DOMAIN_MATURITY_MATRIX.md).
+- Active skill packages: **537** after Business expansion (static inventory; exact-head CI required) (static inventory; run current audit for live counts).
+- Many fine-grained subdomains remain mapped-only; 30 of 41 top-level domains have just one skill, so broad expert coverage is unproven. See [All-domain maturity matrix](ALL_DOMAIN_MATURITY_MATRIX.md).
 - For exact current counts run `python scripts/report_coverage.py --summary`.
 - Distinction: a mapped node is discoverable taxonomy but may not provide an executable skill.
 - The router remains deterministic lexical routing, not semantic retrieval. Auto-activation in other hosts is not certified by a passing registry test.

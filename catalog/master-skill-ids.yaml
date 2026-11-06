@@ -75,7 +75,31 @@ ids:
   - bigquery-data-platform-engineering
   - biodiversity-observation-quality
   - bitemporal-event-data-modeling
+  - business-bpmn-process-boundaries
+  - business-budget-forecast-variance
+  - business-capacity-queue-staffing
+  - business-capital-investment-appraisal
+  - business-cash-runway-liquidity
+  - business-change-rollout-adoption
+  - business-commercial-contract-obligations
+  - business-continuity-response-drill
+  - business-control-assurance-three-lines
+  - business-decision-rules-dmn
+  - business-operating-kpi-scorecard
+  - business-operating-review-cadence
+  - business-partnership-viability-economics
+  - business-policy-rule-approval-trace
+  - business-portfolio-investment-allocation
+  - business-pricing-discount-guardrails
+  - business-process-bottleneck-recovery
+  - business-procurement-supplier-selection
+  - business-revenue-cohort-retention
+  - business-risk-register-treatment
+  - business-sensitivity-scenario-comparison
+  - business-strategic-market-sizing
   - business-strategy-analysis
+  - business-supplier-performance-resilience
+  - business-unit-economics-contribution
   - carbon-inventory-boundary-review
   - causal-inference-observational
   - cdn-edge-delivery-operations

@@ -1,4 +1,4 @@
-"""Role-contract specificity and inheritance checks for four expanded domains.
+"""Role-contract specificity and inheritance checks for five expanded domains.
 
 Structural guards only: not an evaluation of model adherence or source truth.
 """
@@ -19,6 +19,7 @@ EXPECTED = {
     "seo": (9, 22),
     "content": (9, 22),
     "research": (8, 22),
+    "business": (10, 25),
 }
 LEVEL_MARKERS = {
     1: "## Cross-domain governance",
@@ -82,7 +83,7 @@ class ExpandedDomainRoleQualityTests(unittest.TestCase):
                         f"Role inheritance budget exceeded: {'/'.join(route)}",
                     )
             self.assertEqual(leaf_count, expected_leaves, domain)
-        self.assertEqual(totals, [4, 33, 83])
+        self.assertEqual(totals, [5, 43, 108])
         self.assertEqual(len(all_evidence), len(set(all_evidence)))
 
     def test_role_contract_is_read_only_and_never_an_authorization(self):

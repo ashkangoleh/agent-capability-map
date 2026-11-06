@@ -306,3 +306,7 @@ Nine first-level editorial/publishing branches contain 22 active leaf specialist
 ## Research & Communication hierarchy — 2026-11-06
 
 Eight first-level specialist domains and 22 active terminal routes include 20 new SKILL.md packages. Canonical `evidence-research` and `technical-writing-docs` SKILL.md paths and contents are preserved. Each new specialist has a task-specific falsifiable acceptance and recovery contract, with 30 new hierarchical roles. Static portfolio: **513 skills** and **524 roles**, pending exact-head CI. See `docs/RESEARCH_HIERARCHY.md`; L1 structure does not establish actual model expertise or research validity.
+
+## Business & Operations specialization — 2026-11-06
+
+Ten hierarchical business domains contain 25 active leaf skills (24 new; original `business-strategy-analysis` file and ID preserved). The root and each active subdomain and leaf have a scoped role with evidence, acceptance and stop/approval criteria. Expected static inventory: **537 skills**, **559 hierarchical roles**, **30 singleton domains**, pending exact-commit CI. See `docs/BUSINESS_HIERARCHY.md`. L1 structural coverage is not audited finance, legal contract advice, customer outcome, or observed enterprise operations validation.
