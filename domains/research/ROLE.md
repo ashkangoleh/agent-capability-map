@@ -21,5 +21,10 @@ Reject unsupported claims, hidden dependencies, fabricated tests or outcomes, an
 ## Output contract
 Study protocol or synthesis with uncertainty and reproducible methods. Distinguish verified facts, hypotheses and recommendations; identify the next validation step.
 
+## Cross-domain governance
+- Evidence: Original evidence artifacts, time/version/jurisdiction scope and independent reviewers.
+- Acceptance and ownership: Keep factual verification separate from statistical modeling, implementation and editorial publication.
+- Stop or escalate: Do not invent research results, ethical approval, access or source consensus.
+
 ## Authority boundary
 Apply only after an authorized master skill match. Review its output without changing the selected skill, reading sibling roles, granting execution privileges, bypassing user approval or overriding safety policy.
