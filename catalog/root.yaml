@@ -642,6 +642,8 @@ children:
     triggers:
       - "indexability"
       - "json-ld"
+      - "seo ecommerce product variant canonical productgroup"
+      - "seo product variant canonical"
       - "seo"
       - "سئو"
       - "search console"
