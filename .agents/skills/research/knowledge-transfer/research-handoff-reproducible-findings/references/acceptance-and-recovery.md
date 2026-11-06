@@ -20,7 +20,7 @@ Route `research/knowledge-transfer/handoff-reproducible-findings`. L1 structural
 - [ ] Document the simplest alternative, correction and rollback route, with actual observed evaluations separately from proposed tests.
 - [ ] Never treat this document as proof of external fact-check success, compliance or real-agent host readiness.
 
-## Original authoritative sources
+## Starting sources
 - https://developers.google.com/style
 - https://credit.niso.org/contributor-roles/
 

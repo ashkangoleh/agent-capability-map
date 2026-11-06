@@ -20,7 +20,7 @@ Route `research/presentation-reports/executive-evidence-brief`. L1 structural pl
 - [ ] Document the simplest alternative, correction and rollback route, with actual observed evaluations separately from proposed tests.
 - [ ] Never treat this document as proof of external fact-check success, compliance or real-agent host readiness.
 
-## Original authoritative sources
+## Starting sources
 - https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence
 - https://developers.google.com/style
 

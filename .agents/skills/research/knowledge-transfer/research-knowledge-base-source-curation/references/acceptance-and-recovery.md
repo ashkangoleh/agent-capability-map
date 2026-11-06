@@ -20,7 +20,7 @@ Route `research/knowledge-transfer/knowledge-base-source-curation`. L1 structura
 - [ ] Document the simplest alternative, correction and rollback route, with actual observed evaluations separately from proposed tests.
 - [ ] Never treat this document as proof of external fact-check success, compliance or real-agent host readiness.
 
-## Original authoritative sources
+## Starting sources
 - https://developers.google.com/tech-writing/overview
 - https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence
 

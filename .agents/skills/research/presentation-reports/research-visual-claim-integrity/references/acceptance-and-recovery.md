@@ -20,7 +20,7 @@ Route `research/presentation-reports/visual-claim-integrity`. L1 structural plan
 - [ ] Document the simplest alternative, correction and rollback route, with actual observed evaluations separately from proposed tests.
 - [ ] Never treat this document as proof of external fact-check success, compliance or real-agent host readiness.
 
-## Original authoritative sources
+## Starting sources
 - https://www.w3.org/WAI/standards-guidelines/wcag/
 - https://developers.google.com/style
 
