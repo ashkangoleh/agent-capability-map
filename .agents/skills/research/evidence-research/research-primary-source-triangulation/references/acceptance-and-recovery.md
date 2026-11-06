@@ -20,7 +20,7 @@ Route `research/evidence-research/primary-source-triangulation`. L1 structural p
 - [ ] Document the simplest alternative, correction and rollback route, with actual observed evaluations separately from proposed tests.
 - [ ] Never treat this document as proof of external fact-check success, compliance or real-agent host readiness.
 
-## Original authoritative sources
+## Starting sources
 - https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence
 - https://www.crossref.org/documentation/retrieve-metadata/rest-api
 

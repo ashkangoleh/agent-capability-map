@@ -20,7 +20,7 @@ Route `research/academic-research/scholarly-doi-metadata-integrity`. L1 structur
 - [ ] Document the simplest alternative, correction and rollback route, with actual observed evaluations separately from proposed tests.
 - [ ] Never treat this document as proof of external fact-check success, compliance or real-agent host readiness.
 
-## Original authoritative sources
+## Starting sources
 - https://www.crossref.org/documentation/retrieve-metadata/rest-api
 - https://credit.niso.org/contributor-roles/
 

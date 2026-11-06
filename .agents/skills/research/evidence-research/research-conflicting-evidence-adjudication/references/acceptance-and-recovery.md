@@ -20,7 +20,7 @@ Route `research/evidence-research/conflicting-evidence-adjudication`. L1 structu
 - [ ] Document the simplest alternative, correction and rollback route, with actual observed evaluations separately from proposed tests.
 - [ ] Never treat this document as proof of external fact-check success, compliance or real-agent host readiness.
 
-## Original authoritative sources
+## Starting sources
 - https://equator-network.org/reporting-guidelines/
 - https://www.prisma-statement.org/prisma-2020
 
