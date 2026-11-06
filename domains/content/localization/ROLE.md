@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: material e
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Delegation and scope
+- Evidence: Pinned source version, target locale glossary, RTL/LTR rendering and domain qualifiers.
+- Acceptance and ownership: Translated text preserves factual, numeric, legal and operational meaning.
+- Stop or escalate: Stop when negation, safety warning or units change meaning.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

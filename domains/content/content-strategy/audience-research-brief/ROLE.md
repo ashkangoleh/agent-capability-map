@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: Convenienc
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Audience sampling origin, observed needs, interview method and research uncertainty.
+- Acceptance and ownership: Reader brief avoids fabricated personas and maps material questions to real evidence.
+- Stop or escalate: Reject broad audience size estimates from convenience interviews.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

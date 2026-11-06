@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: Visual hea
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Rendered headings and link semantics, language labels, table header associations and keyboard inspection.
+- Acceptance and ownership: Screen reader and keyboard checks support cited WCAG success criteria.
+- Stop or escalate: Reject visual-only headings with no semantic structure.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

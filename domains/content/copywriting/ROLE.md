@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: material e
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Delegation and scope
+- Evidence: Reader goal, product facts, brand voice, approved claim source and placement.
+- Acceptance and ownership: Public copy remains understandable and material promises are substantiated.
+- Stop or escalate: Block deceptive headline or promotional claim with absent proof.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

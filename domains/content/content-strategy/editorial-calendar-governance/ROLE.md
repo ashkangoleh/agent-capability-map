@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: A packed c
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Editorial capacity, topic freshness, accountable writers, due dates and approval dependencies.
+- Acceptance and ownership: Each publication slot has a feasible owner and current fact-check gate.
+- Stop or escalate: Stop releasing outdated sensitive guidance to meet a calendar deadline.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

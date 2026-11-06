@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: An enticin
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Actual product promise, reader pain point, channel length and cited proof.
+- Acceptance and ownership: Copy delivers accurate action-oriented information with approved brand voice.
+- Stop or escalate: Reject headline that hides exclusions or promises unavailable outcome.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

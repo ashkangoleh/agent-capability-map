@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: Chart imag
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Specialist acceptance contract
+- Evidence: Image purpose in surrounding article, visual data, functional action and decorative status.
+- Acceptance and ownership: Alt text supports reader task or complex graphic has accessible text/data equivalent.
+- Stop or escalate: Block charts whose only alternative omits the quantitative message.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

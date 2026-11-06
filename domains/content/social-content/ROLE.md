@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: material e
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Delegation and scope
+- Evidence: Original complete source context, platform placement and moderation ownership.
+- Acceptance and ownership: Short-form summaries preserve qualifications and offer accessible reporting or appeal routes.
+- Stop or escalate: Stop sensational truncation or unjustified removal of criticism.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

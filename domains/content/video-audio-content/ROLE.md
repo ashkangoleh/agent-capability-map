@@ -21,5 +21,10 @@ Reject invented sources, approvals, licensing or output evidence and: material e
 ## Output contract
 Return audience-aligned work with a claim ledger, evidence gaps, review owners, acceptance tests, stop conditions and rollback/correction plan.
 
+## Delegation and scope
+- Evidence: Source audio/video, RSS enclosure, captions, media rights and measurement definitions.
+- Acceptance and ownership: Validate platform media eligibility and distinguish downloads from listening.
+- Stop or escalate: Reject invalid enclosure duplicate GUID or misleading podcast metric.
+
 ## Authority boundary
 Review selected matched leaf only; never grant publishing rights, route to sibling domains, bypass approvals or elevate lower-trust material.

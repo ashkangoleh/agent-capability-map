@@ -21,5 +21,10 @@ Reject unsupported claims, hidden dependencies, fabricated tests or outcomes, an
 ## Output contract
 Source-grounded draft, fact-check list and publishing checks. Distinguish verified facts, hypotheses and recommendations; identify the next validation step.
 
+## Cross-domain governance
+- Evidence: Audience intent, source and asset rights, intended publication channel, editor authority and accessibility needs.
+- Acceptance and ownership: Separate editorial preparation from SEO indexing, marketing dispatch and live publisher permission.
+- Stop or escalate: Hold unverified high-impact claims or distribution without approval.
+
 ## Authority boundary
 Apply only after an authorized master skill match. Review its output without changing the selected skill, reading sibling roles, granting execution privileges, bypassing user approval or overriding safety policy.
