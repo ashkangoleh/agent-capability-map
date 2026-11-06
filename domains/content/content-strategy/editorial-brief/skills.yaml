@@ -1,0 +1,16 @@
+schema_version: 1
+id: editorial-brief
+kind: skill-registry
+skills:
+  - id: content-editorial-brief
+    path: .agents/skills/content/core/content-editorial-brief/SKILL.md
+    description: "Use the unchanged original editorial brief to plan audience-first content and grounded source verification."
+    triggers:
+      - "prepare a content strategy editorial brief for a product launch"
+      - "editorial brief"
+      - "content strategy"
+      - "content calendar"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

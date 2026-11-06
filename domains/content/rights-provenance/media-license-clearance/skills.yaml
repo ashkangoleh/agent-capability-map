@@ -1,0 +1,13 @@
+schema_version: 1
+id: media-license-clearance
+kind: skill-registry
+skills:
+  - id: content-media-license-clearance
+    path: .agents/skills/content/rights-provenance/content-media-license-clearance/SKILL.md
+    description: "Record asset source creator license scope territory and modification permissions; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing media license attribution clearance"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

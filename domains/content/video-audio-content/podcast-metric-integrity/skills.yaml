@@ -1,0 +1,13 @@
+schema_version: 1
+id: podcast-metric-integrity
+kind: skill-registry
+skills:
+  - id: content-podcast-metric-integrity
+    path: .agents/skills/content/video-audio-content/content-podcast-metric-integrity/SKILL.md
+    description: "Identify whether metrics represent server downloads audience or actual listening; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing podcast measurement IAB downloads dedup"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

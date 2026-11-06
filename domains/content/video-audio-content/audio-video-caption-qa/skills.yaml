@@ -1,0 +1,13 @@
+schema_version: 1
+id: audio-video-caption-qa
+kind: skill-registry
+skills:
+  - id: content-audio-video-caption-qa
+    path: .agents/skills/content/video-audio-content/content-audio-video-caption-qa/SKILL.md
+    description: "Review time-synced captions and human-correct transcript against actual audio; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing video captions transcript accessibility review"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

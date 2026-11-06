@@ -1,0 +1,13 @@
+schema_version: 1
+id: cms-release-rollback
+kind: skill-registry
+skills:
+  - id: content-cms-release-rollback
+    path: .agents/skills/content/publishing-operations/content-cms-release-rollback/SKILL.md
+    description: "Define authoritative revision source owner workflow and approver boundary; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing cms release schedule rollback editorial"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

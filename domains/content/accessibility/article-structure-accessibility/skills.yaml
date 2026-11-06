@@ -1,0 +1,13 @@
+schema_version: 1
+id: article-structure-accessibility
+kind: skill-registry
+skills:
+  - id: content-article-structure-accessibility
+    path: .agents/skills/content/accessibility/content-article-structure-accessibility/SKILL.md
+    description: "Verify semantic headings meaningful order table headers and link-purpose text; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing accessible article headings tables language"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

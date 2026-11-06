@@ -99,7 +99,28 @@ ids:
   - container-build-hardening
   - container-image-signing-sigstore
   - container-runtime-operations
+  - content-ai-origin-disclosure
+  - content-article-structure-accessibility
+  - content-audience-first-copywriting
+  - content-audience-research-brief
+  - content-audio-video-caption-qa
+  - content-claims-substantiation
+  - content-cms-release-rollback
+  - content-community-moderation-playbook
+  - content-corrections-retractions
+  - content-cultural-inclusion-review
   - content-editorial-brief
+  - content-editorial-calendar-governance
+  - content-fact-check-source-ledger
+  - content-image-alt-text-decisions
+  - content-lifecycle-update-retire
+  - content-media-license-clearance
+  - content-newsletter-editorial-qa
+  - content-podcast-metric-integrity
+  - content-podcast-rss-production
+  - content-social-platform-adaptation
+  - content-source-attribution-integrity
+  - content-translation-localization-qa
   - curriculum-outcomes-assessment
   - customer-support-knowledge-design
   - dagster-asset-partition-orchestration

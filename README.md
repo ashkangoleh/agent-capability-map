@@ -298,3 +298,7 @@ The Marketing domain contains seven routed first-level subdomains and 17 special
 ## SEO hierarchy — 2026-11-06
 
 Nine specialized SEO branches now resolve to 22 leaf skills, including 19 new specialist packages while retaining three original canonical skill file contents and paths. Portfolio targets **472** skills and **463** role contracts. This remains L1 structural coverage pending exact-SHA CI, not real agent or website performance certification. See `docs/SEO_HIERARCHY.md`.
+
+## Content & Publishing hierarchy — 2026-11-06
+
+Nine first-level editorial/publishing branches contain 22 active leaf specialists (21 new plus the unchanged canonical `content-editorial-brief`). Each new skill has a separate acceptance/recovery contract and every active path has an independent hierarchical ROLE.md. Static portfolio target is **493 SKILL.md** packages and **494 ROLE.md** files, awaiting exact-head CI. See `docs/CONTENT_HIERARCHY.md`. This is L1 structural scope, not real-world agent, accessibility, rights or regulatory certification.

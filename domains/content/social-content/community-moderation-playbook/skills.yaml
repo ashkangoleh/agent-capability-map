@@ -1,0 +1,13 @@
+schema_version: 1
+id: community-moderation-playbook
+kind: skill-registry
+skills:
+  - id: content-community-moderation-playbook
+    path: .agents/skills/content/social-content/content-community-moderation-playbook/SKILL.md
+    description: "Define acceptable conduct privacy-sensitive data handling and moderator ownership; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing social community moderation escalation"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

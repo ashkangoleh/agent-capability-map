@@ -1,0 +1,16 @@
+schema_version: 1
+id: rights-provenance
+kind: map
+children:
+  - id: media-license-clearance
+    description: "Record asset source creator license scope territory and modification permissions"
+    triggers:
+      - "content publishing media license attribution clearance"
+    status: active
+    skills: domains/content/rights-provenance/media-license-clearance/skills.yaml
+  - id: ai-origin-disclosure
+    description: "Document source assets human edits and degree of automation used"
+    triggers:
+      - "content publishing AI origin provenance human review"
+    status: active
+    skills: domains/content/rights-provenance/ai-origin-disclosure/skills.yaml

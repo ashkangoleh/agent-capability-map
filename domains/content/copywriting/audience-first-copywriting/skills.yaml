@@ -1,0 +1,13 @@
+schema_version: 1
+id: audience-first-copywriting
+kind: skill-registry
+skills:
+  - id: content-audience-first-copywriting
+    path: .agents/skills/content/copywriting/content-audience-first-copywriting/SKILL.md
+    description: "Turn the reader task into a concise informative message hierarchy; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing audience first copywriting clarity"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

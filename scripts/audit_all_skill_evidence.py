@@ -114,8 +114,8 @@ def main():
     if args.summary:
         report.pop("per_domain")
     print(json.dumps(report, indent=2))
-    if args.strict and (report["domains"] != 41 or report["skills"] != 472 or
-                        report["referenced_skills"] != 472 or report["problems"]):
+    if args.strict and (report["domains"] != 41 or report["skills"] != 493 or
+                        report["referenced_skills"] != 493 or report["problems"]):
         raise SystemExit(1)
 
 

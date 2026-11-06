@@ -1,0 +1,22 @@
+schema_version: 1
+id: publishing-operations
+kind: map
+children:
+  - id: cms-release-rollback
+    description: "Define authoritative revision source owner workflow and approver boundary"
+    triggers:
+      - "content publishing cms release schedule rollback editorial"
+    status: active
+    skills: domains/content/publishing-operations/cms-release-rollback/skills.yaml
+  - id: lifecycle-update-retire
+    description: "Classify content freshness risk and define re-review intervals by subject volatility"
+    triggers:
+      - "content publishing article lifecycle archive update retire"
+    status: active
+    skills: domains/content/publishing-operations/lifecycle-update-retire/skills.yaml
+  - id: newsletter-editorial-qa
+    description: "Validate newsletter accuracy subject preview links accessibility and editorial approvals"
+    triggers:
+      - "content publishing newsletter editorial issue qa"
+    status: active
+    skills: domains/content/publishing-operations/newsletter-editorial-qa/skills.yaml

@@ -1,0 +1,13 @@
+schema_version: 1
+id: audience-research-brief
+kind: skill-registry
+skills:
+  - id: content-audience-research-brief
+    path: .agents/skills/content/content-strategy/content-audience-research-brief/SKILL.md
+    description: "Define who will read and the questions the article must resolve; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing audience evidence research brief"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

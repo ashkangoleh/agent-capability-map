@@ -1,0 +1,22 @@
+schema_version: 1
+id: editorial
+kind: map
+children:
+  - id: fact-check-source-ledger
+    description: "Identify every material factual claim quotation and numeric statement"
+    triggers:
+      - "content publishing editorial fact check source ledger"
+    status: active
+    skills: domains/content/editorial/fact-check-source-ledger/skills.yaml
+  - id: corrections-retractions
+    description: "Classify error severity current impact and responsibility for correction"
+    triggers:
+      - "content publishing editorial correction retraction process"
+    status: active
+    skills: domains/content/editorial/corrections-retractions/skills.yaml
+  - id: source-attribution-integrity
+    description: "Track primary sources direct quotes paraphrases and usage permissions"
+    triggers:
+      - "content publishing source attribution quotation integrity"
+    status: active
+    skills: domains/content/editorial/source-attribution-integrity/skills.yaml

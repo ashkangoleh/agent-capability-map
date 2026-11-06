@@ -1,0 +1,13 @@
+schema_version: 1
+id: claims-substantiation
+kind: skill-registry
+skills:
+  - id: content-claims-substantiation
+    path: .agents/skills/content/copywriting/content-claims-substantiation/SKILL.md
+    description: "Create a claim ledger mapping measurable assertions to dated primary evidence; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing claims substantiation public copy"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

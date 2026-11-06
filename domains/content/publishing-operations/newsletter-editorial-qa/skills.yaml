@@ -1,0 +1,13 @@
+schema_version: 1
+id: newsletter-editorial-qa
+kind: skill-registry
+skills:
+  - id: content-newsletter-editorial-qa
+    path: .agents/skills/content/publishing-operations/content-newsletter-editorial-qa/SKILL.md
+    description: "Validate newsletter accuracy subject preview links accessibility and editorial approvals; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing newsletter editorial issue qa"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

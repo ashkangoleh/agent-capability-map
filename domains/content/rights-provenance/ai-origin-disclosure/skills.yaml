@@ -1,0 +1,13 @@
+schema_version: 1
+id: ai-origin-disclosure
+kind: skill-registry
+skills:
+  - id: content-ai-origin-disclosure
+    path: .agents/skills/content/rights-provenance/content-ai-origin-disclosure/SKILL.md
+    description: "Document source assets human edits and degree of automation used; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing AI origin provenance human review"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

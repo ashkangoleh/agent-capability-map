@@ -1,0 +1,13 @@
+schema_version: 1
+id: corrections-retractions
+kind: skill-registry
+skills:
+  - id: content-corrections-retractions
+    path: .agents/skills/content/editorial/content-corrections-retractions/SKILL.md
+    description: "Classify error severity current impact and responsibility for correction; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing editorial correction retraction process"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

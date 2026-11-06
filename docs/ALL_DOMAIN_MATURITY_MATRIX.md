@@ -4,11 +4,11 @@ Baseline commit: `5e29a873122fdb13d377ba855b0227e374eb259c`; SEO expansion based
 
 ## Executive result
 
-- 41 top-level domains, 472 canonical `SKILL.md` packages and 463 hierarchical `ROLE.md` files.
-- All 472 packages have a linked `references/acceptance-and-recovery.md` companion (L1 **structural coverage**, not runtime proof).
-- **32 of 41 domains have only one skill**. These must not be presented as domain-complete taxonomies.
-- 76 cross-domain verification policy profiles exist. Some are reused: they are not 472 independently trialed runbooks.
-- 472 skill profiles **do not** have a verified real-host A/B study; latest-release correctness and safety qualifications remain unverified as a portfolio.
+- 41 top-level domains, 493 canonical `SKILL.md` packages and 494 hierarchical `ROLE.md` files.
+- All 493 packages have a linked `references/acceptance-and-recovery.md` companion (L1 **structural coverage**, not runtime proof).
+- **31 of 41 domains have only one skill**. These must not be presented as domain-complete taxonomies.
+- 76 cross-domain verification policy profiles exist. Some are reused: they are not 493 independently trialed runbooks.
+- 493 skill profiles **do not** have a verified real-host A/B study; latest-release correctness and safety qualifications remain unverified as a portfolio.
 - For Data Engineering, specialized validation was extended to all 123 skills but only a few packages have standalone offline scripts and examples.
 - Structural CI result for previous revision `5e29a873122fdb13d377ba855b0227e374eb259c`: 5/5 jobs passed, 271 unit tests (one skipped). Re-run for changes to this document or source policy.
 
@@ -22,7 +22,7 @@ Baseline commit: `5e29a873122fdb13d377ba855b0227e374eb259c`; SEO expansion based
 | `ai-ml` | 61 | 61 | Large; specialist depth still uneven | Not comprehensively verified |
 | `business` | 1 | 1 | Seed-only — major breadth gap | Not comprehensively verified |
 | `construction` | 1 | 1 | Seed-only — major breadth gap | Not comprehensively verified |
-| `content` | 1 | 1 | Seed-only — major breadth gap | Not comprehensively verified |
+| `content` | 22 | 22 | Nine specialist branches; L1 structural only | Not comprehensively verified |
 | `customer-experience` | 1 | 1 | Seed-only — major breadth gap | Not comprehensively verified |
 | `data` | 186 | 186 | Large; specialist depth still uneven | Not comprehensively verified |
 | `design` | 1 | 1 | Seed-only — major breadth gap | Not comprehensively verified |
@@ -70,7 +70,7 @@ Baseline commit: `5e29a873122fdb13d377ba855b0227e374eb259c`; SEO expansion based
 
 ## Official reference governance
 
-See [Source provenance policy](SOURCE_PROVENANCE_POLICY.md). Confirm applicability and published version before claiming any result. This is not a list of 472 freshly verified, version-pinned external sources.
+See [Source provenance policy](SOURCE_PROVENANCE_POLICY.md). Confirm applicability and published version before claiming any result. This is not a list of 493 freshly verified, version-pinned external sources.
 
 ## Next quality evidence
 
