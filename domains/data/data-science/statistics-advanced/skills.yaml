@@ -1,0 +1,73 @@
+schema_version: 1
+id: statistics-advanced
+kind: skill-registry
+skills:
+  - id: ds-power-sample-size
+    path: .agents/skills/data/data-science/statistics-advanced/ds-power-sample-size/SKILL.md
+    description: "Plan sample size and power using effect size, variance, alpha, power and multiplicity assumptions."
+    triggers:
+      - "statistical power sample size"
+    excludes: []
+    status: active
+  - id: ds-bayesian-pymc-stan
+    path: .agents/skills/data/data-science/statistics-advanced/ds-bayesian-pymc-stan/SKILL.md
+    description: "Build Bayesian models with explicit priors, likelihoods, posterior diagnostics and sensitivity analysis."
+    triggers:
+      - "bayesian modeling pymc stan"
+      - "rank normalized rhat ess bayesian"
+      - "pymc prior posterior predictive check"
+      - "bayesian mcmc divergence diagnostic"
+    excludes: []
+    status: active
+  - id: ds-missing-data
+    path: .agents/skills/data/data-science/statistics-advanced/ds-missing-data/SKILL.md
+    description: "Diagnose MCAR/MAR/MNAR assumptions and choose defensible imputation or sensitivity methods."
+    triggers:
+      - "missing data mechanism imputation"
+      - "rubin multiple imputation pooling"
+      - "mnar missingness sensitivity"
+      - "missing data mcar mar mnar"
+      - "تجمیع multiple imputation برآوردها"
+    excludes: []
+    status: active
+  - id: ds-robust-nonparametric-inference
+    path: .agents/skills/data/data-science/statistics-advanced/ds-robust-nonparametric-inference/SKILL.md
+    description: "Select robust, rank-based, permutation and bootstrap inference with explicit design assumptions."
+    triggers:
+      - "robust nonparametric inference"
+      - "permutation test bootstrap confidence interval"
+      - "mann whitney wilcoxon kruskal wallis"
+      - "cluster bootstrap resampling"
+      - "paired permutation test exchangeability"
+      - "robust bootstrap bca interval"
+    excludes:
+      - "bayesian posterior inference"
+    status: active
+  - id: ds-multiple-testing-control
+    path: .agents/skills/data/data-science/statistics-advanced/ds-multiple-testing-control/SKILL.md
+    description: "Control family-wise error and false discovery across multiple hypotheses and repeated analyses."
+    triggers:
+      - "multiple hypothesis testing fdr"
+      - "false discovery rate correction"
+      - "holm bonferroni adjustment"
+      - "fdr benjamini hochberg multiple testing"
+      - "holm familywise error correction"
+      - "benjamini yekutieli dependency"
+      - "اصلاح چند آزمونی fdr"
+    excludes:
+      - "single pre-registered primary hypothesis"
+    status: active
+  - id: ds-survey-sampling-design
+    path: .agents/skills/data/data-science/statistics-advanced/ds-survey-sampling-design/SKILL.md
+    description: "Analyze complex survey samples with strata, clusters, unequal weights and design-based variance."
+    triggers:
+      - "complex survey sampling weights"
+      - "stratified cluster survey variance"
+      - "survey design taylor linearization"
+      - "survey lonely psu variance"
+      - "survey complex sampling variance"
+      - "survey strata cluster design"
+      - "طرح نمونه گیری خوشه ای survey"
+    excludes:
+      - "simple random sample without weights"
+    status: active

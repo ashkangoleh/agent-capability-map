@@ -1,0 +1,12 @@
+schema_version: 1
+id: model-registry-governance
+kind: skill-registry
+skills:
+  - id: aiml-mlops-model-registry-governance
+    path: .agents/skills/ai-ml/mlops/model-registry-governance/aiml-mlops-model-registry-governance/SKILL.md
+    description: "Engineer ml model registry approval audit using registry artifact immutability and approvals, verifying failures and quality baselines."
+    triggers:
+      - "ml registry immutable model provenance approval"
+      - "ml model registry approval audit"
+    excludes: []
+    status: active

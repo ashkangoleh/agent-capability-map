@@ -1,0 +1,78 @@
+schema_version: 1
+id: lakehouse
+kind: map
+children:
+  - id: iceberg
+    description: "Apache Iceberg table design, schema evolution and maintenance"
+    triggers:
+      - "iceberg"
+      - "iceberg compaction"
+      - "iceberg schema evolution"
+      - "iceberg snapshot"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/iceberg/skills.yaml
+  - id: delta-lake
+    description: "Delta Lake merge, CDF and transaction behavior"
+    triggers:
+      - "delta lake"
+      - "delta cdf"
+      - "delta change data feed"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/delta/skills.yaml
+  - id: hudi
+    description: "Apache Hudi upserts, COW/MOR and table layout"
+    triggers:
+      - "hudi"
+      - "apache hudi"
+      - "hudi mor"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/hudi/skills.yaml
+  - id: catalogs
+    description: "Iceberg REST and table catalog control planes"
+    triggers:
+      - "gravitino iceberg rest"
+      - "gravitino federated catalog"
+      - "gravitino metalake"
+      - "apache gravitino"
+      - "nessie iceberg rest"
+      - "nessie branch merge"
+      - "project nessie"
+      - "nessie versioned catalog"
+      - "polaris iceberg catalog"
+      - "lakekeeper iceberg catalog"
+      - "polaris"
+      - "lakekeeper"
+      - "iceberg rest catalog"
+      - "iceberg catalog commit retry"
+      - "iceberg rest endpoint discovery"
+    status: active
+    map: domains/data/data-engineering/lakehouse/catalogs/map.yaml
+  - id: object-storage
+    description: "Object storage data lake lifecycle"
+    triggers:
+      - "minio"
+      - "minio object storage"
+      - "s3 compatible storage"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/object-storage/skills.yaml
+  - id: format-selection
+    description: "Paimon, open table format selection and catalog interoperability"
+    triggers:
+      - "apache paimon streaming lakehouse"
+      - "lakehouse catalog interoperability"
+      - "open table format selection"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/skills.yaml
+  - id: ducklake
+    description: "DuckLake metadata catalog, snapshots and DuckDB interoperability"
+    triggers:
+      - "ducklake"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/ducklake/skills.yaml
+  - id: streaming-storage
+    description: "Apache Fluss streaming storage and lakehouse tiering"
+    triggers:
+      - "apache fluss"
+      - "fluss streaming storage"
+    status: active
+    skills: domains/data/data-engineering/lakehouse/streaming-storage/skills.yaml

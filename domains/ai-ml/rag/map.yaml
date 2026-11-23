@@ -1,0 +1,68 @@
+schema_version: 1
+id: rag-retrieval
+kind: map
+children:
+  - id: quality
+    description: "quality"
+    triggers:
+      - "rag evaluation"
+      - "rag evidence"
+      - "evidence sufficiency"
+      - "rag faithfulness"
+    status: active
+    skills: domains/ai-ml/rag/quality/skills.yaml
+  - id: hybrid
+    description: "hybrid"
+    triggers:
+      - "hybrid search"
+      - "hybrid retrieval"
+      - "bm25 rrf"
+      - "rrf retrieval"
+    status: active
+    skills: domains/ai-ml/rag/hybrid/skills.yaml
+  - id: vector-index
+    description: "vector index"
+    triggers:
+      - "milvus"
+      - "vector index"
+      - "hnsw index"
+    status: active
+    skills: domains/ai-ml/rag/index/skills.yaml
+  - id: general
+    description: "general"
+    triggers:
+      - "rag"
+      - "embedding"
+      - "retrieval"
+      - "vector search"
+      - "reranking"
+    status: active
+    skills: domains/ai-ml/rag/general/skills.yaml
+  - id: chunking
+    description: "rag chunk boundary evaluation: source formats and labeled retrieval queries"
+    triggers:
+      - "rag split documents by headings and tables"
+      - "rag chunk boundary evaluation"
+    status: active
+    skills: domains/ai-ml/rag/chunking/skills.yaml
+  - id: access-control
+    description: "rag document level acl enforcement: group identity, ACL snapshots and revocation"
+    triggers:
+      - "rag enforce tenant permissions before retrieval"
+      - "rag document level acl enforcement"
+    status: active
+    skills: domains/ai-ml/rag/access-control/skills.yaml
+  - id: reranking
+    description: "rag cross encoder reranking evaluation: candidate top K and labeled relevance judgments"
+    triggers:
+      - "rag reranker relevance and ndcg"
+      - "rag cross encoder reranking evaluation"
+    status: active
+    skills: domains/ai-ml/rag/reranking/skills.yaml
+  - id: index-migrations
+    description: "rag embedding reindex migration: model dimensions, index aliases and replay state"
+    triggers:
+      - "rag migrate vector embeddings between model versions"
+      - "rag embedding reindex migration"
+    status: active
+    skills: domains/ai-ml/rag/index-migrations/skills.yaml

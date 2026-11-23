@@ -1,0 +1,12 @@
+schema_version: 1
+id: security
+kind: skill-registry
+skills:
+  - id: llm-prompt-injection-boundaries
+    path: .agents/skills/ai-ml/llm/security/llm-prompt-injection-boundaries/SKILL.md
+    description: "Test LLM prompt injection across untrusted retrieval, tools and secrets with least-privilege boundaries."
+    triggers:
+      - "prompt injection"
+      - "llm tool security"
+    excludes: []
+    status: active

@@ -1,0 +1,12 @@
+{
+  "name": "@ashkangoleh/agent-capability-map-cli",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Node.js cross-platform shim for the single Python capability-map router",
+  "type": "module",
+  "engines": {"node": ">=20"},
+  "bin": {"capability-map-node": "./node/bin/capability-map.mjs"},
+  "scripts": {"test": "node --test node/test/cli.test.mjs"},
+  "files": ["node/bin", "docs/CROSS_PLATFORM_CLI.md"],
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,38 @@
+schema_version: 1
+id: design
+kind: map
+children:
+  - id: ux-research
+    description: "ux research"
+    triggers:
+      - "ux research"
+      - "usability"
+    status: active
+    skills: domains/design/graph-skills.yaml
+  - id: ui-interaction
+    description: "ui interaction"
+    triggers:
+      - "ui design"
+      - "interaction design"
+    status: active
+    skills: domains/design/graph-skills.yaml
+  - id: accessibility
+    description: "accessibility"
+    triggers:
+      - "accessibility"
+      - "wcag"
+    status: active
+    skills: domains/design/graph-skills.yaml
+  - id: design-systems
+    description: "design systems"
+    triggers:
+      - "design system"
+      - "component library"
+    status: active
+    skills: domains/design/graph-skills.yaml
+  - id: visual-identity
+    description: "visual identity"
+    triggers:
+      - "graphic design"
+      - "brand design"
+    status: mapped

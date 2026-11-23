@@ -1,0 +1,14 @@
+schema_version: 1
+id: ray-data-pipeline-engineering
+kind: skill-registry
+skills:
+  - id: ray-data-pipeline-engineering
+    path: .agents/skills/data/data-engineering/distributed-processing/ray/ray-data-pipeline-engineering/SKILL.md
+    description: "Build Ray Data streaming batch pipelines with block-level resource constraints, distributed IO and reproducible sink publication."
+    triggers:
+      - "ray data"
+      - "ray dataset"
+      - "ray data pipeline"
+      - "ray data parquet"
+    excludes: []
+    status: active

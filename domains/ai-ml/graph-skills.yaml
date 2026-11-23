@@ -1,0 +1,18 @@
+schema_version: 1
+id: ai-ml
+kind: skill-registry
+skills:
+  - id: ai-rag-engineering
+    path: .agents/skills/ai-rag-engineering/SKILL.md
+    description: "Use to design or evaluate LLM/RAG applications, embeddings, retrieval and evidence sufficiency with measured quality and ACLs."
+    triggers:
+      - "rag"
+      - "llm"
+      - "embedding"
+      - "retrieval"
+      - "vector search"
+      - "reranker"
+      - "litellm"
+    excludes:
+      - "ordinary data pipeline"
+    status: active

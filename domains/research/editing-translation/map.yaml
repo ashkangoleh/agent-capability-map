@@ -1,0 +1,16 @@
+schema_version: 1
+id: editing-translation
+kind: map
+children:
+  - id: technical-translation-fidelity
+    description: "Pin original revision and glossary of code identifiers constraints units and abbreviations"
+    triggers:
+      - "research technical translation semantic fidelity glossary rtl"
+    status: active
+    skills: domains/research/editing-translation/technical-translation-fidelity/skills.yaml
+  - id: technical-copyedit-precision
+    description: "Identify terms and phrases with exact implementation or standards-defined meaning"
+    triggers:
+      - "research technical copyedit correctness terminology change control"
+    status: active
+    skills: domains/research/editing-translation/technical-copyedit-precision/skills.yaml

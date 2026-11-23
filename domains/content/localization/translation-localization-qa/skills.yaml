@@ -1,0 +1,13 @@
+schema_version: 1
+id: translation-localization-qa
+kind: skill-registry
+skills:
+  - id: content-translation-localization-qa
+    path: .agents/skills/content/localization/content-translation-localization-qa/SKILL.md
+    description: "Define locale glossary style guide region units dates and source version; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing multilingual translation localization QA"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

@@ -1,0 +1,53 @@
+schema_version: 1
+id: networking
+kind: map
+children:
+  - id: network-core
+    description: "DNS, TCP, TLS, proxy and reachability diagnostics"
+    triggers:
+      - "network diagnostics"
+      - "tls handshake"
+      - "dns troubleshooting"
+    status: active
+    skills: domains/infrastructure/network/skills.yaml
+  - id: network-advanced
+    description: "Routing, firewalls, VPN, load balancing, eBPF, authoritative DNS and PKI"
+    triggers:
+      - "network routing bgp"
+      - "network firewall segmentation"
+      - "network load balancing proxy"
+      - "wireguard vpn routing"
+      - "ebpf network observability"
+      - "authoritative dns infrastructure"
+      - "tls pki certificate lifecycle"
+    status: active
+    map: domains/infrastructure/networking/network-advanced/map.yaml
+  - id: network-services
+    description: "DHCP, IPAM, NTP and address lifecycle"
+    triggers:
+      - "dhcp ipam network services"
+      - "dhcp ipam ntp"
+    status: active
+    skills: domains/infrastructure/network-services/skills.yaml
+  - id: network-automation
+    description: "Network automation and SDN"
+    triggers:
+      - "network automation sdn"
+      - "netbox nornir gnmi openconfig"
+      - "netbox nornir gnmi"
+    status: active
+    skills: domains/infrastructure/network-automation/skills.yaml
+  - id: switching
+    description: "Enterprise switching and L2/L3 fabric"
+    triggers:
+      - "network switching enterprise routing"
+      - "vlan stp lacp ospf evpn vxlan"
+    status: active
+    skills: domains/infrastructure/network-switching/skills.yaml
+  - id: wireless
+    description: "Enterprise WLAN, RF, 802.1X and NAC"
+    triggers:
+      - "wireless lan network engineering"
+      - "enterprise wifi wlan"
+    status: active
+    skills: domains/infrastructure/network-wireless/skills.yaml

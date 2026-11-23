@@ -1,0 +1,36 @@
+schema_version: 1
+id: network-advanced
+kind: map
+children:
+  - id: routing-delivery
+    description: "BGP routing policy and L4/L7 traffic delivery"
+    triggers:
+      - "network routing bgp"
+      - "network load balancing proxy"
+    status: active
+    skills: domains/infrastructure/networking/network-advanced/routing-delivery/skills.yaml
+  - id: secure-connectivity
+    description: "Network segmentation, firewalls and VPN tunnel operations"
+    triggers:
+      - "network firewall segmentation"
+      - "wireguard vpn routing"
+    status: active
+    skills: domains/infrastructure/networking/network-advanced/secure-connectivity/skills.yaml
+  - id: telemetry
+    description: "eBPF network telemetry and diagnostic evidence"
+    triggers:
+      - "ebpf network observability"
+    status: active
+    skills: domains/infrastructure/networking/network-advanced/telemetry/skills.yaml
+  - id: dns
+    description: "Authoritative DNS and zone lifecycle"
+    triggers:
+      - "authoritative dns infrastructure"
+    status: active
+    skills: domains/infrastructure/networking/network-advanced/dns/skills.yaml
+  - id: pki
+    description: "TLS trust, certificate and PKI lifecycle"
+    triggers:
+      - "tls pki certificate lifecycle"
+    status: active
+    skills: domains/infrastructure/networking/network-advanced/pki/skills.yaml

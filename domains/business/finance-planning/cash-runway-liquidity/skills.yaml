@@ -1,0 +1,12 @@
+schema_version: 1
+id: cash-runway-liquidity
+kind: skill-registry
+skills:
+  - id: business-cash-runway-liquidity
+    path: .agents/skills/business/finance-planning/business-cash-runway-liquidity/SKILL.md
+    description: "Use bank balances and available facilities with drawdown and covenant restrictions. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations cash runway liquidity stress test"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

@@ -1,0 +1,27 @@
+schema_version: 1
+id: marketing-analytics
+kind: map
+children:
+  - id: event-attribution
+    description: "Existing canonical marketing-measurement-attribution specialist"
+    triggers:
+      - "implement ga4 event tracking for marketing conversions"
+      - "marketing measurement attribution"
+      - "ga4 marketing event tracking"
+      - "marketing conversion tracking"
+    status: active
+    skills: domains/marketing/marketing-analytics/event-attribution/skills.yaml
+  - id: incrementality
+    description: "Estimate incremental marketing impact with explicit identification assumptions and uncertainty."
+    triggers:
+      - "marketing geo lift incrementality holdout design"
+      - "marketing media mix experiment calibration"
+    status: active
+    skills: domains/marketing/marketing-analytics/incrementality/skills.yaml
+  - id: offline-conversions
+    description: "Reconcile ads-system conversions with order or lead truth before importing or adjusting offline events."
+    triggers:
+      - "marketing offline conversion upload dedup reconciliation"
+      - "marketing ads conversion adjustment refunds"
+    status: active
+    skills: domains/marketing/marketing-analytics/offline-conversions/skills.yaml

@@ -1,0 +1,12 @@
+schema_version: 1
+id: offline-policy-evaluation
+kind: skill-registry
+skills:
+  - id: aiml-reinforcement-learning-offline-policy-evaluation
+    path: .agents/skills/ai-ml/reinforcement-learning/offline-policy-evaluation/aiml-reinforcement-learning-offline-policy-evaluation/SKILL.md
+    description: "Engineer reinforcement learning offline policy evaluation support using logged policy probabilities and reward history, verifying failures and quality baselines."
+    triggers:
+      - "offline reinforcement learning importance weight effective sample size"
+      - "reinforcement learning offline policy evaluation support"
+    excludes: []
+    status: active

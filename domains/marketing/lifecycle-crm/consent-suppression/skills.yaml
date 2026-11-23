@@ -1,0 +1,14 @@
+schema_version: 1
+id: consent-suppression
+kind: skill-registry
+skills:
+  - id: marketing-consent-suppression
+    path: .agents/skills/marketing/lifecycle-crm/marketing-consent-suppression/SKILL.md
+    description: "Define enforceable eligibility and suppression rules for direct marketing at send time."
+    triggers:
+      - "marketing crm consent suppression unsubscribe preference audit"
+      - "marketing email consent lawful basis"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

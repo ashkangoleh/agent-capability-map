@@ -1,0 +1,18 @@
+schema_version: 1
+id: strategy-analysis
+kind: skill-registry
+skills:
+  - id: business-strategy-analysis
+    path: .agents/skills/business/business-strategy/business-strategy-analysis/SKILL.md
+    description: "Use the original canonical business strategy skill for evidence-led business cases and operating-model decisions."
+    triggers:
+      - "Compare a business case with unit economics"
+      - "business case"
+      - "business strategy"
+      - "unit economics"
+      - "operating model"
+      - "commercial analysis"
+      - "business analysis"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

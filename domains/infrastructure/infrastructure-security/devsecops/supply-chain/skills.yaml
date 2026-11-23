@@ -1,0 +1,19 @@
+schema_version: 1
+id: supply-chain
+kind: skill-registry
+skills:
+  - id: container-image-signing-sigstore
+    path: .agents/skills/infrastructure/infrastructure-security/devsecops/supply-chain/container-image-signing-sigstore/SKILL.md
+    description: "Sign and verify container artifacts with Sigstore/Cosign and enforce provenance at deployment boundaries."
+    triggers:
+      - "sigstore cosign image signing"
+    excludes: []
+    status: active
+  - id: software-supply-chain-slsa-sbom
+    path: .agents/skills/infrastructure/infrastructure-security/devsecops/supply-chain/software-supply-chain-slsa-sbom/SKILL.md
+    description: "Harden software supply chains with SLSA provenance, SBOM, dependency attestations and release verification."
+    triggers:
+      - "slsa sbom software supply chain"
+      - "slsa provenance attestation"
+    excludes: []
+    status: active

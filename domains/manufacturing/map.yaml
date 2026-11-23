@@ -1,0 +1,26 @@
+schema_version: 1
+id: manufacturing
+kind: map
+children:
+  - id: industrial-automation
+    description: "industrial automation"
+    triggers:
+      - "industrial automation"
+    status: mapped
+  - id: production-planning
+    description: "production planning"
+    triggers:
+      - "production planning"
+    status: mapped
+  - id: quality-management
+    description: "quality management"
+    triggers:
+      - "manufacturing quality defect"
+      - "quality management"
+    status: active
+    skills: domains/manufacturing/skills.yaml
+  - id: maintenance
+    description: "maintenance"
+    triggers:
+      - "maintenance"
+    status: mapped

@@ -1,0 +1,14 @@
+schema_version: 1
+id: gravitino
+kind: skill-registry
+skills:
+  - id: gravitino-federated-catalog-operations
+    path: .agents/skills/data/data-engineering/lakehouse/catalogs/gravitino/gravitino-federated-catalog-operations/SKILL.md
+    description: "Operate Apache Gravitino metalake and catalog federation, separate Iceberg REST interface, provider IAM, capability gaps and versioned migration."
+    triggers:
+      - "apache gravitino"
+      - "gravitino metalake"
+      - "gravitino federated catalog"
+      - "gravitino iceberg rest"
+    excludes: []
+    status: active

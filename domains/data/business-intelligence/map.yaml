@@ -1,0 +1,19 @@
+schema_version: 1
+id: business-intelligence
+kind: map
+children:
+  - id: superset
+    description: "superset"
+    triggers:
+      - "superset"
+      - "apache superset"
+      - "superset dashboard"
+    status: active
+    skills: domains/data/business-intelligence/superset/skills.yaml
+  - id: dashboard-analysis
+    description: "dashboard analysis"
+    triggers:
+      - "business intelligence"
+      - "dashboard"
+    status: active
+    skills: domains/data/business-intelligence/dashboard/skills.yaml

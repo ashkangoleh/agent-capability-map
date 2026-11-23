@@ -1,0 +1,22 @@
+schema_version: 1
+id: software-security
+kind: map
+children:
+  - id: threat-modeling
+    description: "Map assets, trust boundaries, misuse cases and impact before selecting controls."
+    triggers:
+      - "application threat model data flow"
+    status: active
+    skills: domains/software-engineering/software-security/threat-modeling/skills.yaml
+  - id: authentication-authorization
+    description: "Check identity, session, token audience and per-resource access enforcement."
+    triggers:
+      - "application oauth oidc authorization"
+    status: active
+    skills: domains/software-engineering/software-security/authentication-authorization/skills.yaml
+  - id: dependency-supply-chain
+    description: "Audit vulnerable dependencies and artifact trust with minimal disruption."
+    triggers:
+      - "software dependency sbom vulnerability"
+    status: active
+    skills: domains/software-engineering/software-security/dependency-supply-chain/skills.yaml

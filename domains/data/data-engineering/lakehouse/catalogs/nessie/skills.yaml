@@ -1,0 +1,14 @@
+schema_version: 1
+id: nessie
+kind: skill-registry
+skills:
+  - id: nessie-versioned-catalog-operations
+    path: .agents/skills/data/data-engineering/lakehouse/catalogs/nessie/nessie-versioned-catalog-operations/SKILL.md
+    description: "Manage Project Nessie versioned catalog branches and tags, conflict-aware merges, Iceberg REST integration, multi-engine references and safe rollback."
+    triggers:
+      - "nessie versioned catalog"
+      - "project nessie"
+      - "nessie branch merge"
+      - "nessie iceberg rest"
+    excludes: []
+    status: active

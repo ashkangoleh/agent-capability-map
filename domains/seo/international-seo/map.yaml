@@ -1,0 +1,16 @@
+schema_version: 1
+id: international-seo
+kind: map
+children:
+  - id: hreflang-reciprocity
+    description: "Validate language and region codes and actual translated content"
+    triggers:
+      - "seo hreflang reciprocal alternate canonical audit"
+    status: active
+    skills: domains/seo/international-seo/hreflang-reciprocity/skills.yaml
+  - id: locale-adaptive-crawl
+    description: "Test direct localized page URLs across IP language and cache states"
+    triggers:
+      - "seo locale adaptive ip redirect googlebot crawl"
+    status: active
+    skills: domains/seo/international-seo/locale-adaptive-crawl/skills.yaml

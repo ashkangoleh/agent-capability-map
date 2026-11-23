@@ -1,0 +1,32 @@
+schema_version: 1
+id: ecommerce
+kind: map
+children:
+  - id: commerce-platforms
+    description: "commerce platforms"
+    triggers:
+      - "commerce platforms"
+    status: mapped
+  - id: merchandising
+    description: "merchandising"
+    triggers:
+      - "product catalog"
+      - "product listing"
+      - "merchandising"
+    status: active
+    skills: domains/ecommerce/skills.yaml
+  - id: retail-analytics
+    description: "retail analytics"
+    triggers:
+      - "retail analytics"
+    status: mapped
+  - id: marketplaces
+    description: "marketplaces"
+    triggers:
+      - "marketplaces"
+    status: mapped
+  - id: inventory
+    description: "inventory"
+    triggers:
+      - "inventory"
+    status: mapped

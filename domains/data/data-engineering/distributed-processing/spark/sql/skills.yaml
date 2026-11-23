@@ -1,0 +1,14 @@
+schema_version: 1
+id: spark-sql
+kind: skill-registry
+skills:
+  - id: spark-sql-engineering
+    path: .agents/skills/data/data-engineering/distributed-processing/spark/sql/spark-sql-engineering/SKILL.md
+    description: "Create and validate Spark SQL queries and transformations with reproducible schema, partition and query-plan checks."
+    triggers:
+      - "spark sql"
+      - "spark query"
+      - "sql spark"
+    excludes:
+      - "marketing sql"
+    status: active

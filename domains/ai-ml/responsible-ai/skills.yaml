@@ -1,0 +1,13 @@
+schema_version: 1
+id: responsible-ai
+kind: skill-registry
+skills:
+  - id: responsible-ai-risk-assessment
+    path: .agents/skills/ai-ml/responsible-ai/responsible-ai-risk-assessment/SKILL.md
+    description: "Assess AI impact, misuse, data privacy, fairness and human oversight with evidence-based controls."
+    triggers:
+      - "responsible ai"
+      - "ai risk"
+      - "model bias"
+    excludes: []
+    status: active

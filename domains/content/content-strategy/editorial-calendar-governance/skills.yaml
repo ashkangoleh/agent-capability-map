@@ -1,0 +1,13 @@
+schema_version: 1
+id: editorial-calendar-governance
+kind: skill-registry
+skills:
+  - id: content-editorial-calendar-governance
+    path: .agents/skills/content/content-strategy/content-editorial-calendar-governance/SKILL.md
+    description: "Define calendar cadence owners freeze dates dependencies and maintenance windows; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing editorial calendar portfolio prioritization"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

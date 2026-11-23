@@ -1,0 +1,13 @@
+schema_version: 1
+id: speech-audio-ai
+kind: skill-registry
+skills:
+  - id: speech-asr-evaluation
+    path: .agents/skills/ai-ml/speech-audio-ai/speech-asr-evaluation/SKILL.md
+    description: "Evaluate ASR with WER CER, language variation, consent and streaming latency behavior."
+    triggers:
+      - "speech recognition"
+      - "asr"
+      - "speech evaluation"
+    excludes: []
+    status: active

@@ -1,0 +1,27 @@
+schema_version: 1
+id: airflow
+kind: skill-registry
+skills:
+  - id: airflow-dag-engineering
+    path: .agents/skills/data/data-engineering/orchestration/airflow/airflow-dag-engineering/SKILL.md
+    description: "Design and validate production Airflow DAG workflows with retry, scheduling, idempotency and backfill semantics."
+    triggers:
+      - "airflow"
+      - "airflow dag"
+      - "airflow scheduling"
+      - "create dag"
+    excludes:
+      - "dagster"
+      - "prefect"
+    status: active
+  - id: airflow-backfill-scheduling
+    path: .agents/skills/data/data-engineering/orchestration/airflow/airflow-backfill-scheduling/SKILL.md
+    description: "Reprocess Airflow historical intervals with version-correct timetables, bounded concurrency and replay-safe writes."
+    triggers:
+      - "airflow backfill"
+      - "airflow catchup"
+      - "airflow logical date"
+      - "airflow data interval"
+      - "airflow historical rerun"
+    excludes: []
+    status: active

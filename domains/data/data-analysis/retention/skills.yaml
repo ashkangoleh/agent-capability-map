@@ -1,0 +1,20 @@
+schema_version: 1
+id: retention
+kind: skill-registry
+skills:
+  - id: cohort-retention-analysis
+    path: .agents/skills/data/data-analysis/retention/cohort-retention-analysis/SKILL.md
+    description: "Analyze retention cohorts with correct eligible denominators, censoring and identity stitching."
+    triggers:
+      - "cohort retention"
+      - "retention analysis"
+    excludes: []
+    status: active
+  - id: funnel-conversion-analysis
+    path: .agents/skills/data/data-analysis/retention/funnel-conversion-analysis/SKILL.md
+    description: "Analyze event funnels with ordered steps, conversion windows, identity and dropoff checks."
+    triggers:
+      - "funnel conversion"
+      - "funnel analysis"
+    excludes: []
+    status: active

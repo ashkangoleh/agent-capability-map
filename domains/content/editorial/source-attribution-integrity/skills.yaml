@@ -1,0 +1,13 @@
+schema_version: 1
+id: source-attribution-integrity
+kind: skill-registry
+skills:
+  - id: content-source-attribution-integrity
+    path: .agents/skills/content/editorial/content-source-attribution-integrity/SKILL.md
+    description: "Track primary sources direct quotes paraphrases and usage permissions; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing source attribution quotation integrity"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

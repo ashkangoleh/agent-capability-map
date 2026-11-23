@@ -1,0 +1,13 @@
+schema_version: 1
+id: data-catalog
+kind: skill-registry
+skills:
+  - id: datahub-metadata-catalog-governance
+    path: .agents/skills/data/governance/catalog/datahub-metadata-catalog-governance/SKILL.md
+    description: "Govern DataHub metadata ingestion, URNs, data ownership and stale lineage verification."
+    triggers:
+      - "datahub"
+      - "datahub metadata catalog"
+      - "data catalog governance"
+    excludes: []
+    status: active

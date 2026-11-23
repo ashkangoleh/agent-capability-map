@@ -1,0 +1,31 @@
+schema_version: 1
+id: nonprofit
+kind: map
+children:
+  - id: grant-development
+    description: "grant development"
+    triggers:
+      - "grant proposal"
+      - "grant development"
+    status: active
+    skills: domains/nonprofit/skills.yaml
+  - id: fundraising
+    description: "fundraising"
+    triggers:
+      - "fundraising"
+    status: mapped
+  - id: program-evaluation
+    description: "program evaluation"
+    triggers:
+      - "program evaluation"
+    status: mapped
+  - id: nonprofit-operations
+    description: "nonprofit operations"
+    triggers:
+      - "nonprofit operations"
+    status: mapped
+  - id: volunteer-programs
+    description: "volunteer programs"
+    triggers:
+      - "volunteer programs"
+    status: mapped

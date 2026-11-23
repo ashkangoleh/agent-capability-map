@@ -1,0 +1,11 @@
+schema_version: 1
+id: capacity-engineering
+kind: skill-registry
+skills:
+  - id: sre-capacity-load-testing
+    path: .agents/skills/infrastructure/sre-reliability/capacity-engineering/sre-capacity-load-testing/SKILL.md
+    description: "Plan capacity and load tests using workload models, saturation signals, headroom and failure thresholds."
+    triggers:
+      - "sre capacity load testing"
+    excludes: []
+    status: active

@@ -1,0 +1,15 @@
+schema_version: 1
+id: network-core
+kind: skill-registry
+skills:
+  - id: network-dns-tls-diagnostics
+    path: .agents/skills/infrastructure/network/network-dns-tls-diagnostics/SKILL.md
+    description: "Troubleshoot DNS resolution, TCP reachability, proxies and TLS trust chains with reproducible network probes."
+    triggers:
+      - "dns troubleshooting"
+      - "tls handshake"
+      - "network diagnostics"
+      - "networking"
+      - "dns"
+    excludes: []
+    status: active

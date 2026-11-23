@@ -1,0 +1,35 @@
+schema_version: 1
+id: data-general
+kind: skill-registry
+skills:
+  - id: data-engineering-implementation
+    path: .agents/skills/data/data-engineering/foundations/data-engineering-implementation/SKILL.md
+    description: "Use for data pipelines, lakehouse, SQL models and ingestion; verify grain, replay, schema evolution and source-to-sink correctness."
+    triggers:
+      - "dbt"
+      - "trino"
+      - "starrocks"
+      - "duckdb"
+      - "iceberg"
+      - "etl"
+      - "data pipeline"
+      - "backfill"
+      - "data ingestion"
+      - "sql modeling"
+      - "data quality"
+    excludes:
+      - "pyspark project"
+    status: active
+  - id: dbt-incremental-modeling
+    path: .agents/skills/data/analytics-engineering/dbt/dbt-incremental-modeling/SKILL.md
+    description: "Design and test dbt incremental models with adapter-specific MERGE/overwrite behavior, source uniqueness and late corrections."
+    triggers:
+      - "dbt incremental"
+      - "incremental dbt model"
+      - "dbt incremental model"
+      - "dbt merge"
+      - "dbt unique_key"
+      - "dbt full-refresh"
+    excludes:
+      - "pyspark"
+    status: active

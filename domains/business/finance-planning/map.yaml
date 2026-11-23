@@ -1,0 +1,22 @@
+schema_version: 1
+id: finance-planning
+kind: map
+children:
+  - id: budget-forecast-variance
+    description: "Align approved baseline budget with actual periods, currency and department ownership"
+    triggers:
+      - "business operations budget rolling forecast variance decomposition"
+    status: active
+    skills: domains/business/finance-planning/budget-forecast-variance/skills.yaml
+  - id: cash-runway-liquidity
+    description: "Use bank balances and available facilities with drawdown and covenant restrictions"
+    triggers:
+      - "business operations cash runway liquidity stress test"
+    status: active
+    skills: domains/business/finance-planning/cash-runway-liquidity/skills.yaml
+  - id: capital-investment-appraisal
+    description: "Define incremental free cash flows by time period, taxation, terminal values and cost of capital"
+    triggers:
+      - "business operations capital investment npv irr payback decision"
+    status: active
+    skills: domains/business/finance-planning/capital-investment-appraisal/skills.yaml

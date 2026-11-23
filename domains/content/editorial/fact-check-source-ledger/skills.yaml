@@ -1,0 +1,13 @@
+schema_version: 1
+id: fact-check-source-ledger
+kind: skill-registry
+skills:
+  - id: content-fact-check-source-ledger
+    path: .agents/skills/content/editorial/content-fact-check-source-ledger/SKILL.md
+    description: "Identify every material factual claim quotation and numeric statement; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing editorial fact check source ledger"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

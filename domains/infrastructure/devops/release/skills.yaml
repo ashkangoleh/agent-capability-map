@@ -1,0 +1,11 @@
+schema_version: 1
+id: release
+kind: skill-registry
+skills:
+  - id: ci-cd-release-engineering
+    path: .agents/skills/infrastructure/devops/release/ci-cd-release-engineering/SKILL.md
+    description: "Design CI/CD release pipelines with immutable artifacts, promotion gates, rollback and environment isolation."
+    triggers:
+      - "ci cd release engineering"
+    excludes: []
+    status: active

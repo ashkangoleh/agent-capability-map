@@ -1,0 +1,12 @@
+schema_version: 1
+id: serving
+kind: skill-registry
+skills:
+  - id: vllm-inference-serving-operations
+    path: .agents/skills/ai-ml/llm/serving/vllm-inference-serving-operations/SKILL.md
+    description: "Serve LLM inference through vLLM with measured KV cache memory, concurrency and API compatibility."
+    triggers:
+      - "vllm"
+      - "llm serving"
+    excludes: []
+    status: active

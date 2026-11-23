@@ -1,0 +1,41 @@
+schema_version: 1
+id: forecasting
+kind: skill-registry
+skills:
+  - id: ds-hierarchical-forecasting
+    path: .agents/skills/data/data-science/forecasting/ds-hierarchical-forecasting/SKILL.md
+    description: "Forecast hierarchical time series and reconcile product, geography and aggregate levels."
+    triggers:
+      - "hierarchical time series reconciliation"
+      - "hierarchical forecasting reconciliation"
+      - "hierarchical forecast coherence"
+      - "hierarchical summing matrix"
+      - "hierarchical forecasting"
+    excludes: []
+    status: active
+  - id: ds-probabilistic-forecasting
+    path: .agents/skills/data/data-science/forecasting/ds-probabilistic-forecasting/SKILL.md
+    description: "Build and evaluate predictive distributions, quantiles, intervals and calibrated forecast uncertainty."
+    triggers:
+      - "probabilistic forecasting quantile"
+      - "forecast prediction intervals calibration"
+      - "crps pinball loss"
+      - "probabilistic forecasting quantile crossing"
+      - "forecast pinball loss by horizon"
+      - "forecast quantile coverage by horizon"
+    excludes:
+      - "intermittent demand croston"
+    status: active
+  - id: ds-intermittent-demand-forecasting
+    path: .agents/skills/data/data-science/forecasting/ds-intermittent-demand-forecasting/SKILL.md
+    description: "Forecast sparse and intermittent demand with Croston-family methods and inventory-aligned evaluation."
+    triggers:
+      - "intermittent demand forecasting"
+      - "croston sba tsb"
+      - "sparse demand forecast inventory"
+      - "intermittent demand croston tsb"
+      - "sparse demand forecast stockout"
+      - "intermittent demand obsolescence"
+    excludes:
+      - "dense seasonal demand series"
+    status: active

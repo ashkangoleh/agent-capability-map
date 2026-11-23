@@ -1,0 +1,12 @@
+schema_version: 1
+id: monitoring
+kind: skill-registry
+skills:
+  - id: ml-drift-performance-monitoring
+    path: .agents/skills/ai-ml/machine-learning/monitoring/ml-drift-performance-monitoring/SKILL.md
+    description: "Monitor model performance and feature drift with delayed ground truth and retraining gates."
+    triggers:
+      - "model drift"
+      - "model monitoring"
+    excludes: []
+    status: active

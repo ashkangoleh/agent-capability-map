@@ -1,0 +1,26 @@
+schema_version: 1
+id: construction
+kind: map
+children:
+  - id: architecture
+    description: "architecture"
+    triggers:
+      - "architecture"
+    status: mapped
+  - id: civil-engineering
+    description: "civil engineering"
+    triggers:
+      - "civil engineering"
+    status: mapped
+  - id: bim
+    description: "bim"
+    triggers:
+      - "bim ifc schema"
+      - "bim"
+    status: active
+    skills: domains/construction/skills.yaml
+  - id: project-controls
+    description: "project controls"
+    triggers:
+      - "project controls"
+    status: mapped

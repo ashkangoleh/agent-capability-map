@@ -1,0 +1,31 @@
+schema_version: 1
+id: health
+kind: map
+children:
+  - id: clinical-information
+    description: "clinical information"
+    triggers:
+      - "clinical information"
+    status: mapped
+  - id: public-health
+    description: "public health"
+    triggers:
+      - "public health research"
+      - "public health"
+    status: active
+    skills: domains/health/skills.yaml
+  - id: healthcare-operations
+    description: "healthcare operations"
+    triggers:
+      - "healthcare operations"
+    status: mapped
+  - id: biomedical-research
+    description: "biomedical research"
+    triggers:
+      - "biomedical research"
+    status: mapped
+  - id: wellness
+    description: "wellness"
+    triggers:
+      - "wellness"
+    status: mapped

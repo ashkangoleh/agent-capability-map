@@ -1,0 +1,32 @@
+schema_version: 1
+id: legal
+kind: map
+children:
+  - id: contract-review
+    description: "contract review"
+    triggers:
+      - "contract review"
+    status: mapped
+  - id: legal-research
+    description: "legal research"
+    triggers:
+      - "legal memorandum"
+      - "legal research"
+    status: active
+    skills: domains/legal/skills.yaml
+  - id: privacy-law
+    description: "privacy law"
+    triggers:
+      - "privacy law"
+    status: mapped
+  - id: intellectual-property
+    description: "intellectual property"
+    triggers:
+      - "intellectual property"
+    status: mapped
+  - id: regulatory-compliance
+    description: "regulatory compliance"
+    triggers:
+      - "regulatory compliance"
+      - "legal compliance"
+    status: mapped

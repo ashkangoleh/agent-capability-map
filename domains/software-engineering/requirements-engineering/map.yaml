@@ -1,0 +1,22 @@
+schema_version: 1
+id: requirements-engineering
+kind: map
+children:
+  - id: elicitation-specification
+    description: "Resolve stakeholder conflict, scope and derived behavior before coding."
+    triggers:
+      - "software requirements elicitation specification"
+    status: active
+    skills: domains/software-engineering/requirements-engineering/elicitation-specification/skills.yaml
+  - id: acceptance-criteria
+    description: "Write executable acceptance criteria with positive and negative examples."
+    triggers:
+      - "software acceptance criteria scenarios"
+    status: active
+    skills: domains/software-engineering/requirements-engineering/acceptance-criteria/skills.yaml
+  - id: nonfunctional-requirements
+    description: "Express latency, reliability, scalability, privacy and cost as measurable envelopes."
+    triggers:
+      - "software nonfunctional slo requirements"
+    status: active
+    skills: domains/software-engineering/requirements-engineering/nonfunctional-requirements/skills.yaml

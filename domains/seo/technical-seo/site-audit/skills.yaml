@@ -1,0 +1,15 @@
+schema_version: 1
+id: site-audit
+kind: skill-registry
+skills:
+  - id: seo-audit-strategy
+    path: .agents/skills/seo/core/seo-audit-strategy/SKILL.md
+    description: "Use for technical SEO audits across indexability, canonical selection, content, internal links and observed organic search evidence."
+    triggers:
+      - "audit technical seo canonical tags"
+      - "technical seo"
+      - "seo"
+      - "canonical"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

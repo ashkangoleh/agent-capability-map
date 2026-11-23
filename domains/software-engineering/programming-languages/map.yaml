@@ -1,0 +1,36 @@
+schema_version: 1
+id: programming-languages
+kind: map
+children:
+  - id: python
+    description: "Validate Python import behavior, typing, async cancellation and packaging."
+    triggers:
+      - "python typing async application"
+      - "python code"
+    status: active
+    skills: domains/software-engineering/programming-languages/python/skills.yaml
+  - id: typescript
+    description: "Preserve runtime validation despite compile-time TypeScript types."
+    triggers:
+      - "typescript strict type safety"
+      - "typescript"
+    status: active
+    skills: domains/software-engineering/programming-languages/typescript/skills.yaml
+  - id: go
+    description: "Use contexts, race detection and bounded goroutine lifecycles."
+    triggers:
+      - "go goroutine cancellation concurrency"
+    status: active
+    skills: domains/software-engineering/programming-languages/go/skills.yaml
+  - id: java
+    description: "Match JVM, GC and thread model to current Java release semantics."
+    triggers:
+      - "java virtual threads application"
+    status: active
+    skills: domains/software-engineering/programming-languages/java/skills.yaml
+  - id: rust
+    description: "Use ownership, Send/Sync boundaries and typed errors to prevent lifecycle faults."
+    triggers:
+      - "rust ownership async error handling"
+    status: active
+    skills: domains/software-engineering/programming-languages/rust/skills.yaml

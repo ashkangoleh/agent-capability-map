@@ -1,0 +1,13 @@
+schema_version: 1
+id: transformers
+kind: skill-registry
+skills:
+  - id: huggingface-peft-finetuning
+    path: .agents/skills/ai-ml/deep-learning/transformers/huggingface-peft-finetuning/SKILL.md
+    description: "Train PEFT transformer adapters with correct model licenses, evaluation and version compatibility."
+    triggers:
+      - "peft"
+      - "hugging face fine tuning"
+      - "transformer fine tuning"
+    excludes: []
+    status: active

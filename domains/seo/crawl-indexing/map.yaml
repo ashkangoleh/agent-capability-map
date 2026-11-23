@@ -1,0 +1,28 @@
+schema_version: 1
+id: crawl-indexing
+kind: map
+children:
+  - id: indexability
+    description: "Existing canonical specialist"
+    triggers:
+      - "diagnose canonical mismatch on indexed pages"
+    status: active
+    skills: domains/seo/crawl-indexing/indexability/skills.yaml
+  - id: faceted-navigation-controls
+    description: "Sample URL parameter combinations and identify priority indexable facets"
+    triggers:
+      - "seo faceted navigation infinite urls crawl budget"
+    status: active
+    skills: domains/seo/crawl-indexing/faceted-navigation-controls/skills.yaml
+  - id: sitemap-canonical-integrity
+    description: "Audit sitemap indexes URL bounds and canonical responses"
+    triggers:
+      - "seo xml sitemap lastmod canonical validation"
+    status: active
+    skills: domains/seo/crawl-indexing/sitemap-canonical-integrity/skills.yaml
+  - id: crawler-log-diagnostics
+    description: "Verify bot identity rather than trusting User Agent text"
+    triggers:
+      - "seo googlebot server log verification status analysis"
+    status: active
+    skills: domains/seo/crawl-indexing/crawler-log-diagnostics/skills.yaml

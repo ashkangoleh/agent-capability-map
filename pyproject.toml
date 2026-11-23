@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-capability-map"
+version = "0.2.0"
+description = "A globally accessible, hierarchical YAML capability and skill router"
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6.0.3,<7"]
+
+[project.scripts]
+capability-map = "capability_map.cli:main"
+
+[tool.setuptools]
+packages = ["capability_map"]

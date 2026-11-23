@@ -1,0 +1,14 @@
+schema_version: 1
+id: helm
+kind: skill-registry
+skills:
+  - id: helm-chart-contract-testing
+    path: .agents/skills/infrastructure/kubernetes/helm/helm-chart-contract-testing/SKILL.md
+    description: "Validate Helm charts, rendered templates, value schemas and dependency resolution with documented tests."
+    triggers:
+      - "helm chart design"
+      - "helm chart validation"
+      - "helm template test"
+      - "helm values schema"
+    excludes: []
+    status: active

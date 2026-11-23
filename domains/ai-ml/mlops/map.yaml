@@ -1,0 +1,63 @@
+schema_version: 1
+id: mlops
+kind: map
+children:
+  - id: tracking
+    description: "tracking"
+    triggers:
+      - "mlflow"
+      - "experiment tracking"
+      - "model registry"
+    status: active
+    skills: domains/ai-ml/mlops/tracking/skills.yaml
+  - id: feature-store
+    description: "feature store"
+    triggers:
+      - "feast"
+      - "feature store"
+    status: active
+    skills: domains/ai-ml/mlops/feature-store/skills.yaml
+  - id: serving
+    description: "serving"
+    triggers:
+      - "model canary"
+      - "model deployment"
+      - "model serving"
+    status: active
+    skills: domains/ai-ml/mlops/serving/skills.yaml
+  - id: monitoring
+    description: "monitoring"
+    triggers:
+      - "model drift"
+      - "model monitoring"
+      - "ml drift"
+    status: active
+    skills: domains/ai-ml/mlops/monitoring/skills.yaml
+  - id: continuous-training
+    description: "mlops continuous training trigger design: data quality and label arrival thresholds"
+    triggers:
+      - "ml continuous retraining after label availability"
+      - "mlops continuous training trigger design"
+    status: active
+    skills: domains/ai-ml/mlops/continuous-training/skills.yaml
+  - id: model-registry-governance
+    description: "ml model registry approval audit: registry artifact immutability and approvals"
+    triggers:
+      - "ml registry immutable model provenance approval"
+      - "ml model registry approval audit"
+    status: active
+    skills: domains/ai-ml/mlops/model-registry-governance/skills.yaml
+  - id: release-gates
+    description: "mlops production model release safety gate: canary cohorts, feature schema and serving SLOs"
+    triggers:
+      - "ml model shadow canary promotion rollback thresholds"
+      - "mlops production model release safety gate"
+    status: active
+    skills: domains/ai-ml/mlops/release-gates/skills.yaml
+  - id: reproducibility
+    description: "ml experiment environment reproducibility audit: container hashes, data version and random seeds"
+    triggers:
+      - "rebuild ml experiment from pinned dataset and image"
+      - "ml experiment environment reproducibility audit"
+    status: active
+    skills: domains/ai-ml/mlops/reproducibility/skills.yaml

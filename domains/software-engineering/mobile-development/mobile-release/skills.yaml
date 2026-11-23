@@ -1,0 +1,13 @@
+schema_version: 1
+id: mobile-release
+kind: skill-registry
+skills:
+  - id: swe-mobile-development-mobile-release
+    path: .agents/skills/software-engineering/mobile-development/mobile-release/swe-mobile-development-mobile-release/SKILL.md
+    description: "Use for mobile app signing store release tasks in Native and Cross-Platform Mobile Engineering; verify deliver signed, reproducible application releases with staged rollout safeguards. and reject unsupported release or safety claims."
+    triggers:
+      - "mobile app signing store release"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

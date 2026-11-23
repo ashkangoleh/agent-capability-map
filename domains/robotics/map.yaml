@@ -1,0 +1,31 @@
+schema_version: 1
+id: robotics
+kind: map
+children:
+  - id: robot-control
+    description: "robot control"
+    triggers:
+      - "ros2 robot control"
+      - "robot control"
+    status: active
+    skills: domains/robotics/skills.yaml
+  - id: robot-perception
+    description: "robot perception"
+    triggers:
+      - "robot perception"
+    status: mapped
+  - id: robot-simulation
+    description: "robot simulation"
+    triggers:
+      - "robot simulation"
+    status: mapped
+  - id: robotics-safety
+    description: "robotics safety"
+    triggers:
+      - "robotics safety"
+    status: mapped
+  - id: human-robot-interaction
+    description: "human robot interaction"
+    triggers:
+      - "human robot interaction"
+    status: mapped

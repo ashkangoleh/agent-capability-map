@@ -1,0 +1,14 @@
+schema_version: 1
+id: prefect
+kind: skill-registry
+skills:
+  - id: prefect-flow-reliability
+    path: .agents/skills/data/data-engineering/orchestration/prefect/prefect-flow-reliability/SKILL.md
+    description: "Build Prefect flow and task retry semantics, concurrency protection and recoverable external effects."
+    triggers:
+      - "prefect"
+      - "prefect flow"
+      - "prefect task retries"
+      - "prefect deployment"
+    excludes: []
+    status: active

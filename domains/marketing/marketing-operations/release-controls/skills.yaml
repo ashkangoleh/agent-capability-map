@@ -1,0 +1,14 @@
+schema_version: 1
+id: release-controls
+kind: skill-registry
+skills:
+  - id: marketing-campaign-release-controls
+    path: .agents/skills/marketing/marketing-operations/marketing-campaign-release-controls/SKILL.md
+    description: "Treat marketing campaign deployment as a controlled production change with measurable abort criteria."
+    triggers:
+      - "marketing campaign release preflight checklist approvals"
+      - "marketing campaign rollback incident runbook"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

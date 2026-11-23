@@ -1,0 +1,82 @@
+schema_version: 1
+id: kubernetes
+kind: map
+children:
+  - id: cluster-lifecycle
+    description: "Cluster control-plane/node upgrades, capacity and version skew"
+    triggers:
+      - "kubernetes cluster upgrade capacity"
+    status: active
+    skills: domains/infrastructure/kubernetes/cluster-lifecycle/skills.yaml
+  - id: operators-extensions
+    description: "CRD schemas, reconciliation controllers, finalizers and operator upgrades"
+    triggers:
+      - "kubernetes operator crd lifecycle"
+    status: active
+    skills: domains/infrastructure/kubernetes/operators-extensions/skills.yaml
+  - id: cni-datapath
+    description: "CNI and eBPF datapath operation, MTU, IPAM and policy diagnostics"
+    triggers:
+      - "kubernetes cni ebpf operations"
+    status: active
+    skills: domains/infrastructure/kubernetes/cni-datapath/skills.yaml
+  - id: networking
+    description: "Kubernetes Services, NetworkPolicy, DNS and datapath"
+    triggers:
+      - "kubernetes networkpolicy"
+      - "k8s networkpolicy"
+      - "kubernetes dns failure"
+      - "kubernetes service routing"
+    status: active
+    skills: domains/infrastructure/kubernetes/networking/skills.yaml
+  - id: storage
+    description: "Kubernetes PV/PVC and CSI"
+    triggers:
+      - "kubernetes storage"
+      - "pvc pending"
+      - "csi driver"
+      - "kubernetes pvc recovery"
+    status: active
+    skills: domains/infrastructure/kubernetes/storage/skills.yaml
+  - id: security
+    description: "Kubernetes workload security and RBAC"
+    triggers:
+      - "kubernetes workload security"
+      - "pod security"
+      - "k8s rbac"
+      - "kubernetes security context"
+    status: active
+    skills: domains/infrastructure/kubernetes/security/skills.yaml
+  - id: helm
+    description: "Helm chart contract and template validation"
+    triggers:
+      - "helm chart design"
+      - "helm chart validation"
+      - "helm template test"
+      - "helm values schema"
+    status: active
+    skills: domains/infrastructure/kubernetes/helm/skills.yaml
+  - id: rollout
+    description: "Kubernetes deployment rollout, canary and Helm upgrade safety"
+    triggers:
+      - "kubernetes rollout"
+      - "kubernetes canary"
+      - "k8s rollout"
+      - "helm rollback plan"
+      - "kubernetes helm upgrade"
+    status: active
+    skills: domains/infrastructure/kubernetes/rollout/skills.yaml
+  - id: multicluster
+    description: "Multi-cluster fleet and tenant isolation"
+    triggers:
+      - "kubernetes multi cluster fleet management tenant isolation"
+      - "kubernetes multi cluster"
+    status: active
+    skills: domains/infrastructure/kubernetes/multicluster/skills.yaml
+  - id: gateway-api
+    description: "Gateway API, Ingress and north-south traffic"
+    triggers:
+      - "kubernetes ingress gateway api"
+      - "kubernetes ingress controllers"
+    status: active
+    skills: domains/infrastructure/kubernetes/gateway-api/skills.yaml

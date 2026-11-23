@@ -1,0 +1,13 @@
+schema_version: 1
+id: legal
+kind: skill-registry
+skills:
+  - id: jurisdictional-legal-source-review
+    path: .agents/skills/legal/core/jurisdictional-legal-source-review/SKILL.md
+    description: "Research legal memoranda using official jurisdiction-specific legislation, updates and authority citations without advice."
+    triggers:
+      - "legal memorandum"
+      - "legal research"
+      - "legal source review"
+    excludes: []
+    status: active

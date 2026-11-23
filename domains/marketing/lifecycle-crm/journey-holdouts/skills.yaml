@@ -1,0 +1,14 @@
+schema_version: 1
+id: journey-holdouts
+kind: skill-registry
+skills:
+  - id: marketing-lifecycle-journey-holdouts
+    path: .agents/skills/marketing/lifecycle-crm/marketing-lifecycle-journey-holdouts/SKILL.md
+    description: "Design lifecycle journeys with frequency caps, identity correctness and incremental retention measurement."
+    triggers:
+      - "marketing lifecycle journey holdout retention experiment"
+      - "marketing crm journey frequency cap"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

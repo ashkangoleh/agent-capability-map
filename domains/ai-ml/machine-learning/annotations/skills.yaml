@@ -1,0 +1,13 @@
+schema_version: 1
+id: annotations
+kind: skill-registry
+skills:
+  - id: model-data-label-governance
+    path: .agents/skills/ai-ml/machine-learning/annotations/model-data-label-governance/SKILL.md
+    description: "Govern ML annotation taxonomies, label disagreement, training leakage and sensitive data retention."
+    triggers:
+      - "dataset annotation"
+      - "ml label governance"
+      - "training labels"
+    excludes: []
+    status: active

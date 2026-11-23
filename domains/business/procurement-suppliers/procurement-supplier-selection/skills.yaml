@@ -1,0 +1,12 @@
+schema_version: 1
+id: procurement-supplier-selection
+kind: skill-registry
+skills:
+  - id: business-procurement-supplier-selection
+    path: .agents/skills/business/procurement-suppliers/business-procurement-supplier-selection/SKILL.md
+    description: "Specify service scope, constraints, selection criteria and conflict disclosures before bids. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations procurement supplier total cost bid evaluation"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

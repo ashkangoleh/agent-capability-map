@@ -1,0 +1,12 @@
+schema_version: 1
+id: capacity-queue-staffing
+kind: skill-registry
+skills:
+  - id: business-capacity-queue-staffing
+    path: .agents/skills/business/operations-management/business-capacity-queue-staffing/SKILL.md
+    description: "Measure incoming cases per interval, handling time distribution, capacity and service targets. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations capacity staffing backlog queue variability"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

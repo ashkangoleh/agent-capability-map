@@ -1,0 +1,14 @@
+schema_version: 1
+id: audience-research
+kind: skill-registry
+skills:
+  - id: marketing-audience-research-evidence
+    path: .agents/skills/marketing/brand-positioning/marketing-audience-research-evidence/SKILL.md
+    description: "Separate observed customer evidence from invented personas and biased convenience samples."
+    triggers:
+      - "marketing audience research sampling bias segmentation"
+      - "marketing customer segment validation"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

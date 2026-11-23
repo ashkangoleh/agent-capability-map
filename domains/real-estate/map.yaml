@@ -1,0 +1,31 @@
+schema_version: 1
+id: real-estate
+kind: map
+children:
+  - id: property-analytics
+    description: "property analytics"
+    triggers:
+      - "property analytics"
+    status: mapped
+  - id: valuation-research
+    description: "valuation research"
+    triggers:
+      - "property due diligence"
+      - "valuation research"
+    status: active
+    skills: domains/real-estate/skills.yaml
+  - id: property-operations
+    description: "property operations"
+    triggers:
+      - "property operations"
+    status: mapped
+  - id: facility-management
+    description: "facility management"
+    triggers:
+      - "facility management"
+    status: mapped
+  - id: property-compliance
+    description: "property compliance"
+    triggers:
+      - "property compliance"
+    status: mapped

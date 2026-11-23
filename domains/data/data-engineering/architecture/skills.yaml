@@ -1,0 +1,25 @@
+schema_version: 1
+id: architecture
+kind: skill-registry
+skills:
+  - id: multi-engine-data-platform-interoperability
+    path: .agents/skills/data/data-engineering/architecture/multi-engine-data-platform-interoperability/SKILL.md
+    description: "Design cross-engine workflows across Trino, DuckDB, Spark, Flink and StarRocks with explicit handoff semantics."
+    triggers:
+      - "multi engine data platform interoperability"
+    excludes: []
+    status: active
+  - id: data-mesh-data-product-architecture
+    path: .agents/skills/data/data-engineering/architecture/data-mesh-data-product-architecture/SKILL.md
+    description: "Design Data Mesh domains and data products with federated governance and explicit producer-consumer contracts."
+    triggers:
+      - "data mesh data product architecture"
+    excludes: []
+    status: active
+  - id: medallion-lambda-kappa-architecture
+    path: .agents/skills/data/data-engineering/architecture/medallion-lambda-kappa-architecture/SKILL.md
+    description: "Choose medallion, Lambda or Kappa architectures from latency, replayability and operational complexity."
+    triggers:
+      - "medallion lambda kappa architecture"
+    excludes: []
+    status: active

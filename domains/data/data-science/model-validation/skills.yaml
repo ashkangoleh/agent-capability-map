@@ -1,0 +1,52 @@
+schema_version: 1
+id: model-validation
+kind: skill-registry
+skills:
+  - id: sklearn-leakage-free-validation
+    path: .agents/skills/data/data-science/model-validation/sklearn-leakage-free-validation/SKILL.md
+    description: "Train and validate sklearn models with split-first, leakage-safe preprocessing and reproducible holdouts."
+    triggers:
+      - "sklearn pipeline"
+      - "sklearn cross validation"
+      - "scikit-learn leakage safe validation"
+      - "scikit-learn cross validation"
+      - "sklearn grouped cross validation"
+      - "sklearn time series split"
+      - "group cross validation leakage"
+      - "time series cross validation leakage"
+      - "نشت داده در اعتبارسنجی مدل"
+    excludes: []
+    status: active
+  - id: imbalanced-classification-evaluation
+    path: .agents/skills/data/data-science/model-validation/imbalanced-classification-evaluation/SKILL.md
+    description: "Evaluate imbalanced classifier precision recall calibration and prevalence-sensitive thresholds."
+    triggers:
+      - "imbalanced classification"
+      - "imbalanced classifier"
+    excludes: []
+    status: active
+  - id: ds-conformal-prediction-uncertainty
+    path: .agents/skills/data/data-science/model-validation/ds-conformal-prediction-uncertainty/SKILL.md
+    description: "Construct and validate conformal prediction intervals, prediction sets and risk-controlled decisions."
+    triggers:
+      - "conformal prediction intervals"
+      - "distribution free prediction sets"
+      - "conformal risk control"
+      - "split conformal regression"
+      - "conformal marginal coverage"
+      - "conformal subgroup coverage"
+      - "conformal residual quantile"
+      - "بازه پیش‌بینی کانفورمال"
+    excludes:
+      - "bayesian credible interval"
+    status: active
+  - id: ds-fairness-subgroup-evaluation
+    path: .agents/skills/data/data-science/model-validation/ds-fairness-subgroup-evaluation/SKILL.md
+    description: "Measure predictive performance disparities, calibration and decision trade-offs across subgroups."
+    triggers:
+      - "fairness subgroup evaluation"
+      - "equalized odds demographic parity"
+      - "model performance disparities groups"
+    excludes:
+      - "responsible ai governance risk assessment"
+    status: active

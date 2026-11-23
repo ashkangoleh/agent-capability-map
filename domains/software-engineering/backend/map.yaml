@@ -1,0 +1,31 @@
+schema_version: 1
+id: backend
+kind: map
+children:
+  - id: api-implementation
+    description: "Implement repository-aligned HTTP endpoints, validation and status/error semantics."
+    triggers:
+      - "api endpoint"
+      - "fastapi"
+      - "django"
+      - "backend"
+    status: active
+    skills: domains/software-engineering/skills.yaml
+  - id: integration-resilience
+    description: "Design outbound RPC/HTTP clients with bounded retries, circuit breakers and backpressure."
+    triggers:
+      - "service integration retry budget"
+    status: active
+    skills: domains/software-engineering/backend/integration-resilience/skills.yaml
+  - id: persistence-transactions
+    description: "Protect transaction boundaries, isolation and persistence correctness."
+    triggers:
+      - "application transaction concurrency"
+    status: active
+    skills: domains/software-engineering/backend/persistence-transactions/skills.yaml
+  - id: service-security
+    description: "Separate authentication from resource-level authorization and transport security."
+    triggers:
+      - "backend authentication authorization design"
+    status: active
+    skills: domains/software-engineering/backend/service-security/skills.yaml

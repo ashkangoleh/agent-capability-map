@@ -1,0 +1,24 @@
+schema_version: 1
+id: database-engineering
+kind: map
+children:
+  - id: starrocks
+    description: "StarRocks table and loading contracts"
+    triggers:
+      - "starrocks"
+      - "starrocks stream load"
+      - "starrocks primary key"
+    status: active
+    skills: domains/data/database-engineering/starrocks/skills.yaml
+  - id: relational-database
+    description: "Relational SQL databases"
+    triggers:
+      - "sql explain plan"
+      - "mysql binlog"
+      - "postgresql logical replication"
+      - "postgresql"
+      - "mysql"
+      - "query optimization"
+      - "database design"
+    status: active
+    map: domains/data/database-engineering/relational/map.yaml

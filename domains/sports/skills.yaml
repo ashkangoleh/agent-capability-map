@@ -1,0 +1,14 @@
+schema_version: 1
+id: sports
+kind: skill-registry
+skills:
+  - id: sports-training-evidence-plan
+    path: .agents/skills/sports/core/sports-training-evidence-plan/SKILL.md
+    description: "Develop evidence-aware general fitness training progression and recovery plans without medical diagnosis."
+    triggers:
+      - "fitness training"
+      - "sports training plan"
+      - "fitness training progression"
+      - "athletic training"
+    excludes: []
+    status: active

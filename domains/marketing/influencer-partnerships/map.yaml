@@ -1,0 +1,18 @@
+schema_version: 1
+id: influencer-partnerships
+kind: map
+children:
+  - id: creator-disclosure
+    description: "Review influencer campaign disclosures and substantiation before sponsored publication."
+    triggers:
+      - "marketing influencer paid endorsement disclosure review"
+      - "marketing creator material connection compliance"
+    status: active
+    skills: domains/marketing/influencer-partnerships/creator-disclosure/skills.yaml
+  - id: affiliate-integrity
+    description: "Design affiliate commission attribution and reconciliation with fraud and refund controls."
+    triggers:
+      - "marketing affiliate payout attribution fraud reconciliation"
+      - "marketing partner referral commission dedup"
+    status: active
+    skills: domains/marketing/influencer-partnerships/affiliate-integrity/skills.yaml

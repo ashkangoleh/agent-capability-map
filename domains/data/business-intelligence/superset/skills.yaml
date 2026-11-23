@@ -1,0 +1,13 @@
+schema_version: 1
+id: superset
+kind: skill-registry
+skills:
+  - id: superset-dashboard-metric-governance
+    path: .agents/skills/data/business-intelligence/superset/superset-dashboard-metric-governance/SKILL.md
+    description: "Build secure Apache Superset dashboards, dataset metrics, cache policies and performance validation."
+    triggers:
+      - "superset dashboard"
+      - "apache superset"
+      - "superset"
+    excludes: []
+    status: active

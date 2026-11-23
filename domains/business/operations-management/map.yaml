@@ -1,0 +1,22 @@
+schema_version: 1
+id: operations-management
+kind: map
+children:
+  - id: capacity-queue-staffing
+    description: "Measure incoming cases per interval, handling time distribution, capacity and service targets"
+    triggers:
+      - "business operations capacity staffing backlog queue variability"
+    status: active
+    skills: domains/business/operations-management/capacity-queue-staffing/skills.yaml
+  - id: operating-kpi-scorecard
+    description: "Define operational metric owners, business definitions, denominators and data latency"
+    triggers:
+      - "business operations kpi scorecard metric denominator reconciliation"
+    status: active
+    skills: domains/business/operations-management/operating-kpi-scorecard/skills.yaml
+  - id: continuity-response-drill
+    description: "Record critical service dependencies, maximum tolerable downtime and minimum acceptable capacity"
+    triggers:
+      - "business operations continuity recovery drill recovery time capacity"
+    status: active
+    skills: domains/business/operations-management/continuity-response-drill/skills.yaml

@@ -1,0 +1,12 @@
+schema_version: 1
+id: feature-store
+kind: skill-registry
+skills:
+  - id: feast-online-offline-feature-store
+    path: .agents/skills/ai-ml/machine-learning/features/feast-online-offline-feature-store/SKILL.md
+    description: "Operate Feast feature store historical retrieval and online materialization with parity checks."
+    triggers:
+      - "feast"
+      - "feature store"
+    excludes: []
+    status: active

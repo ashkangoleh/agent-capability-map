@@ -1,0 +1,13 @@
+schema_version: 1
+id: social-platform-adaptation
+kind: skill-registry
+skills:
+  - id: content-social-platform-adaptation
+    path: .agents/skills/content/social-content/content-social-platform-adaptation/SKILL.md
+    description: "Preserve source truth while shortening for intended platform format; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing social channel editorial adaptation"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

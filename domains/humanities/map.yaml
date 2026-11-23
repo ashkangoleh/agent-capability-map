@@ -1,0 +1,31 @@
+schema_version: 1
+id: humanities
+kind: map
+children:
+  - id: history
+    description: "history"
+    triggers:
+      - "historical research"
+      - "history"
+    status: active
+    skills: domains/humanities/skills.yaml
+  - id: philosophy
+    description: "philosophy"
+    triggers:
+      - "philosophy"
+    status: mapped
+  - id: literature
+    description: "literature"
+    triggers:
+      - "literature"
+    status: mapped
+  - id: linguistics
+    description: "linguistics"
+    triggers:
+      - "linguistics"
+    status: mapped
+  - id: cultural-heritage
+    description: "cultural heritage"
+    triggers:
+      - "cultural heritage"
+    status: mapped

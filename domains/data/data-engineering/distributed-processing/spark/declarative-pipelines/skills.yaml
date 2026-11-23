@@ -1,0 +1,11 @@
+schema_version: 1
+id: declarative-pipelines
+kind: skill-registry
+skills:
+  - id: apache-spark-declarative-pipelines
+    path: .agents/skills/data/data-engineering/distributed-processing/spark/declarative-pipelines/apache-spark-declarative-pipelines/SKILL.md
+    description: "Design declarative batch and streaming pipelines in SQL/Python while separating upstream Spark Declarative Pipelines from Databricks Lakeflow extensions."
+    triggers:
+      - "spark declarative pipelines"
+    excludes: []
+    status: active

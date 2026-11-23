@@ -1,0 +1,12 @@
+schema_version: 1
+id: risk-monitoring
+kind: skill-registry
+skills:
+  - id: aiml-responsible-ai-risk-monitoring
+    path: .agents/skills/ai-ml/responsible-ai/risk-monitoring/aiml-responsible-ai-risk-monitoring/SKILL.md
+    description: "Engineer responsible ai postdeployment impact monitoring using complaints, risk register and incident owners, verifying failures and quality baselines."
+    triggers:
+      - "ai harm complaint monitoring remediation owners"
+      - "responsible ai postdeployment impact monitoring"
+    excludes: []
+    status: active

@@ -1,0 +1,27 @@
+schema_version: 1
+id: travel
+kind: map
+children:
+  - id: travel-planning
+    description: "travel planning"
+    triggers:
+      - "travel planning"
+      - "travel itinerary"
+      - "travel planning"
+    status: active
+    skills: domains/travel/skills.yaml
+  - id: hospitality
+    description: "hospitality"
+    triggers:
+      - "hospitality"
+    status: mapped
+  - id: tourism
+    description: "tourism"
+    triggers:
+      - "tourism"
+    status: mapped
+  - id: events
+    description: "events"
+    triggers:
+      - "events"
+    status: mapped

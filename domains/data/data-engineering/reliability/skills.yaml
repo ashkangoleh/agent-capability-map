@@ -1,0 +1,25 @@
+schema_version: 1
+id: reliability
+kind: skill-registry
+skills:
+  - id: end-to-end-pipeline-reliability
+    path: .agents/skills/data/data-engineering/reliability/end-to-end-pipeline-reliability/SKILL.md
+    description: "Engineer reliable pipelines with idempotency, deduplication, retries, checkpoints, replay and partial-publication recovery."
+    triggers:
+      - "end to end pipeline reliability"
+    excludes: []
+    status: active
+  - id: transactional-outbox-dlq-replay
+    path: .agents/skills/data/data-engineering/reliability/transactional-outbox-dlq-replay/SKILL.md
+    description: "Implement transactional outbox, dead-letter queues and poison-message recovery for event-driven integration."
+    triggers:
+      - "transactional outbox dlq replay"
+    excludes: []
+    status: active
+  - id: data-platform-backup-disaster-recovery
+    path: .agents/skills/data/data-engineering/reliability/data-platform-backup-disaster-recovery/SKILL.md
+    description: "Design backup and disaster recovery with explicit RPO/RTO, metadata consistency and restore drills."
+    triggers:
+      - "data platform disaster recovery"
+    excludes: []
+    status: active

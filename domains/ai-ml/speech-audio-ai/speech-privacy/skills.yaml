@@ -1,0 +1,12 @@
+schema_version: 1
+id: speech-privacy
+kind: skill-registry
+skills:
+  - id: aiml-speech-audio-ai-speech-privacy
+    path: .agents/skills/ai-ml/speech-audio-ai/speech-privacy/aiml-speech-audio-ai-speech-privacy/SKILL.md
+    description: "Engineer speech audio pii redaction evaluation using PII label set, audio consent and transcript data, verifying failures and quality baselines."
+    triggers:
+      - "spoken pii redaction recall on noisy audio"
+      - "speech audio pii redaction evaluation"
+    excludes: []
+    status: active

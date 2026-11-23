@@ -1,0 +1,12 @@
+schema_version: 1
+id: merchant-listing-schema
+kind: skill-registry
+skills:
+  - id: seo-merchant-listing-schema
+    path: .agents/skills/seo/structured-data/seo-merchant-listing-schema/SKILL.md
+    description: "Confirm eligible product detail page and active purchase experience"
+    triggers:
+      - "seo merchant listing product price availability schema audit"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

@@ -1,0 +1,12 @@
+schema_version: 1
+id: crawler-log-diagnostics
+kind: skill-registry
+skills:
+  - id: seo-crawler-log-diagnostics
+    path: .agents/skills/seo/crawl-indexing/seo-crawler-log-diagnostics/SKILL.md
+    description: "Verify bot identity rather than trusting User Agent text"
+    triggers:
+      - "seo googlebot server log verification status analysis"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

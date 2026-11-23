@@ -1,0 +1,28 @@
+schema_version: 1
+id: research
+kind: skill-registry
+skills:
+  - id: evidence-research
+    path: .agents/skills/research/evidence-research/evidence-research/SKILL.md
+    description: "Use to research or fact-check a question by comparing current primary sources, supporting claims and labeling uncertainty."
+    triggers:
+      - "research this"
+      - "verify"
+      - "fact check"
+      - "evidence"
+      - "official documentation"
+    excludes:
+      - "write technical documentation"
+    status: active
+  - id: technical-writing-docs
+    path: .agents/skills/research/technical-writing/technical-writing-docs/SKILL.md
+    description: "Use to author accurate RFC, ADR, runbook and technical documentation grounded in verified code and version-specific sources."
+    triggers:
+      - "write documentation"
+      - "technical writing"
+      - "adr"
+      - "rfc"
+      - "runbook"
+    excludes:
+      - "pure marketing copy"
+    status: active

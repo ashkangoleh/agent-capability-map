@@ -1,0 +1,13 @@
+schema_version: 1
+id: release-readiness
+kind: skill-registry
+skills:
+  - id: swe-release-operations-release-readiness
+    path: .agents/skills/software-engineering/release-operations/release-readiness/swe-release-operations-release-readiness/SKILL.md
+    description: "Use for software release readiness checklist tasks in Software Delivery and Runtime Operations; verify gate releases on behavior, compatibility, security, operations and rollback. and reject unsupported release or safety claims."
+    triggers:
+      - "software release readiness checklist"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

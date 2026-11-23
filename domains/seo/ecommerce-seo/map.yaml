@@ -1,0 +1,10 @@
+schema_version: 1
+id: ecommerce-seo
+kind: map
+children:
+  - id: product-variant-canonical
+    description: "Decide single-page vs multipage variant URL semantics"
+    triggers:
+      - "seo ecommerce product variant canonical productgroup"
+    status: active
+    skills: domains/seo/ecommerce-seo/product-variant-canonical/skills.yaml

@@ -1,0 +1,21 @@
+schema_version: 1
+id: data-governance
+kind: map
+children:
+  - id: lineage
+    description: "Lineage events and impact traces"
+    triggers:
+      - "data lineage"
+      - "openlineage"
+      - "lineage instrumentation"
+    status: active
+    skills: domains/data/governance/lineage/skills.yaml
+  - id: data-catalog
+    description: "Data catalog metadata"
+    triggers:
+      - "datahub metadata catalog"
+      - "datahub"
+      - "data catalog"
+      - "metadata"
+    status: active
+    skills: domains/data/governance/catalog/skills.yaml

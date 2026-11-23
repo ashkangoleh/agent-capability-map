@@ -1,0 +1,26 @@
+schema_version: 1
+id: content-strategy
+kind: map
+children:
+  - id: editorial-brief
+    description: "Original canonical editorial brief specialist"
+    triggers:
+      - "prepare a content strategy editorial brief for a product launch"
+      - "editorial brief"
+      - "content strategy"
+      - "editorial strategy"
+      - "content calendar"
+    status: active
+    skills: domains/content/content-strategy/editorial-brief/skills.yaml
+  - id: editorial-calendar-governance
+    description: "Define calendar cadence owners freeze dates dependencies and maintenance windows"
+    triggers:
+      - "content publishing editorial calendar portfolio prioritization"
+    status: active
+    skills: domains/content/content-strategy/editorial-calendar-governance/skills.yaml
+  - id: audience-research-brief
+    description: "Define who will read and the questions the article must resolve"
+    triggers:
+      - "content publishing audience evidence research brief"
+    status: active
+    skills: domains/content/content-strategy/audience-research-brief/skills.yaml

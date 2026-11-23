@@ -1,0 +1,233 @@
+schema_version: 1
+id: data-science
+kind: map
+children:
+  - id: model-validation
+    description: "model validation"
+    triggers:
+      - "imbalance"
+      - "imbalanced classification"
+      - "conformal prediction intervals"
+      - "distribution free prediction sets"
+      - "fairness subgroup evaluation"
+      - "equalized odds demographic parity"
+      - "scikit-learn leakage safe validation"
+      - "scikit-learn cross validation"
+      - "sklearn grouped cross validation"
+      - "sklearn time series split"
+      - "group cross validation leakage"
+      - "time series cross validation leakage"
+      - "نشت داده در اعتبارسنجی مدل"
+      - "sklearn pipeline"
+      - "sklearn cross validation"
+      - "split conformal regression"
+      - "conformal marginal coverage"
+      - "conformal subgroup coverage"
+      - "conformal residual quantile"
+      - "بازه پیش‌بینی کانفورمال"
+    status: active
+    skills: domains/data/data-science/model-validation/skills.yaml
+  - id: statistics
+    description: "statistics"
+    triggers:
+      - "statistical inference"
+      - "hypothesis testing"
+      - "statistical analysis"
+      - "confidence interval"
+    status: active
+    skills: domains/data/data-science/statistics/skills.yaml
+  - id: causal-inference
+    description: "causal inference"
+    triggers:
+      - "causal inference"
+      - "observational causal"
+      - "causal impact"
+      - "double machine learning causal estimation"
+      - "doubleml orthogonal scores"
+      - "panel econometrics fixed effects"
+      - "staggered difference in differences"
+    status: active
+    skills: domains/data/data-science/causal/skills.yaml
+  - id: forecasting
+    description: "forecasting"
+    triggers:
+      - "time series forecast"
+      - "forecast backtesting"
+      - "demand forecasting"
+      - "rolling origin forecast backtesting"
+      - "forecast origin data availability"
+      - "rolling forecasting origin"
+      - "rolling origin forecast"
+    status: active
+    skills: domains/data/data-science/forecast/skills.yaml
+  - id: feature-engineering
+    description: "feature engineering"
+    triggers:
+      - "point in time features"
+      - "feature engineering"
+      - "feature leakage"
+    status: active
+    skills: domains/data/data-science/feature/skills.yaml
+  - id: exploration
+    description: "exploration"
+    triggers:
+      - "pandas eda"
+      - "pandas"
+      - "exploratory data"
+      - "data profiling"
+    status: active
+    skills: domains/data/data-science/exploration/skills.yaml
+  - id: geospatial
+    description: "geospatial"
+    triggers:
+      - "geospatial analysis"
+      - "geopandas"
+      - "coordinate reference system"
+    status: active
+    skills: domains/data/data-science/geospatial/skills.yaml
+  - id: anomaly-detection
+    description: "anomaly detection"
+    triggers:
+      - "anomaly detection"
+      - "anomaly detection baseline"
+    status: active
+    skills: domains/data/data-science/anomaly/skills.yaml
+  - id: foundations
+    description: "Scientific programming, problem framing and reproducible analysis"
+    triggers:
+      - "data science problem framing"
+      - "scientific python numerical computing"
+      - "r statistical computing workflow"
+      - "jupyter notebook reproducibility"
+    status: active
+    skills: domains/data/data-science/foundations/skills.yaml
+  - id: statistics-advanced
+    description: "Inference, Bayesian methods, power and missing data"
+    triggers:
+      - "statistical power sample size"
+      - "bayesian modeling pymc stan"
+      - "missing data mechanism imputation"
+      - "robust nonparametric inference"
+      - "permutation test bootstrap confidence interval"
+      - "multiple hypothesis testing fdr"
+      - "false discovery rate correction"
+      - "complex survey sampling weights"
+      - "fdr benjamini hochberg multiple testing"
+      - "holm familywise error correction"
+      - "benjamini yekutieli dependency"
+      - "اصلاح چند آزمونی fdr"
+      - "survey lonely psu variance"
+      - "survey complex sampling variance"
+      - "survey strata cluster design"
+      - "طرح نمونه گیری خوشه ای survey"
+      - "rubin multiple imputation pooling"
+      - "mnar missingness sensitivity"
+      - "missing data mcar mar mnar"
+      - "تجمیع multiple imputation برآوردها"
+      - "cluster bootstrap resampling"
+      - "paired permutation test exchangeability"
+      - "robust bootstrap bca interval"
+      - "rank normalized rhat ess bayesian"
+      - "pymc prior posterior predictive check"
+      - "bayesian mcmc divergence diagnostic"
+    status: active
+    skills: domains/data/data-science/statistics-advanced/skills.yaml
+  - id: experimentation
+    description: "Experiments and causal design"
+    triggers:
+      - "ab test guardrail analysis"
+      - "causal experiment design"
+      - "causal inference sensitivity analysis"
+      - "sequential experimentation"
+      - "always valid inference"
+      - "group sequential ab testing"
+      - "ab test assignment integrity"
+      - "sample ratio mismatch ab experiment"
+      - "cluster randomized experiment guardrail"
+      - "fixed horizon ab test analysis"
+      - "group sequential alpha spending"
+      - "continuous monitoring sequential experiment"
+      - "sequential experiment early stopping"
+      - "causal identification assumptions"
+      - "causal experiment design interference"
+    status: active
+    skills: domains/data/data-science/experimentation/skills.yaml
+  - id: modeling
+    description: "Classical ML, model selection and explainability"
+    triggers:
+      - "xgboost lightgbm catboost modeling"
+      - "model calibration threshold analysis"
+      - "model explainability shap"
+      - "clustering segmentation evaluation"
+      - "optuna hyperparameter optimization"
+      - "probability calibration reliability diagram"
+      - "calibrated classifier cv"
+      - "classifier calibration brier score"
+      - "کالیبراسیون احتمال طبقه بندی"
+    status: active
+    skills: domains/data/data-science/modeling/skills.yaml
+  - id: survival
+    description: "Time-to-event analysis"
+    triggers:
+      - "survival analysis censoring"
+    status: active
+    skills: domains/data/data-science/survival/skills.yaml
+  - id: forecasting-advanced
+    description: "Hierarchical forecasting"
+    triggers:
+      - "hierarchical time series reconciliation"
+      - "probabilistic forecasting quantile"
+      - "forecast prediction intervals calibration"
+      - "intermittent demand forecasting"
+      - "croston sba tsb"
+      - "probabilistic forecasting quantile crossing"
+      - "forecast pinball loss by horizon"
+      - "forecast quantile coverage by horizon"
+      - "hierarchical forecasting reconciliation"
+      - "hierarchical forecast coherence"
+      - "hierarchical summing matrix"
+      - "hierarchical forecasting"
+      - "intermittent demand croston tsb"
+      - "sparse demand forecast stockout"
+      - "intermittent demand obsolescence"
+    status: active
+    skills: domains/data/data-science/forecasting/skills.yaml
+  - id: recommendation
+    description: "Recommendation and ranking science"
+    triggers:
+      - "recommender offline ranking evaluation"
+    status: active
+    skills: domains/data/data-science/recommendation/skills.yaml
+  - id: graph-science
+    description: "Graph and network science"
+    triggers:
+      - "graph network science analysis"
+    status: active
+    skills: domains/data/data-science/graph-science/skills.yaml
+  - id: geospatial-advanced
+    description: "Spatial statistics"
+    triggers:
+      - "geospatial statistical modeling"
+    status: active
+    skills: domains/data/data-science/geospatial-advanced/skills.yaml
+  - id: simulation
+    description: "Monte Carlo and uncertainty"
+    triggers:
+      - "monte carlo simulation uncertainty"
+    status: active
+    skills: domains/data/data-science/simulation/skills.yaml
+  - id: optimization
+    description: "Operations research"
+    triggers:
+      - "operations research optimization"
+    status: active
+    skills: domains/data/data-science/optimization/skills.yaml
+  - id: text-analytics
+    description: "Text mining and classical NLP"
+    triggers:
+      - "classical text mining nlp"
+      - "multilingual nlp evaluation"
+      - "language stratified text classification"
+      - "code switched text analytics"
+    status: active
+    skills: domains/data/data-science/text-analytics/skills.yaml

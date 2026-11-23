@@ -1,0 +1,14 @@
+schema_version: 1
+id: lineage
+kind: skill-registry
+skills:
+  - id: openlineage-metadata-instrumentation
+    path: .agents/skills/data/governance/lineage/openlineage-metadata-instrumentation/SKILL.md
+    description: "Instrument OpenLineage job, dataset and run identifiers with accurate facets, event retries and reconciliation."
+    triggers:
+      - "openlineage"
+      - "data lineage"
+      - "openlineage facets"
+      - "lineage instrumentation"
+    excludes: []
+    status: active

@@ -1,0 +1,69 @@
+schema_version: 1
+id: pyspark
+kind: skill-registry
+skills:
+  - id: pyspark-project-bootstrap
+    path: .agents/skills/data/data-engineering/distributed-processing/spark/pyspark/pyspark-project-bootstrap/SKILL.md
+    description: "Create a new PySpark application structure with a pinned runtime, dependency choices, testing, deployment and recovery contracts."
+    triggers:
+      - "pyspark project"
+      - "پروژه pyspark"
+      - "ساخت پروژه pyspark"
+      - "پروژه اسپارک با پایتون"
+      - "new pyspark project"
+      - "create pyspark"
+      - "bootstrap pyspark"
+      - "spark python project"
+      - "start pyspark"
+      - "pyspark application"
+    excludes:
+      - "optimize"
+      - "debug slow"
+    status: active
+  - id: pyspark-transformations
+    path: .agents/skills/data/data-engineering/distributed-processing/spark/pyspark/pyspark-transformations/SKILL.md
+    description: "Implement correct PySpark DataFrame joins, aggregations and transformations with schema, null and data quality checks."
+    triggers:
+      - "pyspark dataframe"
+      - "کد pyspark"
+      - "جوین pyspark"
+      - "pyspark join"
+      - "pyspark transformation"
+      - "write pyspark code"
+      - "join two dataframes"
+      - "pyspark aggregation"
+      - "pyspark code"
+    excludes:
+      - "performance tuning"
+      - "skew diagnosis"
+    status: active
+  - id: spark-performance-diagnostics
+    path: .agents/skills/data/data-engineering/distributed-processing/spark/runtime/spark-performance-diagnostics/SKILL.md
+    description: "Diagnose Spark SQL and PySpark performance with execution plans, skew, shuffle, spill and measurable before/after evidence."
+    triggers:
+      - "pyspark shuffle"
+      - "بهینه سازی pyspark"
+      - "بهینه‌سازی pyspark"
+      - "پرفورمنس pyspark"
+      - "pyspark slow"
+      - "pyspark skew"
+      - "spark performance"
+      - "spark tuning"
+      - "optimize pyspark"
+      - "spark spill"
+      - "aqe"
+    excludes:
+      - "create new project"
+    status: active
+  - id: spark-structured-streaming
+    path: .agents/skills/data/data-engineering/distributed-processing/spark/pyspark/spark-structured-streaming/SKILL.md
+    description: "Design PySpark Structured Streaming with event-time watermarks, state, checkpoints, trigger semantics and replay tests."
+    triggers:
+      - "pyspark structured streaming"
+      - "pyspark watermark"
+      - "pyspark streaming checkpoint"
+      - "pyspark streaming job"
+      - "pyspark event time"
+    excludes:
+      - "batch pyspark project"
+    status: active

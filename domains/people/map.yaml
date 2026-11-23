@@ -1,0 +1,31 @@
+schema_version: 1
+id: people
+kind: map
+children:
+  - id: recruiting
+    description: "recruiting"
+    triggers:
+      - "structured interview"
+      - "recruiting"
+    status: active
+    skills: domains/people/skills.yaml
+  - id: people-operations
+    description: "people operations"
+    triggers:
+      - "people operations"
+    status: mapped
+  - id: performance
+    description: "performance"
+    triggers:
+      - "performance"
+    status: mapped
+  - id: learning-development
+    description: "learning development"
+    triggers:
+      - "learning development"
+    status: mapped
+  - id: organizational-design
+    description: "organizational design"
+    triggers:
+      - "organizational design"
+    status: mapped

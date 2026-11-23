@@ -1,0 +1,12 @@
+schema_version: 1
+id: policy-rule-approval-trace
+kind: skill-registry
+skills:
+  - id: business-policy-rule-approval-trace
+    path: .agents/skills/business/decision-analytics/business-policy-rule-approval-trace/SKILL.md
+    description: "Catalog approval thresholds, conflict resolution, delegate authority and policy effective time. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations management decision approval policy traceability"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

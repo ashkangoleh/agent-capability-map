@@ -1,0 +1,12 @@
+schema_version: 1
+id: release-gates
+kind: skill-registry
+skills:
+  - id: aiml-mlops-release-gates
+    path: .agents/skills/ai-ml/mlops/release-gates/aiml-mlops-release-gates/SKILL.md
+    description: "Engineer mlops production model release safety gate using canary cohorts, feature schema and serving SLOs, verifying failures and quality baselines."
+    triggers:
+      - "ml model shadow canary promotion rollback thresholds"
+      - "mlops production model release safety gate"
+    excludes: []
+    status: active

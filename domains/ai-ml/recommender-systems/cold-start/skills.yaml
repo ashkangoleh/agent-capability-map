@@ -1,0 +1,12 @@
+schema_version: 1
+id: cold-start
+kind: skill-registry
+skills:
+  - id: aiml-recommender-systems-cold-start
+    path: .agents/skills/ai-ml/recommender-systems/cold-start/aiml-recommender-systems-cold-start/SKILL.md
+    description: "Engineer recommender cold start exploration policy using new user/item cohorts and metadata, verifying failures and quality baselines."
+    triggers:
+      - "cold start recommender catalog coverage fallback"
+      - "recommender cold start exploration policy"
+    excludes: []
+    status: active

@@ -1,0 +1,13 @@
+schema_version: 1
+id: profiling
+kind: skill-registry
+skills:
+  - id: swe-performance-engineering-profiling
+    path: .agents/skills/software-engineering/performance-engineering/profiling/swe-performance-engineering-profiling/SKILL.md
+    description: "Use for application cpu profiling flamegraph tasks in Application Performance and Capacity; verify locate CPU hotspots by sampling and causal workload comparison. and reject unsupported release or safety claims."
+    triggers:
+      - "application cpu profiling flamegraph"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

@@ -1,0 +1,6 @@
+{
+  "domain":"marketing",
+  "skills":[
+    {"id":"marketing-strategy-campaign","path":".agents/skills/marketing-strategy-campaign/SKILL.md","description":"Use when developing marketing strategy, positioning, go-to-market plans, campaign briefs, channel mixes, lifecycle programs, or measurement plans.","triggers":["marketing strategy","campaign plan","go-to-market","positioning","brand messaging","growth campaign","paid media plan"],"avoid_triggers":["technical SEO audit","product PRD","copyediting without a marketing objective"],"outputs":["strategy brief","audience and positioning hypotheses","channel plan","budget assumptions","measurement framework"],"risk_level":"medium","status":"active"}
+  ]
+}

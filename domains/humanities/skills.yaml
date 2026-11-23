@@ -1,0 +1,13 @@
+schema_version: 1
+id: humanities
+kind: skill-registry
+skills:
+  - id: humanities-primary-source-critique
+    path: .agents/skills/humanities/core/humanities-primary-source-critique/SKILL.md
+    description: "Use for source-backed humanities historical research with archive provenance and competing interpretations."
+    triggers:
+      - "historical research"
+      - "humanities historical sources"
+      - "primary source history"
+    excludes: []
+    status: active

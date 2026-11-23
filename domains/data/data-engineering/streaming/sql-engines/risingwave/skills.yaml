@@ -1,0 +1,11 @@
+schema_version: 1
+id: risingwave
+kind: skill-registry
+skills:
+  - id: risingwave-streaming-sql-engineering
+    path: .agents/skills/data/data-engineering/streaming/sql-engines/risingwave/risingwave-streaming-sql-engineering/SKILL.md
+    description: "Operate RisingWave streaming SQL with sources, sinks, materialized views, checkpoints, state, backpressure and recovery."
+    triggers:
+      - "risingwave"
+    excludes: []
+    status: active

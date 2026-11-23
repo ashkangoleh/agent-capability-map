@@ -1,0 +1,13 @@
+schema_version: 1
+id: image-alt-text-decisions
+kind: skill-registry
+skills:
+  - id: content-image-alt-text-decisions
+    path: .agents/skills/content/accessibility/content-image-alt-text-decisions/SKILL.md
+    description: "Classify each image as informative functional decorative or complex chart; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing image alt text decorative chart accessibility"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

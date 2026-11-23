@@ -1,0 +1,12 @@
+schema_version: 1
+id: javascript-rendering
+kind: skill-registry
+skills:
+  - id: seo-javascript-rendering
+    path: .agents/skills/seo/technical-seo/seo-javascript-rendering/SKILL.md
+    description: "Compare initial HTML and crawler-rendered page for main content links and canonical tags"
+    triggers:
+      - "seo javascript rendered html visibility inspection"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

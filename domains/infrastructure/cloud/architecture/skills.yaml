@@ -1,0 +1,11 @@
+schema_version: 1
+id: architecture
+kind: skill-registry
+skills:
+  - id: cloud-architecture-reference-design
+    path: .agents/skills/infrastructure/cloud/architecture/cloud-architecture-reference-design/SKILL.md
+    description: "Review hybrid and multi-cloud infrastructure against availability, security, networking, operations and cost requirements."
+    triggers:
+      - "hybrid cloud reference architecture"
+    excludes: []
+    status: active

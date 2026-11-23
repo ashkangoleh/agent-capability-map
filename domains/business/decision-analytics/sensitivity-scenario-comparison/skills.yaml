@@ -1,0 +1,12 @@
+schema_version: 1
+id: sensitivity-scenario-comparison
+kind: skill-registry
+skills:
+  - id: business-sensitivity-scenario-comparison
+    path: .agents/skills/business/decision-analytics/business-sensitivity-scenario-comparison/SKILL.md
+    description: "Identify measurable decision criteria, base case, realistic downside and status quo. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations decision sensitivity scenario tornado assumptions"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

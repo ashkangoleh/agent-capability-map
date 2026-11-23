@@ -1,0 +1,13 @@
+schema_version: 1
+id: cultural-inclusion-review
+kind: skill-registry
+skills:
+  - id: content-cultural-inclusion-review
+    path: .agents/skills/content/localization/content-cultural-inclusion-review/SKILL.md
+    description: "Check audience-specific terminology representation and regional context; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing cultural inclusion language sensitivity review"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

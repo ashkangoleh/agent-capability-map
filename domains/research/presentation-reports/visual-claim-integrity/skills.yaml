@@ -1,0 +1,12 @@
+schema_version: 1
+id: visual-claim-integrity
+kind: skill-registry
+skills:
+  - id: research-visual-claim-integrity
+    path: .agents/skills/research/presentation-reports/research-visual-claim-integrity/SKILL.md
+    description: "Validate metric definitions cohort denominators transformations and chosen time periods Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research chart claim integrity denominator axes uncertainty audit"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

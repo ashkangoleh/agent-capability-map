@@ -1,0 +1,13 @@
+schema_version: 1
+id: exploration
+kind: skill-registry
+skills:
+  - id: pandas-eda-data-profiling
+    path: .agents/skills/data/data-science/exploration/pandas-eda-data-profiling/SKILL.md
+    description: "Perform pandas EDA with data profiling, key cardinality, missingness and sampling checks."
+    triggers:
+      - "pandas eda"
+      - "pandas"
+      - "exploratory data"
+    excludes: []
+    status: active

@@ -1,0 +1,18 @@
+schema_version: 1
+id: routing-delivery
+kind: skill-registry
+skills:
+  - id: network-routing-bgp
+    path: .agents/skills/infrastructure/networking/network-advanced/routing-delivery/network-routing-bgp/SKILL.md
+    description: "Diagnose and design routing with BGP, route policy, convergence, redundancy and failure containment."
+    triggers:
+      - "network routing bgp"
+    excludes: []
+    status: active
+  - id: network-load-balancing-proxy
+    path: .agents/skills/infrastructure/networking/network-advanced/routing-delivery/network-load-balancing-proxy/SKILL.md
+    description: "Operate L4/L7 load balancers and reverse proxies with health checks, TLS, routing and connection limits."
+    triggers:
+      - "network load balancing proxy"
+    excludes: []
+    status: active

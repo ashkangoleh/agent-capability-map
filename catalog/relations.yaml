@@ -1,0 +1,144 @@
+schema_version: 1
+edges:
+  - from: [data, data-engineering, distributed-processing, spark, pyspark]
+    to: [infrastructure, containers-orchestration, kubernetes]
+    relation: runs_on
+    rationale: PySpark applications may run on a Kubernetes Spark cluster.
+  - from: [data, data-engineering, distributed-processing, spark]
+    to: [data, data-engineering, orchestration, airflow]
+    relation: orchestrated_by
+    rationale: An Airflow DAG may schedule a Spark workload.
+  - from: [data, data-engineering, distributed-processing, spark, pyspark]
+    to: [data, data-engineering, messaging, kafka]
+    relation: uses
+    rationale: Spark Structured Streaming can consume Kafka sources with explicit delivery semantics.
+  - from: [data, data-engineering, distributed-processing, spark, pyspark]
+    to: [data, data-engineering, distributed-processing, spark, spark-sql]
+    relation: related_to
+    rationale: PySpark DataFrames and Spark SQL share the structured processing engine.
+  - from: [product, discovery-requirements]
+    to: [marketing, campaign-strategy]
+    relation: supports
+    rationale: Product positioning and launch requirements inform go-to-market planning.
+  - from: [seo, technical-seo]
+    to: [software-engineering, frontend]
+    relation: depends_on
+    rationale: Some crawl and rendering fixes require frontend implementation.
+  - from: [ai-ml, rag-retrieval]
+    to: [data, data-engineering, data-observability]
+    relation: uses
+    rationale: Retrieval evaluation and source quality depend on reliable data contracts.
+  - from: [security, application-security]
+    to: [software-engineering, backend]
+    relation: supports
+    rationale: Secure API implementations require application security controls.
+  - from: [data, data-engineering, warehouse, trino]
+    to: [data, data-engineering, lakehouse, iceberg]
+    relation: uses
+    rationale: Trino Iceberg connector can query Iceberg tables when compatible catalog and connector versions are configured.
+  - from: [data, data-engineering, distributed-processing, flink]
+    to: [data, data-engineering, messaging, kafka]
+    relation: uses
+    rationale: Flink streaming jobs may consume Kafka topics with connector-specific delivery semantics.
+  - from: [data, data-engineering, warehouse, duckdb]
+    to: [data, data-engineering, batch-ingestion, parquet-layout]
+    relation: uses
+    rationale: DuckDB can query and transform Parquet files while publication safety remains sink-specific.
+  - from: [data, analytics-engineering, dbt]
+    to: [data, data-engineering, orchestration, airflow]
+    relation: orchestrated_by
+    rationale: Airflow can schedule dbt model executions and historical reruns with explicit windows.
+  - from: [data, database-engineering, starrocks]
+    to: [data, data-engineering, batch-ingestion, cdc]
+    relation: related_to
+    rationale: A CDC data source may publish changes to StarRocks Primary Key tables using validated connector contracts.
+  - from: [data, data-governance, lineage]
+    to: [data, data-engineering, orchestration, airflow]
+    relation: related_to
+    rationale: OpenLineage emits run and dataset metadata for supported Airflow integrations.
+  - from: [data, data-engineering, lakehouse, iceberg]
+    to: [data, data-engineering, distributed-processing, spark]
+    relation: related_to
+    rationale: Spark is one of several compute engines that read and write Iceberg tables.
+  - from: [data, data-quality]
+    to: [data, data-engineering, data-observability, freshness-slo]
+    relation: supports
+    rationale: Data quality checks complement operational freshness and delivery SLOs.
+  - from: [data, data-science, feature-engineering]
+    to: [ai-ml, mlops, feature-store]
+    relation: related_to
+    rationale: ML offline and online features must preserve point-in-time definitions and availability contracts.
+  - from: [ai-ml, mlops, serving]
+    to: [infrastructure, containers-orchestration, kubernetes]
+    relation: runs_on
+    rationale: ML serving may deploy on Kubernetes with separately verified identity and resource limits.
+  - from: [ai-ml, llm-engineering, serving]
+    to: [infrastructure, containers-orchestration, kubernetes]
+    relation: runs_on
+    rationale: LLM inference may use Kubernetes but requires versioned GPU scheduling and serving tests.
+  - from: [data, business-intelligence, superset]
+    to: [data, data-engineering, warehouse, trino]
+    relation: uses
+    rationale: Superset can query Trino through a supported SQLAlchemy dialect and controlled access.
+  - from: [data, data-analysis, sql-analysis]
+    to: [data, analytics-engineering, semantic-layer]
+    relation: related_to
+    rationale: Metric definitions should be reconciled between analysis SQL and governed semantic metrics.
+  - from: [data, data-engineering, lakehouse, catalogs, polaris]
+    to: [data, data-engineering, lakehouse, iceberg]
+    relation: supports
+    rationale: Polaris provides Iceberg REST metadata services with compatible engine and credential settings.
+  - from: [infrastructure, observability-engineering, metrics-alerting]
+    to: [data, data-engineering, data-observability, freshness-slo]
+    relation: related_to
+    rationale: Prometheus SLO alerts can monitor pipeline freshness and incident signals if instrumented.
+  - from: [data, data-governance, data-catalog]
+    to: [data, data-engineering, lakehouse, catalogs]
+    relation: related_to
+    rationale: Catalog discovery and Iceberg REST metadata lifecycle serve different responsibilities.
+  - from: [ai-ml, mlops, tracking]
+    to: [data, data-science, model-validation]
+    relation: supports
+    rationale: MLflow run lineage can capture leakage-safe validation artifacts and model comparisons.
+  - from: [ai-ml, machine-learning, validation]
+    to: [data, data-science, model-validation]
+    relation: related_to
+    rationale: Scikit-learn leakage-safe validation is canonically maintained in Data Science and reused by ML engineering through an explicit cross-domain route.
+
+  - from: [infrastructure, database-infrastructure, relational-platforms]
+    to: [data, database-engineering]
+    relation: related_to
+    rationale: Infrastructure database availability and lifecycle operations complement data-domain database engineering without merging task boundaries.
+  - from: [infrastructure, platform-engineering, idp-control-plane]
+    to: [software-engineering, backend]
+    relation: supports
+    rationale: Internal developer platforms provide governed self-service interfaces for software delivery teams.
+
+  - from: [data, data-engineering, ingestion]
+    to: [data, data-engineering, batch-ingestion, cdc]
+    relation: supports
+    rationale: Connector ingestion and source CDC bootstrap share source-state and replay contracts.
+  - from: [data, data-engineering, lakehouse, ducklake]
+    to: [data, data-engineering, warehouse, duckdb]
+    relation: uses
+    rationale: DuckLake is accessed through compatible DuckDB clients; catalog and extension versions must align.
+  - from: [data, data-engineering, lakehouse, streaming-storage]
+    to: [data, data-engineering, distributed-processing, flink]
+    relation: uses
+    rationale: Flink integrations can write and read supported Fluss streaming tables and tiered data.
+  - from: [data, data-engineering, warehouse, starrocks]
+    to: [data, database-engineering, starrocks]
+    relation: related_to
+    rationale: Analytical warehouse design complements database-level StarRocks CDC and load transaction procedures.
+  - from: [data, data-engineering, streaming, sql-engines, risingwave]
+    to: [data, data-engineering, messaging, kafka]
+    relation: uses
+    rationale: RisingWave can consume Kafka sources when connector and delivery semantics are verified.
+  - from: [data, data-engineering, cloud]
+    to: [data, data-engineering, distributed-processing, spark]
+    relation: related_to
+    rationale: Databricks Lakeflow extends Spark Declarative Pipelines and must be distinguished from upstream runtime capabilities.
+  - from: [data, data-engineering, governance]
+    to: [data, data-governance, data-catalog]
+    relation: related_to
+    rationale: OpenMetadata operational ingestion complements enterprise catalog ownership, glossary and lineage governance.

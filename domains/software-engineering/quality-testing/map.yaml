@@ -1,0 +1,31 @@
+schema_version: 1
+id: quality-testing
+kind: map
+children:
+  - id: unit-testing
+    description: "Test observable unit contracts and edge behavior with deterministic isolation."
+    triggers:
+      - "unit test boundary cases"
+      - "unit testing"
+    status: active
+    skills: domains/software-engineering/quality-testing/unit-testing/skills.yaml
+  - id: contract-integration
+    description: "Verify service interfaces across realistic dependency versions."
+    triggers:
+      - "consumer driven contract testing"
+    status: active
+    skills: domains/software-engineering/quality-testing/contract-integration/skills.yaml
+  - id: property-testing
+    description: "Derive generative invariants and shrinking strategies from domain rules."
+    triggers:
+      - "property based fuzz testing"
+    status: active
+    skills: domains/software-engineering/quality-testing/property-testing/skills.yaml
+  - id: code-review
+    description: "Review implementation diffs for correctness, security and maintainability."
+    triggers:
+      - "code review safe refactor"
+      - "code review"
+      - "refactor"
+    status: active
+    skills: domains/software-engineering/quality-testing/code-review/skills.yaml

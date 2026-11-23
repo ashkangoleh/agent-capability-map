@@ -1,0 +1,13 @@
+schema_version: 1
+id: rust
+kind: skill-registry
+skills:
+  - id: swe-programming-languages-rust
+    path: .agents/skills/software-engineering/programming-languages/rust/swe-programming-languages-rust/SKILL.md
+    description: "Use for rust ownership async error handling tasks in Programming Language Engineering; verify use ownership, Send/Sync boundaries and typed errors to prevent lifecycle faults. and reject unsupported release or safety claims."
+    triggers:
+      - "rust ownership async error handling"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

@@ -1,0 +1,35 @@
+schema_version: 1
+id: platform-engineering
+kind: map
+children:
+  - id: idp-control-plane
+    description: "Backstage, Crossplane and platform autoscaling"
+    triggers:
+      - "backstage internal developer platform"
+      - "crossplane infrastructure control plane"
+      - "karpenter keda autoscaling"
+    status: active
+    skills: domains/infrastructure/platform/skills.yaml
+  - id: golden-path
+    description: "Developer self-service and golden paths"
+    triggers:
+      - "golden path"
+      - "internal developer platform"
+      - "platform self service"
+    status: active
+    skills: domains/infrastructure/platform/golden-path/skills.yaml
+  - id: secrets
+    description: "Vault secrets, leases and rotation"
+    triggers:
+      - "vault secrets"
+      - "vault dynamic secret"
+      - "vault rotation"
+    status: active
+    skills: domains/infrastructure/platform/secrets/skills.yaml
+  - id: operations
+    description: "Platform operational readiness and ownership"
+    triggers:
+      - "platform operations readiness review"
+      - "infrastructure platform operational safety review"
+    status: active
+    skills: domains/infrastructure/platform/operations/skills.yaml

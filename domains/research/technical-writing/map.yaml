@@ -1,0 +1,32 @@
+schema_version: 1
+id: technical-writing
+kind: map
+children:
+  - id: general-technical-docs
+    description: "Preserved original research or technical writing capability"
+    triggers:
+      - "write documentation"
+      - "technical writing"
+      - "adr"
+      - "rfc"
+      - "runbook"
+    status: active
+    skills: domains/research/technical-writing/general-technical-docs/skills.yaml
+  - id: api-reference-documentation
+    description: "Compare documented API paths methods fields errors and auth with live source schema or tests"
+    triggers:
+      - "research technical api reference openapi code contract docs"
+    status: active
+    skills: domains/research/technical-writing/api-reference-documentation/skills.yaml
+  - id: operational-runbook-recovery
+    description: "Define trigger ownership severity prerequisites access and affected service boundary"
+    triggers:
+      - "research technical operational runbook incident recovery procedure"
+    status: active
+    skills: domains/research/technical-writing/operational-runbook-recovery/skills.yaml
+  - id: documentation-version-qa
+    description: "Identify supported releases and maintain canonical documentation ownership"
+    triggers:
+      - "research technical docs version consistency link example checks"
+    status: active
+    skills: domains/research/technical-writing/documentation-version-qa/skills.yaml

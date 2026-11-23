@@ -1,0 +1,11 @@
+schema_version: 1
+id: failure-injection
+kind: skill-registry
+skills:
+  - id: chaos-engineering-failure-injection
+    path: .agents/skills/infrastructure/sre-reliability/failure-injection/chaos-engineering-failure-injection/SKILL.md
+    description: "Run controlled failure-injection experiments with blast-radius limits, hypotheses and recovery verification."
+    triggers:
+      - "chaos engineering failure injection"
+    excludes: []
+    status: active

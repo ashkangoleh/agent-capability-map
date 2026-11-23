@@ -1,0 +1,6 @@
+{
+  "domain":"data",
+  "skills":[
+    {"id":"data-engineering-implementation","path":".agents/skills/data-engineering-implementation/SKILL.md","description":"Use when designing, implementing, debugging, or reviewing data pipelines, batch or streaming jobs, SQL transformations, data models, warehouses, lakehouses, and data quality workflows.","triggers":["PySpark","Spark SQL","dbt model","Trino query","Kafka pipeline","StarRocks","Iceberg","data pipeline","incremental ingestion","backfill"],"avoid_triggers":["general application API implementation","marketing analytics strategy without data implementation","LLM retrieval as the main task"],"outputs":["pipeline design or code","data contracts","validation plan","replay and recovery strategy"],"risk_level":"high","status":"active"}
+  ]
+}

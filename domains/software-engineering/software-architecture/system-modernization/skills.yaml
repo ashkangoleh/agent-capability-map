@@ -1,0 +1,13 @@
+schema_version: 1
+id: system-modernization
+kind: skill-registry
+skills:
+  - id: swe-software-architecture-system-modernization
+    path: .agents/skills/software-engineering/software-architecture/system-modernization/swe-software-architecture-system-modernization/SKILL.md
+    description: "Use for strangler modernization legacy migration tasks in Software Architecture and Systems Design; verify migrate incrementally using parity checks and reversible traffic shifting. and reject unsupported release or safety claims."
+    triggers:
+      - "strangler modernization legacy migration"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

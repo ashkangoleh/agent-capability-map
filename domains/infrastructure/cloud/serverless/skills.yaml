@@ -1,0 +1,13 @@
+schema_version: 1
+id: serverless
+kind: skill-registry
+skills:
+  - id: cloud-serverless-managed-runtime
+    path: .agents/skills/infrastructure/cloud/serverless/cloud-serverless-managed-runtime/SKILL.md
+    description: "Engineer serverless and managed runtimes with event delivery, concurrency, identity, networking and retry controls."
+    triggers:
+      - "serverless managed runtime lambda cloud run functions"
+      - "aws lambda cloud run runtime"
+      - "aws lambda"
+    excludes: []
+    status: active

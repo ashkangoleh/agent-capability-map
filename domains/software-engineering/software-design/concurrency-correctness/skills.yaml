@@ -1,0 +1,13 @@
+schema_version: 1
+id: concurrency-correctness
+kind: skill-registry
+skills:
+  - id: swe-software-design-concurrency-correctness
+    path: .agents/skills/software-engineering/software-design/concurrency-correctness/swe-software-design-concurrency-correctness/SKILL.md
+    description: "Use for application concurrency race deadlock tasks in Software Design and Interface Contracts; verify specify lock ordering, atomicity and cancellation across shared state. and reject unsupported release or safety claims."
+    triggers:
+      - "application concurrency race deadlock"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

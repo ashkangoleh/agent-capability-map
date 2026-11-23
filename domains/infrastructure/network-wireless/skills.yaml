@@ -1,0 +1,12 @@
+schema_version: 1
+id: network-wireless
+kind: skill-registry
+skills:
+  - id: wireless-lan-network-engineering
+    path: .agents/skills/infrastructure/network-wireless/wireless-lan-network-engineering/SKILL.md
+    description: "Engineer enterprise WLAN with RF planning, 802.1X, RADIUS/NAC, roaming and client experience controls."
+    triggers:
+      - "wireless lan network engineering"
+      - "enterprise wifi wlan"
+    excludes: []
+    status: active

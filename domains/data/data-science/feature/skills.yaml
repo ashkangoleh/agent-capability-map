@@ -1,0 +1,13 @@
+schema_version: 1
+id: feature
+kind: skill-registry
+skills:
+  - id: feature-engineering-point-in-time
+    path: .agents/skills/data/data-science/feature/feature-engineering-point-in-time/SKILL.md
+    description: "Engineer ML point-in-time feature availability, time-aware joins and parity tests."
+    triggers:
+      - "point in time features"
+      - "feature engineering"
+      - "feature leakage"
+    excludes: []
+    status: active

@@ -1,0 +1,13 @@
+schema_version: 1
+id: nonfunctional-requirements
+kind: skill-registry
+skills:
+  - id: swe-requirements-engineering-nonfunctional-requirements
+    path: .agents/skills/software-engineering/requirements-engineering/nonfunctional-requirements/swe-requirements-engineering-nonfunctional-requirements/SKILL.md
+    description: "Use for software nonfunctional slo requirements tasks in Software Requirements and Specification; verify express latency, reliability, scalability, privacy and cost as measurable envelopes. and reject unsupported release or safety claims."
+    triggers:
+      - "software nonfunctional slo requirements"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

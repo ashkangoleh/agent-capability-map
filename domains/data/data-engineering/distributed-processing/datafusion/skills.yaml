@@ -1,0 +1,11 @@
+schema_version: 1
+id: datafusion
+kind: skill-registry
+skills:
+  - id: datafusion-arrow-query-engine
+    path: .agents/skills/data/data-engineering/distributed-processing/datafusion/datafusion-arrow-query-engine/SKILL.md
+    description: "Build Arrow-native query and DataFrame execution with Apache DataFusion; use Ballista only when distributed execution is explicitly required."
+    triggers:
+      - "datafusion"
+    excludes: []
+    status: active

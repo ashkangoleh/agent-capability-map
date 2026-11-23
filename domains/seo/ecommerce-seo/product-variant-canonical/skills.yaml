@@ -1,0 +1,12 @@
+schema_version: 1
+id: product-variant-canonical
+kind: skill-registry
+skills:
+  - id: seo-product-variant-canonical
+    path: .agents/skills/seo/ecommerce-seo/seo-product-variant-canonical/SKILL.md
+    description: "Decide single-page vs multipage variant URL semantics"
+    triggers:
+      - "seo ecommerce product variant canonical productgroup"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

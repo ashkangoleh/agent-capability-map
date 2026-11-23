@@ -1,0 +1,69 @@
+schema_version: 1
+id: machine-learning
+kind: map
+children:
+  - id: validation
+    description: "validation"
+    triggers:
+      - "sklearn"
+      - "scikit-learn"
+      - "machine learning validation"
+    status: mapped
+  - id: features
+    description: "features"
+    triggers:
+      - "feast"
+      - "feature store"
+    status: active
+    skills: domains/ai-ml/machine-learning/features/skills.yaml
+  - id: serving
+    description: "serving"
+    triggers:
+      - "ml model serving"
+      - "model canary"
+      - "ml deployment"
+    status: active
+    skills: domains/ai-ml/machine-learning/serving/skills.yaml
+  - id: monitoring
+    description: "monitoring"
+    triggers:
+      - "model drift"
+      - "model monitoring"
+    status: active
+    skills: domains/ai-ml/machine-learning/monitoring/skills.yaml
+  - id: annotations
+    description: "annotations"
+    triggers:
+      - "dataset annotation"
+      - "ml label governance"
+      - "training labels"
+    status: active
+    skills: domains/ai-ml/machine-learning/annotations/skills.yaml
+  - id: training-pipelines
+    description: "ml training pipeline artifact lineage: data snapshots, training code and seed policy"
+    triggers:
+      - "ml train pipeline reproducible artifacts"
+      - "ml training pipeline artifact lineage"
+    status: active
+    skills: domains/ai-ml/machine-learning/training-pipelines/skills.yaml
+  - id: hyperparameter-tuning
+    description: "ml hyperparameter search leakage prevention: train and validation splits, search budgets"
+    triggers:
+      - "ml hyperparameter tuning nested cross validation"
+      - "ml hyperparameter search leakage prevention"
+    status: active
+    skills: domains/ai-ml/machine-learning/hyperparameter-tuning/skills.yaml
+  - id: explainability
+    description: "ml model explanation stability audit: feature attribution context and correlated variables"
+    triggers:
+      - "ml explanation shap correlated features stability"
+      - "ml model explanation stability audit"
+    status: active
+    skills: domains/ai-ml/machine-learning/explainability/skills.yaml
+  - id: dataset-shift
+    description: "ml dataset distribution shift detection: baseline distribution, cohort keys and label lag"
+    triggers:
+      - "ml input drift by cohort and label lag"
+      - "ml dataset distribution shift detection"
+    status: active
+    skills: domains/ai-ml/machine-learning/dataset-shift/skills.yaml

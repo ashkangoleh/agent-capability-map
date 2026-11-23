@@ -1,0 +1,14 @@
+schema_version: 1
+id: storage
+kind: skill-registry
+skills:
+  - id: kubernetes-storage-pvc-recovery
+    path: .agents/skills/infrastructure/kubernetes/storage/kubernetes-storage-pvc-recovery/SKILL.md
+    description: "Recover Kubernetes PVC, PV and CSI mount problems with topology, data retention and backup safeguards."
+    triggers:
+      - "kubernetes storage"
+      - "pvc pending"
+      - "csi driver"
+      - "kubernetes pvc recovery"
+    excludes: []
+    status: active

@@ -1,0 +1,35 @@
+schema_version: 1
+id: relational-database
+kind: map
+children:
+  - id: postgresql
+    description: "postgresql"
+    triggers:
+      - "postgresql logical replication"
+      - "postgresql cdc"
+      - "postgresql"
+    status: active
+    skills: domains/data/database-engineering/relational/postgresql/skills.yaml
+  - id: mysql
+    description: "mysql"
+    triggers:
+      - "mysql binlog"
+      - "mysql cdc"
+      - "mysql"
+    status: active
+    skills: domains/data/database-engineering/relational/mysql/skills.yaml
+  - id: sql-performance
+    description: "sql performance"
+    triggers:
+      - "sql explain plan"
+      - "query optimization"
+      - "explain analyze"
+    status: active
+    skills: domains/data/database-engineering/relational/sql/skills.yaml
+  - id: generic
+    description: "generic"
+    triggers:
+      - "database design"
+      - "relational database"
+    status: active
+    skills: domains/data/general-skills.yaml

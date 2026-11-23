@@ -1,0 +1,12 @@
+schema_version: 1
+id: revenue-cohort-retention
+kind: skill-registry
+skills:
+  - id: business-revenue-cohort-retention
+    path: .agents/skills/business/commercial-economics/business-revenue-cohort-retention/SKILL.md
+    description: "Define billing versus paid orders, refund adjustments, cohort entry and renewal periods. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations revenue cohorts retention net revenue bridge"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

@@ -1,0 +1,25 @@
+schema_version: 1
+id: lifecycle-crm
+kind: map
+children:
+  - id: consent-suppression
+    description: "Define enforceable eligibility and suppression rules for direct marketing at send time."
+    triggers:
+      - "marketing crm consent suppression unsubscribe preference audit"
+      - "marketing email consent lawful basis"
+    status: active
+    skills: domains/marketing/lifecycle-crm/consent-suppression/skills.yaml
+  - id: journey-holdouts
+    description: "Design lifecycle journeys with frequency caps, identity correctness and incremental retention measurement."
+    triggers:
+      - "marketing lifecycle journey holdout retention experiment"
+      - "marketing crm journey frequency cap"
+    status: active
+    skills: domains/marketing/lifecycle-crm/journey-holdouts/skills.yaml
+  - id: email-deliverability
+    description: "Investigate email delivery failures without weakening authentication or bypassing suppression."
+    triggers:
+      - "marketing email sender reputation spf dkim dmarc unsubscribe"
+      - "marketing bulk email deliverability investigation"
+    status: active
+    skills: domains/marketing/lifecycle-crm/email-deliverability/skills.yaml

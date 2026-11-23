@@ -1,0 +1,15 @@
+schema_version: 1
+id: freshness-slo
+kind: skill-registry
+skills:
+  - id: data-observability-freshness-slo
+    path: .agents/skills/data/data-engineering/observability/slo/data-observability-freshness-slo/SKILL.md
+    description: "Define operational data-product freshness SLOs and high-signal alerts for volume, schema, lag and partial publication."
+    triggers:
+      - "data observability"
+      - "data freshness slo"
+      - "pipeline freshness"
+      - "data pipeline sla"
+      - "freshness monitoring"
+    excludes: []
+    status: active

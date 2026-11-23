@@ -1,0 +1,13 @@
+schema_version: 1
+id: tracking
+kind: skill-registry
+skills:
+  - id: mlflow-experiment-registry-lifecycle
+    path: .agents/skills/ai-ml/mlops/tracking/mlflow-experiment-registry-lifecycle/SKILL.md
+    description: "Operate MLflow runs, model registry alias transitions and model artifact provenance safely."
+    triggers:
+      - "mlflow"
+      - "experiment tracking"
+      - "model registry"
+    excludes: []
+    status: active

@@ -1,0 +1,14 @@
+schema_version: 1
+id: message-validation
+kind: skill-registry
+skills:
+  - id: marketing-brand-message-validation
+    path: .agents/skills/marketing/brand-positioning/marketing-brand-message-validation/SKILL.md
+    description: "Validate positioning and advertising claims before publishing creative."
+    triggers:
+      - "marketing brand positioning claim substantiation message test"
+      - "marketing value proposition message validation"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

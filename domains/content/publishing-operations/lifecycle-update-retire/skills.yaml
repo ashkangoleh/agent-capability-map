@@ -1,0 +1,13 @@
+schema_version: 1
+id: lifecycle-update-retire
+kind: skill-registry
+skills:
+  - id: content-lifecycle-update-retire
+    path: .agents/skills/content/publishing-operations/content-lifecycle-update-retire/SKILL.md
+    description: "Classify content freshness risk and define re-review intervals by subject volatility; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing article lifecycle archive update retire"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

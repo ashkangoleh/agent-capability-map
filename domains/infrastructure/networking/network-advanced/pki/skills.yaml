@@ -1,0 +1,11 @@
+schema_version: 1
+id: pki
+kind: skill-registry
+skills:
+  - id: tls-pki-certificate-lifecycle
+    path: .agents/skills/infrastructure/networking/network-advanced/pki/tls-pki-certificate-lifecycle/SKILL.md
+    description: "Design PKI and TLS certificate issuance, trust chains, renewal, revocation and mTLS identity."
+    triggers:
+      - "tls pki certificate lifecycle"
+    excludes: []
+    status: active

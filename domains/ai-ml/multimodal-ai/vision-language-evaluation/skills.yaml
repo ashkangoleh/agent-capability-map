@@ -1,0 +1,12 @@
+schema_version: 1
+id: vision-language-evaluation
+kind: skill-registry
+skills:
+  - id: aiml-multimodal-ai-vision-language-evaluation
+    path: .agents/skills/ai-ml/multimodal-ai/vision-language-evaluation/aiml-multimodal-ai-vision-language-evaluation/SKILL.md
+    description: "Engineer multimodal vision language grounding evaluation using image references and object-level truth labels, verifying failures and quality baselines."
+    triggers:
+      - "vision language model hallucinated objects grounding"
+      - "multimodal vision language grounding evaluation"
+    excludes: []
+    status: active

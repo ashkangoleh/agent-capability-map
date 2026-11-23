@@ -1,0 +1,29 @@
+schema_version: 1
+id: agent-systems
+kind: skill-registry
+skills:
+  - id: skill-authoring-validation
+    path: .agents/skills/agent-systems/skill-authoring/skill-authoring-validation/SKILL.md
+    description: "Use when creating, evaluating or improving portable Agent Skills and routing registries with positive and negative tests."
+    triggers:
+      - "skill router"
+      - "master skill"
+      - "capability map"
+      - "skill registry"
+      - "agents.md"
+      - "create skill"
+      - "mcp server"
+    excludes:
+      - "ordinary application code"
+    status: active
+  - id: agent-evaluation-suite
+    path: .agents/skills/agent-systems/agent-evaluation/agent-evaluation-suite/SKILL.md
+    description: "Build grounded, safety-aware agent evaluations for skill routing, adversarial tasks, source support and measured token cost."
+    triggers:
+      - "agent evaluation"
+      - "agent benchmark"
+      - "trajectory evaluation"
+      - "skill routing benchmark"
+    excludes:
+      - "product experiment"
+    status: active

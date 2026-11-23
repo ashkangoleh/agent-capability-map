@@ -1,0 +1,12 @@
+schema_version: 1
+id: access-control
+kind: skill-registry
+skills:
+  - id: aiml-rag-access-control
+    path: .agents/skills/ai-ml/rag/access-control/aiml-rag-access-control/SKILL.md
+    description: "Engineer rag document level acl enforcement using group identity, ACL snapshots and revocation, verifying failures and quality baselines."
+    triggers:
+      - "rag enforce tenant permissions before retrieval"
+      - "rag document level acl enforcement"
+    excludes: []
+    status: active

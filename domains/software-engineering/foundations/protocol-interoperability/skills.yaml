@@ -1,0 +1,13 @@
+schema_version: 1
+id: protocol-interoperability
+kind: skill-registry
+skills:
+  - id: swe-foundations-protocol-interoperability
+    path: .agents/skills/software-engineering/foundations/protocol-interoperability/swe-foundations-protocol-interoperability/SKILL.md
+    description: "Use for binary protocol serialization compatibility tasks in Computing and Engineering Foundations; verify ensure wire-format evolution preserves consumer expectations. and reject unsupported release or safety claims."
+    triggers:
+      - "binary protocol serialization compatibility"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

@@ -1,0 +1,12 @@
+schema_version: 1
+id: search-intent-page-mapping
+kind: skill-registry
+skills:
+  - id: seo-search-intent-page-mapping
+    path: .agents/skills/seo/content-seo/seo-search-intent-page-mapping/SKILL.md
+    description: "Map observed queries to comparable intents by market"
+    triggers:
+      - "seo search intent keyword to page mapping"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

@@ -1,0 +1,14 @@
+schema_version: 1
+id: general
+kind: skill-registry
+skills:
+  - id: ai-rag-engineering
+    path: .agents/skills/ai-ml/llm/general/ai-rag-engineering/SKILL.md
+    description: "Design LLM or RAG applications using grounded sources, ACL-aware retrieval and explicit evaluation."
+    triggers:
+      - "llm"
+      - "litellm"
+      - "prompt engineering"
+      - "model serving"
+    excludes: []
+    status: active

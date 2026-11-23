@@ -1,0 +1,12 @@
+schema_version: 1
+id: training-pipelines
+kind: skill-registry
+skills:
+  - id: aiml-machine-learning-training-pipelines
+    path: .agents/skills/ai-ml/machine-learning/training-pipelines/aiml-machine-learning-training-pipelines/SKILL.md
+    description: "Engineer ml training pipeline artifact lineage using data snapshots, training code and seed policy, verifying failures and quality baselines."
+    triggers:
+      - "ml train pipeline reproducible artifacts"
+      - "ml training pipeline artifact lineage"
+    excludes: []
+    status: active

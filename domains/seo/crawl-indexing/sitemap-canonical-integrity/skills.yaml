@@ -1,0 +1,12 @@
+schema_version: 1
+id: sitemap-canonical-integrity
+kind: skill-registry
+skills:
+  - id: seo-sitemap-canonical-integrity
+    path: .agents/skills/seo/crawl-indexing/seo-sitemap-canonical-integrity/SKILL.md
+    description: "Audit sitemap indexes URL bounds and canonical responses"
+    triggers:
+      - "seo xml sitemap lastmod canonical validation"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

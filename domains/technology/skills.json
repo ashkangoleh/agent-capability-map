@@ -1,0 +1,7 @@
+{
+  "domain":"technology",
+  "skills":[
+    {"id":"software-engineering-implementation","path":".agents/skills/software-engineering-implementation/SKILL.md","description":"Use when implementing, debugging, refactoring, or reviewing application code, APIs, libraries, or software architecture in an existing or new codebase.","triggers":["implement a feature","debug an error","refactor code","review a pull request","design an API","write production code"],"avoid_triggers":["data pipeline design as the primary task","SEO content writing","marketing campaign planning"],"outputs":["code changes","technical design","tests","risk and rollout notes"],"risk_level":"medium","status":"active"},
+    {"id":"platform-operations","path":".agents/skills/platform-operations/SKILL.md","description":"Use when operating or designing Kubernetes, Docker, Helm, cloud infrastructure, CI/CD, networking, observability, reliability, or production incident workflows.","triggers":["Kubernetes deployment","Helm chart","CI/CD pipeline","production incident","infrastructure configuration","SRE"],"avoid_triggers":["application feature implementation without infrastructure scope","business strategy"],"outputs":["operational plan","configuration","verification","rollback and recovery plan"],"risk_level":"high","status":"active"}
+  ]
+}

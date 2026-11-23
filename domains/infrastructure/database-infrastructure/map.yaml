@@ -1,0 +1,20 @@
+schema_version: 1
+id: database-infrastructure
+kind: map
+children:
+  - id: relational-platforms
+    description: "PostgreSQL and MySQL infrastructure operations"
+    triggers:
+      - "postgresql infrastructure operations"
+      - "mysql infrastructure operations"
+    status: active
+    skills: domains/infrastructure/database/skills.yaml
+  - id: ha-nosql
+    description: "Database HA, recovery, MongoDB, Redis and Cassandra"
+    triggers:
+      - "database ha replication failover pitr"
+      - "database ha replication"
+      - "mongodb redis cassandra replication persistence failover"
+      - "mongodb redis cassandra"
+    status: active
+    skills: domains/infrastructure/database/new-specialists.yaml

@@ -1,0 +1,14 @@
+schema_version: 1
+id: affiliate-integrity
+kind: skill-registry
+skills:
+  - id: marketing-affiliate-payout-integrity
+    path: .agents/skills/marketing/influencer-partnerships/marketing-affiliate-payout-integrity/SKILL.md
+    description: "Design affiliate commission attribution and reconciliation with fraud and refund controls."
+    triggers:
+      - "marketing affiliate payout attribution fraud reconciliation"
+      - "marketing partner referral commission dedup"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

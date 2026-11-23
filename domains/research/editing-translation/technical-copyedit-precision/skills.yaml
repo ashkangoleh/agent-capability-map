@@ -1,0 +1,12 @@
+schema_version: 1
+id: technical-copyedit-precision
+kind: skill-registry
+skills:
+  - id: research-technical-copyedit-precision
+    path: .agents/skills/research/editing-translation/research-technical-copyedit-precision/SKILL.md
+    description: "Identify terms and phrases with exact implementation or standards-defined meaning Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research technical copyedit correctness terminology change control"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

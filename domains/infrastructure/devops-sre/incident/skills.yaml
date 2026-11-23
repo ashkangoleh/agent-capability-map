@@ -1,0 +1,14 @@
+schema_version: 1
+id: incident
+kind: skill-registry
+skills:
+  - id: sre-incident-rca-runbook
+    path: .agents/skills/infrastructure/devops-sre/incident/sre-incident-rca-runbook/SKILL.md
+    description: "Conduct evidence-led SRE incident diagnosis, safe mitigation and blameless postmortem with explicit timelines."
+    triggers:
+      - "sre incident"
+      - "incident postmortem"
+      - "incident rca"
+      - "production outage postmortem"
+    excludes: []
+    status: active

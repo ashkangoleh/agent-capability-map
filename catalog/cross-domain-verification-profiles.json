@@ -1,0 +1,575 @@
+{
+  "schema_version": 1,
+  "scope": "all_existing_non_de_skills",
+  "frozen_at_utc": "2026-11-06",
+  "method": "L1 specialist evidence contracts; not model/real-system certification",
+  "profiles": {
+    "aerospace": {
+      "focus": "requirements traceability and safety-critical interface control",
+      "challenge": "Withdraw or alter a requirement and identify all affected subsystem and verification links",
+      "oracle": "Every high-risk requirement has a unique owner, bidirectional trace, approval basis and independent V&V evidence",
+      "stop": "No flight-certification, readiness or safety claim without qualified signoff",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "agent-systems": {
+      "focus": "deterministic routing, tool permission boundaries and task evaluation",
+      "challenge": "Inject untrusted tool text, deny a permission and perturb a task phrasing",
+      "oracle": "Skill selection, tool refusal, grounded answer, cost and recovery are measured separately against held-out tasks",
+      "stop": "No tool execution delegated from an untrusted skill, document or external source",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "agriculture": {
+      "focus": "agronomic decision provenance and local suitability",
+      "challenge": "Change soil, weather, growth stage or regulatory region in a proposed recommendation",
+      "oracle": "Recommendation is supported by relevant field measurements and locally applicable official agronomic guidance",
+      "stop": "No pesticide, dosage, crop-safety or yield guarantee without current local authorization",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "ai-ml": {
+      "focus": "model evidence, data leakage, evaluation cohorts and inference controls",
+      "challenge": "Shift task distribution or degrade an input while retaining the prior evaluation baseline",
+      "oracle": "Held-out task accuracy, calibration, unsafe behavior, subgroup gaps, latency and spend are reported separately",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "business": {
+      "focus": "business decision evidence and economic unit consistency",
+      "challenge": "Alter revenue, cost or customer cohort assumptions and recompute the decision",
+      "oracle": "Unit economics, downside risk and provenance survive sensitivity analysis",
+      "stop": "No guaranteed ROI, market result or invented business benchmark",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "construction": {
+      "focus": "engineering design assurance and project dependency risk",
+      "challenge": "Modify a critical design constraint or construction sequence",
+      "oracle": "Reconciled quantities, safety assumptions, affected work packages and qualified approvals are traceable",
+      "stop": "No structural safety signoff or site instruction without licensed review",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "content": {
+      "focus": "editorial accuracy, rights and audience intent",
+      "challenge": "Introduce an unsupported claim or unattributed source in draft content",
+      "oracle": "Claims are fact-checked, rights documented and content meets the target audience purpose",
+      "stop": "No fabricated citations, editorial approvals or originality guarantees",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "customer-experience": {
+      "focus": "customer journey evidence and resolution quality",
+      "challenge": "Inject a repeat-contact complaint and a failed handoff",
+      "oracle": "Resolution quality and effort are observed at customer level with consent and escalation path",
+      "stop": "No claim of improved CSAT or retention from vanity metrics alone",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "data": {
+      "focus": "data correctness, lineage, reproducibility and consumer contracts",
+      "challenge": "Introduce temporal leakage, duplicate records or changed metric grain",
+      "oracle": "Independent reconciliation, versioned logic and explicit uncertainty preserve analytic correctness",
+      "stop": "No accuracy or causal claim based on a dashboard or pipeline-success status alone",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "design": {
+      "focus": "accessible user experience and evidence-driven iteration",
+      "challenge": "Change viewport, assistive technology or design constraint",
+      "oracle": "Accessibility, usability and design intent meet measured evaluation criteria",
+      "stop": "No accessibility conformance claim without actual audit",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "ecommerce": {
+      "focus": "catalog, payment and checkout correctness",
+      "challenge": "Fail an order or inventory transition after partial external side effects",
+      "oracle": "State transitions reconcile, payments/refunds are idempotent and customer impact measured",
+      "stop": "No unsafe payment mutation or unverified conversion lift",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "education": {
+      "focus": "learning objective and assessment validity",
+      "challenge": "Use a misleading or inaccessible assessment item",
+      "oracle": "Learner outcomes and accessibility verified by independent assessment evidence",
+      "stop": "No certification, learning benefit or learner diagnosis without validated evidence",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "energy": {
+      "focus": "engineering reliability, grid or energy asset operational risk",
+      "challenge": "Alter demand, generation availability or a safety limit",
+      "oracle": "Conservation/accounting, operating envelope and fault handling are checked against applicable technical requirements",
+      "stop": "No live grid control or safety-critical operational advice without authorized engineer",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "environment": {
+      "focus": "environmental impact baselines and measurement uncertainty",
+      "challenge": "Shift geographic/time baseline or omit a significant impact factor",
+      "oracle": "Units, boundary, measurement uncertainty and underlying datasets remain defensible",
+      "stop": "No environmental compliance or emissions reduction guarantee without verified scope",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "finance": {
+      "focus": "auditable financial statements, scenarios and risk",
+      "challenge": "Change a cashflow assumption or period currency and reconcile totals",
+      "oracle": "Opening/closing balances, constraints and scenarios reconcile with uncertainty",
+      "stop": "No individualized financial guarantee or fabricated audited figures",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "gaming": {
+      "focus": "gameplay systems balance and reproducible testing",
+      "challenge": "Change frame-rate, client latency, save-state or economy input",
+      "oracle": "Deterministic game-state and player experience metrics tested in representative builds",
+      "stop": "No quality/performance claim without build and playtest evidence",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "health": {
+      "focus": "clinical evidence, patient safety and data protection",
+      "challenge": "Change guideline version or patient-specific contraindication in a clinical scenario",
+      "oracle": "Evidence provenance, clinically meaningful exclusions and safety escalation are explicit",
+      "stop": "No diagnosis, treatment, or medical-device certification without qualified review",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "humanities": {
+      "focus": "primary source interpretation and historiographic limitations",
+      "challenge": "Provide contradictory editions, translations or chronology",
+      "oracle": "Primary/secondary sources are distinguished and claims trace to their context",
+      "stop": "No invented quotations, archives, dates or consensus",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "infrastructure": {
+      "focus": "operational safety, configuration drift, blast radius and rollback",
+      "challenge": "Lose a node, permission or control plane while applying a scoped change",
+      "oracle": "Actual target identity, SLO, rollback prerequisites and failure isolation are independently checked",
+      "stop": "No destructive, credential or production control-plane changes without authorization",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "legal": {
+      "focus": "jurisdiction, effective date and authoritative legal citations",
+      "challenge": "Change jurisdiction or statute effective date for the same fact pattern",
+      "oracle": "Advice distinguishes primary authority, fact assumptions and qualified legal review",
+      "stop": "No definitive legal counsel or fabricated case citations",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "logistics": {
+      "focus": "shipment, inventory and dispatch state consistency",
+      "challenge": "Introduce delayed delivery, duplicate shipment scan or lost transport handoff",
+      "oracle": "Physical and system-of-record state reconcile within a measured exception budget",
+      "stop": "No real-world dispatch or unsafe routing action without approval",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "manufacturing": {
+      "focus": "process quality, traceability and machine safety",
+      "challenge": "Inject out-of-spec process data or altered bill of materials",
+      "oracle": "Lot genealogy, defect containment and safety limits are verifiable",
+      "stop": "No equipment actuation or process safety approval without qualified engineer",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "marketing": {
+      "focus": "campaign experimentation, causal attribution and consent",
+      "challenge": "Shift audience targeting, attribution window or spend cap",
+      "oracle": "Conversion metrics are deduplicated, holdouts and unit economics evaluated with consent",
+      "stop": "No guaranteed reach, ROAS or sensitive audience inference",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "media": {
+      "focus": "media rights, source authenticity and production fidelity",
+      "challenge": "Replace a referenced clip or alter timecode and track licensing",
+      "oracle": "Asset provenance, editorial rights and render quality are verified by sample review",
+      "stop": "No fabricated provenance, consent or rights claims",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "nonprofit": {
+      "focus": "impact measurement and accountable program spend",
+      "challenge": "Change beneficiary denominator or reporting window",
+      "oracle": "Funding, outputs and outcomes independently reconciled with ethical impact claims",
+      "stop": "No inflated donation impact or unsupported efficacy claims",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "people": {
+      "focus": "employment process fairness and personal data protections",
+      "challenge": "Change eligibility policy or expose sensitive applicant details",
+      "oracle": "Evaluation rationale, lawful processing and appeals are auditable and proportionate",
+      "stop": "No employment law compliance or discriminatory recommendation without review",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "personal": {
+      "focus": "personal planning tradeoffs and consent",
+      "challenge": "Change deadlines, constraints or privacy preferences",
+      "oracle": "Plan remains feasible, user-controlled and proportionate to verified inputs",
+      "stop": "No irreversible personal-account action without authorization",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "product": {
+      "focus": "product discovery, release tradeoffs and measurable outcomes",
+      "challenge": "Introduce a conflicting stakeholder request or change activation metric definition",
+      "oracle": "Research-backed prioritization and falsifiable release metric survive the change",
+      "stop": "No guaranteed adoption or unverified business uplift",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "public-sector": {
+      "focus": "public policy provenance, accessibility and procedural safeguards",
+      "challenge": "Change governing rule, jurisdiction or impacted population",
+      "oracle": "Decision has current legal basis, traceable evidence and equitable impact assessment",
+      "stop": "No binding public decision, eligibility approval or policy compliance claim",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "real-estate": {
+      "focus": "property evidence, local market comparables and disclosure",
+      "challenge": "Change property condition, zoning or comparable timeframe",
+      "oracle": "Price assumptions and compliance uncertainties are explicit and traceable",
+      "stop": "No property valuation or regulatory guarantee from unsupported listing data",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "research": {
+      "focus": "reproducible research design and literature integrity",
+      "challenge": "Alter sampling assumptions or introduce contradictory primary evidence",
+      "oracle": "Methods, uncertainty, independent replication and provenance are disclosed",
+      "stop": "No fabricated citations, research result or significance claim",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "robotics": {
+      "focus": "physical robot safety, feedback loops and control validation",
+      "challenge": "Inject sensor delay, localization loss or actuator fault in simulation",
+      "oracle": "Bounded safety envelope and stop control validated before any hardware test",
+      "stop": "No physical robot actuation without explicit approval and safety case",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "sales": {
+      "focus": "sales pipeline integrity and compliant engagement",
+      "challenge": "Change opportunity stage, forecast probability or consent status",
+      "oracle": "Forecast calibration and contact permission evidence match CRM records",
+      "stop": "No guaranteed quota or unauthorized customer outreach",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "science": {
+      "focus": "reproducibility, units, experimental integrity and uncertainty",
+      "challenge": "Perturb instrument calibration or control-group assumptions",
+      "oracle": "Experiments preserve units, controls, uncertainty and independent replication",
+      "stop": "No claim of published scientific finding without measured evidence",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "security": {
+      "focus": "threat modeling, authorization and defensive validation",
+      "challenge": "Inject privilege escalation, invalid identity or hostile untrusted input",
+      "oracle": "Attack paths, prevention, detection and residual-risk owner are explicitly validated",
+      "stop": "No offensive access, bypass or false security certification",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "seo": {
+      "focus": "search indexing evidence and search-engine policy compliance",
+      "challenge": "Change canonical, robots, rendering or locale with a controlled URL set",
+      "oracle": "Crawlability, indexability, structured data and measurable impressions are distinguished",
+      "stop": "No ranking, indexation or rich-result guarantee",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "social-sciences": {
+      "focus": "sampling, ethics and social inference limits",
+      "challenge": "Shift population frame, nonresponse or confounding assumptions",
+      "oracle": "Design validity, measurement uncertainty, ethics and statistical limitations are evidenced",
+      "stop": "No deterministic causal or social-group overclaim",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "software-engineering": {
+      "focus": "code correctness, API contracts, backwards compatibility and release safety",
+      "challenge": "Inject timeout, concurrency, dependency or schema break in a representative test",
+      "oracle": "Functional, security and operational regressions are tested in pinned build with rollback plan",
+      "stop": "No claims of build, deployment or performance success without execution evidence",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "sports": {
+      "focus": "performance measurement and fair interpretation",
+      "challenge": "Change sport rules, sample cohort or instrument calibration",
+      "oracle": "Performance claims match official event rules and valid denominators",
+      "stop": "No guaranteed athletic outcome or medical performance recommendation",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "telecommunications": {
+      "focus": "network/service reliability and standards conformance",
+      "challenge": "Simulate link loss, latency spike or changed subscriber authorization",
+      "oracle": "Service availability, interoperability and privacy metrics meet explicit test criteria",
+      "stop": "No carrier network changes without permission and incident rollback",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "travel": {
+      "focus": "travel constraints, live operational conditions and accessibility",
+      "challenge": "Cancel one connection or change local visa/transport requirement",
+      "oracle": "Itinerary feasibility and source freshness clearly stated with alternatives",
+      "stop": "No guaranteed fare, availability, entry permission or safe travel condition",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations"
+    },
+    "ai-ml/llm": {
+      "focus": "prompt/context safety and constrained generation",
+      "challenge": "Run long-context truncation and adversarial prompt injection probes",
+      "oracle": "Report schema-validity, groundedness, refusal quality and cost under pinned model versions",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "ai-ml/rag": {
+      "focus": "retrieval relevance and document ACL provenance",
+      "challenge": "Remove a user's access between index time and query; inject irrelevant retrieved content",
+      "oracle": "Measure denied-document exposure, recall@k, answer grounding and citation fidelity",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "ai-ml/mlops": {
+      "focus": "model promotion, lineage and delayed-label monitoring",
+      "challenge": "Introduce stale feature schema, incomplete labels and partial challenger rollout",
+      "oracle": "Promotion requires champion comparison, rollback ownership and evaluated cohort quality",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "ai-ml/machine-learning": {
+      "focus": "training-serving consistency and held-out model validation",
+      "challenge": "Perturb temporal split, imbalanced classes and feature null rate",
+      "oracle": "Report calibration, leak-free holdout and per-slice error with uncertainty",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "ai-ml/deep-learning": {
+      "focus": "stateful training checkpoints, numerical stability and distributed restart",
+      "challenge": "Inject GPU OOM, rank failure and mixed-precision NaNs",
+      "oracle": "Recover optimizer/sharded state with measured convergence and reproducibility bounds",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "ai-ml/recommender-systems": {
+      "focus": "exposure bias, counterfactual policy evaluation and catalog freshness",
+      "challenge": "Remove eligible items and perturb position propensities",
+      "oracle": "Validate recall@k, propensity support and online/offline ranking guardrails",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "ai-ml/reinforcement-learning": {
+      "focus": "policy evaluation support and constrained exploration",
+      "challenge": "Inject reward hacking and out-of-support action history",
+      "oracle": "Refuse unidentifiable off-policy claims and enforce action safety budgets",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "ai-ml/speech-audio-ai": {
+      "focus": "speech/voice evaluation consent and privacy",
+      "challenge": "Inject overlapping speakers, noise and sensitive audio segments",
+      "oracle": "Report DER/WER or intelligibility per cohort and consent guardrails",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "ai-ml/computer-vision": {
+      "focus": "image-label integrity and visual domain shift",
+      "challenge": "Swap image device, occlusion and rare-class sample",
+      "oracle": "Report per-class errors, IoU and annotation provenance",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "ai-ml/natural-language-processing": {
+      "focus": "text offset, language and bias evaluation",
+      "challenge": "Change script, dialect or entity offsets while fixing holdout text",
+      "oracle": "Report per-language exact-span metrics and data/privacy lineage",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "ai-ml/responsible-ai": {
+      "focus": "fairness, transparency and postdeployment harm",
+      "challenge": "Change subgroup representation or withdrawal of consent",
+      "oracle": "Document uncertainty, contested outcomes and human appeal ownership",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "ai-ml/multimodal-ai": {
+      "focus": "cross-modal grounding and synchronized timestamps",
+      "challenge": "Inject text instructions inside images and offset audio/video clocks",
+      "oracle": "Validate grounded references, modality preservation and injection refusal",
+      "stop": "No model-quality or security claim based on a route fixture or demonstration",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "data/data-science": {
+      "focus": "statistical assumptions, leakage and generalization",
+      "challenge": "Shift sampling frame, intervention timing or held-out cohort",
+      "oracle": "Evaluate uncertainty intervals, leakage diagnostics and falsifiable baselines",
+      "stop": "No accuracy or causal claim based on a dashboard or pipeline-success status alone",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "data/data-analysis": {
+      "focus": "metric grain, denominators and attribution",
+      "challenge": "Change filters, cohorts or reporting timezone",
+      "oracle": "Reconcile independent metric computations and missing-data treatment",
+      "stop": "No accuracy or causal claim based on a dashboard or pipeline-success status alone",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "data/analytics-engineering": {
+      "focus": "metric contracts and incremental warehouse semantics",
+      "challenge": "Rebuild after dimension key change, partial refresh or late facts",
+      "oracle": "Source-to-model uniqueness, historical grain and test-controlled business totals align",
+      "stop": "No accuracy or causal claim based on a dashboard or pipeline-success status alone",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "data/database-engineering": {
+      "focus": "database transaction, locks and schema compatibility",
+      "challenge": "Fail a transaction after partial client timeout and replay a CDC change",
+      "oracle": "Commit outcome, isolation and data invariants reconcile without blind retry",
+      "stop": "No accuracy or causal claim based on a dashboard or pipeline-success status alone",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "data/governance": {
+      "focus": "lineage, classification, revocation and steward ownership",
+      "challenge": "Revoke sensitive dataset access and mutate lineage metadata",
+      "oracle": "Policy propagation and provenance are independently auditable",
+      "stop": "No accuracy or causal claim based on a dashboard or pipeline-success status alone",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "data/business-intelligence": {
+      "focus": "dashboard metric correctness and accessible analytics",
+      "challenge": "Change refresh cadence or metric denominator",
+      "oracle": "Displayed aggregates reconcile to governed source definitions",
+      "stop": "No accuracy or causal claim based on a dashboard or pipeline-success status alone",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "data/quality": {
+      "focus": "data quality contracts and quarantine",
+      "challenge": "Inject null-key, duplicate and schema mismatch",
+      "oracle": "Fail-closed publication with clean reconciliation and actionable alert owner",
+      "stop": "No accuracy or causal claim based on a dashboard or pipeline-success status alone",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "infrastructure/kubernetes": {
+      "focus": "declarative drift, workload safety and rollout recovery",
+      "challenge": "Inject unavailable node, admission denial and stale rollout",
+      "oracle": "Workload health and availability remain within verified SLO; rollback tested",
+      "stop": "No destructive, credential or production control-plane changes without authorization",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "infrastructure/networking": {
+      "focus": "packet routing, DNS and L4/L7 diagnostics",
+      "challenge": "Drop a path or change certificate and inspect traces",
+      "oracle": "Layer-specific failure root cause and blast radius evidenced",
+      "stop": "No destructive, credential or production control-plane changes without authorization",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "infrastructure/storage": {
+      "focus": "durable storage and filesystem integrity",
+      "challenge": "Crash between write acknowledgment and replication",
+      "oracle": "RPO/RTO, checksums, restored snapshots and fencing verified",
+      "stop": "No destructive, credential or production control-plane changes without authorization",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "infrastructure/cloud": {
+      "focus": "cloud IAM, region resilience and quota constraints",
+      "challenge": "Remove a role or overload one region",
+      "oracle": "No overbroad privilege, budget overrun or hidden cross-region dependence",
+      "stop": "No destructive, credential or production control-plane changes without authorization",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "infrastructure/observability": {
+      "focus": "telemetry correctness, cardinality and SLO alerts",
+      "challenge": "Generate false positive and silent failure in instrumentation",
+      "oracle": "Burn rates and actionable alerts agree with user-impact SLOs",
+      "stop": "No destructive, credential or production control-plane changes without authorization",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "infrastructure/sre-reliability": {
+      "focus": "service error budgets, capacity and incident response",
+      "challenge": "Inject node failure, overload and restore from checkpoint",
+      "oracle": "Error budget, recovery and customer impact measured with on-call escalation",
+      "stop": "No destructive, credential or production control-plane changes without authorization",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "infrastructure/infrastructure-security": {
+      "focus": "identity, secrets, supply-chain and container safeguards",
+      "challenge": "Inject compromised dependency, stale token and policy bypass",
+      "oracle": "Prevent unauthorized actions, preserve audit trail and verify remediation",
+      "stop": "No destructive, credential or production control-plane changes without authorization",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "infrastructure/platform": {
+      "focus": "self-service platform isolation and developer experience",
+      "challenge": "Remove a golden-path dependency or quota",
+      "oracle": "Tenant isolation, adoption, support cost and rollback evidenced",
+      "stop": "No destructive, credential or production control-plane changes without authorization",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "software-engineering/backend": {
+      "focus": "RPC retries, consistency and API authorization",
+      "challenge": "Drop downstream response after commit; retry duplicate request",
+      "oracle": "API and persistent side effects idempotent with bounded retries",
+      "stop": "No claims of build, deployment or performance success without execution evidence",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "software-engineering/frontend": {
+      "focus": "browser accessibility, rendering and runtime budgets",
+      "challenge": "Disable JavaScript or inject slow network and keyboard-only navigation",
+      "oracle": "Cross-browser UX, accessibility and error-state correctness verified",
+      "stop": "No claims of build, deployment or performance success without execution evidence",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "software-engineering/mobile-development": {
+      "focus": "mobile platform lifecycle, permissions and offline state",
+      "challenge": "Revoke device permission, app update or network offline",
+      "oracle": "Upgrade-safe local data and store deployment rollback validated",
+      "stop": "No claims of build, deployment or performance success without execution evidence",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "software-engineering/software-security": {
+      "focus": "application threat and supply-chain controls",
+      "challenge": "Inject untrusted input and vulnerable dependency in test",
+      "oracle": "Authorization, integrity and negative security cases pass with trace",
+      "stop": "No claims of build, deployment or performance success without execution evidence",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "software-engineering/performance-engineering": {
+      "focus": "latency profiling, resource and workload fidelity",
+      "challenge": "Add concurrency, memory pressure or cold caches",
+      "oracle": "Regression in p95/p99 latency/correctness and measured cost reported",
+      "stop": "No claims of build, deployment or performance success without execution evidence",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "software-engineering/quality-testing": {
+      "focus": "property, contract and release testing",
+      "challenge": "Introduce backward-incompatible API shape or nondeterministic fixture",
+      "oracle": "Tests detect interface break and avoid flaky or self-fulfilling assertions",
+      "stop": "No claims of build, deployment or performance success without execution evidence",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "software-engineering/software-architecture": {
+      "focus": "module boundaries, contracts and evolutionary coupling",
+      "challenge": "Change one consumer dependency and trace architectural impact",
+      "oracle": "Change cost, interface stability and failure containment measured",
+      "stop": "No claims of build, deployment or performance success without execution evidence",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    },
+    "software-engineering/release-operations": {
+      "focus": "canary, feature flags and rollback",
+      "challenge": "Fail rollout at partial traffic and delayed metric availability",
+      "oracle": "No uncontrolled blast radius, safe abort and post-release evidence",
+      "stop": "No claims of build, deployment or performance success without execution evidence",
+      "reference_policy": "pin exact authoritative source versions and use specialist citations",
+      "domain_override": true
+    }
+  }
+}

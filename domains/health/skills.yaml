@@ -1,0 +1,13 @@
+schema_version: 1
+id: health
+kind: skill-registry
+skills:
+  - id: public-health-evidence-review
+    path: .agents/skills/health/core/public-health-evidence-review/SKILL.md
+    description: "Review public health evidence by study design and population relevance without individual medical diagnosis."
+    triggers:
+      - "public health"
+      - "public health research evidence"
+      - "public health evidence review"
+    excludes: []
+    status: active

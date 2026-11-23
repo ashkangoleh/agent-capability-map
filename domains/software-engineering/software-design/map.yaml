@@ -1,0 +1,22 @@
+schema_version: 1
+id: software-design
+kind: map
+children:
+  - id: module-api-design
+    description: "Design stable module contracts and boundary ownership."
+    triggers:
+      - "module interface cohesion design"
+    status: active
+    skills: domains/software-engineering/software-design/module-api-design/skills.yaml
+  - id: concurrency-correctness
+    description: "Specify lock ordering, atomicity and cancellation across shared state."
+    triggers:
+      - "application concurrency race deadlock"
+    status: active
+    skills: domains/software-engineering/software-design/concurrency-correctness/skills.yaml
+  - id: patterns-tradeoffs
+    description: "Select patterns only when they simplify verified recurring complexity."
+    triggers:
+      - "software design pattern selection"
+    status: active
+    skills: domains/software-engineering/software-design/patterns-tradeoffs/skills.yaml

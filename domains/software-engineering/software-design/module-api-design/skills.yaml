@@ -1,0 +1,13 @@
+schema_version: 1
+id: module-api-design
+kind: skill-registry
+skills:
+  - id: swe-software-design-module-api-design
+    path: .agents/skills/software-engineering/software-design/module-api-design/swe-software-design-module-api-design/SKILL.md
+    description: "Use for module interface cohesion design tasks in Software Design and Interface Contracts; verify design stable module contracts and boundary ownership. and reject unsupported release or safety claims."
+    triggers:
+      - "module interface cohesion design"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

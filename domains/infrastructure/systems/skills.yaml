@@ -1,0 +1,26 @@
+schema_version: 1
+id: systems
+kind: skill-registry
+skills:
+  - id: linux-kernel-performance
+    path: .agents/skills/infrastructure/systems/linux-kernel-performance/SKILL.md
+    description: "Diagnose Linux CPU, memory, scheduler, I/O and kernel bottlenecks with safe evidence collection."
+    triggers:
+      - "linux kernel performance diagnostics"
+    excludes: []
+    status: active
+  - id: windows-server-operations
+    path: .agents/skills/infrastructure/systems/windows-server-operations/SKILL.md
+    description: "Operate Windows Server services, storage, identity, patching and event diagnostics."
+    triggers:
+      - "windows server operations"
+    excludes: []
+    status: active
+  - id: unix-bsd-systems-operations
+    path: .agents/skills/infrastructure/systems/unix-bsd-systems-operations/SKILL.md
+    description: "Administer FreeBSD, OpenBSD, NetBSD and Unix-like systems with platform-specific boot, service, network, storage and security controls."
+    triggers:
+      - "unix bsd systems operations"
+      - "freebsd openbsd unix"
+    excludes: []
+    status: active

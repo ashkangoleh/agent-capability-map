@@ -1,0 +1,16 @@
+schema_version: 1
+id: general-technical-docs
+kind: skill-registry
+skills:
+  - id: technical-writing-docs
+    path: .agents/skills/research/technical-writing/technical-writing-docs/SKILL.md
+    description: "Use unchanged original specialist source to research evidence or document implementation with accurate citations and scope."
+    triggers:
+      - "write documentation"
+      - "technical writing"
+      - "adr"
+      - "rfc"
+      - "runbook"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

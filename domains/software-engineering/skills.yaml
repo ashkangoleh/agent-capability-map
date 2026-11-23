@@ -1,0 +1,24 @@
+schema_version: 1
+id: software-engineering
+kind: skill-registry
+skills:
+  - id: software-engineering-implementation
+    path: .agents/skills/software-engineering/core/software-engineering-implementation/SKILL.md
+    description: "Use when implementing, debugging, refactoring or reviewing application code and APIs; validate repository constraints, edge cases and tests."
+    triggers:
+      - "fastapi"
+      - "api endpoint"
+      - "django"
+      - "backend"
+      - "frontend"
+      - "react"
+      - "api design"
+      - "code review"
+      - "python code"
+      - "software architecture"
+      - "unit testing"
+      - "refactor"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

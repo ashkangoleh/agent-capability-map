@@ -1,0 +1,12 @@
+schema_version: 1
+id: quantization
+kind: skill-registry
+skills:
+  - id: model-quantization-benchmark
+    path: .agents/skills/ai-ml/llm/quantization/model-quantization-benchmark/SKILL.md
+    description: "Measure inference quantization quality and hardware latency effects before changing production models."
+    triggers:
+      - "model quantization"
+      - "llm quantization"
+    excludes: []
+    status: active

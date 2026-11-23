@@ -1,0 +1,12 @@
+schema_version: 1
+id: offline-online-evaluation
+kind: skill-registry
+skills:
+  - id: aiml-recommender-systems-offline-online-evaluation
+    path: .agents/skills/ai-ml/recommender-systems/offline-online-evaluation/aiml-recommender-systems-offline-online-evaluation/SKILL.md
+    description: "Engineer recommender counterfactual offline online evaluation using propensities, randomized tests and delayed conversions, verifying failures and quality baselines."
+    triggers:
+      - "recommender ips propensity logged bandit policy"
+      - "recommender counterfactual offline online evaluation"
+    excludes: []
+    status: active

@@ -1,0 +1,13 @@
+schema_version: 1
+id: go
+kind: skill-registry
+skills:
+  - id: swe-programming-languages-go
+    path: .agents/skills/software-engineering/programming-languages/go/swe-programming-languages-go/SKILL.md
+    description: "Use for go goroutine cancellation concurrency tasks in Programming Language Engineering; verify use contexts, race detection and bounded goroutine lifecycles. and reject unsupported release or safety claims."
+    triggers:
+      - "go goroutine cancellation concurrency"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

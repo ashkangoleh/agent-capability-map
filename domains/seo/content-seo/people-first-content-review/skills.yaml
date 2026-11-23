@@ -1,0 +1,12 @@
+schema_version: 1
+id: people-first-content-review
+kind: skill-registry
+skills:
+  - id: seo-people-first-content-review
+    path: .agents/skills/seo/content-seo/seo-people-first-content-review/SKILL.md
+    description: "Assess accuracy genuine authorship original work and reader utility"
+    triggers:
+      - "seo people first content spam scaled content audit"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

@@ -1,0 +1,13 @@
+schema_version: 1
+id: browser-automation
+kind: skill-registry
+skills:
+  - id: swe-frontend-browser-automation
+    path: .agents/skills/software-engineering/frontend/browser-automation/swe-frontend-browser-automation/SKILL.md
+    description: "Use for browser end to end testing tasks in Frontend and Browser Engineering; verify test critical journeys with deterministic selectors and controlled test data. and reject unsupported release or safety claims."
+    triggers:
+      - "browser end to end testing"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

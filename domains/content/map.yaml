@@ -1,0 +1,83 @@
+schema_version: 1
+id: content
+kind: map
+children:
+  - id: content-strategy
+    description: "Audience-led editorial planning and measurable publication portfolio"
+    triggers:
+      - "content strategy content"
+      - "prepare a content strategy editorial brief for a product launch"
+      - "content publishing editorial calendar portfolio prioritization"
+      - "content publishing audience evidence research brief"
+      - "editorial brief"
+      - "content strategy"
+      - "content calendar"
+    status: active
+    map: domains/content/content-strategy/map.yaml
+  - id: copywriting
+    description: "Audience-first clear copy and legally substantiated public claims"
+    triggers:
+      - "copywriting content"
+      - "content publishing audience first copywriting clarity"
+      - "content publishing claims substantiation public copy"
+    status: active
+    map: domains/content/copywriting/map.yaml
+  - id: editorial
+    description: "Source verification fact checking corrections and editorial independence"
+    triggers:
+      - "editorial content"
+      - "content publishing editorial fact check source ledger"
+      - "content publishing editorial correction retraction process"
+      - "content publishing source attribution quotation integrity"
+    status: active
+    map: domains/content/editorial/map.yaml
+  - id: social-content
+    description: "Channel-specific social publishing and responsible moderation"
+    triggers:
+      - "social content content"
+      - "content publishing social channel editorial adaptation"
+      - "content publishing social community moderation escalation"
+    status: active
+    map: domains/content/social-content/map.yaml
+  - id: video-audio-content
+    description: "Podcast and video editorial preparation RSS and measurement"
+    triggers:
+      - "video audio content content"
+      - "content publishing podcast rss feed artwork episode validation"
+      - "content publishing video captions transcript accessibility review"
+      - "content publishing podcast measurement IAB downloads dedup"
+    status: active
+    map: domains/content/video-audio-content/map.yaml
+  - id: localization
+    description: "Semantically faithful multilingual content and cultural review"
+    triggers:
+      - "localization content"
+      - "content publishing multilingual translation localization QA"
+      - "content publishing cultural inclusion language sensitivity review"
+    status: active
+    map: domains/content/localization/map.yaml
+  - id: publishing-operations
+    description: "CMS publication change safety retention and newsletters"
+    triggers:
+      - "publishing operations content"
+      - "content publishing cms release schedule rollback editorial"
+      - "content publishing article lifecycle archive update retire"
+      - "content publishing newsletter editorial issue qa"
+    status: active
+    map: domains/content/publishing-operations/map.yaml
+  - id: accessibility
+    description: "Accessible editorial structure readable visuals and alternative text"
+    triggers:
+      - "accessibility content"
+      - "content publishing accessible article headings tables language"
+      - "content publishing image alt text decorative chart accessibility"
+    status: active
+    map: domains/content/accessibility/map.yaml
+  - id: rights-provenance
+    description: "Media usage rights and human or synthetic content provenance"
+    triggers:
+      - "rights provenance content"
+      - "content publishing media license attribution clearance"
+      - "content publishing AI origin provenance human review"
+    status: active
+    map: domains/content/rights-provenance/map.yaml

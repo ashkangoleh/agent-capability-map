@@ -1,0 +1,32 @@
+schema_version: 1
+id: computer-vision
+kind: map
+children:
+  - id: dataset-evaluation
+    description: "Existing computer-vision validated skill"
+    triggers:
+      - "vision model"
+      - "dataset evaluation"
+    status: active
+    skills: domains/ai-ml/computer-vision/skills.yaml
+  - id: detection-segmentation
+    description: "computer vision instance segmentation evaluation: object and mask labels, IoU and rare classes"
+    triggers:
+      - "object detector rare class mask iou evaluation"
+      - "computer vision instance segmentation evaluation"
+    status: active
+    skills: domains/ai-ml/computer-vision/detection-segmentation/skills.yaml
+  - id: document-ai
+    description: "document ai ocr layout evaluation: page layouts, character scripts and table labels"
+    triggers:
+      - "ocr table extraction layout cell accuracy"
+      - "document ai ocr layout evaluation"
+    status: active
+    skills: domains/ai-ml/computer-vision/document-ai/skills.yaml
+  - id: video-perception
+    description: "video action recognition temporal evaluation: camera cohorts, frame sequences and windows"
+    triggers:
+      - "video action model camera split validation"
+      - "video action recognition temporal evaluation"
+    status: active
+    skills: domains/ai-ml/computer-vision/video-perception/skills.yaml

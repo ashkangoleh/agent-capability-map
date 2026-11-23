@@ -1,0 +1,11 @@
+schema_version: 1
+id: private-cloud
+kind: skill-registry
+skills:
+  - id: openstack-private-cloud-operations
+    path: .agents/skills/infrastructure/virtualization/private-cloud/openstack-private-cloud-operations/SKILL.md
+    description: "Operate OpenStack private cloud control planes across Keystone, Nova, Neutron, Cinder, Glance and storage."
+    triggers:
+      - "openstack private cloud nova neutron cinder"
+    excludes: []
+    status: active

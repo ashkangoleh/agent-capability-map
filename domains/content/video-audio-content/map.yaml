@@ -1,0 +1,22 @@
+schema_version: 1
+id: video-audio-content
+kind: map
+children:
+  - id: podcast-rss-production
+    description: "Check RSS 2.0 required fields stable GUID and unique episode enclosure URLs"
+    triggers:
+      - "content publishing podcast rss feed artwork episode validation"
+    status: active
+    skills: domains/content/video-audio-content/podcast-rss-production/skills.yaml
+  - id: audio-video-caption-qa
+    description: "Review time-synced captions and human-correct transcript against actual audio"
+    triggers:
+      - "content publishing video captions transcript accessibility review"
+    status: active
+    skills: domains/content/video-audio-content/audio-video-caption-qa/skills.yaml
+  - id: podcast-metric-integrity
+    description: "Identify whether metrics represent server downloads audience or actual listening"
+    triggers:
+      - "content publishing podcast measurement IAB downloads dedup"
+    status: active
+    skills: domains/content/video-audio-content/podcast-metric-integrity/skills.yaml

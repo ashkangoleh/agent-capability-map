@@ -1,0 +1,12 @@
+schema_version: 1
+id: asset-inventory
+kind: skill-registry
+skills:
+  - id: infrastructure-asset-configuration-inventory
+    path: .agents/skills/infrastructure/architecture/asset-inventory/infrastructure-asset-configuration-inventory/SKILL.md
+    description: "Govern infrastructure asset inventory and CMDB with discovery, source of truth, ownership and drift controls."
+    triggers:
+      - "infrastructure asset inventory cmdb discovery configuration drift"
+      - "infrastructure asset inventory"
+    excludes: []
+    status: active

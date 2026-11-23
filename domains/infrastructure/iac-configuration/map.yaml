@@ -1,0 +1,32 @@
+schema_version: 1
+id: iac-configuration
+kind: map
+children:
+  - id: terraform
+    description: "Terraform state, modules and drift safety"
+    triggers:
+      - "terraform state"
+      - "terraform state module drift migration"
+    status: active
+    skills: domains/infrastructure/devops-sre/terraform/skills.yaml
+  - id: iac-tools
+    description: "OpenTofu, Pulumi and immutable image provisioning"
+    triggers:
+      - "opentofu state migration"
+      - "pulumi infrastructure as code"
+      - "packer machine image lifecycle"
+    status: active
+    skills: domains/infrastructure/devops/skills.yaml
+  - id: ansible
+    description: "Ansible automation and idempotent configuration"
+    triggers:
+      - "ansible playbook idempotency"
+      - "ansible automation"
+    status: active
+    skills: domains/infrastructure/devops-sre/ansible/skills.yaml
+  - id: enterprise-config-management
+    description: "Puppet, Chef, Salt and desired-state configuration"
+    triggers:
+      - "puppet chef salt configuration management"
+    status: active
+    skills: domains/infrastructure/iac/configuration-management/skills.yaml

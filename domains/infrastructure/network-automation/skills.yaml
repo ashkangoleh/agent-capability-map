@@ -1,0 +1,13 @@
+schema_version: 1
+id: network-automation
+kind: skill-registry
+skills:
+  - id: network-automation-sdn
+    path: .agents/skills/infrastructure/network-automation/network-automation-sdn/SKILL.md
+    description: "Automate network infrastructure using source-of-truth inventory, declarative intent and model-driven APIs."
+    triggers:
+      - "network automation sdn"
+      - "netbox nornir gnmi openconfig"
+      - "netbox nornir gnmi"
+    excludes: []
+    status: active

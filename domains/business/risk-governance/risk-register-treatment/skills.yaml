@@ -1,0 +1,12 @@
+schema_version: 1
+id: risk-register-treatment
+kind: skill-registry
+skills:
+  - id: business-risk-register-treatment
+    path: .agents/skills/business/risk-governance/business-risk-register-treatment/SKILL.md
+    description: "Set risk owner, impact scales, likelihood evidence and appetite constraints. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations enterprise risk register appetite residual treatment"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

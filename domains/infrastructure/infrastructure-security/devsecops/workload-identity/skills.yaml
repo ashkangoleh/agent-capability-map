@@ -1,0 +1,11 @@
+schema_version: 1
+id: workload-identity
+kind: skill-registry
+skills:
+  - id: secrets-workload-identity-spiffe
+    path: .agents/skills/infrastructure/infrastructure-security/devsecops/workload-identity/secrets-workload-identity-spiffe/SKILL.md
+    description: "Design workload identity with SPIFFE/SPIRE, short-lived credentials, attestation and rotation."
+    triggers:
+      - "spiffe workload identity"
+    excludes: []
+    status: active

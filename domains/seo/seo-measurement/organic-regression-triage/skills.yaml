@@ -1,0 +1,12 @@
+schema_version: 1
+id: organic-regression-triage
+kind: skill-registry
+skills:
+  - id: seo-organic-regression-triage
+    path: .agents/skills/seo/seo-measurement/seo-organic-regression-triage/SKILL.md
+    description: "Validate instrumentation freshness before diagnosing search decline"
+    triggers:
+      - "seo organic traffic regression incident diagnose"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

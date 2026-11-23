@@ -1,0 +1,31 @@
+schema_version: 1
+id: sales
+kind: map
+children:
+  - id: sales-strategy
+    description: "sales strategy"
+    triggers:
+      - "sales strategy"
+    status: mapped
+  - id: sales-operations
+    description: "sales operations"
+    triggers:
+      - "sales operations"
+    status: mapped
+  - id: sales-enablement
+    description: "sales enablement"
+    triggers:
+      - "sales enablement"
+    status: mapped
+  - id: account-management
+    description: "account management"
+    triggers:
+      - "account management"
+    status: mapped
+  - id: sales-analytics
+    description: "sales analytics"
+    triggers:
+      - "sales pipeline"
+      - "sales analytics"
+    status: active
+    skills: domains/sales/skills.yaml

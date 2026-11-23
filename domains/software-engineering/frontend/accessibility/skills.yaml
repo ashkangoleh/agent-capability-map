@@ -1,0 +1,13 @@
+schema_version: 1
+id: accessibility
+kind: skill-registry
+skills:
+  - id: swe-frontend-accessibility
+    path: .agents/skills/software-engineering/frontend/accessibility/swe-frontend-accessibility/SKILL.md
+    description: "Use for frontend accessibility keyboard screen reader tasks in Frontend and Browser Engineering; verify make interaction operable with keyboard, assistive technology and meaningful semantics. and reject unsupported release or safety claims."
+    triggers:
+      - "frontend accessibility keyboard screen reader"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

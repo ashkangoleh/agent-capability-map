@@ -1,0 +1,11 @@
+schema_version: 1
+id: survival
+kind: skill-registry
+skills:
+  - id: ds-survival-analysis
+    path: .agents/skills/data/data-science/survival/ds-survival-analysis/SKILL.md
+    description: "Analyze time-to-event outcomes with censoring, competing risks and hazard assumptions."
+    triggers:
+      - "survival analysis censoring"
+    excludes: []
+    status: active

@@ -1,0 +1,12 @@
+schema_version: 1
+id: text-embeddings
+kind: skill-registry
+skills:
+  - id: aiml-natural-language-processing-text-embeddings
+    path: .agents/skills/ai-ml/natural-language-processing/text-embeddings/aiml-natural-language-processing-text-embeddings/SKILL.md
+    description: "Engineer nlp sentence embedding semantic retrieval evaluation using text pairs, hard negatives and embedding versions, verifying failures and quality baselines."
+    triggers:
+      - "sentence embeddings hard negative retrieval benchmark"
+      - "nlp sentence embedding semantic retrieval evaluation"
+    excludes: []
+    status: active

@@ -1,0 +1,11 @@
+schema_version: 1
+id: disaster-recovery
+kind: skill-registry
+skills:
+  - id: backup-dr-restore-exercises
+    path: .agents/skills/infrastructure/sre-reliability/disaster-recovery/backup-dr-restore-exercises/SKILL.md
+    description: "Design and test infrastructure backup, failover and restoration against explicit RPO/RTO."
+    triggers:
+      - "infrastructure backup disaster recovery"
+    excludes: []
+    status: active

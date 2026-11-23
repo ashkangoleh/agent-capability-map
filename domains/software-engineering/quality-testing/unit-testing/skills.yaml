@@ -1,0 +1,14 @@
+schema_version: 1
+id: unit-testing
+kind: skill-registry
+skills:
+  - id: swe-quality-testing-unit-testing
+    path: .agents/skills/software-engineering/quality-testing/unit-testing/swe-quality-testing-unit-testing/SKILL.md
+    description: "Use for unit test boundary cases tasks in Software Testing and Verification; verify test observable unit contracts and edge behavior with deterministic isolation. and reject unsupported release or safety claims."
+    triggers:
+      - "unit test boundary cases"
+      - "unit testing"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

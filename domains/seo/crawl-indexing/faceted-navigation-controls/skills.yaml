@@ -1,0 +1,12 @@
+schema_version: 1
+id: faceted-navigation-controls
+kind: skill-registry
+skills:
+  - id: seo-faceted-navigation-controls
+    path: .agents/skills/seo/crawl-indexing/seo-faceted-navigation-controls/SKILL.md
+    description: "Sample URL parameter combinations and identify priority indexable facets"
+    triggers:
+      - "seo faceted navigation infinite urls crawl budget"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

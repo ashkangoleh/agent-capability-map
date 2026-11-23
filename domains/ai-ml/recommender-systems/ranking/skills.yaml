@@ -1,0 +1,12 @@
+schema_version: 1
+id: ranking
+kind: skill-registry
+skills:
+  - id: aiml-recommender-systems-ranking
+    path: .agents/skills/ai-ml/recommender-systems/ranking/aiml-recommender-systems-ranking/SKILL.md
+    description: "Engineer recommender learning to rank online safeguards using exposure logging, rank labels and guardrail metrics, verifying failures and quality baselines."
+    triggers:
+      - "ranking recommender ndcg exposure position bias"
+      - "recommender learning to rank online safeguards"
+    excludes: []
+    status: active

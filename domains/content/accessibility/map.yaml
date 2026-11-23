@@ -1,0 +1,16 @@
+schema_version: 1
+id: accessibility
+kind: map
+children:
+  - id: article-structure-accessibility
+    description: "Verify semantic headings meaningful order table headers and link-purpose text"
+    triggers:
+      - "content publishing accessible article headings tables language"
+    status: active
+    skills: domains/content/accessibility/article-structure-accessibility/skills.yaml
+  - id: image-alt-text-decisions
+    description: "Classify each image as informative functional decorative or complex chart"
+    triggers:
+      - "content publishing image alt text decorative chart accessibility"
+    status: active
+    skills: domains/content/accessibility/image-alt-text-decisions/skills.yaml

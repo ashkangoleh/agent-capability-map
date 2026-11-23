@@ -1,0 +1,31 @@
+schema_version: 1
+id: media
+kind: map
+children:
+  - id: film
+    description: "film"
+    triggers:
+      - "film"
+    status: mapped
+  - id: music
+    description: "music"
+    triggers:
+      - "music"
+    status: mapped
+  - id: podcasting
+    description: "podcasting"
+    triggers:
+      - "podcast production"
+      - "podcasting"
+    status: active
+    skills: domains/media/skills.yaml
+  - id: publishing
+    description: "publishing"
+    triggers:
+      - "publishing"
+    status: mapped
+  - id: broadcasting
+    description: "broadcasting"
+    triggers:
+      - "broadcasting"
+    status: mapped

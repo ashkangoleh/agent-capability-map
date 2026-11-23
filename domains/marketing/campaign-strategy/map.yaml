@@ -1,0 +1,20 @@
+schema_version: 1
+id: campaign-strategy
+kind: map
+children:
+  - id: campaign-plan
+    description: "Existing canonical marketing-strategy-campaign specialist"
+    triggers:
+      - "create marketing campaign strategy"
+      - "marketing campaign strategy"
+      - "go-to-market campaign plan"
+      - "campaign brief"
+    status: active
+    skills: domains/marketing/campaign-strategy/campaign-plan/skills.yaml
+  - id: launch-readiness
+    description: "Evaluate cross-functional go-to-market launch readiness before spend or customer exposure."
+    triggers:
+      - "marketing launch readiness dependency gate"
+      - "marketing go to market launch checklist"
+    status: active
+    skills: domains/marketing/campaign-strategy/launch-readiness/skills.yaml

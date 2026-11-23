@@ -1,0 +1,22 @@
+schema_version: 1
+id: process-design
+kind: map
+children:
+  - id: bpmn-process-boundaries
+    description: "Map current process start/end, participants, business ownership and handoff evidence"
+    triggers:
+      - "business operations bpmn workflow exception handoffs audit"
+    status: active
+    skills: domains/business/process-design/bpmn-process-boundaries/skills.yaml
+  - id: process-bottleneck-recovery
+    description: "Measure queue length, arrival variability, handoff wait and first-pass yield by activity"
+    triggers:
+      - "business operations process bottleneck cycle time improvement"
+    status: active
+    skills: domains/business/process-design/process-bottleneck-recovery/skills.yaml
+  - id: decision-rules-dmn
+    description: "Write business decision inputs, owner, eligibility and explicit domain of values"
+    triggers:
+      - "business operations dmn 1.6 decision table overlap hit policy"
+    status: active
+    skills: domains/business/process-design/decision-rules-dmn/skills.yaml

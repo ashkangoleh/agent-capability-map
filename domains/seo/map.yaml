@@ -1,0 +1,87 @@
+schema_version: 1
+id: seo
+kind: map
+children:
+  - id: technical-seo
+    description: "technical seo search specialist capabilities"
+    triggers:
+      - "technical seo seo"
+      - "audit technical seo canonical tags"
+      - "seo javascript rendered html visibility inspection"
+      - "seo site migration redirects url mapping rollback"
+      - "seo internal link architecture orphan page audit"
+      - "technical seo"
+      - "سئو تکنیکال"
+    status: active
+    map: domains/seo/technical-seo/map.yaml
+  - id: crawl-indexing
+    description: "crawl indexing search specialist capabilities"
+    triggers:
+      - "crawl indexing seo"
+      - "diagnose canonical mismatch on indexed pages"
+      - "seo faceted navigation infinite urls crawl budget"
+      - "seo xml sitemap lastmod canonical validation"
+      - "seo googlebot server log verification status analysis"
+      - "canonical mismatch"
+      - "pages not indexed"
+      - "indexability"
+    status: active
+    map: domains/seo/crawl-indexing/map.yaml
+  - id: structured-data
+    description: "structured data search specialist capabilities"
+    triggers:
+      - "structured data seo"
+      - "validate structured data validation for product pages"
+      - "seo merchant listing product price availability schema audit"
+      - "seo localbusiness schema opening hours location consistency"
+      - "structured data validation"
+      - "json-ld"
+    status: active
+    map: domains/seo/structured-data/map.yaml
+  - id: content-seo
+    description: "content seo search specialist capabilities"
+    triggers:
+      - "content seo seo"
+      - "seo search intent keyword to page mapping"
+      - "seo people first content spam scaled content audit"
+      - "seo content cannibalization duplicate query page refresh"
+    status: active
+    map: domains/seo/content-seo/map.yaml
+  - id: international-seo
+    description: "international seo search specialist capabilities"
+    triggers:
+      - "international seo seo"
+      - "seo hreflang reciprocal alternate canonical audit"
+      - "seo locale adaptive ip redirect googlebot crawl"
+    status: active
+    map: domains/seo/international-seo/map.yaml
+  - id: local-seo
+    description: "local seo search specialist capabilities"
+    triggers:
+      - "local seo seo"
+      - "seo business profile accurate name address hours verification"
+    status: active
+    map: domains/seo/local-seo/map.yaml
+  - id: ecommerce-seo
+    description: "ecommerce seo search specialist capabilities"
+    triggers:
+      - "ecommerce seo seo"
+      - "seo ecommerce product variant canonical productgroup"
+    status: active
+    map: domains/seo/ecommerce-seo/map.yaml
+  - id: answer-engine-optimization
+    description: "answer engine optimization search specialist capabilities"
+    triggers:
+      - "answer engine optimization seo"
+      - "seo ai overviews ai mode visibility audit"
+    status: active
+    map: domains/seo/answer-engine-optimization/map.yaml
+  - id: seo-measurement
+    description: "seo measurement search specialist capabilities"
+    triggers:
+      - "seo measurement seo"
+      - "seo search console api sampling query page reconciliation"
+      - "seo organic traffic regression incident diagnose"
+      - "seo change impact matched control pages test"
+    status: active
+    map: domains/seo/seo-measurement/map.yaml

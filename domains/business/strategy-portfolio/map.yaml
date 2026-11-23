@@ -1,0 +1,28 @@
+schema_version: 1
+id: strategy-portfolio
+kind: map
+children:
+  - id: strategy-analysis
+    description: "Existing canonical business strategy and option analysis"
+    triggers:
+      - "Compare a business case with unit economics"
+      - "business case"
+      - "business strategy"
+      - "unit economics"
+      - "operating model"
+      - "commercial analysis"
+      - "business analysis"
+    status: active
+    skills: domains/business/strategy-portfolio/strategy-analysis/skills.yaml
+  - id: strategic-market-sizing
+    description: "Define market and time period, buyers, reachable channel and observed demand proxies"
+    triggers:
+      - "business operations strategic market sizing tam sam som evidence"
+    status: active
+    skills: domains/business/strategy-portfolio/strategic-market-sizing/skills.yaml
+  - id: portfolio-investment-allocation
+    description: "List mutually competing projects, resource caps, dependencies and status quo"
+    triggers:
+      - "business operations portfolio investment allocation stage gate"
+    status: active
+    skills: domains/business/strategy-portfolio/portfolio-investment-allocation/skills.yaml

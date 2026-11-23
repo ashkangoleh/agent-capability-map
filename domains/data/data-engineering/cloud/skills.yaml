@@ -1,0 +1,42 @@
+schema_version: 1
+id: cloud
+kind: skill-registry
+skills:
+  - id: aws-data-platform-engineering
+    path: .agents/skills/data/data-engineering/cloud/aws-data-platform-engineering/SKILL.md
+    description: "Design AWS data platforms across S3, Glue, Athena, EMR, Redshift, Kinesis/MSK and Lake Formation."
+    triggers:
+      - "aws data platform engineering"
+    excludes: []
+    status: active
+  - id: gcp-data-platform-engineering
+    path: .agents/skills/data/data-engineering/cloud/gcp-data-platform-engineering/SKILL.md
+    description: "Design GCP data platforms across BigQuery, Dataflow, Dataproc, Pub/Sub and Cloud Storage."
+    triggers:
+      - "gcp data platform engineering"
+    excludes: []
+    status: active
+  - id: azure-data-platform-engineering
+    path: .agents/skills/data/data-engineering/cloud/azure-data-platform-engineering/SKILL.md
+    description: "Design Azure data platforms across ADLS Gen2, Data Factory, Fabric, Synapse and Event Hubs."
+    triggers:
+      - "azure data platform engineering"
+    excludes: []
+    status: active
+  - id: oci-data-platform-engineering
+    path: .agents/skills/data/data-engineering/cloud/oci-data-platform-engineering/SKILL.md
+    description: "Design Oracle Cloud data platforms across Object Storage, Data Flow, GoldenGate, Streaming and Autonomous Database."
+    triggers:
+      - "oci data platform"
+      - "oracle cloud data platform"
+    excludes: []
+    status: active
+  - id: databricks-lakeflow-data-engineering
+    path: .agents/skills/data/data-engineering/cloud/databricks-lakeflow-data-engineering/SKILL.md
+    description: "Engineer Databricks Lakeflow Connect, pipelines and Jobs with Unity Catalog, SDP boundaries and operational controls."
+    triggers:
+      - "databricks lakeflow"
+      - "databricks lakeflow data engineering"
+      - "lakeflow pipelines"
+    excludes: []
+    status: active

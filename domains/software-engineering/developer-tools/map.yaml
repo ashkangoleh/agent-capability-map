@@ -1,0 +1,22 @@
+schema_version: 1
+id: developer-tools
+kind: map
+children:
+  - id: debugging
+    description: "Diagnose crashes through minimal reproductions and instrumented evidence."
+    triggers:
+      - "developer debugging reproducible crash"
+    status: active
+    skills: domains/software-engineering/developer-tools/debugging/skills.yaml
+  - id: git-workflows
+    description: "Preserve history and ownership through branch/merge conflicts and safe recovery."
+    triggers:
+      - "git workflow merge conflict recovery"
+    status: active
+    skills: domains/software-engineering/developer-tools/git-workflows/skills.yaml
+  - id: reproducible-environments
+    description: "Make toolchains and dependency resolution deterministic and secure."
+    triggers:
+      - "reproducible dev environment toolchain"
+    status: active
+    skills: domains/software-engineering/developer-tools/reproducible-environments/skills.yaml

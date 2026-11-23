@@ -1,0 +1,17 @@
+schema_version: 1
+id: business
+kind: skill-registry
+skills:
+  - id: business-strategy-analysis
+    path: .agents/skills/business/business-strategy/business-strategy-analysis/SKILL.md
+    description: "Use for business strategy, unit economics, operating-model and commercial analysis with explicit formulas and sensitivities."
+    triggers:
+      - "business case"
+      - "business strategy"
+      - "unit economics"
+      - "operating model"
+      - "commercial analysis"
+      - "business analysis"
+    excludes:
+      - "personal legal advice"
+    status: active

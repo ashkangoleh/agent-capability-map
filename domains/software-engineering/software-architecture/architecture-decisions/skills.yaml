@@ -1,0 +1,14 @@
+schema_version: 1
+id: architecture-decisions
+kind: skill-registry
+skills:
+  - id: swe-software-architecture-architecture-decisions
+    path: .agents/skills/software-engineering/software-architecture/architecture-decisions/swe-software-architecture-architecture-decisions/SKILL.md
+    description: "Use for software architecture decision record tasks in Software Architecture and Systems Design; verify record tradeoffs, constraints and consequences rather than architecture-by-fashion. and reject unsupported release or safety claims."
+    triggers:
+      - "software architecture decision record"
+      - "software architecture"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

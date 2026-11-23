@@ -1,0 +1,13 @@
+schema_version: 1
+id: service-security
+kind: skill-registry
+skills:
+  - id: swe-backend-service-security
+    path: .agents/skills/software-engineering/backend/service-security/swe-backend-service-security/SKILL.md
+    description: "Use for backend authentication authorization design tasks in Backend and API Engineering; verify separate authentication from resource-level authorization and transport security. and reject unsupported release or safety claims."
+    triggers:
+      - "backend authentication authorization design"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

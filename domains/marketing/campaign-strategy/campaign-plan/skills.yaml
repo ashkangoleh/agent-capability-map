@@ -1,0 +1,16 @@
+schema_version: 1
+id: campaign-plan
+kind: skill-registry
+skills:
+  - id: marketing-strategy-campaign
+    path: .agents/skills/marketing/campaign-strategy/marketing-strategy-campaign/SKILL.md
+    description: "Use canonical specialist marketing-strategy-campaign, preserving its existing SKILL.md."
+    triggers:
+      - "create marketing campaign strategy"
+      - "marketing campaign strategy"
+      - "go-to-market campaign plan"
+      - "campaign brief"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

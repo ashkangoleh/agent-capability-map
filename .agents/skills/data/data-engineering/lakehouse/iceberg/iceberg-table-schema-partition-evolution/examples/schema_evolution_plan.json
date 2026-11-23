@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "format_version": 2,
+  "last_assigned_field_id": 4,
+  "approved_renames": [
+    {
+      "id": 2,
+      "from": "region",
+      "to": "region_code"
+    }
+  ],
+  "before": [
+    {
+      "id": 1,
+      "name": "event_id",
+      "type": "long",
+      "required": true
+    },
+    {
+      "id": 2,
+      "name": "region",
+      "type": "string",
+      "required": false
+    },
+    {
+      "id": 3,
+      "name": "amount",
+      "type": "decimal(10,2)",
+      "required": false
+    }
+  ],
+  "after": [
+    {
+      "id": 1,
+      "name": "event_id",
+      "type": "long",
+      "required": true
+    },
+    {
+      "id": 2,
+      "name": "region_code",
+      "type": "string",
+      "required": false
+    },
+    {
+      "id": 3,
+      "name": "amount",
+      "type": "decimal(12,2)",
+      "required": false
+    },
+    {
+      "id": 5,
+      "name": "event_source",
+      "type": "string",
+      "required": false
+    }
+  ]
+}

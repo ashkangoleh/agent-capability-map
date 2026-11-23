@@ -1,0 +1,13 @@
+schema_version: 1
+id: legacy-refactoring
+kind: skill-registry
+skills:
+  - id: swe-maintenance-evolution-legacy-refactoring
+    path: .agents/skills/software-engineering/maintenance-evolution/legacy-refactoring/swe-maintenance-evolution-legacy-refactoring/SKILL.md
+    description: "Use for legacy refactor characterization tests tasks in Software Maintenance and Evolution; verify use behavior characterization before decomposing legacy code. and reject unsupported release or safety claims."
+    triggers:
+      - "legacy refactor characterization tests"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

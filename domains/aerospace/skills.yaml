@@ -1,0 +1,13 @@
+schema_version: 1
+id: aerospace
+kind: skill-registry
+skills:
+  - id: aerospace-requirements-traceability
+    path: .agents/skills/aerospace/core/aerospace-requirements-traceability/SKILL.md
+    description: "Use for aerospace system requirement traceability and verification matrices without false flight safety claims."
+    triggers:
+      - "aerospace requirements"
+      - "aerospace systems engineering"
+      - "space mission requirements"
+    excludes: []
+    status: active

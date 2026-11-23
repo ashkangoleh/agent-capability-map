@@ -1,0 +1,10 @@
+schema_version: 1
+id: local-seo
+kind: map
+children:
+  - id: business-profile-integrity
+    description: "Verify real profile eligibility and owner authority"
+    triggers:
+      - "seo business profile accurate name address hours verification"
+    status: active
+    skills: domains/seo/local-seo/business-profile-integrity/skills.yaml

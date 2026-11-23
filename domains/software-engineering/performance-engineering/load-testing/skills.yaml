@@ -1,0 +1,13 @@
+schema_version: 1
+id: load-testing
+kind: skill-registry
+skills:
+  - id: swe-performance-engineering-load-testing
+    path: .agents/skills/software-engineering/performance-engineering/load-testing/swe-performance-engineering-load-testing/SKILL.md
+    description: "Use for application load test capacity modeling tasks in Application Performance and Capacity; verify model capacity, saturation and tail latency with controlled load profiles. and reject unsupported release or safety claims."
+    triggers:
+      - "application load test capacity modeling"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

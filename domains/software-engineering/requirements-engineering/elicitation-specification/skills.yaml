@@ -1,0 +1,13 @@
+schema_version: 1
+id: elicitation-specification
+kind: skill-registry
+skills:
+  - id: swe-requirements-engineering-elicitation-specification
+    path: .agents/skills/software-engineering/requirements-engineering/elicitation-specification/swe-requirements-engineering-elicitation-specification/SKILL.md
+    description: "Use for software requirements elicitation specification tasks in Software Requirements and Specification; verify resolve stakeholder conflict, scope and derived behavior before coding. and reject unsupported release or safety claims."
+    triggers:
+      - "software requirements elicitation specification"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

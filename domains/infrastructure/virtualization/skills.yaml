@@ -1,0 +1,11 @@
+schema_version: 1
+id: virtualization
+kind: skill-registry
+skills:
+  - id: virtualization-kvm-proxmox-vmware
+    path: .agents/skills/infrastructure/virtualization/virtualization-kvm-proxmox-vmware/SKILL.md
+    description: "Operate KVM, Proxmox and VMware virtualization with capacity, networking, storage and HA controls."
+    triggers:
+      - "kvm proxmox vmware virtualization"
+    excludes: []
+    status: active

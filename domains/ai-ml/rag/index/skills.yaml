@@ -1,0 +1,13 @@
+schema_version: 1
+id: vector-index
+kind: skill-registry
+skills:
+  - id: milvus-vector-index-lifecycle
+    path: .agents/skills/ai-ml/rag/index/milvus-vector-index-lifecycle/SKILL.md
+    description: "Manage Milvus collection schema, indexes, vector dimension and compatibility with recall benchmarks."
+    triggers:
+      - "milvus"
+      - "vector index"
+      - "hnsw index"
+    excludes: []
+    status: active

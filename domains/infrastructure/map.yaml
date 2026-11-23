@@ -1,0 +1,216 @@
+schema_version: 1
+id: infrastructure
+kind: map
+children:
+  - id: compute-os
+    description: "Compute, operating systems, host lifecycle and HPC"
+    triggers:
+      - "linux kernel performance diagnostics"
+      - "windows server operations"
+      - "unix bsd systems operations"
+      - "freebsd openbsd unix"
+      - "linux systemd service restart loop"
+      - "linux windows server patching fleet compliance"
+      - "hpc gpu compute scheduling"
+      - "gpu compute scheduling"
+    status: active
+    map: domains/infrastructure/compute-os/map.yaml
+  - id: networking
+    description: "Enterprise networking, routing, DNS, access, automation and network services"
+    triggers:
+      - "network diagnostics"
+      - "tls handshake"
+      - "dns troubleshooting"
+      - "network routing bgp"
+      - "network firewall segmentation"
+      - "network load balancing proxy"
+      - "wireguard vpn routing"
+      - "ebpf network observability"
+      - "authoritative dns infrastructure"
+      - "tls pki certificate lifecycle"
+      - "dhcp ipam network services"
+      - "dhcp ipam ntp"
+      - "network automation sdn"
+      - "netbox nornir gnmi openconfig"
+      - "netbox nornir gnmi"
+      - "network switching enterprise routing"
+      - "vlan stp lacp ospf evpn vxlan"
+      - "wireless lan network engineering"
+      - "enterprise wifi wlan"
+    status: active
+    map: domains/infrastructure/networking/map.yaml
+  - id: cloud-engineering
+    description: "Public, private and hybrid cloud foundations, provider operations, governance and FinOps"
+    triggers:
+      - "cloud network vpc routing"
+      - "cloud landing zone architecture"
+      - "finops cost allocation"
+      - "cloud cost finops capacity"
+      - "cloud iam least privilege"
+      - "cloud cost capacity review"
+      - "hybrid cloud reference architecture"
+      - "aws infrastructure account guardrails"
+      - "aws lambda"
+      - "azure subscription management landing zone policy"
+      - "azure subscription management"
+      - "gcp organization folders shared vpc infrastructure"
+      - "gcp organization folders"
+      - "oci tenancy compartments vcn guardrails"
+      - "oci tenancy compartments"
+      - "serverless managed runtime lambda cloud run functions"
+      - "aws lambda cloud run runtime"
+    status: active
+    map: domains/infrastructure/cloud/map.yaml
+  - id: iac-configuration
+    description: "Infrastructure as Code, configuration management and immutable image lifecycle"
+    triggers:
+      - "terraform state module"
+      - "terraform state module drift migration"
+      - "terraform state migration"
+      - "opentofu state migration"
+      - "pulumi infrastructure as code"
+      - "packer machine image lifecycle"
+      - "ansible playbook idempotency"
+      - "puppet chef salt configuration management"
+    status: active
+    map: domains/infrastructure/iac-configuration/map.yaml
+  - id: virtualization-private-cloud
+    description: "Hypervisors, virtual machine platforms, private cloud and HCI"
+    triggers:
+      - "kvm proxmox vmware virtualization"
+      - "openstack private cloud nova neutron cinder"
+    status: active
+    map: domains/infrastructure/virtualization-private-cloud/map.yaml
+  - id: containers-orchestration
+    description: "Container runtimes, Kubernetes, service mesh and service discovery"
+    triggers:
+      - "containerd cri o podman runtime isolation"
+      - "containerd cri-o podman"
+      - "container security"
+      - "container build security"
+      - "dockerfile security"
+      - "kubernetes helm upgrade"
+      - "kubernetes helm chart validation"
+      - "helm chart validation"
+      - "kubernetes rollout"
+      - "kubernetes networkpolicy"
+      - "kubernetes storage"
+      - "kubernetes workload security"
+      - "kubernetes cluster upgrade capacity"
+      - "kubernetes operator crd lifecycle"
+      - "kubernetes cni ebpf operations"
+      - "kubernetes multi cluster"
+      - "kubernetes ingress controllers"
+      - "istio service mesh operations"
+      - "consul etcd service discovery quorum health checks"
+      - "consul etcd service discovery"
+    status: active
+    map: domains/infrastructure/containers-orchestration/map.yaml
+  - id: devops-delivery
+    description: "CI/CD, GitOps, release engineering and artifact provenance"
+    triggers:
+      - "argo cd gitops sync drift"
+      - "flux gitops reconciliation"
+      - "ci cd release engineering"
+      - "ci cd supply chain artifact signing"
+      - "github actions security"
+    status: active
+    map: domains/infrastructure/devops-delivery/map.yaml
+  - id: platform-engineering
+    description: "Internal developer platforms, control planes, golden paths, secrets and platform operations"
+    triggers:
+      - "backstage internal developer platform"
+      - "crossplane infrastructure control plane"
+      - "karpenter keda autoscaling"
+      - "golden path"
+      - "internal developer platform"
+      - "vault secrets"
+      - "vault secrets rotation operations"
+      - "platform operations readiness review"
+    status: active
+    map: domains/infrastructure/platform/map.yaml
+  - id: sre-reliability
+    description: "Service reliability, SLOs, incidents, chaos, capacity and disaster recovery"
+    triggers:
+      - "sre slo error budget"
+      - "sre capacity load testing"
+      - "chaos engineering failure injection"
+      - "infrastructure backup disaster recovery"
+      - "sre incident postmortem"
+    status: active
+    map: domains/infrastructure/sre-reliability/map.yaml
+  - id: observability-engineering
+    description: "Metrics, logs, traces, telemetry pipelines, profiling and operational signal cost"
+    triggers:
+      - "prometheus alert rules"
+      - "prometheus slo"
+      - "opentelemetry collector pipeline tracing"
+      - "infrastructure observability stack"
+      - "infrastructure continuous profiling ebpf telemetry cost"
+      - "infrastructure capacity headroom saturation rightsizing"
+      - "infrastructure capacity"
+    status: active
+    map: domains/infrastructure/observability-engineering/map.yaml
+  - id: infrastructure-security
+    description: "Infrastructure identity, privileged access, DevSecOps, cloud posture and zero trust"
+    triggers:
+      - "devsecops security gates"
+      - "policy as code opa kyverno"
+      - "falco runtime security detection"
+      - "sigstore cosign image signing"
+      - "slsa provenance attestation"
+      - "spiffe workload identity"
+      - "infrastructure iam pam jit access federation"
+      - "zero trust network access microsegmentation"
+      - "cloud security posture management cnapp"
+      - "cloud security posture"
+    status: active
+    map: domains/infrastructure/infrastructure-security/map.yaml
+  - id: storage-engineering
+    description: "Block, file, distributed and object storage infrastructure"
+    triggers:
+      - "ceph zfs lvm storage operations"
+      - "linux storage filesystem operations"
+      - "san nas fibre channel iscsi nvmeof storage"
+      - "s3 compatible object storage lifecycle replication object lock"
+      - "s3 compatible object storage"
+    status: active
+    map: domains/infrastructure/storage-engineering/map.yaml
+  - id: database-infrastructure
+    description: "Database platform operations, HA, replication, backup and NoSQL infrastructure"
+    triggers:
+      - "postgresql infrastructure operations"
+      - "mysql infrastructure operations"
+      - "database ha replication failover pitr"
+      - "database ha replication"
+      - "mongodb redis cassandra replication persistence failover"
+      - "mongodb redis cassandra"
+    status: active
+    map: domains/infrastructure/database-infrastructure/map.yaml
+  - id: edge-infrastructure
+    description: "Edge compute fleets, remote sites and CDN delivery"
+    triggers:
+      - "k3s edge fleet management intermittent connectivity ota"
+      - "k3s edge fleet"
+      - "cdn edge cache origin shield purge"
+    status: active
+    map: domains/infrastructure/edge-infrastructure/map.yaml
+  - id: hardware-datacenter
+    description: "Bare metal, server hardware, firmware, BMC and data-center facilities"
+    triggers:
+      - "bare metal server provisioning pxe ipxe maas metal3"
+      - "bare metal servers"
+      - "server firmware bmc redfish ipmi uefi secure boot"
+      - "data center rack power cooling ups pdu dcim"
+      - "data center rack power cooling"
+    status: active
+    map: domains/infrastructure/hardware-datacenter/map.yaml
+  - id: architecture-governance
+    description: "Infrastructure architecture, technical decisions, asset inventory and configuration governance"
+    triggers:
+      - "infrastructure architecture nfr failure domains adr"
+      - "infrastructure architecture"
+      - "infrastructure asset inventory cmdb discovery configuration drift"
+      - "infrastructure asset inventory"
+    status: active
+    map: domains/infrastructure/architecture-governance/map.yaml

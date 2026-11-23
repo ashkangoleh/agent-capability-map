@@ -1,0 +1,45 @@
+schema_version: 1
+id: security
+kind: map
+children:
+  - id: application-security
+    description: "application security"
+    triggers:
+      - "threat modeling"
+      - "application security"
+      - "owasp"
+      - "code security"
+    status: active
+    skills: domains/security/skills.yaml
+  - id: infrastructure-security
+    description: "infrastructure security"
+    triggers:
+      - "cloud security"
+      - "kubernetes security"
+    status: mapped
+  - id: identity-access
+    description: "identity access"
+    triggers:
+      - "oauth"
+      - "oidc"
+      - "sso"
+      - "iam"
+    status: mapped
+  - id: privacy-engineering
+    description: "privacy engineering"
+    triggers:
+      - "privacy engineering"
+      - "data protection"
+    status: mapped
+  - id: incident-response
+    description: "incident response"
+    triggers:
+      - "security incident"
+      - "forensics"
+    status: mapped
+  - id: governance-risk-compliance
+    description: "governance risk compliance"
+    triggers:
+      - "security compliance"
+      - "grc"
+    status: mapped

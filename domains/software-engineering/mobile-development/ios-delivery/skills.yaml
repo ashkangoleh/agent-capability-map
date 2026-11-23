@@ -1,0 +1,13 @@
+schema_version: 1
+id: ios-delivery
+kind: skill-registry
+skills:
+  - id: swe-mobile-development-ios-delivery
+    path: .agents/skills/software-engineering/mobile-development/ios-delivery/swe-mobile-development-ios-delivery/SKILL.md
+    description: "Use for ios app state and concurrency tasks in Native and Cross-Platform Mobile Engineering; verify protect Swift concurrency, app suspension and privacy requirements. and reject unsupported release or safety claims."
+    triggers:
+      - "ios app state and concurrency"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

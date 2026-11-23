@@ -1,0 +1,14 @@
+schema_version: 1
+id: creator-disclosure
+kind: skill-registry
+skills:
+  - id: marketing-creator-disclosure-review
+    path: .agents/skills/marketing/influencer-partnerships/marketing-creator-disclosure-review/SKILL.md
+    description: "Review influencer campaign disclosures and substantiation before sponsored publication."
+    triggers:
+      - "marketing influencer paid endorsement disclosure review"
+      - "marketing creator material connection compliance"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

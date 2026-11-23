@@ -1,0 +1,14 @@
+schema_version: 1
+id: gitops
+kind: skill-registry
+skills:
+  - id: argocd-gitops-drift-recovery
+    path: .agents/skills/infrastructure/devops-sre/gitops/argocd-gitops-drift-recovery/SKILL.md
+    description: "Reconcile Argo CD Git desired state and live cluster with safe sync and rollback governance."
+    triggers:
+      - "argo cd"
+      - "argocd drift"
+      - "gitops sync"
+      - "argocd rollback"
+    excludes: []
+    status: active

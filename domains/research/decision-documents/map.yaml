@@ -1,0 +1,16 @@
+schema_version: 1
+id: decision-documents
+kind: map
+children:
+  - id: rfc-proposal-tradeoff-review
+    description: "State decision problem scope non-goals constraints and explicit stakeholder roles"
+    triggers:
+      - "research technical rfc proposal alternatives tradeoffs requirements"
+    status: active
+    skills: domains/research/decision-documents/rfc-proposal-tradeoff-review/skills.yaml
+  - id: adr-decision-traceability
+    description: "Record decision context date owner considered alternatives and accepted tradeoffs"
+    triggers:
+      - "research technical adr decision rationale superseded architecture"
+    status: active
+    skills: domains/research/decision-documents/adr-decision-traceability/skills.yaml

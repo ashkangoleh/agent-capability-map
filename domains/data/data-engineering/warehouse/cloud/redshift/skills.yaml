@@ -1,0 +1,12 @@
+schema_version: 1
+id: redshift
+kind: skill-registry
+skills:
+  - id: redshift-data-platform-engineering
+    path: .agents/skills/data/data-engineering/warehouse/cloud/redshift/redshift-data-platform-engineering/SKILL.md
+    description: "Engineer Amazon Redshift COPY and streaming ingestion, MPP distribution, sort keys, materialized views, WLM and maintenance."
+    triggers:
+      - "redshift"
+      - "redshift streaming ingestion"
+    excludes: []
+    status: active

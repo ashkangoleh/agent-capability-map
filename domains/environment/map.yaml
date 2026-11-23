@@ -1,0 +1,31 @@
+schema_version: 1
+id: environment
+kind: map
+children:
+  - id: ecology
+    description: "ecology"
+    triggers:
+      - "ecology"
+    status: mapped
+  - id: biodiversity
+    description: "biodiversity"
+    triggers:
+      - "biodiversity occurrence data"
+      - "biodiversity"
+    status: active
+    skills: domains/environment/skills.yaml
+  - id: environmental-monitoring
+    description: "environmental monitoring"
+    triggers:
+      - "environmental monitoring"
+    status: mapped
+  - id: climate-science
+    description: "climate science"
+    triggers:
+      - "climate science"
+    status: mapped
+  - id: environmental-impact
+    description: "environmental impact"
+    triggers:
+      - "environmental impact"
+    status: mapped

@@ -1,0 +1,51 @@
+schema_version: 1
+id: cloud-engineering
+kind: map
+children:
+  - id: cloud-foundations
+    description: "VPC/VNet networking, landing zones and cloud FinOps"
+    triggers:
+      - "cloud network vpc routing"
+      - "cloud landing zone architecture"
+      - "finops cost allocation"
+    status: active
+    skills: domains/infrastructure/cloud/skills.yaml
+  - id: iam
+    description: "Cloud identity and least privilege"
+    triggers:
+      - "cloud iam least privilege"
+    status: active
+    skills: domains/infrastructure/cloud/iam/skills.yaml
+  - id: cost
+    description: "Cloud cost and capacity"
+    triggers:
+      - "cloud cost capacity review"
+      - "cloud cost finops capacity"
+    status: active
+    skills: domains/infrastructure/cloud/cost/skills.yaml
+  - id: architecture
+    description: "Hybrid and multi-cloud reference architecture"
+    triggers:
+      - "hybrid cloud reference architecture"
+    status: active
+    skills: domains/infrastructure/cloud/architecture/skills.yaml
+  - id: provider-operations
+    description: "AWS, Azure, GCP and OCI infrastructure operations"
+    triggers:
+      - "aws infrastructure account guardrails"
+      - "azure subscription management landing zone policy"
+      - "azure subscription management"
+      - "gcp organization folders shared vpc infrastructure"
+      - "gcp organization folders"
+      - "oci tenancy compartments vcn guardrails"
+      - "oci tenancy compartments"
+    status: active
+    skills: domains/infrastructure/cloud/providers/skills.yaml
+  - id: serverless
+    description: "Serverless and managed runtime infrastructure"
+    triggers:
+      - "serverless managed runtime lambda cloud run functions"
+      - "aws lambda cloud run runtime"
+      - "aws lambda"
+    status: active
+    skills: domains/infrastructure/cloud/serverless/skills.yaml

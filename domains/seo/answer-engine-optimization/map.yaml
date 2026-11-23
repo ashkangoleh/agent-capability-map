@@ -1,0 +1,10 @@
+schema_version: 1
+id: answer-engine-optimization
+kind: map
+children:
+  - id: ai-search-feature-visibility
+    description: "Check ordinary indexed and snippet eligibility first"
+    triggers:
+      - "seo ai overviews ai mode visibility audit"
+    status: active
+    skills: domains/seo/answer-engine-optimization/ai-search-feature-visibility/skills.yaml

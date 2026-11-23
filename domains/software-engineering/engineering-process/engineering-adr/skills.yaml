@@ -1,0 +1,13 @@
+schema_version: 1
+id: engineering-adr
+kind: skill-registry
+skills:
+  - id: swe-engineering-process-engineering-adr
+    path: .agents/skills/software-engineering/engineering-process/engineering-adr/swe-engineering-process-engineering-adr/SKILL.md
+    description: "Use for engineering decision log governance tasks in Software Engineering Process and Economics; verify record and revisit engineering decisions with explicit governance. and reject unsupported release or safety claims."
+    triggers:
+      - "engineering decision log governance"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

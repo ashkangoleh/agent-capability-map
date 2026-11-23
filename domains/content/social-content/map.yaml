@@ -1,0 +1,16 @@
+schema_version: 1
+id: social-content
+kind: map
+children:
+  - id: social-platform-adaptation
+    description: "Preserve source truth while shortening for intended platform format"
+    triggers:
+      - "content publishing social channel editorial adaptation"
+    status: active
+    skills: domains/content/social-content/social-platform-adaptation/skills.yaml
+  - id: community-moderation-playbook
+    description: "Define acceptable conduct privacy-sensitive data handling and moderator ownership"
+    triggers:
+      - "content publishing social community moderation escalation"
+    status: active
+    skills: domains/content/social-content/community-moderation-playbook/skills.yaml

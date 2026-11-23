@@ -1,0 +1,11 @@
+schema_version: 1
+id: optimization
+kind: skill-registry
+skills:
+  - id: ds-operations-research
+    path: .agents/skills/data/data-science/optimization/ds-operations-research/SKILL.md
+    description: "Formulate constrained optimization with explicit objectives, feasibility and sensitivity analysis."
+    triggers:
+      - "operations research optimization"
+    excludes: []
+    status: active

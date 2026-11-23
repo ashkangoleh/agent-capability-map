@@ -1,0 +1,12 @@
+schema_version: 1
+id: semantic-layer
+kind: skill-registry
+skills:
+  - id: sql-metric-definition-analysis
+    path: .agents/skills/data/analytics-engineering/semantic/sql-metric-definition-analysis/SKILL.md
+    description: "Define governed semantic metrics, dimensions and correct SQL aggregations with source provenance."
+    triggers:
+      - "semantic layer"
+      - "semantic metrics"
+    excludes: []
+    status: active

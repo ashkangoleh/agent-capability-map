@@ -1,0 +1,25 @@
+schema_version: 1
+id: performance-marketing
+kind: map
+children:
+  - id: budget-pacing
+    description: "Set bounded spend controls without confusing platform-reported ROAS with incremental profit."
+    triggers:
+      - "marketing paid media spend pacing budget guardrails"
+      - "marketing advertising budget pacing"
+    status: active
+    skills: domains/marketing/performance-marketing/budget-pacing/skills.yaml
+  - id: creative-experimentation
+    description: "Design a defensible paid-creative experiment with explicit randomization and decision rules."
+    triggers:
+      - "marketing creative randomized experiment contamination"
+      - "marketing paid creative split test"
+    status: active
+    skills: domains/marketing/performance-marketing/creative-experimentation/skills.yaml
+  - id: landing-page-qa
+    description: "Validate post-click user journey and transaction integrity before scaling acquisition."
+    triggers:
+      - "marketing landing page conversion qa checkout funnel"
+      - "marketing campaign landing page audit"
+    status: active
+    skills: domains/marketing/performance-marketing/landing-page-qa/skills.yaml

@@ -1,0 +1,31 @@
+schema_version: 1
+id: devsecops
+kind: map
+children:
+  - id: policy-gates
+    description: "Pipeline security gates and admission policies"
+    triggers:
+      - "devsecops security gates"
+      - "policy as code opa kyverno"
+    status: active
+    skills: domains/infrastructure/infrastructure-security/devsecops/policy-gates/skills.yaml
+  - id: supply-chain
+    description: "Artifact integrity, signing, SBOM and provenance"
+    triggers:
+      - "sigstore cosign image signing"
+      - "slsa sbom software supply chain"
+      - "slsa provenance attestation"
+    status: active
+    skills: domains/infrastructure/infrastructure-security/devsecops/supply-chain/skills.yaml
+  - id: runtime-security
+    description: "Threat detection and safe runtime response"
+    triggers:
+      - "falco runtime security detection"
+    status: active
+    skills: domains/infrastructure/infrastructure-security/devsecops/runtime-security/skills.yaml
+  - id: workload-identity
+    description: "SPIFFE identity, attestation and credential rotation"
+    triggers:
+      - "spiffe workload identity"
+    status: active
+    skills: domains/infrastructure/infrastructure-security/devsecops/workload-identity/skills.yaml

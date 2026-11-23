@@ -1,0 +1,18 @@
+schema_version: 1
+id: marketing-operations
+kind: map
+children:
+  - id: campaign-taxonomy
+    description: "Standardize channel/campaign identifiers without losing historical attribution comparability."
+    triggers:
+      - "marketing campaign taxonomy utm governance audit"
+      - "marketing utm channel naming reconciliation"
+    status: active
+    skills: domains/marketing/marketing-operations/campaign-taxonomy/skills.yaml
+  - id: release-controls
+    description: "Treat marketing campaign deployment as a controlled production change with measurable abort criteria."
+    triggers:
+      - "marketing campaign release preflight checklist approvals"
+      - "marketing campaign rollback incident runbook"
+    status: active
+    skills: domains/marketing/marketing-operations/release-controls/skills.yaml

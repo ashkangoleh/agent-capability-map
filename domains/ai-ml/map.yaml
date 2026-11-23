@@ -1,0 +1,210 @@
+schema_version: 1
+id: ai-ml
+kind: map
+children:
+  - id: llm-engineering
+    description: "llm engineering"
+    triggers:
+      - "compare llm model quality and inference costs"
+      - "llm kv cache prefill latency benchmark"
+      - "llm schema validated json response"
+      - "llm context window truncation strategy"
+      - "llm serving"
+      - "hugging face fine tuning"
+      - "llm evaluation"
+      - "model quantization"
+      - "prompt injection"
+      - "peft"
+      - "vllm"
+      - "llm"
+      - "model serving"
+      - "prompt engineering"
+      - "litellm"
+      - "llm prompt context budgeting"
+      - "llm json schema constrained decoding"
+      - "llm speculative decoding throughput profiling"
+      - "llm model selection task benchmark"
+    status: active
+    map: domains/ai-ml/llm/map.yaml
+  - id: rag-retrieval
+    description: "rag retrieval"
+    triggers:
+      - "rag migrate vector embeddings between model versions"
+      - "rag reranker relevance and ndcg"
+      - "rag enforce tenant permissions before retrieval"
+      - "rag split documents by headings and tables"
+      - "hybrid retrieval"
+      - "retrieval evaluation"
+      - "milvus"
+      - "hybrid search"
+      - "rag evidence"
+      - "rag evaluation"
+      - "rag"
+      - "embedding"
+      - "retrieval"
+      - "vector search"
+      - "reranking"
+      - "rag chunk boundary evaluation"
+      - "rag document level acl enforcement"
+      - "rag cross encoder reranking evaluation"
+      - "rag embedding reindex migration"
+    status: active
+    map: domains/ai-ml/rag/map.yaml
+  - id: machine-learning
+    description: "machine learning"
+    triggers:
+      - "ml input drift by cohort and label lag"
+      - "ml explanation shap correlated features stability"
+      - "ml hyperparameter tuning nested cross validation"
+      - "ml train pipeline reproducible artifacts"
+      - "ml model serving"
+      - "model canary"
+      - "dataset annotation"
+      - "sklearn"
+      - "feast"
+      - "feature store"
+      - "machine learning"
+      - "ml model"
+      - "supervised learning"
+      - "ml training pipeline artifact lineage"
+      - "ml hyperparameter search leakage prevention"
+      - "ml model explanation stability audit"
+      - "ml dataset distribution shift detection"
+    status: active
+    map: domains/ai-ml/machine-learning/map.yaml
+  - id: deep-learning
+    description: "deep learning"
+    triggers:
+      - "contrastive embeddings collapse transfer probe"
+      - "restore sharded optimizer checkpoint on new workers"
+      - "mixed precision gradient overflow loss scaling"
+      - "torch distributed rank failure checkpoint restart"
+      - "transformer fine tuning"
+      - "distributed training"
+      - "pytorch"
+      - "deep learning"
+      - "neural network"
+      - "transformer training"
+      - "deep learning distributed training collective recovery"
+      - "deep learning mixed precision optimizer stability"
+      - "deep learning sharded checkpoint restoration"
+      - "deep learning contrastive representation evaluation"
+    status: active
+    map: domains/ai-ml/deep-learning/map.yaml
+  - id: mlops
+    description: "mlops"
+    triggers:
+      - "rebuild ml experiment from pinned dataset and image"
+      - "ml model shadow canary promotion rollback thresholds"
+      - "ml registry immutable model provenance approval"
+      - "ml continuous retraining after label availability"
+      - "model serving"
+      - "model canary"
+      - "model drift"
+      - "feast"
+      - "mlflow"
+      - "mlops"
+      - "model deployment"
+      - "model monitoring"
+      - "mlops continuous training trigger design"
+      - "ml model registry approval audit"
+      - "mlops production model release safety gate"
+      - "ml experiment environment reproducibility audit"
+    status: active
+    map: domains/ai-ml/mlops/map.yaml
+  - id: computer-vision
+    description: "computer vision"
+    triggers:
+      - "video action model camera split validation"
+      - "ocr table extraction layout cell accuracy"
+      - "object detector rare class mask iou evaluation"
+      - "vision model"
+      - "image classification"
+      - "object detection"
+      - "computer vision instance segmentation evaluation"
+      - "document ai ocr layout evaluation"
+      - "video action recognition temporal evaluation"
+    status: active
+    map: domains/ai-ml/computer-vision/map.yaml
+  - id: speech-audio-ai
+    description: "speech audio ai"
+    triggers:
+      - "spoken pii redaction recall on noisy audio"
+      - "tts intelligibility consent and voice controls"
+      - "speaker diarization der overlap noise evaluation"
+      - "speech evaluation"
+      - "asr"
+      - "speech recognition"
+      - "text to speech"
+      - "speech speaker diarization overlap evaluation"
+      - "speech text to speech intelligibility safety"
+      - "speech audio pii redaction evaluation"
+    status: active
+    map: domains/ai-ml/speech-audio-ai/map.yaml
+  - id: responsible-ai
+    description: "responsible ai"
+    triggers:
+      - "ai harm complaint monitoring remediation owners"
+      - "model card user disclosure appeal mechanism"
+      - "model subgroup fairness confidence intervals review"
+      - "responsible ai"
+      - "model bias"
+      - "ai risk"
+      - "ai safety"
+      - "responsible ai subgroup fairness audit"
+      - "responsible ai model transparency disclosure"
+      - "responsible ai postdeployment impact monitoring"
+    status: active
+    map: domains/ai-ml/responsible-ai/map.yaml
+  - id: natural-language-processing
+    description: "natural-language-processing model engineering"
+    triggers:
+      - "sentence embeddings hard negative retrieval benchmark"
+      - "code switching multilingual nlp dialect benchmarks"
+      - "ner exact span f1 nested offsets"
+      - "text classifier macro f1 calibration by language"
+      - "nlp text classification calibration benchmark"
+      - "natural language processing"
+      - "nlp named entity extraction span evaluation"
+      - "nlp multilingual evaluation code switching"
+      - "nlp sentence embedding semantic retrieval evaluation"
+    status: active
+    map: domains/ai-ml/natural-language-processing/map.yaml
+  - id: recommender-systems
+    description: "recommender-systems model engineering"
+    triggers:
+      - "recommender ips propensity logged bandit policy"
+      - "cold start recommender catalog coverage fallback"
+      - "ranking recommender ndcg exposure position bias"
+      - "recommender retrieval recall at k cold users"
+      - "recommender candidate generation recall evaluation"
+      - "recommender systems"
+      - "recommender learning to rank online safeguards"
+      - "recommender cold start exploration policy"
+      - "recommender counterfactual offline online evaluation"
+    status: active
+    map: domains/ai-ml/recommender-systems/map.yaml
+  - id: reinforcement-learning
+    description: "reinforcement-learning model engineering"
+    triggers:
+      - "rl constrained exploration action abort policy"
+      - "rl reward hacking proxy metric constraint testing"
+      - "offline reinforcement learning importance weight effective sample size"
+      - "reinforcement learning offline policy evaluation support"
+      - "reinforcement learning"
+      - "reinforcement learning reward model specification"
+      - "reinforcement learning safe exploration budget"
+    status: active
+    map: domains/ai-ml/reinforcement-learning/map.yaml
+  - id: multimodal-ai
+    description: "multimodal-ai model engineering"
+    triggers:
+      - "audio video caption timestamp synchronization drift"
+      - "image generation prompt adherence human preference safety"
+      - "vision language model hallucinated objects grounding"
+      - "multimodal vision language grounding evaluation"
+      - "multimodal ai"
+      - "multimodal image generation fidelity evaluation"
+      - "multimodal audio video text temporal alignment"
+    status: active
+    map: domains/ai-ml/multimodal-ai/map.yaml

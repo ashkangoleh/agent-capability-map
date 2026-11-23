@@ -1,0 +1,50 @@
+schema_version: 1
+id: foundations
+kind: skill-registry
+skills:
+  - id: data-engineering-foundations-lifecycle
+    path: .agents/skills/data/data-engineering/foundations/data-engineering-foundations-lifecycle/SKILL.md
+    description: "Design an end-to-end data engineering lifecycle from acquisition to governed, reliable data products."
+    triggers:
+      - "data engineering lifecycle"
+    excludes: []
+    status: active
+  - id: enterprise-data-modeling-pattern-selection
+    path: .agents/skills/data/data-engineering/foundations/enterprise-data-modeling-pattern-selection/SKILL.md
+    description: "Select normalized, dimensional, Data Vault and wide-table modeling patterns from business grain and query requirements."
+    triggers:
+      - "enterprise data modeling patterns"
+    excludes: []
+    status: active
+  - id: data-vault-2-modeling
+    path: .agents/skills/data/data-engineering/foundations/data-vault-2-modeling/SKILL.md
+    description: "Design Data Vault 2.0 hubs, links, satellites, hash keys, effectivity and PIT structures."
+    triggers:
+      - "data vault 2.0 modeling"
+    excludes: []
+    status: active
+  - id: bitemporal-event-data-modeling
+    path: .agents/skills/data/data-engineering/foundations/bitemporal-event-data-modeling/SKILL.md
+    description: "Model valid-time and system-time history for reproducible as-of queries and retroactive corrections."
+    triggers:
+      - "bitemporal data modeling"
+    excludes: []
+    status: active
+  - id: python-data-engineering-runtime-performance
+    path: .agents/skills/data/data-engineering/foundations/python-data-engineering-runtime-performance/SKILL.md
+    description: "Build maintainable Python data pipelines with bounded memory, typed interfaces, async I/O and reproducible packaging."
+    triggers:
+      - "python data engineering runtime"
+    excludes: []
+    status: active
+  - id: data-engineering-implementation
+    path: .agents/skills/data/data-engineering/foundations/data-engineering-implementation/SKILL.md
+    description: "General data pipeline design fallback when the request does not identify a specific engine, connector or operational task."
+    triggers:
+      - "data engineering overview"
+      - "مرور کلی مهندسی داده"
+      - "data pipeline architecture"
+      - "data engineering pipeline architecture"
+      - "generic etl pipeline"
+    excludes: []
+    status: active

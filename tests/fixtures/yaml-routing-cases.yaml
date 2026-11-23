@@ -1,0 +1,2251 @@
+schema_version: 1
+cases:
+  - id: pyspark-bootstrap
+    # Initial English routing fixture.
+    request: Create a new PySpark project
+    status: matched
+    skill: pyspark-project-bootstrap
+  - id: pyspark-code
+    request: Write PySpark DataFrame joins
+    status: matched
+    skill: pyspark-transformations
+  - id: pyspark-optimization
+    request: Diagnose PySpark shuffle and spill
+    status: matched
+    skill: spark-performance-diagnostics
+  - id: spark-api-ambiguous
+    request: Create a Spark project
+    status: needs_clarification
+  - id: airflow
+    request: Create an Airflow DAG with retries
+    status: matched
+    skill: airflow-dag-engineering
+  - id: kafka
+    request: Review Kafka consumer offsets and ordering
+    status: matched
+    skill: kafka-streaming-reliability
+  - id: data-warehouse
+    request: Optimize Trino federation pushdown and EXPLAIN
+    status: matched
+    skill: trino-federated-query-optimization
+  - id: product-prd
+    request: Write a product PRD
+    status: matched
+    skill: product-discovery-prd
+  - id: marketing-campaign
+    request: Create marketing campaign strategy
+    status: matched
+    skill: marketing-strategy-campaign
+  - id: seo-technical
+    request: Audit technical SEO canonical tags
+    status: matched
+    skill: seo-audit-strategy
+  - id: kubernetes
+    request: Review a Kubernetes Helm upgrade
+    status: matched
+    skill: kubernetes-rollout-safety
+  - id: agent-authoring
+    request: Create an agent skill registry
+    status: matched
+    skill: skill-authoring-validation
+  - id: business
+    request: Compare a business case with unit economics
+    status: matched
+    skill: business-strategy-analysis
+  - id: research
+    request: Fact check this evidence claim
+    status: matched
+    skill: evidence-research
+  - id: legal-no-skill
+    request: Analyze legal compliance questions
+    status: unavailable
+  - id: science-no-skill
+    request: Analyze chemistry experiments
+    status: unavailable
+  - id: unmatched
+    request: Unmapped zqvjkbx domain intent
+    status: unmatched
+  - id: cross-domain
+    request: Create a PySpark project on Kubernetes
+    status: needs_clarification
+  - id: near-miss-api-seo
+    request: Implement an API endpoint that emits SEO metadata
+    status: matched
+    skill: software-engineering-implementation
+
+  - id: persian-pyspark-project
+    request: میخوام یک پروژه PySpark بسازم
+    status: matched
+    skill: pyspark-project-bootstrap
+  - id: persian-pyspark-transforms
+    request: یک کد PySpark برای جوین بنویس
+    status: matched
+    skill: pyspark-transformations
+  - id: persian-spark-api-ambiguous
+    request: میخوام یک پروژه اسپارک بسازم
+    status: needs_clarification
+  - id: dbt-incremental
+    request: Design a dbt incremental model with merge and unique_key
+    status: matched
+    skill: dbt-incremental-modeling
+  - id: data-quality
+    request: Create a data quality contract for daily orders
+    status: matched
+    skill: data-quality-contracts
+  - id: pipeline-backfill
+    request: Plan a pipeline backfill recovery for missing dates
+    status: matched
+    skill: pipeline-backfill-recovery
+  - id: spark-structured-streaming
+    request: Implement a PySpark structured streaming job with watermarks
+    status: matched
+    skill: spark-structured-streaming
+  - id: kubernetes-rollout
+    request: Plan a Kubernetes rollout with canary health checks
+    status: matched
+    skill: kubernetes-rollout-safety
+  - id: product-experiment
+    request: Design a product A/B test with guardrail metrics
+    status: matched
+    skill: product-experiment-design
+  - id: product-metrics
+    request: Define product analytics activation metric and retention
+    status: matched
+    skill: product-metrics-instrumentation
+  - id: marketing-measurement
+    request: Implement GA4 event tracking for marketing conversions
+    status: matched
+    skill: marketing-measurement-attribution
+  - id: seo-indexability
+    request: Diagnose canonical mismatch on indexed pages
+    status: matched
+    skill: seo-indexability-diagnostics
+  - id: seo-structured-data
+    request: Validate structured data validation for product pages
+    status: matched
+    skill: seo-structured-data-validation
+  - id: agent-evaluation
+    request: Design an agent evaluation benchmark for tool routing
+    status: matched
+    skill: agent-evaluation-suite
+  - id: content-editorial
+    request: Prepare a content strategy editorial brief for a product launch
+    status: matched
+    skill: content-editorial-brief
+  - id: security-threat-model
+    request: "Review application security threat modeling for an API"
+    status: matched
+    skill: security-threat-model-review
+  - id: recruiting-scorecard
+    request: "Create a recruiting interview scorecard"
+    status: matched
+    skill: recruiting-interview-scorecard
+  - id: curriculum-outcomes
+    request: "Design curriculum learning outcomes assessment"
+    status: matched
+    skill: curriculum-outcomes-assessment
+  - id: budget-scenarios
+    request: "Build budgeting cash flow scenarios"
+    status: matched
+    skill: financial-budget-scenarios
+  - id: legal-evidence
+    request: "Research a legal memorandum with official citations"
+    status: matched
+    skill: jurisdictional-legal-source-review
+  - id: public-health-evidence
+    request: "Review public health research evidence"
+    status: matched
+    skill: public-health-evidence-review
+  - id: science-experiment
+    request: "Review experimental science protocol"
+    status: matched
+    skill: scientific-experiment-review
+  - id: ecommerce-catalog
+    request: "Audit ecommerce product listing variants"
+    status: matched
+    skill: ecommerce-product-catalog-audit
+  - id: sales-forecast
+    request: "Audit sales pipeline forecast quality"
+    status: matched
+    skill: sales-pipeline-forecast-audit
+  - id: customer-support-kb
+    request: "Design customer support knowledge base workflow"
+    status: matched
+    skill: customer-support-knowledge-design
+  - id: podcast-brief
+    request: "Write a podcast production brief"
+    status: matched
+    skill: podcast-production-brief
+  - id: game-design
+    request: "Design a game design prototype"
+    status: matched
+    skill: game-design-prototype-plan
+  - id: manufacturing-quality
+    request: "Investigate manufacturing quality defect"
+    status: matched
+    skill: manufacturing-quality-investigation
+  - id: supply-demand
+    request: "Plan supply chain demand forecasting"
+    status: matched
+    skill: supply-chain-demand-planning
+  - id: bim-coordination
+    request: "Review BIM IFC schema coordination"
+    status: matched
+    skill: construction-bim-data-coordination
+  - id: carbon-inventory
+    request: "Prepare carbon accounting inventory boundaries"
+    status: matched
+    skill: carbon-inventory-boundary-review
+  - id: agri-data
+    request: "Audit agriculture field survey data"
+    status: matched
+    skill: agriculture-field-data-quality
+  - id: public-policy
+    request: "Evaluate public policy intervention"
+    status: matched
+    skill: public-policy-program-evaluation
+  - id: travel-planning
+    request: "Plan travel planning itinerary"
+    status: matched
+    skill: travel-itinerary-source-review
+  - id: fitness-training
+    request: "Create fitness training progression"
+    status: matched
+    skill: sports-training-evidence-plan
+  - id: personal-productivity
+    request: "Organize personal productivity workflow"
+    status: matched
+    skill: personal-workflow-planning
+  - id: robotics-mapped
+    request: "Analyze robotics robot control"
+    status: matched
+    skill: robotics-ros2-interface-review
+  - id: telecom-mapped
+    request: "Analyze telecommunications radio access"
+    status: unavailable
+  - id: aerospace-mapped
+    request: "Analyze aerospace avionics"
+    status: unavailable
+  - id: social-science-mapped
+    request: "Review sociology social sciences"
+    status: unavailable
+  - id: humanities-mapped
+    request: "Study humanities philosophy"
+    status: unavailable
+  - id: environment-mapped
+    request: "Evaluate environmental science ecology"
+    status: unavailable
+  - id: real-estate-mapped
+    request: "Analyze real estate property analytics"
+    status: unavailable
+  - id: nonprofit-mapped
+    request: "Design nonprofit fundraising plan"
+    status: unavailable
+  - id: robotics-ros2
+    request: "Review ROS2 robot control QoS"
+    status: matched
+    skill: robotics-ros2-interface-review
+  - id: telecom-network-change
+    request: "Plan a telecom network change review"
+    status: matched
+    skill: telecom-network-change-review
+  - id: aerospace-requirements
+    request: "Create aerospace requirements traceability"
+    status: matched
+    skill: aerospace-requirements-traceability
+  - id: social-survey
+    request: "Create survey research design in social sciences"
+    status: matched
+    skill: social-science-survey-quality
+  - id: humanities-history
+    request: "Review humanities historical research"
+    status: matched
+    skill: humanities-primary-source-critique
+  - id: environment-biodiversity
+    request: "Audit biodiversity occurrence data for environmental science"
+    status: matched
+    skill: biodiversity-observation-quality
+  - id: real-estate-due-diligence
+    request: "Perform real estate property due diligence"
+    status: matched
+    skill: real-estate-due-diligence
+  - id: nonprofit-grant
+    request: "Prepare nonprofit grant proposal"
+    status: matched
+    skill: nonprofit-grant-evidence-plan
+  - id: de-deep-flink-checkpoint
+    request: "Recover Flink checkpoint state from savepoint"
+    status: matched
+    skill: flink-checkpoint-savepoint-recovery
+  - id: de-deep-flink-sql-eventtime
+    request: "Write Flink SQL event time watermark window query"
+    status: matched
+    skill: flink-sql-event-time-modeling
+  - id: de-deep-beam-portability
+    request: "Design Apache Beam runner portable pipeline"
+    status: matched
+    skill: beam-runner-portability
+  - id: de-deep-spark-scala
+    request: "Create a Spark Scala DataFrame job"
+    status: matched
+    skill: spark-scala-job-engineering
+  - id: de-deep-kafka-rebalance
+    request: "Fix Kafka consumer rebalance and offset reset"
+    status: matched
+    skill: kafka-consumer-rebalance-replay
+  - id: de-deep-kafka-connect
+    request: "Deploy a Kafka Connect CDC connector"
+    status: matched
+    skill: kafka-connect-cdc-design
+  - id: de-deep-debezium-bootstrap
+    request: "Plan a Debezium CDC snapshot with log offsets"
+    status: matched
+    skill: debezium-cdc-bootstrap
+  - id: de-deep-airflow-backfill
+    request: "Schedule Airflow backfill for data intervals"
+    status: matched
+    skill: airflow-backfill-scheduling
+  - id: de-deep-dagster-assets
+    request: "Design Dagster assets with partitions"
+    status: matched
+    skill: dagster-asset-partition-orchestration
+  - id: de-deep-prefect-flow
+    request: "Create a Prefect flow with task retries"
+    status: matched
+    skill: prefect-flow-reliability
+  - id: de-deep-openlineage
+    request: "Instrument OpenLineage data lineage events"
+    status: matched
+    skill: openlineage-metadata-instrumentation
+  - id: de-deep-iceberg-schema
+    request: "Design Iceberg schema evolution and partition transforms"
+    status: matched
+    skill: iceberg-table-schema-partition-evolution
+  - id: de-deep-iceberg-maintenance
+    request: "Plan Iceberg compaction and snapshot expiration"
+    status: matched
+    skill: iceberg-compaction-retention
+  - id: de-deep-delta-cdf
+    request: "Implement Delta Lake merge and change data feed"
+    status: matched
+    skill: delta-lake-merge-change-feed
+  - id: de-deep-hudi-mor
+    request: "Compare Apache Hudi MOR and COW table design"
+    status: matched
+    skill: hudi-cow-mor-table-design
+  - id: de-deep-trino-federation
+    request: "Optimize Trino federation pushdown and EXPLAIN"
+    status: matched
+    skill: trino-federated-query-optimization
+  - id: de-deep-duckdb-parquet
+    request: "Use DuckDB Parquet transformations and joins"
+    status: matched
+    skill: duckdb-parquet-transformation
+  - id: de-deep-starrocks-streamload
+    request: "Fix StarRocks Stream Load publish timeout"
+    status: matched
+    skill: starrocks-stream-load-transaction
+  - id: de-deep-starrocks-pk
+    request: "Design StarRocks Primary Key CDC upsert behavior"
+    status: matched
+    skill: starrocks-primary-key-cdc
+  - id: de-deep-dbt-snapshot
+    request: "Build a dbt snapshot for SCD2 history"
+    status: matched
+    skill: dbt-snapshot-scd2
+  - id: de-deep-dimensional-model
+    request: "Design dimensional modeling with fact table grain"
+    status: matched
+    skill: dimensional-modeling-grain
+  - id: de-deep-data-observability
+    request: "Define data observability freshness SLO"
+    status: matched
+    skill: data-observability-freshness-slo
+  - id: de-deep-parquet-layout
+    request: "Fix Parquet small files and row groups"
+    status: matched
+    skill: parquet-file-layout-tuning
+  - id: de-deep-data-platform-arch
+    request: "Review multi engine data platform architecture"
+    status: matched
+    skill: data-platform-architecture-review
+  - id: de-nearmiss-dbt-generic
+    request: "Design a dbt model with SQL transformations"
+    status: matched
+    skill: data-engineering-implementation
+  - id: de-nearmiss-trino-generic
+    request: "Design a Trino data pipeline"
+    status: needs_clarification
+  - id: de-nearmiss-kafka-base
+    request: "Review Kafka consumer offsets and ordering"
+    status: matched
+    skill: kafka-streaming-reliability
+  - id: de-nearmiss-airflow-basic
+    request: "Create an Airflow DAG with retries"
+    status: matched
+    skill: airflow-dag-engineering
+  - id: de-nearmiss-spark-unspecified
+    request: "Create a Spark project"
+    status: needs_clarification
+  - id: de-nearmiss-metadata-mapped
+    request: "Research data catalog metadata taxonomy"
+    status: needs_clarification
+  - id: de-engine-ray-data
+    request: "Build a Ray Data Parquet processing pipeline"
+    status: matched
+    skill: ray-data-pipeline-engineering
+  - id: de-engine-argo-workflows
+    request: "Plan an Argo Workflows CronWorkflow with retries"
+    status: matched
+    skill: argo-workflows-data-orchestration
+  - id: de-engine-pulsar-subscription
+    request: "Review Apache Pulsar subscription redelivery"
+    status: matched
+    skill: pulsar-subscription-replay
+  - id: de-engine-rabbitmq-consumer
+    request: "Design RabbitMQ quorum queue consumer acknowledgements"
+    status: matched
+    skill: rabbitmq-consumer-delivery-safety
+  - id: de-engine-kinesis-consumer
+    request: "Configure Kinesis enhanced fan-out consumer"
+    status: matched
+    skill: kinesis-stream-consumer-recovery
+  - id: ref-analytics-reconciliation-root-cause
+    request: "Investigate analytics reconciliation dashboard discrepancy"
+    status: matched
+    skill: analytics-reconciliation-root-cause
+  - id: ref-anomaly-detection-baselines
+    request: "Design an anomaly detection baseline for historical signals"
+    status: matched
+    skill: anomaly-detection-baselines
+  - id: ref-ansible-safe-automation
+    request: "Review ansible playbook idempotency"
+    status: matched
+    skill: ansible-safe-automation
+  - id: ref-argocd-gitops-drift-recovery
+    request: "Diagnose argo cd gitops sync drift"
+    status: matched
+    skill: argocd-gitops-drift-recovery
+  - id: ref-causal-inference-observational
+    request: "Evaluate causal inference in observational data"
+    status: matched
+    skill: causal-inference-observational
+  - id: ref-ci-cd-artifact-provenance
+    request: "Review ci cd supply chain artifact signing"
+    status: matched
+    skill: ci-cd-artifact-provenance
+  - id: ref-clickhouse-mergetree-operability
+    request: "Design clickhouse mergetree ingestion and compaction"
+    status: matched
+    skill: clickhouse-mergetree-operability
+  - id: ref-cloud-cost-capacity-review
+    request: "Analyze cloud cost finops capacity"
+    status: matched
+    skill: cloud-cost-capacity-review
+  - id: ref-cloud-iam-least-privilege
+    request: "Review cloud iam least privilege"
+    status: matched
+    skill: cloud-iam-least-privilege
+  - id: ref-cohort-retention-analysis
+    request: "Analyze cohort retention over calendar weeks"
+    status: matched
+    skill: cohort-retention-analysis
+  - id: ref-computer-vision-dataset-evaluation
+    request: "Validate a vision model image classification dataset"
+    status: matched
+    skill: computer-vision-dataset-evaluation
+  - id: ref-container-build-hardening
+    request: "Review container security and container build with Dockerfile security"
+    status: matched
+    skill: container-build-hardening
+  - id: ref-data-visualization-evidence
+    request: "Design data visualization with appropriate uncertainty labels"
+    status: matched
+    skill: data-visualization-evidence
+  - id: ref-datahub-metadata-catalog-governance
+    request: "Build datahub metadata catalog governance"
+    status: matched
+    skill: datahub-metadata-catalog-governance
+  - id: ref-elasticsearch-pit-bulk-extraction
+    request: "Plan Elasticsearch PIT extraction with search_after"
+    status: matched
+    skill: elasticsearch-pit-bulk-extraction
+  - id: ref-experiment-analysis-results
+    request: "Analyze experiment result analysis and guardrails"
+    status: matched
+    skill: experiment-analysis-results
+  - id: ref-feast-online-offline-feature-store
+    request: "Design feast feature store point in time retrieval"
+    status: matched
+    skill: feast-online-offline-feature-store
+  - id: ref-feature-engineering-point-in-time
+    request: "Build point in time features without leakage"
+    status: matched
+    skill: feature-engineering-point-in-time
+  - id: ref-funnel-conversion-analysis
+    request: "Review funnel conversion for user journeys"
+    status: matched
+    skill: funnel-conversion-analysis
+  - id: ref-geospatial-analysis-crs-quality
+    request: "Review geospatial analysis CRS accuracy"
+    status: matched
+    skill: geospatial-analysis-crs-quality
+  - id: ref-great-expectations-validation-gates
+    request: "Create great expectations validation suite"
+    status: matched
+    skill: great-expectations-validation-gates
+  - id: ref-helm-chart-contract-testing
+    request: "Validate a Helm chart validation schema"
+    status: matched
+    skill: helm-chart-contract-testing
+  - id: ref-huggingface-peft-finetuning
+    request: "Plan a PEFT LoRA Hugging Face fine tuning project"
+    status: matched
+    skill: huggingface-peft-finetuning
+  - id: ref-hybrid-search-ranking-design
+    request: "Tune hybrid search BM25 RRF retrieval"
+    status: matched
+    skill: hybrid-search-ranking-design
+  - id: ref-imbalanced-classification-evaluation
+    request: "Evaluate imbalanced classification precision recall"
+    status: matched
+    skill: imbalanced-classification-evaluation
+  - id: ref-kubernetes-networking-triage
+    request: "Diagnose kubernetes networkpolicy blocked traffic"
+    status: matched
+    skill: kubernetes-networking-triage
+  - id: ref-kubernetes-storage-pvc-recovery
+    request: "Recover kubernetes storage PVC pending"
+    status: matched
+    skill: kubernetes-storage-pvc-recovery
+  - id: ref-kubernetes-workload-security
+    request: "Review kubernetes workload security policy"
+    status: matched
+    skill: kubernetes-workload-security
+  - id: ref-lakekeeper-iceberg-catalog-operations
+    request: "Review lakekeeper iceberg catalog operations"
+    status: matched
+    skill: lakekeeper-iceberg-catalog-operations
+  - id: ref-linux-systemd-service-debug
+    request: "Diagnose linux systemd service restart loop"
+    status: matched
+    skill: linux-systemd-service-debug
+  - id: ref-llm-production-evaluation-suite
+    request: "Build a LLM evaluation benchmark with tool traces"
+    status: matched
+    skill: llm-production-evaluation-suite
+  - id: ref-llm-prompt-injection-boundaries
+    request: "Evaluate LLM prompt injection tool boundaries"
+    status: matched
+    skill: llm-prompt-injection-boundaries
+  - id: ref-milvus-vector-index-lifecycle
+    request: "Review Milvus vector index schema and HNSW configuration"
+    status: matched
+    skill: milvus-vector-index-lifecycle
+  - id: ref-minio-s3-object-storage-reliability
+    request: "Configure MinIO object storage multipart reliability"
+    status: matched
+    skill: minio-s3-object-storage-reliability
+  - id: ref-ml-drift-performance-monitoring
+    request: "Design mlops model drift monitoring"
+    status: matched
+    skill: ml-drift-performance-monitoring
+  - id: ref-ml-model-serving-canary
+    request: "Plan ml model serving canary with rollback"
+    status: matched
+    skill: ml-model-serving-canary
+  - id: ref-mlflow-experiment-registry-lifecycle
+    request: "Use MLflow model registry aliases"
+    status: matched
+    skill: mlflow-experiment-registry-lifecycle
+  - id: ref-model-data-label-governance
+    request: "Design dataset annotation label governance"
+    status: matched
+    skill: model-data-label-governance
+  - id: ref-model-quantization-benchmark
+    request: "Benchmark LLM model quantization accuracy"
+    status: matched
+    skill: model-quantization-benchmark
+  - id: ref-mysql-binlog-cdc-integrity
+    request: "Plan MySQL binlog CDC integrity and GTID"
+    status: matched
+    skill: mysql-binlog-cdc-integrity
+  - id: ref-network-dns-tls-diagnostics
+    request: "Troubleshoot network diagnostics DNS TLS handshake"
+    status: matched
+    skill: network-dns-tls-diagnostics
+  - id: ref-nifi-flowfile-backpressure-operations
+    request: "Tune Apache NiFi backpressure queues"
+    status: matched
+    skill: nifi-flowfile-backpressure-operations
+  - id: ref-opentelemetry-collector-pipeline
+    request: "Configure OpenTelemetry collector pipeline tracing"
+    status: matched
+    skill: opentelemetry-collector-pipeline
+  - id: ref-pandas-eda-data-profiling
+    request: "Run pandas EDA data profiling"
+    status: matched
+    skill: pandas-eda-data-profiling
+  - id: ref-platform-self-service-golden-path
+    request: "Design an internal developer platform golden path"
+    status: matched
+    skill: platform-self-service-golden-path
+  - id: ref-polaris-iceberg-catalog-operations
+    request: "Deploy Polaris Iceberg catalog operations"
+    status: matched
+    skill: polaris-iceberg-catalog-operations
+  - id: ref-polars-lazy-query-analytics
+    request: "Use Polars lazy scan with optimization"
+    status: matched
+    skill: polars-lazy-query-analytics
+  - id: ref-postgresql-logical-cdc-integrity
+    request: "Review PostgreSQL logical replication CDC"
+    status: matched
+    skill: postgresql-logical-cdc-integrity
+  - id: ref-prometheus-slo-alert-engineering
+    request: "Configure Prometheus alert rules for SLO"
+    status: matched
+    skill: prometheus-slo-alert-engineering
+  - id: ref-pytorch-distributed-training-recovery
+    request: "Recover PyTorch distributed training checkpoint"
+    status: matched
+    skill: pytorch-distributed-training-recovery
+  - id: ref-rag-evidence-sufficiency-evaluation
+    request: "Evaluate RAG evidence sufficiency and citations"
+    status: matched
+    skill: rag-evidence-sufficiency-evaluation
+  - id: ref-responsible-ai-risk-assessment
+    request: "Perform responsible AI risk assessment"
+    status: matched
+    skill: responsible-ai-risk-assessment
+  - id: ref-sklearn-leakage-free-validation
+    request: "Create scikit-learn leakage safe validation pipeline"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ref-speech-asr-evaluation
+    request: "Evaluate speech recognition ASR quality"
+    status: matched
+    skill: speech-asr-evaluation
+  - id: ref-sql-explain-plan-optimization
+    request: "Optimize SQL EXPLAIN plan join performance"
+    status: matched
+    skill: sql-explain-plan-optimization
+  - id: ref-sql-metric-definition-analysis
+    request: "Write SQL metric definitions for analytical dashboards"
+    status: matched
+    skill: sql-metric-definition-analysis
+  - id: ref-sre-incident-rca-runbook
+    request: "Prepare SRE incident postmortem after outage"
+    status: matched
+    skill: sre-incident-rca-runbook
+  - id: ref-statistical-inference-design
+    request: "Plan statistical inference confidence interval study"
+    status: matched
+    skill: statistical-inference-design
+  - id: ref-superset-dashboard-metric-governance
+    request: "Build Apache Superset dashboard with metrics"
+    status: matched
+    skill: superset-dashboard-metric-governance
+  - id: ref-terraform-state-module-safety
+    request: "Review Terraform state module drift migration"
+    status: matched
+    skill: terraform-state-module-safety
+  - id: ref-time-series-forecast-backtesting
+    request: "Design time series forecast backtesting"
+    status: matched
+    skill: time-series-forecast-backtesting
+  - id: ref-vault-secrets-rotation-operations
+    request: "Rotate Vault secrets with lease renewal"
+    status: matched
+    skill: vault-secrets-rotation-operations
+  - id: ref-vllm-inference-serving-operations
+    request: "Deploy vLLM inference serving with GPU budget"
+    status: matched
+    skill: vllm-inference-serving-operations
+
+  - id: de-expanded-data-engineering-foundations-lifecycle
+    request: "Data engineering: data engineering lifecycle"
+    status: matched
+    skill: data-engineering-foundations-lifecycle
+  - id: de-expanded-enterprise-data-modeling-pattern-selection
+    request: "Data engineering: enterprise data modeling patterns"
+    status: matched
+    skill: enterprise-data-modeling-pattern-selection
+  - id: de-expanded-data-vault-2-modeling
+    request: "Data engineering: data vault 2.0 modeling"
+    status: matched
+    skill: data-vault-2-modeling
+  - id: de-expanded-bitemporal-event-data-modeling
+    request: "Data engineering: bitemporal data modeling"
+    status: matched
+    skill: bitemporal-event-data-modeling
+  - id: de-expanded-python-data-engineering-runtime-performance
+    request: "Data engineering: python data engineering runtime"
+    status: matched
+    skill: python-data-engineering-runtime-performance
+  - id: de-expanded-airbyte-connector-operations
+    request: "Data engineering: airbyte incremental state"
+    status: matched
+    skill: airbyte-connector-operations
+  - id: de-expanded-dlt-pipeline-engineering
+    request: "Data engineering: dlt incremental pipeline"
+    status: matched
+    skill: dlt-pipeline-engineering
+  - id: de-expanded-meltano-singer-elt-engineering
+    request: "Data engineering: meltano singer state"
+    status: matched
+    skill: meltano-singer-elt-engineering
+  - id: de-expanded-api-ingestion-pagination-rate-limits
+    request: "Data engineering: api ingestion cursor pagination"
+    status: matched
+    skill: api-ingestion-pagination-rate-limits
+  - id: de-expanded-file-ingestion-landing-zone
+    request: "Data engineering: file landing zone manifest checksum"
+    status: matched
+    skill: file-ingestion-landing-zone
+  - id: de-expanded-managed-elt-fivetran-estuary-operations
+    request: "Data engineering: managed elt connector operations"
+    status: matched
+    skill: managed-elt-fivetran-estuary-operations
+  - id: de-expanded-flink-cdc-source-sink-engineering
+    request: "Data engineering: flink cdc snapshot handoff"
+    status: matched
+    skill: flink-cdc-source-sink-engineering
+  - id: de-expanded-streaming-event-time-watermark-window
+    request: "Data engineering: stream event time watermark window"
+    status: matched
+    skill: streaming-event-time-watermark-window
+  - id: de-expanded-end-to-end-delivery-semantics
+    request: "Data engineering: end to end exactly once semantics"
+    status: matched
+    skill: end-to-end-delivery-semantics
+  - id: de-expanded-schema-registry-compatibility
+    request: "Data engineering: schema registry compatibility policy"
+    status: matched
+    skill: schema-registry-compatibility
+  - id: de-expanded-kafka-streams-ksqldb-engineering
+    request: "Data engineering: kafka streams stateful join"
+    status: matched
+    skill: kafka-streams-ksqldb-engineering
+  - id: de-expanded-redpanda-event-streaming
+    request: "Data engineering: redpanda kafka api compatibility"
+    status: matched
+    skill: redpanda-event-streaming
+  - id: de-expanded-kestra-data-orchestration
+    request: "Data engineering: kestra flow orchestration"
+    status: matched
+    skill: kestra-data-orchestration
+  - id: de-expanded-temporal-durable-workflows
+    request: "Data engineering: temporal durable workflow"
+    status: matched
+    skill: temporal-durable-workflows
+  - id: de-expanded-flyte-kubeflow-pipeline-orchestration
+    request: "Data engineering: flyte kubeflow pipeline"
+    status: matched
+    skill: flyte-kubeflow-pipeline-orchestration
+  - id: de-expanded-sqlmesh-stateful-transformations
+    request: "Data engineering: sqlmesh plan backfill"
+    status: matched
+    skill: sqlmesh-stateful-transformations
+  - id: de-expanded-dataform-warehouse-transformations
+    request: "Data engineering: dataform incremental assertions"
+    status: matched
+    skill: dataform-warehouse-transformations
+  - id: de-expanded-apache-hop-etl-operations
+    request: "Data engineering: apache hop etl pipeline"
+    status: matched
+    skill: apache-hop-etl-operations
+  - id: de-expanded-avro-protobuf-schema-engineering
+    request: "Data engineering: avro protobuf schema evolution"
+    status: matched
+    skill: avro-protobuf-schema-engineering
+  - id: de-expanded-parquet-orc-columnar-storage
+    request: "Data engineering: parquet orc columnar file layout"
+    status: matched
+    skill: parquet-orc-columnar-storage
+  - id: de-expanded-arrow-flight-substrait-interoperability
+    request: "Data engineering: arrow flight substrait interoperability"
+    status: matched
+    skill: arrow-flight-substrait-interoperability
+  - id: de-expanded-hadoop-hdfs-hive-yarn-operations
+    request: "Data engineering: hadoop hdfs hive yarn operations"
+    status: matched
+    skill: hadoop-hdfs-hive-yarn-operations
+  - id: de-expanded-hbase-distributed-storage
+    request: "Data engineering: hbase region design compaction"
+    status: matched
+    skill: hbase-distributed-storage
+  - id: de-expanded-nosql-data-platform-integration
+    request: "Data engineering: nosql cdc tombstone ttl integration"
+    status: matched
+    skill: nosql-data-platform-integration
+  - id: de-expanded-cloud-object-storage-data-lake-operations
+    request: "Data engineering: cloud object storage data lake lifecycle"
+    status: matched
+    skill: cloud-object-storage-data-lake-operations
+  - id: de-expanded-cloud-warehouse-engineering
+    request: "Data engineering: cloud data warehouse engineering"
+    status: matched
+    skill: cloud-warehouse-engineering
+  - id: de-expanded-dremio-presto-query-federation
+    request: "Data engineering: dremio presto query federation"
+    status: matched
+    skill: dremio-presto-query-federation
+  - id: de-expanded-apache-pinot-druid-realtime-olap
+    request: "Data engineering: pinot druid realtime olap"
+    status: matched
+    skill: apache-pinot-druid-realtime-olap
+  - id: de-expanded-apache-doris-olap-engineering
+    request: "Data engineering: apache doris unique key model"
+    status: matched
+    skill: apache-doris-olap-engineering
+  - id: de-expanded-opensearch-analytics-index-engineering
+    request: "Data engineering: opensearch bulk index lifecycle"
+    status: matched
+    skill: opensearch-analytics-index-engineering
+  - id: de-expanded-soda-data-quality-engineering
+    request: "Data engineering: soda data quality scans"
+    status: matched
+    skill: soda-data-quality-engineering
+  - id: de-expanded-deequ-data-quality-at-scale
+    request: "Data engineering: deequ spark data quality"
+    status: matched
+    skill: deequ-data-quality-at-scale
+  - id: de-expanded-pandera-dataframe-validation
+    request: "Data engineering: pandera dataframe schema validation"
+    status: matched
+    skill: pandera-dataframe-validation
+  - id: de-expanded-data-contract-odcs-engineering
+    request: "Data engineering: open data contract standard odcs"
+    status: matched
+    skill: data-contract-odcs-engineering
+  - id: de-expanded-data-access-control-masking
+    request: "Data engineering: data access control masking"
+    status: matched
+    skill: data-access-control-masking
+  - id: de-expanded-privacy-preserving-data-engineering
+    request: "Data engineering: privacy preserving data engineering"
+    status: matched
+    skill: privacy-preserving-data-engineering
+  - id: de-expanded-data-retention-lifecycle-governance
+    request: "Data engineering: data retention lifecycle governance"
+    status: matched
+    skill: data-retention-lifecycle-governance
+  - id: de-expanded-data-pipeline-testing-ci-cd
+    request: "Data engineering: data pipeline testing ci cd"
+    status: matched
+    skill: data-pipeline-testing-ci-cd
+  - id: de-expanded-data-schema-migration-release-management
+    request: "Data engineering: data schema migration release"
+    status: matched
+    skill: data-schema-migration-release-management
+  - id: de-expanded-end-to-end-pipeline-reliability
+    request: "Data engineering: end to end pipeline reliability"
+    status: matched
+    skill: end-to-end-pipeline-reliability
+  - id: de-expanded-transactional-outbox-dlq-replay
+    request: "Data engineering: transactional outbox dlq replay"
+    status: matched
+    skill: transactional-outbox-dlq-replay
+  - id: de-expanded-data-platform-backup-disaster-recovery
+    request: "Data engineering: data platform disaster recovery"
+    status: matched
+    skill: data-platform-backup-disaster-recovery
+  - id: de-expanded-distributed-query-engine-performance
+    request: "Data engineering: distributed query engine performance"
+    status: matched
+    skill: distributed-query-engine-performance
+  - id: de-expanded-data-platform-cost-capacity-engineering
+    request: "Data engineering: data platform cost capacity"
+    status: matched
+    skill: data-platform-cost-capacity-engineering
+  - id: de-expanded-aws-data-platform-engineering
+    request: "Data engineering: aws data platform engineering"
+    status: matched
+    skill: aws-data-platform-engineering
+  - id: de-expanded-gcp-data-platform-engineering
+    request: "Data engineering: gcp data platform engineering"
+    status: matched
+    skill: gcp-data-platform-engineering
+  - id: de-expanded-azure-data-platform-engineering
+    request: "Data engineering: azure data platform engineering"
+    status: matched
+    skill: azure-data-platform-engineering
+  - id: de-expanded-reverse-etl-data-activation
+    request: "Data engineering: reverse etl data activation"
+    status: matched
+    skill: reverse-etl-data-activation
+  - id: de-expanded-data-serving-api-design
+    request: "Data engineering: data serving api design"
+    status: matched
+    skill: data-serving-api-design
+  - id: de-expanded-apache-paimon-streaming-lakehouse
+    request: "Data engineering: apache paimon streaming lakehouse"
+    status: matched
+    skill: apache-paimon-streaming-lakehouse
+  - id: de-expanded-lakehouse-catalog-ecosystem-interoperability
+    request: "Data engineering: lakehouse catalog interoperability"
+    status: matched
+    skill: lakehouse-catalog-ecosystem-interoperability
+  - id: de-expanded-open-table-format-selection
+    request: "Data engineering: open table format selection"
+    status: matched
+    skill: open-table-format-selection
+  - id: de-expanded-multi-engine-data-platform-interoperability
+    request: "Data engineering: multi engine data platform interoperability"
+    status: matched
+    skill: multi-engine-data-platform-interoperability
+  - id: de-expanded-data-mesh-data-product-architecture
+    request: "Data engineering: data mesh data product architecture"
+    status: matched
+    skill: data-mesh-data-product-architecture
+  - id: de-expanded-medallion-lambda-kappa-architecture
+    request: "Data engineering: medallion lambda kappa architecture"
+    status: matched
+    skill: medallion-lambda-kappa-architecture
+
+  - id: ds-expanded-ds-problem-framing
+    request: "Data scientist: data science problem framing"
+    status: matched
+    skill: ds-problem-framing
+  - id: ds-expanded-ds-scientific-python
+    request: "Data scientist: scientific python numerical computing"
+    status: matched
+    skill: ds-scientific-python
+  - id: ds-expanded-ds-r-statistics
+    request: "Data scientist: r statistical computing workflow"
+    status: matched
+    skill: ds-r-statistics
+  - id: ds-expanded-ds-jupyter-reproducibility
+    request: "Data scientist: jupyter notebook reproducibility"
+    status: matched
+    skill: ds-jupyter-reproducibility
+  - id: ds-expanded-ds-power-sample-size
+    request: "Data scientist: statistical power sample size"
+    status: matched
+    skill: ds-power-sample-size
+  - id: ds-expanded-ds-bayesian-pymc-stan
+    request: "Data scientist: bayesian modeling pymc stan"
+    status: matched
+    skill: ds-bayesian-pymc-stan
+  - id: ds-expanded-ds-missing-data
+    request: "Data scientist: missing data mechanism imputation"
+    status: matched
+    skill: ds-missing-data
+  - id: ds-expanded-ds-ab-experimentation
+    request: "Data scientist: ab test guardrail analysis"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-expanded-ds-causal-inference
+    request: "causal inference sensitivity analysis"
+    status: matched
+    skill: ds-causal-inference
+  - id: ds-expanded-ds-gradient-boosting
+    request: "Data scientist: xgboost lightgbm catboost modeling"
+    status: matched
+    skill: ds-gradient-boosting
+  - id: ds-expanded-ds-model-calibration
+    request: "Data scientist: model calibration threshold analysis"
+    status: matched
+    skill: ds-model-calibration
+  - id: ds-expanded-ds-shap-explainability
+    request: "Data scientist: model explainability shap"
+    status: matched
+    skill: ds-shap-explainability
+  - id: ds-expanded-ds-clustering-evaluation
+    request: "Data scientist: clustering segmentation evaluation"
+    status: matched
+    skill: ds-clustering-evaluation
+  - id: ds-expanded-ds-optuna-search
+    request: "Data scientist: optuna hyperparameter optimization"
+    status: matched
+    skill: ds-optuna-search
+  - id: ds-expanded-ds-survival-analysis
+    request: "Data scientist: survival analysis censoring"
+    status: matched
+    skill: ds-survival-analysis
+  - id: ds-expanded-ds-hierarchical-forecasting
+    request: "Data scientist: hierarchical time series reconciliation"
+    status: matched
+    skill: ds-hierarchical-forecasting
+  - id: ds-expanded-ds-recommender-evaluation
+    request: "Data scientist: recommender offline ranking evaluation"
+    status: matched
+    skill: ds-recommender-evaluation
+  - id: ds-expanded-ds-graph-science
+    request: "Data scientist: graph network science analysis"
+    status: matched
+    skill: ds-graph-science
+  - id: ds-expanded-ds-geospatial-statistics
+    request: "Data scientist: geospatial statistical modeling"
+    status: matched
+    skill: ds-geospatial-statistics
+  - id: ds-expanded-ds-monte-carlo
+    request: "Data scientist: monte carlo simulation uncertainty"
+    status: matched
+    skill: ds-monte-carlo
+  - id: ds-expanded-ds-operations-research
+    request: "Data scientist: operations research optimization"
+    status: matched
+    skill: ds-operations-research
+  - id: ds-expanded-ds-classical-nlp
+    request: "Data scientist: classical text mining nlp"
+    status: matched
+    skill: ds-classical-nlp
+
+  - id: ds-specialist-robust-nonparametric-inference
+    request: "Data scientist: robust nonparametric inference permutation test bootstrap confidence interval"
+    status: matched
+    skill: ds-robust-nonparametric-inference
+  - id: ds-specialist-multiple-testing-control
+    request: "Data scientist: multiple hypothesis testing FDR false discovery rate correction"
+    status: matched
+    skill: ds-multiple-testing-control
+  - id: ds-specialist-survey-sampling-design
+    request: "Data scientist: complex survey sampling weights stratified cluster survey variance"
+    status: matched
+    skill: ds-survey-sampling-design
+  - id: ds-specialist-conformal-prediction
+    request: "Data scientist: conformal prediction intervals and distribution free prediction sets"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-specialist-fairness-subgroup-evaluation
+    request: "Data scientist: fairness subgroup evaluation equalized odds demographic parity"
+    status: matched
+    skill: ds-fairness-subgroup-evaluation
+  - id: ds-specialist-doubleml-causal-estimation
+    request: "Data scientist: double machine learning causal estimation with orthogonal scores"
+    status: matched
+    skill: ds-doubleml-causal-estimation
+  - id: ds-specialist-panel-econometrics
+    request: "Data scientist: panel econometrics fixed effects staggered difference in differences"
+    status: matched
+    skill: ds-panel-econometrics
+  - id: ds-specialist-sequential-experimentation
+    request: "Data scientist: sequential experimentation always valid inference"
+    status: matched
+    skill: ds-sequential-experimentation
+  - id: ds-specialist-probabilistic-forecasting
+    request: "Data scientist: probabilistic forecasting quantile prediction intervals calibration"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-specialist-intermittent-demand
+    request: "Data scientist: intermittent demand forecasting Croston SBA TSB"
+    status: matched
+    skill: ds-intermittent-demand-forecasting
+  - id: ds-specialist-multilingual-nlp
+    request: "Data scientist: multilingual NLP evaluation language stratified code switched text classification"
+    status: matched
+    skill: ds-multilingual-nlp-evaluation
+
+  - id: ds-near-miss-llm-rag-evaluation
+    request: "Evaluate RAG evidence sufficiency and hallucination risk for an LLM"
+    status: matched
+    skill: rag-evidence-sufficiency-evaluation
+  - id: ds-near-miss-feature-store
+    request: "Design an online offline feature store with point in time consistency"
+    status: matched
+    skill: feast-online-offline-feature-store
+  - id: ds-near-miss-responsible-ai
+    request: "Perform responsible AI risk assessment for a model release"
+    status: matched
+    skill: responsible-ai-risk-assessment
+  - id: ds-near-miss-fixed-horizon-ab
+    request: "Data scientist: ab test guardrail analysis fixed horizon primary metric"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-near-miss-dense-time-series
+    request: "Data scientist: time series forecast dense seasonal electricity load"
+    status: matched
+    skill: time-series-forecast-backtesting
+
+  - id: infra-expanded-opentofu-iac-state-migration
+    request: "Infrastructure: opentofu state migration"
+    status: matched
+    skill: opentofu-iac-state-migration
+  - id: infra-expanded-pulumi-iac-engineering
+    request: "Infrastructure: pulumi infrastructure as code"
+    status: matched
+    skill: pulumi-iac-engineering
+  - id: infra-expanded-packer-image-lifecycle
+    request: "Infrastructure: packer machine image lifecycle"
+    status: matched
+    skill: packer-image-lifecycle
+  - id: infra-expanded-flux-gitops-reconciliation
+    request: "Infrastructure: flux gitops reconciliation"
+    status: matched
+    skill: flux-gitops-reconciliation
+  - id: infra-expanded-ci-cd-release-engineering
+    request: "Infrastructure: ci cd release engineering"
+    status: matched
+    skill: ci-cd-release-engineering
+  - id: infra-expanded-devsecops-security-gates
+    request: "Infrastructure: devsecops security gates"
+    status: matched
+    skill: devsecops-security-gates
+  - id: infra-expanded-policy-as-code-opa-kyverno
+    request: "Infrastructure: policy as code opa kyverno"
+    status: matched
+    skill: policy-as-code-opa-kyverno
+  - id: infra-expanded-runtime-security-falco
+    request: "Infrastructure: falco runtime security detection"
+    status: matched
+    skill: runtime-security-falco
+  - id: infra-expanded-container-image-signing-sigstore
+    request: "Infrastructure: sigstore cosign image signing"
+    status: matched
+    skill: container-image-signing-sigstore
+  - id: infra-expanded-software-supply-chain-slsa-sbom
+    request: "slsa provenance attestation"
+    status: matched
+    skill: software-supply-chain-slsa-sbom
+  - id: infra-expanded-secrets-workload-identity-spiffe
+    request: "Infrastructure: spiffe workload identity"
+    status: matched
+    skill: secrets-workload-identity-spiffe
+  - id: infra-expanded-sre-slo-error-budget
+    request: "Infrastructure: sre slo error budget"
+    status: matched
+    skill: sre-slo-error-budget
+  - id: infra-expanded-sre-capacity-load-testing
+    request: "Infrastructure: sre capacity load testing"
+    status: matched
+    skill: sre-capacity-load-testing
+  - id: infra-expanded-chaos-engineering-failure-injection
+    request: "Infrastructure: chaos engineering failure injection"
+    status: matched
+    skill: chaos-engineering-failure-injection
+  - id: infra-expanded-observability-stack-logs-traces-metrics
+    request: "Infrastructure: infrastructure observability stack"
+    status: matched
+    skill: observability-stack-logs-traces-metrics
+  - id: infra-expanded-backup-dr-restore-exercises
+    request: "Infrastructure: infrastructure backup disaster recovery"
+    status: matched
+    skill: backup-dr-restore-exercises
+  - id: infra-expanded-network-routing-bgp
+    request: "Infrastructure: network routing bgp"
+    status: matched
+    skill: network-routing-bgp
+  - id: infra-expanded-network-firewall-segmentation
+    request: "Infrastructure: network firewall segmentation"
+    status: matched
+    skill: network-firewall-segmentation
+  - id: infra-expanded-network-load-balancing-proxy
+    request: "Infrastructure: network load balancing proxy"
+    status: matched
+    skill: network-load-balancing-proxy
+  - id: infra-expanded-network-vpn-wireguard
+    request: "Infrastructure: wireguard vpn routing"
+    status: matched
+    skill: network-vpn-wireguard
+  - id: infra-expanded-network-ebpf-observability
+    request: "Infrastructure: ebpf network observability"
+    status: matched
+    skill: network-ebpf-observability
+  - id: infra-expanded-dns-authoritative-infrastructure
+    request: "Infrastructure: authoritative dns infrastructure"
+    status: matched
+    skill: dns-authoritative-infrastructure
+  - id: infra-expanded-tls-pki-certificate-lifecycle
+    request: "Infrastructure: tls pki certificate lifecycle"
+    status: matched
+    skill: tls-pki-certificate-lifecycle
+  - id: infra-expanded-cloud-network-vpc-routing
+    request: "Infrastructure: cloud network vpc routing"
+    status: matched
+    skill: cloud-network-vpc-routing
+  - id: infra-expanded-cloud-landing-zone-multicloud
+    request: "Infrastructure: cloud landing zone architecture"
+    status: matched
+    skill: cloud-landing-zone-multicloud
+  - id: infra-expanded-finops-cost-allocation
+    request: "Infrastructure: finops cost allocation"
+    status: matched
+    skill: finops-cost-allocation
+  - id: infra-expanded-linux-kernel-performance
+    request: "Infrastructure: linux kernel performance diagnostics"
+    status: matched
+    skill: linux-kernel-performance
+  - id: infra-expanded-linux-storage-filesystems
+    request: "Infrastructure: linux storage filesystem operations"
+    status: matched
+    skill: linux-storage-filesystems
+  - id: infra-expanded-windows-server-operations
+    request: "Infrastructure: windows server operations"
+    status: matched
+    skill: windows-server-operations
+  - id: infra-expanded-virtualization-kvm-proxmox-vmware
+    request: "Infrastructure: kvm proxmox vmware virtualization"
+    status: matched
+    skill: virtualization-kvm-proxmox-vmware
+  - id: infra-expanded-storage-ceph-zfs-lvm
+    request: "Infrastructure: ceph zfs lvm storage operations"
+    status: matched
+    skill: storage-ceph-zfs-lvm
+  - id: infra-expanded-database-platform-postgres-operations
+    request: "Infrastructure: postgresql infrastructure operations"
+    status: matched
+    skill: database-platform-postgres-operations
+  - id: infra-expanded-database-platform-mysql-operations
+    request: "Infrastructure: mysql infrastructure operations"
+    status: matched
+    skill: database-platform-mysql-operations
+  - id: infra-expanded-kubernetes-cluster-upgrade-capacity
+    request: "Infrastructure: kubernetes cluster upgrade capacity"
+    status: matched
+    skill: kubernetes-cluster-upgrade-capacity
+  - id: infra-expanded-kubernetes-operator-crd-lifecycle
+    request: "Infrastructure: kubernetes operator crd lifecycle"
+    status: matched
+    skill: kubernetes-operator-crd-lifecycle
+  - id: infra-expanded-kubernetes-cni-ebpf-operations
+    request: "Infrastructure: kubernetes cni ebpf operations"
+    status: matched
+    skill: kubernetes-cni-ebpf-operations
+  - id: infra-expanded-service-mesh-istio-operations
+    request: "Infrastructure: istio service mesh operations"
+    status: matched
+    skill: service-mesh-istio-operations
+  - id: infra-expanded-platform-engineering-backstage-idp
+    request: "Infrastructure: backstage internal developer platform"
+    status: matched
+    skill: platform-engineering-backstage-idp
+  - id: infra-expanded-platform-engineering-crossplane
+    request: "Infrastructure: crossplane infrastructure control plane"
+    status: matched
+    skill: platform-engineering-crossplane
+  - id: infra-expanded-platform-engineering-karpenter-keda
+    request: "Infrastructure: karpenter keda autoscaling"
+    status: matched
+    skill: platform-engineering-karpenter-keda
+
+  - id: de-cdc-oracle-goldengate
+    request: "Configure Oracle GoldenGate Extract and Replicat with trail checkpoint recovery"
+    status: matched
+    skill: oracle-goldengate-cdc-operations
+  - id: de-cdc-sqlserver-lsn
+    request: "Design SQL Server CDC incremental extraction with LSN validity and retention cleanup"
+    status: matched
+    skill: sqlserver-cdc-change-tracking
+  - id: de-cdc-mongodb-resume
+    request: "Recover MongoDB Change Streams from a resume token after collection invalidate"
+    status: matched
+    skill: mongodb-change-streams-cdc
+  - id: de-cdc-oracle-goldengate-fa
+    request: "برای Oracle GoldenGate تنظیم Extract و Replicat و بازیابی trail را طراحی کن"
+    status: matched
+    skill: oracle-goldengate-cdc-operations
+  - id: de-cdc-sqlserver-lsn-fa
+    request: "برای SQL Server CDC استخراج افزایشی بر اساس LSN و retention را طراحی کن"
+    status: matched
+    skill: sqlserver-cdc-change-tracking
+  - id: de-cdc-mongodb-resume-fa
+    request: "بازیابی MongoDB Change Streams با resume token بعد از invalidate را طراحی کن"
+    status: matched
+    skill: mongodb-change-streams-cdc
+
+  - id: infra-specialist-hpc-gpu-compute-scheduling
+    request: "Plan Slurm GPU compute scheduling with NUMA and RDMA constraints"
+    status: matched
+    skill: hpc-gpu-compute-scheduling
+  - id: infra-specialist-os-fleet-patching-compliance
+    request: "Plan Linux Windows server patching fleet compliance and kernel lifecycle"
+    status: matched
+    skill: os-fleet-patching-compliance
+  - id: infra-specialist-unix-bsd-systems-operations
+    request: "Diagnose FreeBSD OpenBSD Unix service and storage operations"
+    status: matched
+    skill: unix-bsd-systems-operations
+  - id: infra-specialist-dhcp-ipam-network-services
+    request: "Design DHCP IPAM NTP network services with DNS integration"
+    status: matched
+    skill: dhcp-ipam-network-services
+  - id: infra-specialist-network-automation-sdn
+    request: "Automate network configuration with NetBox Nornir gNMI and OpenConfig"
+    status: matched
+    skill: network-automation-sdn
+  - id: infra-specialist-network-switching-enterprise-routing
+    request: "Troubleshoot VLAN STP LACP OSPF EVPN VXLAN switching"
+    status: matched
+    skill: network-switching-enterprise-routing
+  - id: infra-specialist-wireless-lan-network-engineering
+    request: "Design enterprise WiFi WLAN 802.1X RADIUS NAC roaming"
+    status: matched
+    skill: wireless-lan-network-engineering
+  - id: infra-specialist-cloud-architecture-reference-design
+    request: "Review hybrid cloud reference architecture and failure domains"
+    status: matched
+    skill: cloud-architecture-reference-design
+  - id: infra-specialist-aws-infrastructure-operations
+    request: "Review AWS infrastructure account guardrails and VPC endpoints"
+    status: matched
+    skill: aws-infrastructure-operations
+  - id: infra-specialist-azure-infrastructure-operations
+    request: "Design Azure subscription management and landing zone policy"
+    status: matched
+    skill: azure-infrastructure-operations
+  - id: infra-specialist-gcp-infrastructure-operations
+    request: "Design GCP organization folders and shared VPC infrastructure"
+    status: matched
+    skill: gcp-infrastructure-operations
+  - id: infra-specialist-oci-infrastructure-operations
+    request: "Review OCI tenancy compartments and VCN guardrails"
+    status: matched
+    skill: oci-infrastructure-operations
+  - id: infra-specialist-cloud-serverless-managed-runtime
+    request: "Design AWS Lambda and Cloud Run runtime limits"
+    status: matched
+    skill: cloud-serverless-managed-runtime
+  - id: infra-specialist-cloud-security-posture-governance
+    request: "Audit cloud security posture management and CNAPP findings"
+    status: matched
+    skill: cloud-security-posture-governance
+  - id: infra-specialist-configuration-management-puppet-chef-salt
+    request: "Design Puppet Chef Salt configuration management policy"
+    status: matched
+    skill: configuration-management-puppet-chef-salt
+  - id: infra-specialist-openstack-private-cloud-operations
+    request: "Operate OpenStack private cloud Nova Neutron Cinder services"
+    status: matched
+    skill: openstack-private-cloud-operations
+  - id: infra-specialist-container-runtime-operations
+    request: "Diagnose containerd CRI-O Podman runtime isolation and cgroups"
+    status: matched
+    skill: container-runtime-operations
+  - id: infra-specialist-kubernetes-multicluster-tenancy
+    request: "Design Kubernetes multi cluster fleet management and tenant isolation"
+    status: matched
+    skill: kubernetes-multicluster-tenancy
+  - id: infra-specialist-kubernetes-gateway-api-ingress
+    request: "Migrate Kubernetes ingress controllers to Gateway API"
+    status: matched
+    skill: kubernetes-gateway-api-ingress
+  - id: infra-specialist-service-discovery-control-plane-operations
+    request: "Review Consul etcd service discovery quorum and health checks"
+    status: matched
+    skill: service-discovery-control-plane-operations
+  - id: infra-specialist-infrastructure-observability-profiling
+    request: "Diagnose infrastructure continuous profiling eBPF telemetry cost"
+    status: matched
+    skill: infrastructure-observability-profiling
+  - id: infra-specialist-infrastructure-capacity-performance
+    request: "Model infrastructure capacity headroom saturation and rightsizing"
+    status: matched
+    skill: infrastructure-capacity-performance
+  - id: infra-specialist-identity-access-privileged-infrastructure
+    request: "Design infrastructure IAM PAM JIT access federation"
+    status: matched
+    skill: identity-access-privileged-infrastructure
+  - id: infra-specialist-zero-trust-network-access-engineering
+    request: "Design zero trust network access microsegmentation and continuous verification"
+    status: matched
+    skill: zero-trust-network-access-engineering
+  - id: infra-specialist-storage-san-nas-nvmeof
+    request: "Design SAN NAS Fibre Channel iSCSI NVMeoF storage multipathing"
+    status: matched
+    skill: storage-san-nas-nvmeof
+  - id: infra-specialist-object-storage-infrastructure-operations
+    request: "Operate S3 compatible object storage lifecycle replication and object lock"
+    status: matched
+    skill: object-storage-infrastructure-operations
+  - id: infra-specialist-database-ha-replication-recovery
+    request: "Plan database HA replication failover and point in time recovery"
+    status: matched
+    skill: database-ha-replication-recovery
+  - id: infra-specialist-database-nosql-cache-operations
+    request: "Operate MongoDB Redis Cassandra replication and persistence"
+    status: matched
+    skill: database-nosql-cache-operations
+  - id: infra-specialist-edge-compute-fleet-operations
+    request: "Deploy K3s edge fleet management with intermittent connectivity and OTA updates"
+    status: matched
+    skill: edge-compute-fleet-operations
+  - id: infra-specialist-cdn-edge-delivery-operations
+    request: "Tune CDN edge cache origin shield purge and cache invalidation"
+    status: matched
+    skill: cdn-edge-delivery-operations
+  - id: infra-specialist-bare-metal-provisioning-lifecycle
+    request: "Provision bare metal servers with PXE iPXE MAAS Metal3"
+    status: matched
+    skill: bare-metal-provisioning-lifecycle
+  - id: infra-specialist-server-hardware-firmware-management
+    request: "Manage server firmware BMC Redfish IPMI UEFI Secure Boot lifecycle"
+    status: matched
+    skill: server-hardware-firmware-management
+  - id: infra-specialist-datacenter-power-cooling-dcim
+    request: "Plan data center rack power cooling UPS PDU and DCIM capacity"
+    status: matched
+    skill: datacenter-power-cooling-dcim
+  - id: infra-specialist-infrastructure-architecture-decision-review
+    request: "Review infrastructure architecture NFR failure domains and ADR tradeoffs"
+    status: matched
+    skill: infrastructure-architecture-decision-review
+  - id: infra-specialist-infrastructure-asset-configuration-inventory
+    request: "Design infrastructure asset inventory CMDB discovery ownership and configuration drift"
+    status: matched
+    skill: infrastructure-asset-configuration-inventory
+
+  - id: de-specialist-apache-seatunnel
+    request: "Build an Apache SeaTunnel CDC integration from PostgreSQL to object storage"
+    status: matched
+    skill: apache-seatunnel-data-integration
+  - id: de-specialist-dask
+    request: "Optimize a Dask DataFrame distributed shuffle and worker memory"
+    status: matched
+    skill: dask-distributed-data-engineering
+  - id: de-specialist-datafusion
+    request: "Build an Apache DataFusion Arrow-native query engine with Ballista evaluation"
+    status: matched
+    skill: datafusion-arrow-query-engine
+  - id: de-specialist-spark-sdp
+    request: "Create an Apache Spark Declarative Pipelines SQL streaming table"
+    status: matched
+    skill: apache-spark-declarative-pipelines
+  - id: de-specialist-risingwave
+    request: "Design RisingWave streaming SQL materialized views with Kafka sources"
+    status: matched
+    skill: risingwave-streaming-sql-engineering
+  - id: de-specialist-materialize
+    request: "Operate Materialize streaming SQL indexes and logical timestamps"
+    status: matched
+    skill: materialize-streaming-sql-engineering
+  - id: de-specialist-fluss
+    request: "Design Apache Fluss primary-key tables and Flink lakehouse tiering"
+    status: matched
+    skill: apache-fluss-streaming-storage
+  - id: de-specialist-ducklake
+    request: "Design DuckLake snapshots and DuckDB catalog interoperability"
+    status: matched
+    skill: ducklake-lakehouse-format-engineering
+  - id: de-specialist-starrocks-olap
+    request: "Design StarRocks OLAP tables, distribution keys and materialized views"
+    status: matched
+    skill: starrocks-olap-warehouse-engineering
+  - id: de-specialist-nats
+    request: "Configure NATS JetStream durable consumers with acknowledgements and replay"
+    status: matched
+    skill: nats-jetstream-data-streaming
+  - id: de-specialist-data-migration
+    request: "Plan a warehouse data migration cutover with CDC convergence and reconciliation"
+    status: matched
+    skill: data-migration-cutover-reconciliation
+  - id: de-specialist-unstructured
+    request: "Build an unstructured PDF and binary document ingestion pipeline"
+    status: matched
+    skill: unstructured-data-ingestion-engineering
+  - id: de-specialist-snowflake
+    request: "Design Snowflake Snowpipe Streaming with Streams and Tasks"
+    status: matched
+    skill: snowflake-data-platform-engineering
+  - id: de-specialist-bigquery
+    request: "Implement BigQuery Storage Write API gRPC ingestion with stream offsets"
+    status: matched
+    skill: bigquery-data-platform-engineering
+  - id: de-specialist-redshift
+    request: "Design Redshift streaming ingestion and MPP sort/distribution keys"
+    status: matched
+    skill: redshift-data-platform-engineering
+  - id: de-specialist-databricks
+    request: "Build a Databricks Lakeflow pipeline with Unity Catalog and AUTO CDC"
+    status: matched
+    skill: databricks-lakeflow-data-engineering
+  - id: de-specialist-oci
+    request: "Design an OCI data platform using Data Flow and GoldenGate"
+    status: matched
+    skill: oci-data-platform-engineering
+  - id: de-specialist-orchestration
+    request: "Compare Mage, Apache DolphinScheduler, Luigi and Oozie for data workflows"
+    status: matched
+    skill: data-orchestration-platform-selection
+  - id: de-specialist-openmetadata
+    request: "Operate OpenMetadata metadata ingestion and column-level lineage"
+    status: matched
+    skill: openmetadata-catalog-operations
+  - id: de-generic-fallback
+    request: "Design a generic data engineering pipeline architecture"
+    status: matched
+    skill: data-engineering-implementation
+  - id: de-ambiguous-trino
+    request: "Use Trino"
+    status: needs_clarification
+  - id: de-near-miss-streaming
+    request: "Explain what streaming data means without choosing a platform"
+    status: needs_clarification
+
+  - id: de-iceberg-rest-basic
+    request: "Review Iceberg REST catalog protocol compatibility between Spark and Flink"
+    status: matched
+    skill: iceberg-rest-catalog-operations
+  - id: de-iceberg-rest-vending
+    request: "Audit Iceberg REST catalog credential vending and short-lived storage token expiry"
+    status: matched
+    skill: iceberg-rest-catalog-operations
+  - id: de-iceberg-rest-timeout
+    request: "Review Iceberg catalog commit retry after an ambiguous timeout"
+    status: matched
+    skill: iceberg-rest-catalog-operations
+  - id: de-iceberg-rest-discovery
+    request: "Validate Iceberg REST endpoint discovery before enabling catalog writes"
+    status: matched
+    skill: iceberg-rest-catalog-operations
+  - id: de-iceberg-rest-persian
+    request: "بررسی امنیت و اعتبار Iceberg REST catalog credential vending"
+    status: matched
+    skill: iceberg-rest-catalog-operations
+  - id: de-iceberg-rest-polaris
+    request: "Operate Polaris Iceberg REST catalog credential vending"
+    status: matched
+    skill: polaris-iceberg-catalog-operations
+  - id: de-iceberg-rest-lakekeeper
+    request: "Operate Lakekeeper Iceberg REST catalog credential vending"
+    status: matched
+    skill: lakekeeper-iceberg-catalog-operations
+  - id: de-iceberg-rest-schema-near-miss
+    request: "Review Iceberg schema evolution and partition changes"
+    status: matched
+    skill: iceberg-table-schema-partition-evolution
+
+  - id: de-catalog-vendor-nessie-branches
+    request: "Plan Project Nessie versioned catalog branches and protected tags"
+    status: matched
+    skill: nessie-versioned-catalog-operations
+  - id: de-catalog-vendor-nessie-conflict
+    request: "Recover Nessie branch merge conflict after a timeout"
+    status: matched
+    skill: nessie-versioned-catalog-operations
+  - id: de-catalog-vendor-nessie-rest
+    request: "Migrate a Nessie Iceberg REST client to versioned references"
+    status: matched
+    skill: nessie-versioned-catalog-operations
+  - id: de-catalog-vendor-gravitino-metalake
+    request: "Operate Apache Gravitino metalake catalogs and source permissions"
+    status: matched
+    skill: gravitino-federated-catalog-operations
+  - id: de-catalog-vendor-gravitino-federation
+    request: "Audit Gravitino federated catalog metadata and source drift"
+    status: matched
+    skill: gravitino-federated-catalog-operations
+  - id: de-catalog-vendor-gravitino-rest
+    request: "Review Gravitino Iceberg REST catalog endpoint compatibility"
+    status: matched
+    skill: gravitino-federated-catalog-operations
+  - id: de-catalog-vendor-gravitino-persian
+    request: "بررسی Apache Gravitino metalake و امنیت کاتالوگ"
+    status: matched
+    skill: gravitino-federated-catalog-operations
+
+  - id: ds-validation-underspecified-sklearn
+    request: "sklearn"
+    status: needs_clarification
+  - id: ds-validation-underspecified-scikit
+    request: "scikit-learn"
+    status: needs_clarification
+  - id: ds-validation-tool-only
+    request: "Build a scikit-learn project"
+    status: needs_clarification
+  - id: ds-validation-pipeline
+    request: "Create scikit-learn leakage safe validation pipeline"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ds-validation-grouped
+    request: "Design sklearn grouped cross validation to prevent leakage"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ds-validation-temporal
+    request: "Audit sklearn time series split label availability"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ds-validation-calendar
+    request: "Review time series cross validation leakage after delayed labels"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ds-validation-persian
+    request: "نشت داده در اعتبارسنجی مدل"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ds-validation-feature-boundary
+    request: "Build point in time features without leakage"
+    status: matched
+    skill: feature-engineering-point-in-time
+  - id: ds-validation-conformal-boundary
+    request: "Construct conformal prediction intervals with coverage checks"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-validation-group-boundary
+    request: "Design group cross validation leakage checks"
+    status: matched
+    skill: sklearn-leakage-free-validation
+  - id: ds-causal-exp-srm-assignment
+    request: "Audit sample ratio mismatch ab experiment using assignment logs"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-causal-exp-ab-integrity
+    request: "Check ab test assignment integrity before causal effect estimation"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-causal-exp-fixed-horizon
+    request: "Plan fixed horizon ab test analysis with guardrails"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-causal-exp-cluster
+    request: "Review cluster randomized experiment guardrail monitoring"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-causal-exp-persian-srm
+    request: "بررسی sample ratio mismatch ab experiment برای تخصیص کاربران"
+    status: matched
+    skill: ds-ab-experimentation
+  - id: ds-causal-exp-alpha-spending
+    request: "Plan group sequential alpha spending for interim looks"
+    status: matched
+    skill: ds-sequential-experimentation
+  - id: ds-causal-exp-continuous
+    request: "Audit continuous monitoring sequential experiment with early stopping"
+    status: matched
+    skill: ds-sequential-experimentation
+  - id: ds-causal-exp-early-stopping
+    request: "Review sequential experiment early stopping and delayed outcomes"
+    status: matched
+    skill: ds-sequential-experimentation
+  - id: ds-causal-exp-identification
+    request: "Specify causal identification assumptions before choosing DoubleML estimator"
+    status: matched
+    skill: ds-causal-inference
+  - id: ds-causal-exp-interference
+    request: "Review causal experiment design interference in marketplace A/B testing"
+    status: matched
+    skill: ds-causal-inference
+  - id: ds-causal-exp-observational-near-miss
+    request: "Evaluate causal inference in observational data"
+    status: matched
+    skill: causal-inference-observational
+  - id: ds-causal-exp-data-analysis-near-miss
+    request: "Analyze experiment result analysis and guardrails"
+    status: matched
+    skill: experiment-analysis-results
+  - id: ds-uncertainty-conformal-rank
+    request: "Audit split conformal regression finite sample quantile"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-uncertainty-conformal-marginal
+    request: "Evaluate conformal marginal coverage for regression predictions"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-uncertainty-conformal-subgroup
+    request: "Review conformal subgroup coverage under distribution shift"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-uncertainty-conformal-residual
+    request: "Compute conformal residual quantile on held out calibration"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-uncertainty-conformal-persian
+    request: "بررسی بازه پیش‌بینی کانفورمال برای پوشش داده"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-uncertainty-calibration-reliability
+    request: "Audit probability calibration reliability diagram for binary classifier"
+    status: matched
+    skill: ds-model-calibration
+  - id: ds-uncertainty-calibration-frozen
+    request: "Check calibrated classifier cv with FrozenEstimator and disjoint data"
+    status: matched
+    skill: ds-model-calibration
+  - id: ds-uncertainty-calibration-brier
+    request: "Review classifier calibration brier score and bin reliability"
+    status: matched
+    skill: ds-model-calibration
+  - id: ds-uncertainty-calibration-persian
+    request: "ارزیابی کالیبراسیون احتمال طبقه بندی و نمودار reliability"
+    status: matched
+    skill: ds-model-calibration
+  - id: ds-uncertainty-calibration-existing
+    request: "Data scientist: model calibration threshold analysis"
+    status: matched
+    skill: ds-model-calibration
+  - id: ds-uncertainty-forecast-near-miss
+    request: "Data scientist: probabilistic forecasting quantile prediction intervals calibration"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-uncertainty-parameter-near-miss
+    request: "Plan statistical inference confidence interval study"
+    status: matched
+    skill: statistical-inference-design
+  - id: ds-uncertainty-bayesian-near-miss
+    request: "Data scientist: bayesian modeling pymc stan posterior credible interval"
+    status: matched
+    skill: ds-bayesian-pymc-stan
+  - id: ds-uncertainty-conformal-existing
+    request: "Construct conformal prediction intervals with coverage checks"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-uncertainty-fairness-near-miss
+    request: "Data scientist: fairness subgroup evaluation equalized odds demographic parity"
+    status: matched
+    skill: ds-fairness-subgroup-evaluation
+  - id: ds-forecast-origin-window
+    request: "Design rolling origin forecast backtesting with delayed labels"
+    status: matched
+    skill: time-series-forecast-backtesting
+  - id: ds-forecast-origin-availability
+    request: "Audit forecast origin data availability for future covariates"
+    status: matched
+    skill: time-series-forecast-backtesting
+  - id: ds-forecast-origin-weekly
+    request: "Evaluate rolling forecasting origin for weekly sales"
+    status: matched
+    skill: time-series-forecast-backtesting
+  - id: ds-forecast-origin-persian
+    request: "بررسی rolling origin forecast برای ارزیابی زمانی"
+    status: matched
+    skill: time-series-forecast-backtesting
+  - id: ds-forecast-quantile-crossing
+    request: "Evaluate probabilistic forecasting quantile crossing for distribution predictions"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-forecast-quantile-pinball
+    request: "Calculate forecast pinball loss by horizon"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-forecast-quantile-coverage
+    request: "Audit forecast quantile coverage by horizon under shift"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-forecast-quantile-persian
+    request: "ارزیابی probabilistic forecasting quantile برای خروجی توزیع"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-forecast-hierarchy-reconciliation
+    request: "Design hierarchical forecasting reconciliation for regions and products"
+    status: matched
+    skill: ds-hierarchical-forecasting
+  - id: ds-forecast-hierarchy-coherence
+    request: "Audit hierarchical forecast coherence in country totals"
+    status: matched
+    skill: ds-hierarchical-forecasting
+  - id: ds-forecast-hierarchy-summing
+    request: "Verify hierarchical summing matrix for bottom-up forecast totals"
+    status: matched
+    skill: ds-hierarchical-forecasting
+  - id: ds-forecast-hierarchy-persian
+    request: "بررسی hierarchical forecasting reconciliation برای سطوح منطقه"
+    status: matched
+    skill: ds-hierarchical-forecasting
+  - id: ds-forecast-intermittent-croston
+    request: "Evaluate intermittent demand croston tsb obsolescence"
+    status: matched
+    skill: ds-intermittent-demand-forecasting
+  - id: ds-forecast-intermittent-stockout
+    request: "Audit sparse demand forecast stockout censoring"
+    status: matched
+    skill: ds-intermittent-demand-forecasting
+  - id: ds-forecast-intermittent-coldstart
+    request: "Review intermittent demand forecasting with cold start"
+    status: matched
+    skill: ds-intermittent-demand-forecasting
+  - id: ds-forecast-intermittent-persian
+    request: "بررسی intermittent demand croston tsb برای سفارش قطعات"
+    status: matched
+    skill: ds-intermittent-demand-forecasting
+  - id: ds-forecast-existing-probabilistic
+    request: "Data scientist: probabilistic forecasting quantile prediction intervals calibration"
+    status: matched
+    skill: ds-probabilistic-forecasting
+  - id: ds-forecast-existing-intermittent
+    request: "Data scientist: intermittent demand forecasting Croston SBA TSB"
+    status: matched
+    skill: ds-intermittent-demand-forecasting
+  - id: ds-forecast-existing-hierarchy
+    request: "Data scientist: hierarchical time series reconciliation for geographic hierarchy"
+    status: matched
+    skill: ds-hierarchical-forecasting
+  - id: ds-forecast-nearmiss-conformal
+    request: "Construct conformal prediction intervals with coverage checks"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-forecast-nearmiss-features
+    request: "Build point in time features without leakage"
+    status: matched
+    skill: feature-engineering-point-in-time
+  - id: ds-forecast-nearmiss-dense
+    request: "Data scientist: time series forecast dense seasonal electricity load"
+    status: matched
+    skill: time-series-forecast-backtesting
+  - id: ds-inference-fdr-bh
+    request: "Audit fdr benjamini hochberg multiple testing across metrics"
+    status: matched
+    skill: ds-multiple-testing-control
+  - id: ds-inference-holm
+    request: "Apply holm familywise error correction to pre-registered hypotheses"
+    status: matched
+    skill: ds-multiple-testing-control
+  - id: ds-inference-by
+    request: "Review benjamini yekutieli dependency assumptions"
+    status: matched
+    skill: ds-multiple-testing-control
+  - id: ds-inference-fdr-persian
+    request: "بررسی اصلاح چند آزمونی fdr روی فرضیه‌ها"
+    status: matched
+    skill: ds-multiple-testing-control
+  - id: ds-inference-survey-lonely
+    request: "Audit survey lonely psu variance in stratified sample"
+    status: matched
+    skill: ds-survey-sampling-design
+  - id: ds-inference-survey-design
+    request: "Evaluate survey complex sampling variance and design effects"
+    status: matched
+    skill: ds-survey-sampling-design
+  - id: ds-inference-survey-strata
+    request: "Review survey strata cluster design before population estimate"
+    status: matched
+    skill: ds-survey-sampling-design
+  - id: ds-inference-survey-persian
+    request: "بررسی طرح نمونه گیری خوشه ای survey و وزن‌ها"
+    status: matched
+    skill: ds-survey-sampling-design
+  - id: ds-inference-rubin-pool
+    request: "Validate rubin multiple imputation pooling variances"
+    status: matched
+    skill: ds-missing-data
+  - id: ds-inference-mnar
+    request: "Investigate mnar missingness sensitivity before imputation"
+    status: matched
+    skill: ds-missing-data
+  - id: ds-inference-mcar-mar
+    request: "Review missing data mcar mar mnar assumptions"
+    status: matched
+    skill: ds-missing-data
+  - id: ds-inference-imputation-persian
+    request: "بررسی تجمیع multiple imputation برآوردها"
+    status: matched
+    skill: ds-missing-data
+  - id: ds-inference-bootstrap-cluster
+    request: "Review cluster bootstrap resampling for dependent observations"
+    status: matched
+    skill: ds-robust-nonparametric-inference
+  - id: ds-inference-permutation-paired
+    request: "Plan paired permutation test exchangeability check"
+    status: matched
+    skill: ds-robust-nonparametric-inference
+  - id: ds-inference-bca
+    request: "Validate robust bootstrap bca interval with ties"
+    status: matched
+    skill: ds-robust-nonparametric-inference
+  - id: ds-inference-bayesian-rhat
+    request: "Review rank normalized rhat ess bayesian diagnostics"
+    status: matched
+    skill: ds-bayesian-pymc-stan
+  - id: ds-inference-bayesian-ppc
+    request: "Audit pymc prior posterior predictive check with low ESS"
+    status: matched
+    skill: ds-bayesian-pymc-stan
+  - id: ds-inference-bayesian-divergence
+    request: "Analyze bayesian mcmc divergence diagnostic failure"
+    status: matched
+    skill: ds-bayesian-pymc-stan
+  - id: ds-inference-nearmiss-ci
+    request: "Plan statistical inference confidence interval study"
+    status: matched
+    skill: statistical-inference-design
+  - id: ds-inference-nearmiss-conformal
+    request: "Construct conformal prediction intervals with coverage checks"
+    status: matched
+    skill: ds-conformal-prediction-uncertainty
+  - id: ds-inference-nearmiss-sequential
+    request: "Review sequential experiment early stopping and delayed outcomes"
+    status: matched
+    skill: ds-sequential-experimentation
+  - id: ds-inference-nearmiss-feature
+    request: "Build point in time features without leakage"
+    status: matched
+    skill: feature-engineering-point-in-time
+
+  - id: infra-coverage-platform-operations
+    request: "Infrastructure: platform operations readiness review for maintenance and recovery"
+    status: matched
+    skill: platform-operations
+  - id: infra-coverage-platform-operations-fa
+    request: "بررسی platform operations readiness review برای بازیابی سرویس زیرساخت"
+    status: matched
+    skill: platform-operations
+  - id: swe-hier-backend-api-implementation
+    request: "software engineering api endpoint"
+    status: matched
+    skill: software-engineering-implementation
+  - id: swe-hier-backend-integration-resilience
+    request: "software engineering service integration retry budget"
+    status: matched
+    skill: swe-backend-integration-resilience
+  - id: swe-hier-backend-persistence-transactions
+    request: "software engineering application transaction concurrency"
+    status: matched
+    skill: swe-backend-persistence-transactions
+  - id: swe-hier-backend-service-security
+    request: "software engineering backend authentication authorization design"
+    status: matched
+    skill: swe-backend-service-security
+  - id: swe-hier-developer-tools-debugging
+    request: "software engineering developer debugging reproducible crash"
+    status: matched
+    skill: swe-developer-tools-debugging
+  - id: swe-hier-developer-tools-git-workflows
+    request: "software engineering git workflow merge conflict recovery"
+    status: matched
+    skill: swe-developer-tools-git-workflows
+  - id: swe-hier-developer-tools-reproducible-environments
+    request: "software engineering reproducible dev environment toolchain"
+    status: matched
+    skill: swe-developer-tools-reproducible-environments
+  - id: swe-hier-engineering-process-estimation-planning
+    request: "software engineering software delivery estimation uncertainty"
+    status: matched
+    skill: swe-engineering-process-estimation-planning
+  - id: swe-hier-engineering-process-economics-risk
+    request: "software engineering software build versus buy economics"
+    status: matched
+    skill: swe-engineering-process-economics-risk
+  - id: swe-hier-engineering-process-engineering-adr
+    request: "software engineering engineering decision log governance"
+    status: matched
+    skill: swe-engineering-process-engineering-adr
+  - id: swe-hier-foundations-algorithms-complexity
+    request: "software engineering algorithm complexity memory bounds"
+    status: matched
+    skill: swe-foundations-algorithms-complexity
+  - id: swe-hier-foundations-numerical-correctness
+    request: "software engineering numeric precision overflow application"
+    status: matched
+    skill: swe-foundations-numerical-correctness
+  - id: swe-hier-foundations-protocol-interoperability
+    request: "software engineering binary protocol serialization compatibility"
+    status: matched
+    skill: swe-foundations-protocol-interoperability
+  - id: swe-hier-frontend-component-architecture
+    request: "software engineering react component state architecture"
+    status: matched
+    skill: swe-frontend-component-architecture
+  - id: swe-hier-frontend-accessibility
+    request: "software engineering frontend accessibility keyboard screen reader"
+    status: matched
+    skill: swe-frontend-accessibility
+  - id: swe-hier-frontend-frontend-performance
+    request: "software engineering frontend bundle web performance"
+    status: matched
+    skill: swe-frontend-frontend-performance
+  - id: swe-hier-frontend-browser-automation
+    request: "software engineering browser end to end testing"
+    status: matched
+    skill: swe-frontend-browser-automation
+  - id: swe-hier-maintenance-evolution-legacy-refactoring
+    request: "software engineering legacy refactor characterization tests"
+    status: matched
+    skill: swe-maintenance-evolution-legacy-refactoring
+  - id: swe-hier-maintenance-evolution-compatibility-migrations
+    request: "software engineering api schema backward compatibility migration"
+    status: matched
+    skill: swe-maintenance-evolution-compatibility-migrations
+  - id: swe-hier-maintenance-evolution-incident-debugging
+    request: "software engineering application incident root cause debugging"
+    status: matched
+    skill: swe-maintenance-evolution-incident-debugging
+  - id: swe-hier-mobile-development-android-delivery
+    request: "software engineering android app lifecycle architecture"
+    status: matched
+    skill: swe-mobile-development-android-delivery
+  - id: swe-hier-mobile-development-ios-delivery
+    request: "software engineering ios app state and concurrency"
+    status: matched
+    skill: swe-mobile-development-ios-delivery
+  - id: swe-hier-mobile-development-cross-platform-apps
+    request: "software engineering flutter react native mobile architecture"
+    status: matched
+    skill: swe-mobile-development-cross-platform-apps
+  - id: swe-hier-mobile-development-mobile-release
+    request: "software engineering mobile app signing store release"
+    status: matched
+    skill: swe-mobile-development-mobile-release
+  - id: swe-hier-performance-engineering-profiling
+    request: "software engineering application cpu profiling flamegraph"
+    status: matched
+    skill: swe-performance-engineering-profiling
+  - id: swe-hier-performance-engineering-load-testing
+    request: "software engineering application load test capacity modeling"
+    status: matched
+    skill: swe-performance-engineering-load-testing
+  - id: swe-hier-performance-engineering-memory-resource
+    request: "software engineering application memory leak resource lifecycle"
+    status: matched
+    skill: swe-performance-engineering-memory-resource
+  - id: swe-hier-programming-languages-python
+    request: "software engineering python typing async application"
+    status: matched
+    skill: swe-programming-languages-python
+  - id: swe-hier-programming-languages-typescript
+    request: "software engineering typescript strict type safety"
+    status: matched
+    skill: swe-programming-languages-typescript
+  - id: swe-hier-programming-languages-go
+    request: "software engineering go goroutine cancellation concurrency"
+    status: matched
+    skill: swe-programming-languages-go
+  - id: swe-hier-programming-languages-java
+    request: "software engineering java virtual threads application"
+    status: matched
+    skill: swe-programming-languages-java
+  - id: swe-hier-programming-languages-rust
+    request: "software engineering rust ownership async error handling"
+    status: matched
+    skill: swe-programming-languages-rust
+  - id: swe-hier-quality-testing-unit-testing
+    request: "software engineering unit test boundary cases"
+    status: matched
+    skill: swe-quality-testing-unit-testing
+  - id: swe-hier-quality-testing-contract-integration
+    request: "software engineering consumer driven contract testing"
+    status: matched
+    skill: swe-quality-testing-contract-integration
+  - id: swe-hier-quality-testing-property-testing
+    request: "software engineering property based fuzz testing"
+    status: matched
+    skill: swe-quality-testing-property-testing
+  - id: swe-hier-quality-testing-code-review
+    request: "software engineering code review safe refactor"
+    status: matched
+    skill: swe-quality-testing-code-review
+  - id: swe-hier-release-operations-release-readiness
+    request: "software engineering software release readiness checklist"
+    status: matched
+    skill: swe-release-operations-release-readiness
+  - id: swe-hier-release-operations-service-observability
+    request: "software engineering application tracing logging telemetry"
+    status: matched
+    skill: swe-release-operations-service-observability
+  - id: swe-hier-release-operations-deployment-recovery
+    request: "software engineering application deployment canary rollback"
+    status: matched
+    skill: swe-release-operations-deployment-recovery
+  - id: swe-hier-requirements-engineering-elicitation-specification
+    request: "software engineering software requirements elicitation specification"
+    status: matched
+    skill: swe-requirements-engineering-elicitation-specification
+  - id: swe-hier-requirements-engineering-acceptance-criteria
+    request: "software engineering software acceptance criteria scenarios"
+    status: matched
+    skill: swe-requirements-engineering-acceptance-criteria
+  - id: swe-hier-requirements-engineering-nonfunctional-requirements
+    request: "software engineering software nonfunctional slo requirements"
+    status: matched
+    skill: swe-requirements-engineering-nonfunctional-requirements
+  - id: swe-hier-software-architecture-architecture-decisions
+    request: "software engineering software architecture decision record"
+    status: matched
+    skill: swe-software-architecture-architecture-decisions
+  - id: swe-hier-software-architecture-service-boundaries
+    request: "software engineering microservice boundary consistency"
+    status: matched
+    skill: swe-software-architecture-service-boundaries
+  - id: swe-hier-software-architecture-domain-modeling
+    request: "software engineering domain driven design bounded contexts"
+    status: matched
+    skill: swe-software-architecture-domain-modeling
+  - id: swe-hier-software-architecture-system-modernization
+    request: "software engineering strangler modernization legacy migration"
+    status: matched
+    skill: swe-software-architecture-system-modernization
+  - id: swe-hier-software-design-module-api-design
+    request: "software engineering module interface cohesion design"
+    status: matched
+    skill: swe-software-design-module-api-design
+  - id: swe-hier-software-design-concurrency-correctness
+    request: "software engineering application concurrency race deadlock"
+    status: matched
+    skill: swe-software-design-concurrency-correctness
+  - id: swe-hier-software-design-patterns-tradeoffs
+    request: "software engineering software design pattern selection"
+    status: matched
+    skill: swe-software-design-patterns-tradeoffs
+  - id: swe-hier-software-security-threat-modeling
+    request: "software engineering application threat model data flow"
+    status: matched
+    skill: swe-software-security-threat-modeling
+  - id: swe-hier-software-security-authentication-authorization
+    request: "software engineering application oauth oidc authorization"
+    status: matched
+    skill: swe-software-security-authentication-authorization
+  - id: swe-hier-software-security-dependency-supply-chain
+    request: "software engineering software dependency sbom vulnerability"
+    status: matched
+    skill: swe-software-security-dependency-supply-chain
+  - id: ai-hier-llm-context-engineering
+    request: "Design and evaluate llm prompt context budgeting"
+    status: matched
+    skill: aiml-llm-context-engineering
+  - id: ai-hier-llm-structured-generation
+    request: "Design and evaluate llm json schema constrained decoding"
+    status: matched
+    skill: aiml-llm-structured-generation
+  - id: ai-hier-llm-inference-optimization
+    request: "Design and evaluate llm speculative decoding throughput profiling"
+    status: matched
+    skill: aiml-llm-inference-optimization
+  - id: ai-hier-llm-model-selection
+    request: "Design and evaluate llm model selection task benchmark"
+    status: matched
+    skill: aiml-llm-model-selection
+  - id: ai-hier-rag-chunking
+    request: "Design and evaluate rag chunk boundary evaluation"
+    status: matched
+    skill: aiml-rag-chunking
+  - id: ai-hier-rag-access-control
+    request: "Design and evaluate rag document level acl enforcement"
+    status: matched
+    skill: aiml-rag-access-control
+  - id: ai-hier-rag-reranking
+    request: "Design and evaluate rag cross encoder reranking evaluation"
+    status: matched
+    skill: aiml-rag-reranking
+  - id: ai-hier-rag-index-migrations
+    request: "Design and evaluate rag embedding reindex migration"
+    status: matched
+    skill: aiml-rag-index-migrations
+  - id: ai-hier-machine-learning-training-pipelines
+    request: "Design and evaluate ml training pipeline artifact lineage"
+    status: matched
+    skill: aiml-machine-learning-training-pipelines
+  - id: ai-hier-machine-learning-hyperparameter-tuning
+    request: "Design and evaluate ml hyperparameter search leakage prevention"
+    status: matched
+    skill: aiml-machine-learning-hyperparameter-tuning
+  - id: ai-hier-machine-learning-explainability
+    request: "Design and evaluate ml model explanation stability audit"
+    status: matched
+    skill: aiml-machine-learning-explainability
+  - id: ai-hier-machine-learning-dataset-shift
+    request: "Design and evaluate ml dataset distribution shift detection"
+    status: matched
+    skill: aiml-machine-learning-dataset-shift
+  - id: ai-hier-deep-learning-distributed-training
+    request: "Design and evaluate deep learning distributed training collective recovery"
+    status: matched
+    skill: aiml-deep-learning-distributed-training
+  - id: ai-hier-deep-learning-training-optimization
+    request: "Design and evaluate deep learning mixed precision optimizer stability"
+    status: matched
+    skill: aiml-deep-learning-training-optimization
+  - id: ai-hier-deep-learning-checkpoint-recovery
+    request: "Design and evaluate deep learning sharded checkpoint restoration"
+    status: matched
+    skill: aiml-deep-learning-checkpoint-recovery
+  - id: ai-hier-deep-learning-representation-learning
+    request: "Design and evaluate deep learning contrastive representation evaluation"
+    status: matched
+    skill: aiml-deep-learning-representation-learning
+  - id: ai-hier-mlops-continuous-training
+    request: "Design and evaluate mlops continuous training trigger design"
+    status: matched
+    skill: aiml-mlops-continuous-training
+  - id: ai-hier-mlops-model-registry-governance
+    request: "Design and evaluate ml model registry approval audit"
+    status: matched
+    skill: aiml-mlops-model-registry-governance
+  - id: ai-hier-mlops-release-gates
+    request: "Design and evaluate mlops production model release safety gate"
+    status: matched
+    skill: aiml-mlops-release-gates
+  - id: ai-hier-mlops-reproducibility
+    request: "Design and evaluate ml experiment environment reproducibility audit"
+    status: matched
+    skill: aiml-mlops-reproducibility
+  - id: ai-hier-computer-vision-detection-segmentation
+    request: "Design and evaluate computer vision instance segmentation evaluation"
+    status: matched
+    skill: aiml-computer-vision-detection-segmentation
+  - id: ai-hier-computer-vision-document-ai
+    request: "Design and evaluate document ai ocr layout evaluation"
+    status: matched
+    skill: aiml-computer-vision-document-ai
+  - id: ai-hier-computer-vision-video-perception
+    request: "Design and evaluate video action recognition temporal evaluation"
+    status: matched
+    skill: aiml-computer-vision-video-perception
+  - id: ai-hier-speech-audio-ai-speaker-diarization
+    request: "Design and evaluate speech speaker diarization overlap evaluation"
+    status: matched
+    skill: aiml-speech-audio-ai-speaker-diarization
+  - id: ai-hier-speech-audio-ai-speech-synthesis
+    request: "Design and evaluate speech text to speech intelligibility safety"
+    status: matched
+    skill: aiml-speech-audio-ai-speech-synthesis
+  - id: ai-hier-speech-audio-ai-speech-privacy
+    request: "Design and evaluate speech audio pii redaction evaluation"
+    status: matched
+    skill: aiml-speech-audio-ai-speech-privacy
+  - id: ai-hier-responsible-ai-fairness-audit
+    request: "Design and evaluate responsible ai subgroup fairness audit"
+    status: matched
+    skill: aiml-responsible-ai-fairness-audit
+  - id: ai-hier-responsible-ai-explanation-governance
+    request: "Design and evaluate responsible ai model transparency disclosure"
+    status: matched
+    skill: aiml-responsible-ai-explanation-governance
+  - id: ai-hier-responsible-ai-risk-monitoring
+    request: "Design and evaluate responsible ai postdeployment impact monitoring"
+    status: matched
+    skill: aiml-responsible-ai-risk-monitoring
+  - id: ai-hier-natural-language-processing-text-classification
+    request: "Design and evaluate nlp text classification calibration benchmark"
+    status: matched
+    skill: aiml-natural-language-processing-text-classification
+  - id: ai-hier-natural-language-processing-entity-extraction
+    request: "Design and evaluate nlp named entity extraction span evaluation"
+    status: matched
+    skill: aiml-natural-language-processing-entity-extraction
+  - id: ai-hier-natural-language-processing-multilingual-evaluation
+    request: "Design and evaluate nlp multilingual evaluation code switching"
+    status: matched
+    skill: aiml-natural-language-processing-multilingual-evaluation
+  - id: ai-hier-natural-language-processing-text-embeddings
+    request: "Design and evaluate nlp sentence embedding semantic retrieval evaluation"
+    status: matched
+    skill: aiml-natural-language-processing-text-embeddings
+  - id: ai-hier-recommender-systems-candidate-generation
+    request: "Design and evaluate recommender candidate generation recall evaluation"
+    status: matched
+    skill: aiml-recommender-systems-candidate-generation
+  - id: ai-hier-recommender-systems-ranking
+    request: "Design and evaluate recommender learning to rank online safeguards"
+    status: matched
+    skill: aiml-recommender-systems-ranking
+  - id: ai-hier-recommender-systems-cold-start
+    request: "Design and evaluate recommender cold start exploration policy"
+    status: matched
+    skill: aiml-recommender-systems-cold-start
+  - id: ai-hier-recommender-systems-offline-online-evaluation
+    request: "Design and evaluate recommender counterfactual offline online evaluation"
+    status: matched
+    skill: aiml-recommender-systems-offline-online-evaluation
+  - id: ai-hier-reinforcement-learning-offline-policy-evaluation
+    request: "Design and evaluate reinforcement learning offline policy evaluation support"
+    status: matched
+    skill: aiml-reinforcement-learning-offline-policy-evaluation
+  - id: ai-hier-reinforcement-learning-reward-design
+    request: "Design and evaluate reinforcement learning reward model specification"
+    status: matched
+    skill: aiml-reinforcement-learning-reward-design
+  - id: ai-hier-reinforcement-learning-safe-exploration
+    request: "Design and evaluate reinforcement learning safe exploration budget"
+    status: matched
+    skill: aiml-reinforcement-learning-safe-exploration
+  - id: ai-hier-multimodal-ai-vision-language-evaluation
+    request: "Design and evaluate multimodal vision language grounding evaluation"
+    status: matched
+    skill: aiml-multimodal-ai-vision-language-evaluation
+  - id: ai-hier-multimodal-ai-image-generation-evaluation
+    request: "Design and evaluate multimodal image generation fidelity evaluation"
+    status: matched
+    skill: aiml-multimodal-ai-image-generation-evaluation
+  - id: ai-hier-multimodal-ai-multimodal-alignment
+    request: "Design and evaluate multimodal audio video text temporal alignment"
+    status: matched
+    skill: aiml-multimodal-ai-multimodal-alignment

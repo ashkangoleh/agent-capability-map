@@ -1,0 +1,13 @@
+schema_version: 1
+id: podcast-rss-production
+kind: skill-registry
+skills:
+  - id: content-podcast-rss-production
+    path: .agents/skills/content/video-audio-content/content-podcast-rss-production/SKILL.md
+    description: "Check RSS 2.0 required fields stable GUID and unique episode enclosure URLs; validate editorial evidence and publication rights before use."
+    triggers:
+      - "content publishing podcast rss feed artwork episode validation"
+    excludes:
+      - "technical seo canonical audit"
+      - "marketing paid media spend pacing"
+    status: active

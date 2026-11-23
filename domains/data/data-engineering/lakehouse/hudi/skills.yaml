@@ -1,0 +1,15 @@
+schema_version: 1
+id: hudi
+kind: skill-registry
+skills:
+  - id: hudi-cow-mor-table-design
+    path: .agents/skills/data/data-engineering/lakehouse/hudi/hudi-cow-mor-table-design/SKILL.md
+    description: "Compare and implement Apache Hudi COW versus MOR tables, indexes, compaction and upserts."
+    triggers:
+      - "hudi mor"
+      - "hudi cow"
+      - "hudi table design"
+      - "hudi compaction"
+      - "apache hudi"
+    excludes: []
+    status: active

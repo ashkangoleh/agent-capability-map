@@ -1,0 +1,21 @@
+schema_version: 1
+id: agriculture
+kind: map
+children:
+  - id: precision-agriculture
+    description: "precision agriculture"
+    triggers:
+      - "agriculture field survey"
+      - "precision agriculture"
+    status: active
+    skills: domains/agriculture/skills.yaml
+  - id: food-production
+    description: "food production"
+    triggers:
+      - "food production"
+    status: mapped
+  - id: agribusiness
+    description: "agribusiness"
+    triggers:
+      - "agribusiness"
+    status: mapped

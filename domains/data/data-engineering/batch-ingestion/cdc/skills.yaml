@@ -1,0 +1,58 @@
+schema_version: 1
+id: cdc
+kind: skill-registry
+skills:
+  - id: debezium-cdc-bootstrap
+    path: .agents/skills/data/data-engineering/batch-ingestion/cdc/debezium-cdc-bootstrap/SKILL.md
+    description: "Bootstrap Debezium change data capture with log offsets, initial snapshots, schema history and restart-safe sinks."
+    triggers:
+      - "debezium"
+      - "debezium cdc"
+      - "debezium snapshot"
+      - "cdc snapshot"
+      - "change data capture"
+    excludes: []
+    status: active
+  - id: kafka-connect-cdc-design
+    path: .agents/skills/data/data-engineering/batch-ingestion/cdc/kafka-connect-cdc-design/SKILL.md
+    description: "Engineer Kafka Connect workers, source and sink connectors with CDC snapshots, offsets and reliable task recovery."
+    triggers:
+      - "kafka connect"
+      - "kafka connector"
+      - "kafka connect cdc"
+      - "kafka connect tasks"
+    excludes: []
+    status: active
+  - id: oracle-goldengate-cdc-operations
+    path: .agents/skills/data/data-engineering/batch-ingestion/cdc/oracle-goldengate-cdc-operations/SKILL.md
+    description: "Operate Oracle GoldenGate Extract, trails, distribution paths and Replicat with recoverable CDC and controlled initial-load handoff."
+    triggers:
+      - "oracle goldengate"
+      - "goldengate extract"
+      - "goldengate replicat"
+      - "goldengate trail"
+      - "oracle cdc replication"
+    excludes: []
+    status: active
+  - id: sqlserver-cdc-change-tracking
+    path: .agents/skills/data/data-engineering/batch-ingestion/cdc/sqlserver-cdc-change-tracking/SKILL.md
+    description: "Design SQL Server Change Data Capture and Change Tracking ingestion with LSN validity, retention and consistent incremental extraction."
+    triggers:
+      - "sql server cdc"
+      - "sql server change data capture"
+      - "sql server change tracking"
+      - "mssql cdc"
+      - "sql server lsn extraction"
+    excludes: []
+    status: active
+  - id: mongodb-change-streams-cdc
+    path: .agents/skills/data/data-engineering/batch-ingestion/cdc/mongodb-change-streams-cdc/SKILL.md
+    description: "Build MongoDB Change Streams ingestion with durable resume-token handling, oplog-window recovery and event-time correctness."
+    triggers:
+      - "mongodb change streams"
+      - "mongodb cdc"
+      - "mongo resume token"
+      - "mongodb change stream recovery"
+      - "mongodb oplog cdc"
+    excludes: []
+    status: active

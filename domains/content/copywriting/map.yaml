@@ -1,0 +1,16 @@
+schema_version: 1
+id: copywriting
+kind: map
+children:
+  - id: audience-first-copywriting
+    description: "Turn the reader task into a concise informative message hierarchy"
+    triggers:
+      - "content publishing audience first copywriting clarity"
+    status: active
+    skills: domains/content/copywriting/audience-first-copywriting/skills.yaml
+  - id: claims-substantiation
+    description: "Create a claim ledger mapping measurable assertions to dated primary evidence"
+    triggers:
+      - "content publishing claims substantiation public copy"
+    status: active
+    skills: domains/content/copywriting/claims-substantiation/skills.yaml

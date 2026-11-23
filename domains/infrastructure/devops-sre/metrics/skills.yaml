@@ -1,0 +1,14 @@
+schema_version: 1
+id: metrics
+kind: skill-registry
+skills:
+  - id: prometheus-slo-alert-engineering
+    path: .agents/skills/infrastructure/devops-sre/metrics/prometheus-slo-alert-engineering/SKILL.md
+    description: "Define Prometheus observability metrics, recording rules and low-noise SLO alerts with correct aggregations."
+    triggers:
+      - "prometheus alert rules"
+      - "prometheus slo"
+      - "prometheus recording rules"
+      - "slo burn rate"
+    excludes: []
+    status: active

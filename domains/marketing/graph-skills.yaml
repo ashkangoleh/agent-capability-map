@@ -1,0 +1,34 @@
+schema_version: 1
+id: marketing
+kind: skill-registry
+skills:
+  - id: marketing-strategy-campaign
+    path: .agents/skills/marketing/campaign-strategy/marketing-strategy-campaign/SKILL.md
+    description: "Use to design go-to-market, campaign, lifecycle and channel strategy with grounded audience and measurement assumptions."
+    triggers:
+      - "campaign"
+      - "کمپین"
+      - "کمپین بازاریابی"
+      - "marketing strategy"
+      - "gtm"
+      - "go-to-market"
+      - "paid media"
+      - "brand positioning"
+      - "crm"
+      - "marketing attribution"
+    excludes:
+      - "organic seo audit"
+    status: active
+  - id: marketing-measurement-attribution
+    path: .agents/skills/marketing/marketing-analytics/marketing-measurement-attribution/SKILL.md
+    description: "Define campaign tracking and GA4 event quality, conversion reconciliation and limitations of attribution versus incrementality."
+    triggers:
+      - "ga4 event tracking"
+      - "ga4"
+      - "marketing measurement"
+      - "conversion tracking"
+      - "marketing incrementality"
+      - "attribution analysis"
+    excludes:
+      - "product experiment"
+    status: active

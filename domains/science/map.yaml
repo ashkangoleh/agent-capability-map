@@ -1,0 +1,36 @@
+schema_version: 1
+id: science
+kind: map
+children:
+  - id: mathematics
+    description: "mathematics"
+    triggers:
+      - "mathematics"
+    status: mapped
+  - id: physics
+    description: "physics"
+    triggers:
+      - "physics"
+    status: mapped
+  - id: chemistry
+    description: "chemistry"
+    triggers:
+      - "chemistry"
+    status: mapped
+  - id: biology
+    description: "biology"
+    triggers:
+      - "biology"
+    status: mapped
+  - id: scientific-computing
+    description: "scientific computing"
+    triggers:
+      - "scientific computing"
+    status: mapped
+  - id: experimental-design
+    description: "experimental design"
+    triggers:
+      - "experimental science"
+      - "experimental design"
+    status: active
+    skills: domains/science/skills.yaml

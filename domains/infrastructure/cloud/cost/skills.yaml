@@ -1,0 +1,12 @@
+schema_version: 1
+id: cost
+kind: skill-registry
+skills:
+  - id: cloud-cost-capacity-review
+    path: .agents/skills/infrastructure/cloud/cost/cloud-cost-capacity-review/SKILL.md
+    description: "Review cloud cost and capacity using allocation, utilization, commitments, egress and workload unit economics."
+    triggers:
+      - "cloud cost capacity review"
+      - "cloud cost finops capacity"
+    excludes: []
+    status: active

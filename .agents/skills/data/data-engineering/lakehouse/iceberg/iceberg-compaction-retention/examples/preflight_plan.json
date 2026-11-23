@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "operation": "rewrite_data_files",
+  "table": "prod.analytics.events",
+  "environment": "staging",
+  "change_ticket": "EXAMPLE-ONLY",
+  "spark_version": "3.5.5",
+  "iceberg_version": "1.12.0",
+  "catalog_commit_contract_reviewed": true,
+  "baseline_snapshot_id": 123456789,
+  "concurrency": {
+    "writers_active": true,
+    "policy": "validate_and_retry",
+    "longest_inflight_write_hours": 24
+  },
+  "retention": {
+    "time_travel_days": 14,
+    "rollback_days": 14,
+    "consumer_lag_days": 7,
+    "planned_retention_days": 30,
+    "legal_hold": false,
+    "protected_refs_reviewed": true
+  },
+  "parameters": {
+    "partition_scoped": true,
+    "estimated_candidate_files": 100
+  }
+}

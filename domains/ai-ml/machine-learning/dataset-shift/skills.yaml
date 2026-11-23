@@ -1,0 +1,12 @@
+schema_version: 1
+id: dataset-shift
+kind: skill-registry
+skills:
+  - id: aiml-machine-learning-dataset-shift
+    path: .agents/skills/ai-ml/machine-learning/dataset-shift/aiml-machine-learning-dataset-shift/SKILL.md
+    description: "Engineer ml dataset distribution shift detection using baseline distribution, cohort keys and label lag, verifying failures and quality baselines."
+    triggers:
+      - "ml input drift by cohort and label lag"
+      - "ml dataset distribution shift detection"
+    excludes: []
+    status: active

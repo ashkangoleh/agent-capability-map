@@ -1,0 +1,50 @@
+schema_version: 1
+id: batch-ingestion
+kind: map
+children:
+  - id: cdc
+    description: "Change data capture snapshot, log handoff and source-specific recovery"
+    triggers:
+      - "debezium"
+      - "cdc snapshot"
+      - "change data capture"
+      - "kafka connect cdc"
+      - "oracle goldengate"
+      - "sql server cdc"
+      - "mongodb change streams"
+    status: active
+    skills: domains/data/data-engineering/batch-ingestion/cdc/skills.yaml
+  - id: parquet-layout
+    description: "Parquet ingestion and physical layout"
+    triggers:
+      - "parquet small files"
+      - "parquet file layout"
+      - "parquet row groups"
+      - "parquet compaction"
+    status: active
+    skills: domains/data/data-engineering/batch-ingestion/parquet/skills.yaml
+  - id: recovery
+    description: "Batch backfill and replay"
+    triggers:
+      - "backfill"
+      - "data backfill"
+      - "pipeline replay"
+      - "incremental ingestion"
+    status: active
+    skills: domains/data/data-engineering/batch-ingestion/recovery/skills.yaml
+  - id: nifi
+    description: "Apache NiFi flow and backpressure operations"
+    triggers:
+      - "nifi"
+      - "apache nifi"
+      - "nifi backpressure"
+    status: active
+    skills: domains/data/data-engineering/batch-ingestion/nifi/skills.yaml
+  - id: elasticsearch
+    description: "Elasticsearch PIT and bulk extraction"
+    triggers:
+      - "elasticsearch pit"
+      - "elasticsearch extraction"
+      - "es search_after"
+    status: active
+    skills: domains/data/data-engineering/batch-ingestion/elasticsearch/skills.yaml

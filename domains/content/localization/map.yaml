@@ -1,0 +1,16 @@
+schema_version: 1
+id: localization
+kind: map
+children:
+  - id: translation-localization-qa
+    description: "Define locale glossary style guide region units dates and source version"
+    triggers:
+      - "content publishing multilingual translation localization QA"
+    status: active
+    skills: domains/content/localization/translation-localization-qa/skills.yaml
+  - id: cultural-inclusion-review
+    description: "Check audience-specific terminology representation and regional context"
+    triggers:
+      - "content publishing cultural inclusion language sensitivity review"
+    status: active
+    skills: domains/content/localization/cultural-inclusion-review/skills.yaml

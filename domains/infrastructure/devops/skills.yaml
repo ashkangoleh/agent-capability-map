@@ -1,0 +1,25 @@
+schema_version: 1
+id: iac-tools
+kind: skill-registry
+skills:
+  - id: opentofu-iac-state-migration
+    path: .agents/skills/infrastructure/devops/opentofu-iac-state-migration/SKILL.md
+    description: "Design OpenTofu infrastructure-as-code workflows with state locking, provider pinning, imports and safe migration."
+    triggers:
+      - "opentofu state migration"
+    excludes: []
+    status: active
+  - id: pulumi-iac-engineering
+    path: .agents/skills/infrastructure/devops/pulumi-iac-engineering/SKILL.md
+    description: "Engineer Pulumi infrastructure programs with typed components, stack configuration, secrets and preview-driven deployment."
+    triggers:
+      - "pulumi infrastructure as code"
+    excludes: []
+    status: active
+  - id: packer-image-lifecycle
+    path: .agents/skills/infrastructure/devops/packer-image-lifecycle/SKILL.md
+    description: "Build immutable VM and container base images with Packer, reproducible provisioning and promotion gates."
+    triggers:
+      - "packer machine image lifecycle"
+    excludes: []
+    status: active

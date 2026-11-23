@@ -1,0 +1,12 @@
+schema_version: 1
+id: handoff-reproducible-findings
+kind: skill-registry
+skills:
+  - id: research-handoff-reproducible-findings
+    path: .agents/skills/research/knowledge-transfer/research-handoff-reproducible-findings/SKILL.md
+    description: "Bundle research question versions sources decisions methods and unresolved assumptions Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research handoff evidence package reproducibility stakeholders"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

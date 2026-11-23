@@ -1,0 +1,12 @@
+schema_version: 1
+id: sql-analysis
+kind: skill-registry
+skills:
+  - id: sql-metric-definition-analysis
+    path: .agents/skills/data/analytics-engineering/semantic/sql-metric-definition-analysis/SKILL.md
+    description: "Define SQL analytics metrics with strict grain, null/count rules, join cardinality and timezones."
+    triggers:
+      - "sql metric"
+      - "analytical sql"
+    excludes: []
+    status: active

@@ -1,0 +1,16 @@
+schema_version: 1
+id: event-attribution
+kind: skill-registry
+skills:
+  - id: marketing-measurement-attribution
+    path: .agents/skills/marketing/marketing-analytics/marketing-measurement-attribution/SKILL.md
+    description: "Use canonical specialist marketing-measurement-attribution, preserving its existing SKILL.md."
+    triggers:
+      - "implement ga4 event tracking for marketing conversions"
+      - "marketing measurement attribution"
+      - "ga4 marketing event tracking"
+      - "marketing conversion tracking"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

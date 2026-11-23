@@ -1,0 +1,6 @@
+{
+  "domain":"agent-systems",
+  "skills":[
+    {"id":"skill-authoring-validation","path":".agents/skills/skill-authoring-validation/SKILL.md","description":"Use when designing, creating, reviewing, validating, or improving Agent Skills, skill registries, routing policies, or capability maps.","triggers":["create an agent skill","review SKILL.md","build a skill registry","design capability routing","validate skill metadata","improve agent routing"],"avoid_triggers":["ordinary RAG application implementation","general software feature implementation","marketing content without agent-system scope"],"outputs":["skill files","registry entry","routing tests","validation results","compatibility notes"],"risk_level":"medium","status":"active"}
+  ]
+}

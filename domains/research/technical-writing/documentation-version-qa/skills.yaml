@@ -1,0 +1,12 @@
+schema_version: 1
+id: documentation-version-qa
+kind: skill-registry
+skills:
+  - id: research-documentation-version-qa
+    path: .agents/skills/research/technical-writing/research-documentation-version-qa/SKILL.md
+    description: "Identify supported releases and maintain canonical documentation ownership Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research technical docs version consistency link example checks"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

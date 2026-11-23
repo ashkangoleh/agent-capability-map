@@ -1,0 +1,25 @@
+schema_version: 1
+id: reinforcement-learning
+kind: map
+children:
+  - id: offline-policy-evaluation
+    description: "reinforcement learning offline policy evaluation support: logged policy probabilities and reward history"
+    triggers:
+      - "offline reinforcement learning importance weight effective sample size"
+      - "reinforcement learning offline policy evaluation support"
+    status: active
+    skills: domains/ai-ml/reinforcement-learning/offline-policy-evaluation/skills.yaml
+  - id: reward-design
+    description: "reinforcement learning reward model specification: objective, safety constraints and proxy reward"
+    triggers:
+      - "rl reward hacking proxy metric constraint testing"
+      - "reinforcement learning reward model specification"
+    status: active
+    skills: domains/ai-ml/reinforcement-learning/reward-design/skills.yaml
+  - id: safe-exploration
+    description: "reinforcement learning safe exploration budget: action bounds, simulator gap and stop conditions"
+    triggers:
+      - "rl constrained exploration action abort policy"
+      - "reinforcement learning safe exploration budget"
+    status: active
+    skills: domains/ai-ml/reinforcement-learning/safe-exploration/skills.yaml

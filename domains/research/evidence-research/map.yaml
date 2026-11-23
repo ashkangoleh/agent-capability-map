@@ -1,0 +1,32 @@
+schema_version: 1
+id: evidence-research
+kind: map
+children:
+  - id: general-evidence
+    description: "Preserved original research or technical writing capability"
+    triggers:
+      - "fact check this evidence claim"
+      - "research this"
+      - "fact check"
+      - "official documentation"
+      - "evidence review"
+    status: active
+    skills: domains/research/evidence-research/general-evidence/skills.yaml
+  - id: primary-source-triangulation
+    description: "Extract atomic claims and classify each source by proximity to the original observation"
+    triggers:
+      - "research primary source triangulation independence review"
+    status: active
+    skills: domains/research/evidence-research/primary-source-triangulation/skills.yaml
+  - id: conflicting-evidence-adjudication
+    description: "Normalize rival claims by definition population time period and measurement method"
+    triggers:
+      - "research contradictory evidence adjudication primary studies"
+    status: active
+    skills: domains/research/evidence-research/conflicting-evidence-adjudication/skills.yaml
+  - id: claim-to-source-traceability
+    description: "Inventory every consequential claim quote figure and page-number assertion"
+    triggers:
+      - "research evidence claim citation provenance ledger"
+    status: active
+    skills: domains/research/evidence-research/claim-to-source-traceability/skills.yaml

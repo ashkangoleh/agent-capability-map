@@ -1,0 +1,11 @@
+schema_version: 1
+id: firmware
+kind: skill-registry
+skills:
+  - id: server-hardware-firmware-management
+    path: .agents/skills/infrastructure/hardware/firmware/server-hardware-firmware-management/SKILL.md
+    description: "Manage server firmware across BMC, Redfish/IPMI, BIOS/UEFI, NIC/HBA and Secure Boot."
+    triggers:
+      - "server firmware bmc redfish ipmi uefi secure boot"
+    excludes: []
+    status: active

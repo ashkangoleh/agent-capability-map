@@ -1,0 +1,12 @@
+schema_version: 1
+id: explainability
+kind: skill-registry
+skills:
+  - id: aiml-machine-learning-explainability
+    path: .agents/skills/ai-ml/machine-learning/explainability/aiml-machine-learning-explainability/SKILL.md
+    description: "Engineer ml model explanation stability audit using feature attribution context and correlated variables, verifying failures and quality baselines."
+    triggers:
+      - "ml explanation shap correlated features stability"
+      - "ml model explanation stability audit"
+    excludes: []
+    status: active

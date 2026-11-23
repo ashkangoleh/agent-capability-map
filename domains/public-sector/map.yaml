@@ -1,0 +1,21 @@
+schema_version: 1
+id: public-sector
+kind: map
+children:
+  - id: policy-analysis
+    description: "policy analysis"
+    triggers:
+      - "public policy"
+      - "policy analysis"
+    status: active
+    skills: domains/public-sector/skills.yaml
+  - id: public-programs
+    description: "public programs"
+    triggers:
+      - "public programs"
+    status: mapped
+  - id: civic-technology
+    description: "civic technology"
+    triggers:
+      - "civic technology"
+    status: mapped

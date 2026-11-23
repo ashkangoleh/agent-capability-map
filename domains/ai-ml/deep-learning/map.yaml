@@ -1,0 +1,48 @@
+schema_version: 1
+id: deep-learning
+kind: map
+children:
+  - id: pytorch
+    description: "pytorch"
+    triggers:
+      - "pytorch"
+      - "distributed training"
+      - "torch distributed"
+    status: active
+    skills: domains/ai-ml/deep-learning/pytorch/skills.yaml
+  - id: transformers
+    description: "transformers"
+    triggers:
+      - "peft"
+      - "hugging face fine tuning"
+      - "transformer fine tuning"
+    status: active
+    skills: domains/ai-ml/deep-learning/transformers/skills.yaml
+  - id: distributed-training
+    description: "deep learning distributed training collective recovery: framework and world size, interconnect and gradients"
+    triggers:
+      - "torch distributed rank failure checkpoint restart"
+      - "deep learning distributed training collective recovery"
+    status: active
+    skills: domains/ai-ml/deep-learning/distributed-training/skills.yaml
+  - id: training-optimization
+    description: "deep learning mixed precision optimizer stability: gradient scaling, dtype and optimizer state"
+    triggers:
+      - "mixed precision gradient overflow loss scaling"
+      - "deep learning mixed precision optimizer stability"
+    status: active
+    skills: domains/ai-ml/deep-learning/training-optimization/skills.yaml
+  - id: checkpoint-recovery
+    description: "deep learning sharded checkpoint restoration: optimizer shards, manifests and storage atomicity"
+    triggers:
+      - "restore sharded optimizer checkpoint on new workers"
+      - "deep learning sharded checkpoint restoration"
+    status: active
+    skills: domains/ai-ml/deep-learning/checkpoint-recovery/skills.yaml
+  - id: representation-learning
+    description: "deep learning contrastive representation evaluation: positive and negative pairs, held-out transfers"
+    triggers:
+      - "contrastive embeddings collapse transfer probe"
+      - "deep learning contrastive representation evaluation"
+    status: active
+    skills: domains/ai-ml/deep-learning/representation-learning/skills.yaml

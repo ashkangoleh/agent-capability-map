@@ -1,0 +1,18 @@
+schema_version: 1
+id: dataops
+kind: skill-registry
+skills:
+  - id: data-pipeline-testing-ci-cd
+    path: .agents/skills/data/data-engineering/dataops/data-pipeline-testing-ci-cd/SKILL.md
+    description: "Build pipeline tests spanning unit, contract, integration, end-to-end, replay and performance validation."
+    triggers:
+      - "data pipeline testing ci cd"
+    excludes: []
+    status: active
+  - id: data-schema-migration-release-management
+    path: .agents/skills/data/data-engineering/dataops/data-schema-migration-release-management/SKILL.md
+    description: "Plan schema migrations with expand-contract rollout, compatibility windows, backfills and rollback limits."
+    triggers:
+      - "data schema migration release"
+    excludes: []
+    status: active

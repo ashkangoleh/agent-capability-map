@@ -1,0 +1,12 @@
+schema_version: 1
+id: contributor-credit-coi
+kind: skill-registry
+skills:
+  - id: research-contributor-credit-coi
+    path: .agents/skills/research/research-integrity/research-contributor-credit-coi/SKILL.md
+    description: "Inventory contributor activities using NISO CRediT without converting roles into authorship rules Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research contributor credit conflict interest authorship CRediT"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

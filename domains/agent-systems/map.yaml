@@ -1,0 +1,45 @@
+schema_version: 1
+id: agent-systems
+kind: map
+children:
+  - id: capability-routing
+    description: "capability routing"
+    triggers:
+      - "skill router"
+      - "master skill"
+      - "capability map"
+      - "skill registry"
+      - "agents.md"
+    status: active
+    skills: domains/agent-systems/graph-skills.yaml
+  - id: skill-authoring
+    description: "skill authoring"
+    triggers:
+      - "create skill"
+      - "skill.md"
+      - "agent skill"
+    status: active
+    skills: domains/agent-systems/graph-skills.yaml
+  - id: tool-integration
+    description: "tool integration"
+    triggers:
+      - "mcp server"
+      - "tool calling"
+      - "agent tools"
+    status: active
+    skills: domains/agent-systems/graph-skills.yaml
+  - id: multi-agent
+    description: "multi agent"
+    triggers:
+      - "multi agent"
+      - "agent orchestration"
+      - "agent delegation"
+    status: mapped
+  - id: agent-evaluation
+    description: "agent evaluation"
+    triggers:
+      - "agent evaluation"
+      - "agent benchmark"
+      - "trajectory evaluation"
+    status: active
+    skills: domains/agent-systems/graph-skills.yaml

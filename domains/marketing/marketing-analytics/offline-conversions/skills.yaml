@@ -1,0 +1,14 @@
+schema_version: 1
+id: offline-conversions
+kind: skill-registry
+skills:
+  - id: marketing-offline-conversion-reconciliation
+    path: .agents/skills/marketing/marketing-analytics/marketing-offline-conversion-reconciliation/SKILL.md
+    description: "Reconcile ads-system conversions with order or lead truth before importing or adjusting offline events."
+    triggers:
+      - "marketing offline conversion upload dedup reconciliation"
+      - "marketing ads conversion adjustment refunds"
+    excludes:
+      - "organic seo technical audit"
+      - "general data pipeline implementation"
+    status: active

@@ -1,0 +1,13 @@
+schema_version: 1
+id: serving
+kind: skill-registry
+skills:
+  - id: ml-model-serving-canary
+    path: .agents/skills/ai-ml/machine-learning/serving/ml-model-serving-canary/SKILL.md
+    description: "Deploy ML model canaries with artifact versions, feature compatibility and measured rollback SLOs."
+    triggers:
+      - "ml model serving"
+      - "model canary"
+      - "ml deployment"
+    excludes: []
+    status: active

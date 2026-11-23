@@ -1,0 +1,25 @@
+schema_version: 1
+id: multimodal-ai
+kind: map
+children:
+  - id: vision-language-evaluation
+    description: "multimodal vision language grounding evaluation: image references and object-level truth labels"
+    triggers:
+      - "vision language model hallucinated objects grounding"
+      - "multimodal vision language grounding evaluation"
+    status: active
+    skills: domains/ai-ml/multimodal-ai/vision-language-evaluation/skills.yaml
+  - id: image-generation-evaluation
+    description: "multimodal image generation fidelity evaluation: licensed image sets, human rubrics and prompts"
+    triggers:
+      - "image generation prompt adherence human preference safety"
+      - "multimodal image generation fidelity evaluation"
+    status: active
+    skills: domains/ai-ml/multimodal-ai/image-generation-evaluation/skills.yaml
+  - id: multimodal-alignment
+    description: "multimodal audio video text temporal alignment: timebases, audio rate and video fps"
+    triggers:
+      - "audio video caption timestamp synchronization drift"
+      - "multimodal audio video text temporal alignment"
+    status: active
+    skills: domains/ai-ml/multimodal-ai/multimodal-alignment/skills.yaml

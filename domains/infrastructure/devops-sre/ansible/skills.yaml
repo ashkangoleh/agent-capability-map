@@ -1,0 +1,13 @@
+schema_version: 1
+id: ansible
+kind: skill-registry
+skills:
+  - id: ansible-safe-automation
+    path: .agents/skills/infrastructure/devops-sre/ansible/ansible-safe-automation/SKILL.md
+    description: "Build safe Ansible inventories, role/module workflows, check-mode validation and idempotent deployments."
+    triggers:
+      - "ansible playbook"
+      - "ansible automation"
+      - "ansible idempotency"
+    excludes: []
+    status: active

@@ -1,0 +1,36 @@
+schema_version: 1
+id: social-sciences
+kind: map
+children:
+  - id: sociology
+    description: "sociology"
+    triggers:
+      - "sociology"
+    status: mapped
+  - id: economics
+    description: "economics"
+    triggers:
+      - "economics"
+    status: mapped
+  - id: political-science
+    description: "political science"
+    triggers:
+      - "political science"
+    status: mapped
+  - id: psychology-research
+    description: "psychology research"
+    triggers:
+      - "psychology research"
+    status: mapped
+  - id: demography
+    description: "demography"
+    triggers:
+      - "demography"
+    status: mapped
+  - id: survey-methods
+    description: "survey methods"
+    triggers:
+      - "survey research"
+      - "survey methods"
+    status: active
+    skills: domains/social-sciences/skills.yaml

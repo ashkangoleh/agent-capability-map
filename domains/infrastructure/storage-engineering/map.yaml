@@ -1,0 +1,19 @@
+schema_version: 1
+id: storage-engineering
+kind: map
+children:
+  - id: storage-platforms
+    description: "Distributed and enterprise storage systems"
+    triggers:
+      - "ceph zfs lvm storage operations"
+      - "linux storage filesystem operations"
+    status: active
+    skills: domains/infrastructure/storage/skills.yaml
+  - id: advanced-storage
+    description: "SAN/NAS, NVMe-oF and object storage"
+    triggers:
+      - "san nas fibre channel iscsi nvmeof storage"
+      - "s3 compatible object storage lifecycle replication object lock"
+      - "s3 compatible object storage"
+    status: active
+    skills: domains/infrastructure/storage/new-specialists.yaml

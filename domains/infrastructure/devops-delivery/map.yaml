@@ -1,0 +1,19 @@
+schema_version: 1
+id: devops-delivery
+kind: map
+children:
+  - id: gitops
+    description: "GitOps reconciliation with Argo CD and Flux"
+    triggers:
+      - "argo cd gitops sync drift"
+      - "flux gitops reconciliation"
+    status: active
+    map: domains/infrastructure/devops-delivery/gitops/map.yaml
+  - id: ci-cd
+    description: "CI/CD release engineering and artifact provenance"
+    triggers:
+      - "ci cd release engineering"
+      - "ci cd supply chain artifact signing"
+      - "github actions security"
+    status: active
+    map: domains/infrastructure/devops-delivery/ci-cd/map.yaml

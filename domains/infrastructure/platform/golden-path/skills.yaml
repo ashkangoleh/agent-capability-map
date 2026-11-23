@@ -1,0 +1,13 @@
+schema_version: 1
+id: golden-path
+kind: skill-registry
+skills:
+  - id: platform-self-service-golden-path
+    path: .agents/skills/infrastructure/platform/golden-path/platform-self-service-golden-path/SKILL.md
+    description: "Design an internal developer platform golden path with explicit user needs, RBAC and ownership."
+    triggers:
+      - "golden path"
+      - "internal developer platform"
+      - "platform self service"
+    excludes: []
+    status: active

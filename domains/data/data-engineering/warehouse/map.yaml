@@ -1,0 +1,54 @@
+schema_version: 1
+id: warehouse
+kind: map
+children:
+  - id: trino
+    description: "Trino federation, connector pushdown and query optimization"
+    triggers:
+      - "trino"
+      - "trino federation"
+      - "trino explain"
+    status: active
+    skills: domains/data/data-engineering/warehouse/trino/skills.yaml
+  - id: duckdb
+    description: "DuckDB local query execution and Parquet transformations"
+    triggers:
+      - "duckdb"
+      - "duckdb parquet"
+      - "duckdb etl"
+    status: active
+    skills: domains/data/data-engineering/warehouse/duckdb/skills.yaml
+  - id: clickhouse
+    description: "ClickHouse MergeTree analytics and ingestion"
+    triggers:
+      - "clickhouse"
+      - "clickhouse mergetree"
+    status: active
+    skills: domains/data/data-engineering/warehouse/clickhouse/skills.yaml
+  - id: starrocks
+    description: "StarRocks OLAP table design, ingestion and materialized views"
+    triggers:
+      - "starrocks olap"
+    status: active
+    skills: domains/data/data-engineering/warehouse/starrocks/skills.yaml
+  - id: other-engines
+    description: "Dremio, Presto, Pinot, Druid, Doris and OpenSearch analytics engines"
+    triggers:
+      - "dremio presto query federation"
+      - "pinot druid realtime olap"
+      - "apache doris unique key model"
+      - "opensearch bulk index lifecycle"
+    status: active
+    skills: domains/data/data-engineering/warehouse/skills.yaml
+  - id: cloud-warehouses
+    description: "Snowflake, BigQuery and Redshift warehouse-specific engineering"
+    triggers:
+      - "cloud data warehouse engineering"
+      - "snowflake"
+      - "bigquery"
+      - "redshift"
+      - "snowpipe streaming"
+      - "bigquery storage write api"
+      - "redshift streaming ingestion"
+    status: active
+    map: domains/data/data-engineering/warehouse/cloud/map.yaml

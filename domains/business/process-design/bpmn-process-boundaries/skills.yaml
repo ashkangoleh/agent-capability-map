@@ -1,0 +1,12 @@
+schema_version: 1
+id: bpmn-process-boundaries
+kind: skill-registry
+skills:
+  - id: business-bpmn-process-boundaries
+    path: .agents/skills/business/process-design/business-bpmn-process-boundaries/SKILL.md
+    description: "Map current process start/end, participants, business ownership and handoff evidence. Require verified business evidence, clear economic units and independent acceptance."
+    triggers:
+      - "business operations bpmn workflow exception handoffs audit"
+    excludes:
+      - "personal regulated financial advice"
+    status: active

@@ -1,0 +1,43 @@
+schema_version: 1
+id: modeling
+kind: skill-registry
+skills:
+  - id: ds-gradient-boosting
+    path: .agents/skills/data/data-science/modeling/ds-gradient-boosting/SKILL.md
+    description: "Train and compare gradient-boosted trees with leakage-safe validation, regularization and task-aligned metrics."
+    triggers:
+      - "xgboost lightgbm catboost modeling"
+    excludes: []
+    status: active
+  - id: ds-model-calibration
+    path: .agents/skills/data/data-science/modeling/ds-model-calibration/SKILL.md
+    description: "Evaluate probability calibration and decision thresholds against prevalence, asymmetric costs and constraints."
+    triggers:
+      - "model calibration threshold analysis"
+      - "probability calibration reliability diagram"
+      - "calibrated classifier cv"
+      - "classifier calibration brier score"
+      - "کالیبراسیون احتمال طبقه بندی"
+    excludes: []
+    status: active
+  - id: ds-shap-explainability
+    path: .agents/skills/data/data-science/modeling/ds-shap-explainability/SKILL.md
+    description: "Explain model behavior with SHAP while distinguishing association from causation."
+    triggers:
+      - "model explainability shap"
+    excludes: []
+    status: active
+  - id: ds-clustering-evaluation
+    path: .agents/skills/data/data-science/modeling/ds-clustering-evaluation/SKILL.md
+    description: "Evaluate clustering with stability, geometry, business utility and out-of-sample assignment."
+    triggers:
+      - "clustering segmentation evaluation"
+    excludes: []
+    status: active
+  - id: ds-optuna-search
+    path: .agents/skills/data/data-science/modeling/ds-optuna-search/SKILL.md
+    description: "Run reproducible hyperparameter optimization with Optuna, pruning and resource budgets."
+    triggers:
+      - "optuna hyperparameter optimization"
+    excludes: []
+    status: active

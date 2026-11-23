@@ -1,0 +1,13 @@
+schema_version: 1
+id: threat-modeling
+kind: skill-registry
+skills:
+  - id: swe-software-security-threat-modeling
+    path: .agents/skills/software-engineering/software-security/threat-modeling/swe-software-security-threat-modeling/SKILL.md
+    description: "Use for application threat model data flow tasks in Application Security Engineering; verify map assets, trust boundaries, misuse cases and impact before selecting controls. and reject unsupported release or safety claims."
+    triggers:
+      - "application threat model data flow"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

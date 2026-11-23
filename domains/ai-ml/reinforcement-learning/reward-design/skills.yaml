@@ -1,0 +1,12 @@
+schema_version: 1
+id: reward-design
+kind: skill-registry
+skills:
+  - id: aiml-reinforcement-learning-reward-design
+    path: .agents/skills/ai-ml/reinforcement-learning/reward-design/aiml-reinforcement-learning-reward-design/SKILL.md
+    description: "Engineer reinforcement learning reward model specification using objective, safety constraints and proxy reward, verifying failures and quality baselines."
+    triggers:
+      - "rl reward hacking proxy metric constraint testing"
+      - "reinforcement learning reward model specification"
+    excludes: []
+    status: active

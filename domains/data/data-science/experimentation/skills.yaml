@@ -1,0 +1,38 @@
+schema_version: 1
+id: experimentation
+kind: skill-registry
+skills:
+  - id: ds-ab-experimentation
+    path: .agents/skills/data/data-science/experimentation/ds-ab-experimentation/SKILL.md
+    description: "Analyze randomized experiments with predeclared primary metrics, guardrails and sequential validity."
+    triggers:
+      - "ab test guardrail analysis"
+      - "ab test assignment integrity"
+      - "sample ratio mismatch ab experiment"
+      - "cluster randomized experiment guardrail"
+      - "fixed horizon ab test analysis"
+    excludes: []
+    status: active
+  - id: ds-causal-inference
+    path: .agents/skills/data/data-science/experimentation/ds-causal-inference/SKILL.md
+    description: "Choose randomized, quasi-experimental or observational causal designs from estimand and identification assumptions."
+    triggers:
+      - "causal experiment design"
+      - "causal inference sensitivity analysis"
+      - "causal identification assumptions"
+      - "causal experiment design interference"
+    excludes: []
+    status: active
+  - id: ds-sequential-experimentation
+    path: .agents/skills/data/data-science/experimentation/ds-sequential-experimentation/SKILL.md
+    description: "Design sequentially valid experiments with interim monitoring, early stopping and adaptive procedures."
+    triggers:
+      - "sequential experimentation"
+      - "always valid inference"
+      - "group sequential ab testing"
+      - "group sequential alpha spending"
+      - "continuous monitoring sequential experiment"
+      - "sequential experiment early stopping"
+    excludes:
+      - "fixed horizon ab test analysis"
+    status: active

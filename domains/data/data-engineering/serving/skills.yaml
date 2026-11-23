@@ -1,0 +1,18 @@
+schema_version: 1
+id: serving
+kind: skill-registry
+skills:
+  - id: reverse-etl-data-activation
+    path: .agents/skills/data/data-engineering/serving/reverse-etl-data-activation/SKILL.md
+    description: "Design reverse ETL to synchronize governed warehouse data into CRM, marketing and product systems."
+    triggers:
+      - "reverse etl data activation"
+    excludes: []
+    status: active
+  - id: data-serving-api-design
+    path: .agents/skills/data/data-engineering/serving/data-serving-api-design/SKILL.md
+    description: "Serve governed analytical data through APIs, materialized read models and query services with latency controls."
+    triggers:
+      - "data serving api design"
+    excludes: []
+    status: active

@@ -1,0 +1,12 @@
+schema_version: 1
+id: text-classification
+kind: skill-registry
+skills:
+  - id: aiml-natural-language-processing-text-classification
+    path: .agents/skills/ai-ml/natural-language-processing/text-classification/aiml-natural-language-processing-text-classification/SKILL.md
+    description: "Engineer nlp text classification calibration benchmark using label taxonomy, class imbalance, token lengths, verifying failures and quality baselines."
+    triggers:
+      - "text classifier macro f1 calibration by language"
+      - "nlp text classification calibration benchmark"
+    excludes: []
+    status: active

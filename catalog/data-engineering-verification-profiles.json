@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "scope": "data/data-engineering",
+  "profiles": {
+    "architecture": {
+      "focus": "Cross-engine consistency and service ownership",
+      "inject": "Kill the authoritative writer between persist, metadata handoff and downstream publication",
+      "oracle": "Row/business invariants remain consistent across replays and mutually incompatible readers",
+      "recover": "Revert traffic to last verified publication manifest or snapshot"
+    },
+    "batch-ingestion/cdc": {
+      "focus": "CDC positions, snapshots and schema evolution",
+      "inject": "Interrupt snapshot-to-stream transition and inject DDL, deletes and an unavailable log segment",
+      "oracle": "One logical change is reproducibly accounted for using position+key, with no silent missing deletes",
+      "recover": "Resume from a verified cursor/LSN/SCN or restore full snapshot with deduplicated replay"
+    },
+    "batch-ingestion/elasticsearch": {
+      "focus": "PIT/search-after and extraction replay",
+      "inject": "Expire a PIT and fail a shard/page after a successful partial batch",
+      "oracle": "A unique document-version or stable primary key set reconciles with target counts",
+      "recover": "Reuse persisted day/page cache or restart a fresh consistent extraction window"
+    },
+    "batch-ingestion/recovery": {
+      "focus": "Backfill windows and target idempotency",
+      "inject": "Crash after target publication but before checkpoint then rerun the same date",
+      "oracle": "Backfill rerun yields identical partition/business values without duplicate effects",
+      "recover": "Restore last published partition manifest and bounded replay"
+    },
+    "batch-ingestion": {
+      "focus": "Source snapshots and resumable ingestion",
+      "inject": "Fail between source page and durable target checkpoint; replay duplicates",
+      "oracle": "Input keys and control totals match durable output across retries",
+      "recover": "Restart at committed source point, keeping raw artifacts for reconciliation"
+    },
+    "cloud": {
+      "focus": "Managed cloud service API and billing boundaries",
+      "inject": "Inject regional API throttling or loss of identity permissions mid-load",
+      "oracle": "No unauthorized access or unbounded retry/cost; table outcomes remain reconcilable",
+      "recover": "Stop jobs, reconcile partial cloud artifacts and redeploy pinned configuration"
+    },
+    "data-migration": {
+      "focus": "Dual-read parity, cutover and fallback",
+      "inject": "Switch consumers during target catch-up then fail a writer",
+      "oracle": "Source and target compare on business keys, late updates and deletes at an agreed cutover watermark",
+      "recover": "Return traffic to verified old source while keeping dual-write effects fenced"
+    },
+    "dataops": {
+      "focus": "Release and data contract promotion",
+      "inject": "Deploy incompatible schema or partial pipeline artifact under concurrent run",
+      "oracle": "Old and new consumers maintain verified contract and lineage",
+      "recover": "Roll back immutable artifact and compensate or quarantine incompatible publication"
+    },
+    "distributed-processing/flink": {
+      "focus": "Checkpoint/recovery and operator state",
+      "inject": "Corrupt checkpoint or restore with changed operator UID/parallelism",
+      "oracle": "Source replay and sink effects reconcile; state schema migration is explicitly validated",
+      "recover": "Restore compatible savepoint and prevent dual writers"
+    },
+    "distributed-processing/spark": {
+      "focus": "Spark distributed query correctness and state",
+      "inject": "Inject executor loss, skew/hot key, stale cached plan or stateful restart",
+      "oracle": "Result counts and business keys remain correct across retry and adaptive plans",
+      "recover": "Return to previous artifact/streaming checkpoint with sink idempotence"
+    },
+    "distributed-processing": {
+      "focus": "Distributed engine data contracts",
+      "inject": "Force worker loss, network partition and memory pressure during shuffle",
+      "oracle": "No data loss/duplication beyond explicitly stated sink guarantees",
+      "recover": "Resume from durable partitions/checkpoints or discard uncommitted output"
+    },
+    "formats": {
+      "focus": "Schema encoding and cross-runtime type fidelity",
+      "inject": "Round-trip nested/null/decimal/timestamp values across independent readers",
+      "oracle": "Field identity, logical types and backward compatibility remain intact",
+      "recover": "Retain prior schema and isolate incompatible assets"
+    },
+    "foundations": {
+      "focus": "Data model grain and reproducible lifecycle",
+      "inject": "Replay late update/delete and mutate source schema under an existing model",
+      "oracle": "Business grain, temporal validity and schema evolution remain auditable",
+      "recover": "Version model contracts and rebuild affected partitions"
+    },
+    "governance": {
+      "focus": "Authorization, classification and policy lineage",
+      "inject": "Revoke permissions and rotate credentials while cached reader remains active",
+      "oracle": "Deny-by-default access, correct masking and durable audit provenance",
+      "recover": "Block affected consumers and restore reviewed least-privilege policy"
+    },
+    "ingestion": {
+      "focus": "Connector state, pagination and external quotas",
+      "inject": "Repeat pages after timeout, expire token and rate limit midway",
+      "oracle": "Source progress advances only after target commit, and deduplication is deterministic",
+      "recover": "Resume from last confirmed cursor; quarantine ambiguous writes"
+    },
+    "lakehouse/catalogs": {
+      "focus": "Catalog control plane and commit contention",
+      "inject": "Fail credential vending or catalog commit after object upload",
+      "oracle": "Published metadata pointer and object permissions remain consistent; retries do not fork authoritative history",
+      "recover": "Re-read catalog state before retry; preserve last validated table snapshot"
+    },
+    "lakehouse/iceberg": {
+      "focus": "Iceberg snapshot, field-ID and partition evolution",
+      "inject": "Concurrently rewrite files and expire snapshots while readers pin older refs",
+      "oracle": "Protected refs, field-ID compatibility and visible rows remain valid",
+      "recover": "Restore retained snapshot only when data files still exist; otherwise fail closed"
+    },
+    "lakehouse": {
+      "focus": "Table-format and object-store commit contracts",
+      "inject": "Fail object upload or metadata commit during simultaneous writers",
+      "oracle": "Reader-visible snapshot atomicity and delete semantics are proven for installed engine versions",
+      "recover": "Quarantine uncommitted files; restore last readable catalog head"
+    },
+    "messaging/kafka": {
+      "focus": "Kafka offset, transaction and rebalance semantics",
+      "inject": "Rebalance after sink write but before offset commit; replay a poisoned event",
+      "oracle": "Sink deduplication and source offset recovery reconcile with input partition order",
+      "recover": "Pause, recover offsets and replay from retained log with idempotent sink writes"
+    },
+    "messaging": {
+      "focus": "Broker ack, ordering and consumer replay",
+      "inject": "Fail consumer after ack and change partition assignments during backlog",
+      "oracle": "No silently lost/duplicated business effects beyond declared delivery model",
+      "recover": "Recover from durable broker position and bounded DLQ redrive"
+    },
+    "observability": {
+      "focus": "Freshness and quality SLO signal fidelity",
+      "inject": "Delay source arrival while metrics pipeline appears healthy",
+      "oracle": "SLO measures source-to-consumer availability, not just DAG status",
+      "recover": "Declare breach and execute runbook with bounded catch-up"
+    },
+    "orchestration": {
+      "focus": "DAG interval/partition run semantics",
+      "inject": "Re-run overlapping windows during scheduler failover and DST boundary",
+      "oracle": "Each declared data interval has one durable accepted output",
+      "recover": "Pause competing runs; reprocess impacted intervals with safe overwrite/merge"
+    },
+    "performance": {
+      "focus": "Measured resource and query-plan correctness",
+      "inject": "Introduce hot-key skew or spill under representative peak concurrency",
+      "oracle": "Same result cardinality and business invariants with measurable p95 and cost gains",
+      "recover": "Revert resource limits or plan changes if correctness/regression guardrails fail"
+    },
+    "quality": {
+      "focus": "Data contract checks and lineage of failures",
+      "inject": "Inject null/duplicate/late records and schema drift in an empty partition",
+      "oracle": "Bad batches are quarantined; false positives, false negatives and coverage are reported",
+      "recover": "Stop promotion, backfill clean batch and preserve previous accepted snapshot"
+    },
+    "reliability": {
+      "focus": "End-to-end replay and recoverability",
+      "inject": "Crash between target commit and checkpoint plus network timeout on retry",
+      "oracle": "Recovery yields stable business keys and measurable RPO/RTO under simulated failure",
+      "recover": "Reconcile partial publication then replay only unsafe/unfinished units"
+    },
+    "serving": {
+      "focus": "Serving consumer consistency and external side-effects",
+      "inject": "Retry activation after partial success while serving schema changes",
+      "oracle": "Per-consumer contract, authorization and idempotence hold across retries",
+      "recover": "Disable propagation and reconcile changed destination records"
+    },
+    "storage": {
+      "focus": "Storage durability and metadata/listing consistency",
+      "inject": "Remove/deny object access while writer upload completes or metadata is cached",
+      "oracle": "Data content and metadata are reconstructible from verified copies",
+      "recover": "Restore immutable backups and reconcile storage inventory"
+    },
+    "streaming/sql-engines": {
+      "focus": "Incremental materialized-view freshness and retractions",
+      "inject": "Insert out-of-order updates/retractions under high watermark lag",
+      "oracle": "Materialized view equals reference batch computation after convergence",
+      "recover": "Rebuild from source log or restore verified snapshot"
+    },
+    "streaming": {
+      "focus": "Event-time, offsets and sink delivery contracts",
+      "inject": "Inject late events, duplicate retries and restart with divergent state",
+      "oracle": "Event-time windows and output effects follow explicitly proven guarantee",
+      "recover": "Rewind replayable source and perform idempotent/transactional sink recovery"
+    },
+    "transformation": {
+      "focus": "SQL transformation grain and incremental materialization",
+      "inject": "Backfill old partition after schema change and fail publish halfway",
+      "oracle": "Full refresh and incremental runs agree on effective grain/metrics",
+      "recover": "Replace staged output atomically where supported or restore prior partition"
+    },
+    "unstructured": {
+      "focus": "Binary/text extraction and source traceability",
+      "inject": "Ingest corrupt encodings, oversized documents and revoked content",
+      "oracle": "Extracted records retain provenance, access permissions and deterministic reprocessing",
+      "recover": "Quarantine bad inputs and revoke derived outputs when source deleted"
+    },
+    "warehouse/trino": {
+      "focus": "Federated joins and connector pushdown",
+      "inject": "Fail one source or change cardinality while a cross-catalog join spills",
+      "oracle": "Results match a materialized/control query, with bounded source impact",
+      "recover": "Cancel/fence faulty query and revert pushed-down plan/settings"
+    },
+    "warehouse/starrocks": {
+      "focus": "Primary keys, tablet distribution and load lifecycle",
+      "inject": "Retry Stream Load after unknown response and trigger compaction while reads run",
+      "oracle": "No duplicate primary-key effects; load labels and partition counts reconcile",
+      "recover": "Check load transaction/label state before resubmission; restore prior published slice"
+    },
+    "warehouse/cloud": {
+      "focus": "Managed warehouse cost/transaction contracts",
+      "inject": "Interrupt COPY/MERGE after API timeout with warehouse resource throttling",
+      "oracle": "Statement and ingestion outcomes reconcile with billing and snapshot state",
+      "recover": "Resolve transaction status and resume from verified staged files"
+    },
+    "warehouse": {
+      "focus": "OLAP schema design and cross-engine query behavior",
+      "inject": "Load duplicate and late update keys under partition skew and stale materialized view",
+      "oracle": "Query result, primary/aggregate semantics and refresh lag meet recorded SLO",
+      "recover": "Revert schema/MV or rebuild affected partitions from replayable staging"
+    }
+  }
+}

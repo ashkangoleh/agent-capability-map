@@ -1,0 +1,12 @@
+schema_version: 1
+id: ai-search-feature-visibility
+kind: skill-registry
+skills:
+  - id: seo-ai-search-feature-visibility
+    path: .agents/skills/seo/answer-engine-optimization/seo-ai-search-feature-visibility/SKILL.md
+    description: "Check ordinary indexed and snippet eligibility first"
+    triggers:
+      - "seo ai overviews ai mode visibility audit"
+    excludes:
+      - "paid search advertising campaign"
+    status: active

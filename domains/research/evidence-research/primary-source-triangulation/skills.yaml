@@ -1,0 +1,12 @@
+schema_version: 1
+id: primary-source-triangulation
+kind: skill-registry
+skills:
+  - id: research-primary-source-triangulation
+    path: .agents/skills/research/evidence-research/research-primary-source-triangulation/SKILL.md
+    description: "Extract atomic claims and classify each source by proximity to the original observation Distinguish research evidence from assumptions and output-only simulations."
+    triggers:
+      - "research primary source triangulation independence review"
+    excludes:
+      - "marketing paid media campaign"
+    status: active

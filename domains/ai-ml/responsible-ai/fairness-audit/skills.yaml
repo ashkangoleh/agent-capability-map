@@ -1,0 +1,12 @@
+schema_version: 1
+id: fairness-audit
+kind: skill-registry
+skills:
+  - id: aiml-responsible-ai-fairness-audit
+    path: .agents/skills/ai-ml/responsible-ai/fairness-audit/aiml-responsible-ai-fairness-audit/SKILL.md
+    description: "Engineer responsible ai subgroup fairness audit using authorized cohorts, labels and error base rates, verifying failures and quality baselines."
+    triggers:
+      - "model subgroup fairness confidence intervals review"
+      - "responsible ai subgroup fairness audit"
+    excludes: []
+    status: active

@@ -1,0 +1,13 @@
+schema_version: 1
+id: service-boundaries
+kind: skill-registry
+skills:
+  - id: swe-software-architecture-service-boundaries
+    path: .agents/skills/software-engineering/software-architecture/service-boundaries/swe-software-architecture-service-boundaries/SKILL.md
+    description: "Use for microservice boundary consistency tasks in Software Architecture and Systems Design; verify choose service boundaries and failure semantics before splitting deployments. and reject unsupported release or safety claims."
+    triggers:
+      - "microservice boundary consistency"
+    excludes:
+      - "pyspark"
+      - "spark sql"
+    status: active

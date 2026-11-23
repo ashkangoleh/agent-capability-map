@@ -1,0 +1,31 @@
+schema_version: 1
+id: aerospace
+kind: map
+children:
+  - id: systems-engineering
+    description: "systems engineering"
+    triggers:
+      - "aerospace requirements"
+      - "systems engineering"
+    status: active
+    skills: domains/aerospace/skills.yaml
+  - id: flight-software
+    description: "flight software"
+    triggers:
+      - "flight software"
+    status: mapped
+  - id: avionics
+    description: "avionics"
+    triggers:
+      - "avionics"
+    status: mapped
+  - id: mission-analysis
+    description: "mission analysis"
+    triggers:
+      - "mission analysis"
+    status: mapped
+  - id: propulsion
+    description: "propulsion"
+    triggers:
+      - "propulsion"
+    status: mapped
